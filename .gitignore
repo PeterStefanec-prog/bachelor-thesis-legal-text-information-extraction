@@ -1,0 +1,44 @@
+################################
+# OS-specific files (macOS)
+################################
+.DS_Store
+
+################################
+# IDE / editor configuration
+################################
+.idea/          # PyCharm / IntelliJ project files
+.vscode/        # VS Code settings (if you ever use it)
+
+################################
+# Python bytecode and caches
+################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+################################
+# Virtual environments
+################################
+.venv/
+venv/
+env/
+
+################################
+# Python tooling caches
+################################
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+################################
+# Jupyter
+################################
+.ipynb_checkpoints/
+
+################################
+# Local data / large files
+################################
+data/           # local datasets, PDFs, contracts etc. that should not be pushed
+*.log           # log files
