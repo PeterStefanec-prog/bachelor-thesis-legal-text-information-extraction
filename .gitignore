@@ -42,3 +42,46 @@ htmlcov/
 ################################
 data/           # local datasets, PDFs, contracts etc. that should not be pushed
 *.log           # log files
+
+
+################################
+# Downloaded / generated DATA (do not push)
+# - Court decisions PDFs + any generated downloads / outputs
+################################
+
+# Your main scraping downloads (entire folders)
+data_scraping/data/
+
+# Any folder named like downloaded output (your final_scraping)
+final_scraping/stiahnute_podla_csv_final/
+final_scraping/stiahnute_presne_podla_csv/
+
+# If you create other “downloaded” folders in future, ignore them too
+**/stiahnute_*/
+
+# Ignore typical downloaded/large binary formats (anywhere)
+*.pdf
+*.zip
+*.7z
+*.tar
+*.gz
+
+# Optional: if you store extracted text / intermediate artefacts locally
+*.jsonl
+*.parquet
+
+################################
+# Preprocessing outputs (often local artefacts)
+# If you want to KEEP some of these in git, remove the specific lines.
+################################
+preprocessing/*.pdf
+preprocessing/selected_chunks.csv
+
+################################
+# keeping empty data dirs in repo with a placeholder
+# (creating e.g. data_scraping/data/.gitkeep and then unignore it)
+################################
+ !data_scraping/data/.gitkeep
+ !final_scraping/stiahnute_podla_csv_final/.gitkeep
+ !final_scraping/stiahnute_presne_podla_csv/.gitkeep
+
