@@ -1,5 +1,5 @@
 {
-  "schema_version": "3.0",
+  "schema_version": "4.0",
   "meta": {
     "doc_id": "string",
     "decision_metadata": {
@@ -10,6 +10,24 @@
     }
   },
   "case_context": {
+    "dispute_summary": {
+      "value": "string (max 2-3 vety o predmete sporu) (napr. 'Žaloba o zaplatenie faktúr za stavebné práce, kde sa žalovaný dostal do omeškania kvôli druhotnej platobnej neschopnosti.')",
+      "evidence": [
+        {
+          "quote": "string",
+          "chunk_id": "string"
+        }
+      ]
+    },
+    "verdict_summary": {
+      "value": "string (napr. 'Súd nárok na pokutu priznal len čiastočne, zvyšok zamietol pre neprimeranosť.')",
+      "evidence": [
+        {
+          "quote": "string",
+          "chunk_id": "string"
+        }
+      ]
+    },
     "contract_type": {
       "value": "uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|telekom|preprava|mandatna|ine|nezname"
     },
@@ -25,15 +43,6 @@
       "relationship_type": {
         "value": "B2B|B2C|C2C|unknown|unclear"
       }
-    },
-    "dispute_summary": {
-      "value": "string (max 2-3 vety o predmete sporu)",
-      "evidence": [
-        {
-          "quote": "string",
-          "chunk_id": "string"
-        }
-      ]
     }
   },
   "contractual_penalties": [
@@ -59,7 +68,7 @@
         ]
       },
       "amounts": {
-        "currency": "EUR|SKK|CZK|unkwnown",
+        "currency": "EUR|SKK|CZK|unknown",
         "original_claimed": {
           "amount": null,
           "evidence": [
@@ -118,38 +127,55 @@
             }
           ]
         },
+        "legal_reasoning_summary": {
+          "value": "string (napr. 'Súd uviedol, že sadzba 1% denne je v rozpore s dobrými mravmi, pretože výrazne prevyšuje bežné úrokové miery bánk a pre žalovaného by bola likvidačná.')",
+          "evidence": [
+            {
+              "quote": "string",
+              "chunk_id": "string"
+            }
+          ]
+        },
         "factors": [
           {
             "label": "dobre_mravy",
             "sentiment": "positive (súd súhlasí s pokutou)|negative (rozpor s mravmi)|neutral",
-            "evidence": {
-              "quote": "string",
-              "chunk_id": "string"
-            }
+            "evidence": [
+              {
+                "quote": "string",
+                "chunk_id": "string"
+              }
+            ]
           },
           {
             "label": "zabezpecovacia_funkcia",
             "sentiment": "positive (funkcia zachovaná)|negative (funkcia popretá)|neutral",
-            "evidence": {
-              "quote": "string",
-              "chunk_id": "string"
-            }
+            "evidence": [
+              {
+                "quote": "string",
+                "chunk_id": "string"
+              }
+            ]
           },
           {
             "label": "vyska_skody",
             "sentiment": "positive (škoda vznikla)|negative (škoda žiadna/malá)|neutral",
-            "evidence": {
-              "quote": "string",
-              "chunk_id": "string"
-            }
+            "evidence": [
+              {
+                "quote": "string",
+                "chunk_id": "string"
+              }
+            ]
           },
           {
             "label": "pomer_k_istine",
             "sentiment": "positive (pomer OK)|negative (neprimerane vysoká)|neutral",
-            "evidence": {
-              "quote": "string",
-              "chunk_id": "string"
-            }
+            "evidence": [
+              {
+                "quote": "string",
+                "chunk_id": "string"
+              }
+            ]
           }
         ]
       }
