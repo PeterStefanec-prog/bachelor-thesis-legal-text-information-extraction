@@ -56,7 +56,7 @@
       // A) AKA BOLA POKUTA V ZMLUVE?
       "rate_definition": {
         "type": "percent_denne|percent_mesacne|fixna_suma_mesacne|percent_rocne|percent_jednorazovo|fixna_suma_denne|fixna_suma_jednorazovo|pausal|percent_z_ceny|percent_z_dlznej_sumy|ine",
-        "value_raw": "string (napr. '0.05% denne')",
+        "value_raw": "string (napr. '0.05% denne')|null",
         "evidence": [{ "quote": "string", "chunk_id": "string" }]
       },
 
@@ -79,7 +79,7 @@
 
       // C) PRISLUSENSTVO (Urok pri pokute)
       "associated_interest": {
-        "awarded": "yes|no",
+        "awarded": "yes|no|unclear",
         "applies_to": "penalty|principal|both|unclear",
         "rate_value": "string (napr. '9,0 % ročne' alebo 'zákonný úrok z omeškania')",
         "evidence": [{ "quote": "string", "chunk_id": "string" }]
@@ -92,9 +92,10 @@
             "value": "awarded_full (priznaná v plnej výške)|awarded_reduced (znížená)|dismissed (zamietnutá)|unclear",
             "evidence": [{ "quote": "string", "chunk_id": "string" }]
         },
+        // len v pripade ze decision_analysis je awarded_reduced
         "moderation_applied": {
             // 'not_applicable' = súd zamietol nárok z iného dôvodu (neplatnosť, premlčanie) a moderáciu neriešil
-            "value": "yes (súd znížil)|no (neznížil)|nepriznana_uplne (zamietol)|not_applicable (zamietol z iného dôvodu)|unclear",
+            "value": "yes |no ||not_applicable (zamietol z iného dovodu)|unclear",
             "evidence": [
             { "quote": "string", "chunk_id": "string" }
           ]
