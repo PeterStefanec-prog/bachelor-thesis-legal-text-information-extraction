@@ -66,13 +66,12 @@ final_scraping/stiahnute_presne_podla_csv/
 *.tar
 *.gz
 
-# Optional: if you store extracted text / intermediate artefacts locally
-*.jsonl
-*.parquet
+# Optional: in case of  storing extracted text / intermediate artefacts locally
+#*.jsonl
+#*.parquet
 
 ################################
-# Preprocessing outputs (often local artefacts)
-# If you want to KEEP some of these in git, remove the specific lines.
+# Preprocessing outputs ( local artefacts)
 ################################
 preprocessing/*.pdf
 preprocessing/selected_chunks.csv
@@ -81,7 +80,7 @@ preprocessing/selected_chunks.csv
 # keeping empty data dirs in repo with a placeholder
 # (creating e.g. data_scraping/data/.gitkeep and then unignore it)
 ################################
- !data_scraping/data/.gitkeep
- !final_scraping/stiahnute_podla_csv_final/.gitkeep
- !final_scraping/stiahnute_presne_podla_csv/.gitkeep
+!data_scraping/data/.gitkeep
+!final_scraping/stiahnute_podla_csv_final/.gitkeep
+!final_scraping/stiahnute_presne_podla_csv/.gitkeep
 

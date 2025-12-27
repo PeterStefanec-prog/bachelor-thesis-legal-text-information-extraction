@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "doc": {
+    "doc_id": "string",
+    "source_url": "string|null",
+    "court": "string|null",
+    "case_number": "string|null",
+    "decision_date": "YYYY-MM-DD|null",
+    "document_type": "judgment|order|resolution|unknown",
+    "language": "sk"
+  },
+
+  "case_context": {
+    "summary": {
+      "value": "string|null",
+      "evidence": []
+    },
+
+    "parties": {
+      "plaintiff": {"value": "string|null", "evidence": []},
+      "defendant": {"value": "string|null", "evidence": []},
+      "relationship_type": {
+        "value": "B2B|B2C|C2C|unknown",
+        "evidence": []
+      }
+    },
+
+    "contract": {
+      "contract_type": {
+        "value": "telecom|lease|work_contract|sale|loan|supply|service|other|unknown",
+        "evidence": []
+      },
+      "contract_name_raw": {
+        "value": "string|null",
+        "evidence": []
+      },
+      "subject_matter": {
+        "value": "string|null",
+        "evidence": []
+      },
+      "key_terms": [
+        {
+          "label": "commitment|price|service_plan|delivery|repayment|other",
+          "value": "string",
+          "evidence": []
+        }
+      ]
+    },
+
+    "dispute": {
+      "claim_summary": {"value": "string|null", "evidence": []},
+      "breach_type": {
+        "value": "late_payment|non_payment|early_termination|non_delivery|other|unknown",
+        "evidence": []
+      },
+      "breach_description": {"value": "string|null", "evidence": []}
+    }
+  },
+
+  "contractual_penalty": {
+    "mentioned": true,
+
+    "legal_basis": [
+      {
+        "value": "string",
+        "type": "statute|case_law|contract_clause|unknown",
+        "evidence": []
+      }
+    ],
+
+    "clause_reference": {
+      "value": "string|null",
+      "evidence": []
+    },
+
+    "penalty_type": {
+      "value": "fixed_amount|percent_per_day|amount_per_day|percent_of_price|mixed|unknown",
+      "evidence": []
+    },
+
+    "penalty_original": {
+      "amount": 0.0,
+      "currency": "EUR|SKK|unknown",
+      "unit": "one_time|per_day|per_month|other|unknown",
+      "raw_text": "string|null",
+      "evidence": []
+    },
+
+    "penalty_awarded": {
+      "amount": 0.0,
+      "currency": "EUR|SKK|unknown",
+      "raw_text": "string|null",
+      "evidence": []
+    },
+
+    "moderation": {
+      "applied": "yes|no|unclear",
+      "legal_basis_ref": {"value": "string|null", "evidence": []},
+      "reasoning_summary": {"value": "string|null", "evidence": []}
+    },
+
+    "secured_obligation": {
+      "value": "string|null",
+      "evidence": []
+    }
+  },
+
+  "reasoning": {
+    "court_assessment": {
+      "value": "proportionate|disproportionate|partially_disproportionate|unclear",
+      "evidence": []
+    },
+
+    "factors": [
+      {
+        "label": "disproportion_to_damage|disproportion_to_obligation_value|duration_remaining|punitive_vs_security|negotiation_balance|standard_terms|other",
+        "value": "string",
+        "evidence": []
+      }
+    ],
+
+    "calculation_components": [
+      {
+        "name": "string",
+        "value": 0.0,
+        "currency": "EUR|SKK|unknown",
+        "unit": "one_time|per_day|per_month|other|unknown",
+        "raw_text": "string|null",
+        "evidence": []
+      }
+    ]
+  },
+
+  "decision_outcome": {
+    "awarded_principal": {
+      "amount": 0.0,
+      "currency": "EUR|SKK|unknown",
+      "raw_text": "string|null",
+      "evidence": []
+    },
+    "interest": {
+      "mentioned": "yes|no|unclear",
+      "rate_raw": {"value": "string|null", "evidence": []},
+      "from_date": {"value": "YYYY-MM-DD|null", "evidence": []}
+    },
+    "costs": {
+      "mentioned": "yes|no|unclear",
+      "amount": {"amount": 0.0, "currency": "EUR|SKK|unknown", "raw_text": "string|null", "evidence": []}
+    }
+  },
+
+  "quality": {
+    "evidence_chunk_ids": ["c1", "c2"],
+    "missing_fields": ["case_context.contract.contract_type"],
+    "flags": [
+      {
+        "code": "MISSING_EVIDENCE",
+        "severity": "warning|error|info",
+        "field": "contractual_penalty.penalty_original.amount",
+        "message": "string",
+        "evidence": []
+      }
+    ]
+  }
+}
