@@ -1,6 +1,6 @@
 ```json
 {
-  "schema_version": "4.0",
+  "schema_version": "4.1",
 
   // 1. METADATA A ENTITY ( Regex / NER / Python)
   "meta": {
@@ -50,6 +50,11 @@
       "penalty_internal_id": "string (napr. 'pokuta_1')",
       "related_claim_ref": {
         "value": "string (napr. 'Faktúra č. 10/2020' alebo 'Omeškanie za január')",
+        "evidence": [{ "quote": "string", "chunk_id": "string" }]
+      },
+      
+      "breach_type": {
+        "value": "late_payment (omeškanie s úhradou)|non_monetary_performance (nedodanie diela/služby)|early_termination (predčasné ukončenie zmluvy)|breach_of_confidentiality (porušenie mlčanlivosti)|other",
         "evidence": [{ "quote": "string", "chunk_id": "string" }]
       },
 
@@ -126,6 +131,11 @@
           {
             "label": "pomer_k_istine",
             "sentiment": "positive (pomer OK)|negative (neprimerane vysoká)|neutral",
+            "evidence": [{ "quote": "string", "chunk_id": "string" }]
+          },
+          {
+            "label": "spravanie_dlznika",
+            "sentiment": "positive (snaha platiť/komunikácia)|negative (obštrukcie/ignorácia)|neutral",
             "evidence": [{ "quote": "string", "chunk_id": "string" }]
           }
         ]
