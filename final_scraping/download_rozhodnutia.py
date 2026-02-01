@@ -5,10 +5,10 @@ import time
 import pandas as pd
 import re
 
-# --- KONFIGURÁCIA ---
+# --- CONFIGURATION ---
 BASE_API_URL = "https://obcan.justice.sk/pilot/api/ress-isu-service"
 SEARCH_ENDPOINT = "/v1/rozhodnutie"
-OUTPUT_DIR = "stiahnute_podla_csv_final"
+OUTPUT_DIR = "stiahnute_podla_csv_final_03"
 TIMEOUT = 30
 
 HEADERS = {
@@ -19,7 +19,10 @@ HEADERS = {
 
 
 def normalize_court_name(csv_name):
-    """Zjednotí názvy súdov."""
+    """
+    Fix court names because API needs specific format.
+    Example: 'KS Banská Bystrica' -> 'Krajský súd Banská Bystrica'
+    """
     mapping = {
         "KS Banská Bystrica": "Krajský súd Banská Bystrica",
         "KS Bratislava": "Krajský súd Bratislava",
@@ -29,63 +32,79 @@ def normalize_court_name(csv_name):
         "KS Trenčín": "Krajský súd Trenčín",
         "KS Trnava": "Krajský súd Trnava",
         "KS Žilina": "Krajský súd Žilina",
-        "NS SR": "Najvyšší súd SR",
-        "ÚS SR": "Ústavný súd SR"
+        "NS SR": "Najvyšší súd Slovenskej republiky",
+        "ÚS SR": "Ústavný súd Slovenskej republiky"
     }
     return mapping.get(csv_name, csv_name)
 
 
 def generate_id_variants(case_id):
     """
-    Vygeneruje rôzne formáty spisovej značky.
-    Vstup: 14Co/371/2012
-    Výstup: ['14Co/371/2012', '14 Co 371/2012', '14Co 371/2012']
+    Create different ID versions to help the search.
+    Input: 14Co/371/2012
+    Output: ['14Co/371/2012', '14 Co 371/2012', '14Co 371/2012']
     """
-    variants = [case_id]  # Originál
+    clean_id = str(case_id).strip().replace("\\", "/")
+    variants = {clean_id}
 
-    # Skúsime pridať medzery medzi text a čísla (častý formát na súdoch)
-    # Regex rozdelí "14Co" a "371/2012"
-    match = re.match(r"([0-9]+)([a-zA-Z]+)/(.+)", case_id)
+    # 1. Remove all spaces just in case
+    no_spaces = clean_id.replace(" ", "")
+    variants.add(no_spaces)
+
+    # 2. Try to split numbers and text to add spaces smartly
+    # Pattern: (number)(text)/(rest)
+    match = re.search(r"(\d+)\s*([a-zA-Z]+)\s*[/\s]*\s*(.+)", clean_id)
     if match:
         senat, agenda, zvysok = match.groups()
-        # Variant: 14 Co 371/2012
-        variants.append(f"{senat} {agenda} {zvysok}")
-        # Variant: 14Co 371/2012
-        variants.append(f"{senat}{agenda} {zvysok}")
+        variants.add(f"{senat}{agenda}/{zvysok}")  # Standard format # 14Co/371/2012
+        variants.add(f"{senat} {agenda} {zvysok}")  # With spaces    # 14 Co 371/2012
+        variants.add(f"{senat}{agenda} {zvysok}")  # Combined        # 14Co 371/2012
+        variants.add(f"{senat} {agenda} {zvysok.replace('/', '/ ')}")  # Extra spaces
 
-    return list(set(variants))
+    return list(variants)
 
 
 def download_file(url, folder, filename):
+    """
+    Download the file. Add .pdf or .docx extension if missing.
+    """
     try:
         if not url.startswith("http"):
             url = f"https://obcan.justice.sk{url}"
 
         with requests.get(url, headers=HEADERS, stream=True, timeout=TIMEOUT) as r:
             if r.status_code == 200:
+                # Check content type to guess the extension
+                final_filename = filename
                 if "." not in filename[-5:]:
                     ct = r.headers.get("Content-Type", "").lower()
                     if "pdf" in ct:
-                        filename += ".pdf"
-                    elif "word" in ct:
-                        filename += ".docx"
+                        final_filename += ".pdf"
+                    elif "word" in ct or "officedocument" in ct:
+                        final_filename += ".docx"
                     elif "zip" in ct:
-                        filename += ".zip"
+                        final_filename += ".zip"
                     else:
-                        filename += ".pdf"
+                        final_filename += ".pdf"  # Default to PDF
 
-                file_path = os.path.join(folder, filename)
+                file_path = os.path.join(folder, final_filename)
+
+                # Write file in chunks (better for memory)
                 with open(file_path, 'wb') as f:
                     for chunk in r.iter_content(chunk_size=8192):
                         f.write(chunk)
-                print(f"            ✅ [SÚBOR] {filename}")
+
+                print(f"            ✅ [SÚBOR] {final_filename}")
                 return True
-    except:
-        pass
+    except Exception as e:
+        print(f"            ⚠️ Chyba sťahovania: {e}")
     return False
 
 
 def get_decision_detail(guid):
+    """
+    Get full details (JSON) about the decision using its ID (guid).
+    """
     try:
         resp = requests.get(f"{BASE_API_URL}/v1/rozhodnutie/{guid}", headers=HEADERS, timeout=10)
         if resp.status_code == 200:
@@ -99,79 +118,87 @@ def find_and_download(row_index, court_raw, case_id):
     court_official = normalize_court_name(court_raw)
     clean_id = str(case_id).strip()
 
-    print(f"\n[{row_index}] 🔎 Hľadám: {clean_id} ({court_official})")
+    print(f"\n[{row_index}] 🔎 Hľadám: {clean_id} ({court_raw})")
 
-    # Stratégie vyhľadávania (názov parametra v URL)
-    search_params = ['spisovaZnacka', 'znacka', 'q']
-
-    # Varianty formátu značky (s medzerami, bez medzier)
-    id_variants = generate_id_variants(clean_id)
-
-    found_decision = None
-
-    # --- CYKLUS HĽADANIA ---
-    for param_name in search_params:
-        if found_decision: break
-
-        for variant in id_variants:
-            if found_decision: break
-
-            # Skúsime API call
-            params = {
-                param_name: f'"{variant}"' if param_name == 'q' else variant,
-                "size": 20
-            }
-
-            # Ak používame parameter 'spisovaZnacka', môžeme pridať aj súd pre presnosť
-            if param_name == 'spisovaZnacka':
-                # Niektoré API podporujú filter={"sud": "..."} v GET, ale skúsime radšej bez, aby sme to nekomplikovali
-                pass
-
-            try:
-                # print(f"   ... skúšam ?{param_name}={variant}") # Debug výpis
-                resp = requests.get(f"{BASE_API_URL}{SEARCH_ENDPOINT}", headers=HEADERS, params=params, timeout=10)
-
-                if resp.status_code == 200:
-                    data = resp.json()
-                    candidates = data.get('rozhodnutieList', [])
-
-                    # Overenie kandidátov
-                    for cand in candidates:
-                        cand_znacka = cand.get('spisovaZnacka', '').replace(" ", "").lower()
-                        target_znacka = clean_id.replace(" ", "").lower()
-
-                        cand_sud = cand.get('sud', {}).get('nazov', '').lower()
-                        target_sud_part = court_official.replace("Krajský súd ", "").lower()
-
-                        # Musí sedieť značka AJ súd
-                        if cand_znacka == target_znacka and target_sud_part in cand_sud:
-                            found_decision = cand
-                            print(f"   🎯 NAŠIEL SOM! (Stratégia: {param_name}={variant})")
-                            break
-            except Exception as e:
-                pass
-
-    if not found_decision:
-        print(f"   ❌ Nenájdené ani jednou stratégiou.")
+    # Skip Constitutional Court (not in this database)
+    if "Ústavný súd" in court_official:
+        print("   ⚠️ Ústavný súd SR nie je v tejto DB. Preskakujem.")
         return
 
-    # --- SŤAHOVANIE ---
+    # --- SEARCH LOGIC ---
+    # We only use 'spisovaZnacka' now to be efficient.
+    id_variants = generate_id_variants(clean_id)
+    found_decision = None
+
+    for variant in id_variants:
+        if found_decision: break
+
+        # Prepare params for the API request
+        params = {
+            "spisovaZnacka": variant,
+            "size": 20
+        }
+
+        # Add filter for Supreme Court if needed
+        if "Najvyšší súd" in court_official:
+            params["sud"] = "Najvyšší súd Slovenskej republiky"
+
+        try:
+            # Send request to API
+            resp = requests.get(f"{BASE_API_URL}{SEARCH_ENDPOINT}", headers=HEADERS, params=params, timeout=10)
+
+            if resp.status_code == 200:
+                data = resp.json()
+                candidates = data.get('rozhodnutieList', [])
+
+                # Check results to find the correct match
+                for cand in candidates:
+                    # Clean up strings for comparison
+                    cand_znacka = cand.get('spisovaZnacka', '').replace(" ", "").lower()
+                    target_znacka_clean = clean_id.replace(" ", "").replace("/", "").lower()
+                    cand_znacka_clean = cand_znacka.replace("/", "")
+
+                    cand_sud = cand.get('sud', {}).get('nazov', '').lower()
+
+                    # Verify court name
+                    court_match = False
+                    if "najvyšší" in court_official.lower() and "najvyšší" in cand_sud:
+                        court_match = True
+                    elif court_official.replace("Krajský súd ", "").lower() in cand_sud:
+                        court_match = True
+
+                    # If ID and Court match, we found it!
+                    if target_znacka_clean in cand_znacka_clean and court_match:
+                        found_decision = cand
+                        print(f"   🎯 NAŠIEL SOM! ({cand.get('spisovaZnacka')})")
+                        break
+        except Exception:
+            pass
+
+    if not found_decision:
+        print(f"   ❌ Nenájdené.")
+        return
+
+    # --- DOWNLOAD LOGIC ---
     guid = found_decision.get('guid')
 
-    safe_court = court_official.replace(" ", "_")
-    safe_id = clean_id.replace("/", "_")
+    # Create folder structure
+    safe_court = court_raw.replace(" ", "_")
+    safe_id = clean_id.replace("/", "_").replace(" ", "_")
     case_folder = os.path.join(OUTPUT_DIR, safe_court, safe_id)
 
     if not os.path.exists(case_folder):
         os.makedirs(case_folder)
 
+    # Get details
     detail = get_decision_detail(guid)
     if detail:
-        # Metadáta
+        # Save metadata JSON
+        detail["_csv_metadata"] = {"court": court_raw, "id": case_id, "topic": row_index}
         with open(os.path.join(case_folder, "metadata.json"), "w", encoding="utf-8") as f:
             json.dump(detail, f, ensure_ascii=False, indent=4)
 
-        # Dokumenty
+        # Collect all attachments
         docs = []
         if 'dokument' in detail and detail['dokument']:
             val = detail['dokument']
@@ -182,41 +209,61 @@ def find_and_download(row_index, court_raw, case_id):
         if docs:
             print(f"      📥 Sťahujem {len(docs)} príloh...")
             for i, doc in enumerate(docs):
-                doc_name = doc.get('nazov', f"doc_{i}")
-                safe_name = "".join([c for c in doc_name if c.isalnum() or c in (' ', '.', '_', '-')]).strip()
+                # 1. Get original name
+                raw_name = doc.get('nazov', 'dokument')
+
+                # 2. Clean the filename
+                clean_name = re.sub(r'[^\w\-\. ]', '_', raw_name).strip()
+                if not clean_name: clean_name = "dokument"
+
+                # 3. Add prefix to keep order (00_, 01_)
+                final_name = f"{i:02d}_{clean_name}"
 
                 url = doc.get('url')
                 if not url and doc.get('id'):
                     url = f"/v1/rozhodnutie/dokument/{doc.get('id')}/stiahnut"
 
                 if url:
-                    download_file(url, case_folder, safe_name)
+                    download_file(url, case_folder, final_name)
         else:
-            # Text fallback
+            # Fallback: Save plain text if no PDF available
             full_text = detail.get('text') or detail.get('obsah')
             if full_text:
                 with open(os.path.join(case_folder, "text.txt"), "w", encoding="utf-8") as f:
                     f.write(full_text)
-                print("      📄 Uložený text (bez PDF).")
+                print("      📄 Uložený čistý text.")
             else:
-                print("      ⚠️ Rozhodnutie je prázdne (žiadne prílohy).")
+                print("      ⚠️ Rozhodnutie je prázdne.")
 
 
 def main():
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
-    print("--- SŤAHOVANIE PODĽA CSV (Multi-Strategy) ---")
+    print("--- DOWNLOADING COURT DECISIONS ---")
+    csv_file = 'rozhodnutia_raw_list.csv'
 
-    try:
-        df = pd.read_csv('rozhodnutia_raw_list.csv')
-    except:
-        print("Chýba súbor rozhodnutia_raw_list.csv")
+    if not os.path.exists(csv_file):
+        print(f"ERROR: Create file '{csv_file}' first!")
         return
 
+    try:
+        # Read the CSV file
+        df = pd.read_csv(csv_file, quotechar='"', skipinitialspace=True)
+    except Exception as e:
+        print(f"CSV Error: {e}")
+        return
+
+    # Loop through all rows in CSV
     for index, row in df.iterrows():
-        find_and_download(index, row['court_name'], row['case_id'])
-        time.sleep(0.2)
+        c_name = row.get('court_name')
+        c_id = row.get('case_id')
+        if pd.isna(c_name) or pd.isna(c_id): continue
+
+        find_and_download(index, c_name, c_id)
+
+        # Sleep a bit to be polite to the server
+        time.sleep(0.5)
 
 
 if __name__ == "__main__":

@@ -100,7 +100,7 @@
         // len v pripade ze decision_analysis je awarded_reduced
         "moderation_applied": {
             // 'not_applicable' = súd zamietol nárok z iného dôvodu (neplatnosť, premlčanie) a moderáciu neriešil
-            "value": "yes |no ||not_applicable (zamietol z iného dovodu)|unclear",
+            "value": "yes |no | not_applicable (zamietol z iného dovodu)|unclear",
             "evidence": [
             { "quote": "string", "chunk_id": "string" }
           ]
