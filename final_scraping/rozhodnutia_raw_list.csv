@@ -167,6 +167,7 @@ KS Žilina,14Cob/150/2020,Ostatné
 KS Žilina,14Cob/202/2019,Ostatné
 KS Žilina,14Cob/21/2019,Ostatné
 KS Žilina,14Cob/85/2021,Ostatné
+court_name,case_id,value
 NS SR,1Cdo/85/2023,Ostatné
 NS SR,1Obdo/66/2018,33 111 eur s prísl.
 NS SR,1Obdo/7/2020,"5 113,19 eur s prísl."
@@ -183,7 +184,7 @@ NS SR,4 Cdo 148/2010,"o 5 311,02 Eur s príslušenstovm"
 NS SR,4 Cdo 222/2005,o zaplatenie zmluvnej pokuty
 NS SR,4 MObdo 8/2011,
 NS SR,4 Obo 210/2007,"o zaplatenie 4 633 185,80 Sk"
-NS SR,4MObdo 8/11,"o zapl. 7 966,54 eur s prísl."
+NS SR,4MObdo 8/2011,"o zapl. 7 966,54 eur s prísl."
 NS SR,4Obdo/108/2019,5 600 eur s prísl.
 NS SR,4Obdo/38/2020,500 000 eur s prísl.
 NS SR,4Obdo/50/2018,"177 622,31 eur s prísl."
@@ -195,8 +196,8 @@ NS SR,5Obdo/14/2023,500 000 eur s prísl.
 NS SR,5Obdo/76/2020,"4 231,95 eur zo zmenky s prísl."
 NS SR,6 Obdo 40/2009,"o zaplatenie 3 020,65 Eur (91 000,-- Sk)"
 NS SR,6 Obdo 5/2009,"o zaplatenie 1 245 222,-- Sk s prísl."
-NS SR,6Obdo 22/08,o zaplatenie 2.666.093 Sk s prísl.
-NS SR,6Obo 25/08,"o zaplatenie 22.253,16 EUR s prísl."
+NS SR,6Obdo 22/2008,o zaplatenie 2.666.093 Sk s prísl.
+NS SR,6Obo 25/2008,"o zaplatenie 22.253,16 EUR s prísl."
 ÚS SR,I. ÚS 266/06,"pre neopodstatnenosť, porušovanie Ústavy - preskúmanie rozhodnutia súdov"
 ÚS SR,I. ÚS 56/2017,
 ÚS SR,II. ÚS 337/08,"pre neopodstatnenosť, porušovanie Ústavy - preskúmanie rozhodnutia súdov"

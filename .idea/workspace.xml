@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_scraping/download_rozhodnutia.py" beforeDir="false" afterPath="$PROJECT_DIR$/final_scraping/download_rozhodnutia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extraction/schemas/schema_spec.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/extraction/schemas/schema_spec.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/final_scraping/rozhodnutia_raw_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/final_scraping/rozhodnutia_raw_list.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1765646167665" duration="25539000" />
       <workItem from="1766842155631" duration="1348000" />
       <workItem from="1766843510726" duration="37386000" />
-      <workItem from="1769873604626" duration="15162000" />
+      <workItem from="1769873604626" duration="17791000" />
     </task>
     <servers />
   </component>
@@ -222,7 +221,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_paragraph.coverage" NAME="scraper_with_moderation_paragraph Coverage Results" MODIFIED="1764200468507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_afte_talking_to_lawyer" />
-    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_rozhodnutia.coverage" NAME="download_rozhodnutia Coverage Results" MODIFIED="1769986604527" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
+    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_rozhodnutia.coverage" NAME="download_rozhodnutia Coverage Results" MODIFIED="1769989541489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_paragraph__1_.coverage" NAME="scraper_with_moderation_paragraph (1) Coverage Results" MODIFIED="1764362782351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_extended.coverage" NAME="scraper_with_moderation_extended Coverage Results" MODIFIED="1764362160643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$run_one_pdf.coverage" NAME="run_one_pdf Coverage Results" MODIFIED="1765882206513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocessing" />
