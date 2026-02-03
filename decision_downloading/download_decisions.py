@@ -300,7 +300,7 @@ def main():
         find_and_download(index, c_name, c_id)
 
         # Sleep for a bit to be polite to the server and avoid bans
-        time.sleep(0.1)
+        time.sleep(0.5)
 
 
 if __name__ == "__main__":
