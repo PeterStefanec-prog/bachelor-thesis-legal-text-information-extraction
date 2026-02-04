@@ -1,0 +1,79 @@
+{
+    "guid": "a3792496-8aae-4c2e-a6b2-74ba66f7d68f:31690f88-2739-4371-ba98-c41b94230222",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_277",
+        "meno": "JUDr. Milan Šebeň"
+    },
+    "identifikacneCislo": "8111219670",
+    "spisovaZnacka": "1Cob/20/2012",
+    "datumVydania": "30.01.2013",
+    "ecli": "ECLI:SK:KSPO:2013:8111219670.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o úvere"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-159.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-159.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-212.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-212.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-53",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-53"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-54",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-54"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-879f.odsek-4",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-879f.odsek-4"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-41",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-41"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-213.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-213.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-20-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 118437,
+        "url": "https://obcan.justice.sk/content/public/item/31690f88-2739-4371-ba98-c41b94230222"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "1Cob/20/2012",
+        "topic": 103
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "guid": "c1c3298e-3fed-4d30-91bc-f3774335ca2c:ed358591-9f86-4724-8550-4efc2cf0a77a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_148",
+        "nazov": "Mestský súd Košice"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1545",
+        "meno": "JUDr. Július Tóth"
+    },
+    "identifikacneCislo": "6120323583",
+    "spisovaZnacka": "K2-30Cb/29/2020",
+    "datumVydania": "26.03.2025",
+    "ecli": "ECLI:SK:KSKE:2025:6120323583.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Bezdôvodné obohatenie"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2010/519/#paragraf-303",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2010/519/#paragraf-303"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-306.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-306.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-554.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-554.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-153",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-153"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-196-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 98179,
+        "url": "https://obcan.justice.sk/content/public/item/ed358591-9f86-4724-8550-4efc2cf0a77a"
+    },
+    "updateDate": "04.10.2025",
+    "povodnySud": {
+        "registreGuid": "sud_149",
+        "nazov": "Okresný súd Košice II",
+        "adresaString": "Štúrova 29, 04211 Košice II, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "21.2486472",
+            "zemepisnaSirka": "48.7165592"
+        }
+    },
+    "povodnaSpisovaZnacka": "4Cob/196/2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/196/2023",
+        "topic": 80
+    }
+}

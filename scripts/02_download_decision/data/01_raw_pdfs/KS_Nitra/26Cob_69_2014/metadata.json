@@ -1,0 +1,52 @@
+{
+    "guid": "694cdde3-2a87-4aee-9234-133a4f57aaf9:8ce117f8-035a-4a76-84f6-238f6f7ab45f",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_245",
+        "meno": "JUDr. Pavol Pilek"
+    },
+    "identifikacneCislo": "4113230645",
+    "spisovaZnacka": "26Cob/69/2014",
+    "datumVydania": "30.06.2014",
+    "ecli": "ECLI:SK:KSNR:2014:4110230531.1",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-136",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-136"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_26Cob-69-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 69811,
+        "url": "https://obcan.justice.sk/content/public/item/8ce117f8-035a-4a76-84f6-238f6f7ab45f"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "26Cob/69/2014",
+        "topic": 99
+    }
+}

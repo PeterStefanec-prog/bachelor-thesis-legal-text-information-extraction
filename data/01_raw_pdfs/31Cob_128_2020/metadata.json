@@ -1,0 +1,47 @@
+{
+    "guid": "818eb889-928e-47ba-b0a7-e85210488eb0:c4d66133-a1ba-445a-bbb0-4b60583e4665",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1796",
+        "meno": "Mgr. Lucia Mizerová"
+    },
+    "identifikacneCislo": "2318207656",
+    "spisovaZnacka": "31Cob/128/2020",
+    "datumVydania": "12.01.2022",
+    "ecli": "ECLI:SK:KSTT:2022:2318207656.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-391.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-391.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_31Cob-128-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 102075,
+        "url": "https://obcan.justice.sk/content/public/item/c4d66133-a1ba-445a-bbb0-4b60583e4665"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "31Cob/128/2020",
+        "topic": 148
+    }
+}

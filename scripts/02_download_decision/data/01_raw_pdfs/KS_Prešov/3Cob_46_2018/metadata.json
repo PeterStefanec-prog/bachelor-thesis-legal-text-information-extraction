@@ -1,0 +1,47 @@
+{
+    "guid": "9bc2cdf7-5e05-45f8-a29d-48a0926f0610:d2466ddb-efa6-4c24-9e65-ba4a491eda6b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_485",
+        "meno": "JUDr. Viera Zoľáková"
+    },
+    "identifikacneCislo": "6117230109",
+    "spisovaZnacka": "3Cob/46/2018",
+    "datumVydania": "08.11.2018",
+    "ecli": "ECLI:SK:KSPO:2018:6117230109.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-46-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 117468,
+        "url": "https://obcan.justice.sk/content/public/item/d2466ddb-efa6-4c24-9e65-ba4a491eda6b"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "3Cob/46/2018",
+        "topic": 108
+    }
+}

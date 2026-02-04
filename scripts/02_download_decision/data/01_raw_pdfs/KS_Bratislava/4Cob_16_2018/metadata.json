@@ -1,0 +1,66 @@
+{
+    "guid": "ba82f583-4a23-4c1e-9db0-b6384528bf59:a8939701-0a5c-4f72-945d-6181c1d2b7a2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce",
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_49",
+        "meno": "JUDr. Elena Kúšová"
+    },
+    "identifikacneCislo": "1214227801",
+    "spisovaZnacka": "B1-31Cb/158/2015",
+    "datumVydania": "30.05.2019",
+    "ecli": "ECLI:SK:KSBA:2019:1214227801.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-388",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-388"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-365.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-365.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-16-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 112926,
+        "url": "https://obcan.justice.sk/content/public/item/a8939701-0a5c-4f72-945d-6181c1d2b7a2"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "4Cob/16/2018",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "4Cob/16/2018",
+        "topic": 53
+    }
+}

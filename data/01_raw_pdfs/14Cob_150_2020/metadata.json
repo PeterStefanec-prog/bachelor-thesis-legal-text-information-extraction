@@ -1,0 +1,75 @@
+{
+    "guid": "5a84df63-1a5c-434c-9ef8-e46a351f322f:76f11a88-84f3-475b-8558-b05aeeba1c85",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_863",
+        "meno": "JUDr. Martina Nemravová"
+    },
+    "identifikacneCislo": "6119391603",
+    "spisovaZnacka": "14Cob/150/2020",
+    "datumVydania": "27.05.2021",
+    "ecli": "ECLI:SK:KSZA:2021:6119391603.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-379",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-379"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-380.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-380.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_14Cob-150-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 141165,
+        "url": "https://obcan.justice.sk/content/public/item/76f11a88-84f3-475b-8558-b05aeeba1c85"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "14Cob/150/2020",
+        "topic": 164
+    }
+}

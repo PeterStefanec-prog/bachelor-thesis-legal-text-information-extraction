@@ -1,0 +1,67 @@
+{
+    "guid": "1ccaa196-5710-40dc-8f51-2f996242cb5e:16e3e02c-c53b-4b59-91d8-f879ffec077e",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1796",
+        "meno": "Mgr. Lucia Mizerová"
+    },
+    "identifikacneCislo": "2212208449",
+    "spisovaZnacka": "31Cob/104/2020",
+    "datumVydania": "24.02.2022",
+    "ecli": "ECLI:SK:KSTT:2022:2212208449.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-536.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-536.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-554.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-554.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-554.odsek-6",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-554.odsek-6"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-555.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-555.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_31Cob-104-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 200779,
+        "url": "https://obcan.justice.sk/content/public/item/16e3e02c-c53b-4b59-91d8-f879ffec077e"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "31Cob/104/2020",
+        "topic": 147
+    }
+}

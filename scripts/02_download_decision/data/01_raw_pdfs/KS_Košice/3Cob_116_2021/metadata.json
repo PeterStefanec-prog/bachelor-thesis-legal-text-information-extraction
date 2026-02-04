@@ -1,0 +1,43 @@
+{
+    "guid": "3cd7bdd4-157c-4c30-baed-99daa9bb7853:ddbdcab1-1430-4793-9e04-a6f43b0031a2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_748",
+        "meno": "JUDr. Slávka Maruščáková"
+    },
+    "identifikacneCislo": "6120297329",
+    "spisovaZnacka": "3Cob/116/2021",
+    "datumVydania": "28.12.2021",
+    "ecli": "ECLI:SK:KSKE:2021:6120297329.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-116-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 108572,
+        "url": "https://obcan.justice.sk/content/public/item/ddbdcab1-1430-4793-9e04-a6f43b0031a2"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "3Cob/116/2021",
+        "topic": 68
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "guid": "1ea5a472-cc38-4e69-aa7b-062a2466e958:72cc5ce4-0998-450f-8f3e-6dbe925794ec",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_187",
+        "meno": "JUDr. Zdenka Kohútová"
+    },
+    "identifikacneCislo": "7908218998",
+    "spisovaZnacka": "4Cob/122/2011",
+    "datumVydania": "22.02.2012",
+    "ecli": "ECLI:SK:KSKE:2012:7908218998.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné spoločnosti"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-544.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-122-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 98867,
+        "url": "https://obcan.justice.sk/content/public/item/72cc5ce4-0998-450f-8f3e-6dbe925794ec"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/122/2011",
+        "topic": 75
+    }
+}

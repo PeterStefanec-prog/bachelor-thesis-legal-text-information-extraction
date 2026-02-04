@@ -1,0 +1,47 @@
+{
+    "guid": "70ffaae0-1b9e-4cd4-ae97-bf4e96458995:18972308-b56c-4626-abd2-d7ded9aba700",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1497",
+        "meno": "JUDr. Marek Kohút"
+    },
+    "identifikacneCislo": "8115221115",
+    "spisovaZnacka": "6Cob/59/2018",
+    "datumVydania": "16.07.2019",
+    "ecli": "ECLI:SK:KSPO:2019:8115221115.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_6Cob-59-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 88436,
+        "url": "https://obcan.justice.sk/content/public/item/18972308-b56c-4626-abd2-d7ded9aba700"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "6Cob/59/2018",
+        "topic": 118
+    }
+}

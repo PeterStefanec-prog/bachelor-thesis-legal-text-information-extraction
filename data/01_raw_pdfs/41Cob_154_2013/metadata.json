@@ -1,0 +1,64 @@
+{
+    "guid": "2d705a8a-2165-4c6d-b238-4ae32f3c072d:6a0ca884-13ad-4a39-9763-68b3062d987d",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_134",
+        "meno": "JUDr. Alena Križanová"
+    },
+    "identifikacneCislo": "6612216782",
+    "spisovaZnacka": "41Cob/154/2013",
+    "datumVydania": "30.12.2013",
+    "ecli": "ECLI:SK:KSBB:2013:6612216782.1",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-265",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-265"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2005/7",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/7"
+        },
+        {
+            "nazov": "/SK/ZZ/2005/7/#paragraf-155.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/7/#paragraf-155.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_41Cob-154-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 101663,
+        "url": "https://obcan.justice.sk/content/public/item/6a0ca884-13ad-4a39-9763-68b3062d987d"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/154/2013",
+        "topic": 5
+    }
+}

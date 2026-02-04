@@ -1,0 +1,68 @@
+{
+    "guid": "1581be06-4196-4231-8684-f2bac9d2555f:577a9333-079e-40bf-8c8d-f7af07932e3d",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmenené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_263",
+        "meno": "JUDr. Irena Dobňáková"
+    },
+    "identifikacneCislo": "8212204382",
+    "spisovaZnacka": "7Cob/64/2013",
+    "datumVydania": "26.02.2014",
+    "ecli": "ECLI:SK:KSPO:2014:8212204382.2",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-101.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-101.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-211.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-211.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-159.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-159.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-545",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-545"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-220",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-220"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_7Cob-64-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 104413,
+        "url": "https://obcan.justice.sk/content/public/item/577a9333-079e-40bf-8c8d-f7af07932e3d"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "7Cob/64/2013",
+        "topic": 122
+    }
+}

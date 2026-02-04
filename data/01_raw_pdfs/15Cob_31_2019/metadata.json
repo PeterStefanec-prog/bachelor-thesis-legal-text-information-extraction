@@ -1,0 +1,51 @@
+{
+    "guid": "2f04f7fa-95e3-4818-acbe-a04f04122c8e:558c537c-06a1-4403-9742-7903e4097ced",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_223",
+        "meno": "JUDr. Ján Bzdúšek"
+    },
+    "identifikacneCislo": "4115215881",
+    "spisovaZnacka": "15Cob/31/2019",
+    "datumVydania": "15.10.2019",
+    "ecli": "ECLI:SK:KSNR:2019:4115215881.4",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2013/150/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2013/150/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2013/150/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2013/150/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2013/150/#paragraf-470.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2013/150/#paragraf-470.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_15Cob-31-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 97942,
+        "url": "https://obcan.justice.sk/content/public/item/558c537c-06a1-4403-9742-7903e4097ced"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "15Cob/31/2019",
+        "topic": 89
+    }
+}

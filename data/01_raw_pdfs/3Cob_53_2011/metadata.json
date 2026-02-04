@@ -1,0 +1,28 @@
+{
+    "guid": "5b12eab7-ecfa-4884-bce6-a15bad97fc92:beed9147-4953-4eae-b2d3-472fed30f6db",
+    "formaRozhodnutia": "Rozsudok",
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_276",
+        "meno": "JUDr. Peter Šamo"
+    },
+    "identifikacneCislo": "8110223535",
+    "spisovaZnacka": "3Cob/53/2011",
+    "datumVydania": "29.11.2011",
+    "ecli": "ECLI:SK:KSPO:2011:8110223535.2",
+    "dokument": {
+        "name": "Rozsudok_3Cob-53-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 88370,
+        "url": "https://obcan.justice.sk/content/public/item/beed9147-4953-4eae-b2d3-472fed30f6db"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "3Cob/53/2011",
+        "topic": 109
+    }
+}

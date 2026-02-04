@@ -1,0 +1,57 @@
+{
+    "guid": "5f245dfd-6063-45f6-8afc-4daee233c559:243613d4-3536-429e-8a7b-df2fc3404935",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_131",
+        "nazov": "Okresný súd Žilina"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1382",
+        "meno": "JUDr. Roman Tichý"
+    },
+    "identifikacneCislo": "5313212516",
+    "spisovaZnacka": "CA-10C/349/2013",
+    "datumVydania": "30.01.2018",
+    "ecli": "ECLI:SK:KSZA:2018:5313212516.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_11Co-272-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 102953,
+        "url": "https://obcan.justice.sk/content/public/item/243613d4-3536-429e-8a7b-df2fc3404935"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_132",
+        "nazov": "Okresný súd Čadca",
+        "adresaString": "Ul. 17. novembra 1256, 02221 Čadca",
+        "suradnice": {
+            "zemepisnaDlzka": "18.7859418",
+            "zemepisnaSirka": "49.4372539"
+        }
+    },
+    "povodnaSpisovaZnacka": "11Co/272/2017",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "11Co/272/2017",
+        "topic": 155
+    }
+}

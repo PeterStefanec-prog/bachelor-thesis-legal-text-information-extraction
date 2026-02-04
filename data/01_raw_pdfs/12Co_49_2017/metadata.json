@@ -1,0 +1,47 @@
+{
+    "guid": "f865239f-0048-4a19-97f2-58ec2a3938cf:2f6487b0-6d45-4784-9671-00d1507d16dd",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_257",
+        "meno": "JUDr. Soňa Zmeková"
+    },
+    "identifikacneCislo": "4215216947",
+    "spisovaZnacka": "12Co/49/2017",
+    "datumVydania": "22.02.2018",
+    "ecli": "ECLI:SK:KSNR:2018:4215216947.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Spotrebiteľské zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_12Co-49-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 93739,
+        "url": "https://obcan.justice.sk/content/public/item/2f6487b0-6d45-4784-9671-00d1507d16dd"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "12Co/49/2017",
+        "topic": 85
+    }
+}

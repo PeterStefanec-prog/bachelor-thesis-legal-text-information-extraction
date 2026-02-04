@@ -1,0 +1,57 @@
+{
+    "guid": "e3758257-352a-49e0-bfc0-526bf71e953b:b8d47afd-b34e-4b9b-86a8-9dbc24e0e363",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_9",
+        "meno": "JUDr. Ľubica Břoušková"
+    },
+    "identifikacneCislo": "1113217050",
+    "spisovaZnacka": "B1-31Cb/166/2013",
+    "datumVydania": "25.05.2017",
+    "ecli": "ECLI:SK:KSBA:2017:1113217050.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-370.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-370.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2Cob-344-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 76265,
+        "url": "https://obcan.justice.sk/content/public/item/b8d47afd-b34e-4b9b-86a8-9dbc24e0e363"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "2Cob/344/2016",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Cob/344/2016",
+        "topic": 40
+    }
+}

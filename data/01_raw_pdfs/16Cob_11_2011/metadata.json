@@ -1,0 +1,47 @@
+{
+    "guid": "b37ea492-f5a5-4b33-ab1e-0095e66cf756:306cb2d3-cb49-4dc1-9620-b2539db1fbd5",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_302",
+        "meno": "JUDr. Mária Prikrylová"
+    },
+    "identifikacneCislo": "3808207827",
+    "spisovaZnacka": "16Cob/11/2011",
+    "datumVydania": "31.10.2012",
+    "ecli": "ECLI:SK:KSTN:2012:3808207827.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Kúpna zmluva"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_16Cob-11-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 85368,
+        "url": "https://obcan.justice.sk/content/public/item/306cb2d3-cb49-4dc1-9620-b2539db1fbd5"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "16Cob/11/2011",
+        "topic": 123
+    }
+}

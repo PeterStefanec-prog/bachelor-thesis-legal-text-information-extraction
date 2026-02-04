@@ -1,0 +1,57 @@
+{
+    "guid": "88d5e3bf-ae2a-405f-80ad-3843a41dbde3:45e11647-e3bc-4151-8a27-ec13c7b81d6e",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_9",
+        "meno": "JUDr. Ľubica Břoušková"
+    },
+    "identifikacneCislo": "1215224642",
+    "spisovaZnacka": "B2-22Cb/442/2015",
+    "datumVydania": "10.07.2018",
+    "ecli": "ECLI:SK:KSBA:2018:1215224642.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2Cob-186-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 134801,
+        "url": "https://obcan.justice.sk/content/public/item/45e11647-e3bc-4151-8a27-ec13c7b81d6e"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "2Cob/186/2017",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Cob/186/2017",
+        "topic": 37
+    }
+}

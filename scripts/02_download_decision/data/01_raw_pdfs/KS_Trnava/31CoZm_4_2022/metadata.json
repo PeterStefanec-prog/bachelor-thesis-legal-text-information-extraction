@@ -1,0 +1,43 @@
+{
+    "guid": "40fbec04-4396-411f-86d7-3316384de617:8e1fde04-345e-4f35-8a0d-3c598e0cd0a2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1901",
+        "meno": "JUDr. Erika Tischlerová"
+    },
+    "identifikacneCislo": "2120207962",
+    "spisovaZnacka": "31CoZm/4/2022",
+    "datumVydania": "18.04.2023",
+    "ecli": "ECLI:SK:KSTT:2023:2120207962.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1950/191/#paragraf-32.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1950/191/#paragraf-32.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_31CoZm-4-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 161790,
+        "url": "https://obcan.justice.sk/content/public/item/8e1fde04-345e-4f35-8a0d-3c598e0cd0a2"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "31CoZm/4/2022",
+        "topic": 151
+    }
+}

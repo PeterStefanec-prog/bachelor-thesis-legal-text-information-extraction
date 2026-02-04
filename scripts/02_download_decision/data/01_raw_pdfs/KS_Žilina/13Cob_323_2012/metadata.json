@@ -1,0 +1,67 @@
+{
+    "guid": "be70bce1-53a6-4f00-b141-8d9eeae222d9:811cf4d4-f8a9-4481-9c42-43807e71612d",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_346",
+        "meno": "JUDr. Mária Dubcová"
+    },
+    "identifikacneCislo": "5611211404",
+    "spisovaZnacka": "13Cob/323/2012",
+    "datumVydania": "13.03.2013",
+    "ecli": "ECLI:SK:KSZA:2013:5611211404.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-212.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-212.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-214.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-214.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-4",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-4"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-3"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_13Cob-323-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 146911,
+        "url": "https://obcan.justice.sk/content/public/item/811cf4d4-f8a9-4481-9c42-43807e71612d"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "13Cob/323/2012",
+        "topic": 158
+    }
+}

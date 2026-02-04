@@ -1,0 +1,101 @@
+{
+    "guid": "b7767b89-1ca7-43e5-a1fd-f8740447eb1e:002f85ba-e413-42ae-8a86-4a7b89787cd7",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_105",
+        "nazov": "Mestský súd Bratislava IV"
+    },
+    "sudca": {
+        "registreGuid": "sudca_623",
+        "meno": "JUDr. Juraj Považan"
+    },
+    "identifikacneCislo": "1111227329",
+    "spisovaZnacka": "B1-18Ro/74/2011",
+    "datumVydania": "31.03.2015",
+    "ecli": "ECLI:SK:KSBA:2015:1111227329.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zodpovednosť za škodu"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-4",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-4"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-261.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-261.odsek-5",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261.odsek-5"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-261.odsek-6",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261.odsek-6"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-302",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-302"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-344",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-344"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-349",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-349"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-138.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-138.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_5Co-246-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 106988,
+        "url": "https://obcan.justice.sk/content/public/item/002f85ba-e413-42ae-8a86-4a7b89787cd7"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "5Co/246/2014",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "5Co/246/2014",
+        "topic": 59
+    }
+}

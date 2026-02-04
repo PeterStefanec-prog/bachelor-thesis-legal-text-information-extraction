@@ -1,0 +1,43 @@
+{
+    "guid": "743f4d3e-d81b-4577-8a50-9521da8853b9:f14f33df-960c-4d0c-b43a-749566494128",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_748",
+        "meno": "JUDr. Slávka Maruščáková"
+    },
+    "identifikacneCislo": "7110215450",
+    "spisovaZnacka": "2Cob/216/2013",
+    "datumVydania": "20.06.2014",
+    "ecli": "ECLI:SK:KSKE:2014:7110215450.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-216-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 96296,
+        "url": "https://obcan.justice.sk/content/public/item/f14f33df-960c-4d0c-b43a-749566494128"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "2Cob/216/2013",
+        "topic": 66
+    }
+}

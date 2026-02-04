@@ -1,0 +1,61 @@
+{
+    "guid": "a9171539-f239-4790-a7e8-7efa3198243a:54c215ba-2187-4c18-9197-0adf09549268",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1676",
+        "meno": "JUDr. Andrea Sedláčková"
+    },
+    "identifikacneCislo": "1211204153",
+    "spisovaZnacka": "B2-22Cb/100/2011",
+    "datumVydania": "13.06.2019",
+    "ecli": "ECLI:SK:KSBA:2019:1211204153.4",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-40-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 112294,
+        "url": "https://obcan.justice.sk/content/public/item/54c215ba-2187-4c18-9197-0adf09549268"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "1Cob/40/2018",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/40/2018",
+        "topic": 30
+    }
+}

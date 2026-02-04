@@ -1,0 +1,47 @@
+{
+    "guid": "a4c41dbc-4f44-4d5b-8813-969c2b58b5a1:00031908-c998-445b-a1e6-dea13b1db2a1",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_114",
+        "meno": "JUDr. Drahomíra Dibdiaková"
+    },
+    "identifikacneCislo": "6713210429",
+    "spisovaZnacka": "43Cob/20/2016",
+    "datumVydania": "10.03.2016",
+    "ecli": "ECLI:SK:KSBB:2016:6713210429.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_43Cob-20-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 98471,
+        "url": "https://obcan.justice.sk/content/public/item/00031908-c998-445b-a1e6-dea13b1db2a1"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43Cob/20/2016",
+        "topic": 17
+    }
+}

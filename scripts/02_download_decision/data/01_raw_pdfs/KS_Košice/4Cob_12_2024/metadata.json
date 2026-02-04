@@ -1,0 +1,67 @@
+{
+    "guid": "9210b800-a5f1-4a25-b3ac-c66c63e3c718:eefabd3a-107f-4f35-88df-9f4360617992",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_878",
+        "meno": "JUDr. Marek Kotora"
+    },
+    "identifikacneCislo": "8320202633",
+    "spisovaZnacka": "4Cob/12/2024",
+    "datumVydania": "29.04.2025",
+    "ecli": "ECLI:SK:KSKE:2025:8320202633.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-262.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-39",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-39"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-365.odsek-1.pismeno-f",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-365.odsek-1.pismeno-f"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-365.odsek-1.pismeno-h",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-365.odsek-1.pismeno-h"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-12-2024.pdf",
+        "fileExtension": "PDF",
+        "size": 150367,
+        "url": "https://obcan.justice.sk/content/public/item/eefabd3a-107f-4f35-88df-9f4360617992"
+    },
+    "updateDate": "01.10.2025",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/12/2024",
+        "topic": 74
+    }
+}

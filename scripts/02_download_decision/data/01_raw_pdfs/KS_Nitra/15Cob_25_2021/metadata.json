@@ -1,0 +1,63 @@
+{
+    "guid": "7b59b45f-ad45-418e-9734-595bbf2265cc:fc4eba23-9937-4c33-8db4-188bd62ea4a2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_235",
+        "meno": "JUDr. Pavel Lukáč"
+    },
+    "identifikacneCislo": "6119371230",
+    "spisovaZnacka": "15Cob/25/2021",
+    "datumVydania": "22.06.2021",
+    "ecli": "ECLI:SK:KSNR:2021:6119371230.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-388",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-388"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_15Cob-25-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 98511,
+        "url": "https://obcan.justice.sk/content/public/item/fc4eba23-9937-4c33-8db4-188bd62ea4a2"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "15Cob/25/2021",
+        "topic": 88
+    }
+}

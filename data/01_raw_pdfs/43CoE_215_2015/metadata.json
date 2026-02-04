@@ -1,0 +1,55 @@
+{
+    "guid": "675f012f-671e-46de-9102-3891e88115da:856f9b6c-e8a9-4c8b-a955-4d1d96685c0a",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_114",
+        "meno": "JUDr. Drahomíra Dibdiaková"
+    },
+    "identifikacneCislo": "6412206796",
+    "spisovaZnacka": "43CoE/215/2015",
+    "datumVydania": "28.05.2015",
+    "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Exekúcia a výkon rozhodnutí"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1995/233",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1995/233"
+        },
+        {
+            "nazov": "/SK/ZZ/2002/244",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2002/244"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_43CoE-215-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 86094,
+        "url": "https://obcan.justice.sk/content/public/item/856f9b6c-e8a9-4c8b-a955-4d1d96685c0a"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43CoE/215/2015",
+        "topic": 22
+    }
+}

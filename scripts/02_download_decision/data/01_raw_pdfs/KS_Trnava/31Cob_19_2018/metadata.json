@@ -1,0 +1,61 @@
+{
+    "guid": "be6da0dd-b892-4d67-802e-4b7aaf3926d1:77319857-e5ea-4aba-8e0f-14fb26c3fb2b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_110",
+        "nazov": "Okresný súd Trnava"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1394",
+        "meno": "JUDr. Andrea Vyskočová"
+    },
+    "identifikacneCislo": "2514201620",
+    "spisovaZnacka": "PN-12C/193/2014",
+    "datumVydania": "26.03.2019",
+    "ecli": "ECLI:SK:KSTT:2019:2514201620.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_31Cob-19-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 134898,
+        "url": "https://obcan.justice.sk/content/public/item/77319857-e5ea-4aba-8e0f-14fb26c3fb2b"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_113",
+        "nazov": "Okresný súd Piešťany",
+        "adresaString": "Nálepkova 36, 92101 Piešťany, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "17.835458600000038",
+            "zemepisnaSirka": "48.5877692"
+        }
+    },
+    "povodnaSpisovaZnacka": "31Cob/19/2018",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "31Cob/19/2018",
+        "topic": 149
+    }
+}

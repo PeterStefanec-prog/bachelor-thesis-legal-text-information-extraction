@@ -1,0 +1,57 @@
+{
+    "guid": "6e7a43df-87cb-40ff-8008-b3f73fed29ab:6181a761-14a4-40b0-87ae-233662c30447",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_114",
+        "nazov": "Okresný súd Senica"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1807",
+        "meno": "Mgr. Michal Novotný"
+    },
+    "identifikacneCislo": "2718200808",
+    "spisovaZnacka": "SI-9Cb/3/2018",
+    "datumVydania": "26.11.2019",
+    "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-672a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-672a"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_21Cob-43-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 86399,
+        "url": "https://obcan.justice.sk/content/public/item/6181a761-14a4-40b0-87ae-233662c30447"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_115",
+        "nazov": "Okresný súd Skalica",
+        "adresaString": "Námestie Slobody 15, 90901 Skalica, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "17.2299953",
+            "zemepisnaSirka": "48.8458643"
+        }
+    },
+    "povodnaSpisovaZnacka": "21Cob/43/2019",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "21Cob/43/2019",
+        "topic": 145
+    }
+}

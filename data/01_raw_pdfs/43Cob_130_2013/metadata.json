@@ -1,0 +1,55 @@
+{
+    "guid": "92a717bb-5b2e-41e4-8f6e-68a6fab55e8c:1660ca70-5a0a-48c1-8cd3-153f8d32de1f",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_130",
+        "meno": "JUDr. Eva Kmeťová"
+    },
+    "identifikacneCislo": "6912208394",
+    "spisovaZnacka": "43Cob/130/2013",
+    "datumVydania": "19.12.2013",
+    "ecli": "ECLI:SK:KSBB:2013:6912208394.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-548.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-548.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_43Cob-130-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 117051,
+        "url": "https://obcan.justice.sk/content/public/item/1660ca70-5a0a-48c1-8cd3-153f8d32de1f"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43Cob/130/2013",
+        "topic": 16
+    }
+}

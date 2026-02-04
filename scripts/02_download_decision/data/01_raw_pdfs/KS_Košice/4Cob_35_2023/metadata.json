@@ -1,0 +1,51 @@
+{
+    "guid": "83919e86-532a-40dd-92c5-0b4273475599:1d6ef84e-9e32-4278-8dc9-176f509c8136",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1669",
+        "meno": "JUDr. Igor Ragan"
+    },
+    "identifikacneCislo": "6121310260",
+    "spisovaZnacka": "4Cob/35/2023",
+    "datumVydania": "08.08.2023",
+    "ecli": "ECLI:SK:KSKE:2023:6121310260.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-380.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-380.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-393.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-393.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-397",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-397"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-35-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 111522,
+        "url": "https://obcan.justice.sk/content/public/item/1d6ef84e-9e32-4278-8dc9-176f509c8136"
+    },
+    "updateDate": "21.02.2024",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/35/2023",
+        "topic": 81
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "guid": "1288dd95-2da9-40ce-9665-d0e074aeec0c:e4f65d05-13a1-4c18-8b3f-048af600ccc6",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1002",
+        "meno": "JUDr. Anna Ilčinová"
+    },
+    "identifikacneCislo": "8216200735",
+    "spisovaZnacka": "3Cob/57/2016",
+    "datumVydania": "26.04.2018",
+    "ecli": "ECLI:SK:KSPO:2018:8216200735.5",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-57-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 86143,
+        "url": "https://obcan.justice.sk/content/public/item/e4f65d05-13a1-4c18-8b3f-048af600ccc6"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "3Cob/57/2016",
+        "topic": 110
+    }
+}

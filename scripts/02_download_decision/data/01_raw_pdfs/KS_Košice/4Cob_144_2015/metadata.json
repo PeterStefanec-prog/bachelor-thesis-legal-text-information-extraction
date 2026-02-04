@@ -1,0 +1,43 @@
+{
+    "guid": "c7dc3cc8-031e-4d74-9ba6-1107d1f8a9f8:bd1bba5c-8658-4d94-9788-aad56bebe33e",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_187",
+        "meno": "JUDr. Zdenka Kohútová"
+    },
+    "identifikacneCislo": "7613204557",
+    "spisovaZnacka": "4Cob/144/2015",
+    "datumVydania": "18.03.2016",
+    "ecli": "ECLI:SK:KSKE:2016:7613204557.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné spoločnosti"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-548.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-548.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-144-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 104303,
+        "url": "https://obcan.justice.sk/content/public/item/bd1bba5c-8658-4d94-9788-aad56bebe33e"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/144/2015",
+        "topic": 76
+    }
+}

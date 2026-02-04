@@ -1,0 +1,61 @@
+{
+    "guid": "30f3a40d-dbed-42ac-9296-3225af69cbaa:7e9db515-93db-4a68-b5a9-475e9ec2f0b2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_608",
+        "meno": "Mgr. Štefan Zelenák"
+    },
+    "identifikacneCislo": "1214203205",
+    "spisovaZnacka": "B2-42Cb/126/2014",
+    "datumVydania": "21.03.2018",
+    "ecli": "ECLI:SK:KSBA:2018:1214203205.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-183-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 90084,
+        "url": "https://obcan.justice.sk/content/public/item/7e9db515-93db-4a68-b5a9-475e9ec2f0b2"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "3Cob/183/2016",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "3Cob/183/2016",
+        "topic": 48
+    }
+}

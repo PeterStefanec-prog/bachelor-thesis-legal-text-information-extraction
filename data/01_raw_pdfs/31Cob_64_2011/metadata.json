@@ -1,0 +1,43 @@
+{
+    "guid": "26384c8a-a925-43d6-a978-ced6b7d801e7:15d5011d-c1ae-438c-835a-43da149ea652",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_313",
+        "meno": "JUDr. Róbert Foltán"
+    },
+    "identifikacneCislo": "2610203435",
+    "spisovaZnacka": "31Cob/64/2011",
+    "datumVydania": "20.12.2011",
+    "ecli": "ECLI:SK:KSTT:2011:2610203435.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_31Cob-64-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 86224,
+        "url": "https://obcan.justice.sk/content/public/item/15d5011d-c1ae-438c-835a-43da149ea652"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "31Cob/64/2011",
+        "topic": 150
+    }
+}

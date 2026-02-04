@@ -1,0 +1,43 @@
+{
+    "guid": "c425a813-fc78-4dfb-ac5f-0081b4865db6:c2cda4f7-57ef-49da-8e0d-0c5ef5016013",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1002",
+        "meno": "JUDr. Anna Ilčinová"
+    },
+    "identifikacneCislo": "8118207061",
+    "spisovaZnacka": "15Co/37/2019",
+    "datumVydania": "17.03.2020",
+    "ecli": "ECLI:SK:KSPO:2020:8118207061.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Spotrebiteľské zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_15Co-37-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 105787,
+        "url": "https://obcan.justice.sk/content/public/item/c2cda4f7-57ef-49da-8e0d-0c5ef5016013"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "15Co/37/2019",
+        "topic": 102
+    }
+}

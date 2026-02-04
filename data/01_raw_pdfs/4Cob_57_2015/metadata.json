@@ -1,0 +1,67 @@
+{
+    "guid": "a1a57340-d3f0-4b02-bf47-a3ff77c8cb45:783586ae-da40-4b4a-b9f3-67d6f3a2fd23",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_49",
+        "meno": "JUDr. Elena Kúšová"
+    },
+    "identifikacneCislo": "1613203938",
+    "spisovaZnacka": "4Cob/57/2015",
+    "datumVydania": "13.04.2017",
+    "ecli": "ECLI:SK:KSBA:2017:1613203938.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2003/610/#paragraf-43.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/610/#paragraf-43.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-369.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-369.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2003/610/#paragraf-43.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2003/610/#paragraf-43.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-365.odsek-1.pismeno-h",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-365.odsek-1.pismeno-h"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-57-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 97418,
+        "url": "https://obcan.justice.sk/content/public/item/783586ae-da40-4b4a-b9f3-67d6f3a2fd23"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "4Cob/57/2015",
+        "topic": 56
+    }
+}

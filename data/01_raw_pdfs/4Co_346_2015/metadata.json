@@ -1,0 +1,43 @@
+{
+    "guid": "b91827da-13cb-409e-aded-6d190126e35b:2bd9e816-bf12-4cbe-ad7a-3192ef322126",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_285",
+        "meno": "JUDr. Alica Beňová"
+    },
+    "identifikacneCislo": "3112200219",
+    "spisovaZnacka": "4Co/346/2015",
+    "datumVydania": "19.05.2016",
+    "ecli": "ECLI:SK:KSTN:2016:3112200219.1",
+    "oblast": [
+        "Rodinné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Co-346-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 96108,
+        "url": "https://obcan.justice.sk/content/public/item/2bd9e816-bf12-4cbe-ad7a-3192ef322126"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "4Co/346/2015",
+        "topic": 128
+    }
+}

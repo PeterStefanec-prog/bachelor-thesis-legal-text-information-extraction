@@ -1,0 +1,40 @@
+{
+    "guid": "276ba6df-7cc6-474c-b449-a81df43f5ce4:8773ec6e-7dd9-42d3-88ef-68f7d12c8821",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_258",
+        "meno": "JUDr. Jozef Angelovič"
+    },
+    "identifikacneCislo": "6121260960",
+    "spisovaZnacka": "7Cob/61/2022",
+    "datumVydania": "20.10.2022",
+    "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_7Cob-61-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 88029,
+        "url": "https://obcan.justice.sk/content/public/item/8773ec6e-7dd9-42d3-88ef-68f7d12c8821"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "7Cob/61/2022",
+        "topic": 121
+    }
+}

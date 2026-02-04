@@ -1,0 +1,65 @@
+{
+    "guid": "616ef22c-669b-425d-81a2-d1da5ca358ae:94fd44fd-9008-4a9a-a0de-519d4e559656",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_72",
+        "meno": "JUDr. Tatiana Pastieriková"
+    },
+    "identifikacneCislo": "1108234551",
+    "spisovaZnacka": "B1-1Cbi/53/2008",
+    "datumVydania": "28.08.2014",
+    "ecli": "ECLI:SK:KSBA:2014:1108234551.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Incidenčné spory"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f"
+        },
+        {
+            "nazov": "/SK/ZZ/2005/7/#paragraf-32.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/7/#paragraf-32.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2005/7/#paragraf-32.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/7/#paragraf-32.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2005/7/#paragraf-32.odsek-6",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2005/7/#paragraf-32.odsek-6"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2CoKR-71-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 130252,
+        "url": "https://obcan.justice.sk/content/public/item/94fd44fd-9008-4a9a-a0de-519d4e559656"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "2CoKR/71/2013",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2CoKR/71/2013",
+        "topic": 45
+    }
+}

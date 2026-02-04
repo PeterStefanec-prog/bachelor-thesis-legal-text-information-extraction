@@ -1,0 +1,43 @@
+{
+    "guid": "9a3e74d5-d735-4a22-aec1-04e94affda61:0fc58c1b-9cee-4641-a620-a7ff433c756b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_185",
+        "meno": "JUDr. Janka Kočišová"
+    },
+    "identifikacneCislo": "7910213305",
+    "spisovaZnacka": "2Cob/174/2011",
+    "datumVydania": "29.03.2012",
+    "ecli": "ECLI:SK:KSKE:2012:7910213305.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-174-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 92672,
+        "url": "https://obcan.justice.sk/content/public/item/0fc58c1b-9cee-4641-a620-a7ff433c756b"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "2Cob/174/2011",
+        "topic": 65
+    }
+}

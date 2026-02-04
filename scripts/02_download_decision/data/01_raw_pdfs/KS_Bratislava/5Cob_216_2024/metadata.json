@@ -1,0 +1,43 @@
+{
+    "guid": "60c45a70-2ff0-455d-a63b-dd33119ec8a7:4a077daf-7c8b-47d2-b2bc-911ccba63c07",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1352",
+        "meno": "JUDr. Blanka Malichová"
+    },
+    "identifikacneCislo": "1323206582",
+    "spisovaZnacka": "5Cob/216/2024",
+    "datumVydania": "27.11.2024",
+    "ecli": "ECLI:SK:KSBA:2024:1323206582.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-a"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_5Cob-216-2024.pdf",
+        "fileExtension": "PDF",
+        "size": 86965,
+        "url": "https://obcan.justice.sk/content/public/item/4a077daf-7c8b-47d2-b2bc-911ccba63c07"
+    },
+    "updateDate": "26.04.2025",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "5Cob/216/2024",
+        "topic": 61
+    }
+}

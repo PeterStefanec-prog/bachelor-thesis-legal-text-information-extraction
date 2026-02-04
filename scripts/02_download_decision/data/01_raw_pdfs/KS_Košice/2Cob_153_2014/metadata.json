@@ -1,0 +1,43 @@
+{
+    "guid": "01f46519-2f80-44f2-b286-e9fd5a15d08b:fbc3223e-d70f-4218-a1b4-3098b87b80fb",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_748",
+        "meno": "JUDr. Slávka Maruščáková"
+    },
+    "identifikacneCislo": "7712204158",
+    "spisovaZnacka": "2Cob/153/2014",
+    "datumVydania": "28.11.2014",
+    "ecli": "ECLI:SK:KSKE:2014:7712204158.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-153-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 123113,
+        "url": "https://obcan.justice.sk/content/public/item/fbc3223e-d70f-4218-a1b4-3098b87b80fb"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "2Cob/153/2014",
+        "topic": 64
+    }
+}

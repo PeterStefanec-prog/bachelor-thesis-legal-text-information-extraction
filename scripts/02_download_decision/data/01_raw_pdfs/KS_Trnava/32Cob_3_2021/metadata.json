@@ -1,0 +1,56 @@
+{
+    "guid": "574faf7d-955e-4856-b368-ded175ddd46b:616e6d2f-c276-4419-b875-78a78bf136e2",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce",
+        "Odmietajúce odvolanie"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_680",
+        "meno": "JUDr. Daniel Ilavský"
+    },
+    "identifikacneCislo": "2119207499",
+    "spisovaZnacka": "32Cob/3/2021",
+    "datumVydania": "28.06.2022",
+    "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-351.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-351.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_32Cob-3-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 123564,
+        "url": "https://obcan.justice.sk/content/public/item/616e6d2f-c276-4419-b875-78a78bf136e2"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "32Cob/3/2021",
+        "topic": 152
+    }
+}

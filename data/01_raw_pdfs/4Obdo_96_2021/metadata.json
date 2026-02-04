@@ -1,0 +1,83 @@
+{
+    "guid": "bf78417e-ad60-4fc5-b3a2-9d858b3df057:f46c2ba9-606b-433d-b7b9-89a2ef925715",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Odmietajúce podanie"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_421",
+        "meno": "JUDr. Alena Priecelová"
+    },
+    "identifikacneCislo": "8719204171",
+    "spisovaZnacka": "4Obdo/96/2021",
+    "datumVydania": "30.09.2022",
+    "ecli": "ECLI:SK:NSSR:2022:8719204171.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-455",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-455"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-226",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-226"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-228.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-228.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-230",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-230"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-451.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-451.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-453.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-453.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_4Obdo-96-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 126625,
+        "url": "https://obcan.justice.sk/content/public/item/f46c2ba9-606b-433d-b7b9-89a2ef925715"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "4Obdo/96/2021",
+        "topic": 189
+    }
+}

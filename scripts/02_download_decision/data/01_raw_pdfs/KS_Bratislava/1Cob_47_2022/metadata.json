@@ -1,0 +1,61 @@
+{
+    "guid": "5af21bf3-187e-40de-8b15-795cf448b662:cf2aefc9-7cc2-49bc-ba1e-c1e9a2798c99",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_535",
+        "meno": "JUDr. Ľubica Krišková"
+    },
+    "identifikacneCislo": "1215211088",
+    "spisovaZnacka": "B2-23Cb/161/2015",
+    "datumVydania": "30.03.2023",
+    "ecli": "ECLI:SK:KSBA:2023:1215211088.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-47-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 233666,
+        "url": "https://obcan.justice.sk/content/public/item/cf2aefc9-7cc2-49bc-ba1e-c1e9a2798c99"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "1Cob/47/2022",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/47/2022",
+        "topic": 31
+    }
+}

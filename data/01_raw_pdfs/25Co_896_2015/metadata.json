@@ -1,0 +1,67 @@
+{
+    "guid": "85107ec4-ed77-45e8-a6a3-4b287b325ccc:faf384ff-637f-45c8-9e30-61b325cfa17a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_226",
+        "meno": "JUDr. Lýdia Gálisová"
+    },
+    "identifikacneCislo": "4114214797",
+    "spisovaZnacka": "25Co/896/2015",
+    "datumVydania": "15.06.2016",
+    "ecli": "ECLI:SK:KSNR:2016:4114214797.2",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_25Co-896-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 85110,
+        "url": "https://obcan.justice.sk/content/public/item/faf384ff-637f-45c8-9e30-61b325cfa17a"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "25Co/896/2015",
+        "topic": 92
+    }
+}

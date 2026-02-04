@@ -1,0 +1,57 @@
+{
+    "guid": "9689e904-10bf-454c-aa67-9e30c5617843:0af44599-d411-47f8-be74-c43b1cd3a030",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušené"
+    ],
+    "sud": {
+        "registreGuid": "sud_105",
+        "nazov": "Mestský súd Bratislava IV"
+    },
+    "sudca": {
+        "registreGuid": "sudca_19",
+        "meno": "JUDr. Janka Gažovičová"
+    },
+    "identifikacneCislo": "1111201797",
+    "spisovaZnacka": "B1-14C/79/2011",
+    "datumVydania": "29.11.2013",
+    "ecli": "ECLI:SK:KSBA:2013:1111201797.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_8Co-332-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 81637,
+        "url": "https://obcan.justice.sk/content/public/item/0af44599-d411-47f8-be74-c43b1cd3a030"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Co/332/2012",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "8Co/332/2012",
+        "topic": 63
+    }
+}

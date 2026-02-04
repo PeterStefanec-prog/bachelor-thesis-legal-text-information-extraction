@@ -1,0 +1,43 @@
+{
+    "guid": "da294bff-08aa-4952-a1c8-62c802120216:e30d4730-59d2-452f-8a4a-d812ee1dc7c5",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1388",
+        "meno": "JUDr. Milan Majerník"
+    },
+    "identifikacneCislo": "8719204171",
+    "spisovaZnacka": "2Cob/28/2020",
+    "datumVydania": "25.03.2021",
+    "ecli": "ECLI:SK:KSPO:2021:8719204171.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-28-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 132900,
+        "url": "https://obcan.justice.sk/content/public/item/e30d4730-59d2-452f-8a4a-d812ee1dc7c5"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "2Cob/28/2020",
+        "topic": 104
+    }
+}

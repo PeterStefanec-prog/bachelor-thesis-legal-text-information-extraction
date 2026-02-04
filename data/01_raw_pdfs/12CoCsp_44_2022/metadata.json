@@ -1,0 +1,47 @@
+{
+    "guid": "7ac4030c-d748-48f1-bb5b-8e939a8e67b3:91dd9f82-732a-4234-94d3-30bbd837f086",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Odmietajúce odvolanie"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_257",
+        "meno": "JUDr. Soňa Zmeková"
+    },
+    "identifikacneCislo": "4321201075",
+    "spisovaZnacka": "12CoCsp/44/2022",
+    "datumVydania": "15.11.2022",
+    "ecli": "ECLI:SK:KSNR:2022:4321201075.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-386",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-386"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_12CoCsp-44-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 94618,
+        "url": "https://obcan.justice.sk/content/public/item/91dd9f82-732a-4234-94d3-30bbd837f086"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "12CoCsp/44/2022",
+        "topic": 86
+    }
+}

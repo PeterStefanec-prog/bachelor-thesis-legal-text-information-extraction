@@ -1,0 +1,71 @@
+{
+    "guid": "32ee6759-990f-4601-9ca5-059b7ad6c225:fcf7762d-e10e-47d5-9d4d-1f6eb53c8916",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_124",
+        "meno": "JUDr. Jana Hullová"
+    },
+    "identifikacneCislo": "2514201620",
+    "spisovaZnacka": "1Obdo/72/2019",
+    "datumVydania": "29.09.2020",
+    "ecli": "ECLI:SK:NSSR:2020:2514201620.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-419",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-419"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-432.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-432.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-432.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-432.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-442",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-442"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-451.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-451.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_1Obdo-72-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 120688,
+        "url": "https://obcan.justice.sk/content/public/item/fcf7762d-e10e-47d5-9d4d-1f6eb53c8916"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "1Obdo/72/2019",
+        "topic": 172
+    }
+}

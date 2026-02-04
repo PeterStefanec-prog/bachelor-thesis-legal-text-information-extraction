@@ -1,0 +1,59 @@
+{
+    "guid": "718cceff-8b07-4492-9bf5-8e08657b4ba7:5ae891b0-aab3-4fa3-b49b-9d938192740f",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "null_null",
+        "meno": "Mgr. Jolana Fuchsová"
+    },
+    "identifikacneCislo": "7605215910",
+    "spisovaZnacka": "3Cob/41/2013",
+    "datumVydania": "27.08.2013",
+    "ecli": "ECLI:SK:KSKE:2013:7605215910.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-272.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-272.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-262",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-262"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-269.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-269.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-303",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-303"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-41-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 104848,
+        "url": "https://obcan.justice.sk/content/public/item/5ae891b0-aab3-4fa3-b49b-9d938192740f"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "3Cob/41/2013",
+        "topic": 72
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "guid": "b8cd91a3-875b-489a-bb9d-179b6c14f693:db751ec2-9ebb-48e2-80c2-b629957f54e3",
+    "formaRozhodnutia": "Rozsudok",
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "null_null",
+        "meno": "JUDr. Soňa Pekarčíková"
+    },
+    "identifikacneCislo": "1004113662",
+    "spisovaZnacka": "13Cbi/38/2004",
+    "datumVydania": "12.12.2006",
+    "dokument": {
+        "name": "Rozsudok_13Cbi-38-2004.pdf",
+        "fileExtension": "PDF",
+        "size": 114535,
+        "url": "https://obcan.justice.sk/content/public/item/db751ec2-9ebb-48e2-80c2-b629957f54e3"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "13Cbi/38/2004",
+        "topic": 24
+    }
+}

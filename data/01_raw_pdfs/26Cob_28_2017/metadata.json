@@ -1,0 +1,55 @@
+{
+    "guid": "30782799-573c-4985-9745-f47ba2894746:306dc419-8d6a-4369-8dce-d18b54b397eb",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_241",
+        "meno": "Mgr. Erik Németh"
+    },
+    "identifikacneCislo": "4315212254",
+    "spisovaZnacka": "26Cob/28/2017",
+    "datumVydania": "25.01.2018",
+    "ecli": "ECLI:SK:KSNR:2018:4315212254.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-269.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-269.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_26Cob-28-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 83210,
+        "url": "https://obcan.justice.sk/content/public/item/306dc419-8d6a-4369-8dce-d18b54b397eb"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "26Cob/28/2017",
+        "topic": 95
+    }
+}

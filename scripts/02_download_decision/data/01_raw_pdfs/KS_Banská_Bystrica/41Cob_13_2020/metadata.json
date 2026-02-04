@@ -1,0 +1,67 @@
+{
+    "guid": "6480fedb-9bbc-4190-b5e1-63255bd8296a:ed09f2a0-4320-443b-816b-047631be6b22",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_158",
+        "meno": "JUDr. Miriam Boborová Sninská"
+    },
+    "identifikacneCislo": "6619200251",
+    "spisovaZnacka": "41Cob/13/2020",
+    "datumVydania": "18.11.2020",
+    "ecli": "ECLI:SK:KSBB:2020:6619200251.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Bezdôvodné obohatenie"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-373",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-373"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-358",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-358"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-652",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-652"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-451.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-451.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-451.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-451.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_41Cob-13-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 209216,
+        "url": "https://obcan.justice.sk/content/public/item/ed09f2a0-4320-443b-816b-047631be6b22"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/13/2020",
+        "topic": 4
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "guid": "546089ab-720f-4836-ae63-7b908d47d7c1:cc4867dd-84d3-43d0-be2c-3517f3cb2cd3",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_501",
+        "meno": "JUDr. Andrea Haitová"
+    },
+    "identifikacneCislo": "1713214705",
+    "spisovaZnacka": "1Cob/93/2016",
+    "datumVydania": "26.10.2017",
+    "ecli": "ECLI:SK:KSBA:2017:1713214705.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-93-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 96606,
+        "url": "https://obcan.justice.sk/content/public/item/cc4867dd-84d3-43d0-be2c-3517f3cb2cd3"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/93/2016",
+        "topic": 32
+    }
+}

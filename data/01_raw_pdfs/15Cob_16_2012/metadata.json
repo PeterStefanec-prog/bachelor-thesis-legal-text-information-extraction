@@ -1,0 +1,47 @@
+{
+    "guid": "faf4828f-3e89-4664-ba2a-ff8dafe7b12a:1a786193-d536-486e-9b71-0f405c581d92",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_223",
+        "meno": "JUDr. Ján Bzdúšek"
+    },
+    "identifikacneCislo": "4111214044",
+    "spisovaZnacka": "15Cob/16/2012",
+    "datumVydania": "21.03.2012",
+    "ecli": "ECLI:SK:KSNR:2012:4111214044.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_15Cob-16-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 73099,
+        "url": "https://obcan.justice.sk/content/public/item/1a786193-d536-486e-9b71-0f405c581d92"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "15Cob/16/2012",
+        "topic": 87
+    }
+}

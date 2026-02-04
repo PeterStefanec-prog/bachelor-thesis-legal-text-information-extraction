@@ -1,0 +1,77 @@
+{
+    "guid": "c93fd077-e99a-4042-9e79-cb599c4b99f0:7415d9f8-4242-4c47-9e7b-cfc2b1e2c909",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_535",
+        "meno": "JUDr. Ľubica Krišková"
+    },
+    "identifikacneCislo": "1213200497",
+    "spisovaZnacka": "B2-26Cb/60/2013",
+    "datumVydania": "08.03.2016",
+    "ecli": "ECLI:SK:KSBA:2016:1213200497.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-265",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-265"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-409",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-409"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-82-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 98749,
+        "url": "https://obcan.justice.sk/content/public/item/7415d9f8-4242-4c47-9e7b-cfc2b1e2c909"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "2Cob/82/2015",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Cob/82/2015",
+        "topic": 44
+    }
+}

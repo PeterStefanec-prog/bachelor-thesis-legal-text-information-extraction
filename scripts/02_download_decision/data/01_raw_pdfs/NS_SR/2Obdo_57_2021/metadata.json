@@ -1,0 +1,79 @@
+{
+    "guid": "91af152c-d80e-48ea-9c31-57cc35348017:50ace9ba-c473-42da-970d-157ef82e2977",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_418",
+        "meno": "JUDr. Beáta Miničová"
+    },
+    "identifikacneCislo": "6619200251",
+    "spisovaZnacka": "2Obdo/57/2021",
+    "datumVydania": "31.05.2022",
+    "ecli": "ECLI:SK:NSSR:2022:6619200251.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-181",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-181"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-182",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-182"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-a"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-c",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-c"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-435",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-435"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-453",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-453"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2Obdo-57-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 169048,
+        "url": "https://obcan.justice.sk/content/public/item/50ace9ba-c473-42da-970d-157ef82e2977"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "2Obdo/57/2021",
+        "topic": 179
+    }
+}

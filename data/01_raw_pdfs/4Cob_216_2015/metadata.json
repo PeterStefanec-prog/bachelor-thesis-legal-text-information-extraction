@@ -1,0 +1,51 @@
+{
+    "guid": "dbcb0327-9b69-4039-bb6e-b0991d48279c:69053f83-a782-42cf-85ef-0bcb52993a6f",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_72",
+        "meno": "JUDr. Tatiana Pastieriková"
+    },
+    "identifikacneCislo": "1612203556",
+    "spisovaZnacka": "4Cob/216/2015",
+    "datumVydania": "03.11.2016",
+    "ecli": "ECLI:SK:KSBA:2016:1612203556.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-216-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 107579,
+        "url": "https://obcan.justice.sk/content/public/item/69053f83-a782-42cf-85ef-0bcb52993a6f"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "4Cob/216/2015",
+        "topic": 55
+    }
+}

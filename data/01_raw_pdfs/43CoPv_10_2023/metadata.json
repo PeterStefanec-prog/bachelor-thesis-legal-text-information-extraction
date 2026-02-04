@@ -1,0 +1,51 @@
+{
+    "guid": "3e4d1fbe-19b0-4aa6-a565-465002c505a9:3e9007ce-1306-42d4-a450-b6b9b8c2d29e",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_null",
+        "meno": "Mgr. Miriam Kamenská"
+    },
+    "identifikacneCislo": "6120386576",
+    "spisovaZnacka": "43CoPv/10/2023",
+    "datumVydania": "14.09.2023",
+    "ecli": "ECLI:SK:KSBB:2023:6120386576.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-672a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-672a"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_43CoPv-10-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 159761,
+        "url": "https://obcan.justice.sk/content/public/item/3e9007ce-1306-42d4-a450-b6b9b8c2d29e"
+    },
+    "updateDate": "22.05.2024",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43CoPv/10/2023",
+        "topic": 23
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "guid": "1fdfbca3-a82a-4172-bdbd-cfc3e7497bb2:5839505e-0379-44b0-b3bc-e9df94c13bbb",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_866",
+        "meno": "Mgr. Zuzana Štolcová"
+    },
+    "identifikacneCislo": "5113203768",
+    "spisovaZnacka": "13Cob/53/2016",
+    "datumVydania": "29.06.2016",
+    "ecli": "ECLI:SK:KSZA:2016:5113203768.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-212.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-212.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-214.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-214.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-205a.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-205a.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-8",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-8"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-149.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-149.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_13Cob-53-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 123453,
+        "url": "https://obcan.justice.sk/content/public/item/5839505e-0379-44b0-b3bc-e9df94c13bbb"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "13Cob/53/2016",
+        "topic": 159
+    }
+}

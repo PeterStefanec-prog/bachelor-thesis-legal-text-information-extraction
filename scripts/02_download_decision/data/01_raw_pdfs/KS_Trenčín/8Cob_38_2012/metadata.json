@@ -1,0 +1,53 @@
+{
+    "guid": "70778e1c-dd13-4ef9-992a-9a8fdc56c39b:0a264ef7-d4f4-481f-a9f8-992421df519f",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_122",
+        "nazov": "Okresný súd Prievidza"
+    },
+    "sudca": {
+        "registreGuid": "sudca_287",
+        "meno": "JUDr. Natália Čekanová"
+    },
+    "identifikacneCislo": "3210201818",
+    "spisovaZnacka": "BN-5Cb/22/2010",
+    "datumVydania": "20.03.2013",
+    "ecli": "ECLI:SK:KSTN:2013:3210201818.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_8Cob-38-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 85498,
+        "url": "https://obcan.justice.sk/content/public/item/0a264ef7-d4f4-481f-a9f8-992421df519f"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_118",
+        "nazov": "Okresný súd Bánovce nad Bebravou",
+        "adresaString": "Hollého 3, 95701 Bánovce n/B, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "18.2613713",
+            "zemepisnaSirka": "48.7220161"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Cob/38/2012",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/38/2012",
+        "topic": 136
+    }
+}

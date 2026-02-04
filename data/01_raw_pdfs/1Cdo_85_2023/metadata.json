@@ -1,0 +1,55 @@
+{
+    "guid": "0a04edd7-7d8f-4765-9fe3-acd8f87d75fc:211dfbac-09ad-46d4-808f-43243d223ec8",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Odmietajúce podanie"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_439",
+        "meno": "JUDr. Martin Vladik"
+    },
+    "identifikacneCislo": "3819205466",
+    "spisovaZnacka": "1Cdo/85/2023",
+    "datumVydania": "28.05.2025",
+    "ecli": "ECLI:SK:NSSR:2025:3819205466.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-453.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-453.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_1Cdo-85-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 95286,
+        "url": "https://obcan.justice.sk/content/public/item/211dfbac-09ad-46d4-808f-43243d223ec8"
+    },
+    "updateDate": "05.07.2025",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "1Cdo/85/2023",
+        "topic": 169
+    }
+}

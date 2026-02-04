@@ -1,0 +1,57 @@
+{
+    "guid": "a211f5b7-32e6-4e62-9b28-55b646d138ac:92c659dc-bd8b-4041-b0dc-25a43fe18166",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_160",
+        "nazov": "Okresný súd Poprad"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1497",
+        "meno": "JUDr. Marek Kohút"
+    },
+    "identifikacneCislo": "8415204382",
+    "spisovaZnacka": "KK-8Cb/53/2015",
+    "datumVydania": "31.05.2018",
+    "ecli": "ECLI:SK:KSPO:2018:8415204382.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_6Cob-18-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 117220,
+        "url": "https://obcan.justice.sk/content/public/item/92c659dc-bd8b-4041-b0dc-25a43fe18166"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_159",
+        "nazov": "Okresný súd Kežmarok",
+        "adresaString": "Ul. Trhovište 16, 06001 Kežmarok, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "20.4334295",
+            "zemepisnaSirka": "49.1370519"
+        }
+    },
+    "povodnaSpisovaZnacka": "6Cob/18/2017",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "6Cob/18/2017",
+        "topic": 117
+    }
+}

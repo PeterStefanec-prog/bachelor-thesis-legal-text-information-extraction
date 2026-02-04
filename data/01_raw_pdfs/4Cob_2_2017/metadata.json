@@ -1,0 +1,51 @@
+{
+    "guid": "c9a6e660-64c8-4ed5-a32d-9368b14e9100:0c49a3fa-07b6-49b7-bd4c-ec4dca8eae4d",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_282",
+        "meno": "JUDr. Roman Tóth"
+    },
+    "identifikacneCislo": "8314205357",
+    "spisovaZnacka": "4Cob/2/2017",
+    "datumVydania": "14.11.2017",
+    "ecli": "ECLI:SK:KSPO:2017:8314205357.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-2-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 91489,
+        "url": "https://obcan.justice.sk/content/public/item/0c49a3fa-07b6-49b7-bd4c-ec4dca8eae4d"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "4Cob/2/2017",
+        "topic": 111
+    }
+}

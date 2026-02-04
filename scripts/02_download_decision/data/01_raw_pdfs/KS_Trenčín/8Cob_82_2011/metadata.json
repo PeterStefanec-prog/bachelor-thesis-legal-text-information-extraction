@@ -1,0 +1,57 @@
+{
+    "guid": "749d5659-704e-4754-a62b-e8321b2fb7e8:56940f4e-ad6f-40fe-b8d5-57d2522595f3",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušené"
+    ],
+    "sud": {
+        "registreGuid": "sud_122",
+        "nazov": "Okresný súd Prievidza"
+    },
+    "sudca": {
+        "registreGuid": "sudca_287",
+        "meno": "JUDr. Natália Čekanová"
+    },
+    "identifikacneCislo": "3107214675",
+    "spisovaZnacka": "BN-5Cb/26/2010",
+    "datumVydania": "29.02.2012",
+    "ecli": "ECLI:SK:KSTN:2012:3107214675.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_8Cob-82-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 77524,
+        "url": "https://obcan.justice.sk/content/public/item/56940f4e-ad6f-40fe-b8d5-57d2522595f3"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_118",
+        "nazov": "Okresný súd Bánovce nad Bebravou",
+        "adresaString": "Hollého 3, 95701 Bánovce n/B, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "18.2613713",
+            "zemepisnaSirka": "48.7220161"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Cob/82/2011",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/82/2011",
+        "topic": 140
+    }
+}

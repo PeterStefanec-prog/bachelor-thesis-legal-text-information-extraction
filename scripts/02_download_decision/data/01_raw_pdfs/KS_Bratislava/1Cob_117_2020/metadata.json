@@ -1,0 +1,61 @@
+{
+    "guid": "70feed23-9111-4459-97f2-6b8537b874d6:9da5462d-e053-45a9-840f-f78511e1321b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_548",
+        "meno": "JUDr. Monika Školníková"
+    },
+    "identifikacneCislo": "1108220015",
+    "spisovaZnacka": "B1-33Cb/152/2008",
+    "datumVydania": "26.01.2023",
+    "ecli": "ECLI:SK:KSBA:2023:1108220015.5",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-386",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-386"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-117-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 154722,
+        "url": "https://obcan.justice.sk/content/public/item/9da5462d-e053-45a9-840f-f78511e1321b"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "1Cob/117/2020",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/117/2020",
+        "topic": 25
+    }
+}

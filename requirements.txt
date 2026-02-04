@@ -1,0 +1,23 @@
+# data manipulation
+pandas
+numpy
+tqdm
+pyyaml
+seaborn
+pdfplumber
+
+# PDF adn text
+pymupdf       # (fitz) - the best tool for reading pdf nowadays - preserves layout better than old PyPDF2
+langchain     # good for chunking (later)
+langchain-text-splitters
+
+# Jupyter
+jupyter
+ipykernel
+matplotlib    # graphs in notebooks
+
+# Web Scraping and API (Added)
+requests      # Essential for calling the Ministry of Justice API
+beautifulsoup4 # For parsing HTML pages (web scraping)
+curl_cffi     # Advanced requests to impersonate browsers (tried for Constitutional Court)
+playwright    # Browser automation tool (tried for Otvorene Sudy)

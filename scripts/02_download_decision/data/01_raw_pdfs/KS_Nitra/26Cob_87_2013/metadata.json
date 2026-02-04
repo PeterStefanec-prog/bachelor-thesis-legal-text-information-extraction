@@ -1,0 +1,55 @@
+{
+    "guid": "da168159-399a-4920-9a29-df45a2bcc6d4:15dc7f21-a95a-46f0-8447-b3a35edb099a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_245",
+        "meno": "JUDr. Pavol Pilek"
+    },
+    "identifikacneCislo": "4211204531",
+    "spisovaZnacka": "26Cob/87/2013",
+    "datumVydania": "24.04.2014",
+    "ecli": "ECLI:SK:KSNR:2014:4211204531.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-273.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-273.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-373",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-373"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-385",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-385"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_26Cob-87-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 106184,
+        "url": "https://obcan.justice.sk/content/public/item/15dc7f21-a95a-46f0-8447-b3a35edb099a"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "26Cob/87/2013",
+        "topic": 100
+    }
+}

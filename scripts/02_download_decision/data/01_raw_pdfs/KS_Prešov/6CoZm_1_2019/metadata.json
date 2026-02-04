@@ -1,0 +1,43 @@
+{
+    "guid": "0eb39b30-6405-4274-b6a6-8a9e60bc8e2f:0653b8e7-3dff-4927-a0a5-f07e2ef08c66",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1497",
+        "meno": "JUDr. Marek Kohút"
+    },
+    "identifikacneCislo": "8111217289",
+    "spisovaZnacka": "6CoZm/1/2019",
+    "datumVydania": "30.01.2020",
+    "ecli": "ECLI:SK:KSPO:2020:8111217289.5",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmenky"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_6CoZm-1-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 132637,
+        "url": "https://obcan.justice.sk/content/public/item/0653b8e7-3dff-4927-a0a5-f07e2ef08c66"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "6CoZm/1/2019",
+        "topic": 119
+    }
+}

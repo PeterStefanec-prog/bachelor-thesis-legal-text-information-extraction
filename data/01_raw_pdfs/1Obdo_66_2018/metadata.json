@@ -1,0 +1,63 @@
+{
+    "guid": "56c912a8-298c-4a10-b938-1ba4521eb081:d6ffc81e-ab66-4fba-8fcf-5ace50e71734",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_124",
+        "meno": "JUDr. Jana Hullová"
+    },
+    "identifikacneCislo": "7215201451",
+    "spisovaZnacka": "1Obdo/66/2018",
+    "datumVydania": "25.09.2019",
+    "ecli": "ECLI:SK:NSSR:2019:7215201451.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-419",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-419"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-451.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-451.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-453.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-453.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_1Obdo-66-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 100867,
+        "url": "https://obcan.justice.sk/content/public/item/d6ffc81e-ab66-4fba-8fcf-5ace50e71734"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "1Obdo/66/2018",
+        "topic": 170
+    }
+}

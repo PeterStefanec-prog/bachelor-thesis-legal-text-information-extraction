@@ -1,0 +1,43 @@
+{
+    "guid": "38abf056-28b7-4817-a29b-9d05e5b25d99:e58c9ee7-b9d1-46d2-be1c-5f151ec6de33",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_68",
+        "meno": "JUDr. Elena Ondrišová"
+    },
+    "identifikacneCislo": "1317200425",
+    "spisovaZnacka": "3Cob/94/2018",
+    "datumVydania": "22.05.2019",
+    "ecli": "ECLI:SK:KSBA:2019:1317200425.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_3Cob-94-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 82640,
+        "url": "https://obcan.justice.sk/content/public/item/e58c9ee7-b9d1-46d2-be1c-5f151ec6de33"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "3Cob/94/2018",
+        "topic": 52
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "guid": "3ee5e8c0-c014-46d8-a59f-75dd975efb56:676747c8-aa2a-4092-a786-8ee3ce418e15",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1733",
+        "meno": "JUDr. Iveta Sopková"
+    },
+    "identifikacneCislo": "6120270927",
+    "spisovaZnacka": "8Cob/112/2021",
+    "datumVydania": "22.06.2022",
+    "ecli": "ECLI:SK:KSTN:2022:6120270927.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-261.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-675",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-675"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1990/116",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116"
+        },
+        {
+            "nazov": "/SK/ZZ/1990/116/#paragraf-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1990/116/#paragraf-5",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-5"
+        },
+        {
+            "nazov": "/SK/ZZ/1990/116/#paragraf-7",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-7"
+        },
+        {
+            "nazov": "/SK/ZZ/1990/116/#paragraf-8",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-8"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_8Cob-112-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 186999,
+        "url": "https://obcan.justice.sk/content/public/item/676747c8-aa2a-4092-a786-8ee3ce418e15"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/112/2021",
+        "topic": 133
+    }
+}

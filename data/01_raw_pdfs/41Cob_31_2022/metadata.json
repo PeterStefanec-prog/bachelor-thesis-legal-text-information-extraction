@@ -1,0 +1,77 @@
+{
+    "guid": "9c621936-67c8-4e90-9226-25f4c4a3eb74:2ad446ba-2806-4916-8103-16374060178b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_139",
+        "nazov": "Okresný súd Banská Bystrica"
+    },
+    "sudca": {
+        "registreGuid": "sudca_151",
+        "meno": "JUDr. Miroslava Púchovská"
+    },
+    "identifikacneCislo": "6320202847",
+    "spisovaZnacka": "BR-2Cb/8/2020",
+    "datumVydania": "19.10.2022",
+    "ecli": "ECLI:SK:KSBB:2022:6320202847.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Bezdôvodné obohatenie"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-451.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-451.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-451.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-451.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-458.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-458.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_41Cob-31-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 173375,
+        "url": "https://obcan.justice.sk/content/public/item/2ad446ba-2806-4916-8103-16374060178b"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_140",
+        "nazov": "Okresný súd Brezno",
+        "adresaString": "Kuzmányho 4, 97701 Brezno, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "19.64535",
+            "zemepisnaSirka": "48.8059582"
+        }
+    },
+    "povodnaSpisovaZnacka": "41Cob/31/2022",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/31/2022",
+        "topic": 9
+    }
+}

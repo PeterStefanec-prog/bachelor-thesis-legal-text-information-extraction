@@ -1,0 +1,61 @@
+{
+    "guid": "5700fce7-1b75-4ca2-88bf-3226643a98b8:35ef3bb8-9a7a-41b6-a024-1af41abc9b3a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_73",
+        "meno": "JUDr. Soňa Pekarčíková"
+    },
+    "identifikacneCislo": "1514221567",
+    "spisovaZnacka": "B5-1CbZm/794/2015",
+    "datumVydania": "24.11.2016",
+    "ecli": "ECLI:SK:KSBA:2016:1514221567.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmenky"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1CoZm-36-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 139735,
+        "url": "https://obcan.justice.sk/content/public/item/35ef3bb8-9a7a-41b6-a024-1af41abc9b3a"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_106",
+        "nazov": "Okresný súd Bratislava V",
+        "adresaString": "Prokofievova ul. 12, 85238 Bratislava V",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1007143",
+            "zemepisnaSirka": "48.1168753"
+        }
+    },
+    "povodnaSpisovaZnacka": "1CoZm/36/2016",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1CoZm/36/2016",
+        "topic": 33
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "guid": "46316c87-1c7b-464e-a469-854a1c0f61f9:3dc2da5e-1687-4763-8675-3cf9744e3a25",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1226",
+        "meno": "JUDr. Róbert Bebčák"
+    },
+    "identifikacneCislo": "5819200497",
+    "spisovaZnacka": "14Cob/85/2021",
+    "datumVydania": "25.11.2021",
+    "ecli": "ECLI:SK:KSZA:2021:5819200497.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-363",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-363"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-379",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-379"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-380.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-380.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_14Cob-85-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 167025,
+        "url": "https://obcan.justice.sk/content/public/item/3dc2da5e-1687-4763-8675-3cf9744e3a25"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "14Cob/85/2021",
+        "topic": 167
+    }
+}

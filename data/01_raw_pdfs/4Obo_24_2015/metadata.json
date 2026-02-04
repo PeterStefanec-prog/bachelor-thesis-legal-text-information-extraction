@@ -1,0 +1,83 @@
+{
+    "guid": "39b23d64-b816-4980-977e-5ae538aba18b:e4bf49d5-9fe3-4374-b9d8-9738ac76eb1c",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_198",
+        "meno": "JUDr. Gabriela Mederová"
+    },
+    "identifikacneCislo": "2001899888",
+    "spisovaZnacka": "4Obo/24/2015",
+    "datumVydania": "30.01.2017",
+    "ecli": "ECLI:SK:NSSR:2017:2001899888.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-537.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-537.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-551.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-551.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-539.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-539.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-369.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-369.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-470.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-470.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-536",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-536"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-554.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-554.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-470.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-470.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-470.odsek-4",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-470.odsek-4"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-554.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-554.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Obo-24-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 173748,
+        "url": "https://obcan.justice.sk/content/public/item/e4bf49d5-9fe3-4374-b9d8-9738ac76eb1c"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "4Obo/24/2015",
+        "topic": 190
+    }
+}

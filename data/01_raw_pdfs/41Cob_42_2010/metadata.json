@@ -1,0 +1,28 @@
+{
+    "guid": "7750678e-8e8d-432c-ac71-511d4b8f012b:e9ee2ddc-8780-4ebd-bcec-139a79618565",
+    "formaRozhodnutia": "Rozsudok",
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_134",
+        "meno": "JUDr. Alena Križanová"
+    },
+    "identifikacneCislo": "6706209604",
+    "spisovaZnacka": "41Cob/42/2010",
+    "datumVydania": "21.12.2011",
+    "ecli": "ECLI:SK:KSBB:2011:6706209604.1",
+    "dokument": {
+        "name": "Rozsudok_41Cob-42-2010.pdf",
+        "fileExtension": "PDF",
+        "size": 172279,
+        "url": "https://obcan.justice.sk/content/public/item/e9ee2ddc-8780-4ebd-bcec-139a79618565"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/42/2010",
+        "topic": 11
+    }
+}

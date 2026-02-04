@@ -1,0 +1,89 @@
+{
+    "guid": "0b84bf6a-97ef-4c17-afb6-f8c04fa96816:73380aca-55ae-4586-8fe9-475b77ba7a0d",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_136",
+        "nazov": "Okresný súd Námestovo"
+    },
+    "sudca": {
+        "registreGuid": "sudca_346",
+        "meno": "JUDr. Mária Dubcová"
+    },
+    "identifikacneCislo": "5414200612",
+    "spisovaZnacka": "DK-8Cb/3/2014",
+    "datumVydania": "18.11.2015",
+    "ecli": "ECLI:SK:KSZA:2015:5414200612.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-212.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-212.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-214.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-214.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-156.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-156.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-142.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-142.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-151.odsek-8",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-151.odsek-8"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-149.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-149.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_13Cob-196-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 125771,
+        "url": "https://obcan.justice.sk/content/public/item/73380aca-55ae-4586-8fe9-475b77ba7a0d"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_133",
+        "nazov": "Okresný súd Dolný Kubín",
+        "adresaString": "Radlinského 36, 02625 Dolný Kubín",
+        "suradnice": {
+            "zemepisnaDlzka": "19.2940698",
+            "zemepisnaSirka": "49.2107937"
+        }
+    },
+    "povodnaSpisovaZnacka": "13Cob/196/2015",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "13Cob/196/2015",
+        "topic": 157
+    }
+}

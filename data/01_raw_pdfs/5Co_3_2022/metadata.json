@@ -1,0 +1,43 @@
+{
+    "guid": "af981b40-cdbc-49a6-ab24-910a28214f27:55cd0dc8-2ab5-43e9-bdaf-d3bada090361",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1491",
+        "meno": "JUDr. Denis Vékony"
+    },
+    "identifikacneCislo": "3819205466",
+    "spisovaZnacka": "5Co/3/2022",
+    "datumVydania": "19.05.2022",
+    "ecli": "ECLI:SK:KSTN:2022:3819205466.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_5Co-3-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 89734,
+        "url": "https://obcan.justice.sk/content/public/item/55cd0dc8-2ab5-43e9-bdaf-d3bada090361"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "5Co/3/2022",
+        "topic": 129
+    }
+}

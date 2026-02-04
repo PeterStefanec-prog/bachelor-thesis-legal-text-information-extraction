@@ -1,0 +1,43 @@
+{
+    "guid": "f8b8e7dc-5270-48a7-ba2c-4a7436e33b3e:1a04ed04-ade5-47d4-ac7d-0dcb55a97ec5",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_276",
+        "meno": "JUDr. Peter Šamo"
+    },
+    "identifikacneCislo": "8110220146",
+    "spisovaZnacka": "3Cob/3/2012",
+    "datumVydania": "10.04.2012",
+    "ecli": "ECLI:SK:KSPO:2012:8110220146.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o úvere"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-3-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 94153,
+        "url": "https://obcan.justice.sk/content/public/item/1a04ed04-ade5-47d4-ac7d-0dcb55a97ec5"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "3Cob/3/2012",
+        "topic": 106
+    }
+}

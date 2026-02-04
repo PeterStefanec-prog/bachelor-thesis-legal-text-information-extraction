@@ -1,0 +1,53 @@
+{
+    "guid": "93a410cd-a7dd-4d5d-85b5-bb294fbbc4a0:25728988-7676-4f5e-b44d-f6b8d67dc204",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_110",
+        "nazov": "Okresný súd Trnava"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1755",
+        "meno": "JUDr. Terézia Mecelová"
+    },
+    "identifikacneCislo": "2508899996",
+    "spisovaZnacka": "PN-6Cb/8/2008",
+    "datumVydania": "30.06.2020",
+    "ecli": "ECLI:SK:KSTT:2020:2508899996.7",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-365.odsek-1.pismeno-b,c",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-365.odsek-1.pismeno-b,c"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_21Cob-11-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 144540,
+        "url": "https://obcan.justice.sk/content/public/item/25728988-7676-4f5e-b44d-f6b8d67dc204"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_113",
+        "nazov": "Okresný súd Piešťany",
+        "adresaString": "Nálepkova 36, 92101 Piešťany, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "17.835458600000038",
+            "zemepisnaSirka": "48.5877692"
+        }
+    },
+    "povodnaSpisovaZnacka": "21Cob/11/2020",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "21Cob/11/2020",
+        "topic": 143
+    }
+}

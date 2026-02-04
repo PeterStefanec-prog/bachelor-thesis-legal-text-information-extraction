@@ -1,0 +1,75 @@
+{
+    "guid": "9400838d-3b9b-4fc6-b020-99853589cefc:49547c2c-c9bf-47a1-80bb-ef7faacd5793",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_866",
+        "meno": "Mgr. Zuzana Štolcová"
+    },
+    "identifikacneCislo": "5113242552",
+    "spisovaZnacka": "13Cob/7/2017",
+    "datumVydania": "28.06.2017",
+    "ecli": "ECLI:SK:KSZA:2017:5113242552.4",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-380.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-380.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-379",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-379"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-3"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_13Cob-7-2017.pdf",
+        "fileExtension": "PDF",
+        "size": 130999,
+        "url": "https://obcan.justice.sk/content/public/item/49547c2c-c9bf-47a1-80bb-ef7faacd5793"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "13Cob/7/2017",
+        "topic": 160
+    }
+}

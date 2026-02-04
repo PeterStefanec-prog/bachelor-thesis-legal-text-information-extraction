@@ -1,0 +1,107 @@
+{
+    "guid": "b17cb8d3-2e0a-46f2-a6f6-024580deb5e9:0d1d30c6-69f3-45e9-a409-165a5c217313",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Pripúštajúce spätvzatie návrhu, zrušujúce rozsudok a zastavujúce konanie",
+        "Potvrdzujúce",
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_134",
+        "nazov": "Okresný súd Liptovský Mikuláš"
+    },
+    "sudca": {
+        "registreGuid": "sudca_863",
+        "meno": "JUDr. Martina Nemravová"
+    },
+    "identifikacneCislo": "8713217772",
+    "spisovaZnacka": "RK-5Cb/12/2014",
+    "datumVydania": "26.09.2019",
+    "ecli": "ECLI:SK:KSZA:2019:8713217772.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-379.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-379.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-378.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-378.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-391.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-391.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-385.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-385.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-370.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-370.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-391.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-391.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-380.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-380.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-391.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-391.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-370.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-370.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_14Cob-21-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 294012,
+        "url": "https://obcan.justice.sk/content/public/item/0d1d30c6-69f3-45e9-a409-165a5c217313"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_137",
+        "nazov": "Okresný súd Ružomberok",
+        "adresaString": "Dončova 8, 03401 Ružomberok, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "19.2991987",
+            "zemepisnaSirka": "49.0832192"
+        }
+    },
+    "povodnaSpisovaZnacka": "14Cob/21/2019",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "14Cob/21/2019",
+        "topic": 166
+    }
+}

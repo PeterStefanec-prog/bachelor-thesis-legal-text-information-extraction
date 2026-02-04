@@ -1,0 +1,53 @@
+{
+    "guid": "758f9f61-dd4a-401b-9c9f-636777246ded:ea55278e-96c7-4626-a69b-7cf7f5be9e93",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_110",
+        "nazov": "Okresný súd Trnava"
+    },
+    "sudca": {
+        "registreGuid": "sudca_313",
+        "meno": "JUDr. Róbert Foltán"
+    },
+    "identifikacneCislo": "2508210924",
+    "spisovaZnacka": "PN-10Cb/39/2009",
+    "datumVydania": "25.10.2011",
+    "ecli": "ECLI:SK:KSTT:2011:2508210924.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_21Cob-41-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 93744,
+        "url": "https://obcan.justice.sk/content/public/item/ea55278e-96c7-4626-a69b-7cf7f5be9e93"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_113",
+        "nazov": "Okresný súd Piešťany",
+        "adresaString": "Nálepkova 36, 92101 Piešťany, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "17.835458600000038",
+            "zemepisnaSirka": "48.5877692"
+        }
+    },
+    "povodnaSpisovaZnacka": "21Cob/41/2011",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "21Cob/41/2011",
+        "topic": 144
+    }
+}

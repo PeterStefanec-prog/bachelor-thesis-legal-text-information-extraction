@@ -1,0 +1,51 @@
+{
+    "guid": "60e551c3-4bff-4eed-a157-177518908fc9:3127971f-8739-4aef-915c-9f1852bc5dec",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_null",
+        "meno": "JUDr. Eva Dzúriková"
+    },
+    "identifikacneCislo": "6120283395",
+    "spisovaZnacka": "14CoCsp/30/2021",
+    "datumVydania": "22.02.2022",
+    "ecli": "ECLI:SK:KSBB:2022:6120283395.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-657",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-657"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-545a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-545a"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_14CoCsp-30-2021.pdf",
+        "fileExtension": "PDF",
+        "size": 188161,
+        "url": "https://obcan.justice.sk/content/public/item/3127971f-8739-4aef-915c-9f1852bc5dec"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "14CoCsp/30/2021",
+        "topic": 1
+    }
+}

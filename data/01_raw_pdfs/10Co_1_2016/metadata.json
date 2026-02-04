@@ -1,0 +1,43 @@
+{
+    "guid": "972dee09-668a-4247-9ed8-f5fd1b869065:4a84df95-74d8-41f6-b7f5-93c3c74543ba",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1574",
+        "meno": "JUDr. Martin Holič"
+    },
+    "identifikacneCislo": "2110227406",
+    "spisovaZnacka": "10Co/1/2016",
+    "datumVydania": "21.12.2016",
+    "ecli": "ECLI:SK:KSTT:2016:2110227406.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-657",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-657"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_10Co-1-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 144795,
+        "url": "https://obcan.justice.sk/content/public/item/4a84df95-74d8-41f6-b7f5-93c3c74543ba"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "10Co/1/2016",
+        "topic": 141
+    }
+}

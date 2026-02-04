@@ -1,0 +1,47 @@
+{
+    "guid": "38960344-51ec-4663-9a7e-88ddf4ca946d:e951e08f-56a1-4217-8506-e1d4f077c825",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmenené"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1025",
+        "meno": "JUDr. Stanislava Marková"
+    },
+    "identifikacneCislo": "3109223626",
+    "spisovaZnacka": "6Co/52/2011",
+    "datumVydania": "27.11.2012",
+    "ecli": "ECLI:SK:KSTN:2012:3109223626.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-220",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-220"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_6Co-52-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 100531,
+        "url": "https://obcan.justice.sk/content/public/item/e951e08f-56a1-4217-8506-e1d4f077c825"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "6Co/52/2011",
+        "topic": 130
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "guid": "225e776f-9f14-4eb0-a9e5-abc301ff3de6:75b8467f-4ffa-4eed-b79a-559057532610",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_151",
+        "meno": "JUDr. Miroslava Púchovská"
+    },
+    "identifikacneCislo": "6006201162",
+    "spisovaZnacka": "35Cbi/59/2006",
+    "datumVydania": "04.06.2012",
+    "ecli": "ECLI:SK:KSBB:2012:6006201162.14",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-545.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-545.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_35Cbi-59-2006.pdf",
+        "fileExtension": "PDF",
+        "size": 108191,
+        "url": "https://obcan.justice.sk/content/public/item/75b8467f-4ffa-4eed-b79a-559057532610"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "35Cbi/59/2006",
+        "topic": 3
+    }
+}

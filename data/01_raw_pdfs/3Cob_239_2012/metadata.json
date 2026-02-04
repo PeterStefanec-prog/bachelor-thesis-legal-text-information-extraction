@@ -1,0 +1,43 @@
+{
+    "guid": "5512904e-19b0-4ee5-a461-0cc9af078943:bc4ff519-e8f8-4e60-b25d-7bf483df504c",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_220",
+        "meno": "JUDr. Jozef Vanca"
+    },
+    "identifikacneCislo": "7710213676",
+    "spisovaZnacka": "3Cob/239/2012",
+    "datumVydania": "30.09.2013",
+    "ecli": "ECLI:SK:KSKE:2013:7710213676.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-157.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-157.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_3Cob-239-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 103336,
+        "url": "https://obcan.justice.sk/content/public/item/bc4ff519-e8f8-4e60-b25d-7bf483df504c"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "3Cob/239/2012",
+        "topic": 71
+    }
+}

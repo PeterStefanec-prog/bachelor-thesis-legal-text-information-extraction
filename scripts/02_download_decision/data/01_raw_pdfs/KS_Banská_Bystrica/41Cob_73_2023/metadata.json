@@ -1,0 +1,57 @@
+{
+    "guid": "65532c5b-e00b-48d4-9c5e-97d73cc488f7:c44f1a35-5452-447c-9502-f1e285fe5331",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_117",
+        "nazov": "Okresný súd Trenčín"
+    },
+    "sudca": {
+        "registreGuid": "sudca_158",
+        "meno": "JUDr. Miriam Boborová Sninská"
+    },
+    "identifikacneCislo": "1215205075",
+    "spisovaZnacka": "PB-14Cb/204/2017",
+    "datumVydania": "24.04.2024",
+    "ecli": "ECLI:SK:KSBB:2024:1215205075.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Bezdôvodné obohatenie"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-451",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-451"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_41Cob-73-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 220294,
+        "url": "https://obcan.justice.sk/content/public/item/c44f1a35-5452-447c-9502-f1e285fe5331"
+    },
+    "updateDate": "10.04.2025",
+    "povodnySud": {
+        "registreGuid": "sud_121",
+        "nazov": "Okresný súd Považská Bystrica",
+        "adresaString": "Školská 226, 01701 Považská Bystrica, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "18.436029190000056",
+            "zemepisnaSirka": "49.11978098000003"
+        }
+    },
+    "povodnaSpisovaZnacka": "41Cob/73/2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/73/2023",
+        "topic": 12
+    }
+}

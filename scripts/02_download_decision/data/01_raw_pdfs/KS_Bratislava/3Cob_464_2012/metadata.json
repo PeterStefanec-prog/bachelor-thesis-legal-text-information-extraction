@@ -1,0 +1,47 @@
+{
+    "guid": "497094a7-dbe8-4bd5-99ba-4494e5bc14b6:8a4f4848-4e9a-4816-822c-5aaeae418c99",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_68",
+        "meno": "JUDr. Elena Ondrišová"
+    },
+    "identifikacneCislo": "1709203574",
+    "spisovaZnacka": "3Cob/464/2012",
+    "datumVydania": "29.01.2014",
+    "ecli": "ECLI:SK:KSBA:2014:1709203574.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-464-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 89128,
+        "url": "https://obcan.justice.sk/content/public/item/8a4f4848-4e9a-4816-822c-5aaeae418c99"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "3Cob/464/2012",
+        "topic": 51
+    }
+}

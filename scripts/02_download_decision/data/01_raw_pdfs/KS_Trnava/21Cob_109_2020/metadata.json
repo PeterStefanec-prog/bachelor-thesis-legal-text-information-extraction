@@ -1,0 +1,53 @@
+{
+    "guid": "56e0116a-ba6f-449c-9685-de4fa3352f3f:be953af7-2f54-4d54-a31f-166ad054b929",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_114",
+        "nazov": "Okresný súd Senica"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1755",
+        "meno": "JUDr. Terézia Mecelová"
+    },
+    "identifikacneCislo": "2718200808",
+    "spisovaZnacka": "SI-9Cb/3/2018",
+    "datumVydania": "18.05.2021",
+    "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné spoločnosti"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-672a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-672a"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_21Cob-109-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 143507,
+        "url": "https://obcan.justice.sk/content/public/item/be953af7-2f54-4d54-a31f-166ad054b929"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_115",
+        "nazov": "Okresný súd Skalica",
+        "adresaString": "Námestie Slobody 15, 90901 Skalica, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "17.2299953",
+            "zemepisnaSirka": "48.8458643"
+        }
+    },
+    "povodnaSpisovaZnacka": "21Cob/109/2020",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "21Cob/109/2020",
+        "topic": 142
+    }
+}

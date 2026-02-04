@@ -1,0 +1,47 @@
+{
+    "guid": "7114b793-a91a-4e27-bd8e-eaf41086cc98:9005b967-055d-4ff4-a121-6e1aa75cca79",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1215",
+        "meno": "JUDr. Ivica Hanusková"
+    },
+    "identifikacneCislo": "6713202477",
+    "spisovaZnacka": "16Co/368/2014",
+    "datumVydania": "20.11.2014",
+    "ecli": "ECLI:SK:KSBB:2014:6713202477.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-289.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-289.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_16Co-368-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 108153,
+        "url": "https://obcan.justice.sk/content/public/item/9005b967-055d-4ff4-a121-6e1aa75cca79"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "16Co/368/2014",
+        "topic": 2
+    }
+}

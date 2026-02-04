@@ -1,0 +1,59 @@
+{
+    "guid": "61620f87-7706-4d09-8301-630c05da8969:fbe9cfbf-191e-428e-84c9-851e6cd48a05",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_229",
+        "meno": "JUDr. Eva Hritzová"
+    },
+    "identifikacneCislo": "4412205698",
+    "spisovaZnacka": "15Cob/7/2013",
+    "datumVydania": "24.04.2013",
+    "ecli": "ECLI:SK:KSNR:2013:4412205698.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-544"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-302",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-302"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_15Cob-7-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 87102,
+        "url": "https://obcan.justice.sk/content/public/item/fbe9cfbf-191e-428e-84c9-851e6cd48a05"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "15Cob/7/2013",
+        "topic": 90
+    }
+}

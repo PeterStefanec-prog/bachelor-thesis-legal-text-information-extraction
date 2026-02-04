@@ -1,0 +1,47 @@
+{
+    "guid": "1421982d-cef4-41a3-98fe-e667d8e30508:d11e6dba-d973-48dc-8b08-6c7a056f7e2b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1002",
+        "meno": "JUDr. Anna Ilčinová"
+    },
+    "identifikacneCislo": "8116225877",
+    "spisovaZnacka": "4Cob/62/2020",
+    "datumVydania": "11.02.2021",
+    "ecli": "ECLI:SK:KSPO:2021:8116225877.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-62-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 108998,
+        "url": "https://obcan.justice.sk/content/public/item/d11e6dba-d973-48dc-8b08-6c7a056f7e2b"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "4Cob/62/2020",
+        "topic": 112
+    }
+}

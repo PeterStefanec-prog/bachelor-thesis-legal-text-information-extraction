@@ -1,0 +1,47 @@
+{
+    "guid": "5b107acc-7450-4114-94d0-1bbeb8c58083:c45f3dc2-e03c-4d5c-b0bd-ec95cd788acd",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_73",
+        "meno": "JUDr. Soňa Pekarčíková"
+    },
+    "identifikacneCislo": "1314214384",
+    "spisovaZnacka": "1Cob/187/2015",
+    "datumVydania": "06.10.2016",
+    "ecli": "ECLI:SK:KSBA:2016:1314214384.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_1Cob-187-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 93361,
+        "url": "https://obcan.justice.sk/content/public/item/c45f3dc2-e03c-4d5c-b0bd-ec95cd788acd"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/187/2015",
+        "topic": 27
+    }
+}

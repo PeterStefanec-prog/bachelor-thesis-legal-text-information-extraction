@@ -1,0 +1,67 @@
+{
+    "guid": "7bf13b3f-4285-4a96-97f9-a1792290a123:8fdbc6d0-08d9-4163-8525-1e7d54efc55a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_114",
+        "meno": "JUDr. Drahomíra Dibdiaková"
+    },
+    "identifikacneCislo": "6713210427",
+    "spisovaZnacka": "43Cob/513/2014",
+    "datumVydania": "29.01.2015",
+    "ecli": "ECLI:SK:KSBB:2015:6713210427.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-303",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-303"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-306",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-306"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_43Cob-513-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 103324,
+        "url": "https://obcan.justice.sk/content/public/item/8fdbc6d0-08d9-4163-8525-1e7d54efc55a"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43Cob/513/2014",
+        "topic": 19
+    }
+}

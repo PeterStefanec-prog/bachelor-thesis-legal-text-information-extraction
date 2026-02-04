@@ -1,0 +1,51 @@
+{
+    "guid": "f2061aa3-000e-4923-b745-3f691f39cdaa:90e044f8-c146-4aea-b815-6ae78d882f6a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_null",
+        "meno": "Mgr. Miriam Kamenská"
+    },
+    "identifikacneCislo": "6119440157",
+    "spisovaZnacka": "43Cob/30/2023",
+    "datumVydania": "27.07.2023",
+    "ecli": "ECLI:SK:KSBB:2023:6119440157.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-536.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-536.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/0/0/#paragraf-548.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/0/0/#paragraf-548.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_43Cob-30-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 214326,
+        "url": "https://obcan.justice.sk/content/public/item/90e044f8-c146-4aea-b815-6ae78d882f6a"
+    },
+    "updateDate": "10.04.2024",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "43Cob/30/2023",
+        "topic": 18
+    }
+}

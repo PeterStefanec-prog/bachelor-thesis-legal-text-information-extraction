@@ -1,0 +1,57 @@
+{
+    "guid": "f5640987-0bb9-4926-9a7b-99bcd20a785f:35d19c94-c57e-4678-ac78-f79e85f590a8",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_72",
+        "meno": "JUDr. Tatiana Pastieriková"
+    },
+    "identifikacneCislo": "1514200852",
+    "spisovaZnacka": "B5-1CbZm/453/2014",
+    "datumVydania": "29.11.2018",
+    "ecli": "ECLI:SK:KSBA:2018:1514200852.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmenky"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4CoZm-2-2018.pdf",
+        "fileExtension": "PDF",
+        "size": 146086,
+        "url": "https://obcan.justice.sk/content/public/item/35d19c94-c57e-4678-ac78-f79e85f590a8"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_106",
+        "nazov": "Okresný súd Bratislava V",
+        "adresaString": "Prokofievova ul. 12, 85238 Bratislava V",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1007143",
+            "zemepisnaSirka": "48.1168753"
+        }
+    },
+    "povodnaSpisovaZnacka": "4CoZm/2/2018",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "4CoZm/2/2018",
+        "topic": 57
+    }
+}

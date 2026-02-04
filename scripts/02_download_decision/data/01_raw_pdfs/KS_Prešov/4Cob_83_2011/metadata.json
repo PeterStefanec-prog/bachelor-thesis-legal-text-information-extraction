@@ -1,0 +1,55 @@
+{
+    "guid": "dc379df6-dfc3-4d30-9413-b39a6b4f930f:5a89a39c-efac-4363-93ac-d46990d61edd",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_282",
+        "meno": "JUDr. Roman Tóth"
+    },
+    "identifikacneCislo": "8307211242",
+    "spisovaZnacka": "4Cob/83/2011",
+    "datumVydania": "17.01.2012",
+    "ecli": "ECLI:SK:KSPO:2012:8307211242.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-303",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-303"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-545",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-545"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-83-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 111299,
+        "url": "https://obcan.justice.sk/content/public/item/5a89a39c-efac-4363-93ac-d46990d61edd"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "4Cob/83/2011",
+        "topic": 113
+    }
+}

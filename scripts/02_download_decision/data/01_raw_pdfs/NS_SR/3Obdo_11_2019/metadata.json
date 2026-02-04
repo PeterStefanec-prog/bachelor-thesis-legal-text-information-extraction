@@ -1,0 +1,59 @@
+{
+    "guid": "ea6aaf61-b3e7-4acb-b4e7-ed9a7dbf9621:11036483-b125-4108-af80-75cd24984c5c",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_402",
+        "meno": "JUDr. Ľubomíra Kúdelová"
+    },
+    "identifikacneCislo": "8710206608",
+    "spisovaZnacka": "3Obdo/11/2019",
+    "datumVydania": "17.07.2019",
+    "ecli": "ECLI:SK:NSSR:2019:8710206608.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-450",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-450"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-449.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-449.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-449.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-449.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_3Obdo-11-2019.pdf",
+        "fileExtension": "PDF",
+        "size": 114600,
+        "url": "https://obcan.justice.sk/content/public/item/11036483-b125-4108-af80-75cd24984c5c"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "3Obdo/11/2019",
+        "topic": 180
+    }
+}

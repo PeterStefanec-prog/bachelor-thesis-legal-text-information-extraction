@@ -1,0 +1,47 @@
+{
+    "guid": "c65455e9-98d1-4013-bf27-dc4e5f6dc894:929ccdb6-e59e-40f6-9ee9-d55a21647a56",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_245",
+        "meno": "JUDr. Pavol Pilek"
+    },
+    "identifikacneCislo": "4111204662",
+    "spisovaZnacka": "26Cob/135/2012",
+    "datumVydania": "28.02.2013",
+    "ecli": "ECLI:SK:KSNR:2013:4111204662.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_26Cob-135-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 91883,
+        "url": "https://obcan.justice.sk/content/public/item/929ccdb6-e59e-40f6-9ee9-d55a21647a56"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "26Cob/135/2012",
+        "topic": 93
+    }
+}

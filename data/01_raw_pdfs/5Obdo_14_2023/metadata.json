@@ -1,0 +1,75 @@
+{
+    "guid": "061ca1f6-97d7-46ea-9428-559b066a9242:c3695168-6b23-41dd-b9d2-f423119e9dbd",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1607",
+        "meno": "JUDr. Andrea Moravčíková"
+    },
+    "identifikacneCislo": "7811201291",
+    "spisovaZnacka": "5Obdo/14/2023",
+    "datumVydania": "25.04.2024",
+    "ecli": "ECLI:SK:NSSR:2024:7811201291.4",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-272.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-272.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-272.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-272.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-39",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-39"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1.pismeno-b"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-448",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-448"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_5Obdo-14-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 219613,
+        "url": "https://obcan.justice.sk/content/public/item/c3695168-6b23-41dd-b9d2-f423119e9dbd"
+    },
+    "updateDate": "15.10.2024",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "5Obdo/14/2023",
+        "topic": 193
+    }
+}

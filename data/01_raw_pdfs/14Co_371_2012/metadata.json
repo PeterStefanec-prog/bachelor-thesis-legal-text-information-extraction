@@ -1,0 +1,43 @@
+{
+    "guid": "836bd3c5-7f99-4713-84e4-9aff9f70f0b0:a32641a2-7ec3-4b97-a223-bcfdfa2902ab",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_149",
+        "meno": "JUDr. Peter Priehoda"
+    },
+    "identifikacneCislo": "6712203774",
+    "spisovaZnacka": "14Co/371/2012",
+    "datumVydania": "03.09.2013",
+    "ecli": "ECLI:SK:KSBB:2013:6712203774.1",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluvy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_14Co-371-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 96253,
+        "url": "https://obcan.justice.sk/content/public/item/a32641a2-7ec3-4b97-a223-bcfdfa2902ab"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "14Co/371/2012",
+        "topic": 0
+    }
+}

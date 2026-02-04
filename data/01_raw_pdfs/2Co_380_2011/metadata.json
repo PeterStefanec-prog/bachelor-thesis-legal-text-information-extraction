@@ -1,0 +1,65 @@
+{
+    "guid": "0c040da4-31e5-4c83-8a43-c4ddbbcd2d5f:aacedfae-8eb0-475a-899e-4746de965d79",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_105",
+        "nazov": "Mestský súd Bratislava IV"
+    },
+    "sudca": {
+        "registreGuid": "sudca_534",
+        "meno": "JUDr. Ayše Pružinec - Erenová"
+    },
+    "identifikacneCislo": "1109215097",
+    "spisovaZnacka": "B1-12Ro/44/2009",
+    "datumVydania": "12.06.2013",
+    "ecli": "ECLI:SK:KSBA:2013:1109215097.2",
+    "oblast": [
+        "Občianske právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-340.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-340.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Co-380-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 104796,
+        "url": "https://obcan.justice.sk/content/public/item/aacedfae-8eb0-475a-899e-4746de965d79"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_102",
+        "nazov": "Mestský súd Bratislava I",
+        "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+        "suradnice": {
+            "zemepisnaDlzka": "17.122962",
+            "zemepisnaSirka": "48.152538"
+        }
+    },
+    "povodnaSpisovaZnacka": "2Co/380/2011",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Co/380/2011",
+        "topic": 35
+    }
+}

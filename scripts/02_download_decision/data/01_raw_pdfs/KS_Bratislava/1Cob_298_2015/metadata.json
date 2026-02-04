@@ -1,0 +1,61 @@
+{
+    "guid": "1a294283-9a04-4595-abd0-178abc3a318a:94e088dc-3e55-4643-9d24-93f77f34c3c8",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1676",
+        "meno": "JUDr. Andrea Sedláčková"
+    },
+    "identifikacneCislo": "1211204153",
+    "spisovaZnacka": "B2-22Cb/100/2011",
+    "datumVydania": "02.02.2017",
+    "ecli": "ECLI:SK:KSBA:2017:1211204153.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_1Cob-298-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 78933,
+        "url": "https://obcan.justice.sk/content/public/item/94e088dc-3e55-4643-9d24-93f77f34c3c8"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "1Cob/298/2015",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "1Cob/298/2015",
+        "topic": 29
+    }
+}

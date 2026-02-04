@@ -1,0 +1,47 @@
+{
+    "guid": "3624682e-48f7-4824-98af-9b325e2b8756:49aa5f34-73ab-4bbb-b593-3a906e9d9343",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1767",
+        "meno": "Mgr. Mgr. Miriam Plavčáková"
+    },
+    "identifikacneCislo": "6120446496",
+    "spisovaZnacka": "5Cob/51/2023",
+    "datumVydania": "30.07.2024",
+    "ecli": "ECLI:SK:KSBA:2024:6120446496.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-391.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-391.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_5Cob-51-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 138031,
+        "url": "https://obcan.justice.sk/content/public/item/49aa5f34-73ab-4bbb-b593-3a906e9d9343"
+    },
+    "updateDate": "20.06.2025",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "5Cob/51/2023",
+        "topic": 62
+    }
+}

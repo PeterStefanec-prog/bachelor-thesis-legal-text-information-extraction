@@ -1,0 +1,56 @@
+{
+    "guid": "d47ef11f-fe9b-4728-bc77-8deffb6236d2:36e09325-423f-40a3-992d-46ff2e383847",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_418",
+        "meno": "JUDr. Beáta Miničová"
+    },
+    "identifikacneCislo": "7917211444",
+    "spisovaZnacka": "2Obdo/25/2023",
+    "datumVydania": "14.12.2023",
+    "ecli": "ECLI:SK:NSSR:2023:7917211444.1",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-420",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-420"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-422.odsek-1.pismeno-a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-422.odsek-1.pismeno-a"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-422.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-422.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-421.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-421.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2Obdo-25-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 128282,
+        "url": "https://obcan.justice.sk/content/public/item/36e09325-423f-40a3-992d-46ff2e383847"
+    },
+    "updateDate": "15.04.2024",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "2Obdo/25/2023",
+        "topic": 178
+    }
+}

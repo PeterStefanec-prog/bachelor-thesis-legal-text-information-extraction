@@ -1,0 +1,43 @@
+{
+    "guid": "8ddcd2c6-26e7-4247-a551-b0e60c1fd19e:b4f7451f-00c0-4595-83e9-09841e0a101e",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_179",
+        "meno": "JUDr. Vladimír Hrib, PhD."
+    },
+    "identifikacneCislo": "7111220136",
+    "spisovaZnacka": "2Cob/35/2015",
+    "datumVydania": "20.10.2015",
+    "ecli": "ECLI:SK:KSKE:2015:7111220136.3",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-35-2015.pdf",
+        "fileExtension": "PDF",
+        "size": 105954,
+        "url": "https://obcan.justice.sk/content/public/item/b4f7451f-00c0-4595-83e9-09841e0a101e"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "2Cob/35/2015",
+        "topic": 67
+    }
+}

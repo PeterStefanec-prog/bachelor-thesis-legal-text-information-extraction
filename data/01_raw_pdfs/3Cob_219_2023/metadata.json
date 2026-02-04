@@ -1,0 +1,59 @@
+{
+    "guid": "f2a51a18-d61e-46ab-b3e5-f028ecb80007:1ecd4e99-1a11-41f5-b941-a2ad48e36ef3",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1376",
+        "meno": "JUDr. Rastislav Pella"
+    },
+    "identifikacneCislo": "6122327846",
+    "spisovaZnacka": "3Cob/219/2023",
+    "datumVydania": "31.07.2025",
+    "ecli": "ECLI:SK:KSKE:2025:6122327846.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Bezdôvodné obohatenie"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-255.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-255.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-258",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-258"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-396.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-396.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-262.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-262.odsek-2"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-219-2023.pdf",
+        "fileExtension": "PDF",
+        "size": 120664,
+        "url": "https://obcan.justice.sk/content/public/item/1ecd4e99-1a11-41f5-b941-a2ad48e36ef3"
+    },
+    "updateDate": "04.10.2025",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "3Cob/219/2023",
+        "topic": 69
+    }
+}

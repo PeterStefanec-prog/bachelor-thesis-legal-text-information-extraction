@@ -1,0 +1,83 @@
+{
+    "guid": "b7a318b4-d227-42f9-b751-38f160970c9b:3c4016c2-b764-4f63-b2e7-8ee510343543",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_109",
+        "nazov": "Krajský súd v Trnave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_680",
+        "meno": "JUDr. Daniel Ilavský"
+    },
+    "identifikacneCislo": "2121200908",
+    "spisovaZnacka": "32Cob/34/2022",
+    "datumVydania": "20.12.2022",
+    "ecli": "ECLI:SK:KSTT:2022:2121200908.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-497",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-497"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-499",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-499"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-407.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-407.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-407.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-407.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-407.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-407.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-407.odsek-4",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-407.odsek-4"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-369.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-369.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-369.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-369.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_32Cob-34-2022.pdf",
+        "fileExtension": "PDF",
+        "size": 168554,
+        "url": "https://obcan.justice.sk/content/public/item/3c4016c2-b764-4f63-b2e7-8ee510343543"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trnava",
+        "id": "32Cob/34/2022",
+        "topic": 153
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "guid": "c1c0ab7b-e48d-49d5-a8ee-72fd906dd404:01c0332e-06ac-4785-bdb3-2f633325d2a6",
+    "formaRozhodnutia": "Uznesenie",
+    "sud": {
+        "registreGuid": "sud_122",
+        "nazov": "Okresný súd Prievidza"
+    },
+    "sudca": {
+        "registreGuid": "sudca_287",
+        "meno": "JUDr. Natália Čekanová"
+    },
+    "identifikacneCislo": "3210200754",
+    "spisovaZnacka": "BN-3Cb/27/2010",
+    "datumVydania": "26.01.2012",
+    "ecli": "ECLI:SK:KSTN:2012:3210200754.1",
+    "dokument": {
+        "name": "Uznesenie_8Cob-64-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 79650,
+        "url": "https://obcan.justice.sk/content/public/item/01c0332e-06ac-4785-bdb3-2f633325d2a6"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_118",
+        "nazov": "Okresný súd Bánovce nad Bebravou",
+        "adresaString": "Hollého 3, 95701 Bánovce n/B, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "18.2613713",
+            "zemepisnaSirka": "48.7220161"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Cob/64/2011",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/64/2011",
+        "topic": 138
+    }
+}

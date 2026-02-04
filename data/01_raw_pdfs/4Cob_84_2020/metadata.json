@@ -1,0 +1,47 @@
+{
+    "guid": "e9c2dce4-26c4-4fe3-bbc0-415fa5941e82:d59a4cde-baef-40f2-b3a4-bb030d8ecded",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1002",
+        "meno": "JUDr. Anna Ilčinová"
+    },
+    "identifikacneCislo": "8118209036",
+    "spisovaZnacka": "4Cob/84/2020",
+    "datumVydania": "11.02.2021",
+    "ecli": "ECLI:SK:KSPO:2021:8118209036.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o úvere"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-84-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 99037,
+        "url": "https://obcan.justice.sk/content/public/item/d59a4cde-baef-40f2-b3a4-bb030d8ecded"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "4Cob/84/2020",
+        "topic": 114
+    }
+}

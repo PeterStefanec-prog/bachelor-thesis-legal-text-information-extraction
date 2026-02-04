@@ -1,0 +1,50 @@
+{
+    "guid": "d9e06398-ec90-4fbd-a1f4-29226f201ba7:da6b3dd0-e00e-4089-84a0-27adf5f732ff",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdené"
+    ],
+    "sud": {
+        "registreGuid": "sud_155",
+        "nazov": "Krajský súd v Prešove"
+    },
+    "sudca": {
+        "meno": "JUDr. Roman Tóth"
+    },
+    "identifikacneCislo": "8711202876",
+    "spisovaZnacka": "7Cob/44/2014",
+    "datumVydania": "16.10.2014",
+    "ecli": "ECLI:SK:KSPO:2014:8711202876.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-14.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-14.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-15a.odsek-5",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-15a.odsek-5"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_7Cob-44-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 88775,
+        "url": "https://obcan.justice.sk/content/public/item/da6b3dd0-e00e-4089-84a0-27adf5f732ff"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Prešov",
+        "id": "7Cob/44/2014",
+        "topic": 120
+    }
+}

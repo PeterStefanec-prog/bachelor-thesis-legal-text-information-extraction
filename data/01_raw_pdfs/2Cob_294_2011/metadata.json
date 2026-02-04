@@ -1,0 +1,55 @@
+{
+    "guid": "5b4c8b8e-e247-4aa8-b7b8-4ab7db8b324d:98607dd4-43a2-4897-ba62-270d210857a9",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_101",
+        "nazov": "Krajský súd v Bratislave"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1348",
+        "meno": "JUDr. Lenka Praženková"
+    },
+    "identifikacneCislo": "1305219662",
+    "spisovaZnacka": "2Cob/294/2011",
+    "datumVydania": "19.02.2013",
+    "ecli": "ECLI:SK:KSBA:2013:1305219662.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Kúpna zmluva"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_2Cob-294-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 88465,
+        "url": "https://obcan.justice.sk/content/public/item/98607dd4-43a2-4897-ba62-270d210857a9"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Cob/294/2011",
+        "topic": 38
+    }
+}

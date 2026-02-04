@@ -1,0 +1,57 @@
+{
+    "guid": "580c1e90-722a-4d88-857a-785389d01a09:c744bb29-0926-4444-8ccf-d99668e094f5",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_117",
+        "nazov": "Okresný súd Trenčín"
+    },
+    "sudca": {
+        "registreGuid": "sudca_287",
+        "meno": "JUDr. Natália Čekanová"
+    },
+    "identifikacneCislo": "3710206478",
+    "spisovaZnacka": "PB-8Cb/28/2015",
+    "datumVydania": "30.10.2012",
+    "ecli": "ECLI:SK:KSTN:2012:3710206478.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_8Cob-200-2011.pdf",
+        "fileExtension": "PDF",
+        "size": 108129,
+        "url": "https://obcan.justice.sk/content/public/item/c744bb29-0926-4444-8ccf-d99668e094f5"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_121",
+        "nazov": "Okresný súd Považská Bystrica",
+        "adresaString": "Školská 226, 01701 Považská Bystrica, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "18.436029190000056",
+            "zemepisnaSirka": "49.11978098000003"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Cob/200/2011",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/200/2011",
+        "topic": 134
+    }
+}

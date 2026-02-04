@@ -1,0 +1,51 @@
+{
+    "guid": "3c40d305-0cff-4803-aeb4-13cd426275a4:4e4c84a5-6de9-40a8-973c-69875634507a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_null",
+        "meno": "JUDr. Andrea Gindlová"
+    },
+    "identifikacneCislo": "6123462118",
+    "spisovaZnacka": "42Cob/94/2024",
+    "datumVydania": "09.09.2025",
+    "ecli": "ECLI:SK:KSBB:2025:6123462118.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-269.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-269.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-345",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-345"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_42Cob-94-2024.pdf",
+        "fileExtension": "PDF",
+        "size": 184277,
+        "url": "https://obcan.justice.sk/content/public/item/4e4c84a5-6de9-40a8-973c-69875634507a"
+    },
+    "updateDate": "04.11.2025",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "42Cob/94/2024",
+        "topic": 15
+    }
+}

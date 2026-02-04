@@ -1,0 +1,47 @@
+{
+    "guid": "5ebca784-25ca-44c5-8d16-cc20519635e8:9e55dee1-5b88-4401-8c94-cc1d03031d92",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmenené"
+    ],
+    "sud": {
+        "registreGuid": "sud_138",
+        "nazov": "Krajský súd v Banskej Bystrici"
+    },
+    "sudca": {
+        "registreGuid": "sudca_158",
+        "meno": "JUDr. Miriam Boborová Sninská"
+    },
+    "identifikacneCislo": "6713216434",
+    "spisovaZnacka": "41Cob/256/2016",
+    "datumVydania": "29.11.2017",
+    "ecli": "ECLI:SK:KSBB:2017:6713216434.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-39",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-39"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_41Cob-256-2016.pdf",
+        "fileExtension": "PDF",
+        "size": 204804,
+        "url": "https://obcan.justice.sk/content/public/item/9e55dee1-5b88-4401-8c94-cc1d03031d92"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Banská Bystrica",
+        "id": "41Cob/256/2016",
+        "topic": 7
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "guid": "a9944abb-a9d6-48b2-ac03-38f193ac8572:58e8e918-5a4b-4c16-a867-6417d73e8b1e",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1025",
+        "meno": "JUDr. Stanislava Marková"
+    },
+    "identifikacneCislo": "3111225477",
+    "spisovaZnacka": "6Co/65/2013",
+    "datumVydania": "26.02.2013",
+    "ecli": "ECLI:SK:KSTN:2013:3111225477.1",
+    "podOblast": [
+        "Iné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-219",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-219"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_6Co-65-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 82178,
+        "url": "https://obcan.justice.sk/content/public/item/58e8e918-5a4b-4c16-a867-6417d73e8b1e"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "6Co/65/2013",
+        "topic": 131
+    }
+}

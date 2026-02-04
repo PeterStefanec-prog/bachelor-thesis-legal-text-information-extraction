@@ -1,0 +1,47 @@
+{
+    "guid": "39935b4c-7e6d-4a91-8b58-82093711c4fa:7b0e98b4-42b2-400f-89c8-363262dce986",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_147",
+        "nazov": "Krajský súd v Košiciach"
+    },
+    "sudca": {
+        "registreGuid": "sudca_220",
+        "meno": "JUDr. Jozef Vanca"
+    },
+    "identifikacneCislo": "7710213676",
+    "spisovaZnacka": "3Cob/224/2014",
+    "datumVydania": "31.08.2015",
+    "ecli": "ECLI:SK:KSKE:2015:7710213676.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_3Cob-224-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 109434,
+        "url": "https://obcan.justice.sk/content/public/item/7b0e98b4-42b2-400f-89c8-363262dce986"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "3Cob/224/2014",
+        "topic": 70
+    }
+}

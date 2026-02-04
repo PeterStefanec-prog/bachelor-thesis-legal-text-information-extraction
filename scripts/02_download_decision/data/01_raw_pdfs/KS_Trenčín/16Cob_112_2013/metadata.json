@@ -1,0 +1,61 @@
+{
+    "guid": "22078c0e-8230-490c-aca7-c87507c4c479:fc06eed1-3346-478b-893f-1b02ed9626db",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_117",
+        "nazov": "Okresný súd Trenčín"
+    },
+    "sudca": {
+        "registreGuid": "sudca_302",
+        "meno": "JUDr. Mária Prikrylová"
+    },
+    "identifikacneCislo": "3512200457",
+    "spisovaZnacka": "NM-8Cb/39/2012",
+    "datumVydania": "21.08.2013",
+    "ecli": "ECLI:SK:KSTN:2013:3512200457.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-266.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-266.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_16Cob-112-2013.pdf",
+        "fileExtension": "PDF",
+        "size": 115346,
+        "url": "https://obcan.justice.sk/content/public/item/fc06eed1-3346-478b-893f-1b02ed9626db"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_119",
+        "nazov": "Okresný súd Nové Mesto nad Váhom",
+        "adresaString": "Hviezdoslavova 37, 91519 Nové Mesto nad Váhom",
+        "suradnice": {
+            "zemepisnaDlzka": "17.8351591",
+            "zemepisnaSirka": "48.7548932"
+        }
+    },
+    "povodnaSpisovaZnacka": "16Cob/112/2013",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "16Cob/112/2013",
+        "topic": 124
+    }
+}

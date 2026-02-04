@@ -1,0 +1,53 @@
+{
+    "guid": "e980d6c9-417d-40f3-bc43-1e993c6eab2f:e3e29595-4d1b-4076-9347-88d61c1bcada",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_148",
+        "nazov": "Mestský súd Košice"
+    },
+    "sudca": {
+        "registreGuid": "sudca_187",
+        "meno": "JUDr. Zdenka Kohútová"
+    },
+    "identifikacneCislo": "7209209563",
+    "spisovaZnacka": "K2-34Cb/203/2010",
+    "datumVydania": "27.02.2013",
+    "ecli": "ECLI:SK:KSKE:2013:7209209563.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_4Cob-95-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 115601,
+        "url": "https://obcan.justice.sk/content/public/item/e3e29595-4d1b-4076-9347-88d61c1bcada"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_149",
+        "nazov": "Okresný súd Košice II",
+        "adresaString": "Štúrova 29, 04211 Košice II, Slovenská republika",
+        "suradnice": {
+            "zemepisnaDlzka": "21.2486472",
+            "zemepisnaSirka": "48.7165592"
+        }
+    },
+    "povodnaSpisovaZnacka": "4Cob/95/2012",
+    "_csv_metadata": {
+        "court": "KS Košice",
+        "id": "4Cob/95/2012",
+        "topic": 84
+    }
+}

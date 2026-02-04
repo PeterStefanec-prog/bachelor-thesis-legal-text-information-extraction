@@ -1,0 +1,63 @@
+{
+    "guid": "33bdc8a0-024b-4426-94ff-986a0a680ad4:13b9d61c-c6d6-44a5-b9ef-1136af3ea14a",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_130",
+        "nazov": "Krajský súd v Žiline"
+    },
+    "sudca": {
+        "registreGuid": "sudca_862",
+        "meno": "JUDr. Ivana Nemčeková"
+    },
+    "identifikacneCislo": "5711206993",
+    "spisovaZnacka": "14Cob/124/2012",
+    "datumVydania": "05.11.2012",
+    "ecli": "ECLI:SK:KSZA:2012:5711206993.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-f"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-1.pismeno-h"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-221.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-221.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-212.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-212.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-226",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-226"
+        },
+        {
+            "nazov": "/SK/ZZ/1963/99/#paragraf-224.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1963/99/#paragraf-224.odsek-3"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_14Cob-124-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 105297,
+        "url": "https://obcan.justice.sk/content/public/item/13b9d61c-c6d6-44a5-b9ef-1136af3ea14a"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Žilina",
+        "id": "14Cob/124/2012",
+        "topic": 162
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "guid": "e9ebc9b5-aaab-41ff-ae54-98c2c24bda09:8bd33cfb-c2a4-42f8-b643-e31ad2ce463b",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_117",
+        "nazov": "Okresný súd Trenčín"
+    },
+    "sudca": {
+        "registreGuid": "sudca_1147",
+        "meno": "JUDr. Darina Legerská"
+    },
+    "identifikacneCislo": "3512202820",
+    "spisovaZnacka": "NM-9Cb/113/2013",
+    "datumVydania": "26.10.2016",
+    "ecli": "ECLI:SK:KSTN:2016:3512202820.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Zmluva o dielo"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_8Cob-258-2014.pdf",
+        "fileExtension": "PDF",
+        "size": 109045,
+        "url": "https://obcan.justice.sk/content/public/item/8bd33cfb-c2a4-42f8-b643-e31ad2ce463b"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_119",
+        "nazov": "Okresný súd Nové Mesto nad Váhom",
+        "adresaString": "Hviezdoslavova 37, 91519 Nové Mesto nad Váhom",
+        "suradnice": {
+            "zemepisnaDlzka": "17.8351591",
+            "zemepisnaSirka": "48.7548932"
+        }
+    },
+    "povodnaSpisovaZnacka": "8Cob/258/2014",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "8Cob/258/2014",
+        "topic": 135
+    }
+}

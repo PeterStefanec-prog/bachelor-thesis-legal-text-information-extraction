@@ -50,7 +50,7 @@ data/           # local datasets, PDFs, contracts etc. that should not be pushed
 ################################
 
 # Your main scraping downloads (entire folders)
-data_scraping/data/
+scripts/data_scraping/data/
 
 # Any folder named like downloaded output (your final_scraping)
 final_scraping/stiahnute_podla_csv_final/
@@ -80,7 +80,7 @@ preprocessing/selected_chunks.csv
 # keeping empty data dirs in repo with a placeholder
 # (creating e.g. data_scraping/data/.gitkeep and then unignore it)
 ################################
-!data_scraping/data/.gitkeep
+!scripts/data_scraping/data/.gitkeep
 !final_scraping/stiahnute_podla_csv_final/.gitkeep
 !final_scraping/stiahnute_presne_podla_csv/.gitkeep
 

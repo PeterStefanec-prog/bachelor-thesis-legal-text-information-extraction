@@ -1,0 +1,75 @@
+{
+    "guid": "6388851f-17db-47e0-a4cb-ba7fb56bbf9f:26916119-ba34-40ef-a4db-878ec252006e",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Iná povaha rozhodnutia"
+    ],
+    "sud": {
+        "registreGuid": "sud_100",
+        "nazov": "Najvyšší súd Slovenskej republiky"
+    },
+    "sudca": {
+        "registreGuid": "sudca_124",
+        "meno": "JUDr. Jana Hullová"
+    },
+    "identifikacneCislo": "2106224053",
+    "spisovaZnacka": "1Obdo/7/2020",
+    "datumVydania": "24.08.2020",
+    "ecli": "ECLI:SK:NSSR:2020:2106224053.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-429.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-429.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-429.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-429.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-125.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-125.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-125.odsek-2",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-125.odsek-2"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-447",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-447"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-393.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-393.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-436.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-436.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-451.odsek-3",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-451.odsek-3"
+        },
+        {
+            "nazov": "/SK/ZZ/2013/305/#paragraf-23.odsek-1.pismeno-a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2013/305/#paragraf-23.odsek-1.pismeno-a"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_1Obdo-7-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 101310,
+        "url": "https://obcan.justice.sk/content/public/item/26916119-ba34-40ef-a4db-878ec252006e"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "NS SR",
+        "id": "1Obdo/7/2020",
+        "topic": 171
+    }
+}

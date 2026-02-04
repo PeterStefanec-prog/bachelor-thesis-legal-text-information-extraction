@@ -1,0 +1,47 @@
+{
+    "guid": "b029e903-d973-47bc-887e-c1b906396150:d46baa9b-1b3c-4a9d-ab18-fc2c15f60c1b",
+    "formaRozhodnutia": "Uznesenie",
+    "povaha": [
+        "Zrušujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_116",
+        "nazov": "Krajský súd v Trenčíne"
+    },
+    "sudca": {
+        "registreGuid": "sudca_302",
+        "meno": "JUDr. Mária Prikrylová"
+    },
+    "identifikacneCislo": "3110218335",
+    "spisovaZnacka": "16Cob/67/2012",
+    "datumVydania": "31.07.2013",
+    "ecli": "ECLI:SK:KSTN:2013:3110218335.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Uznesenie_16Cob-67-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 93682,
+        "url": "https://obcan.justice.sk/content/public/item/d46baa9b-1b3c-4a9d-ab18-fc2c15f60c1b"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Trenčín",
+        "id": "16Cob/67/2012",
+        "topic": 125
+    }
+}

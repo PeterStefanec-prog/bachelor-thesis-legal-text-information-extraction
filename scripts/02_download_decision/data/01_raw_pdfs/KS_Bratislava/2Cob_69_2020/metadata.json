@@ -1,0 +1,57 @@
+{
+    "guid": "5eb6a915-37dd-4d74-b3ba-859e94d59ba4:1eba6366-c00d-4b82-9adb-f4c710543d6a",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Potvrdzujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_104",
+        "nazov": "Mestský súd Bratislava III"
+    },
+    "sudca": {
+        "registreGuid": "sudca_535",
+        "meno": "JUDr. Ľubica Krišková"
+    },
+    "identifikacneCislo": "6117232511",
+    "spisovaZnacka": "B2-42Cb/17/2018",
+    "datumVydania": "14.02.2023",
+    "ecli": "ECLI:SK:KSBA:2023:6117232511.1",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Ostatné"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+        },
+        {
+            "nazov": "/SK/ZZ/1993/182/#paragraf-1.odsek-1",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1993/182/#paragraf-1.odsek-1"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_2Cob-69-2020.pdf",
+        "fileExtension": "PDF",
+        "size": 176505,
+        "url": "https://obcan.justice.sk/content/public/item/1eba6366-c00d-4b82-9adb-f4c710543d6a"
+    },
+    "updateDate": "26.09.2023",
+    "povodnySud": {
+        "registreGuid": "sud_103",
+        "nazov": "Mestský súd Bratislava II",
+        "adresaString": "Drieňová 5, 82702 Bratislava II",
+        "suradnice": {
+            "zemepisnaDlzka": "17.1474862",
+            "zemepisnaSirka": "48.1604058"
+        }
+    },
+    "povodnaSpisovaZnacka": "2Cob/69/2020",
+    "_csv_metadata": {
+        "court": "KS Bratislava",
+        "id": "2Cob/69/2020",
+        "topic": 43
+    }
+}

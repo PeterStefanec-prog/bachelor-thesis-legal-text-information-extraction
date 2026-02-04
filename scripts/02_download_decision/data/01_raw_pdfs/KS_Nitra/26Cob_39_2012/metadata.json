@@ -1,0 +1,59 @@
+{
+    "guid": "f453d0df-197f-40d2-aac9-7c2e9bb8e8ef:34761890-4a9f-421a-a3e6-b7f8f86bfd99",
+    "formaRozhodnutia": "Rozsudok",
+    "povaha": [
+        "Zmeňujúce"
+    ],
+    "sud": {
+        "registreGuid": "sud_123",
+        "nazov": "Krajský súd v Nitre"
+    },
+    "sudca": {
+        "registreGuid": "sudca_245",
+        "meno": "JUDr. Pavol Pilek"
+    },
+    "identifikacneCislo": "4111208790",
+    "spisovaZnacka": "26Cob/39/2012",
+    "datumVydania": "14.06.2012",
+    "ecli": "ECLI:SK:KSNR:2012:4111208790.2",
+    "oblast": [
+        "Obchodné právo"
+    ],
+    "podOblast": [
+        "Obchodné záväzkové vzťahy"
+    ],
+    "odkazovanePredpisy": [
+        {
+            "nazov": "/SK/ZZ/1991/513",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+        },
+        {
+            "nazov": "/SK/ZZ/1964/40/#paragraf-545a",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-545a"
+        },
+        {
+            "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+            "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+        }
+    ],
+    "dokument": {
+        "name": "Rozsudok_26Cob-39-2012.pdf",
+        "fileExtension": "PDF",
+        "size": 113095,
+        "url": "https://obcan.justice.sk/content/public/item/34761890-4a9f-421a-a3e6-b7f8f86bfd99"
+    },
+    "updateDate": "26.09.2023",
+    "_csv_metadata": {
+        "court": "KS Nitra",
+        "id": "26Cob/39/2012",
+        "topic": 96
+    }
+}
