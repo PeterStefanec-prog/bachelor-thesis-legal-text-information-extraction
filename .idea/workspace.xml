@@ -5,22 +5,186 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/najvyssi_sud_scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/najvyssi_sud_scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/najvyssi_sud_scraping_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/najvyssi_sud_scraping_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/new_approach_local_filtering/filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/new_approach_local_filtering/filter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/new_approach_local_filtering/nsud_all_zmluvne_pokuty_extended.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/new_approach_local_filtering/nsud_all_zmluvne_pokuty_extended.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/optimized_najvyssi_sud_scraping_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/optimized_najvyssi_sud_scraping_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p/scraper_with_moderation_extended.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/scraping_based_on_301_p/scraper_with_moderation_extended.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p/scraper_with_moderation_extended_plus_keywords.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/scraping_based_on_301_p/scraper_with_moderation_extended_plus_keywords.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p/scraper_with_moderation_paragraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/01_data_scraping/scraping_based_on_301_p/scraper_with_moderation_paragraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_downloading/debug_slovlex.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/02_download_decision/debug_slovlex.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_downloading/download_decisions.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/02_download_decision/download_decisions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_downloading/downloading_steps.md" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/02_download_decision/downloading_steps.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_downloading/rozhodnutia_raw_list.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/02_download_decision/rozhodnutia_raw_list.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/10Co_1_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/11Co_20_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/11Co_272_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/12CoCsp_44_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/12Co_49_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cbi_38_2004/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cob_128_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cob_196_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cob_323_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cob_53_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/13Cob_7_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14CoCsp_30_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Co_371_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_109_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_124_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_132_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_150_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_202_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_21_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/14Cob_85_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Co_37_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Cob_16_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Cob_25_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Cob_31_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Cob_70_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/15Cob_7_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/16Co_368_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/16Cob_112_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/16Cob_11_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/16Cob_67_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/16Cob_78_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/17Co_349_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cdo_85_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1CoZm_36_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1CoZm_72_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_117_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_130_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_187_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_20_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_287_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_298_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_40_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_47_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Cob_93_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Obdo_66_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Obdo_72_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/1Obdo_7_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/21Cob_109_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/21Cob_11_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/21Cob_41_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/21Cob_43_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/24CoCsp_26_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/25Co_896_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26CoKR_5_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_135_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_22_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_28_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_39_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_52_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_54_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_69_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/26Cob_87_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2CoKR_71_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2CoR_11_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Co_380_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_140_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_153_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_174_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_186_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_216_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_28_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_294_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_33_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_344_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_35_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_37_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_38_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_60_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_69_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Cob_82_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Obdo_25_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/2Obdo_57_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/31CoZm_4_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/31Cob_104_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/31Cob_128_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/31Cob_19_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/31Cob_64_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/32Cob_34_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/32Cob_3_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/35Cbi_59_2006/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_116_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_122_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_183_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_219_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_224_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_239_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_26_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_387_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_3_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_41_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_45_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_464_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_46_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_53_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_57_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_94_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Obdo_11_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_13_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_154_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_256_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_31_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_3_2025/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_42_2010/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/41Cob_73_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/42Cob_18_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/42Cob_51_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/42Cob_94_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43CoE_215_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43CoPv_10_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_130_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_20_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_30_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_513_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_53_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_75_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4CoZm_2_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4CoZm_3_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Co_346_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_116_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_122_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_12_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_144_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_148_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_149_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_16_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_181_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_196_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_204_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_216_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_2_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_35_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_55_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_57_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_62_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_77_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_83_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_84_2020/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Cob_95_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Obdo_96_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/4Obo_24_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Co_246_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Co_3_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Co_68_2015/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Cob_11_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Cob_216_2024/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Cob_51_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Cob_93_2016/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/5Obdo_14_2023/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/6CoZm_1_2019/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/6Co_52_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/6Co_65_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/6Cob_18_2017/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/6Cob_59_2018/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/7Cob_44_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/7Cob_61_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/7Cob_64_2013/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Co_332_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_112_2021/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_11_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_200_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_258_2014/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_38_2012/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_51_2022/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_64_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_74_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/8Cob_82_2011/metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/02_download_decision/download_decisions.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/02_download_decision/download_decisions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,38 +210,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.debug_slovlex.executor": "Run",
-    "Python.download_decisions.executor": "Run",
-    "Python.download_rozhodnutia.executor": "Run",
-    "Python.download_selenium.executor": "Run",
-    "Python.gymple.executor": "Run",
-    "Python.otvorene_sudy.executor": "Run",
-    "Python.run_one_pdf.executor": "Run",
-    "Python.scraper_with_moderation_extended.executor": "Run",
-    "Python.scraper_with_moderation_extended_plus_keywords.executor": "Run",
-    "Python.scraper_with_moderation_paragraph (1).executor": "Run",
-    "Python.scraper_with_moderation_paragraph.executor": "Run",
-    "Python.scraper_with_moderation_plus_keywords.executor": "Run",
-    "Python.scraping_from_swagger.executor": "Run",
-    "Python.test_api.executor": "Run",
-    "Python.test_final.executor": "Run",
-    "Python.test_fix_403.executor": "Run",
-    "Python.test_json_discovery.executor": "Run",
-    "Python.test_us.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction/final_scraping",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.debug_slovlex.executor&quot;: &quot;Run&quot;,
+    &quot;Python.download_decisions.executor&quot;: &quot;Run&quot;,
+    &quot;Python.download_rozhodnutia.executor&quot;: &quot;Run&quot;,
+    &quot;Python.download_selenium.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gymple.executor&quot;: &quot;Run&quot;,
+    &quot;Python.otvorene_sudy.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_one_pdf.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper_with_moderation_extended.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper_with_moderation_extended_plus_keywords.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper_with_moderation_paragraph (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper_with_moderation_paragraph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraper_with_moderation_plus_keywords.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scraping_from_swagger.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_api.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_final.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_fix_403.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_json_discovery.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test_us.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction/final_scraping&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/final_scraping" />
@@ -237,7 +401,8 @@
       <workItem from="1765646167665" duration="25539000" />
       <workItem from="1766842155631" duration="1348000" />
       <workItem from="1766843510726" duration="37386000" />
-      <workItem from="1769873604626" duration="55824000" />
+      <workItem from="1769873604626" duration="64882000" />
+      <workItem from="1770302343297" duration="7894000" />
     </task>
     <servers />
   </component>
@@ -261,7 +426,7 @@
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_extended_plus_keywords.coverage" NAME="scraper_with_moderation_extended_plus_keywords Coverage Results" MODIFIED="1764362741135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraping_from_swagger.coverage" NAME="scraping_from_swagger Coverage Results" MODIFIED="1764202612082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/swagger_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_final.coverage" NAME="test_final Coverage Results" MODIFIED="1770057757071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
-    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_decisions.coverage" NAME="download_decisions Coverage Results" MODIFIED="1770159011142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/02_download_decision" />
+    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_decisions.coverage" NAME="download_decisions Coverage Results" MODIFIED="1770297018335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/02_download_decision" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_fix_403.coverage" NAME="test_fix_403 Coverage Results" MODIFIED="1770057611696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
   </component>
 </project>

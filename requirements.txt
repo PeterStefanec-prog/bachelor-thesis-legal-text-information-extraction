@@ -10,6 +10,7 @@ pdfplumber
 pymupdf       # (fitz) - the best tool for reading pdf nowadays - preserves layout better than old PyPDF2
 langchain     # good for chunking (later)
 langchain-text-splitters
+unidecode
 
 # Jupyter
 jupyter

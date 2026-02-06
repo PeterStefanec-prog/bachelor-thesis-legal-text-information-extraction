@@ -233,7 +233,8 @@ def find_and_download(row_index, court_raw, case_id):
     # Create folders: Output_Dir / Court_Name / Case_ID
     safe_court = court_raw.replace(" ", "_")
     safe_id = clean_id.replace("/", "_").replace(" ", "_")
-    case_folder = os.path.join(OUTPUT_DIR, safe_court, safe_id)
+    # case_folder = os.path.join(OUTPUT_DIR, safe_court, safe_id)   # do not want to have decisions in folders of each court
+    case_folder = os.path.join(OUTPUT_DIR, safe_id)  # without folder - court above decisions from the one
 
     if not os.path.exists(case_folder):
         os.makedirs(case_folder)
@@ -242,7 +243,8 @@ def find_and_download(row_index, court_raw, case_id):
     detail = get_decision_detail(guid)
     if detail:
         detail["_csv_metadata"] = {"court": court_raw, "id": case_id, "topic": row_index}
-        with open(os.path.join(case_folder, "metadata.json"), "w", encoding="utf-8") as f:
+        metadata_filename = f"{safe_court}_{safe_id}_metadata.json"
+        with open(os.path.join(case_folder, metadata_filename), "w", encoding="utf-8") as f:
             json.dump(detail, f, ensure_ascii=False, indent=4)
 
         # Collect all attachments (documents)
@@ -261,7 +263,7 @@ def find_and_download(row_index, court_raw, case_id):
                 clean_name = re.sub(r'[^\w\-\. ]', '_', raw_name).strip()
                 if not clean_name: clean_name = "dokument"
 
-                final_name = f"{i:02d}_{clean_name}"
+                final_name = f"{safe_court}_{safe_id}_{i:02d}_{clean_name}"
                 url = doc.get('url')
 
                 # Sometimes URL is missing, so we construct it from ID
