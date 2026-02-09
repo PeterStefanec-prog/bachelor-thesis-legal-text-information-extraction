@@ -1,0 +1,18 @@
+{
+  "n_raw_pdfs": 176,
+  "n_after_filter": 152,
+  "court_tier_counts": {
+    "KS": 144,
+    "NS": 8
+  },
+  "eda_label_counts": {
+    "1_GOLD_MODERATION": 126,
+    "3_PENALTY_NO_MODERATION": 20,
+    "4_CIVIL_NOISE_LIKELY": 6
+  },
+  "has_301_docs": 132,
+  "has_penalty_docs": 152,
+  "avg_est_tokens": 8678.703947368422,
+  "p95_est_tokens": 20687.049999999992,
+  "fallback_rate_par_max_gt_1000": 0.9605263157894737
+}

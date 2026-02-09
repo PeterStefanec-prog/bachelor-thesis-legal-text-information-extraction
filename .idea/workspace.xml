@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_239_2012/KS_Košice_3Cob_239_2012_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/01_raw_pdfs/3Cob_239_2012/KS_Košice_3Cob_239_2012_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +225,14 @@
       <workItem from="1766842155631" duration="1348000" />
       <workItem from="1766843510726" duration="37386000" />
       <workItem from="1769873604626" duration="64882000" />
-      <workItem from="1770302343297" duration="26969000" />
+      <workItem from="1770302343297" duration="28536000" />
+      <workItem from="1770476662411" duration="2458000" />
+      <workItem from="1770481331155" duration="8086000" />
+      <workItem from="1770583634067" duration="7626000" />
+      <workItem from="1770595921832" duration="1256000" />
+      <workItem from="1770597921086" duration="4461000" />
+      <workItem from="1770646761836" duration="7275000" />
+      <workItem from="1770658016155" duration="2795000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,18 @@
+{
+  "notes": "Patterns are used on ascii_norm (lower + unidecode + §->ss).",
+  "PAR": "(?:§|ss|par)\\s*",
+  "EXACT_301": "(?:(?:§|ss|par)\\s*301\\b)|(?:\\b301\\b.(0, 80)\\b(obchodn|obchz|obchodn\\w*\\s+zakonnik))",
+  "RANGE_300_302": "(?:300\\s*(?:až|-|do|a)\\s*30[2-9])",
+  "KEY_names": [
+    "has_penalty",
+    "has_301",
+    "has_oz_545a",
+    "has_oz_544",
+    "has_moder_trig",
+    "has_invalidity",
+    "has_interest",
+    "has_percent",
+    "has_money",
+    "has_civil_code"
+  ]
+}
