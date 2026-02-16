@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/notebooks/02_process_text.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/eda_summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/eda_table.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/regex_bank_info.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,10 +18,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportToHTMLSettings">
+    <option name="printScope" value="1" />
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Downloads" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -232,7 +241,8 @@
       <workItem from="1770595921832" duration="1256000" />
       <workItem from="1770597921086" duration="4461000" />
       <workItem from="1770646761836" duration="7275000" />
-      <workItem from="1770658016155" duration="2795000" />
+      <workItem from="1770658016155" duration="14144000" />
+      <workItem from="1770739069882" duration="47469000" />
     </task>
     <servers />
   </component>
