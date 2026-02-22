@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/notebooks/02_process_text.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ingestion/data_cleaner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/eda_summary.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/eda_table.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/99_eda/outputs/regex_bank_info.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/eda_outputs/manual_audit_sample.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/01_explore_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebooks/02_process_text.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/02_process_text.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -42,52 +38,78 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.debug_slovlex.executor&quot;: &quot;Run&quot;,
-    &quot;Python.download_decisions.executor&quot;: &quot;Run&quot;,
-    &quot;Python.download_rozhodnutia.executor&quot;: &quot;Run&quot;,
-    &quot;Python.download_selenium.executor&quot;: &quot;Run&quot;,
-    &quot;Python.gymple.executor&quot;: &quot;Run&quot;,
-    &quot;Python.otvorene_sudy.executor&quot;: &quot;Run&quot;,
-    &quot;Python.run_one_pdf.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_with_moderation_extended.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_with_moderation_extended_plus_keywords.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_with_moderation_paragraph (1).executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_with_moderation_paragraph.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraper_with_moderation_plus_keywords.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scraping_from_swagger.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_final.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_fix_403.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_json_discovery.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test_us.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction/final_scraping&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.data_cleaner.executor": "Run",
+    "Python.debug_slovlex.executor": "Run",
+    "Python.download_decisions.executor": "Run",
+    "Python.download_rozhodnutia.executor": "Run",
+    "Python.download_selenium.executor": "Run",
+    "Python.gymple.executor": "Run",
+    "Python.otvorene_sudy.executor": "Run",
+    "Python.run_one_pdf.executor": "Run",
+    "Python.scraper_with_moderation_extended.executor": "Run",
+    "Python.scraper_with_moderation_extended_plus_keywords.executor": "Run",
+    "Python.scraper_with_moderation_paragraph (1).executor": "Run",
+    "Python.scraper_with_moderation_paragraph.executor": "Run",
+    "Python.scraper_with_moderation_plus_keywords.executor": "Run",
+    "Python.scraping_from_swagger.executor": "Run",
+    "Python.sendin_email.executor": "Run",
+    "Python.skoly.executor": "Run",
+    "Python.test_api.executor": "Run",
+    "Python.test_final.executor": "Run",
+    "Python.test_fix_403.executor": "Run",
+    "Python.test_json_discovery.executor": "Run",
+    "Python.test_us.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction/final_scraping",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/final_scraping" />
       <recent name="$PROJECT_DIR$/preprocessing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_130_2013" />
       <recent name="$PROJECT_DIR$/data/01_raw_pdfs/43CoE_215_2015" />
       <recent name="$PROJECT_DIR$/data/01_raw_pdfs/43Cob_513_2014" />
       <recent name="$PROJECT_DIR$/data/01_raw_pdfs" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.download_decisions">
+  <component name="RunManager" selected="Python.data_cleaner">
+    <configuration name="data_cleaner" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bachelor-thesis-legal-text-information-extraction" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/ingestion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/ingestion/data_cleaner.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="download_decisions" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bachelor-thesis-legal-text-information-extraction" />
       <option name="ENV_FILES" value="" />
@@ -103,52 +125,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/02_download_decision/download_decisions.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="download_rozhodnutia" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bachelor-thesis-legal-text-information-extraction" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final_scraping" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final_scraping/download_rozhodnutia.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="download_selenium" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="bachelor-thesis-legal-text-information-extraction" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final_scraping" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final_scraping/download_selenium.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,7 +156,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="otvorene_sudy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sendin_email" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="bachelor-thesis-legal-text-information-extraction" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,12 +165,35 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/final_scraping" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/final_scraping/otvorene_sudy.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sendin_email.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="skoly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="bachelor-thesis-legal-text-information-extraction" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/skoly.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -205,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.data_cleaner" />
+        <item itemvalue="Python.sendin_email" />
+        <item itemvalue="Python.skoly" />
         <item itemvalue="Python.download_decisions" />
         <item itemvalue="Python.gymple" />
-        <item itemvalue="Python.download_rozhodnutia" />
-        <item itemvalue="Python.otvorene_sudy" />
-        <item itemvalue="Python.download_selenium" />
       </list>
     </recent_temporary>
   </component>
@@ -242,7 +241,8 @@
       <workItem from="1770597921086" duration="4461000" />
       <workItem from="1770646761836" duration="7275000" />
       <workItem from="1770658016155" duration="14144000" />
-      <workItem from="1770739069882" duration="47469000" />
+      <workItem from="1770739069882" duration="48395000" />
+      <workItem from="1771415075066" duration="16448000" />
     </task>
     <servers />
   </component>
@@ -257,16 +257,19 @@
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$otvorene_sudy.coverage" NAME="otvorene_sudy Coverage Results" MODIFIED="1770150174682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$gymple.coverage" NAME="gymple Coverage Results" MODIFIED="1770155193996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$debug_slovlex.coverage" NAME="debug_slovlex Coverage Results" MODIFIED="1770057443289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
+    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$skoly.coverage" NAME="skoly Coverage Results" MODIFIED="1771419704442" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_api.coverage" NAME="test_api Coverage Results" MODIFIED="1769880093655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_plus_keywords.coverage" NAME="scraper_with_moderation_plus_keywords Coverage Results" MODIFIED="1764359862138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_extended.coverage" NAME="scraper_with_moderation_extended Coverage Results" MODIFIED="1764362160643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$run_one_pdf.coverage" NAME="run_one_pdf Coverage Results" MODIFIED="1765882206513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/preprocessing" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_selenium.coverage" NAME="download_selenium Coverage Results" MODIFIED="1770057957222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
+    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$data_cleaner.coverage" NAME="data_cleaner Coverage Results" MODIFIED="1771547549224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/ingestion" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_us.coverage" NAME="test_us Coverage Results" MODIFIED="1770056428434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraper_with_moderation_extended_plus_keywords.coverage" NAME="scraper_with_moderation_extended_plus_keywords Coverage Results" MODIFIED="1764362741135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/scraping_based_on_301_p" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$scraping_from_swagger.coverage" NAME="scraping_from_swagger Coverage Results" MODIFIED="1764202612082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_scraping/swagger_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_final.coverage" NAME="test_final Coverage Results" MODIFIED="1770057757071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$download_decisions.coverage" NAME="download_decisions Coverage Results" MODIFIED="1770297018335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts/02_download_decision" />
     <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$test_fix_403.coverage" NAME="test_fix_403 Coverage Results" MODIFIED="1770057611696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/final_scraping" />
+    <SUITE FILE_PATH="coverage/bachelor_thesis_legal_text_information_extraction$sendin_email.coverage" NAME="sendin_email Coverage Results" MODIFIED="1771457977272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

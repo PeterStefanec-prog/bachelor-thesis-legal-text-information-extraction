@@ -66,6 +66,15 @@
           }
         ]
       },
+      "breach_duration": {
+        "value": "string (napr. '365 dní')|null",
+        "evidence": [
+              {
+              "quote": "string",
+              "chunk_id": "string"
+            }
+        ]
+      },
       "rate_definition": {
         "type": "percent_denne|percent_mesacne|fixna_suma_mesacne|percent_rocne|percent_jednorazovo|fixna_suma_denne|fixna_suma_jednorazovo|pausal|percent_z_ceny|percent_z_dlznej_sumy|ine",
         "value_raw": "string (napr. '0.05% denne')|null",
@@ -78,6 +87,15 @@
       },
       "amounts": {
         "currency": "EUR|SKK|CZK|unknown",
+        "secured_principal": {
+          "amount": null,
+          "evidence": [
+          {
+            "quote": "string",
+            "chunk_id": "string"
+          }
+        ]
+        },
         "original_claimed": {
           "amount": null,
           "evidence": [
