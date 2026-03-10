@@ -84,3 +84,9 @@ preprocessing/selected_chunks.csv
 !final_scraping/stiahnute_podla_csv_final/.gitkeep
 !final_scraping/stiahnute_presne_podla_csv/.gitkeep
 
+
+
+
+# ChromaDB
+data/04_vectorstore/
+src/evaluation_retrieval/data/04_vectorstore/
