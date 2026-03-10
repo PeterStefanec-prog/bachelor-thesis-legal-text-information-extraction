@@ -22,3 +22,8 @@ requests      # Essential for calling the Ministry of Justice API
 beautifulsoup4 # For parsing HTML pages (web scraping)
 curl_cffi     # Advanced requests to impersonate browsers (tried for Constitutional Court)
 playwright    # Browser automation tool (tried for Otvorene Sudy)
+
+
+# Database for vectorised text
+chromadb
+sentence-transformers
