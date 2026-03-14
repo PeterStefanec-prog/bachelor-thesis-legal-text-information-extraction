@@ -1,7 +1,7 @@
 # data manipulation
 pandas
 numpy
-tqdm
+tqdm # progress bar
 pyyaml
 seaborn
 pdfplumber
@@ -27,3 +27,6 @@ playwright    # Browser automation tool (tried for Otvorene Sudy)
 # Database for vectorised text
 chromadb
 sentence-transformers
+
+# Tokenizer
+tiktoken

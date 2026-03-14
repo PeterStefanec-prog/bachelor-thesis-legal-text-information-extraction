@@ -28,6 +28,11 @@ def extract_meta(header_text: str):
     if sz_match: meta['case_id'] = sz_match.group(1)
     ecli_match = re.search(r"(ECLI:[A-Z0-9:.]+)", header_text)
     if ecli_match: meta['ecli'] = ecli_match.group(1)
+    # FIX: Added court and document_type extraction
+    court_match = re.search(r"Súd:\s*(.+)", header_text)
+    if court_match: meta['court'] = court_match.group(1).strip()
+    doctype_match = re.search(r"\b(ROZSUDOK|UZNESENIE)\b", header_text, re.IGNORECASE)
+    if doctype_match: meta['document_type'] = doctype_match.group(1).capitalize()
     return meta
 
 
@@ -37,8 +42,14 @@ def remove_pagination(text: str) -> str:
     out = []
     for line in lines:
         s = line.strip()
-        # Remove "Strana X", "- X -", but KEEP "Spisová značka" etc.
-        if re.match(r"^(?:strana\s+\d+(?:\s*z\s*\d+)?|\-?\s*\d+\s*\-?)$", s, re.IGNORECASE):
+        # Remove "Strana X / X", requires dashes for bare numbers (- 3 -)
+        if re.match(r"^strana\s+\d+(?:\s*z\s*\d+)?$", s, re.IGNORECASE):
+            continue
+        # FIX: Now requires actual dashes, so lone '3' or '12' won't get removed
+        if re.match(r"^-\s*\d+\s*-$", s):
+            continue
+        # FIX: Added Pokračovanie as specified in thesis spec
+        if re.match(r"^pokračovanie\s*\.{0,3}$", s, re.IGNORECASE):
             continue
         out.append(line)
     return "\n".join(out)
@@ -68,7 +79,8 @@ PREPOSITIONS = r"(?:\s|^)(?:v|z|zo|k|ku|o|po|pri|pre|na|do)$"
 
 
 def fix_spaced_words(text):
-    return re.sub(r'(?<!\S)((?:[a-zA-ZÁ-Žá-ž]\s){2,}[a-zA-ZÁ-Žá-ž])(?!\S)',
+    return re.sub(
+        r'(?<!\S)((?:[a-zA-ZÁ-Žá-ž]\s){2,}[a-zA-ZÁ-Žá-ž])(?=[\s.,;:!?()\[\]]|$)', # i fixed this (before there was (?!\S) ) - did sth like this 'Dovolanie o d m i e t a.' - 'Dovolanie odmiet a.'
                   lambda m: m.group(1).replace(" ", ""), text)
 
 
@@ -226,7 +238,7 @@ def process_single_pdf(pdf_path: Path):
 
 if __name__ == "__main__":
     # Setup folders
-    DATA_DIR = Path("../../data")
+    DATA_DIR = Path("data")
     INPUT_DIR = DATA_DIR / "01_raw_pdfs"
     OUTPUT_DIR = DATA_DIR / "02_processed_json"
 
