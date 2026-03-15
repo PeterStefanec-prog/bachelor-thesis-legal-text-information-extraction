@@ -6,8 +6,10 @@
 ################################
 # IDE / editor configuration
 ################################
-.idea/          # PyCharm / IntelliJ project files
-.vscode/        # VS Code settings (if you ever use it)
+# PyCharm / IntelliJ project files
+.idea/
+# VS Code settings (if you ever use it)
+.vscode/
 
 ################################
 # Python bytecode and caches
@@ -40,9 +42,10 @@ htmlcov/
 ################################
 # Local data / large files
 ################################
-data/           # local datasets, PDFs, contracts etc. that should not be pushed
-*.log           # log files
-
+# local datasets, PDFs, contracts etc. that should not be pushed
+data/
+# log files
+*.log
 
 ################################
 # Downloaded / generated DATA (do not push)
@@ -84,9 +87,7 @@ preprocessing/selected_chunks.csv
 !final_scraping/stiahnute_podla_csv_final/.gitkeep
 !final_scraping/stiahnute_presne_podla_csv/.gitkeep
 
-
-
-
 # ChromaDB
 data/04_vectorstore/
 src/evaluation_retrieval/data/04_vectorstore/
+data/04_vectorstore_old/

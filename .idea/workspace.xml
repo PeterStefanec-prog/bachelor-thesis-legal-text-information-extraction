@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf3987f0-1438-4b26-8a04-ffc00a97da3a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chunking/chunking_notes.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chunking/chunk_processor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/chunking/chunk_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/retrieval/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/retrieval/vector_store.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +255,7 @@
       <workItem from="1773157481058" duration="82000" />
       <workItem from="1773157565302" duration="2946000" />
       <workItem from="1773338145594" duration="9412000" />
-      <workItem from="1773403297059" duration="20766000" />
+      <workItem from="1773403297059" duration="26187000" />
     </task>
     <servers />
   </component>
