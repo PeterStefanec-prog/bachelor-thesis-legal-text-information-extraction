@@ -1,5 +1,5 @@
 {
-  "schema_version": "4.1",
+  "schema_version": "4.3",
   "meta": {
     "doc_id": "string",
     "decision_metadata": {
@@ -9,221 +9,159 @@
       "ecli": "string|null"
     }
   },
+
   "case_context": {
-    "dispute_summary": {
-      "value": "string (max 2-3 vety o predmete sporu) (napr. 'Žaloba o zaplatenie faktúr za stavebné práce, kde sa žalovaný dostal do omeškania kvôli druhotnej platobnej neschopnosti.')",
-      "evidence": [
-        {
-          "quote": "string",
-          "chunk_id": "string"
-        }
-      ]
-    },
-    "verdict_summary": {
-      "value": "string (napr. 'Súd nárok na pokutu priznal len čiastočne, zvyšok zamietol pre neprimeranosť.')",
-      "evidence": [
-        {
-          "quote": "string",
-          "chunk_id": "string"
-        }
-      ]
-    },
-    "contract_type": {
-      "value": "uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|telekom|preprava|mandatna|ine|nezname"
-    },
-    "parties": {
-      "plaintiff": {
-        "value": "string|null",
-        "evidence": []
-      },
-      "defendant": {
-        "value": "string|null",
-        "evidence": []
-      },
-      "relationship_type": {
-        "value": "B2B|B2C|C2C|unknown|unclear"
-      }
-    }
+
+    "dispute_summary": "string (max 2-3 vety - o čom bol spor a čo žalobca požadoval, napr. 'Žaloba o zaplatenie zmluvnej pokuty za omeškanie s odovzdaním stavebného diela. Žalobca si uplatnil pokutu 20 000 EUR podľa článku 7.2 zmluvy.')",
+
+    "verdict_summary": "string (1-2 vety - celkový výsledok konania vrátane toho či súd k pokute vôbec dospel, napr. 'Súd žalobu zamietol pre neplatnosť zmluvy, k otázke primeranosti pokuty sa nevyjadril.' alebo 'Súd pokutu čiastočne priznal po znížení podľa §301 ObchZ.')",
+
+    "contract_type": "uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|telekom|preprava|mandatna|ine|nezname",
+
+    "relationship_type": "B2B|B2C|C2C|unknown|unclear"
+
   },
+
   "contractual_penalties": [
     {
-      "penalty_internal_id": "string (napr. 'pokuta_1')",
-      "related_claim_ref": {
-        "value": "string (napr. 'Faktúra č. 10/2020' alebo 'Omeškanie za január')",
-        "evidence": [
-          {
-            "quote": "string",
-            "chunk_id": "string"
-          }
-        ]
-      },
+      "penalty_internal_id": "string (napr. 'pokuta_1' - relevantné len keď jedno rozhodnutie rieši viacero samostatných pokút)",
+
+      "related_claim_ref": "string|null (napr. 'Faktúra č. 10/2020' - vypĺňať len keď je viacero pokút na ich rozlíšenie, inak null)",
+
       "breach_type": {
-        "value": "late_payment (omeškanie s úhradou)|non_monetary_performance (nedodanie diela/služby)|early_termination (predčasné ukončenie zmluvy)|breach_of_confidentiality (porušenie mlčanlivosti)|other",
-        "evidence": [
-          {
-            "quote": "string",
-            "chunk_id": "string"
-          }
-        ]
-      },
-      "breach_duration": {
-        "value": "string (napr. '365 dní')|null",
-        "evidence": [
-              {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-        ]
-      },
-      "rate_definition": {
-        "type": "percent_denne|percent_mesacne|fixna_suma_mesacne|percent_rocne|percent_jednorazovo|fixna_suma_denne|fixna_suma_jednorazovo|pausal|percent_z_ceny|percent_z_dlznej_sumy|ine",
-        "value_raw": "string (napr. '0.05% denne')|null",
-        "evidence": [
-          {
-            "quote": "string",
-            "chunk_id": "string"
-          }
-        ]
-      },
-      "amounts": {
-        "currency": "EUR|SKK|CZK|unknown",
-        "secured_principal": {
-          "amount": null,
-          "evidence": [
-          {
-            "quote": "string",
-            "chunk_id": "string"
-          }
-        ]
-        },
-        "original_claimed": {
-          "amount": null,
-          "evidence": [
-            {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-          ]
-        },
-        "final_awarded": {
-          "amount": null,
-          "evidence": [
-            {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-          ]
-        },
-        "calculation_logic_summary": {
-          "value": "Žalobca počítal 5% týždenne z ceny etapy (15 573,90 EUR). Súd výpočet neuznal pre neurčitosť základu.",
-          "evidence": [
-            {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-          ]
+        "value": "late_payment|non_monetary_performance|early_termination|breach_of_confidentiality|other",
+        "evidence": {
+          "quote": "string",
+          "chunk_id": "string"
         }
       },
-      "associated_interest": {
-        "awarded": "yes|no|unclear",
-        "applies_to": "penalty|principal|both|unclear",
-        "rate_value": "string (napr. '9,0 % ročne' alebo 'zákonný úrok z omeškania')",
-        "evidence": [
-          {
+
+      "rate_definition": {
+        "type": "percent_denne|percent_mesacne|fixna_suma_mesacne|percent_rocne|percent_jednorazovo|fixna_suma_denne|fixna_suma_jednorazovo|pausal|percent_z_ceny|percent_z_dlznej_sumy|ine",
+        "value_raw": "string (napr. '0,05 % denne z dlžnej sumy' alebo '500 EUR za každý deň omeškania')|null",
+        "evidence": {
+          "quote": "string",
+          "chunk_id": "string"
+        }
+      },
+
+      "amounts": {
+        "currency": "EUR|SKK|CZK|unknown",
+
+        "secured_principal": {
+          "value": "number|null (STRIKTNE: null ak nie je explicitne uvedené v texte - nevyčísľovať ani nevyvodzovať)",
+          "evidence": {
+            "quote": "string|null",
+            "chunk_id": "string|null"
+          }
+        },
+
+        "original_claimed": {
+          "value": "number|null",
+          "evidence": {
             "quote": "string",
             "chunk_id": "string"
           }
-        ]
+        },
+
+        "final_awarded": {
+          "value": "number|null",
+          "evidence": {
+            "quote": "string",
+            "chunk_id": "string"
+          }
+        }
       },
+
+      "associated_interest": {
+        "poznamka": "Toto pole slúži VÝLUČNE na odlíšenie úroku z omeškania od sadzby zmluvnej pokuty. Nevypĺňať ďalej ako tieto tri polia.",
+        "awarded": "yes|no|unclear",
+        "rate_value": "string (napr. '9,0 % ročne' alebo 'zákonný úrok z omeškania')|null",
+        "evidence": {
+          "quote": "string|null",
+          "chunk_id": "string|null"
+        }
+      },
+
       "moderation_analysis": {
+
         "decision_on_penalty": {
-          "value": "awarded_full (priznaná v plnej výške)|awarded_reduced (znížená)|dismissed (zamietnutá)|unclear",
-          "evidence": [
-            {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-          ]
+          "value": "awarded_full|awarded_reduced|dismissed|unclear",
+          "evidence": {
+            "quote": "string",
+            "chunk_id": "string"
+          }
         },
+
         "moderation_applied": {
-          "value": "yes |no ||not_applicable (zamietol z iného dovodu)|unclear",
-          "evidence": [
-            {
-              "quote": "string",
-              "chunk_id": "string"
-            }
-          ]
+          "value": "yes|no|not_applicable|unclear",
+          "poznamka": "yes = súd výslovne uplatnil §301 ObchZ a znížil pokutu. not_applicable = pokuta zamietnutá z iného dôvodu (neplatnosť zmluvy, nepreukázanie, procesný dôvod). Toto rozlíšenie je kritické - nezamieňať.",
+          "evidence": {
+            "quote": "string",
+            "chunk_id": "string"
+          }
         },
+
         "legal_reasoning_summary": {
-          "value": "string (napr. 'Súd uviedol, že sadzba 1% denne je v rozpore s dobrými mravmi, pretože výrazne prevyšuje bežné úrokové miery bánk a pre žalovaného by bola likvidačná.')",
-          "evidence": [
+          "poznamka": "Najdôležitejšie pole. Zahrnúť OBOJE: (1) ako boli vypočítané čísla, (2) prečo súd moderoval alebo nemoderoval. Tieto informácie sa nachádzajú v rovnakých odsekoch textu.",
+          "value": "string (napr. 'Žalobca počítal 0,05 % denne z istiny 50 000 EUR za 200 dní omeškania = 5 000 EUR. Súd výpočet akceptoval ale pokutu znížil, pretože denná sadzba výrazne prevyšuje bežné bankové úroky a pri dlhšom omeškaní by mala pre žalovaného likvidačný charakter.')",
+          "key_quotes": [
             {
-              "quote": "string",
+              "quote": "string (1-2 najdôležitejšie citáty zachytávajúce jadro odôvodnenia)",
               "chunk_id": "string"
             }
           ]
         },
+
         "factors": [
           {
             "label": "dobre_mravy",
-            "sentiment": "positive (súd súhlasí s pokutou)|negative (rozpor s mravmi)|neutral",
-            "evidence": [
-              {
-                "quote": "string",
-                "chunk_id": "string"
-              }
-            ]
+            "sentiment": "positive (súd súhlasí s pokutou)|negative (rozpor s dobrými mravmi)|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
           },
           {
             "label": "zabezpecovacia_funkcia",
-            "sentiment": "positive (funkcia zachovaná)|negative (funkcia popretá)|neutral",
-            "evidence": [
-              {
-                "quote": "string",
-                "chunk_id": "string"
-              }
-            ]
+            "sentiment": "positive (zabezpečovacia funkcia zachovaná)|negative (funkcia popretá)|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
           },
           {
             "label": "vyska_skody",
-            "sentiment": "positive (škoda vznikla)|negative (škoda žiadna/malá)|neutral",
-            "evidence": [
-              {
-                "quote": "string",
-                "chunk_id": "string"
-              }
-            ]
+            "sentiment": "positive (škoda vznikla)|negative (škoda žiadna alebo minimálna)|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
           },
           {
             "label": "pomer_k_istine",
-            "sentiment": "positive (pomer OK)|negative (neprimerane vysoká)|neutral",
-            "evidence": [
-              {
-                "quote": "string",
-                "chunk_id": "string"
-              }
-            ]
+            "sentiment": "positive (pomer primeraný)|negative (neprimerane vysoká voči istine)|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
           },
           {
             "label": "spravanie_dlznika",
-            "sentiment": "positive (snaha platiť/komunikácia)|negative (obštrukcie/ignorácia)|neutral",
-            "evidence": [
-              {
-                "quote": "string",
-                "chunk_id": "string"
-              }
-            ]
+            "sentiment": "positive (snaha platiť alebo komunikácia)|negative (obštrukcie alebo ignorovanie)|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
           }
         ]
+
       }
     }
   ],
+
   "quality_control": {
-    "flags": [
-      "string"
-    ],
-    "missing_fields": [
-      "string"
-    ]
+    "flags": ["string"],
+    "missing_fields": ["string"]
   }
 }

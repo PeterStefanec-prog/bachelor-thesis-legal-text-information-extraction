@@ -1,152 +1,106 @@
-```json
-{
-  "schema_version": "4.1",
+# Extraction Schema v4.3 – Changes and Overview
 
-  // 1. METADATA A ENTITY ( Regex / NER / Python)
-  "meta": {
-    "doc_id": "string",
-    "decision_metadata": {
-      "court_name": "string",
-      "case_number": "string",
-      "decision_date": "YYYY-MM-DD",
-      "ecli": "string|null"
-    }
-  },
+> **File:** `src/extraction/schemas/extraction_schema_v4.3.json`
 
+---
 
-  //  2. KONTEXT SPORU (LLM, parties probably with NER)
-  "case_context": {
-    // rychly zaver pre pravnika 
-    "dispute_summary": {
-      "value": "string (max 2-3 vety o predmete sporu) (napr. 'Žaloba o zaplatenie faktúr za stavebné práce, kde sa žalovaný dostal do omeškania kvôli druhotnej platobnej neschopnosti.')",
-      "evidence": [{ "quote": "string", "chunk_id": "string" }]
-    },
-    
-    // rychly vysledok pre zoznam
-    "verdict_summary": {
-       "value": "string (napr. 'Súd nárok na pokutu priznal len čiastočne, zvyšok zamietol pre neprimeranosť.')",
-       "evidence": [{ "quote": "string", "chunk_id": "string" }]
-    },
-    
-    "contract_type": {
-      "value": "uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|telekom|preprava|mandatna|ine|nezname"
-    },
+## What the schema extracts
 
-    "parties": {
-      "plaintiff": {"value": "string|null", "evidence": []},
-      "defendant": {"value": "string|null", "evidence": []},
-      "relationship_type": {
-        "value": "B2B|B2C|C2C|unknown|unclear"
-      }
-    },
-    
-  },
+The goal is to extract structured info about contractual penalties (zmluva pokuta) from Slovak court decisions, specifically to help lawyers calibrate penalty clauses in new contracts. The key question is always: was the penalty moderated, why, and what rate/amount was involved.
 
+---
 
-  // 3. ZMLUVNE POKUTY (Jadro prace)
-  // Je to POLE [], lebo v jednom rozhodnuti moze byt viac pokut (napr. za 3 faktury)
-  "contractual_penalties": [
-    {
-      "penalty_internal_id": "string (napr. 'pokuta_1')",
-      "related_claim_ref": {
-        "value": "string (napr. 'Faktúra č. 10/2020' alebo 'Omeškanie za január')",
-        "evidence": [{ "quote": "string", "chunk_id": "string" }]
-      },
-      
-      "breach_type": {
-        "value": "late_payment (omeškanie s úhradou)|non_monetary_performance (nedodanie diela/služby)|early_termination (predčasné ukončenie zmluvy)|breach_of_confidentiality (porušenie mlčanlivosti)|other",
-        "evidence": [{ "quote": "string", "chunk_id": "string" }]
-      },
+## Structure overview
 
-      // A) AKA BOLA POKUTA V ZMLUVE?
-      "rate_definition": {
-        "type": "percent_denne|percent_mesacne|fixna_suma_mesacne|percent_rocne|percent_jednorazovo|fixna_suma_denne|fixna_suma_jednorazovo|pausal|percent_z_ceny|percent_z_dlznej_sumy|ine",
-        "value_raw": "string (napr. '0.05% denne')|null",
-        "evidence": [{ "quote": "string", "chunk_id": "string" }]
-      },
-
-      // B) SUMY (Povodna vs. Priznana)
-      "amounts": {
-        "currency": "EUR|SKK|CZK|unknown",
-        "original_claimed": {
-          "amount": null,
-          "evidence": [{ "quote": "string", "chunk_id": "string" }]
-        },
-        "final_awarded": {
-          "amount": null,
-          "evidence": [{ "quote": "string", "chunk_id": "string" }]
-        },
-        "calculation_logic_summary": {
-          "value": "Žalobca počítal 5% týždenne z ceny etapy (15 573,90 EUR). Súd výpočet neuznal pre neurčitosť základu.",
-          "evidence": [{ "quote": "string", "chunk_id": "string" }]
-        }
-      },
-
-      // C) PRISLUSENSTVO (Urok pri pokute)
-      "associated_interest": {
-        "awarded": "yes|no|unclear",
-        "applies_to": "penalty|principal|both|unclear",
-        "rate_value": "string (napr. '9,0 % ročne' alebo 'zákonný úrok z omeškania')",
-        "evidence": [{ "quote": "string", "chunk_id": "string" }]
-      },
-
-      
-      // D) PRECO SUD ROZHODOL TAKTO? (Analyza moderacie)
-      "moderation_analysis": {
-        "decision_on_penalty": {
-            "value": "awarded_full (priznaná v plnej výške)|awarded_reduced (znížená)|dismissed (zamietnutá)|unclear",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-        },
-        // len v pripade ze decision_analysis je awarded_reduced
-        "moderation_applied": {
-            // 'not_applicable' = súd zamietol nárok z iného dôvodu (neplatnosť, premlčanie) a moderáciu neriešil
-            "value": "yes |no | not_applicable (zamietol z iného dovodu)|unclear",
-            "evidence": [
-            { "quote": "string", "chunk_id": "string" }
-          ]
-        },
-        // new - Textove vysvetlenie pre pravnika
-        "legal_reasoning_summary": {
-            "value": "string (napr. 'Súd uviedol, že sadzba 1% denne je v rozpore s dobrými mravmi, pretože výrazne prevyšuje bežné úrokové miery bánk a pre žalovaného by bola likvidačná.')",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-        },
-
-        // Faktory (Enums pre jednoduchu analyzu v grafoch)
-        "factors": [
-          {
-            "label": "dobre_mravy",
-            "sentiment": "positive (súd súhlasí s pokutou)|negative (rozpor s mravmi)|neutral",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-          },
-          {
-            "label": "zabezpecovacia_funkcia",
-            "sentiment": "positive (funkcia zachovaná)|negative (funkcia popretá)|neutral",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-          },
-          {
-            "label": "vyska_skody",
-            "sentiment": "positive (škoda vznikla)|negative (škoda žiadna/malá)|neutral",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-          },
-          {
-            "label": "pomer_k_istine",
-            "sentiment": "positive (pomer OK)|negative (neprimerane vysoká)|neutral",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-          },
-          {
-            "label": "spravanie_dlznika",
-            "sentiment": "positive (snaha platiť/komunikácia)|negative (obštrukcie/ignorácia)|neutral",
-            "evidence": [{ "quote": "string", "chunk_id": "string" }]
-          }
-        ]
-      }
-    }
-  ],
-
-  // 4. KONTROLA (Generuje Python skript, nie LLM)
-  "quality_control": {
-    "flags": ["string"],
-    "missing_fields": ["string"]
-  }
-}
 ```
+meta                          - court name, case number, date, ecli
+case_context
+  dispute_summary             - 2-3 sentence summary of what the dispute was about
+  verdict_summary             - 1-2 sentences on overall outcome
+  contract_type               - dielo / uver / najom / ...
+  relationship_type           - B2B / B2C / C2C
+
+contractual_penalties[]       - list because one decision can have multiple penalties
+  penalty_internal_id         - pokuta_1, pokuta_2 ...
+  related_claim_ref           - which invoice/claim this penalty relates to (if multiple)
+  breach_type                 - late_payment / non_monetary_performance / ...  + evidence
+  rate_definition             - type + raw value (napr. "0,05% denne")          + evidence
+  amounts
+    currency
+    secured_principal         - base amount the penalty is calculated from       + evidence (strict null if not explicit)
+    original_claimed          - what plaintiff asked for                         + evidence
+    final_awarded             - what court actually gave                         + evidence
+  associated_interest         - just enough to not confuse interest with penalty rate
+  moderation_analysis
+    decision_on_penalty       - awarded_full / awarded_reduced / dismissed       + evidence
+    moderation_applied        - yes / no / not_applicable                        + evidence
+    legal_reasoning_summary   - how numbers were calculated + why court moderated + key_quotes
+    factors[]                 - 5 specific legal arguments + sentiment            + evidence each
+
+quality_control
+  flags, missing_fields
+```
+
+---
+
+## Changes from v4.1 to v4.3
+
+### removed fields
+
+**`verdict_summary` evidence**
+verdict_summary is a model-generated synthesis from multiple paragraphs. there is no single sentence that "proves" it. added evidence would just be a random cherry-picked quote, which is misleading. kept the field itself (as a plain string) because it is still useful - sometimes the court never even reaches the penalty question (zamietol pre neplatnost zmluvy) and without verdict_summary you wouldnt know that from decision_on_penalty alone.
+
+**`dispute_summary` evidence**
+same reason - it is a synthesis not an extraction. plain string, no evidence.
+
+**`parties.plaintiff` and `parties.defendant` names**
+Slovak decisions are anonymized (O. R., XX. B. XXXX). model would hallucinate real names. names are useless for penalty calibration anyway. kept `relationship_type` (B2B/B2C) because that one actually affects how strictly courts apply §301.
+
+**`breach_duration` (trvanie porusenia)**
+almost never stated explicitly in decisions. model would derive it from the calculation context and write it as a fact - that is a hallucination. when duration is relevant it shows up naturally in `legal_reasoning_summary`.
+
+**`calculation_logic_summary`**
+merged into `legal_reasoning_summary`. both fields were pulling quotes from the same paragraphs - court describes calculation and immediately explains why it accepted or rejected it. two separate evidence lists for overlapping content confused the model and wasted tokens. now `legal_reasoning_summary` covers both.
+
+**`associated_interest.applies_to`**
+hard to determine reliably. field exists only to prevent confusing 9% p.a. interest with 0.05% daily penalty rate. for that you only need `awarded` + `rate_value`.
+
+---
+
+### added / changed
+
+**`breach_type` now has evidence**
+in v4.1 it had no evidence. this was a mistake - breach_type determines comparability of cases (late_payment vs non_monetary_performance behave very differently in courts). should be verifiable.
+
+**`factors` got `not_mentioned` as 4th sentiment option**
+before: positive / negative / neutral
+now: positive / negative / neutral / not_mentioned
+
+this matters for thesis statistics. if the court never mentioned a factor, it should not be counted as `neutral`. if it were, the chapter 9 analysis would show artificially high neutral counts for factors the court simply did not discuss.
+
+**`legal_reasoning_summary` uses `key_quotes` instead of `evidence`**
+it is a synthesis from multiple paragraphs, so a single evidence list would be misleading. replaced with `key_quotes` (1-2 anchor quotes) which signals to both the model and the reader that this is not a single extracted fact but a summarized interpretation.
+
+**all examples in Slovak**
+previous version had English examples (e.g. "Plaintiff calculated..."). the model reads Slovak legal texts and should produce Slovak output. English examples would cause the model to mimic them and mix languages in output.
+
+---
+
+## Where evidence is and where it is not
+
+| field | evidence? | reason |
+|-------|-----------|--------|
+| dispute_summary | no | synthesis from multiple chunks |
+| verdict_summary | no | synthesis from multiple chunks |
+| contract_type | no | inferred from overall context, no single sentence proves it |
+| relationship_type | no | same as above |
+| breach_type | yes | verifiable claim, affects case comparability |
+| rate_definition | yes | specific number, must be checkable |
+| secured_principal | yes (nullable) | specific number, strict null if not explicit |
+| original_claimed | yes | specific number |
+| final_awarded | yes | specific number |
+| associated_interest | yes (nullable) | rate value must be verifiable |
+| decision_on_penalty | yes | legal conclusion, must be anchored |
+| moderation_applied | yes | critical distinction yes/no/not_applicable |
+| legal_reasoning_summary | key_quotes | synthesis but needs 1-2 anchors for auditability |
+| factors (each) | yes (nullable) | interpretive claim about court argument |
