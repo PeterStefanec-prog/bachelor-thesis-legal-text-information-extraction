@@ -69,11 +69,12 @@ def clean_text(text):
 
 def main():
     print("Loading mE5 model...")
-    model = SentenceTransformer("intfloat/multilingual-e5-small", device="cpu")
+    # model = SentenceTransformer("intfloat/multilingual-e5-small", device="cpu")
+    model = SentenceTransformer("intfloat/multilingual-e5-base", device="cpu")
 
     print("Connecting to ChromaDB...")
     chroma_client = chromadb.PersistentClient(path=DB_DIR)
-    collection = chroma_client.get_collection(name="legal_decisions_me5")
+    collection = chroma_client.get_collection(name=os.environ.get("COLLECTION_NAME", "legal_decisions_me5_380"))
 
     # Load golden dataset for reference
     golden = {}
@@ -93,8 +94,13 @@ def main():
         bm25_kw = case["bm25_keyword"]
 
         # Map query key to CSV column
-        col_map = {"q_context": "q1_context_quotes", "q_penalty": "q2_penalty_quotes",
-                   "q3": "q3_moderation_quotes"}
+        # q_outcome and q_reasoning both map to q3_moderation_quotes - same as evaluate_retrieval.py
+        col_map = {
+            "q_context":   "q1_context_quotes",
+            "q_penalty":   "q2_penalty_quotes",
+            "q_outcome":   "q3_moderation_quotes",
+            "q_reasoning": "q3_moderation_quotes",
+        }
         csv_col = col_map.get(case["query_key"], "q1_context_quotes")
 
         golden_quotes = []
@@ -133,11 +139,12 @@ def main():
         all_ids = results["ids"][0]
 
         # Step 4: Find which ranks contain the golden quotes
+        # using full quote match, same as evaluate_retrieval.py - not quote[:40] which could match wrong chunk
         correct_ranks = []
         for rank, (chunk_text, score, chunk_id) in enumerate(zip(all_docs, all_scores, all_ids), 1):
             cleaned_chunk = clean_text(chunk_text)
             for quote in golden_quotes:
-                if quote[:40] in cleaned_chunk:
+                if quote in cleaned_chunk:
                     correct_ranks.append((rank, score, chunk_id, quote[:50]))
                     break
 
@@ -149,13 +156,13 @@ def main():
 
         print(f"Total chunks in document: {total_chunks}")
         print(f"Score range (max-min):    {max_score} - {min_score} = {score_range}")
-        print(f"  -> {'⚠️  UNIFORM (range < 0.02) — model cannot discriminate' if score_range < 0.02 else '✓  Good range — model can discriminate'}")
+        print(f"  -> range {score_range:.4f} — {'narrow (< 0.02), model cannot discriminate' if score_range < 0.02 else 'wide enough, but model retrieves wrong content type'}")
         print()
 
         # Step 6: Show top-5 retrieved chunks
         print("TOP-5 RETRIEVED CHUNKS (what model thinks is relevant):")
         for rank, (score, text) in enumerate(zip(top5_scores, all_docs[:5]), 1):
-            marker = "✓" if any(q[:40] in clean_text(text) for q in golden_quotes) else "✗"
+            marker = "✓" if any(q in clean_text(text) for q in golden_quotes) else "✗"
             print(f"  #{rank} [{score:.4f}] {marker}  {repr(clean_text(text)[:80])}")
 
         print()
@@ -197,9 +204,10 @@ def main():
 
     print()
     print("CONCLUSION:")
-    print("Documents with score range < 0.02 are the 'BM25 wall' —")
-    print("dense model treats all chunks as equally relevant.")
-    print("BM25 on rare legal keywords would break this tie immediately.")
+    print("Dense retrieval fails not because scores are uniform,")
+    print("but because the model cannot distinguish 'factual contract description'")
+    print("from 'legal argumentation about contracts' — both have similar embeddings.")
+    print("BM25 on specific legal terms (contract numbers, names, dates) bypasses this.")
 
 
 if __name__ == "__main__":

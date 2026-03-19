@@ -5,6 +5,10 @@ import chromadb
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
+# env variables
+CHUNK_SUFFIX    = os.environ.get("CHUNK_SUFFIX",    "ME5_380")
+COLLECTION_NAME = os.environ.get("COLLECTION_NAME", "legal_decisions_me5_380")
+
 # --- 1. PATH SETUP ---
 # Important: Run this script from the ROOT project folder
 INPUT_DIR = "data/03_chunked_docs"
@@ -17,8 +21,9 @@ os.makedirs(DB_DIR, exist_ok=True)
 # Why: ChromaDB's built-in SentenceTransformerEmbeddingFunction is a black box -
 # i can't control normalize_embeddings and i can't add the 'passage: ' prefix
 # only for embedding while keeping the raw text clean for LLM later.
-print("Loading mE5 model manually...")
-model = SentenceTransformer("intfloat/multilingual-e5-small")
+print(f"Loading mE5 model manually... (chunk suffix: {CHUNK_SUFFIX}, collection: {COLLECTION_NAME})")
+# model = SentenceTransformer("intfloat/multilingual-e5-small")     # changed to better model
+model = SentenceTransformer("intfloat/multilingual-e5-base")        # from 384 (small) dimensions to to 768 dimensions (base)
 
 # --- 3. DATABASE SETUP ---
 print("Initializing ChromaDB...")
@@ -32,9 +37,9 @@ chroma_client = chromadb.PersistentClient(path=DB_DIR)
 # and pass them directly via embeddings= parameter in upsert().
 # This gives me full control over how vectors are computed.
 collection = chroma_client.get_or_create_collection(
-    name="legal_decisions_me5",
+    name=COLLECTION_NAME,
     metadata={
-        "description": "Chunks of Slovak legal decisions, mE5-small embeddings, cosine space",
+        "description": f"Chunks of Slovak legal decisions, {CHUNK_SUFFIX} strategy, cosine space",
         "hnsw:space": "cosine",
     }
 )
@@ -43,10 +48,10 @@ collection = chroma_client.get_or_create_collection(
 # --- 4. MAIN PIPELINE ---
 def main():
     # I only want to load the ME5 chunks for this specific database
-    json_files = glob.glob(os.path.join(INPUT_DIR, "*_chunks_ME5.json"))
+    json_files = glob.glob(os.path.join(INPUT_DIR, f"*_chunks_{CHUNK_SUFFIX}.json"))
 
     if not json_files:
-        print(f"Error: No ME5 chunk files found in {INPUT_DIR}")
+        print(f"Error: No chunk files found in {INPUT_DIR} matching *_chunks_{CHUNK_SUFFIX}.json")
         return
 
     print(f"Found {len(json_files)} document files. Starting vectorization and insertion...\n")

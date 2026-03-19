@@ -8,6 +8,7 @@
 ################################
 # PyCharm / IntelliJ project files
 .idea/
+.claude/
 # VS Code settings (if you ever use it)
 .vscode/
 
@@ -88,6 +89,6 @@ preprocessing/selected_chunks.csv
 !final_scraping/stiahnute_presne_podla_csv/.gitkeep
 
 # ChromaDB
-data/04_vectorstore/
+data/04_vectorstore_old/04_vectorstore/
 src/evaluation_retrieval/data/04_vectorstore/
 data/04_vectorstore_old/

@@ -11,7 +11,29 @@
                 (data_cleaner.py)     (chunk_processor)    (this script)
 ```
 
-This script takes the ME5 chunks from step 3 and turns them into a searchable vector database. Every chunk gets converted into a vector (a list of ~380 numbers) that represents its meaning. Later when i search with a query, i convert the query into a vector too and find the chunks whose vectors are closest to it.
+This script takes chunks from step 3 and turns them into a searchable vector database. Every chunk gets converted into a vector (a list of ~384 numbers) that represents its meaning. Later when i search with a query, i convert the query into a vector too and find the chunks whose vectors are closest to it.
+
+---
+
+## Multiple collections
+
+For the thesis experiments i run this script multiple times — once per chunking strategy. Each strategy gets its own separate ChromaDB collection so the results don't mix:
+
+| CHUNK_SUFFIX | COLLECTION_NAME | Model |
+|---|---|---|
+| ME5_380 | legal_decisions_me5_380 | mE5-small |
+| ME5_200 | legal_decisions_me5_200 | mE5-small |
+| OPENAI_500 | legal_decisions_openai_500 | OpenAI (later) |
+| OPENAI_200 | legal_decisions_openai_200 | OpenAI (later) |
+| OPENAI_PARA | legal_decisions_openai_para | OpenAI (later) |
+
+The script reads `CHUNK_SUFFIX` and `COLLECTION_NAME` from environment variables so i don't have to edit the file each time:
+
+```bash
+CHUNK_SUFFIX=ME5_200 COLLECTION_NAME=legal_decisions_me5_200 python src/retrieval/vector_store.py
+```
+
+If i run without env variables it uses the defaults (ME5_380).
 
 ---
 

@@ -12,18 +12,19 @@ I only chunk the `reasoning` segment. The `verdict` is short enough to always pa
 
 ---
 
-## 2. Two chunking strategies
+## 2. Chunking strategies
 
-I'm testing two different embedding models for my thesis, so i created two separate strategies with different token limits:
+I'm testing five different strategies for my thesis. The key variables are which embedding model, how big each chunk is, and how much overlap between chunks:
 
-| | Strategy A | Strategy B |
-|---|---|---|
-| Model | `text-embedding-3-small` (OpenAI) | `intfloat/multilingual-e5-small` (local) |
-| Token limit | 8191 | 512 |
-| chunk_size | 500 tokens | 380 tokens |
-| chunk_overlap | 75 tokens (15%) | 50 tokens (13%) |
+| Strategy | Model | chunk_size | overlap | Notes |
+|---|---|---|---|---|
+| ME5_200 | mE5-small (local) | 200 tokens | 25 (12.5%) | very fine-grained |
+| ME5_380 | mE5-small (local) | 380 tokens | 50 (13.2%) | baseline |
+| OPENAI_200 | text-embedding-3-small | 200 tokens | 25 (12.5%) | for model comparison |
+| OPENAI_500 | text-embedding-3-small | 500 tokens | 75 (15%) | baseline |
+| OPENAI_PARA | text-embedding-3-small | paragraph-based | 0 | natural boundaries |
 
-Both use LangChain `RecursiveCharacterTextSplitter` but with custom separators and token-based length functions.
+mE5 strategies are capped at 380 tokens max because mE5-small has a hard 512 token limit and silently truncates. Typical Slovak legal paragraph is 300–800 tokens so OPENAI_PARA is only for OpenAI.
 
 ---
 
@@ -107,10 +108,12 @@ Zero-width means the regex matches a position but consumes no characters. So the
 
 ---
 
-## 4. Final separator list
+## 4. Two separator lists
+
+**SEPARATORS_STANDARD** — used for all fixed-size token strategies (ME5_200, ME5_380, OPENAI_200, OPENAI_500):
 
 ```python
-SEPARATORS = [
+SEPARATORS_STANDARD = [
     r"\n\n+",               # 1. paragraph break - strongest boundary
     r"(?=\n\s*\d+\.\s+)",   # 2. before numbered items (zero-width lookahead)
     r"\n",                  # 3. any newline
@@ -118,6 +121,20 @@ SEPARATORS = [
     r"\s+",                 # 5. whitespace - absolute last resort
 ]
 ```
+
+**SEPARATORS_PARAGRAPH** — used only for OPENAI_PARA:
+
+```python
+SEPARATORS_PARAGRAPH = [
+    r"(?=\n\s*\d+\.\s+)",   # 1. numbered points - PRIMARY boundary
+    r"\n\n+",               # 2. paragraph breaks within a point
+    r"\n",                  # 3. single newlines - only if still too long
+]
+```
+
+For OPENAI_PARA the numbered point separator comes first because each numbered point in a Slovak court decision is one complete legal argument. chunk_size=1500 is just a safety net for extremely long points — in most cases the numbered point separator fires long before hitting 1500 tokens.
+
+Also: **overlap=0** for OPENAI_PARA. Overlap is a workaround for artificial token-window boundaries. If i added overlap here i would be copying the end of paragraph 3 into paragraph 4 — but those are separate legal arguments. Natural boundaries don't need overlap.
 
 ---
 

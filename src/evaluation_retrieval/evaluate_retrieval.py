@@ -6,6 +6,13 @@ import datetime
 import re
 from colorama import Fore, Style, init
 
+# these are set by experiment_runner.py via env variables so i dont have to edit this file
+# for each experiment. if running manually, just change the defaults here.
+EXPERIMENT_NAME = os.environ.get("EXP_NAME",        "mE5_chunk380_top5_window1")
+TOP_K           = int(os.environ.get("EXP_TOP_K",   "5"))
+WINDOW_SIZE     = int(os.environ.get("EXP_WINDOW",  "1"))
+COLLECTION_NAME = os.environ.get("COLLECTION_NAME", "legal_decisions_me5_380")
+
 # ==========================================
 # FIX: Mac M2 freezing problem!
 # These lines stop my Mac M2 from freezing. It turns off parallel processing and threads.
@@ -17,16 +24,6 @@ os.environ["CHROMA_TELEMETRY_DISABLED"] = "1"
 
 # NEW IMPORT: I will call the model directly myself, not through ChromaDB black box.
 from sentence_transformers import SentenceTransformer
-
-# ==========================================
-# EXPERIMENT CONFIG - change these when running a new experiment!
-# I moved EXPERIMENT_NAME here from Step 7 where it was buried and easy to forget.
-# Every time i change something (TOP_K, window size, model...) i change the name here.
-# Results are saved to TWO CSVs so i can compare all experiments in my thesis notebook.
-# ==========================================
-EXPERIMENT_NAME = "mE5_window0_top7_4queries_1.6"  # format: model_windowsize_topk - change for each run!
-TOP_K = 5                                      # how many chunks the DB returns per query
-WINDOW_SIZE = 1                                 # how many chunks to expand left and right (±1 = 3 chunks total)
 
 # ==========================================
 # STEP 1: Setup paths and basic variables
@@ -69,14 +66,15 @@ QUERIES = {
     "q_context": "Čo bolo predmetom zmluvy medzi stranami? Akú povinnosť si dlžník prevzal a ako ju porušil?",
 
     # Channel B
-    "q_penalty": "Aká je výška, sadzba a mena zmluvnej pokuty? Z akej sumy sa počíta a za aké porušenie povinnosti bola dohodnutá?",
+    # "q_penalty": "Aká je výška, sadzba a mena zmluvnej pokuty? Z akej sumy sa počíta a za aké porušenie povinnosti bola dohodnutá?", - (in slovak so it would be understandable) istina zavazku ktory pokuta zabezpecuje — je obcas uvedena len v kontexte zmluvy, nie v odseku o pokute. Query "Z akej sumy sa počíta" to vacsinou zachytila, ale nie vzdy
+    "q_penalty": "Aká je výška, sadzba a mena zmluvnej pokuty? Z akej sumy sa počíta a za aké porušenie povinnosti bola dohodnutá? Aká je výška hlavného záväzku (istiny) ktorý pokuta zabezpečuje?",
 
-    # Kanál C1 - výsledok konania (what happened to the penalty)
+    # Channel C1 - vysledok konania (what happened to the penalty)
     # This explicitly covers ALL possible outcomes: §301 reduction, dismissal for invalidity,
     # procedural dismissal, case returned for retrial - not just the §301 moderation case!
     "q_outcome": "Aký bol výsledok konania o zmluvnej pokute? Bola priznaná, znížená alebo zamietnutá? Uplatnil súd moderačné oprávnenie podľa § 301 Obchodného zákonníka? Alebo bola pokuta zamietnutá pre neplatnosť zmluvy, procesný dôvod, alebo vrátená na ďalšie konanie?",
 
-    # Kanál C2 - argumenty súdu (why)
+    # Channel C2 - argumenty súdu (why)
     # This retrieves the reasoning chunks regardless of what the outcome was.
     "q_reasoning": "Aké dôvody uviedol súd pri posudzovaní zmluvnej pokuty? Napríklad výška škody, rozpor s dobrými mravmi, pomer k istine, správanie dlžníka, zabezpečovacia funkcia, kumulácia s úrokom z omeškania?",
 }
@@ -102,6 +100,10 @@ def clean_text(text):
         return ""
     text = text.replace("\n", " ").replace("\r", " ")
     return re.sub(r'\s+', ' ', text).strip()
+
+
+def safe_avg(lst):
+    return round(sum(lst) / len(lst), 4) if lst else ""
 
 
 def retrieve_super_chunks(collection, query_vector, pdf_filename, top_k, window_size):
@@ -204,7 +206,8 @@ def main():
     print("Loading mE5 model explicitly (CPU mode)...")
 
     # Load the model myself and force it to run on CPU so it doesn't crash the Apple GPU.
-    model = SentenceTransformer("intfloat/multilingual-e5-small", device="cpu")
+    # model = SentenceTransformer("intfloat/multilingual-e5-small", device="cpu")
+    model = SentenceTransformer("intfloat/multilingual-e5-base", device="cpu")
 
     # FIX 2: BIG OPTIMIZATION!
     # I am asking the EXACT same questions for every document.
@@ -225,7 +228,7 @@ def main():
     chroma_client = chromadb.PersistentClient(path=DB_DIR)
 
     # Get the database table WITHOUT embedding function because I made vectors manually.
-    collection = chroma_client.get_collection(name="legal_decisions_me5")
+    collection = chroma_client.get_collection(name=COLLECTION_NAME)
 
     # Variables to track my score
     total_questions = 0
@@ -304,9 +307,6 @@ def main():
                         print(f"  hit avg={sum(hit_scores)/len(hit_scores):.3f}  miss avg={sum(miss_scores)/len(miss_scores):.3f}" if miss_scores else f"  hit avg={sum(hit_scores)/len(hit_scores):.3f}")
                 # coverage: what % of the doc did this query actually read?
                 print(f"  coverage: {coverage_pct}% ({len(fetched_ids)}/{total_doc_chunks} chunks)")
-
-                def safe_avg(lst):
-                    return round(sum(lst) / len(lst), 4) if lst else ""
 
                 detail_rows.append({
                     "experiment_name":      EXPERIMENT_NAME,
@@ -397,9 +397,6 @@ def main():
                     rea_display = [f"{s:.3f}{'*' if (j + len(sims_outcome)) in chunks_with_hits else ' '}" for j, s in enumerate(sims_reasoning)]
                     print(f"  q_reasoning scores: [{', '.join(rea_display)}]  (* = chunk contained answer)")
                 print(f"  coverage: {coverage_pct}% ({len(all_fetched_ids)}/{total_doc_chunks} chunks)")
-
-                def safe_avg(lst):
-                    return round(sum(lst) / len(lst), 4) if lst else ""
 
                 # Save one combined row - store both query scores separately for notebook analysis
                 detail_rows.append({
