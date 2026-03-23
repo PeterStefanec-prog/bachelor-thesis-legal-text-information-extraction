@@ -74,7 +74,7 @@ def split_header_body(text: str):
 
 # --- STEP 3.5: Layout Normalization ---
 TITLES = r"(?:judr\.|mgr\.|ing\.|mudr\.|phdr\.|rndr\.|bc\.|doc\.|prof\.|akad\.|thlic\.|paeddr\.)"
-ABBREVIATIONS = r"(?:ods\.|písm\.|č\.|čl\.|sp\.|zn\.|sp\.\s*zn\.|z\.\s*z\.|zb\.|" + TITLES + r")"
+ABBREVIATIONS = r"(?:ods\.|písm\.|č\.|č\.k\.|č\.\s*k\.|čl\.|sp\.|zn\.|sp\.\s*zn\.|z\.\s*z\.|zb\.|resp\.|napr\.|tzn\.|tzv\.|t\.j\.|" + TITLES + r")"
 PREPOSITIONS = r"(?:\s|^)(?:v|z|zo|k|ku|o|po|pri|pre|na|do)$"
 
 
@@ -97,9 +97,20 @@ def normalize_layout(text: str) -> str:
 
     for line in lines:
         line = line.strip()
-        if not line:  # Empty line = paragraph break
-            if buf: merged.append(buf); buf = ""
-            merged.append("")
+        if not line:  # Empty line = potential paragraph break
+            if buf:
+                # Only treat as paragraph break if sentence looks complete
+                # (ends with punctuation, NOT an abbreviation or preposition)
+                # This prevents page breaks mid-sentence from splitting paragraphs
+                looks_complete = re.search(r'[.?!:;]\s*$', buf) and \
+                                 not re.search(rf'{ABBREVIATIONS}\s*$', buf, re.IGNORECASE) and \
+                                 not re.search(PREPOSITIONS, buf, re.IGNORECASE)
+                if looks_complete:
+                    merged.append(buf); buf = ""
+                    merged.append("")
+                # else: skip empty line, keep accumulating (likely page break mid-sentence)
+            else:
+                merged.append("")
             continue
 
         if not buf:
@@ -125,8 +136,9 @@ def normalize_layout(text: str) -> str:
             should_join = False
         elif prev.strip().upper().endswith("SLOVENSKEJ REPUBLIKY"):
             should_join = False
-        # List items (1., a)) but NOT dates (20. 1.)
-        elif re.match(r"^(?:[a-z]\)|\d+\.(?!\s*\d)|•)\s", line):
+        # List items (1., a)) but NOT dates (17. októbra) or numbers mid-sentence
+        # Only treat as list item if previous line ends with punctuation (sentence complete)
+        elif re.match(r"^(?:[a-z]\)|\d+\.(?!\s*\d)|•)\s", line) and re.search(r'[.?!:;]\s*$', prev):
             should_join = False
         elif line[0].isupper() and re.search(r"[.?!]$", prev):
             should_join = False
@@ -213,7 +225,7 @@ def process_single_pdf(pdf_path: Path):
 
     # --- STEP 3.4: Remove Pagination & Separate Main Header ---
     no_page_nums = [remove_pagination(p) for p in doc["clean_pages"]]
-    full_text = "\n".join(no_page_nums)
+    full_text = "\n".join(p.strip() for p in no_page_nums)
     h_text, b_text = split_header_body(full_text)
     doc["header_text_raw"] = h_text
     doc["body_text_raw"] = b_text

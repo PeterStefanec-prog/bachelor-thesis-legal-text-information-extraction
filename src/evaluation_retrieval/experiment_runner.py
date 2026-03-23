@@ -17,7 +17,7 @@ EVAL_SCRIPT = "src/evaluation_retrieval/evaluate_retrieval.py"
 CHUNK_SUFFIX    = "ME5_380"
 COLLECTION_NAME = f"legal_decisions_{CHUNK_SUFFIX.lower()}"
 
-TOP_K_VALUES  = [3, 4, 5, 6, 7]
+TOP_K_VALUES  = [2, 3, 4, 5]
 WINDOW_VALUES = [0, 1]
 
 for top_k in TOP_K_VALUES:

@@ -21,11 +21,19 @@ For the thesis experiments i run this script multiple times — once per chunkin
 
 | CHUNK_SUFFIX | COLLECTION_NAME | Model |
 |---|---|---|
-| ME5_380 | legal_decisions_me5_380 | mE5-small |
-| ME5_200 | legal_decisions_me5_200 | mE5-small |
-| OPENAI_500 | legal_decisions_openai_500 | OpenAI (later) |
-| OPENAI_200 | legal_decisions_openai_200 | OpenAI (later) |
-| OPENAI_PARA | legal_decisions_openai_para | OpenAI (later) |
+| ME5_380 | legal_decisions_me5_380 | mE5-base (768-dim) |
+| ME5_200 | legal_decisions_me5_200 | mE5-base (768-dim) |
+| OPENAI_500 | legal_decisions_openai_500 | text-embedding-3-small (1536-dim) |
+| OPENAI_200 | legal_decisions_openai_200 | text-embedding-3-small (1536-dim) |
+| OPENAI_PARA | legal_decisions_openai_para | text-embedding-3-small (1536-dim) |
+| OPENAI_PARA | legal_decisions_openai_large_openai_para | text-embedding-3-large (3072-dim) |
+
+Important: openai and openai_large use the same OPENAI_PARA chunks (same tokenizer) but they MUST have separate collections because the embedding dimensions are different (1536 vs 3072). ChromaDB would crash if i tried to upsert a 3072-dim vector into a collection that has 1536-dim vectors. Thats why `run_all_experiments.py` uses special collection naming for openai_large:
+
+```python
+if model_type == "openai_large":
+    collection_name = f"legal_decisions_openai_large_{chunk_suffix.lower()}"
+```
 
 The script reads `CHUNK_SUFFIX` and `COLLECTION_NAME` from environment variables so i don't have to edit the file each time:
 
@@ -103,4 +111,4 @@ Important: this must be set when the collection is CREATED. you cannot change it
 
 ## Batching
 
-i insert chunks in batches of 100 instead of one giant call. ChromaDB can be slow or run into memory issues with very large single inserts. 100 is a safe and fast batch size.
+i insert chunks in batches of 100 instead of one giant call. ChromaDB can be slow or run into memory issues with very large single inserts. 100 is a safe and fast batch size. So is ready for far bigger implementation than jsut this thesis.

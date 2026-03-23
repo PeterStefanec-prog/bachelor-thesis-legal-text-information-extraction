@@ -2,12 +2,17 @@ import os
 import json
 import glob
 import chromadb
-from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
-# env variables
+# ==========================================
+# ENV VARIABLES
+# ==========================================
+# MODEL_TYPE: "me5" (local mE5-base), "openai" (text-embedding-3-small), or "openai_large" (text-embedding-3-large)
+# CHUNK_SUFFIX: matches the chunking strategy suffix from chunk_processor.py
+# COLLECTION_NAME: ChromaDB collection name (auto-computed if not set)
+MODEL_TYPE      = os.environ.get("MODEL_TYPE",      "me5")
 CHUNK_SUFFIX    = os.environ.get("CHUNK_SUFFIX",    "ME5_380")
-COLLECTION_NAME = os.environ.get("COLLECTION_NAME", "legal_decisions_me5_380")
+COLLECTION_NAME = os.environ.get("COLLECTION_NAME", f"legal_decisions_{CHUNK_SUFFIX.lower()}")
 
 # --- 1. PATH SETUP ---
 # Important: Run this script from the ROOT project folder
@@ -16,14 +21,51 @@ DB_DIR = "data/04_vectorstore"  # Here ChromaDB will save all its files
 
 os.makedirs(DB_DIR, exist_ok=True)
 
+# ==========================================
 # --- 2. MODEL SETUP ---
+# ==========================================
 # I load the model manually instead of letting ChromaDB do it internally.
 # Why: ChromaDB's built-in SentenceTransformerEmbeddingFunction is a black box -
 # i can't control normalize_embeddings and i can't add the 'passage: ' prefix
 # only for embedding while keeping the raw text clean for LLM later.
-print(f"Loading mE5 model manually... (chunk suffix: {CHUNK_SUFFIX}, collection: {COLLECTION_NAME})")
-# model = SentenceTransformer("intfloat/multilingual-e5-small")     # changed to better model
-model = SentenceTransformer("intfloat/multilingual-e5-base")        # from 384 (small) dimensions to to 768 dimensions (base)
+
+print(f"Model: {MODEL_TYPE} | Chunks: {CHUNK_SUFFIX} | Collection: {COLLECTION_NAME}")
+
+if MODEL_TYPE == "me5":
+    from sentence_transformers import SentenceTransformer
+    print("Loading mE5-base model locally...")
+    model = SentenceTransformer("intfloat/multilingual-e5-base")
+
+    def embed_texts(texts, is_query=False):
+        """Embed texts using mE5-base. Adds 'passage: ' or 'query: ' prefix as required by mE5."""
+        prefix = "query: " if is_query else "passage: "
+        prefixed = [f"{prefix}{t}" for t in texts]
+        embeddings = model.encode(prefixed, normalize_embeddings=True, show_progress_bar=False)
+        return embeddings.tolist()
+
+elif MODEL_TYPE in ("openai", "openai_large"):
+    from openai import OpenAI
+    OPENAI_MODEL = "text-embedding-3-large" if MODEL_TYPE == "openai_large" else "text-embedding-3-small"
+    print(f"Using OpenAI {OPENAI_MODEL} via API...")
+    openai_client = OpenAI()  # reads OPENAI_API_KEY from env
+
+    def embed_texts(texts, is_query=False):
+        """Embed texts using OpenAI embedding model. No prefix needed."""
+        # OpenAI API has a batch limit, process in chunks of 2048
+        all_embeddings = []
+        BATCH = 2048
+        for i in range(0, len(texts), BATCH):
+            batch = texts[i:i + BATCH]
+            response = openai_client.embeddings.create(
+                model=OPENAI_MODEL,
+                input=batch,
+            )
+            all_embeddings.extend([item.embedding for item in response.data])
+        return all_embeddings
+
+else:
+    raise ValueError(f"Unknown MODEL_TYPE: {MODEL_TYPE}. Use 'me5', 'openai', or 'openai_large'.")
+
 
 # --- 3. DATABASE SETUP ---
 print("Initializing ChromaDB...")
@@ -39,7 +81,7 @@ chroma_client = chromadb.PersistentClient(path=DB_DIR)
 collection = chroma_client.get_or_create_collection(
     name=COLLECTION_NAME,
     metadata={
-        "description": f"Chunks of Slovak legal decisions, {CHUNK_SUFFIX} strategy, cosine space",
+        "description": f"Chunks of Slovak legal decisions, {MODEL_TYPE}/{CHUNK_SUFFIX} strategy, cosine space",
         "hnsw:space": "cosine",
     }
 )
@@ -47,7 +89,7 @@ collection = chroma_client.get_or_create_collection(
 
 # --- 4. MAIN PIPELINE ---
 def main():
-    # I only want to load the ME5 chunks for this specific database
+    # I only want to load the chunks for this specific strategy
     json_files = glob.glob(os.path.join(INPUT_DIR, f"*_chunks_{CHUNK_SUFFIX}.json"))
 
     if not json_files:
@@ -69,7 +111,6 @@ def main():
 
             # --- Build the three lists ChromaDB needs ---
             raw_texts = []       # clean text WITHOUT prefix -> this is what gets stored in DB
-            texts_to_embed = []  # text WITH 'passage: ' prefix -> only used for computing vectors
             metadatas = []
             ids = []
 
@@ -78,13 +119,6 @@ def main():
                 meta = chunk["metadata"]
 
                 raw_texts.append(text)
-
-                # mE5 needs 'passage: ' prefix during indexing so it knows it's encoding
-                # a document and not a query. The matching 'query: ' prefix is added in
-                # evaluate_retrieval.py. Keeping these separate is critical:
-                # raw_texts -> stored in DB, LLM reads this (clean, no prefix noise)
-                # texts_to_embed -> only used for vector computation, never stored
-                texts_to_embed.append(f"passage: {text}")
 
                 # Chroma requires metadata values to be str, int, or float (no nested dicts)
                 clean_meta = {
@@ -102,20 +136,8 @@ def main():
                 metadatas.append(clean_meta)
                 ids.append(chunk_id)
 
-            # --- Compute embeddings manually ---
-            # normalize_embeddings=True forces all vectors to unit length (L2 norm = 1).
-            # required so that cosine similarity scores are in range [-1, 1] and correctly
-            # interpretable. also consistent with how query vectors are computed in evaluate_retrieval.py
-            # - both sides must be normalized the same way.
-            # show_progress_bar=False because tqdm above already shows file-level progress
-            embeddings = model.encode(
-                texts_to_embed,
-                normalize_embeddings=True,
-                show_progress_bar=False,
-            )
-
-            # embeddings is a numpy array, ChromaDB needs a plain Python list
-            embeddings_list = embeddings.tolist()
+            # --- Compute embeddings using the configured model ---
+            embeddings_list = embed_texts(raw_texts, is_query=False)
 
             # --- Insert into DB in batches ---
             # upsert() instead of add() so re-running the script doesn't crash on duplicate IDs.
@@ -138,6 +160,8 @@ def main():
     # --- 5. FINAL REPORT ---
     total_chunks_in_db = collection.count()
     print("\n=== VECTOR STORE CREATION COMPLETED ===")
+    print(f"Model:             {MODEL_TYPE}")
+    print(f"Chunk strategy:    {CHUNK_SUFFIX}")
     print(f"Files processed:   {len(json_files) - failed_files} / {len(json_files)}")
     print(f"Failed:            {failed_files}")
     print(f"Chunks inserted:   {total_inserted}")

@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import glob
 from tqdm import tqdm
@@ -74,6 +75,10 @@ SEPARATORS_PARAGRAPH = [
     r"(?=\n\s*\d+\.\s+)", # 1. numbered points - PRIMARY boundary
     r"\n\n+",              # 2. paragraph breaks within a point
     r"\n",                 # 3. single newlines - only if still too long
+    r";\s+",               # 4. semicolons - same as STANDARD, needed for long enumerations
+    r"\s+",                # 5. whitespace - absolute last resort, enforces the chunk_size limit
+    #                         without these fallbacks, chunks can exceed chunk_size (e.g. 1777 tokens)
+    #                         because LangChain returns the text as-is if no separator can split it
 ]
 
 
@@ -235,6 +240,12 @@ def main():
             if not reasoning_text:
                 skipped_no_reasoning += 1
                 continue
+
+            # FIX: strip "odôvodnenie :" prefix before chunking
+            # segmentation keeps it as part of reasoning text, but it's a section label, not content
+            # without this, OPENAI_PARA produces a micro-chunk "odôvodnenie :" (6 tokens)
+            # because the numbered-item separator splits before "1." leaving the label alone
+            reasoning_text = re.sub(r"^[oó]d[oôó]vodnenie\s*:?\s*", "", reasoning_text, flags=re.IGNORECASE).strip()
 
             base_metadata = doc_data.get("metadata", {})
             filename  = doc_data.get("filename", os.path.basename(file_path))
