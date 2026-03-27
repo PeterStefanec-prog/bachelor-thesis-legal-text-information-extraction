@@ -38,6 +38,31 @@ RRF_K = int(os.environ.get("RRF_K", "60"))  # RRF constant, standard value = 60
 RRF_ALPHA = float(os.environ.get("RRF_ALPHA", "0.5"))  # default 0.5 = standard equal-weight RRF
 
 # ==========================================
+# RERANKER: keyword-based reranking after retrieval
+# ==========================================
+# When turned on, retrieval fetches MORE chunks than usual (e.g. 10 instead of 5)
+# and then the reranker re-scores them using legal keyword patterns and picks the
+# best top_k. The idea is that retrieval sometimes puts procedural chunks above
+# informative ones because they are semantically similar, and keyword matching
+# can fix that.
+#
+# USE_RERANKER=1 to turn it on, =0 to keep original behavior (default off)
+# RERANKER_ALPHA controls balance: 0.6 means retrieval is more important than keywords
+# RERANKER_OVERSAMPLE: how many times more chunks to fetch (2 = fetch 2x, rerank to top_k)
+# RERANKER_DEBUG=1 to print detailed scoring info for each chunk
+# ==========================================
+USE_RERANKER = os.environ.get("USE_RERANKER", "0") == "1"
+RERANKER_ALPHA = float(os.environ.get("RERANKER_ALPHA", "0.6"))
+RERANKER_OVERSAMPLE = int(os.environ.get("RERANKER_OVERSAMPLE", "2"))
+RERANKER_DEBUG = os.environ.get("RERANKER_DEBUG", "0") == "1"
+
+if USE_RERANKER:
+    # need to add project root to path so python can find src.candidates.reranker
+    import sys
+    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
+    from src.candidates.reranker import rerank_chunks
+
+# ==========================================
 # FIX: Mac M2 freezing problem!
 # These lines stop my Mac M2 from freezing. It turns off parallel processing and threads.
 # I also disable Chroma telemetry so it doesn't hang my script randomly.
@@ -518,24 +543,54 @@ def get_doc_total_chunks(collection, pdf_filename):
 
 
 def do_retrieve(collection, query_key, query_text, query_vector, pdf_filename, top_k, window_size):
-    """Unified retrieval dispatcher - picks dense, bm25, or hybrid based on RETRIEVAL_MODE.
+    """Pick the right retrieval method and optionally rerank the results.
 
     For BM25 and hybrid modes, uses BM25_QUERIES (keyword-optimized) instead of
     the semantic QUERIES used for dense retrieval. This is intentional:
     - Dense needs natural language questions for good embeddings
     - BM25 needs domain keywords for exact token matching
+
+    When the reranker is turned on, this fetches more chunks than needed (2x by default),
+    then the reranker re-scores them using legal keywords and picks the best top_k.
     """
     # BM25 uses keyword queries; dense uses semantic queries
     bm25_query_text = BM25_QUERIES.get(query_key, query_text) if RETRIEVAL_MODE in ("bm25", "hybrid") else query_text
 
+    # when reranker is on, fetch more chunks so it has a bigger pool to choose from
+    # e.g. if top_k=5 and oversample=2, we fetch 10 and then rerank down to 5
+    how_many_to_fetch = top_k * RERANKER_OVERSAMPLE if USE_RERANKER else top_k
+
     if RETRIEVAL_MODE == "dense":
-        return retrieve_super_chunks(collection, query_vector, pdf_filename, top_k, window_size)
+        super_chunks, cosine_sims, ret_ids, fetched_ids = retrieve_super_chunks(
+            collection, query_vector, pdf_filename, how_many_to_fetch, window_size)
     elif RETRIEVAL_MODE == "bm25":
-        return retrieve_bm25(collection, bm25_query_text, pdf_filename, top_k, window_size)
+        super_chunks, cosine_sims, ret_ids, fetched_ids = retrieve_bm25(
+            collection, bm25_query_text, pdf_filename, how_many_to_fetch, window_size)
     elif RETRIEVAL_MODE == "hybrid":
-        return retrieve_hybrid_rrf(collection, query_vector, bm25_query_text, pdf_filename, top_k, window_size, rrf_k=RRF_K)
+        super_chunks, cosine_sims, ret_ids, fetched_ids = retrieve_hybrid_rrf(
+            collection, query_vector, bm25_query_text, pdf_filename, how_many_to_fetch, window_size, rrf_k=RRF_K)
     else:
         raise ValueError(f"Unknown RETRIEVAL_MODE: {RETRIEVAL_MODE}")
+
+    # RERANKING STEP
+    # the reranker takes the bigger pool and picks the best top_k using keyword patterns.
+    # it combines the original retrieval score with a keyword score to decide the final order.
+    if USE_RERANKER and super_chunks:
+        super_chunks, cosine_sims, ret_ids = rerank_chunks(
+            query_key=query_key,
+            chunk_texts=super_chunks,
+            chunk_scores=cosine_sims,
+            chunk_ids=ret_ids,
+            top_k=top_k,
+            alpha=RERANKER_ALPHA,
+            debug=RERANKER_DEBUG,
+        )
+        # coverage should reflect what LLM actually sees (top_k chunks after reranking),
+        # not the full oversampled pool. otherwise coverage would be unfairly inflated
+        # compared to baseline experiments without reranker.
+        fetched_ids = set(ret_ids)
+
+    return super_chunks, cosine_sims, ret_ids, fetched_ids
 
 
 def main():
@@ -552,6 +607,11 @@ def main():
     # STEP 3: Connect to the database and Model
     # ==========================================
     print(f"  Retrieval mode: {RETRIEVAL_MODE}")
+    # show reranker status so i know if its on when running experiments
+    if USE_RERANKER:
+        print(f"  Reranker: ON (alpha={RERANKER_ALPHA}, oversample={RERANKER_OVERSAMPLE}x)")
+    else:
+        print(f"  Reranker: OFF")
 
     # ==========================================
     # MODEL LOADING - only needed for dense and hybrid modes

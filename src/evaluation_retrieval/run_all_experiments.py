@@ -79,6 +79,24 @@ EXPERIMENTS = [
     # Uses same OPENAI_PARA chunks (same tokenizer) but different collection for embeddings.
     ("openai_large", "OPENAI_PARA", "openai3l_para", "dense"),
 
+    # Phase 8: Reranking experiments - domain-specific keyword reranker on top of retrieval
+    # The reranker fetches 2x chunks (oversample=2), re-scores them with legal keyword
+    # patterns, and picks the best top_k. This should fix the last few % of recall
+    # where retrieval puts procedural chunks above informative ones.
+    #
+    # Two configs to compare:
+    # a) hybrid a=0.7 + reranker - our best hybrid config with reranker on top
+    # b) dense + reranker - can the reranker fix dense retrieval without BM25?
+    ("openai", "OPENAI_PARA", "hybrid_a7_reranked", "hybrid"),
+    ("openai", "OPENAI_PARA", "dense_reranked", "dense"),
+
+    # Phase 9: Hybrid + reranker with HIGH reranker alpha (0.85)
+    # Phase 8 showed that hybrid + reranker(alpha=0.6) hurts recall at top_k=4,5
+    # because keywords get double-boosted (BM25 + reranker = 58% keyword influence).
+    # With alpha=0.85, retrieval score keeps 85% weight and keywords only 15%,
+    # so the total keyword influence drops to ~39% (BM25 24% + reranker 15%).
+    ("openai", "OPENAI_PARA", "hybrid_a7_reranked_a85", "hybrid"),
+
 ]
 
 # RRF_K overrides per experiment - when experiment needs different RRF_K than default (60)
@@ -93,6 +111,29 @@ RRF_K_OVERRIDES = {
 RRF_ALPHA_OVERRIDES = {
     "hybrid_weighted_a7": "0.7",
     "hybrid_weighted_a8": "0.8",
+    "hybrid_a7_reranked": "0.7",
+    "hybrid_a7_reranked_a85": "0.7",
+}
+
+# Reranker overrides per experiment - which experiments use the domain-specific reranker
+# USE_RERANKER=1 turns it on, RERANKER_ALPHA controls retrieval vs keyword balance,
+# RERANKER_OVERSAMPLE controls how many extra chunks to fetch (2 = fetch 2x top_k)
+RERANKER_OVERRIDES = {
+    "hybrid_a7_reranked": {
+        "USE_RERANKER": "1",
+        "RERANKER_ALPHA": "0.6",
+        "RERANKER_OVERSAMPLE": "2",
+    },
+    "dense_reranked": {
+        "USE_RERANKER": "1",
+        "RERANKER_ALPHA": "0.6",
+        "RERANKER_OVERSAMPLE": "2",
+    },
+    "hybrid_a7_reranked_a85": {
+        "USE_RERANKER": "1",
+        "RERANKER_ALPHA": "0.85",
+        "RERANKER_OVERSAMPLE": "2",
+    },
 }
 
 # Retrieval config grid - same for all experiments
@@ -103,7 +144,16 @@ WINDOW_VALUES = [0, 1]
 # Add experiment short_names here to skip them (e.g. if already computed)
 # Example: SKIP = {"mE5base_380"}  # skip because we already have these results
 # Fresh run: all experiments from scratch (CSV files were deleted)
-SKIP = set()
+# SKIP = set()
+SKIP = {
+    "mE5base_200", "mE5base_380",
+    "openai3s_200", "openai3s_500", "openai3s_para",
+    "bm25_para",
+    "hybrid_para", "hybrid_para_k20",
+    "hybrid_weighted_a7", "hybrid_weighted_a8",
+    "openai3l_para",
+    "hybrid_a7_reranked", "dense_reranked",
+}
 
 
 
@@ -196,6 +246,10 @@ def main():
                 # some experiments need different RRF_ALPHA (weighted hybrid)
                 if short_name in RRF_ALPHA_OVERRIDES:
                     eval_env["RRF_ALPHA"] = RRF_ALPHA_OVERRIDES[short_name]
+
+                # some experiments use the domain-specific reranker
+                if short_name in RERANKER_OVERRIDES:
+                    eval_env.update(RERANKER_OVERRIDES[short_name])
 
                 eval_ok = run_command(
                     f"Evaluating: {exp_name}",

@@ -16,6 +16,7 @@ unidecode
 jupyter
 ipykernel
 matplotlib    # graphs in notebooks
+seaborn
 
 # Web Scraping and API (Added)
 requests      # Essential for calling the Ministry of Justice API

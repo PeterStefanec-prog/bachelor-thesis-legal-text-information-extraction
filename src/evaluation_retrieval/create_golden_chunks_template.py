@@ -5,7 +5,7 @@ import csv
 # --- 1. SETUP PATHS ---
 # hah must run this from the root folder
 INPUT_DIR = "data/02_processed_json"
-EVAL_DIR = "data/05_evaluation"
+EVAL_DIR = "data/05_retrieval_evaluation"
 TEXTS_DIR = os.path.join(EVAL_DIR, "texts_for_annotation")
 
 # Create folders if they don't exist
