@@ -1,5 +1,5 @@
 # clean reasoning text (data/02_processed_json) -> chunks for retrieval (data/03_chunked_docs)
-# python src/chunking/chunk_processor.py
+# .venv/bin/pytho src/chunking/chunk_processor.py
 import os
 import re
 import json
@@ -402,19 +402,24 @@ def split_parent_to_children(parent_text):
     if openai_token_len(parent_text) <= 280:
         return [parent_text.strip()]
 
-    raw_children = child_splitter.split_text(parent_text)
-    final = [c.strip() for c in raw_children if c.strip()]
+    raw_children = child_splitter.split_text(parent_text)   # splitting with splitter logic above
+    final = []
+    for c in raw_children:
+        s = c.strip()
+        if s:
+            final.append(s)
     return final or [parent_text.strip()]
 
 
+# main function for hierarchical pipeline
+# segmentation - reasoning - parents- children
+# create parent_id - child_id
+# structure child - parent
+# add roles, anchors, position, lengths
+# output in nice json
 def process_hierarchical(doc_data, filename, clean_name):
     """Process one document: split reasoning into parents, then parents into children.
     Returns (parents_list, children_list) ready for JSON output."""
-    from src.candidates.anchor_detector import (
-        extract_anchor_features,
-        infer_rhetorical_role,
-        build_anchor_summary,
-    )
 
     reasoning_text = doc_data.get("segments", {}).get("reasoning", "").strip()
     if not reasoning_text:
@@ -429,12 +434,11 @@ def process_hierarchical(doc_data, filename, clean_name):
     parents = []
     children = []
 
+    # main loop through parents
     for parent_index, parent_data in enumerate(parent_units):
         text = parent_data["text"]
         position_ratio = round((parent_index + 0.5) / max(len(parent_units), 1), 4)
-        anchors = extract_anchor_features(text)
-        role = infer_rhetorical_role(text, position_ratio)
-        parent_id = f"{clean_name}_parent_{parent_index:03d}"
+        parent_id = f"{clean_name}_parent_{parent_index:03d}"   # unique id for parent
 
         parent_meta = {
             "source_file": filename,
@@ -444,21 +448,15 @@ def process_hierarchical(doc_data, filename, clean_name):
             "section": "reasoning",
             "point_number": parent_data["point_number"] if parent_data["point_number"] is not None else -1,
             "position_ratio": position_ratio,
-            "role": role,
             "char_len": len(text),
             "token_len": openai_token_len(text),
-            "anchor_summary": build_anchor_summary(anchors),
         }
-        # add all anchor features as individual metadata fields
-        for key, value in anchors.items():
-            parent_meta[key] = int(value)
 
         parents.append({"page_content": text, "metadata": parent_meta})
 
         # split this parent into children
         child_texts = split_parent_to_children(text)
         for child_index, child_text in enumerate(child_texts):
-            child_anchors = extract_anchor_features(child_text)
             child_meta = {
                 "source_file": filename,
                 "case_id": case_id,
@@ -470,13 +468,9 @@ def process_hierarchical(doc_data, filename, clean_name):
                 "section": "reasoning",
                 "point_number": parent_meta["point_number"],
                 "position_ratio": position_ratio,
-                "role": role,  # inherit parent role
                 "char_len": len(child_text),
                 "token_len": openai_token_len(child_text),
-                "anchor_summary": build_anchor_summary(child_anchors),
             }
-            for key, value in child_anchors.items():
-                child_meta[key] = int(value)
 
             children.append({"page_content": child_text, "metadata": child_meta})
 
@@ -484,10 +478,10 @@ def process_hierarchical(doc_data, filename, clean_name):
 
 
 def main():
-    import argparse
+    import argparse # to be able to run it from terminal
     parser = argparse.ArgumentParser(description="Chunk court decision documents for retrieval")
     parser.add_argument("--golden-only", action="store_true",
-                        help="only process documents from the golden evaluation dataset (20 docs)")
+                        help="only process documents from the golden evaluation dataset (20 docs)") # only docs from golden dataset
     args = parser.parse_args()
 
     json_files = glob.glob(os.path.join(INPUT_DIR, "*.json"))
@@ -507,8 +501,9 @@ def main():
         json_files = [f for f in json_files if os.path.basename(f) in golden_names]
         print(f"--golden-only: filtered to {len(json_files)} golden dataset documents")
 
-    print(f"Found {len(json_files)} docs. Starting chunking (all strategies)...\n")
+    print(f"Found {len(json_files)} docs. Starting chunking (all strategies)..\n")
 
+    # just initialization of statistics
     counts = {
         "ME5_200":     0,
         "ME5_380":     0,
@@ -543,7 +538,7 @@ def main():
                 continue
 
             # FIX: strip "odôvodnenie :" prefix before chunking
-            # segmentation keeps it as part of reasoning text, but it's a section label, not content
+            # segmentation keeps it as part of reasoning text, but its a section label, not content
             # without this, OPENAI_PARA produces a micro-chunk "odôvodnenie :" (6 tokens)
             # because the numbered-item separator splits before "1." leaving the label alone
             reasoning_text = re.sub(r"^[oó]d[oôó]vodnenie\s*:?\s*", "", reasoning_text, flags=re.IGNORECASE).strip()
@@ -552,22 +547,24 @@ def main():
             filename  = doc_data.get("filename", os.path.basename(file_path))
             clean_name = filename.replace(".pdf", "").replace(".json", "")
 
-            # --- fixed-size strategies (ME5_200, ME5_380, OPENAI_200, OPENAI_500) ---
+            # --- 1. fixed-size strategies (ME5_200, ME5_380, OPENAI_200, OPENAI_500) ---
             for splitter, strategy_name, suffix, token_fn in fixed_strategies:
                 chunks = process_chunks(
                     splitter, reasoning_text, base_metadata,
                     strategy_name, filename, token_fn
                 )
-                counts[suffix] += len(chunks)
+                counts[suffix] += len(chunks)   # just number of chunks
 
+                # save json subor liket his - docname_chunks_ME%_200.json
                 out_path = os.path.join(OUTPUT_DIR, f"{clean_name}_chunks_{suffix}.json")
                 with open(out_path, "w", encoding="utf-8") as f:
                     json.dump(chunks, f, ensure_ascii=False, indent=4)
 
-            # --- OPENAI_PARA: true paragraph-based chunking ---
+            # --- 2. OPENAI_PARAgraph: true paragraph-based chunking - my own paragraph logic---
             # each numbered point = one chunk (no merging of small points)
             raw_paragraphs = split_reasoning_to_paragraphs(reasoning_text)
             para_chunks = []
+            # creating metadata
             for chunk_txt in raw_paragraphs:
                 chunk_txt = chunk_txt.strip()
                 if not chunk_txt:
@@ -582,18 +579,23 @@ def main():
                     "page_content": chunk_txt,
                     "metadata":     chunk_meta,
                 })
-            counts["OPENAI_PARA"] += len(para_chunks)
 
+            counts["OPENAI_PARA"] += len(para_chunks) # just for statistics number of chunks
+
+            # save json in way - ..._chunks_OPENAI_PARA.json
             out_path = os.path.join(OUTPUT_DIR, f"{clean_name}_chunks_OPENAI_PARA.json")
             with open(out_path, "w", encoding="utf-8") as f:
                 json.dump(para_chunks, f, ensure_ascii=False, indent=4)
 
-            # --- HIERARCHICAL PARENT-CHILD CHUNKING ---
+            # --- 3. HIERARCHICAL PARENT-CHILD CHUNKING ---
             # this runs alongside the flat strategies using the same doc_data
             parents, children = process_hierarchical(doc_data, filename, clean_name)
+
+            # saving parents and children
             if parents:
                 parents_path = os.path.join(HIER_OUTPUT_DIR, f"{clean_name}_parents.json")
                 children_path = os.path.join(HIER_OUTPUT_DIR, f"{clean_name}_children.json")
+
                 with open(parents_path, "w", encoding="utf-8") as f:
                     json.dump(parents, f, ensure_ascii=False, indent=4)
                 with open(children_path, "w", encoding="utf-8") as f:
@@ -615,12 +617,12 @@ def main():
     print("Chunks per strategy:")
     for suffix, count in counts.items():
         avg = round(count / processed, 1) if processed > 0 else 0
-        print(f"  {suffix:<15} {count:>6} total  (avg {avg} per doc)")
+        print(f"  {suffix:<15} {count:>6} total  (avg {avg} per doc)")  # number of chunks, average per document
     print()
     print("Hierarchical parent-child:")
     avg_p = round(hier_parent_count / processed, 1) if processed > 0 else 0
     avg_c = round(hier_child_count / processed, 1) if processed > 0 else 0
-    print(f"  Parents:  {hier_parent_count:>6} total  (avg {avg_p} per doc)")
+    print(f"  Parents:  {hier_parent_count:>6} total  (avg {avg_p} per doc)")  # number of parents, averag eper document
     print(f"  Children: {hier_child_count:>6} total  (avg {avg_c} per doc)")
 
 

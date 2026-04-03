@@ -185,7 +185,17 @@ def advanced_unicode(text: str) -> str:
     # Dashes
     t = text.replace('–', '-').replace('—', '-')
     # Quotes
-    t = t.replace('„', '"').replace('“', '"').replace('”', '"')
+    t = t.replace('„', '”').replace('”', '”').replace('”', '”')
+
+    # FIX: remove spaces before punctuation marks. PDF extraction sometimes
+    # produces “potvrdzuje .” or “Bratislava ,” which is clearly wrong.
+    # I found this because the LLM was “fixing” these spaces in its evidence
+    # quotes, making them NOT exact substrings of the original text. For example
+    # the LLM would write “potvrdzuje.” but the text had “potvrdzuje .” so
+    # the grounding check flagged it as TRUNCATED even though the quote was
+    # correct. Easier to fix here in preprocessing than to handle in extraction.
+    t = re.sub(r'\s+([.,;:!?\)])', r'\1', t)
+
     return t
 
 
