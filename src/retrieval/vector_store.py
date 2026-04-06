@@ -1,106 +1,181 @@
+# input files - jsons from data/03_chunked_docs
+# and saves them as vectors in ChromaDB
+# output directory - data/04_vectorstore/ or "data/04_vectorstore_hier"
+
 import os
 import json
-import glob
-import chromadb
+import glob # searching for documents based on pattern
+import chromadb # my vector database
 from tqdm import tqdm
 
 # ==========================================
 # ENV VARIABLES
 # ==========================================
 # MODEL_TYPE: "me5" (local mE5-base), "openai" (text-embedding-3-small), or "openai_large" (text-embedding-3-large)
+#                   i also tried local mE5-small at the beggining but was quietly worse
 # CHUNK_SUFFIX: matches the chunking strategy suffix from chunk_processor.py
 # COLLECTION_NAME: ChromaDB collection name (auto-computed if not set)
-MODEL_TYPE      = os.environ.get("MODEL_TYPE",      "me5")
-CHUNK_SUFFIX    = os.environ.get("CHUNK_SUFFIX",    "ME5_380")
+# CHUNK_MODE: "flat" (default) or "hier" (hierarchical - parents and children)
+MODEL_TYPE      = os.environ.get("MODEL_TYPE",      "me5")  # default is local me5
+CHUNK_SUFFIX    = os.environ.get("CHUNK_SUFFIX",    "ME5_380")  # which files to laod
+CHUNK_MODE      = os.environ.get("CHUNK_MODE",      "flat")
 COLLECTION_NAME = os.environ.get("COLLECTION_NAME", f"legal_decisions_{CHUNK_SUFFIX.lower()}")
 
 # --- 1. PATH SETUP ---
-# Important: Run this script from the ROOT project folder
-INPUT_DIR = "data/03_chunked_docs"
-DB_DIR = "data/04_vectorstore"  # Here ChromaDB will save all its files
+# again - always run this script from the ROOT project folder
+if CHUNK_MODE == "hier":
+    INPUT_DIR = "data/03_chunked_docs_hier"
+    DB_DIR = "data/04_vectorstore_hier"
+    if not os.environ.get("COLLECTION_NAME"):
+        COLLECTION_NAME = f"legal_decisions_hier_{MODEL_TYPE}"
+else:
+    INPUT_DIR = "data/03_chunked_docs"
+    DB_DIR = "data/04_vectorstore"  # Here ChromaDB will save all its files
 
-os.makedirs(DB_DIR, exist_ok=True)
+os.makedirs(DB_DIR, exist_ok=True)  # creates dir if doesnot exist
 
 # ==========================================
 # --- 2. MODEL SETUP ---
 # ==========================================
 # I load the model manually instead of letting ChromaDB do it internally.
-# Why: ChromaDB's built-in SentenceTransformerEmbeddingFunction is a black box -
-# i can't control normalize_embeddings and i can't add the 'passage: ' prefix
+# Because ChromaDBs built-in SentenceTransformerEmbeddingFunction is a black box -
+# i cant control normalize_embeddings and i cant add the 'passage: ' prefix
 # only for embedding while keeping the raw text clean for LLM later.
+# At first i did it all throguh chromadb internal function,
+#           but found out that passage prefix: and query: is missing and bcs of that performs badly
+#           also did not have control over normalization
 
-print(f"Model: {MODEL_TYPE} | Chunks: {CHUNK_SUFFIX} | Collection: {COLLECTION_NAME}")
+# just for debugging
+print(f"Model: {MODEL_TYPE} | Mode: {CHUNK_MODE} | Collection: {COLLECTION_NAME}")
 
 if MODEL_TYPE == "me5":
     from sentence_transformers import SentenceTransformer
     print("Loading mE5-base model locally...")
-    model = SentenceTransformer("intfloat/multilingual-e5-base")
+    model = SentenceTransformer("intfloat/multilingual-e5-base")    # if doesnt have - it downloads from Hugging Face Hub
 
     def embed_texts(texts, is_query=False):
-        """Embed texts using mE5-base. Adds 'passage: ' or 'query: ' prefix as required by mE5."""
-        prefix = "query: " if is_query else "passage: "
-        prefixed = [f"{prefix}{t}" for t in texts]
+        """Embed texts using mE5-base. Adds 'passage: ' or 'query: ' prefix as required by mE5. i found it in model card
+        NOTE: in this script is_query is always False (we only embed passages here).
+        Query embedding happens in evaluate_retrieval.py directly. Kept the param just for completeness."""
+        prefix = "query: " if is_query else "passage: " # e5 models were trained that it differs query and passage
+        # create list of texts where each gets prefix at the beggining
+        # [
+        #   "passage: Súd znížil pokutu.",
+        #   "passage: Žalobca sa domáhal zaplatenia."
+        # ]
+        prefixed = []
+        for t in texts:
+            prefixed.append(prefix + t)
+
+        # change texts into vectors with normalization - each embedding is now of length 1 (right for cosine similarity)
+        # what means i compare direction, not the length of vectors
         embeddings = model.encode(prefixed, normalize_embeddings=True, show_progress_bar=False)
+        # model.encode(...) returns nupy array but ChhromaDB wants puthon list
         return embeddings.tolist()
 
 elif MODEL_TYPE in ("openai", "openai_large"):
     from openai import OpenAI
-    OPENAI_MODEL = "text-embedding-3-large" if MODEL_TYPE == "openai_large" else "text-embedding-3-small"
-    print(f"Using OpenAI {OPENAI_MODEL} via API...")
-    openai_client = OpenAI()  # reads OPENAI_API_KEY from env
 
-    def embed_texts(texts, is_query=False):
+    if MODEL_TYPE == "openai_large":
+        OPENAI_MODEL = "text-embedding-3-large"
+    else:
+        OPENAI_MODEL = "text-embedding-3-small"
+
+    print(f"Using OpenAI {OPENAI_MODEL} via API...")
+    # client = OpenAI(api_key="sk-...")
+    openai_client = OpenAI()  # reads OPENAI_API_KEY from env - mapping do the OpenA(() library internally
+
+    def embed_texts(texts, is_query=False):     # no need for is query param, but maybe.. just to be sure implemented here
         """Embed texts using OpenAI embedding model. No prefix needed."""
         # OpenAI API has a batch limit, process in chunks of 2048
         all_embeddings = []
-        BATCH = 2048
+        BATCH = 2048    # 2048 chunks in one batch
+        # iterating through texts (chunks)
         for i in range(0, len(texts), BATCH):
-            batch = texts[i:i + BATCH]
+            batch = texts[i:i + BATCH]  # actual batch
             response = openai_client.embeddings.create(
                 model=OPENAI_MODEL,
                 input=batch,
             )
-            all_embeddings.extend([item.embedding for item in response.data])
+
+            batch_embeddings = [item.embedding for item in response.data]   # get embedding from response data (in response is data, model, object a usage)
+            all_embeddings.extend(batch_embeddings)  # extend adds multiple elements at once (append would insert whole list as one element - got catched .. :) )
         return all_embeddings
 
 else:
-    raise ValueError(f"Unknown MODEL_TYPE: {MODEL_TYPE}. Use 'me5', 'openai', or 'openai_large'.")
+    raise ValueError(f"Unknown MODEL_TYPE: {MODEL_TYPE}. Use 'me5', 'openai', or 'openai_large'.")  # modeltype is not valid
 
 
 # --- 3. DATABASE SETUP ---
 print("Initializing ChromaDB...")
 
-# PersistentClient means it will save the database to my disk (not just in RAM)
+# PersistentClient means it will save the database to my disk (not just in RAM) - was considering FAISS for having embeddings in ram and search in them
 chroma_client = chromadb.PersistentClient(path=DB_DIR)
 
-# FIX: hnsw:space must be "cosine" so ChromaDB uses cosine similarity under the hood.
-# Default is "l2" (Euclidean distance) which gives wrong results for text embeddings.
-# FIX: i do NOT pass embedding_function here anymore. i will compute embeddings manually
+# FIX: hnsw:space must be "cosine" so ChromaDB uses cosine similarity under the hood - not base L2 metric
+# Default is "l2" (Euclidean distance) which gives wrong results for text embeddings - i want just direction of vector in comparison
+# hnsw is the alghoritmus =- type of index for searching - hnsw is like way of how chroma organize embeddings, so it could find similar entites quickly
+
+# FIX: i do NOT pass embedding_function here anymore. i will compute embeddings manually - its up in the code
+# like this
+# collection = chroma_client.get_or_create_collection(
+#     name="my_collection",
+#     embedding_function=some_embedding_function
+# )
 # and pass them directly via embeddings= parameter in upsert().
-# This gives me full control over how vectors are computed.
-collection = chroma_client.get_or_create_collection(
+# This gives me full control over how vectors are computed, not blackbox where i cant even add prefixes like passage
+
+# collection is something like table (or dataset)
+collection = chroma_client.get_or_create_collection(        # if collections with this name exist - open it - otherwise create
     name=COLLECTION_NAME,
     metadata={
-        "description": f"Chunks of Slovak legal decisions, {MODEL_TYPE}/{CHUNK_SUFFIX} strategy, cosine space",
+        "description": f"Chunks of Slovak legal decisions, {MODEL_TYPE}/{CHUNK_MODE} mode, cosine space",
         "hnsw:space": "cosine",
     }
 )
 
 
+def clean_hier_metadata(meta):
+    """Clean metadata for hierarchical children - ChromaDB only accepts str, int, float. No dict, lists"""
+
+    clean = {
+        "source_file": str(meta.get("source_file", "unknown")),
+        "case_id": str(meta.get("case_id", "unknown")),
+        "parent_id": str(meta.get("parent_id", "unknown")),
+        "child_id": str(meta.get("child_id", "unknown")),
+        "child_index": int(meta.get("child_index", 0)),
+        "child_count_in_parent": int(meta.get("child_count_in_parent", 1)),
+        "parent_index": int(meta.get("parent_index", 0)),
+        "section": str(meta.get("section", "reasoning")),
+        "point_number": int(meta.get("point_number", -1)),
+        "position_ratio": float(meta.get("position_ratio", 0.0)),
+        "char_len": int(meta.get("char_len", 0)),
+        "token_len": int(meta.get("token_len", 0)),
+    }
+    return clean
+
+# #############################
 # --- 4. MAIN PIPELINE ---
+################################
 def main():
-    # I only want to load the chunks for this specific strategy
-    json_files = glob.glob(os.path.join(INPUT_DIR, f"*_chunks_{CHUNK_SUFFIX}.json"))
+    if CHUNK_MODE == "hier":
+        # hierarchical mode: only process *_children.json files
+        json_files = glob.glob(os.path.join(INPUT_DIR, "*_children.json"))
+    else:
+        # flat mode: process chunks for the specified strategy - if i want to choose which chunk strategy to embedd
+        # for example *_chunks_ME5_380.json
+        json_files = glob.glob(os.path.join(INPUT_DIR, f"*_chunks_{CHUNK_SUFFIX}.json"))    # it is called from run_all_experiments with env variable
 
     if not json_files:
-        print(f"Error: No chunk files found in {INPUT_DIR} matching *_chunks_{CHUNK_SUFFIX}.json")
+        print(f"Error: No chunk files found in {INPUT_DIR}")
         return
 
-    print(f"Found {len(json_files)} document files. Starting vectorization and insertion...\n")
+    print(f"Found {len(json_files)} files. Starting vectorization and insertion...\n")
 
-    total_inserted = 0
+    total_inserted = 0  # just counters
     failed_files = 0
 
+    # loop through all files
     for file_path in tqdm(json_files, desc="Embedding and inserting"):
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -109,29 +184,32 @@ def main():
             if not chunks:
                 continue
 
-            # --- Build the three lists ChromaDB needs ---
-            raw_texts = []       # clean text WITHOUT prefix -> this is what gets stored in DB
-            metadatas = []
-            ids = []
+            # --- Build  3 lists ChromaDB needs --- docs.trychroma.com
+            raw_texts = []       # clean text WITHOUT prefix - this is what gets stored in DB
+            metadatas = []       # metadata of  chunk
+            ids = []            # unique id of  chunk
+            # and later embeddings_list[i]   -- -- all of that belongs to 1 file
 
             for chunk in chunks:
-                text = chunk["page_content"]
+                text = chunk["page_content"]    # saving to database withou passage and query (do not want that in LLM)
                 meta = chunk["metadata"]
-
                 raw_texts.append(text)
 
-                # Chroma requires metadata values to be str, int, or float (no nested dicts)
-                clean_meta = {
-                    "source_file":  str(meta.get("source_file", "unknown")),
-                    "case_id":      str(meta.get("case_id", "unknown")),
-                    "chunk_index":  int(meta.get("chunk_index", 0)),
-                    "strategy":     str(meta.get("strategy", "unknown")),
-                    "char_len":     int(meta.get("char_len", 0)),
-                    "token_len":    int(meta.get("token_len", 0)),
-                }
-
-                # unique ID for each chunk - consistent with evaluate_retrieval.py
-                chunk_id = f"{clean_meta['source_file']}_chunk_{clean_meta['chunk_index']}"
+                if CHUNK_MODE == "hier":
+                    clean_meta = clean_hier_metadata(meta)
+                    chunk_id = clean_meta["child_id"]
+                else:
+                    # Chroma requires metadata values to be str, int, or float (no nested dicts) - same as was doing up there with hier
+                    clean_meta = {
+                        "source_file":  str(meta.get("source_file", "unknown")),
+                        "case_id":      str(meta.get("case_id", "unknown")),
+                        "chunk_index":  int(meta.get("chunk_index", 0)),
+                        "strategy":     str(meta.get("strategy", "unknown")),
+                        "char_len":     int(meta.get("char_len", 0)),
+                        "token_len":    int(meta.get("token_len", 0)),
+                    }
+                    # unique ID for each chunk - consistent with evaluate_retrieval.py  (NS_SR_1Cdo_85_2023_00_dokument.pdf_chunk_4)
+                    chunk_id = f"{clean_meta['source_file']}_chunk_{clean_meta['chunk_index']}"
 
                 metadatas.append(clean_meta)
                 ids.append(chunk_id)
@@ -140,15 +218,15 @@ def main():
             embeddings_list = embed_texts(raw_texts, is_query=False)
 
             # --- Insert into DB in batches ---
-            # upsert() instead of add() so re-running the script doesn't crash on duplicate IDs.
-            # batch size 100 is safe for ChromaDB memory limits.
+            # upsert() (if exits - update/rewrite) instead of add() so re-running the script doesn't crash on duplicate IDs.
+            # batch size 100 is safer for ChromaDB memory limits
             BATCH_SIZE = 100
             for i in range(0, len(raw_texts), BATCH_SIZE):
-                collection.upsert(
+                collection.upsert(          # it knows that all of that belongs to the chunk based on position
                     ids=ids[i:i + BATCH_SIZE],
-                    embeddings=embeddings_list[i:i + BATCH_SIZE],
-                    documents=raw_texts[i:i + BATCH_SIZE],   # raw text, no prefix
-                    metadatas=metadatas[i:i + BATCH_SIZE],
+                    embeddings=embeddings_list[i:i + BATCH_SIZE],   # vectors of chunks
+                    documents=raw_texts[i:i + BATCH_SIZE],   # raw texts of chunks, no prefix
+                    metadatas=metadatas[i:i + BATCH_SIZE],  # metadata of chunks
                 )
 
             total_inserted += len(raw_texts)
@@ -161,7 +239,7 @@ def main():
     total_chunks_in_db = collection.count()
     print("\n=== VECTOR STORE CREATION COMPLETED ===")
     print(f"Model:             {MODEL_TYPE}")
-    print(f"Chunk strategy:    {CHUNK_SUFFIX}")
+    print(f"Mode:              {CHUNK_MODE}")
     print(f"Files processed:   {len(json_files) - failed_files} / {len(json_files)}")
     print(f"Failed:            {failed_files}")
     print(f"Chunks inserted:   {total_inserted}")

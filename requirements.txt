@@ -31,3 +31,6 @@ sentence-transformers
 
 # Tokenizer
 tiktoken
+
+# for gemini API
+google-genai
