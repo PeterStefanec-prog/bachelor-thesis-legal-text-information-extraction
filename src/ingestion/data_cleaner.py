@@ -184,8 +184,15 @@ def normalize_layout(text: str) -> str:
 def advanced_unicode(text: str) -> str:
     # Dashes
     t = text.replace('–', '-').replace('—', '-')
-    # Quotes
-    t = t.replace('„', '”').replace('”', '”').replace('”', '”')
+    # FIX: quote normalization. I use explicit unicode escapes here because
+    # my editor kept replacing the straight quote “ (U+0022) with a smart
+    # quote \u201d (U+201D) when i saved the file. That meant ALL THREE
+    # replace() calls were producing \u201d instead of ASCII “. So the text
+    # still had smart quotes after “normalization” which broke golden quote
+    # matching. Using \u escapes avoids this editor problem completely.
+    t = t.replace('\u201e', '\u0022')   # „ (low-9) -> “ (straight)
+    t = t.replace('\u201c', '\u0022')   # “ (left)  -> “ (straight)
+    t = t.replace('\u201d', '\u0022')   # “ (right) -> “ (straight)
 
     # FIX: remove spaces before punctuation marks. PDF extraction sometimes
     # produces “potvrdzuje .” or “Bratislava ,” which is clearly wrong.
