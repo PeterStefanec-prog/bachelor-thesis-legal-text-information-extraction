@@ -1,0 +1,94 @@
+Below is an excerpt from a Slovak court decision about a contractual penalty dispute.
+In a previous step, I already extracted basic facts about the contract and penalty. Now I need you to complete the MODERATION ANALYSIS - how the court assessed the penalty.
+
+=== PREVIOUSLY EXTRACTED DATA ===
+{prefilled_json}
+
+=== VERDICT (what the court decided) === (chunk_id: "verdict")
+{verdict}
+
+=== RELEVANT TEXT CHUNKS (court reasoning about moderation) ===
+{chunks}
+
+=== WHAT TO EXTRACT ===
+
+For EACH penalty in the contractual_penalties array from the previous step, fill in the moderation_analysis section. Return a JSON object with this structure:
+
+{{
+  "penalties_moderation": [
+    {{
+      "penalty_id": "pokuta_1",
+      "moderation_analysis": {{
+        "decision": {{
+          "value": "<awarded_full|moderated_301|dismissed|returned|unclear>",
+          "dismissal_reason": "<contract_invalidity|clause_invalidity|unproven_breach|procedural|other|null>",
+          "evidence": {{"quote": "<verbatim from text>", "chunk_id": "<chunk_id>"}}
+        }},
+        "legal_reasoning_summary": "<3-5 sentences in Slovak: how were the numbers calculated, why did the court moderate or not moderate the penalty, what was the court's key argument>",
+        "key_quotes": [
+          {{"quote": "<1-2 most important verbatim quotes that capture the core of the court's reasoning>", "chunk_id": "<chunk_id>"}}
+        ],
+        "factors": [
+          {{
+            "label": "dobre_mravy",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "zabezpecovacia_funkcia",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "vyska_skody",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "pomer_k_istine",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "spravanie_dlznika",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "kumulacia_s_urokom",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }},
+          {{
+            "label": "spravanie_veritela",
+            "sentiment": "<positive|negative|neutral|not_mentioned>",
+            "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+          }}
+        ]
+      }}
+    }}
+  ]
+}}
+
+IMPORTANT NOTES ON FACTORS:
+- "positive" = the factor supports keeping the penalty (court says penalty is fair based on this factor)
+- "negative" = the factor argues against the penalty (court uses this as reason to reduce/dismiss)
+- "neutral" = court mentioned this factor but did not take a clear stance
+- "not_mentioned" = court did not discuss this factor AT ALL. Use this instead of neutral when there is no mention.
+- dobre_mravy = rozpor s dobrými mravmi / poctivým obchodným stykom
+- zabezpecovacia_funkcia = hodnota a význam zabezpečovanej povinnosti
+- vyska_skody = pomer pokuty k skutočnej škode
+- pomer_k_istine = pomer pokuty k istine / celkovej cene zmluvy
+- spravanie_dlznika = miera zavinenia, správanie dlžníka
+- kumulacia_s_urokom = kumulácia pokuty s úrokom z omeškania
+- spravanie_veritela = pasivita veriteľa — či veriteľ nečinne čakal kým pokuta narastie namiesto toho, aby vymáhal plnenie alebo uplatnil právo skôr
+
+NOTES ON DECISION:
+- awarded_full = court awarded the full penalty amount (no reduction)
+- moderated_301 = court used §301 ObchZ to reduce the penalty
+- dismissed = court dismissed the penalty claim entirely (set dismissal_reason)
+- returned = case returned for further proceedings (court did not decide on merits). When decision is "returned", set ALL factors to "not_mentioned" because the court has not yet analyzed the merits of the penalty. Do not guess what the court might decide.
+- dismissal_reason is ONLY used when decision = dismissed. Otherwise set to null.
+
+IMPORTANT NOTE ON DECISION EVIDENCE:
+The verdict section is a formal legal text written as one long sentence. Do NOT try to summarize it as your evidence quote — that would not be a verbatim substring. Instead, for the decision evidence, quote from the REASONING CHUNKS where the court explains its decision in simpler terms (e.g. "Súd prvej inštancie žalobu zamietol" or "odvolací súd rozsudok potvrdil" or "znížil zmluvnú pokutu na sumu..."). These chunks almost always contain a sentence that states the outcome more clearly than the formal verdict does. Only cite from the verdict if you can find an exact substring there.

@@ -1,0 +1,70 @@
+Below is an excerpt from a Slovak court decision about a contractual penalty dispute.
+I provide: the document header (metadata), the verdict, and the most relevant text chunks from the reasoning section. Each chunk has a chunk_id in brackets.
+
+Extract the following information and return it as JSON.
+
+=== DOCUMENT HEADER === (chunk_id: "header")
+{header}
+
+=== VERDICT === (chunk_id: "verdict")
+{verdict}
+
+=== RELEVANT TEXT CHUNKS ===
+{chunks}
+
+=== WHAT TO EXTRACT ===
+
+Return a JSON object with this exact structure (do NOT extract meta fields like court name, case number, date — those are already extracted separately by regex):
+
+{{
+  "case_context": {{
+    "dispute_summary": "<2-3 sentences in Slovak: what was the dispute about, what did plaintiff claim>",
+    "verdict_summary": "<1-2 sentences in Slovak: overall outcome of the case>",
+    "contract_type": "<one of: uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|sprostredkovatelska|telekom|preprava|mandatna|ine|nezname>",
+    "relationship_type": "<B2B|B2C|C2C|unknown>"
+  }},
+  "contractual_penalties": [
+    {{
+      "penalty_id": "pokuta_1",
+      "related_claim_ref": "<reference to specific claim/invoice if multiple penalties, otherwise null>",
+      "breach_type": {{
+        "value": "<late_payment|non_monetary_performance|early_termination|breach_of_confidentiality|other>",
+        "evidence": {{"quote": "<verbatim from text>", "chunk_id": "<chunk_id>"}}
+      }},
+      "rate_definition": {{
+        "type": "<percent_denne|percent_mesacne|percent_rocne|percent_jednorazovo|percent_z_ceny|percent_z_dlznej_sumy|fixna_suma_denne|fixna_suma_mesacne|fixna_suma_jednorazovo|ine>",
+        "value_raw": "<raw text of rate definition, e.g. '0,05 % denne z dlžnej sumy'>",
+        "evidence": {{"quote": "<verbatim from text>", "chunk_id": "<chunk_id>"}}
+      }},
+      "amounts": {{
+        "currency": "<EUR|SKK|CZK|unknown>",
+        "secured_principal": {{
+          "value": <number or null if not explicit>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+        }},
+        "original_claimed": {{
+          "value": <number or null>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+        }},
+        "final_awarded": {{
+          "value": <number or null>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+        }}
+      }},
+      "associated_interest": {{
+        "awarded": "<yes|no|unclear>",
+        "rate_value": "<e.g. '9,0 % ročne' or 'zákonný úrok z omeškania' or null>",
+        "evidence": {{"quote": "<verbatim or null>", "chunk_id": "<id or null>"}}
+      }}
+    }}
+  ]
+}}
+
+IMPORTANT NOTES:
+- For amounts, use numbers without currency symbol (e.g. 15000.50 not "15 000,50 EUR"). Use dot as decimal separator.
+- secured_principal = the base amount the penalty is calculated from (istina, dlžná suma, cena diela). This is the amount that the percentage rate is applied to. For example, if the penalty is "0,05% denne z ceny diela 500.000 EUR", then secured_principal = 500000. For FIXED penalties (e.g. "zmluvná pokuta 10.000 EUR"), set secured_principal to null because there is no base amount - the penalty IS the amount. Do NOT confuse the penalty amount with the secured principal. Also do NOT use amounts from "úrok z omeškania" clauses as secured_principal for the penalty.
+- currency: use the currency from the TEXT, not your assumption. If the text says "Sk" or "SKK", use "SKK". If it says "EUR" or "eur" or "€", use "EUR". Older Slovak decisions (before 2009) often use SKK.
+- original_claimed = the TOTAL penalty amount that the plaintiff asked the court to award. This must be an explicit number in the text (e.g. "žalobca požadoval zmluvnú pokutu vo výške 17.010,60 EUR"). If the plaintiff only described a rate and period (e.g. "0,2% denne od... do zaplatenia") without stating the total amount as a single number, set original_claimed to null. Do NOT calculate it yourself.
+- final_awarded = the TOTAL penalty amount that the court actually awarded. If the court moderated the penalty (§301), this should be LESS than original_claimed. If the court dismissed entirely, set to null. If the court awarded the full amount, final_awarded = original_claimed. This must also be an explicit number in the text.
+- If the decision deals with only one penalty, use penalty_id "pokuta_1" and set related_claim_ref to null.
+- If there are multiple penalties for different invoices/obligations, create separate entries.

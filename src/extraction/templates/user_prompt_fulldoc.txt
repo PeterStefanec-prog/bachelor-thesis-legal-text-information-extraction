@@ -1,0 +1,98 @@
+Below is the COMPLETE text of a Slovak court decision about a contractual penalty dispute.
+Extract all structured information and return it as a single JSON object.
+
+=== DOCUMENT HEADER === (chunk_id: "header")
+{header}
+
+=== VERDICT === (chunk_id: "verdict")
+{verdict}
+
+=== FULL REASONING TEXT === (chunk_id: "full_doc")
+{reasoning}
+
+=== WHAT TO EXTRACT ===
+
+Return a JSON object with this exact structure (do NOT extract meta fields like court name, case number, date — those are already extracted separately by regex):
+
+{{
+  "case_context": {{
+    "dispute_summary": "<2-3 sentences in Slovak: what was the dispute about, what did plaintiff claim>",
+    "verdict_summary": "<1-2 sentences in Slovak: overall outcome of the case>",
+    "contract_type": "<one of: uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|sprostredkovatelska|telekom|preprava|mandatna|ine|nezname>",
+    "relationship_type": "<B2B|B2C|C2C|unknown>"
+  }},
+  "contractual_penalties": [
+    {{
+      "penalty_id": "pokuta_1",
+      "related_claim_ref": "<reference to specific claim/invoice if multiple penalties, otherwise null>",
+      "breach_type": {{
+        "value": "<late_payment|non_monetary_performance|early_termination|breach_of_confidentiality|other>",
+        "evidence": {{"quote": "<verbatim from text>", "chunk_id": "full_doc"}}
+      }},
+      "rate_definition": {{
+        "type": "<percent_denne|percent_mesacne|percent_rocne|percent_jednorazovo|percent_z_ceny|percent_z_dlznej_sumy|fixna_suma_denne|fixna_suma_mesacne|fixna_suma_jednorazovo|ine>",
+        "value_raw": "<raw text of rate definition>",
+        "evidence": {{"quote": "<verbatim from text>", "chunk_id": "full_doc"}}
+      }},
+      "amounts": {{
+        "currency": "<EUR|SKK|CZK|unknown>",
+        "secured_principal": {{
+          "value": <number or null>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "full_doc"}}
+        }},
+        "original_claimed": {{
+          "value": <number or null>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "full_doc"}}
+        }},
+        "final_awarded": {{
+          "value": <number or null>,
+          "evidence": {{"quote": "<verbatim or null>", "chunk_id": "full_doc"}}
+        }}
+      }},
+      "associated_interest": {{
+        "awarded": "<yes|no|unclear>",
+        "rate_value": "<e.g. '9,0 % ročne' or null>",
+        "evidence": {{"quote": "<verbatim or null>", "chunk_id": "full_doc"}}
+      }},
+      "moderation_analysis": {{
+        "decision": {{
+          "value": "<awarded_full|moderated_301|dismissed|returned|unclear>",
+          "dismissal_reason": "<contract_invalidity|clause_invalidity|unproven_breach|procedural|other|null>",
+          "evidence": {{"quote": "<verbatim from text>", "chunk_id": "full_doc"}}
+        }},
+        "legal_reasoning_summary": "<3-5 sentences in Slovak: how were the numbers calculated, why did the court moderate or not>",
+        "key_quotes": [
+          {{"quote": "<1-2 most important verbatim quotes>", "chunk_id": "full_doc"}}
+        ],
+        "factors": [
+          {{"label": "dobre_mravy", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "zabezpecovacia_funkcia", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "vyska_skody", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "pomer_k_istine", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "spravanie_dlznika", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "kumulacia_s_urokom", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}},
+          {{"label": "spravanie_veritela", "sentiment": "<positive|negative|neutral|not_mentioned>", "evidence": {{"quote": "<or null>", "chunk_id": "full_doc"}}}}
+        ]
+      }}
+    }}
+  ],
+  "quality_control": {{
+    "flags": [],
+    "missing_fields": ["<list field paths where you could not find information, e.g. 'amounts.secured_principal'>"]
+  }}
+}}
+
+IMPORTANT NOTES:
+- For amounts, use numbers without currency symbol (e.g. 15000.50 not "15 000,50 EUR"). Use dot as decimal separator.
+- In full-document mode, use "full_doc" as chunk_id for all evidence fields.
+- Evidence quotes must be EXACT substrings from the text above.
+- If a field cannot be determined from the text, set its value to null.
+- original_claimed and final_awarded must be explicit TOTAL numbers from the text. If the text only describes a rate and period (e.g. "0,2% denne od... do zaplatenia") without a total amount, set to null. Do NOT calculate totals yourself. If the court moderated (§301), final_awarded must be LESS than original_claimed.
+- If there are multiple penalties, create separate entries with penalty_id "pokuta_1", "pokuta_2", etc.
+- Distinguish "úrok z omeškania" (interest) from "zmluvná pokuta" (penalty) - they are different!
+- secured_principal = the base amount the penalty is calculated from (istina, dlžná suma, cena diela). For FIXED penalties (e.g. "zmluvná pokuta 10.000 EUR"), set secured_principal to null - the penalty IS the amount. Do NOT use amounts from "úrok z omeškania" clauses as secured_principal.
+- currency: use the currency from the TEXT. If the text says "Sk" or "SKK", use "SKK" not "EUR". Older decisions (before 2009) use SKK.
+- FACTORS sentiment: positive = supports penalty, negative = reason to reduce, not_mentioned = court did not discuss it.
+- dismissal_reason is ONLY used when decision.value = "dismissed".
+- When decision = "returned" (case sent back for further proceedings), set ALL factors to "not_mentioned" — the court has not analyzed the merits yet.
+- DECISION EVIDENCE: For the decision field, cite from the reasoning text where the court explains its decision (e.g. "Súd prvej inštancie žalobu zamietol" or "znížil zmluvnú pokutu na sumu..."), NOT from the verdict section which is one long formal sentence that is hard to quote as an exact substring.
