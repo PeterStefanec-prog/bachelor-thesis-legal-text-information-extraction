@@ -1,10 +1,21 @@
-import os
-import csv
-import json  # FIX: needed for json.dumps() when saving lists to CSV - see detail_rows below
+import os # env variables, paths to files , new directories
+import csv  # loading golden dataset, saing results of experiments
+import json  # FIX: needed for json.dumps() when saving lists to CSV - see detail_rows below (dict or list convert to string so can be saved into one cell csv)
 import chromadb
 import datetime
 import re
-from colorama import Fore, Style, init
+import sys
+from colorama import Fore, Style, init      # colorful output in terminal
+
+# shared utilities - extracted to avoid code duplication between flat and hier modes
+# Add project root to sys.path so local imports work when this script is run directly
+# not stable - i want to redo the structure of project
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")) # go to 2 folders upper
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
+from src.retrieval.shared_queries import QUERIES, BM25_QUERIES
+from src.retrieval.shared_utils import clean_text, safe_avg, tokenize_slovak
 
 # these are set by experiment_runner.py via env variables so i dont have to edit this file
 # for each experiment. if running manually, just change the defaults here.
@@ -13,6 +24,20 @@ TOP_K           = int(os.environ.get("EXP_TOP_K",   "5"))
 WINDOW_SIZE     = int(os.environ.get("EXP_WINDOW",  "1"))
 COLLECTION_NAME = os.environ.get("COLLECTION_NAME", "legal_decisions_me5_380")
 MODEL_TYPE      = os.environ.get("MODEL_TYPE",      "me5")  # "me5" or "openai"
+
+# ==========================================
+# CHUNK_MODE: "flat" (default) or "hier" (hierarchical child-to-parent)
+# ==========================================
+# flat: original behavior - retrieve chunks directly, use window expansion
+# hier: retrieve small children (~220 tokens), group by parent, return complete
+#       parents to the LLM. Better for coverage because the LLM gets full legal
+#       arguments instead of chopped-up pieces.
+CHUNK_MODE = os.environ.get("CHUNK_MODE", "flat")
+
+# hierarchical-specific config (only used when CHUNK_MODE=hier)
+FETCH_K_PER_QUERY = int(os.environ.get("FETCH_K_PER_QUERY", "8"))
+CALL1_PARENTS = int(os.environ.get("CALL1_PARENTS", "5"))
+CALL2_PARENTS = int(os.environ.get("CALL2_PARENTS", "6"))
 
 # ==========================================
 # RETRIEVAL MODE: "dense" (default), "bm25", or "hybrid" (dense + BM25 with RRF)
@@ -53,13 +78,14 @@ RRF_ALPHA = float(os.environ.get("RRF_ALPHA", "0.5"))  # default 0.5 = standard 
 # ==========================================
 USE_RERANKER = os.environ.get("USE_RERANKER", "0") == "1"
 RERANKER_ALPHA = float(os.environ.get("RERANKER_ALPHA", "0.6"))
-RERANKER_OVERSAMPLE = int(os.environ.get("RERANKER_OVERSAMPLE", "2"))
+# oversample=5 means we fetch 5*top_k candidates and rerank to top_k.
+# i tested 3x and 5x — with 5x the reranker sees more chunks from large
+# documents (50-84 chunks) and has a better chance of finding the relevant
+# ones that rank low in pure dense/hybrid similarity.
+RERANKER_OVERSAMPLE = int(os.environ.get("RERANKER_OVERSAMPLE", "5"))
 RERANKER_DEBUG = os.environ.get("RERANKER_DEBUG", "0") == "1"
 
 if USE_RERANKER:
-    # need to add project root to path so python can find src.candidates.reranker
-    import sys
-    sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
     from src.candidates.reranker import rerank_chunks
 
 # ==========================================
@@ -85,7 +111,11 @@ if RETRIEVAL_MODE in ("bm25", "hybrid"):
 # ==========================================
 # STEP 1: Setup paths and basic variables
 # ==========================================
-DB_DIR = "data/04_vectorstore"
+if CHUNK_MODE == "hier":
+    DB_DIR = "data/04_vectorstore_hier"
+else:
+    DB_DIR = "data/04_vectorstore"
+
 EVAL_DIR = "data/05_retrieval_evaluation"
 CSV_PATH = os.path.join(EVAL_DIR, "golden_dataset_template.csv")
 
@@ -118,98 +148,8 @@ RESULTS_DETAILS_CSV = os.path.join(EVAL_DIR, "experiment_results_details.csv")
 # MERGED into one pool, and we check if q3 golden quotes are found anywhere in it.
 # This is FAIRER - two focused queries together cover what one blurry query couldn't.
 
-# old ones
-# QUERIES = {
-#     # Channel A
-#     "q_context": "Čo bolo predmetom zmluvy medzi stranami? Akú povinnosť si dlžník prevzal a ako ju porušil?",
-#
-#     # Channel B
-#     # "q_penalty": "Aká je výška, sadzba a mena zmluvnej pokuty? Z akej sumy sa počíta a za aké porušenie povinnosti bola dohodnutá?", - (in slovak so it would be understandable) istina zavazku ktory pokuta zabezpecuje — je obcas uvedena len v kontexte zmluvy, nie v odseku o pokute. Query "Z akej sumy sa počíta" to vacsinou zachytila, ale nie vzdy
-#     "q_penalty": "Aká je výška, sadzba a mena zmluvnej pokuty? Z akej sumy sa počíta a za aké porušenie povinnosti bola dohodnutá? Aká je výška hlavného záväzku (istiny) ktorý pokuta zabezpečuje?",
-#
-#     # Channel C1 - vysledok konania (what happened to the penalty)
-#     # This explicitly covers ALL possible outcomes: §301 reduction, dismissal for invalidity,
-#     # procedural dismissal, case returned for retrial - not just the §301 moderation case!
-#     "q_outcome": "Aký bol výsledok konania o zmluvnej pokute? Bola priznaná, znížená alebo zamietnutá? Uplatnil súd moderačné oprávnenie podľa § 301 Obchodného zákonníka? Alebo bola pokuta zamietnutá pre neplatnosť zmluvy, procesný dôvod, alebo vrátená na ďalšie konanie?",
-#
-#     # Channel C2 - argumenty súdu (why)
-#     # This retrieves the reasoning chunks regardless of what the outcome was.
-#     "q_reasoning": "Aké dôvody uviedol súd pri posudzovaní zmluvnej pokuty? Napríklad výška škody, rozpor s dobrými mravmi, pomer k istine, správanie dlžníka, zabezpečovacia funkcia, kumulácia s úrokom z omeškania?",
-# }
-
-QUERIES = {
-    # Call 1
-    "q_breach":    "Čo bolo predmetom zmluvy a akú povinnosť dlžník porušil?",
-    "q_rate":      "Aká je sadzba a spôsob výpočtu zmluvnej pokuty?",
-    "q_principal": "Aká je výška istiny, dlžnej sumy alebo hlavného záväzku?",
-    # Call 2
-    "q_outcome":   "Bola zmluvná pokuta priznaná, znížená podľa § 301, zamietnutá alebo vrátená?",
-    "q_reasoning": "Aké argumenty súd použil pri posudzovaní primeranosti zmluvnej pokuty?",
-    "q_factors":   "Posúdil súd rozpor s dobrými mravmi, pomer pokuty k istine, výšku škody alebo kumuláciu s úrokom?",
-}
-
-# ==========================================
-# BM25-SPECIFIC QUERIES
-# ==========================================
-# BM25 matches exact keywords, not semantic meaning. So queries must contain
-# the actual words that appear in the text, not questions about them.
-#
-# Dense: "Aká je výška istiny?" → embedding captures intent → finds chunks about amounts
-# BM25:  "istina suma eur pohľadávka dlh záväzok" → matches exact tokens
-#
-# The BM25 queries include multiple synonyms and inflected forms that simplemma
-# might not perfectly lemmatize. This is intentional redundancy.
-# ==========================================
-BM25_QUERIES = {
-    # Call 1
-    # Added "uzatvorená skutkový stav sporové strany napadnutým rozsudkom" — these words appear
-    # in introductory paragraphs (chunk_0) where the contract and breach are DESCRIBED as context.
-    # Without them, BM25 only finds chunks where breach is DISCUSSED, missing basic case facts.
-    "q_breach":    "zmluva uzatvorená predmet porušenie povinnosť záväzok dlžník zhotoviteľ objednávateľ žalovaný neuhradil nesplnil skutkový stav sporové strany napadnutým rozsudkom",
-    "q_rate":      "zmluvná pokuta výška sadzba percentá ročne denne omeškanie eur suma článok bod zmluvy dohodnutá",
-    "q_principal": "istina suma pohľadávka dlh záväzok eur faktúra cena dielo splatnosť uhradiť zaplatiť",
-    # Call 2
-    "q_outcome":   "zmluvná pokuta priznaná znížená zamietnutá moderácia moderačné oprávnenie §301 neplatnosť vrátená rozhodol uložil zaviazal",
-    "q_reasoning": "primeranosť neprimeraná dôvod posúdenie zníženie argumenty súd záver odôvodnenie odvolací potvrdil zmenil",
-    "q_factors":   "dobré mravy škoda pomer istina úrok omeškanie kumulácia zabezpečovacia funkcia hodnota význam zabezpečovanej povinnosti",
-}
-
-# This tells the evaluator which CSV column each query maps to.
-# q_outcome and q_reasoning SHARE the same CSV column - their retrieved chunks are
-# merged into one pool before checking for golden quotes. See Step 5.2 for details.
-# QUERY_TO_CSV_COLUMN = {
-#     "q_context":   "q1_context_quotes",
-#     "q_penalty":   "q2_penalty_quotes",
-#     "q_outcome":   "q3_moderation_quotes",   # ─┐ evaluated
-#     "q_reasoning": "q3_moderation_quotes",   # ─┘ together
-# }
-
-# mapping
-QUERY_TO_CSV_COLUMN = {
-    "q_breach":    "q1_context_quotes",
-    "q_rate":      "q2_penalty_quotes",    # ─┐ evaluated
-    "q_principal": "q2_penalty_quotes",    # ─┘ together
-    "q_outcome":   "q3_moderation_quotes", # ─┐
-    "q_reasoning": "q3_moderation_quotes", # ─┤ evaluated
-    "q_factors":   "q3_moderation_quotes", # ─┘ together
-}
-
-
-
-# ==========================================
-# FIX: TEXT CLEANING SO PYTHON DOESNT FAIL STUPIDLY
-# If my PDF has "500 \n eur" but Excel has "500 eur", normal Python says "MISS!".
-# This function removes all new lines and extra spaces so matching is 100% bulletproof.
-# ==========================================
-def clean_text(text):
-    if not text:
-        return ""
-    text = text.replace("\n", " ").replace("\r", " ")
-    return re.sub(r'\s+', ' ', text).strip()
-
-
-def safe_avg(lst):
-    return round(sum(lst) / len(lst), 4) if lst else ""
+# NOTE: QUERIES, BM25_QUERIES, QUERY_TO_CSV_COLUMN are imported from shared_queries.py
+# NOTE: clean_text, safe_avg, tokenize_slovak, SLOVAK_STOPWORDS are imported from shared_utils.py
 
 
 # ==========================================
@@ -234,62 +174,6 @@ def safe_avg(lst):
 
 # Slovak legal stopwords - common function words that appear in nearly every chunk
 # and carry no retrieval signal. Kept short to avoid removing anything useful.
-SLOVAK_STOPWORDS = {
-    "a", "aj", "ak", "ako", "ale", "alebo", "ani", "áno", "asi",
-    "by", "bol", "bola", "bolo", "boli", "buď", "byť", "bez",
-    "do", "dňa",
-    "ho", "jeho", "jej", "ich",
-    "je", "ju",
-    "keď", "keďže", "kde", "ku", "ktorý", "ktorá", "ktoré", "ktorej", "ktorým", "ktorom",
-    "na", "nad", "nie", "no", "než",
-    "od", "ods",
-    "po", "pod", "podľa", "pre", "pri", "pred", "preto",
-    "sa", "si", "so", "sú",
-    "ten", "to", "tá", "tú", "tej", "tom", "tomu", "tým", "tento", "tiež", "tak", "takže",
-    "vo", "vz",
-    "za", "zo", "že",
-}
-
-
-def tokenize_slovak(text):
-    """Tokenizer for Slovak legal text with number preservation and lemmatization.
-
-    Uses a single regex findall to extract three types of tokens:
-    1. Legal references: §301, §544 (§ + digits, joined even if space in original)
-    2. Numbers/percentages: 0,05% | 15.234,60 | 2.000 (Slovak decimal format)
-    3. Words: sequences of letters (including Slovak diacritics)
-
-    Then lemmatizes words and filters stopwords.
-    """
-    text = text.lower()
-
-    # Join § with following number before tokenization: "§ 301" → "§301"
-    text = re.sub(r'§\s*(\d+)', r'§\1', text)
-
-    # Single findall extracts all token types in priority order:
-    # 1. §-references (§301) — must be first to prevent partial number match
-    # 2. Numbers: Slovak format with . thousands, , decimals, optional %
-    # 3. Words: letter sequences (Slovak alphabet including diacritics)
-    raw_tokens = re.findall(
-        r'§\d+'                                    # legal refs: §301, §544
-        r'|\d{1,3}(?:\.\d{3})*(?:,\d+)?%?'        # numbers: 0,05% | 15.234,60 | 2.000
-        r'|[a-záäčďéíľĺňóôŕšťúýžA-ZÁÄČĎÉÍĽĹŇÓÔŔŠŤÚÝŽ]+'  # words with Slovak chars
-        , text
-    )
-
-    # Lemmatize words, keep numbers and § refs as-is, filter stopwords
-    tokens = []
-    for t in raw_tokens:
-        if t.startswith("§") or t[0].isdigit():
-            tokens.append(t)  # keep numbers and legal refs as-is
-        elif len(t) > 1:
-            lemma = simplemma.lemmatize(t, lang='sk')
-            if lemma not in SLOVAK_STOPWORDS and len(lemma) > 1:
-                tokens.append(lemma)
-
-    return tokens
-
-
 # Cache BM25 index per document to avoid rebuilding for each query
 _bm25_cache = {}  # {pdf_filename: (bm25_index, chunk_ids, chunk_texts, chunk_metadatas)}
 
@@ -306,7 +190,10 @@ def get_bm25_index(collection, pdf_filename):
 
     # Sort by chunk_index to ensure consistent ordering
     paired = list(zip(result['ids'], result['documents'], result['metadatas']))
-    paired.sort(key=lambda x: x[2]['chunk_index'])
+    if CHUNK_MODE == "hier":
+        paired.sort(key=lambda x: (x[2].get('parent_index', 0), x[2].get('child_index', 0)))
+    else:
+        paired.sort(key=lambda x: x[2]['chunk_index'])
 
     chunk_ids = [p[0] for p in paired]
     chunk_texts = [p[1] for p in paired]
@@ -315,8 +202,10 @@ def get_bm25_index(collection, pdf_filename):
     # Build BM25 index from tokenized chunks
     # k1=1.2: faster saturation (legal chunks are short, term appearing 2-3x is enough signal)
     # b=0.4: reduced length normalization (paragraph chunks are similar in length)
+    # for hier mode b=0.5 because children can vary more in length
+    b_val = 0.5 if CHUNK_MODE == "hier" else 0.4
     tokenized_corpus = [tokenize_slovak(text) for text in chunk_texts]
-    bm25_index = BM25Okapi(tokenized_corpus, k1=1.2, b=0.4)
+    bm25_index = BM25Okapi(tokenized_corpus, k1=1.2, b=b_val)
 
     _bm25_cache[pdf_filename] = (bm25_index, chunk_ids, chunk_texts, chunk_metadatas)
     return _bm25_cache[pdf_filename]
@@ -340,26 +229,31 @@ def retrieve_bm25(collection, query_text, pdf_filename, top_k, window_size):
     fetched_chunk_ids = set()
 
     for idx in ranked_indices:
-        c_idx = all_metas[idx]['chunk_index']
         score = round(float(bm25_scores[idx]), 4)
 
-        # Window expansion - same logic as dense retrieval
-        window_ids = [
-            f"{pdf_filename}_chunk_{c_idx + offset}"
-            for offset in range(-window_size, window_size + 1)
-        ]
-
-        db_fetch = collection.get(ids=window_ids)
-        fetched_chunk_ids.update(db_fetch['ids'])
-
-        if db_fetch['documents']:
-            paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
-            paired.sort(key=lambda x: x[0]['chunk_index'])
-            ordered_texts = [doc for _, doc in paired]
-            combined_text = " ".join(ordered_texts)
-            super_chunks.append(clean_text(combined_text))
+        if CHUNK_MODE == "hier":
+            # no window expansion for hierarchical children
+            super_chunks.append(clean_text(all_texts[idx]))
+            fetched_chunk_ids.add(all_ids[idx])
         else:
-            super_chunks.append("")
+            c_idx = all_metas[idx]['chunk_index']
+            # Window expansion - same logic as dense retrieval
+            window_ids = [
+                f"{pdf_filename}_chunk_{c_idx + offset}"
+                for offset in range(-window_size, window_size + 1)
+            ]
+
+            db_fetch = collection.get(ids=window_ids)
+            fetched_chunk_ids.update(db_fetch['ids'])
+
+            if db_fetch['documents']:
+                paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
+                paired.sort(key=lambda x: x[0]['chunk_index'])
+                ordered_texts = [doc for _, doc in paired]
+                combined_text = " ".join(ordered_texts)
+                super_chunks.append(clean_text(combined_text))
+            else:
+                super_chunks.append("")
 
         scores.append(score)
         ret_ids.append(all_ids[idx])
@@ -424,36 +318,46 @@ def retrieve_hybrid_rrf(collection, query_vector, query_text, pdf_filename, top_
     ret_ids = []
     fetched_chunk_ids = set()
 
-    # Need metadata for chunk_index lookup
-    if top_ids:
-        meta_fetch = collection.get(ids=top_ids, include=["metadatas"])
-        id_to_meta = dict(zip(meta_fetch['ids'], meta_fetch['metadatas']))
+    if CHUNK_MODE == "hier":
+        # hierarchical: no window, just return the children directly
+        id_to_text = dict(zip(all_ids, all_texts))
+        for doc_id in top_ids:
+            super_chunks.append(clean_text(id_to_text.get(doc_id, "")))
+            scores.append(round(rrf_scores[doc_id], 6))
+            ret_ids.append(doc_id)
+            fetched_chunk_ids.add(doc_id)
     else:
-        id_to_meta = {}
-
-    for doc_id in top_ids:
-        meta = id_to_meta.get(doc_id, {})
-        c_idx = meta.get('chunk_index', 0)
-
-        window_ids = [
-            f"{pdf_filename}_chunk_{c_idx + offset}"
-            for offset in range(-window_size, window_size + 1)
-        ]
-
-        db_fetch = collection.get(ids=window_ids)
-        fetched_chunk_ids.update(db_fetch['ids'])
-
-        if db_fetch['documents']:
-            paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
-            paired.sort(key=lambda x: x[0]['chunk_index'])
-            ordered_texts = [doc for _, doc in paired]
-            combined_text = " ".join(ordered_texts)
-            super_chunks.append(clean_text(combined_text))
+        # flat: window expansion as before
+        # Need metadata for chunk_index lookup
+        if top_ids:
+            meta_fetch = collection.get(ids=top_ids, include=["metadatas"])
+            id_to_meta = dict(zip(meta_fetch['ids'], meta_fetch['metadatas']))
         else:
-            super_chunks.append("")
+            id_to_meta = {}
 
-        scores.append(round(rrf_scores[doc_id], 6))
-        ret_ids.append(doc_id)
+        for doc_id in top_ids:
+            meta = id_to_meta.get(doc_id, {})
+            c_idx = meta.get('chunk_index', 0)
+
+            window_ids = [
+                f"{pdf_filename}_chunk_{c_idx + offset}"
+                for offset in range(-window_size, window_size + 1)
+            ]
+
+            db_fetch = collection.get(ids=window_ids)
+            fetched_chunk_ids.update(db_fetch['ids'])
+
+            if db_fetch['documents']:
+                paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
+                paired.sort(key=lambda x: x[0]['chunk_index'])
+                ordered_texts = [doc for _, doc in paired]
+                combined_text = " ".join(ordered_texts)
+                super_chunks.append(clean_text(combined_text))
+            else:
+                super_chunks.append("")
+
+            scores.append(round(rrf_scores[doc_id], 6))
+            ret_ids.append(doc_id)
 
     return super_chunks, scores, ret_ids, fetched_chunk_ids
 
@@ -482,37 +386,52 @@ def retrieve_super_chunks(collection, query_vector, pdf_filename, top_k, window_
         retrieved_metadatas = results['metadatas'][0]
 
         for i in range(len(ret_ids)):
-            c_idx = retrieved_metadatas[i]['chunk_index']
-
-            # Build IDs for surrounding chunks based on WINDOW_SIZE
-            # (Chroma smartly ignores IDs that don't exist, e.g., chunk_-1 for first chunk)
-            window_ids = [
-                f"{pdf_filename}_chunk_{c_idx + offset}"
-                for offset in range(-window_size, window_size + 1)
-            ]
-
-            db_fetch = collection.get(ids=window_ids)
-            fetched_chunk_ids.update(db_fetch['ids'])  # add all actually returned IDs
-
-            # FIX: ChromaDB .get() does NOT guarantee order of returned documents!
-            # If I just join them as-is, chunk 6 text might appear before chunk 5 text.
-            # I must sort by chunk_index first so the super_chunk reads in correct order.
-            if db_fetch['documents']:
-                paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
-                paired.sort(key=lambda x: x[0]['chunk_index'])
-                ordered_texts = [doc for _, doc in paired]
-                combined_text = " ".join(ordered_texts)
-                super_chunks.append(clean_text(combined_text))
+            if CHUNK_MODE == "hier":
+                # no window expansion for hierarchical children - just return the child text
+                super_chunks.append(clean_text(results['documents'][0][i]))
+                fetched_chunk_ids.add(ret_ids[i])
             else:
-                # keep index alignment even if window fetch returned nothing
-                super_chunks.append("")
+                c_idx = retrieved_metadatas[i]['chunk_index']
+
+                # Build IDs for surrounding chunks based on WINDOW_SIZE
+                # (Chroma smartly ignores IDs that don't exist, e.g., chunk_-1 for first chunk)
+                window_ids = [
+                    f"{pdf_filename}_chunk_{c_idx + offset}"
+                    for offset in range(-window_size, window_size + 1)
+                ]
+
+                db_fetch = collection.get(ids=window_ids)
+                fetched_chunk_ids.update(db_fetch['ids'])  # add all actually returned IDs
+
+                # FIX: ChromaDB .get() does NOT guarantee order of returned documents!
+                # If I just join them as-is, chunk 6 text might appear before chunk 5 text.
+                # I must sort by chunk_index first so the super_chunk reads in correct order.
+                if db_fetch['documents']:
+                    paired = list(zip(db_fetch['metadatas'], db_fetch['documents']))
+                    paired.sort(key=lambda x: x[0]['chunk_index'])
+                    ordered_texts = [doc for _, doc in paired]
+                    combined_text = " ".join(ordered_texts)
+                    super_chunks.append(clean_text(combined_text))
+                else:
+                    # keep index alignment even if window fetch returned nothing
+                    super_chunks.append("")
 
     return super_chunks, cosine_sims, ret_ids, fetched_chunk_ids
 
 
 def find_hits(super_chunks, cosine_sims, quotes_to_find):
     """Check which quotes are found in super_chunks.
-    Returns (quotes_found_count, hit_cosine_scores, miss_cosine_scores, chunks_that_had_hits).
+
+    Returns (quotes_found_count, hit_cosine_scores, miss_cosine_scores,
+             chunks_that_had_hits, reciprocal_rank, precision_at_k).
+
+    reciprocal_rank (MRR component): 1/rank of the first chunk that contains
+        any golden quote. Measures how high the first relevant result appears.
+        E.g. if the first hit is at position 3, RR = 1/3 = 0.333.
+
+    precision_at_k: fraction of returned chunks that contain at least one
+        golden quote. Measures how many of the retrieved chunks are useful.
+        E.g. if 4 out of 10 chunks contain quotes, P@k = 0.4.
     """
     chunks_that_had_hits = set()
 
@@ -532,7 +451,23 @@ def find_hits(super_chunks, cosine_sims, quotes_to_find):
     hit_scores = [sim for j, sim in enumerate(cosine_sims) if j in chunks_that_had_hits]
     miss_scores = [sim for j, sim in enumerate(cosine_sims) if j not in chunks_that_had_hits]
 
-    return quotes_found_count, hit_scores, miss_scores, chunks_that_had_hits
+    # --- MRR: reciprocal rank of first chunk containing any golden quote ---
+    # we sort chunks by score (descending) to get a true rank ordering,
+    # because merged sub-query results are just concatenated, not interleaved
+    if super_chunks and cosine_sims:
+        sorted_indices = sorted(range(len(cosine_sims)), key=lambda i: cosine_sims[i], reverse=True)
+        reciprocal_rank = 0.0
+        for rank, idx in enumerate(sorted_indices, start=1):
+            if idx in chunks_that_had_hits:
+                reciprocal_rank = 1.0 / rank
+                break
+    else:
+        reciprocal_rank = 0.0
+
+    # --- Precision@k: how many of the returned chunks are relevant ---
+    precision_at_k = len(chunks_that_had_hits) / len(super_chunks) if super_chunks else 0.0
+
+    return quotes_found_count, hit_scores, miss_scores, chunks_that_had_hits, reciprocal_rank, precision_at_k
 
 
 def get_doc_total_chunks(collection, pdf_filename):
@@ -540,6 +475,31 @@ def get_doc_total_chunks(collection, pdf_filename):
     # used as denominator for coverage: fetched_chunks / total_chunks
     result = collection.get(where={"source_file": pdf_filename}, include=["metadatas"])
     return len(result['ids'])
+
+
+def get_doc_all_texts(collection, pdf_filename):
+    """Get all chunk texts for a document. Used for token-based coverage."""
+    result = collection.get(
+        where={"source_file": pdf_filename},
+        include=["documents"]
+    )
+    # returns dict: chunk_id -> text
+    return {cid: doc for cid, doc in zip(result['ids'], result['documents'])}
+
+
+def get_token_coverage(all_texts, fetched_ids):
+    """Compute coverage as characters of fetched chunks / total characters.
+
+    Using character count as proxy for tokens - the ratio is roughly constant
+    for Slovak legal text, so the percentage is the same either way.
+    This is fairer than chunk-count because paragraphs vary hugely in length
+    (some are 50 tokens, others 1500+).
+    """
+    total_chars = sum(len(t) for t in all_texts.values())
+    if total_chars == 0:
+        return 0.0
+    fetched_chars = sum(len(all_texts[cid]) for cid in fetched_ids if cid in all_texts)
+    return round(fetched_chars / total_chars * 100, 1)
 
 
 def do_retrieve(collection, query_key, query_text, query_vector, pdf_filename, top_k, window_size):
@@ -593,7 +553,397 @@ def do_retrieve(collection, query_key, query_text, query_vector, pdf_filename, t
     return super_chunks, cosine_sims, ret_ids, fetched_ids
 
 
+# ==========================================
+# HIERARCHICAL CHILD-TO-PARENT RETRIEVAL
+# ==========================================
+# After flat chunk experiments showed good recall (93-95%) but high coverage
+# (the LLM reads too much of the document), i tried a different approach:
+# retrieve CHILDREN (small ~220 token pieces) but give the LLM complete PARENTS
+# (full legal arguments, ~500-1500 tokens each).
+#
+# The idea: search is precise because children are small and focused on one topic.
+# But the LLM gets complete arguments because parents contain the full numbered point.
+# This should give similar recall but with better-structured context.
+#
+# The flow:
+# 1. For each query, retrieve top-K children from ChromaDB
+# 2. Group retrieved children by parent_id
+# 3. Score each parent by its best child's retrieval score + multi-query bonus
+# 4. Select top N parents
+# 5. Load parent texts from disk and build the context for the LLM
+
+# caches for hier mode
+_parent_cache = {}    # {pdf_filename: {parent_id: parent_record}}
+
+
+def _load_parents(pdf_filename):
+    """Load parent chunks from disk JSON. Parents are NOT in ChromaDB - they live as JSON
+    because i only need them after i already know which parents to select."""
+    if pdf_filename in _parent_cache:
+        return _parent_cache[pdf_filename]
+
+    clean_name = pdf_filename.replace(".pdf", "").replace(".json", "")
+    path = os.path.join("data/03_chunked_docs_hier", f"{clean_name}_parents.json")
+    with open(path, "r", encoding="utf-8") as f:
+        parents = json.load(f)
+
+    _parent_cache[pdf_filename] = {p["metadata"]["parent_id"]: p for p in parents}
+    return _parent_cache[pdf_filename]
+
+
+def _get_all_parent_texts(pdf_filename):
+    """Load all parent texts for a document. Used for token-based coverage."""
+    parent_lookup = _load_parents(pdf_filename)
+    return {pid: p["page_content"] for pid, p in parent_lookup.items()}
+
+
+def retrieve_hier_call(collection, call_queries, pdf_filename, fetch_k, max_parents, precalculated_vectors):
+    """Run hierarchical retrieval for one LLM call (e.g. call1 = breach+rate+principal).
+
+    For each query:
+    1. Retrieve top-K children (dense/bm25/hybrid - same modes as flat)
+    2. Collect all unique children and their scores
+
+    Then:
+    3. Group children by parent_id
+    4. Score parents: best child score + bonus for multi-query hits
+    5. Select top N parents
+    6. Build context text from selected parents
+
+    Returns dict with selected parents, context text, and metadata.
+    """
+    child_pool = {}  # all unique children across all queries
+
+    for query_key in call_queries:
+        # retrieve children using the same do_retrieve() as flat mode
+        # window_size=0 because children dont need window expansion
+        child_texts, child_scores, child_ids, _ = do_retrieve(
+            collection, query_key, QUERIES[query_key],
+            precalculated_vectors.get(query_key),
+            pdf_filename, fetch_k, window_size=0,
+        )
+
+        for i, child_id in enumerate(child_ids):
+            if child_id not in child_pool:
+                child_pool[child_id] = {
+                    "child_id": child_id,
+                    "text": child_texts[i],
+                    "query_hits": [],
+                    "query_scores": {},
+                }
+
+            # get parent_id from ChromaDB metadata
+            if "parent_id" not in child_pool[child_id]:
+                meta_result = collection.get(ids=[child_id], include=["metadatas"])
+                if meta_result["metadatas"]:
+                    child_pool[child_id]["parent_id"] = meta_result["metadatas"][0].get("parent_id", "unknown")
+                else:
+                    child_pool[child_id]["parent_id"] = "unknown"
+
+            child_pool[child_id]["query_hits"].append(query_key)
+            child_pool[child_id]["query_scores"][query_key] = child_scores[i] if i < len(child_scores) else 0.0
+
+    # --- Score each child: best query score + multi-query bonus ---
+    for child in child_pool.values():
+        if not child["query_scores"]:
+            child["aggregate_score"] = 0.0
+            continue
+        best_score = max(child["query_scores"].values())
+        # bonus for being found by multiple queries - a child relevant to multiple
+        # questions is probably important (e.g. a chunk about both penalty rate and breach)
+        multi_bonus = 0.15 * (len(child["query_hits"]) - 1)
+        child["aggregate_score"] = best_score + multi_bonus
+
+    # --- Group children by parent and score parents ---
+    parent_pool = {}
+    for child in child_pool.values():
+        pid = child.get("parent_id", "unknown")
+        if pid not in parent_pool:
+            parent_pool[pid] = {
+                "parent_id": pid,
+                "children": [],
+                "query_hits": set(),
+                "parent_score": 0.0,
+            }
+        parent_pool[pid]["children"].append(child)
+        parent_pool[pid]["query_hits"].update(child["query_hits"])
+
+    for parent in parent_pool.values():
+        child_scores = [c["aggregate_score"] for c in parent["children"]]
+        best_child = max(child_scores) if child_scores else 0.0
+        # bonus if this parent was hit by multiple different queries
+        multi_query_bonus = 0.12 * (len(parent["query_hits"]) - 1)
+        parent["parent_score"] = best_child + multi_query_bonus
+
+    # --- Select top parents ---
+    ranked_parents = sorted(parent_pool.values(), key=lambda x: x["parent_score"], reverse=True)
+    top_parents = ranked_parents[:max_parents]
+
+    # --- Load parent texts and build context ---
+    parent_lookup = _load_parents(pdf_filename)
+    selected_parent_ids = []
+    selected_child_ids = set()
+    context_parts = []
+
+    # sort by parent index so the LLM reads them in document order
+    top_parents_with_meta = []
+    for item in top_parents:
+        pid = item["parent_id"]
+        if pid in parent_lookup:
+            p_meta = parent_lookup[pid]["metadata"]
+            top_parents_with_meta.append((p_meta.get("parent_index", 0), item, parent_lookup[pid]))
+    top_parents_with_meta.sort(key=lambda x: x[0])
+
+    for _, item, parent_record in top_parents_with_meta:
+        pid = item["parent_id"]
+        selected_parent_ids.append(pid)
+        selected_child_ids.update(c["child_id"] for c in item["children"])
+
+        meta = parent_record["metadata"]
+        label = (
+            f"PARENT {meta['parent_index']}"
+            f" | point={meta['point_number'] if meta['point_number'] != -1 else 'na'}"
+            f" | score={item['parent_score']:.3f}"
+            f" | queries={','.join(sorted(item['query_hits']))}"
+        )
+        context_parts.append(label)
+        context_parts.append(parent_record["page_content"])
+
+    context_text = "\n\n".join(context_parts)
+
+    return {
+        "selected_parent_ids": selected_parent_ids,
+        "selected_child_ids": sorted(selected_child_ids),
+        "selected_parents_count": len(selected_parent_ids),
+        "candidate_child_count": len(child_pool),
+        "context_text": context_text,
+    }
+
+
+# ==========================================
+# HIERARCHICAL EVALUATION (runs when CHUNK_MODE=hier)
+# ==========================================
+
+def run_hier_evaluation():
+    """Run hierarchical child-to-parent evaluation. Separate function because
+    the flow is different from flat: children -> parents instead of chunks -> super_chunks."""
+    from src.candidates.legal_patterns import CALL_TO_QUERIES
+    from src.retrieval.shared_utils import openai_token_len
+
+    init(autoreset=True)
+    print(f"=== STARTING HIER EVALUATION: {EXPERIMENT_NAME} ===")
+    print(f"  mode={RETRIEVAL_MODE} | fetch_k={FETCH_K_PER_QUERY} | call1_parents={CALL1_PARENTS} | call2_parents={CALL2_PARENTS}")
+
+    # --- Connect to ChromaDB and load model ---
+    precalculated_vectors = {}
+
+    if RETRIEVAL_MODE in ("dense", "hybrid"):
+        if MODEL_TYPE == "me5":
+            print("Loading mE5-base model explicitly (CPU mode)...")
+            model = SentenceTransformer("intfloat/multilingual-e5-base", device="cpu")
+            def embed_query(text):
+                return model.encode([f"query: {text}"], normalize_embeddings=True).tolist()
+        elif MODEL_TYPE in ("openai", "openai_large"):
+            OPENAI_MODEL = "text-embedding-3-large" if MODEL_TYPE == "openai_large" else "text-embedding-3-small"
+            print(f"Using OpenAI {OPENAI_MODEL} via API...")
+            openai_client = OpenAI()
+            def embed_query(text):
+                response = openai_client.embeddings.create(model=OPENAI_MODEL, input=[text])
+                return [response.data[0].embedding]
+        else:
+            raise ValueError(f"Unknown MODEL_TYPE: {MODEL_TYPE}")
+
+        print("Pre-calculating query vectors...")
+        for q_key, q_text in QUERIES.items():
+            precalculated_vectors[q_key] = embed_query(q_text)
+    else:
+        print("BM25 mode - no embedding model needed")
+
+    print("Connecting to ChromaDB...")
+    chroma_client = chromadb.PersistentClient(path=DB_DIR)
+    collection = chroma_client.get_collection(name=COLLECTION_NAME)
+
+    total_questions = 0
+    successful_hits = 0.0
+    detail_rows = []
+
+    print("Reading Golden Dataset...")
+    with open(CSV_PATH, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f, delimiter=';')
+
+        for row in reader:
+            pdf_filename = row["document_name"].replace(".json", ".pdf")
+            print(f"\n--- Testing document: {pdf_filename} ---")
+
+            # load all parent texts for coverage calculation
+            all_parent_texts = _get_all_parent_texts(pdf_filename)
+            total_parents = len(all_parent_texts)
+
+            # retrieve for both LLM calls
+            call1 = retrieve_hier_call(
+                collection, CALL_TO_QUERIES["call1"], pdf_filename,
+                FETCH_K_PER_QUERY, CALL1_PARENTS, precalculated_vectors,
+            )
+            call2 = retrieve_hier_call(
+                collection, CALL_TO_QUERIES["call2"], pdf_filename,
+                FETCH_K_PER_QUERY, CALL2_PARENTS, precalculated_vectors,
+            )
+
+            # token coverage: what % of document text will LLM see
+            call1_cov = get_token_coverage(all_parent_texts, call1["selected_parent_ids"])
+            call2_cov = get_token_coverage(all_parent_texts, call2["selected_parent_ids"])
+            all_selected = set(call1["selected_parent_ids"]) | set(call2["selected_parent_ids"])
+            total_cov = get_token_coverage(all_parent_texts, all_selected)
+
+            # evaluate golden quotes against context text
+            checks = [
+                ("q1_context_quotes", "q1_context", call1, call1_cov),
+                ("q2_penalty_quotes", "q2_combined", call1, call1_cov),
+                ("q3_moderation_quotes", "q3_combined", call2, call2_cov),
+            ]
+
+            for csv_col, query_key, call_result, coverage_pct in checks:
+                correct_answer_string = row[csv_col].strip()
+                if not correct_answer_string:
+                    continue
+
+                total_questions += 1
+                quotes_to_find = [clean_text(q) for q in correct_answer_string.split("|") if clean_text(q)]
+                context_clean = clean_text(call_result["context_text"])
+                found = sum(1 for q in quotes_to_find if q in context_clean)
+                total_expected = len(quotes_to_find)
+
+                if found == total_expected:
+                    hit_type = "PERFECT"; hit_score = 1.0
+                elif found > 0:
+                    hit_type = "PARTIAL"; hit_score = found / total_expected
+                else:
+                    hit_type = "MISS"; hit_score = 0.0
+
+                successful_hits += hit_score
+
+                if hit_type == "PERFECT":
+                    print(f"{Fore.GREEN}{query_key} -> PERFECT HIT! ({found}/{total_expected}){Style.RESET_ALL}")
+                elif hit_type == "PARTIAL":
+                    print(f"{Fore.YELLOW}{query_key} -> PARTIAL HIT! ({found}/{total_expected}){Style.RESET_ALL}")
+                else:
+                    print(f"{Fore.RED}{query_key} -> MISS! (0/{total_expected}){Style.RESET_ALL}")
+                print(f"  coverage: {coverage_pct}% of document text ({call_result['selected_parents_count']} parents)")
+
+                detail_rows.append({
+                    "experiment_name": EXPERIMENT_NAME,
+                    "document": pdf_filename,
+                    "query_key": query_key,
+                    "csv_column": csv_col,
+                    "top_k": FETCH_K_PER_QUERY,
+                    "window_size": 0,
+                    "total_doc_chunks": total_parents,
+                    "fetched_chunks": call_result["selected_parents_count"],
+                    "coverage_pct": coverage_pct,
+                    "quotes_expected": total_expected,
+                    "quotes_found": found,
+                    "hit_type": hit_type,
+                    "hit_score": round(hit_score, 4),
+                })
+
+            # per-call coverage summary
+            print(f"  --- LLM call coverage for {pdf_filename} ---")
+            print(f"  Call 1 (breach+contract+rate+principal): {call1_cov}% ({call1['selected_parents_count']} parents)")
+            print(f"  Call 2 (outcome+reasoning+factors): {call2_cov}% ({call2['selected_parents_count']} parents)")
+            print(f"  Total (union): {total_cov}% ({len(all_selected)} unique parents)")
+
+            detail_rows.append({
+                "experiment_name": EXPERIMENT_NAME,
+                "document": pdf_filename,
+                "query_key": "per_call_coverage",
+                "csv_column": "",
+                "top_k": FETCH_K_PER_QUERY,
+                "window_size": 0,
+                "total_doc_chunks": total_parents,
+                "call1_chunks": call1["selected_parents_count"],
+                "call1_coverage": call1_cov,
+                "call2_chunks": call2["selected_parents_count"],
+                "call2_coverage": call2_cov,
+                "total_chunks": len(all_selected),
+                "total_coverage": total_cov,
+            })
+
+    # --- Final score ---
+    if total_questions > 0:
+        hit_rate = (successful_hits / total_questions) * 100
+
+        coverage_rows = [r for r in detail_rows if 'coverage_pct' in r]
+        avg_coverage = round(sum(r['coverage_pct'] for r in coverage_rows) / len(coverage_rows), 1) if coverage_rows else 0.0
+        call_rows = [r for r in detail_rows if r.get('query_key') == 'per_call_coverage']
+        avg_call1_cov = round(sum(r['call1_coverage'] for r in call_rows) / len(call_rows), 1) if call_rows else 0.0
+        avg_call2_cov = round(sum(r['call2_coverage'] for r in call_rows) / len(call_rows), 1) if call_rows else 0.0
+        avg_total_cov = round(sum(r['total_coverage'] for r in call_rows) / len(call_rows), 1) if call_rows else 0.0
+
+        # weighted coverage: weight each document by its total_doc_chunks
+        if call_rows:
+            weighted_num = sum(r['total_coverage'] * r['total_doc_chunks'] for r in call_rows)
+            weighted_den = sum(r['total_doc_chunks'] for r in call_rows)
+            weighted_total_cov = round(weighted_num / weighted_den, 1) if weighted_den > 0 else 0.0
+        else:
+            weighted_total_cov = 0.0
+
+        print("\n" + "=" * 50)
+        print(f"=== FINAL SCORE: {EXPERIMENT_NAME} ===")
+        print("=" * 50)
+        print(f"Total Questions asked:            {total_questions}")
+        print(f"Perfect/Partial Hits (Weighted):  {successful_hits:.2f}")
+        print(f"Overall Quote Recall Rate:        {hit_rate:.2f}%")
+        print(f"Avg Token Coverage (per query):   {avg_coverage}%")
+        print(f"Avg Call 1 Token Coverage:        {avg_call1_cov}%")
+        print(f"Avg Call 2 Token Coverage:        {avg_call2_cov}%")
+        print(f"Avg Total Token Coverage (both):  {avg_total_cov}%")
+        print(f"Weighted Total Coverage (by doc size): {weighted_total_cov}%")
+        print("=" * 50)
+
+        current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # hier mode doesn't compute MRR/Precision@k (evaluates full context, not per-chunk)
+        avg_mrr_hier = ""
+        avg_pak_hier = ""
+
+        summary_exists = os.path.isfile(RESULTS_SUMMARY_CSV)
+        with open(RESULTS_SUMMARY_CSV, mode="a", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f, delimiter=";")
+            if not summary_exists:
+                writer.writerow([
+                    "timestamp", "experiment_name", "top_k", "window_size",
+                    "total_questions", "weighted_hits", "recall_rate_percent",
+                    "avg_coverage_pct", "avg_call1_cov", "avg_call2_cov", "avg_total_cov",
+                    "weighted_total_cov", "avg_mrr", "avg_precision_at_k"
+                ])
+            writer.writerow([
+                current_time, EXPERIMENT_NAME, FETCH_K_PER_QUERY, 0,
+                total_questions, f"{successful_hits:.2f}", f"{hit_rate:.2f}",
+                f"{avg_coverage}", f"{avg_call1_cov}", f"{avg_call2_cov}", f"{avg_total_cov}",
+                f"{weighted_total_cov}", avg_mrr_hier, avg_pak_hier
+            ])
+        print(f"Summary saved to:  {RESULTS_SUMMARY_CSV}")
+
+        if detail_rows:
+            details_exists = os.path.isfile(RESULTS_DETAILS_CSV)
+            all_fields = list(dict.fromkeys(k for row in detail_rows for k in row.keys()))
+            with open(RESULTS_DETAILS_CSV, mode="a", newline="", encoding="utf-8") as f:
+                writer = csv.DictWriter(f, fieldnames=all_fields, delimiter=";", extrasaction="ignore")
+                if not details_exists:
+                    writer.writeheader()
+                writer.writerows(detail_rows)
+        print(f"Details saved to:  {RESULTS_DETAILS_CSV}")
+    else:
+        print("\nNo questions to evaluate.")
+
+
 def main():
+    # ==========================================
+    # DISPATCH: flat vs hierarchical evaluation
+    # ==========================================
+    if CHUNK_MODE == "hier":
+        return run_hier_evaluation()
+
     # ==========================================
     # FIX: BIG BRAIN MOMENT!
     # I MUST initialize colorama here ONLY ONCE at the start!
@@ -687,40 +1037,78 @@ def main():
             # not RAG anymore. i want HIGH recall at LOW coverage to prove RAG is worth it.
             total_doc_chunks = get_doc_total_chunks(collection, pdf_filename)
 
+            # get all chunk texts for token-based coverage (fairer than chunk-count
+            # because paragraphs vary hugely: some 50 tokens, others 1500+)
+            all_chunk_texts = get_doc_all_texts(collection, pdf_filename)
+
             # track which chunks each LLM call will actually read
-            # Call 1 = q_breach + q_rate + q_principal (contract facts)
+            # Call 1 = q_breach + q_contract + q_rate + q_principal (contract facts)
             # Call 2 = q_outcome + q_reasoning + q_factors (moderation analysis)
             call1_fetched = set()
             call2_fetched = set()
 
             # ==========================================
-            # STEP 5.1: Single queries (q_context and q_penalty)
-            # These map 1:1 to a CSV column so evaluation is straightforward.
+            # STEP 5.1: Combined query (q_breach + q_contract -> q1_context_quotes)
+            # q_breach retrieves chunks about the breach/violation itself
+            # q_contract retrieves chunks about the contract type, parties, and terms
+            #
+            # NOTE: i tried adding a 3rd sub-query "q_facts" here to capture the
+            # factual background (skutkový stav). but experiments showed it only added
+            # +0.42% recall for +1.6% coverage - the hybrid retriever with reranker
+            # already finds those chunks through q_breach and q_contract. so i removed
+            # it to keep coverage efficient. see experiment_results_summary_with_q3sub.csv
+            # vs experiment_results_summary_without_q3sub.csv for the comparison.
             # ==========================================
-            # for q_key in ["q_context", "q_penalty"]:
-            for q_key in ["q_breach"]:
-                csv_col = QUERY_TO_CSV_COLUMN[q_key]
-                correct_answer_string = row[csv_col].strip()
+            correct_answer_string = row["q1_context_quotes"].strip()
 
-                if correct_answer_string == "":
-                    continue
-
+            if correct_answer_string != "":
                 total_questions += 1
                 quotes_to_find = [clean_text(q) for q in correct_answer_string.split('|') if clean_text(q)]
-
-                super_chunks, cosine_sims, ret_ids, fetched_ids = do_retrieve(
-                    collection, q_key, QUERIES[q_key], precalculated_vectors.get(q_key),
-                    pdf_filename, TOP_K, WINDOW_SIZE
-                )
-                call1_fetched.update(fetched_ids)  # q_breach goes to Call 1
-
-                coverage_pct = round(len(fetched_ids) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
-
-                quotes_found, hit_scores, miss_scores, chunks_with_hits = find_hits(
-                    super_chunks, cosine_sims, quotes_to_find
-                )
-
                 total_quotes_expected = len(quotes_to_find)
+
+                # adaptive top_k for q1: larger documents need more chunks to find
+                # contract context, because the factual background is spread across
+                # more numbered points. for small docs (<30 chunks) we use default top_k.
+                # for larger docs we add 1 extra chunk per 20 paragraphs above 30,
+                # capped at top_k + 3 to avoid reading too much of the document.
+                if total_doc_chunks > 30:
+                    q1_top_k = min(TOP_K + 3, TOP_K + (total_doc_chunks - 30) // 20)
+                else:
+                    q1_top_k = TOP_K
+
+                sc_breach, sims_breach, ids_breach, fetched_breach = do_retrieve(
+                    collection, "q_breach", QUERIES["q_breach"], precalculated_vectors.get("q_breach"),
+                    pdf_filename, q1_top_k, WINDOW_SIZE
+                )
+                sc_contract, sims_contract, ids_contract, fetched_contract = do_retrieve(
+                    collection, "q_contract", QUERIES["q_contract"], precalculated_vectors.get("q_contract"),
+                    pdf_filename, q1_top_k, WINDOW_SIZE
+                )
+
+                all_fetched_ids = fetched_breach | fetched_contract
+                call1_fetched.update(all_fetched_ids)  # q_breach + q_contract go to Call 1
+                coverage_pct = get_token_coverage(all_chunk_texts, all_fetched_ids)
+
+                # deduplicate chunks from different sub-queries before computing
+                # precision@k and MRR — without this, duplicate chunks inflate the
+                # denominator in P@k (making it artificially low) and add noise to MRR ranking.
+                # recall and coverage are not affected (already use set-based dedup).
+                merged_super_chunks = sc_breach + sc_contract
+                merged_cosine_sims = sims_breach + sims_contract
+                merged_ids = ids_breach + ids_contract
+
+                seen_ids = set()
+                dedup_chunks, dedup_sims, dedup_ids = [], [], []
+                for chunk, sim, cid in zip(merged_super_chunks, merged_cosine_sims, merged_ids):
+                    if cid not in seen_ids:
+                        seen_ids.add(cid)
+                        dedup_chunks.append(chunk)
+                        dedup_sims.append(sim)
+                        dedup_ids.append(cid)
+
+                quotes_found, hit_scores, miss_scores, chunks_with_hits, rr, pak = find_hits(
+                    dedup_chunks, dedup_sims, quotes_to_find
+                )
 
                 if quotes_found == total_quotes_expected:
                     hit_type = "PERFECT"; hit_score = 1.0
@@ -732,34 +1120,34 @@ def main():
                 successful_hits += hit_score
 
                 if hit_type == "PERFECT":
-                    print(f"{Fore.GREEN}{q_key} -> PERFECT HIT! ({quotes_found}/{total_quotes_expected}){Style.RESET_ALL}")
+                    print(f"{Fore.GREEN}q1_combined -> PERFECT HIT! ({quotes_found}/{total_quotes_expected}){Style.RESET_ALL}")
                 elif hit_type == "PARTIAL":
-                    print(f"{Fore.YELLOW}{q_key} -> PARTIAL HIT! ({quotes_found}/{total_quotes_expected}){Style.RESET_ALL}")
+                    print(f"{Fore.YELLOW}q1_combined -> PARTIAL HIT! ({quotes_found}/{total_quotes_expected}){Style.RESET_ALL}")
                 else:
-                    print(f"{Fore.RED}{q_key} -> MISS! (0/{total_quotes_expected}){Style.RESET_ALL}")
+                    print(f"{Fore.RED}q1_combined -> MISS! (0/{total_quotes_expected}){Style.RESET_ALL}")
 
-                if cosine_sims:
-                    score_display = [f"{s:.3f}{'*' if j in chunks_with_hits else ' '}" for j, s in enumerate(cosine_sims)]
-                    print(f"  scores: [{', '.join(score_display)}]  (* = chunk contained answer)")
-                    if hit_scores:
-                        print(f"  hit avg={sum(hit_scores)/len(hit_scores):.3f}  miss avg={sum(miss_scores)/len(miss_scores):.3f}" if miss_scores else f"  hit avg={sum(hit_scores)/len(hit_scores):.3f}")
-                # coverage: what % of the doc did this query actually read?
-                print(f"  coverage: {coverage_pct}% ({len(fetched_ids)}/{total_doc_chunks} chunks)")
+                if sims_breach:
+                    breach_display = [f"{s:.3f}{'*' if j in chunks_with_hits else ' '}" for j, s in enumerate(sims_breach)]
+                    print(f"  q_breach scores:   [{', '.join(breach_display)}]")
+                if sims_contract:
+                    contract_display = [f"{s:.3f}{'*' if (j + len(sims_breach)) in chunks_with_hits else ' '}" for j, s in enumerate(sims_contract)]
+                    print(f"  q_contract scores: [{', '.join(contract_display)}]  (* = chunk contained answer)")
+                print(f"  coverage: {coverage_pct}% of document text ({len(all_fetched_ids)} chunks)")
 
                 detail_rows.append({
                     "experiment_name":      EXPERIMENT_NAME,
                     "document":             pdf_filename,
-                    "query_key":            q_key,
-                    "csv_column":           csv_col,
+                    "query_key":            "q1_combined",
+                    "csv_column":           "q1_context_quotes",
                     "top_k":                TOP_K,
                     "window_size":          WINDOW_SIZE,
                     "total_doc_chunks":     total_doc_chunks,
-                    "fetched_chunks":       len(fetched_ids),
+                    "fetched_chunks":       len(all_fetched_ids),
                     "coverage_pct":         coverage_pct,
-                    "retrieved_chunk_ids":  json.dumps(ret_ids),
-                    "all_cosine_scores":    json.dumps(cosine_sims),
-                    "avg_all_cosine":       safe_avg(cosine_sims),
-                    "max_all_cosine":       round(max(cosine_sims), 4) if cosine_sims else "",
+                    "retrieved_chunk_ids":  json.dumps(merged_ids),
+                    "all_cosine_scores":    json.dumps(merged_cosine_sims),
+                    "avg_all_cosine":       safe_avg(merged_cosine_sims),
+                    "max_all_cosine":       round(max(merged_cosine_sims), 4) if merged_cosine_sims else "",
                     "hit_cosine_scores":    json.dumps(hit_scores),
                     "avg_hit_cosine":       safe_avg(hit_scores),
                     "miss_cosine_scores":   json.dumps(miss_scores),
@@ -768,6 +1156,8 @@ def main():
                     "quotes_found":         quotes_found,
                     "hit_type":             hit_type,
                     "hit_score":            round(hit_score, 4),
+                    "reciprocal_rank":      round(rr, 4),
+                    "precision_at_k":       round(pak, 4),
                 })
 
             # ==========================================
@@ -795,14 +1185,23 @@ def main():
 
                 all_fetched_ids = fetched_rate | fetched_principal
                 call1_fetched.update(all_fetched_ids)  # q_rate + q_principal go to Call 1
-                coverage_pct = round(len(all_fetched_ids) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
+                coverage_pct = get_token_coverage(all_chunk_texts, all_fetched_ids)
 
                 merged_super_chunks = sc_rate + sc_principal
                 merged_cosine_sims = sims_rate + sims_principal
                 merged_ids = ids_rate + ids_principal
 
-                quotes_found, hit_scores, miss_scores, chunks_with_hits = find_hits(
-                    merged_super_chunks, merged_cosine_sims, quotes_to_find
+                seen_ids = set()
+                dedup_chunks, dedup_sims, dedup_ids = [], [], []
+                for chunk, sim, cid in zip(merged_super_chunks, merged_cosine_sims, merged_ids):
+                    if cid not in seen_ids:
+                        seen_ids.add(cid)
+                        dedup_chunks.append(chunk)
+                        dedup_sims.append(sim)
+                        dedup_ids.append(cid)
+
+                quotes_found, hit_scores, miss_scores, chunks_with_hits, rr, pak = find_hits(
+                    dedup_chunks, dedup_sims, quotes_to_find
                 )
 
                 if quotes_found == total_quotes_expected:
@@ -827,7 +1226,7 @@ def main():
                 if sims_principal:
                     pri_display = [f"{s:.3f}{'*' if (j + len(sims_rate)) in chunks_with_hits else ' '}" for j, s in enumerate(sims_principal)]
                     print(f"  q_principal scores: [{', '.join(pri_display)}]  (* = chunk contained answer)")
-                print(f"  coverage: {coverage_pct}% ({len(all_fetched_ids)}/{total_doc_chunks} chunks)")
+                print(f"  coverage: {coverage_pct}% of document text ({len(all_fetched_ids)} chunks)")
 
                 detail_rows.append({
                     "experiment_name":          EXPERIMENT_NAME,
@@ -853,6 +1252,8 @@ def main():
                     "quotes_found":             quotes_found,
                     "hit_type":                 hit_type,
                     "hit_score":                round(hit_score, 4),
+                    "reciprocal_rank":          round(rr, 4),
+                    "precision_at_k":           round(pak, 4),
                 })
 
             # ==========================================
@@ -885,14 +1286,23 @@ def main():
 
                 all_fetched_ids = fetched_outcome | fetched_reasoning | fetched_factors
                 call2_fetched.update(all_fetched_ids)  # q_outcome + q_reasoning + q_factors go to Call 2
-                coverage_pct = round(len(all_fetched_ids) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
+                coverage_pct = get_token_coverage(all_chunk_texts, all_fetched_ids)
 
                 merged_super_chunks = sc_outcome + sc_reasoning + sc_factors
                 merged_cosine_sims = sims_outcome + sims_reasoning + sims_factors
                 merged_ids = ids_outcome + ids_reasoning + ids_factors
 
-                quotes_found, hit_scores, miss_scores, chunks_with_hits = find_hits(
-                    merged_super_chunks, merged_cosine_sims, quotes_to_find
+                seen_ids = set()
+                dedup_chunks, dedup_sims, dedup_ids = [], [], []
+                for chunk, sim, cid in zip(merged_super_chunks, merged_cosine_sims, merged_ids):
+                    if cid not in seen_ids:
+                        seen_ids.add(cid)
+                        dedup_chunks.append(chunk)
+                        dedup_sims.append(sim)
+                        dedup_ids.append(cid)
+
+                quotes_found, hit_scores, miss_scores, chunks_with_hits, rr, pak = find_hits(
+                    dedup_chunks, dedup_sims, quotes_to_find
                 )
 
                 if quotes_found == total_quotes_expected:
@@ -922,7 +1332,7 @@ def main():
                     offset_f = len(sims_outcome) + len(sims_reasoning)
                     fac_display = [f"{s:.3f}{'*' if (j + offset_f) in chunks_with_hits else ' '}" for j, s in enumerate(sims_factors)]
                     print(f"  q_factors scores:   [{', '.join(fac_display)}]  (* = chunk contained answer)")
-                print(f"  coverage: {coverage_pct}% ({len(all_fetched_ids)}/{total_doc_chunks} chunks)")
+                print(f"  coverage: {coverage_pct}% of document text ({len(all_fetched_ids)} chunks)")
 
                 detail_rows.append({
                     "experiment_name":          EXPERIMENT_NAME,
@@ -949,6 +1359,8 @@ def main():
                     "quotes_found":             quotes_found,
                     "hit_type":                 hit_type,
                     "hit_score":                round(hit_score, 4),
+                    "reciprocal_rank":          round(rr, 4),
+                    "precision_at_k":           round(pak, 4),
                 })
 
             # ==========================================
@@ -956,15 +1368,17 @@ def main():
             # This is what actually matters - how much of the document each LLM call reads.
             # The per-query coverage above is useful for debugging but this is the real metric.
             # ==========================================
-            call1_cov = round(len(call1_fetched) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
-            call2_cov = round(len(call2_fetched) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
+            # token-based coverage: what % of document TEXT each call reads
+            # fairer than chunk-count since paragraphs vary hugely in size
+            call1_cov = get_token_coverage(all_chunk_texts, call1_fetched)
+            call2_cov = get_token_coverage(all_chunk_texts, call2_fetched)
             total_fetched = call1_fetched | call2_fetched
-            total_cov = round(len(total_fetched) / total_doc_chunks * 100, 1) if total_doc_chunks > 0 else 0.0
+            total_cov = get_token_coverage(all_chunk_texts, total_fetched)
 
-            print(f"  --- LLM call coverage for {pdf_filename} ---")
-            print(f"  Call 1 (breach+rate+principal): {call1_cov}% ({len(call1_fetched)}/{total_doc_chunks})")
-            print(f"  Call 2 (outcome+reasoning+factors): {call2_cov}% ({len(call2_fetched)}/{total_doc_chunks})")
-            print(f"  Total unique chunks read: {total_cov}% ({len(total_fetched)}/{total_doc_chunks})")
+            print(f"  --- LLM call coverage for {pdf_filename} (token-based) ---")
+            print(f"  Call 1 (breach+contract+rate+principal): {call1_cov}% ({len(call1_fetched)} chunks)")
+            print(f"  Call 2 (outcome+reasoning+factors): {call2_cov}% ({len(call2_fetched)} chunks)")
+            print(f"  Total (union of both calls): {total_cov}% ({len(total_fetched)} unique chunks)")
 
             detail_rows.append({
                 "experiment_name":  EXPERIMENT_NAME,
@@ -998,16 +1412,38 @@ def main():
         avg_call2_cov = round(sum(r['call2_coverage'] for r in call_rows) / len(call_rows), 1) if call_rows else 0.0
         avg_total_cov = round(sum(r['total_coverage'] for r in call_rows) / len(call_rows), 1) if call_rows else 0.0
 
+        # weighted coverage: weight each document by its total_doc_chunks
+        # Simple average is biased by tiny docs (4 chunks → 100% trivially).
+        # Weighted average gives larger (harder) documents more influence,
+        # which is fairer for thesis evaluation.
+        if call_rows:
+            weighted_num = sum(r['total_coverage'] * r['total_doc_chunks'] for r in call_rows)
+            weighted_den = sum(r['total_doc_chunks'] for r in call_rows)
+            weighted_total_cov = round(weighted_num / weighted_den, 1) if weighted_den > 0 else 0.0
+        else:
+            weighted_total_cov = 0.0
+
+        # --- Aggregate MRR and Precision@k across all query groups ---
+        # MRR = Mean Reciprocal Rank: how high the first relevant chunk ranks (1.0 = first position)
+        # Precision@k = what fraction of retrieved chunks actually contain golden quotes
+        mrr_vals = [r['reciprocal_rank'] for r in detail_rows if 'reciprocal_rank' in r]
+        avg_mrr = round(sum(mrr_vals) / len(mrr_vals), 4) if mrr_vals else 0.0
+        pak_vals = [r['precision_at_k'] for r in detail_rows if 'precision_at_k' in r]
+        avg_precision_at_k = round(sum(pak_vals) / len(pak_vals), 4) if pak_vals else 0.0
+
         print("\n" + "=" * 50)
         print(f"=== FINAL SCORE: {EXPERIMENT_NAME} ===")
         print("=" * 50)
         print(f"Total Questions asked:            {total_questions}")
         print(f"Perfect/Partial Hits (Weighted):  {successful_hits:.2f}")
         print(f"Overall Quote Recall Rate:        {hit_rate:.2f}%")
-        print(f"Avg Coverage (per query group):   {avg_coverage}%")
-        print(f"Avg Call 1 Coverage:              {avg_call1_cov}%")
-        print(f"Avg Call 2 Coverage:              {avg_call2_cov}%")
-        print(f"Avg Total Coverage (all 6 queries): {avg_total_cov}%")
+        print(f"Avg Coverage (per query group):   {avg_coverage}%  (token-based)")
+        print(f"Avg Call 1 Token Coverage:        {avg_call1_cov}%")
+        print(f"Avg Call 2 Token Coverage:        {avg_call2_cov}%")
+        print(f"Avg Total Token Coverage (both):  {avg_total_cov}%")
+        print(f"Weighted Total Coverage (by doc size): {weighted_total_cov}%")
+        print(f"Mean Reciprocal Rank (MRR):       {avg_mrr}")
+        print(f"Avg Precision@k:                  {avg_precision_at_k}")
         print("=" * 50)
 
         current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -1016,6 +1452,7 @@ def main():
         # SAVE 1: SUMMARY CSV
         # One row per experiment run. Good for high-level comparison between experiments.
         # avg_coverage_pct is the key tradeoff metric: recall vs how much of the doc we read
+        # MRR shows ranking quality, precision@k shows retrieval precision
         # ---------------------------------------------------------
         summary_exists = os.path.isfile(RESULTS_SUMMARY_CSV)
         with open(RESULTS_SUMMARY_CSV, mode="a", newline="", encoding="utf-8") as f:
@@ -1024,12 +1461,14 @@ def main():
                 writer.writerow([
                     "timestamp", "experiment_name", "top_k", "window_size",
                     "total_questions", "weighted_hits", "recall_rate_percent",
-                    "avg_coverage_pct", "avg_call1_cov", "avg_call2_cov", "avg_total_cov"
+                    "avg_coverage_pct", "avg_call1_cov", "avg_call2_cov", "avg_total_cov",
+                    "weighted_total_cov", "avg_mrr", "avg_precision_at_k"
                 ])
             writer.writerow([
                 current_time, EXPERIMENT_NAME, TOP_K, WINDOW_SIZE,
                 total_questions, f"{successful_hits:.2f}", f"{hit_rate:.2f}",
-                f"{avg_coverage}", f"{avg_call1_cov}", f"{avg_call2_cov}", f"{avg_total_cov}"
+                f"{avg_coverage}", f"{avg_call1_cov}", f"{avg_call2_cov}", f"{avg_total_cov}",
+                f"{weighted_total_cov}", f"{avg_mrr}", f"{avg_precision_at_k}"
             ])
         print(f"Summary saved to:  {RESULTS_SUMMARY_CSV}")
 

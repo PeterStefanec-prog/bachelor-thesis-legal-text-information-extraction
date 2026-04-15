@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import os
+import chromadb
 
 # ==========================================
 # MASTER EXPERIMENT RUNNER
@@ -9,6 +10,8 @@ import os
 #   1. For each (model_type, chunk_suffix) pair:
 #      a) Creates ChromaDB vector store (if needed)
 #      b) Runs evaluation grid: TOP_K × WINDOW combinations
+#   2. Hierarchical child-to-parent experiments (Phase 10+):
+#      Uses CHUNK_MODE=hier with different grid (fetch_k × parents)
 #
 # This is the ONE script you run to get all results for the thesis.
 #
@@ -18,6 +21,7 @@ import os
 # Prerequisites:
 #   - Chunks must already exist in data/03_chunked_docs/
 #     (run: python src/chunking/chunk_processor.py)
+#   - For hierarchical: data/03_chunked_docs_hier/ must exist too
 #   - For OpenAI experiments: OPENAI_API_KEY must be set in environment
 #
 # Results are APPENDED to:
@@ -99,6 +103,39 @@ EXPERIMENTS = [
 
 ]
 
+# ==========================================
+# HIERARCHICAL EXPERIMENTS (Phase 10+)
+# ==========================================
+# After flat experiments plateaued (~93% recall, ~76% coverage), we tried
+# a different architecture: retrieve small children (~220 tokens), group by
+# parent, send complete parents to LLM. Goal is better COVERAGE - the LLM
+# sees full legal arguments instead of chopped-up paragraph pieces.
+#
+# Grid: model × retrieval_mode × fetch_k × call1_parents × call2_parents
+# These use CHUNK_MODE=hier and the same evaluate_retrieval.py script.
+# No TOP_K/WINDOW grid — parent selection replaces that.
+#
+# Each entry: (model_type, retrieval_mode, short_name_prefix)
+HIER_EXPERIMENTS = [
+    # Phase 10: mE5 local scan (free, fast) - find best config
+    ("me5",    "dense",  "hier_me5_dense"),
+    ("me5",    "bm25",   "hier_me5_bm25"),
+    ("me5",    "hybrid", "hier_me5_hybrid"),
+
+    # Phase 11: OpenAI confirmation with best config from Phase 10
+    ("openai", "dense",  "hier_openai_dense"),
+    ("openai", "hybrid", "hier_openai_hybrid"),
+]
+
+# Hierarchical grid parameters
+HIER_FETCH_K_VALUES      = [6, 8]
+HIER_CALL1_PARENT_VALUES = [5, 7, 9]
+HIER_CALL2_PARENT_VALUES = [7, 9, 11]
+
+# RRF params for hierarchical hybrid experiments
+HIER_RRF_K     = "20"
+HIER_RRF_ALPHA = "0.7"
+
 # RRF_K overrides per experiment - when experiment needs different RRF_K than default (60)
 # evaluate_retrieval.py reads RRF_K from env variable, default is 60
 RRF_K_OVERRIDES = {
@@ -122,39 +159,51 @@ RERANKER_OVERRIDES = {
     "hybrid_a7_reranked": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.6",
-        "RERANKER_OVERSAMPLE": "2",
+        "RERANKER_OVERSAMPLE": "3",
     },
     "dense_reranked": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.6",
-        "RERANKER_OVERSAMPLE": "2",
+        "RERANKER_OVERSAMPLE": "3",
     },
     "hybrid_a7_reranked_a85": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.85",
-        "RERANKER_OVERSAMPLE": "2",
+        "RERANKER_OVERSAMPLE": "3",
     },
 }
 
-# Retrieval config grid - same for all experiments
-TOP_K_VALUES  = [2, 3, 4, 5]
+# Retrieval config grid
+# After switching to TRUE paragraph chunking (one numbered point = one chunk),
+# PARA chunks are smaller than before (~100-800 tokens vs old merged ~1000-1500).
+# the old top_k=5 effectively retrieved ~15 paragraphs (because merged chunks had
+# 2-3 points each). now top_k=5 gets exactly 5 paragraphs, so we need higher top_k
+# to compensate. range [2..10] lets us find the sweet spot.
+# Small fixed-size chunks (200/380/500 tokens) also use extended range.
+TOP_K_VALUES            = [2, 3, 4, 5, 6, 7, 10]   # PARA experiments - added k=6 for finer granularity
+TOP_K_VALUES_SMALL      = [2, 3, 4, 5, 6, 7, 8] # fixed-size chunks
 WINDOW_VALUES = [0, 1]
 
 # --- SKIP LIST ---
 # Add experiment short_names here to skip them (e.g. if already computed)
 # Example: SKIP = {"mE5base_380"}  # skip because we already have these results
-# Fresh run: all experiments from scratch (CSV files were deleted)
-# SKIP = set()
-SKIP = {
-    "mE5base_200", "mE5base_380",
-    "openai3s_200", "openai3s_500", "openai3s_para",
-    "bm25_para",
-    "hybrid_para", "hybrid_para_k20",
-    "hybrid_weighted_a7", "hybrid_weighted_a8",
-    "openai3l_para",
-    "hybrid_a7_reranked", "dense_reranked",
-}
+# Fresh run: empty set = run everything
+# skip fixed-size experiments that didn't change (only PARA chunks changed)
+# remove these after running PARA experiments to get complete results
+SKIP = {"mE5base_200", "mE5base_380", "openai3s_200", "openai3s_500"}
 
+
+
+def collection_exists(db_dir, collection_name):
+    """Check if a ChromaDB collection already exists and has data.
+    Returns chunk count if exists, 0 otherwise."""
+    try:
+        client = chromadb.PersistentClient(path=db_dir)
+        col = client.get_collection(collection_name)
+        count = col.count()
+        return count
+    except Exception:
+        return 0
 
 
 def run_command(description, script, env_vars):
@@ -181,6 +230,9 @@ def main():
 
     total_configs = 0
     failed_configs = []
+    # track which collections have already been vectorized this run
+    # so we don't re-embed the same chunks multiple times (saves time + API costs)
+    vectorized_collections = set()
 
     for model_type, chunk_suffix, short_name, retrieval_mode in EXPERIMENTS:
         if short_name in SKIP:
@@ -204,27 +256,40 @@ def main():
 
         # Step 1: Create vector store for this (model, chunk_size) combination
         # (needed even for BM25 - chunks are stored in ChromaDB)
-        vs_ok = run_command(
-            f"Vectorizing: {model_type} / {chunk_suffix}",
-            VECTOR_STORE_SCRIPT,
-            {
-                "MODEL_TYPE":      model_type,
-                "CHUNK_SUFFIX":    chunk_suffix,
-                "COLLECTION_NAME": collection_name,
-            }
-        )
+        # Skip if we already vectorized this collection in this run
+        if collection_name in vectorized_collections:
+            print(f"\n  Collection '{collection_name}' already vectorized, skipping re-embedding")
+        else:
+            existing = collection_exists("data/04_vectorstore", collection_name)
+            if existing > 0:
+                print(f"\n  Collection '{collection_name}' already in ChromaDB ({existing} chunks), skipping re-embedding")
+                vectorized_collections.add(collection_name)
+            else:
+                vs_ok = run_command(
+                    f"Vectorizing: {model_type} / {chunk_suffix}",
+                    VECTOR_STORE_SCRIPT,
+                    {
+                        "MODEL_TYPE":      model_type,
+                        "CHUNK_SUFFIX":    chunk_suffix,
+                        "COLLECTION_NAME": collection_name,
+                    }
+                )
 
-        if not vs_ok:
-            print(f"  Skipping evaluation for {short_name} due to vectorization failure")
-            failed_configs.append(f"{short_name} (vectorization)")
-            continue
+                if not vs_ok:
+                    print(f"  Skipping evaluation for {short_name} due to vectorization failure")
+                    failed_configs.append(f"{short_name} (vectorization)")
+                    continue
+                vectorized_collections.add(collection_name)
 
         # Step 2: Run evaluation grid (TOP_K × WINDOW)
         # For paragraph-level chunks (BM25/hybrid), window=1 reads ~70-100% of the doc
         # which defeats the purpose of RAG. Only use window=0 for paragraph experiments.
+        # For small fixed-size chunks, use extended TOP_K range (up to 8) to give them
+        # a fair shot at matching PARA recall — even at higher coverage.
         window_values = [0] if chunk_suffix == "OPENAI_PARA" else WINDOW_VALUES
+        top_k_values  = TOP_K_VALUES if chunk_suffix == "OPENAI_PARA" else TOP_K_VALUES_SMALL
 
-        for top_k in TOP_K_VALUES:
+        for top_k in top_k_values:
             for window in window_values:
                 exp_name = f"{short_name}_top{top_k}_w{window}"
                 total_configs += 1
@@ -259,6 +324,81 @@ def main():
 
                 if not eval_ok:
                     failed_configs.append(exp_name)
+
+    # ==========================================
+    # HIERARCHICAL EXPERIMENTS
+    # ==========================================
+    # Same evaluate_retrieval.py but with CHUNK_MODE=hier.
+    # Instead of TOP_K × WINDOW, we iterate over fetch_k × parent counts.
+    vectorized_hier_collections = set()
+
+    for model_type, retrieval_mode, short_prefix in HIER_EXPERIMENTS:
+        if short_prefix in SKIP:
+            print(f"\n{'='*60}")
+            print(f"  SKIPPING: {short_prefix} (in SKIP list)")
+            print(f"{'='*60}")
+            continue
+
+        # hierarchical collections use a different naming convention
+        collection_name = f"legal_decisions_hier_{model_type}"
+
+        print(f"\n{'='*60}")
+        print(f"  HIER EXPERIMENT GROUP: {short_prefix}")
+        print(f"  Model: {model_type} | Mode: hier | Retrieval: {retrieval_mode}")
+        print(f"{'='*60}")
+
+        # vectorize hierarchical children (once per model)
+        if collection_name not in vectorized_hier_collections:
+            existing = collection_exists("data/04_vectorstore_hier", collection_name)
+            if existing > 0:
+                print(f"\n  Collection '{collection_name}' already in ChromaDB ({existing} chunks), skipping re-embedding")
+                vectorized_hier_collections.add(collection_name)
+            else:
+                vs_ok = run_command(
+                    f"Vectorizing hier: {model_type}",
+                    VECTOR_STORE_SCRIPT,
+                    {
+                        "MODEL_TYPE":      model_type,
+                        "CHUNK_MODE":      "hier",
+                        "COLLECTION_NAME": collection_name,
+                    }
+                )
+                if not vs_ok:
+                    print(f"  Skipping {short_prefix} due to vectorization failure")
+                    failed_configs.append(f"{short_prefix} (vectorization)")
+                    continue
+                vectorized_hier_collections.add(collection_name)
+
+        # run grid: fetch_k × call1_parents × call2_parents
+        for fetch_k in HIER_FETCH_K_VALUES:
+            for c1p in HIER_CALL1_PARENT_VALUES:
+                for c2p in HIER_CALL2_PARENT_VALUES:
+                    exp_name = f"{short_prefix}_fk{fetch_k}_c1p{c1p}_c2p{c2p}"
+                    total_configs += 1
+
+                    eval_env = {
+                        "MODEL_TYPE":       model_type,
+                        "CHUNK_MODE":       "hier",
+                        "EXP_NAME":         exp_name,
+                        "COLLECTION_NAME":  collection_name,
+                        "RETRIEVAL_MODE":   retrieval_mode,
+                        "FETCH_K_PER_QUERY": str(fetch_k),
+                        "CALL1_PARENTS":    str(c1p),
+                        "CALL2_PARENTS":    str(c2p),
+                    }
+
+                    if retrieval_mode == "hybrid":
+                        eval_env["RRF_K"] = HIER_RRF_K
+                        eval_env["RRF_ALPHA"] = HIER_RRF_ALPHA
+
+                    eval_ok = run_command(
+                        f"Evaluating: {exp_name}",
+                        EVAL_SCRIPT,
+                        eval_env
+                    )
+
+                    if not eval_ok:
+                        failed_configs.append(exp_name)
 
     # --- FINAL REPORT ---
     print("\n" + "=" * 60)
