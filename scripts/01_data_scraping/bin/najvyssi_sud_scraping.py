@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-NS SR (Najvyšší súd SR) – downloader pre obchodnoprávne rozhodnutia (kolegium == 2).
-
-- Iba oficiálne OpenData API (žiadny HTML scraping).
-- Vyhľadávanie po DŇOCH cez `searchDecision` s parametrom art_obsah.
-- Metadata cez `getDecision`.
-- Sťahovanie PDF podľa poľa `subor`.
-- CSV bez viacriadkových polí (neukladáme 'obsah'), takže je čisté.
-
-Dôležité:
-- ŽIADEN fallback „bez dátumu“ – ak v daný deň nič nie je, tak nič nepridáme.
-- API niekedy ignoruje rozsah dátumov; preto ideme day-by-day.
-"""
+# My first try at scraping NS SR (Najvyssi sud SR).
+# I want only commercial decisions (kolegium == 2).
+#
+# I use only the official OpenData API, no HTML scraping (was scared of
+# getting blocked).
+# Search goes day by day via searchDecision endpoint with art_obsah term.
+# Then I get full metadata via getDecision and download PDF from "subor".
+#
+# Important things I learned:
+# - API sometimes ignores big date ranges. So I go day-by-day - slower but
+#   reliable.
+# - No "without date" fallback - if a day has nothing, I skip it.
+# - art_obsah only matches the short annotation, not full PDF text. So this
+#   probably misses many real cases. (Found out later when I built better
+#   versions.)
 
 import csv
 import os
@@ -26,26 +28,28 @@ import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # =============================
-# Konfigurácia
+# Config
 # =============================
 
 BASE_API  = "https://www.nsud.sk/ws/opendata.php"
 BASE_SITE = "https://www.nsud.sk"
 
-# Dátumové okno (vrátane)
+# Date range (both included)
 DATE_START = "2015-01-01"
 DATE_END   = "2015-01-05"
 
-# Kľúčové slová – zmluvné pokuty a príbuzné pojmy
+# Keywords I tried for searching contractual penalties.
+# Different cases (skloňovanie) and diacritics variants because API
+# does not do stemming - need exact form.
 OBSAH_TERMS = [
-    # jadro – explicitná zmluvná pokuta (rôzne pády/diakritika)
+    # core - explicit "zmluvna pokuta" with various forms
     "zmluvná pokuta",
     "zmluvnu pokutu",
     "zmluvnej pokuty",
     "zmluvné pokuty",
     "zmluvne pokuty",
 
-    # synonymá/terminológia, ktoré súdy používajú pri pokutách
+    # synonyms - sometimes courts say "sankcia" instead of "pokuta"
     "zmluvná sankcia",
     "zmluvnu sankciu",
     "zmluvnej sankcie",
@@ -62,14 +66,14 @@ OBSAH_TERMS = [
 # ]
 
 
-# iba kolegium 2 (obchodnoprávne)
+# only kolegium 2 (commercial)
 REQUIRED_KOLEGIUM = 2
 
-# Výstupy
+# Outputs
 OUT_DIR_PDFS = "data/nsud_pdfs"
 OUT_CSV_PATH = "data/nsud_metadata.csv"
 
-# Sieť
+# Network stuff
 MAX_WORKERS       = 8
 CONNECT_TIMEOUT   = 10
 READ_TIMEOUT      = 30
@@ -80,7 +84,7 @@ SESSION_HEADERS = {
 }
 
 # =============================
-# Pomocné funkcie
+# Helpers
 # =============================
 
 def _parse_date(d: str) -> datetime:
@@ -124,10 +128,8 @@ def _extract_ids(payload) -> list[int]:
     return []
 
 def _search_ids_one_day(session: requests.Session, day_iso: str, obsah_term: str) -> list[int]:
-    """
-    Vyhľadá ID pre JEDEN deň a jeden term. Skúsi 2 formáty dátumu.
-    Žiadny fallback bez dátumu.
-    """
+    # Search IDs for ONE day and one term. Try 2 date formats because API
+    # is weird and accepts both depending on the day.
     variants = [
         (day_iso, day_iso),                 # YYYY-MM-DD
         (_fmt_dmy(day_iso), _fmt_dmy(day_iso)),  # DD.MM.YYYY
@@ -137,7 +139,7 @@ def _search_ids_one_day(session: requests.Session, day_iso: str, obsah_term: str
         data = _robust_get_json(session, params)
         ids = _extract_ids(data)
         if ids:
-            # stručný log nech vieš, že ten formát fungoval
+            # short log so I see which format worked
             print(f"[INFO] {day_iso} term='{obsah_term}' -> {len(ids)} ids (fmt {idx})")
             return ids
     return []
@@ -202,11 +204,11 @@ def _download_pdf(session: requests.Session, urls: list[str], out_path: str) -> 
     return ("http_other", 0, urls[0] if urls else "")
 
 # =============================
-# Hlavná časť
+# Main
 # =============================
 
 def main():
-    # 1) validácia dátumov (naozaj ako datetime)
+    # 1) check date range is valid
     start_dt = _parse_date(DATE_START)
     end_dt   = _parse_date(DATE_END)
     if end_dt < start_dt:
@@ -215,7 +217,7 @@ def main():
     session = requests.Session()
     session.headers.update(SESSION_HEADERS)
 
-    # 2) CSV hlavička
+    # 2) CSV header
     os.makedirs(os.path.dirname(OUT_CSV_PATH) or ".", exist_ok=True)
     csv_headers = [
         "id", "cislo", "senat", "ecli", "datum",
@@ -223,7 +225,7 @@ def main():
         "pdf_url", "saved_path", "download_status", "http_status",
     ]
 
-    # 3) zber ID – po dňoch a po termínoch
+    # 3) collect IDs - per day per term
     all_ids = set()
     for day in _daterange_days(start_dt, end_dt):
         for term in OBSAH_TERMS:
@@ -238,7 +240,7 @@ def main():
     all_ids = sorted(all_ids)
     print(f"[INFO] Collected {len(all_ids)} unique candidate IDs.")
 
-    # 4) spracovanie -> filter kolegium -> download -> CSV
+    # 4) process -> filter kolegium -> download -> CSV
     os.makedirs(OUT_DIR_PDFS, exist_ok=True)
     with open(OUT_CSV_PATH, "w", newline="", encoding="utf-8-sig") as fcsv:
         writer = csv.DictWriter(fcsv, fieldnames=csv_headers, quoting=csv.QUOTE_ALL, lineterminator="\n")
@@ -250,11 +252,11 @@ def main():
 
             preview = (str(meta.get("merito", "")) + " " + str(meta.get("obsah", ""))).lower()
 
-            # 1) bez pokút ma to nezaujíma vôbec
+            # 1) without "pokuta" I dont care at all
             if "pokut" not in preview:
                 return None
 
-            # 2) ak chceš striktne zmluvné pokuty:
+            # 2) strict - need "zmluvna" too
             if "zmluv" not in preview:
                 return None
 
@@ -270,7 +272,7 @@ def main():
             except Exception:
                 return None
 
-            # vynechaj exekučné veci (ale nie „vymoženie“)
+            # skip exekucia cases (but not "vymozenie")
             preview = (str(meta.get("merito", "")) + " " + str(meta.get("obsah", ""))).lower()
             if any(x in preview for x in ["exekuč", "exekúcia", "exekučné konanie"]):
                 return None

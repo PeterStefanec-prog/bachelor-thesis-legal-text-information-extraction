@@ -7,23 +7,27 @@ import io
 from tqdm import tqdm
 from pypdf import PdfReader
 
-# --- CONFIGURATION ---
+# Better version of § 301 scraper. I made the regex stricter so I get
+# less false positives. Also added more anti-filters for stuff that
+# pretends to be § 301 ObchZ but is actualy something else.
+
+# --- CONFIG ---
 OUTPUT_CSV = "dataset_obchodne_moderacne_pravo_extended.csv"
 PDF_DIR = "../data/rozhodnutia_obchodne_extended"
 
 START_ID = 245000
 MIN_ID = 10000
 
-# --- FINAL REGEXES (EXTREMELY STRICT) ---
+# --- FINAL REGEXES (VERY STRICT) ---
 
-# OPRAVA: oopravene (?i) zo stredu reťazca a pridané ako flag re.IGNORECASE
-# 1. Searching for Section 301
+# FIX: moved (?i) from middle of string to re.IGNORECASE flag
+# 1. searching § 301
 REGEX_STRICT_301 = re.compile(
     r'(?:^|\s)(?:§|par|ust|odst|čl|bod|zm|S|s|6|z|g)\.?\s*301(?![\d.,])',
     re.IGNORECASE
 )
 
-# 2. ANTI-FILTER: Procedural law
+# 2. ANTI-FILTER: procedural law
 REGEX_EXCLUDE_SUFFIX = re.compile(
     r'301\s*(CSP|Civil|Trest|Správ|Súd|Z\.?z|Tr\.?|T\.?z)',
     re.IGNORECASE
@@ -60,7 +64,7 @@ class UltimateScraper:
     def get_metadata(self, decision_id):
         try:
             params = {'getDecision': '', 'id': decision_id}
-            # Pridal som handling pre SSL errory, ak by nahodou
+            # also handle SSL errors just in case
             r = requests.get(self.base_url, params=params, timeout=5)
             if r.status_code == 200:
                 try:
@@ -132,11 +136,11 @@ class UltimateScraper:
             return False, "NO_MATCH", None, None
 
         except Exception as e:
-            # print(f"Error analyzing PDF: {e}")
+            # print(f"PDF analysis error: {e}")
             return False, None, None, None
 
     def save_match(self, meta, pdf_bytes, reason, snippet, decision_id):
-        # Ošetrenie názvu súboru pre Windows (zakázané znaky)
+        # sanitize filename for Windows (forbidden chars)
         safe_spis = str(meta.get('cislo', 'nezname')).replace('/', '_').replace('\\', '_').replace(':', '')
         filename = f"{decision_id}_{safe_spis}.pdf"
         file_path = os.path.join(PDF_DIR, filename)
@@ -159,7 +163,7 @@ class UltimateScraper:
         }
         self.results.append(record)
 
-        # Save every time to avoid data loss
+        # save every time so I dont lose data
         try:
             df = pd.DataFrame(self.results)
             df.to_csv(OUTPUT_CSV, index=False, sep='|', encoding='utf-8')
@@ -168,9 +172,9 @@ class UltimateScraper:
 
     def run(self):
         print("=== ULTIMATE SCRAPER (FIXED REGEX) ===")
-        print("1. Filter Metadata: Ignoring Civil (3) and Criminal (1)")
-        print("2. Filter Money: Ignoring 166.301,53")
-        print("3. Filter CSP: Ignoring § 301 CSP")
+        print("1. metadata filter: ignore civil (3) and criminal (1)")
+        print("2. money filter: ignore 166.301,53 etc")
+        print("3. CSP filter: ignore § 301 CSP")
 
         for current_id in tqdm(range(START_ID, MIN_ID, -1)):
             try:
@@ -195,7 +199,7 @@ class UltimateScraper:
                 print("Stopping...")
                 break
             except Exception as e:
-                # Catch unexpected errors to keep the loop running
+                # catch unexpected errors so loop keeps going
                 # print(f"Error at ID {current_id}: {e}")
                 continue
 

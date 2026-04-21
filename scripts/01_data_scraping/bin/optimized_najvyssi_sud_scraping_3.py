@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-NS SR (Najvyšší súd SR) – downloader tailored for contractual penalty (zmluvná pokuta) cases.
-
-Optimalizácie:
-- Hľadanie po MESIACOCH (nie po dňoch) cez `searchDecision` s art_obsah.
-- Používa iba formát dátumu YYYY-MM-DD (format 1 z tvojich logov).
-- Thread-local requests.Session pre getDecision + sťahovanie PDF (bez per-ID Session).
-- Žiadny zbytočný sleep vo workeroch.
-- Nepreťahuje PDF, ak súbor už existuje.
-"""
+# Third try at NS SR scraper. Same idea as v2 but I made it faster.
+#
+# What I changed:
+# - Search by MONTHS instead of days (much less API calls).
+# - Use only YYYY-MM-DD format (the other one was extra and slow).
+# - Thread-local requests.Session for getDecision + PDF download
+#   (no more new Session per ID).
+# - Removed useless sleeps inside workers.
+# - Skip download if PDF file already exists on disk.
+#
+# Still has same problem as v1 and v2 - art_obsah only matches short
+# annotation, not full PDF text. So this still misses many real cases.
 
 import csv
 import json
@@ -25,19 +27,19 @@ import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # =====================================
-# Global configuration
+# Config
 # =====================================
 
 BASE_API = "https://www.nsud.sk/ws/opendata.php"
 BASE_SITE = "https://www.nsud.sk"
 
-# Date window (inclusive) – môžeš nastaviť napr. "2010-01-01" až "2025-12-31"
+# Date range. Can do "2010-01-01" to "2025-12-31" or whatever.
 DATE_START = "2010-01-01"
 DATE_END   = "2010-12-31"
 
-# Core search terms – musí byť plný tvar, API nepodporuje stemmy
+# Core search terms - need to be full forms because API doesnt do stemming
 OBSAH_TERMS = [
-    # core – contractual penalty (various cases / diacritics)
+    # core - "zmluvna pokuta" (different cases / diacritics)
     "zmluvná pokuta",
     "zmluvnu pokutu",
     "zmluvnú pokutu",
@@ -45,7 +47,7 @@ OBSAH_TERMS = [
     "zmluvné pokuty",
     "zmluvne pokuty",
 
-    # contractual sanction (slightly broader, but still on-point)
+    # "zmluvna sankcia" - bit broader
     "zmluvná sankcia",
     "zmluvnu sankciu",
     "zmluvnú sankciu",
@@ -53,33 +55,33 @@ OBSAH_TERMS = [
     "zmluvné sankcie",
     "zmluvne sankcie",
 
-    # more specific phrases (still directly about contractual penalty)
+    # more specific phrases
     "zníženie zmluvnej pokuty",
     "moderácia zmluvnej pokuty",
     "neprimeraná zmluvná pokuta",
     "primeranosť zmluvnej pokuty",
 ]
 
-# Collegia to keep:
-# 1 = civil, 2 = commercial. Tu ponechávame len obchodné.
+# Kolegium codes:
+# 1 = civil, 2 = commercial. Keep only commercial.
 REQUIRED_KOLEGIUMS = {2}
 
-# Exclude execution cases (where the core is enforcement, not the merits of the penalty)
+# Skip execution cases - they enforce the penalty, not decide on it
 EXCLUDE_EXECUTION = True
 
-# Exclude typical "procedural only" dockets (e.g. Ndob – proposals, transfer of cases)
+# Skip Ndob (proposals/transfers)
 EXCLUDE_NDOB = True
 
-# Exclude bankruptcy / insolvency cases (ZKR, konkurz, oddlženie)
+# Skip konkurz/insolvency (ZKR)
 EXCLUDE_ZKR = True
 
 ZKR_KEYWORDS = [
     "zákon č. 7/2005", "zákona č. 7/2005", "zkr",
     "konkurz", "konkurze",
-    "oddlžen", "oddĺžen",  # odlíži aj "oddlženie", "oddĺženie"
+    "oddlžen", "oddĺžen",
 ]
 
-# Exclude clearly procedural merito (transfer of case, venue etc.)
+# Skip clearly procedural merito (transfer of case, venue etc)
 EXCLUDE_PROCEDURAL_ONLY = True
 
 PROCEDURAL_MERITO_KEYWORDS = [
@@ -91,26 +93,26 @@ PROCEDURAL_MERITO_KEYWORDS = [
     "nesúhlas s postúpením", "nesuhlas s postupenim",
 ]
 
-# Output locations
+# Output paths
 OUT_DIR_PDFS = "data/nsud_pdfs3"
 OUT_DIR_JSON = "data/nsud_json3"
 OUT_CSV_PATH = "data/nsud_metadata3.csv"
 
-# Network tuning
-MAX_WORKERS = 16  # viac workerov – I/O bound úloha
+# Network
+MAX_WORKERS = 16  # more workers - this is I/O bound
 CONNECT_TIMEOUT = 10
 READ_TIMEOUT = 30
-PER_REQUEST_SLEEP_SEARCH = 0.02  # rate limit len pri searchDecision
+PER_REQUEST_SLEEP_SEARCH = 0.02  # rate limit only for searchDecision
 SESSION_HEADERS = {
     "User-Agent": "NSUD-OpenData-Downloader/2.0",
     "Accept": "application/json,text/*;q=0.9,*/*;q=0.1",
 }
 
-# Thread-local Session pre workerov
+# Thread-local Session for workers
 _thread_local = threading.local()
 
 # =====================================
-# Helper functions
+# Helpers
 # =====================================
 
 
@@ -119,10 +121,8 @@ def _parse_date(d: str) -> datetime:
 
 
 def _month_ranges(start_dt: datetime, end_dt: datetime):
-    """
-    Yield (start_str, end_str) pre každý mesiac v tvare YYYY-MM-DD,
-    pretože NS SR API očakáva tento formát v parametroch art_datum_od / art_datum_do.
-    """
+    # Yield (start_str, end_str) for each month as YYYY-MM-DD,
+    # because NS SR API wants this format in art_datum_od/art_datum_do.
     cur = datetime(start_dt.year, start_dt.month, 1)
     while cur <= end_dt:
         if cur.month == 12:
@@ -135,7 +135,7 @@ def _month_ranges(start_dt: datetime, end_dt: datetime):
         real_start = max(cur, start_dt)
         real_end = min(month_end, end_dt)
         if real_start <= real_end:
-            # kľúčová zmena je TU:
+            # the change is HERE - YYYY-MM-DD format
             yield real_start.strftime("%Y-%m-%d"), real_end.strftime("%Y-%m-%d")
 
         cur = next_month
@@ -144,7 +144,7 @@ def _month_ranges(start_dt: datetime, end_dt: datetime):
 
 
 def _robust_get_json(session: requests.Session, params: dict):
-    """GET JSON s retry a základným error handlingom."""
+    # GET with retries and basic error handling
     retries = 3
     last_exc = None
     for attempt in range(1, retries + 1):
@@ -164,7 +164,7 @@ def _robust_get_json(session: requests.Session, params: dict):
 
 
 def _extract_ids(payload) -> list[int]:
-    """Extract decision IDs from various shapes of API payload."""
+    # API returns IDs in different shapes
     if isinstance(payload, list):
         if payload and isinstance(payload[0], dict) and "id" in payload[0]:
             return [int(x["id"]) for x in payload if "id" in x]
@@ -177,14 +177,12 @@ def _extract_ids(payload) -> list[int]:
 
 
 def _search_ids_range(session: requests.Session, date_from_str: str, date_to_str: str, obsah_term: str) -> list[int]:
-    """
-    Search decision IDs pre dátumový rozsah [date_from_str, date_to_str] (formát DD.MM.RRRR)
-    a jeden výraz v art_obsah.
-    """
+    # Search IDs for date range [date_from_str, date_to_str] (DD.MM.YYYY format)
+    # and one term in art_obsah.
     params = {
         "searchDecision": "",
-        "art_datum_od": date_from_str,   # napr. "01.01.2010"
-        "art_datum_do": date_to_str,     # napr. "31.01.2010"
+        "art_datum_od": date_from_str,   # e.g. "01.01.2010"
+        "art_datum_do": date_to_str,     # e.g. "31.01.2010"
         "art_obsah": obsah_term,
     }
     data = _robust_get_json(session, params)
@@ -196,10 +194,8 @@ def _search_ids_range(session: requests.Session, date_from_str: str, date_to_str
 
 
 def _get_worker_session() -> requests.Session:
-    """
-    Thread-local Session pre getDecision + PDF download.
-    V každom threade sa vytvorí raz a recykluje sa.
-    """
+    # Thread-local Session for getDecision + PDF download.
+    # Created once per thread, reused.
     if not hasattr(_thread_local, "session"):
         s = requests.Session()
         s.headers.update(SESSION_HEADERS)
@@ -208,7 +204,7 @@ def _get_worker_session() -> requests.Session:
 
 
 def _get_decision(session: requests.Session, dec_id: int) -> dict | None:
-    """Fetch full decision metadata for a single ID."""
+    # get full metadata
     params = {"getDecision": "", "id": str(dec_id)}
     try:
         data = _robust_get_json(session, params)
@@ -222,7 +218,7 @@ def _get_decision(session: requests.Session, dec_id: int) -> dict | None:
 
 
 def _candidate_pdf_urls(subor_value: str | None) -> list[str]:
-    """Construct candidate PDF URLs from the 'subor' field."""
+    # build PDF URL from "subor" field
     if not subor_value:
         return []
     s = subor_value.strip()
@@ -232,7 +228,7 @@ def _candidate_pdf_urls(subor_value: str | None) -> list[str]:
         return [urljoin(BASE_SITE, s)]
     if s.startswith("data/att/"):
         return [urljoin(BASE_SITE + "/", s)]
-    # Fallback guesses
+    # fallback guesses
     return [
         urljoin(BASE_SITE + "/", "data/att/" + s.lstrip("/")),
         urljoin(BASE_SITE + "/", s.lstrip("/")),
@@ -240,18 +236,14 @@ def _candidate_pdf_urls(subor_value: str | None) -> list[str]:
 
 
 def _safe_filename(s: str) -> str:
-    """Make a filesystem-safe filename."""
+    # Make filename safe for filesystem
     return re.sub(r"[^a-zA-Z0-9._-]+", "_", s or "").strip("_") or "file"
 
 
 def _download_pdf(session: requests.Session, urls: list[str], out_path: str) -> tuple[str, int, str]:
-    """
-    Try to download a PDF from candidate URLs.
-
-    Returns:
-        (status_label, http_status, used_url)
-        status_label ∈ {"ok", "http_404", "http_other"}
-    """
+    # Try to download PDF from candidate URLs.
+    # Returns (status_label, http_status, used_url).
+    # status_label is one of: "ok", "http_404", "http_other"
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
     for url in urls:
@@ -291,22 +283,22 @@ def _download_pdf(session: requests.Session, urls: list[str], out_path: str) -> 
 
 
 # =====================================
-# Main logic
+# Main
 # =====================================
 
 
 def main():
-    # 1) Validate date window
+    # 1) check date range
     start_dt = _parse_date(DATE_START)
     end_dt = _parse_date(DATE_END)
     if end_dt < start_dt:
         raise ValueError("DATE_END must be >= DATE_START")
 
-    # Session použité len na searchDecision (single-threaded, safe)
+    # Session used only for searchDecision (single thread, safe)
     search_session = requests.Session()
     search_session.headers.update(SESSION_HEADERS)
 
-    # 2) Prepare CSV header and output dirs
+    # 2) prepare CSV header and output dirs
     os.makedirs(os.path.dirname(OUT_CSV_PATH) or ".", exist_ok=True)
     os.makedirs(OUT_DIR_PDFS, exist_ok=True)
     os.makedirs(OUT_DIR_JSON, exist_ok=True)
@@ -330,7 +322,7 @@ def main():
         "json_path",
     ]
 
-    # 3) Collect all IDs by MONTHS and terms (art_obsah)
+    # 3) collect all IDs by MONTHS and terms (art_obsah)
     all_ids: set[int] = set()
     for month_start_iso, month_end_iso in _month_ranges(start_dt, end_dt):
         for term in OBSAH_TERMS:
@@ -345,18 +337,16 @@ def main():
     all_ids = sorted(all_ids)
     print(f"[INFO] Collected {len(all_ids)} unique candidate IDs.")
 
-    # 4) Process each ID: filter collegium, optionally exclude executions/procedural,
+    # 4) for each ID: filter kolegium, optionaly exclude executions/procedural,
     #    download PDF, store JSON + CSV row
 
     def _process_one(dec_id: int) -> dict | None:
-        """
-        Process one decision:
-        - fetch metadata via getDecision
-        - filter by collegium, docket type and execution/procedural status
-        - download PDF (if not already present)
-        - save JSON metadata
-        - return CSV row dict
-        """
+        # Process one decision:
+        # - get metadata via getDecision
+        # - filter by kolegium, docket type, execution/procedural
+        # - download PDF (skip if already on disk)
+        # - save JSON metadata
+        # - return CSV row
         session = _get_worker_session()
 
         meta = _get_decision(session, dec_id)
@@ -364,7 +354,7 @@ def main():
             print(f"[WARN] getDecision returned nothing for ID={dec_id}")
             return None
 
-        # Collegium filter
+        # kolegium filter
         try:
             kol = int(meta.get("kolegium", -1))
         except Exception:
@@ -375,38 +365,38 @@ def main():
 
         cislo = str(meta.get("cislo") or "")
 
-        # Exclude Ndob dockets – typical proposals / venue / transfer decisions
+        # skip Ndob (proposals/venue/transfer)
         if EXCLUDE_NDOB and "Ndob" in cislo:
             return None
 
-        # Combine merito + obsah for generic keyword screening
+        # combine merito + obsah for keyword screening
         preview = (
             str(meta.get("merito", "")) + " " +
             str(meta.get("obsah", ""))
         ).lower()
 
-        # 1) Exclude execution cases
+        # 1) skip execution cases
         if EXCLUDE_EXECUTION:
             if any(x in preview for x in ["exekuč", "exekúcia", "exekučné konanie"]):
                 return None
 
-        # 2) Exclude bankruptcy / insolvency (ZKR) cases
+        # 2) skip konkurz/insolvency (ZKR)
         if EXCLUDE_ZKR:
             if any(kw in preview for kw in ZKR_KEYWORDS):
                 return None
 
-        # 3) Exclude clearly procedural merito (transfer, venue, etc.)
+        # 3) skip procedural-only merito (transfer, venue etc)
         if EXCLUDE_PROCEDURAL_ONLY:
             merito = (meta.get("merito") or "").lower()
             if any(kw in merito for kw in PROCEDURAL_MERITO_KEYWORDS):
                 return None
 
-        # Candidate PDF URLs
+        # candidate PDF URLs
         candidates = _candidate_pdf_urls(meta.get("subor"))
         saved_path = ""
         status_label, http_status, used_url = ("http_other", 0, "")
 
-        # Build output filename
+        # build output filename
         fname = (
             f"{meta.get('id', dec_id)}__"
             f"{_safe_filename((meta.get('datum') or '').replace(' ', '_'))}__"
@@ -414,7 +404,7 @@ def main():
         )
         out_path = os.path.join(OUT_DIR_PDFS, fname)
 
-        # Ak PDF už existuje, neskúšaj ho sťahovať znova
+        # If PDF already on disk, dont download again
         if os.path.exists(out_path):
             saved_path = out_path
             status_label, http_status, used_url = ("ok", 200, candidates[0] if candidates else "")
@@ -431,7 +421,7 @@ def main():
             else:
                 print(f"[WARN] missing 'subor' for ID={dec_id}")
 
-        # Save full JSON metadata for later analysis
+        # save full JSON metadata
         json_path = os.path.join(OUT_DIR_JSON, f"{meta.get('id', dec_id)}.json")
         try:
             with open(json_path, "w", encoding="utf-8") as fj:
@@ -440,7 +430,7 @@ def main():
             print(f"[WARN] failed to save JSON for ID={dec_id}: {e}")
             json_path = ""
 
-        # Build CSV row
+        # build CSV row
         is_civil = 1 if kol == 1 else 0
         is_commercial = 1 if kol == 2 else 0
 
@@ -463,7 +453,7 @@ def main():
             "json_path": json_path,
         }
 
-    # 5) Run processing in a thread pool
+    # 5) run processing in a thread pool
     with open(OUT_CSV_PATH, "w", newline="", encoding="utf-8-sig") as fcsv:
         writer = csv.DictWriter(
             fcsv,

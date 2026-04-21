@@ -7,28 +7,30 @@ import io
 from tqdm import tqdm
 from pypdf import PdfReader
 
-# --- CONFIGURATION ---
+# This is when I narrowed it down to specifically § 301 ObchZ (moderation
+# right). Looking only for decisions where judge actualy used this paragraph.
+
+# --- CONFIG ---
 OUTPUT_CSV = "dataset_moderacne_pravo_301_BBBB.csv"
 PDF_DIR = "rozhodnutia_301_pdf_BBB"
 
-# ID range for searching (Brute force)
-# Current IDs (end of 2024/2025) are approx 275000.
-# Year 2015 is approx 150000.
+# ID range for searching (brute force)
+# Current IDs (end of 2024/2025) are around 275000.
+# Year 2015 is around 150000.
 START_ID = 240000
 MIN_ID = 19000
 
-# --- REGEXES (CORE SCRIPT) ---
+# --- REGEXES (CORE) ---
 
-# 1. What exactly we are looking for: § 301
-# Looking for: § 301, ust. 301, ustanovenie § 301
-# (?i) means case-insensitive
+# 1. What I look for: § 301
+# Forms: § 301, ust. 301, ustanovenie § 301
+# (?i) = case insensitive
 REGEX_TARGET = re.compile(r'(§|ust\.|ustanovenie|zmysle)\s*301', re.IGNORECASE)
 
-# 2. What we must EXCLUDE (False Positives)
-# If § 301 related to the Criminal Procedure or Civil Non-Contentious Procedure.
-# Note: In commercial matters, § 301 CSP (Civil Dispute Order) concerns legal costs/witness fees,
-# but to be safe, we primarily want the Commercial Code.
-# If it finds "§ 301 Trestného", we discard it.
+# 2. What I have to EXCLUDE (false positives)
+# § 301 also exists in CSP (civil procedure) and Trestny zakon.
+# In commercial decisions § 301 CSP is rare but I want to be safe.
+# If it finds "§ 301 Trestneho", throw it away.
 REGEX_EXCLUDE_CONTEXT = re.compile(r'301\s+(trest|civiln|súdneho|správn)', re.IGNORECASE)
 
 
@@ -41,19 +43,19 @@ class ModeracnePravoScraper:
             os.makedirs(PDF_DIR)
 
         self.results = []
-        # Loading existing data to continue interrupted work
+        # load existing data so I can continue interrupted run
         if os.path.exists(OUTPUT_CSV):
             try:
                 self.results = pd.read_csv(OUTPUT_CSV, sep='|').to_dict('records')
-                print(f"--- Načítaných {len(self.results)} už stiahnutých rozhodnutí ---")
+                print(f"--- Loaded {len(self.results)} existing decisions ---")
             except:
                 pass
 
     def get_metadata(self, decision_id):
-        """Downloads metadata about the decision."""
+        # download metadata about decision
         try:
             params = {'getDecision': '', 'id': decision_id}
-            # Timeout 5 seconds is enough, if no response, we move on
+            # 5 sec timeout is enough, if no response just move on
             r = requests.get(self.base_url, params=params, timeout=5)
             if r.status_code == 200:
                 data = r.json()
@@ -64,18 +66,16 @@ class ModeracnePravoScraper:
             return None
 
     def analyze_pdf(self, pdf_url):
-        """
-        Downloads PDF to RAM and returns text if it contains § 301.
-        """
+        # Download PDF to RAM and return text if it contains § 301
         try:
-            # URL fix (domain is sometimes missing)
+            # URL fix (sometimes domain is missing)
             full_url = pdf_url if pdf_url.startswith('http') else self.file_base_url + pdf_url.lstrip('/')
 
             r = requests.get(full_url, timeout=10)
             if r.status_code != 200:
                 return False, None, None
 
-            # Reading PDF via pypdf (in memory, without saving to disk yet)
+            # Read PDF via pypdf (in memory, not yet to disk)
             with io.BytesIO(r.content) as f:
                 reader = PdfReader(f)
                 text = ""
@@ -86,17 +86,18 @@ class ModeracnePravoScraper:
 
             # --- VALIDATION LOGIC ---
 
-            # 1. Looking for § 301
+            # 1. look for § 301
             match = REGEX_TARGET.search(text)
             if match:
-                # 2. Context Window check
-                # Check text around the match to see if it is not Criminal Procedure
+                # 2. context window check
+                # Check text around match - is it not Trestny zakon?
                 start_idx = max(0, match.start() - 50)
                 end_idx = min(len(text), match.end() + 100)
                 context_snippet = text[start_idx:end_idx]
 
-                # If we see the word "Trestného" or "Civilného mimosporového" around 301, ignore.
-                # (Most judges write just "§ 301", which in a commercial matter means Commercial Code, so we take it).
+                # If we see "Trestneho" or "Civilneho mimosporoveho" near 301, ignore.
+                # Most judges just write "§ 301" which in commercial case means
+                # ObchZ, so we take it.
                 if REGEX_EXCLUDE_CONTEXT.search(context_snippet):
                     return False, None, None
 
@@ -105,23 +106,23 @@ class ModeracnePravoScraper:
             return False, None, None
 
         except Exception as e:
-            # print(f"Chyba PDF: {e}")
+            # print(f"PDF error: {e}")
             return False, None, None
 
     def save_match(self, meta, pdf_bytes, full_text, decision_id):
-        """Saves the result."""
+        # save the result
         spisova_znacka = str(meta.get('cislo', 'nezname')).replace('/', '_')
         clean_date = str(meta.get('datum', 'neznamy')).replace('.', '_')
 
-        # Filename: YEAR_FILE_ID.pdf
+        # filename: ID_SPIS.pdf
         filename = f"{decision_id}_{spisova_znacka}.pdf"
         file_path = os.path.join(PDF_DIR, filename)
 
-        # Save PDF physically to disk
+        # save PDF to disk
         with open(file_path, 'wb') as f:
             f.write(pdf_bytes)
 
-        # Find context for Excel (to see the sentence where it is mentioned)
+        # find context for excel (so I can see the sentence)
         match = REGEX_TARGET.search(full_text)
         snippet = "..."
         if match:
@@ -135,36 +136,36 @@ class ModeracnePravoScraper:
             'datum_vydania': meta.get('datum'),
             'sudca': meta.get('sudca'),
             'kolegium': meta.get('kolegium'),
-            'merito': meta.get('merito', ''),  # What it was about (keywords from court)
-            'najdeny_kontext_301': snippet,  # Sentence around § 301
+            'merito': meta.get('merito', ''),  # what it was about (court keywords)
+            'najdeny_kontext_301': snippet,  # sentence around § 301
             'cesta_k_pdf': file_path,
             'url_na_web': f"https://www.nsud.sk{meta.get('subor')}"
         }
 
         self.results.append(record)
 
-        # Continuous writing to CSV (Overwrite mode - always overwriting file with new data)
-        # Using '|' as separator because there are commas in legal texts
+        # write to CSV continuously (overwrite mode - always rewrites with new data)
+        # using '|' as separator because legal texts have commas
         df = pd.DataFrame(self.results)
         df.to_csv(OUTPUT_CSV, index=False, sep='|', encoding='utf-8')
 
     def run(self):
-        print(f"=== ŠTART SCRAPERA: MODERAČNÉ PRÁVO (§ 301) ===")
-        print(f"Hľadám v ID: {START_ID} -> {MIN_ID}")
-        print(f"Filter: Obchodné kolégium + Text '§ 301'")
+        print(f"=== STARTING SCRAPER: MODERATION RIGHT (§ 301) ===")
+        print(f"Looking in IDs: {START_ID} -> {MIN_ID}")
+        print(f"Filter: commercial division + text '§ 301'")
 
         count_saved = 0
 
-        # Progress bar via tqdm
-        for current_id in tqdm(range(START_ID, MIN_ID, -1), desc="Analyzujem"):
+        # tqdm progress bar
+        for current_id in tqdm(range(START_ID, MIN_ID, -1), desc="Analyzing"):
 
-            # A) Get metadata
+            # A) get metadata
             meta = self.get_metadata(current_id)
             if not meta:
                 continue
 
-            # B) Filter: Only Commercial matters
-            # Check if it is Commercial Law College (code 2) OR if file reference contains "Ob"
+            # B) FILTER: only commercial cases
+            # Check if its commercial division (code 2) OR if spisova znacka contains "Ob"
             kolegium = str(meta.get('kolegium', '')).lower()
             spis = str(meta.get('cislo', ''))
 
@@ -173,9 +174,9 @@ class ModeracnePravoScraper:
                             ('cob' in spis.lower())
 
             if not is_commercial:
-                continue  # Skipping civil and criminal matters (saving 80% time)
+                continue  # skip civil and criminal (saves 80% time)
 
-            # C) Filter: PDF Content
+            # C) FILTER: PDF content
             pdf_url = meta.get('subor')
             if pdf_url:
                 found, pdf_bytes, text = self.analyze_pdf(pdf_url)
@@ -183,18 +184,17 @@ class ModeracnePravoScraper:
                 if found:
                     self.save_match(meta, pdf_bytes, text, current_id)
                     count_saved += 1
-                    tqdm.write(f" NÁJDENÉ! ID {current_id} ({spis}) -> Obsahuje § 301")
+                    tqdm.write(f" FOUND! ID {current_id} ({spis}) -> contains § 301")
 
-            # Short pause for server
+            # short server pause
             time.sleep(0.05)
 
-        print(f"\n=== HOTOVO ===")
-        print(f"Celkovo uložených rozhodnutí: {count_saved}")
-        print(f"Dáta nájdeš v súbore: {OUTPUT_CSV}")
+        print(f"\n=== DONE ===")
+        print(f"Total saved decisions: {count_saved}")
+        print(f"Data in: {OUTPUT_CSV}")
 
 
 if __name__ == "__main__":
-    # Installation of necessary libraries:
-    # pip install requests pandas pypdf tqdm
+    # need: pip install requests pandas pypdf tqdm
     scraper = ModeracnePravoScraper()
     scraper.run()
