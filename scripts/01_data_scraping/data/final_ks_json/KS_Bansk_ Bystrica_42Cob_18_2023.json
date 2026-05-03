@@ -1,0 +1,60 @@
+{
+  "guid": "5c736256-444e-49c1-9dd8-8087a6f5b9e1:f59dd21c-0a24-4b56-a832-98e93126e1d1",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_117",
+    "nazov": "Okresný súd Trenčín"
+  },
+  "sudca": {
+    "registreGuid": "sudca_146",
+    "meno": "JUDr. Jana Novotná"
+  },
+  "identifikacneCislo": "6121455133",
+  "spisovaZnacka": "PB-14Cb/41/2022",
+  "datumVydania": "24.01.2024",
+  "ecli": "ECLI:SK:KSBB:2024:6121455133.3",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Obchodné záväzkové vzťahy"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1964/40",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_42Cob-18-2023.pdf",
+    "fileExtension": "PDF",
+    "size": 148707,
+    "url": "https://obcan.justice.sk/content/public/item/f59dd21c-0a24-4b56-a832-98e93126e1d1"
+  },
+  "updateDate": "13.11.2024",
+  "povodnySud": {
+    "registreGuid": "sud_121",
+    "nazov": "Okresný súd Považská Bystrica",
+    "adresaString": "Školská 226, 01701 Považská Bystrica, Slovenská republika",
+    "suradnice": {
+      "zemepisnaDlzka": "18.436029190000056",
+      "zemepisnaSirka": "49.11978098000003"
+    }
+  },
+  "povodnaSpisovaZnacka": "42Cob/18/2023"
+}

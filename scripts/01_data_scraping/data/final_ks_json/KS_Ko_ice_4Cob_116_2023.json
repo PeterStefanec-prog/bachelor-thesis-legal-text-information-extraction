@@ -1,0 +1,62 @@
+{
+  "guid": "05d41c05-7141-4993-96d0-f3fa3122f8d6:d24b7a0d-c029-4441-a6bb-d11ea5aa3529",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_147",
+    "nazov": "Krajský súd v Košiciach"
+  },
+  "sudca": {
+    "registreGuid": "sudca_1545",
+    "meno": "JUDr. Július Tóth"
+  },
+  "identifikacneCislo": "6120341555",
+  "spisovaZnacka": "4Cob/116/2023",
+  "datumVydania": "26.03.2025",
+  "ecli": "ECLI:SK:KSKE:2025:6120341555.3",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Obchodné záväzkové vzťahy"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-261",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-630",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-630"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-634",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-634"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-633",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-633"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-365",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-365"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-369",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-369"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_4Cob-116-2023.pdf",
+    "fileExtension": "PDF",
+    "size": 151461,
+    "url": "https://obcan.justice.sk/content/public/item/d24b7a0d-c029-4441-a6bb-d11ea5aa3529"
+  },
+  "updateDate": "13.05.2025"
+}

@@ -1,0 +1,65 @@
+{
+  "guid": "59adda13-4338-41a6-87c0-e22186cbeb6e:75c39bb4-b700-4c42-98d3-3027a8b290f4",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Zrušujúce",
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_104",
+    "nazov": "Mestský súd Bratislava III"
+  },
+  "sudca": {
+    "registreGuid": "sudca_535",
+    "meno": "JUDr. Ľubica Krišková"
+  },
+  "identifikacneCislo": "1116213513",
+  "spisovaZnacka": "B1-32Cb/93/2016",
+  "datumVydania": "11.06.2024",
+  "ecli": "ECLI:SK:KSBA:2024:1116213513.1",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Ostatné"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-387.odsek-2",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387.odsek-2"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-b"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-389.odsek-1.pismeno-c"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_2Cob-60-2023.pdf",
+    "fileExtension": "PDF",
+    "size": 155973,
+    "url": "https://obcan.justice.sk/content/public/item/75c39bb4-b700-4c42-98d3-3027a8b290f4"
+  },
+  "updateDate": "28.02.2025",
+  "povodnySud": {
+    "registreGuid": "sud_102",
+    "nazov": "Mestský súd Bratislava I",
+    "adresaString": "Záhradnícka 10, 81244 Bratislava I",
+    "suradnice": {
+      "zemepisnaDlzka": "17.122962",
+      "zemepisnaSirka": "48.152538"
+    }
+  },
+  "povodnaSpisovaZnacka": "2Cob/60/2023"
+}

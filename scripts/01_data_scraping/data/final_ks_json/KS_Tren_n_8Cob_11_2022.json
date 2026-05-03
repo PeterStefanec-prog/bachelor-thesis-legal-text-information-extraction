@@ -1,0 +1,106 @@
+{
+  "guid": "e9438b5b-d101-4d88-a609-15581330be91:a3de2c2b-70cf-4719-b370-4dd2379e1d13",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_117",
+    "nazov": "Okresný súd Trenčín"
+  },
+  "sudca": {
+    "registreGuid": "sudca_1733",
+    "meno": "JUDr. Iveta Sopková"
+  },
+  "identifikacneCislo": "6119237962",
+  "spisovaZnacka": "NM-9Cb/25/2019",
+  "datumVydania": "12.10.2022",
+  "ecli": "ECLI:SK:KSTN:2022:6119237962.1",
+  "oblast": [
+    "Obchodné právo",
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Obchodné záväzkové vzťahy",
+    "Náhrada škody"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1990/116",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116"
+    },
+    {
+      "nazov": "/SK/ZZ/1990/116/#paragraf-3.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-3.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/1990/116/#paragraf-3.odsek-2",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-3.odsek-2"
+    },
+    {
+      "nazov": "/SK/ZZ/1990/116/#paragraf-3.odsek-3",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-3.odsek-3"
+    },
+    {
+      "nazov": "/SK/ZZ/1990/116/#paragraf-3.odsek-4",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-3.odsek-4"
+    },
+    {
+      "nazov": "/SK/ZZ/1990/116/#paragraf-7",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1990/116/#paragraf-7"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-415",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-415"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-420.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-420.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-420.odsek-2",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-420.odsek-2"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-420.odsek-3",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-420.odsek-3"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-300",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-300"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-302",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-302"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_8Cob-11-2022.pdf",
+    "fileExtension": "PDF",
+    "size": 157975,
+    "url": "https://obcan.justice.sk/content/public/item/a3de2c2b-70cf-4719-b370-4dd2379e1d13"
+  },
+  "updateDate": "26.09.2023",
+  "povodnySud": {
+    "registreGuid": "sud_119",
+    "nazov": "Okresný súd Nové Mesto nad Váhom",
+    "adresaString": "Hviezdoslavova 37, 91519 Nové Mesto nad Váhom",
+    "suradnice": {
+      "zemepisnaDlzka": "17.8351591",
+      "zemepisnaSirka": "48.7548932"
+    }
+  },
+  "povodnaSpisovaZnacka": "8Cob/11/2022"
+}

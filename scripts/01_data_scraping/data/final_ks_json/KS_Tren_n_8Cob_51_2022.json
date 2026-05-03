@@ -1,0 +1,48 @@
+{
+  "guid": "08abd36c-79c6-4770-9681-8655cd4d42d8:d1e39aa1-deb3-4805-aa31-9d0263569edc",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_117",
+    "nazov": "Okresný súd Trenčín"
+  },
+  "sudca": {
+    "registreGuid": "sudca_1147",
+    "meno": "JUDr. Darina Legerská"
+  },
+  "identifikacneCislo": "6119381659",
+  "spisovaZnacka": "NM-8Cb/8/2020",
+  "datumVydania": "26.07.2022",
+  "ecli": "ECLI:SK:KSTN:2022:6119381659.1",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Obchodné záväzkové vzťahy"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_8Cob-51-2022.pdf",
+    "fileExtension": "PDF",
+    "size": 123045,
+    "url": "https://obcan.justice.sk/content/public/item/d1e39aa1-deb3-4805-aa31-9d0263569edc"
+  },
+  "updateDate": "26.09.2023",
+  "povodnySud": {
+    "registreGuid": "sud_119",
+    "nazov": "Okresný súd Nové Mesto nad Váhom",
+    "adresaString": "Hviezdoslavova 37, 91519 Nové Mesto nad Váhom",
+    "suradnice": {
+      "zemepisnaDlzka": "17.8351591",
+      "zemepisnaSirka": "48.7548932"
+    }
+  },
+  "povodnaSpisovaZnacka": "8Cob/51/2022"
+}

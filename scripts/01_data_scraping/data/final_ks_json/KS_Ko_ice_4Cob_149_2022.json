@@ -1,0 +1,50 @@
+{
+  "guid": "2545d148-f4fd-4750-a95d-48dc673ac76f:6d2d9fbc-9126-4831-b7f0-ba8c37dfed75",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_147",
+    "nazov": "Krajský súd v Košiciach"
+  },
+  "sudca": {
+    "registreGuid": "sudca_187",
+    "meno": "JUDr. Zdenka Kohútová"
+  },
+  "identifikacneCislo": "7621204915",
+  "spisovaZnacka": "4Cob/149/2022",
+  "datumVydania": "25.01.2023",
+  "ecli": "ECLI:SK:KSKE:2023:7621204915.1",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Obchodné záväzkové vzťahy"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-324",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-324"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-365",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-365"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-369",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-369"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_4Cob-149-2022.pdf",
+    "fileExtension": "PDF",
+    "size": 134266,
+    "url": "https://obcan.justice.sk/content/public/item/6d2d9fbc-9126-4831-b7f0-ba8c37dfed75"
+  },
+  "updateDate": "26.09.2023"
+}

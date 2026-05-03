@@ -1,0 +1,58 @@
+{
+  "guid": "9b8090d9-2c7d-40bd-9705-11afa80f00db:08c39f8a-61ef-4614-af67-ba71828ff01c",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_138",
+    "nazov": "Krajský súd v Banskej Bystrici"
+  },
+  "sudca": {
+    "registreGuid": "sudca_null",
+    "meno": "Mgr. Miriam Kamenská"
+  },
+  "identifikacneCislo": "6122386080",
+  "spisovaZnacka": "43Cob/53/2023",
+  "datumVydania": "07.08.2023",
+  "ecli": "ECLI:SK:KSBB:2023:6122386080.1",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Náhrada škody"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-363",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-363"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-365.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-365.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-365.odsek-3",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-365.odsek-3"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-373.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-373.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-386",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-386"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_43Cob-53-2023.pdf",
+    "fileExtension": "PDF",
+    "size": 137005,
+    "url": "https://obcan.justice.sk/content/public/item/08c39f8a-61ef-4614-af67-ba71828ff01c"
+  },
+  "updateDate": "28.02.2024"
+}

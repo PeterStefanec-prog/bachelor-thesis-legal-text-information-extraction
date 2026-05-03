@@ -1,0 +1,76 @@
+{
+  "guid": "d577d902-1e61-4e4f-87de-4d9df1b78e6b:c554d8a5-c90b-4eb6-9e69-bb4cca6c2d12",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_157",
+    "nazov": "Okresný súd Bardejov"
+  },
+  "sudca": {
+    "registreGuid": "sudca_878",
+    "meno": "JUDr. Marek Kotora"
+  },
+  "identifikacneCislo": "8622201668",
+  "spisovaZnacka": "SK-6Cb/7/2022",
+  "datumVydania": "29.04.2025",
+  "ecli": "ECLI:SK:KSKE:2025:8622201668.1",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Zmluva o dielo"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-261",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-261"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-373",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-373"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-536",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-536"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-546",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-546"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-562",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-562"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-520",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-520"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_4Cob-55-2024.pdf",
+    "fileExtension": "PDF",
+    "size": 120153,
+    "url": "https://obcan.justice.sk/content/public/item/c554d8a5-c90b-4eb6-9e69-bb4cca6c2d12"
+  },
+  "updateDate": "04.09.2025",
+  "povodnySud": {
+    "registreGuid": "sud_162",
+    "nazov": "Okresný súd Svidník",
+    "adresaString": "Sov. hrdinov 200/35, 08901 Svidník, Slovenská republika",
+    "suradnice": {
+      "zemepisnaDlzka": "21.5712274",
+      "zemepisnaSirka": "49.308686"
+    }
+  },
+  "povodnaSpisovaZnacka": "4Cob/55/2024"
+}

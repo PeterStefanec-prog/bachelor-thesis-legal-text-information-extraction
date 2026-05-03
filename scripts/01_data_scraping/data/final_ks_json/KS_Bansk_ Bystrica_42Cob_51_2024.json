@@ -1,0 +1,62 @@
+{
+  "guid": "9c865ad9-2184-4d58-a3ba-b0aaf2bb39b4:8c720d1e-24a0-450f-a430-00e8f9d56e26",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_138",
+    "nazov": "Krajský súd v Banskej Bystrici"
+  },
+  "sudca": {
+    "registreGuid": "sudca_null",
+    "meno": "JUDr. Marián Blaha"
+  },
+  "identifikacneCislo": "3816203986",
+  "spisovaZnacka": "42Cob/51/2024",
+  "datumVydania": "15.08.2024",
+  "ecli": "ECLI:SK:KSBB:2024:3816203986.3",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Ostatné"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1964/40",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-544.odsek-2",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544.odsek-2"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-667.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-667.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-358",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-358"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_42Cob-51-2024.pdf",
+    "fileExtension": "PDF",
+    "size": 191055,
+    "url": "https://obcan.justice.sk/content/public/item/8c720d1e-24a0-450f-a430-00e8f9d56e26"
+  },
+  "updateDate": "04.09.2025"
+}

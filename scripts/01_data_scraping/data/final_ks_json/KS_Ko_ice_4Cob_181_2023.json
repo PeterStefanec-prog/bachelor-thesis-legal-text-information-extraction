@@ -1,0 +1,68 @@
+{
+  "guid": "2d5388c0-3c48-4355-bd73-a1de1efb8934:e6b44bf6-8f00-4122-befe-e4a767cf0c9a",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_148",
+    "nazov": "Mestský súd Košice"
+  },
+  "sudca": {
+    "registreGuid": "sudca_1545",
+    "meno": "JUDr. Július Tóth"
+  },
+  "identifikacneCislo": "7216206988",
+  "spisovaZnacka": "K2-36Cb/44/2016",
+  "datumVydania": "29.10.2024",
+  "ecli": "ECLI:SK:KSKE:2024:7216206988.2",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Zmluva o dielo"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-536",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-536"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-548",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-548"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-265",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-265"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-39",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-39"
+    },
+    {
+      "nazov": "/SK/ZZ/1964/40/#paragraf-544",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1964/40/#paragraf-544"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_4Cob-181-2023.pdf",
+    "fileExtension": "PDF",
+    "size": 116516,
+    "url": "https://obcan.justice.sk/content/public/item/e6b44bf6-8f00-4122-befe-e4a767cf0c9a"
+  },
+  "updateDate": "20.02.2025",
+  "povodnySud": {
+    "registreGuid": "sud_149",
+    "nazov": "Okresný súd Košice II",
+    "adresaString": "Štúrova 29, 04211 Košice II, Slovenská republika",
+    "suradnice": {
+      "zemepisnaDlzka": "21.2486472",
+      "zemepisnaSirka": "48.7165592"
+    }
+  },
+  "povodnaSpisovaZnacka": "4Cob/181/2023"
+}

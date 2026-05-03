@@ -1,0 +1,56 @@
+{
+  "guid": "bd44d020-ea5d-421e-9e7f-f38f77dd8716:8fafc8e8-0e61-4ce2-8dbe-fcfd14607f11",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Potvrdzujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_131",
+    "nazov": "Okresný súd Žilina"
+  },
+  "sudca": {
+    "registreGuid": "sudca_null",
+    "meno": "Mgr. Radoslava Strhárska"
+  },
+  "identifikacneCislo": "6122355709",
+  "spisovaZnacka": "CA-16C/38/2022",
+  "datumVydania": "10.09.2025",
+  "ecli": "ECLI:SK:KSBB:2025:6122355709.4",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Ostatné"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-370",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-370"
+    },
+    {
+      "nazov": "/SK/ZZ/2015/160/#paragraf-387",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/2015/160/#paragraf-387"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_41Cob-3-2025.pdf",
+    "fileExtension": "PDF",
+    "size": 135614,
+    "url": "https://obcan.justice.sk/content/public/item/8fafc8e8-0e61-4ce2-8dbe-fcfd14607f11"
+  },
+  "updateDate": "17.12.2025",
+  "povodnySud": {
+    "registreGuid": "sud_132",
+    "nazov": "Okresný súd Čadca",
+    "adresaString": "Ul. 17. novembra 1256, 02221 Čadca",
+    "suradnice": {
+      "zemepisnaDlzka": "18.7859418",
+      "zemepisnaSirka": "49.4372539"
+    }
+  },
+  "povodnaSpisovaZnacka": "41Cob/3/2025"
+}

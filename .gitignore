@@ -6,10 +6,8 @@
 ################################
 # IDE / editor configuration
 ################################
-# PyCharm / IntelliJ project files
 .idea/
 .claude/
-# VS Code settings (if you ever use it)
 .vscode/
 
 ################################
@@ -41,54 +39,43 @@ htmlcov/
 .ipynb_checkpoints/
 
 ################################
-# Local data / large files
+# Logs / archives
 ################################
-# local datasets, PDFs, contracts etc. that should not be pushed
-data/
-# log files
 *.log
-
-################################
-# Downloaded / generated DATA (do not push)
-# - Court decisions PDFs + any generated downloads / outputs
-################################
-
-# Your main scraping downloads (entire folders)
-scripts/data_scraping/data/
-
-# Any folder named like downloaded output (your final_scraping)
-final_scraping/stiahnute_podla_csv_final/
-final_scraping/stiahnute_presne_podla_csv/
-
-# If you create other “downloaded” folders in future, ignore them too
-**/stiahnute_*/
-
-# Ignore typical downloaded/large binary formats (anywhere)
-*.pdf
 *.zip
 *.7z
 *.tar
 *.gz
 
-# Optional: in case of  storing extracted text / intermediate artefacts locally
-#*.jsonl
-#*.parquet
+################################
+# data/ — default ignore, approved subfolders will be added down
+################################
+data/*
+
+# what i commit
+!data/01_raw_pdfs/
+
+
+# never commit - too big
+data/04_vectorstore/
+data/04_vectorstore_hier/
 
 ################################
-# Preprocessing outputs ( local artefacts)
+# scripts/ data outputs — small, OK commit
 ################################
-preprocessing/*.pdf
-preprocessing/selected_chunks.csv
+!scripts/01_data_scraping/data/
+scripts/01_data_scraping/data/old/
+scripts/01_data_scraping/data/final_nsud_pdfs_rejected/
 
 ################################
-# keeping empty data dirs in repo with a placeholder
-# (creating e.g. data_scraping/data/.gitkeep and then unignore it)
+# preprocessing demo (local)
 ################################
-!scripts/data_scraping/data/.gitkeep
-!final_scraping/stiahnute_podla_csv_final/.gitkeep
-!final_scraping/stiahnute_presne_podla_csv/.gitkeep
+preprocessing_just_for_showing_to_lawyer/*.pdf
+preprocessing_just_for_showing_to_lawyer/selected_chunks.csv
 
-# ChromaDB
-data/04_vectorstore_old/04_vectorstore/
-src/evaluation_retrieval/data/04_vectorstore/
-data/04_vectorstore_old/
+################################
+# scripts/ — old scrapers a old/ folders (save just locally)
+################################
+scripts/01_data_scraping/bin/
+scripts/02_download_decision/old/
+scripts/02_download_decision/data/

@@ -1,0 +1,47 @@
+{
+  "guid": "51f3187b-1fdf-4317-9813-642bbd18aa81:63cb95ed-6bd7-4e7f-b1e5-a57b9024d8bb",
+  "formaRozhodnutia": "Rozsudok",
+  "povaha": [
+    "Zrušujúce",
+    "Zmeňujúce"
+  ],
+  "sud": {
+    "registreGuid": "sud_123",
+    "nazov": "Krajský súd v Nitre"
+  },
+  "sudca": {
+    "registreGuid": "sudca_245",
+    "meno": "JUDr. Pavol Pilek"
+  },
+  "identifikacneCislo": "4105220661",
+  "spisovaZnacka": "26Cob/52/2016",
+  "datumVydania": "01.12.2016",
+  "ecli": "ECLI:SK:KSNR:2016:4105220661.4",
+  "oblast": [
+    "Obchodné právo"
+  ],
+  "podOblast": [
+    "Zmluva o dielo"
+  ],
+  "odkazovanePredpisy": [
+    {
+      "nazov": "/SK/ZZ/1991/513",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-551.odsek-1",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-551.odsek-1"
+    },
+    {
+      "nazov": "/SK/ZZ/1991/513/#paragraf-301",
+      "url": "https://www.slov-lex.sk/pravne-predpisy/SK/ZZ/1991/513/#paragraf-301"
+    }
+  ],
+  "dokument": {
+    "name": "Rozsudok_26Cob-52-2016.pdf",
+    "fileExtension": "PDF",
+    "size": 107912,
+    "url": "https://obcan.justice.sk/content/public/item/63cb95ed-6bd7-4e7f-b1e5-a57b9024d8bb"
+  },
+  "updateDate": "26.09.2023"
+}
