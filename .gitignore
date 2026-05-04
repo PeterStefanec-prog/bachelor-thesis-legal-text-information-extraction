@@ -54,6 +54,8 @@ data/*
 
 # what i commit
 !data/01_raw_pdfs/
+!data/02_processed_json/
+!data/02_debug_steps/
 
 
 # never commit - too big
