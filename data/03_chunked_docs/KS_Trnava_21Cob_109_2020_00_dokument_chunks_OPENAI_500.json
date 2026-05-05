@@ -1,0 +1,842 @@
+[
+    {
+        "page_content": "1. Rozsudkom (v poradní prvým) súd prvej inštancie I. žalovanej uložil povinnosť zaplatiť žalobkyni sumu 600 eur spolu s úrokom z omeškania vo výške 9 % ročne zo sumy 600 eur od 29.8.2017 do zaplatenia a paušálnu náhradu nákladov spojených s uplatnením pohľadávky vo výške 40 eur, a to do troch dní od právoplatnosti rozsudku, II. vo zvyšku žalobu zamietol, III. žalovanej priznal právo na náhradu trov konania voči žalobkyni v rozsahu 60 %.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 0,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 441,
+            "token_len": 209
+        }
+    },
+    {
+        "page_content": "2. Na základe odvolania žalobkyne proti predmetnému rozsudku uznesením z 26.11.2019 sp. zn. 21Cob/43/2019 odvolací súd I. odvolanie žalobkyne voči výroku I napadnutého rozsudku odmietol, II. napadnutý rozsudok zrušil vo výrokoch II a III a v tomto rozsahu vrátil vec súdu prvej inštancie na ďalšie konanie a nové rozhodnutie. Uložil súdu prvej inštancie v ďalšom konaní (ktorého predmetom zostala suma 2.400 eur s 9 % ročným úrokom z omeškania od 29.8.2017), ujasniť si a stranám náležite sprístupniť názor, či hodlá zužovať rozsah aplikácie konkurenčnej doložky (§ 672a ods. 2 Obchodného zákonníka) alebo znižovať rozsah následku jej porušenia (§ 301 Obchodného zákonníka). Pretože aplikácia § 672a ods. 2 Obchodného zákonníka už vzhľadom na čiastočne právoplatný výrok o priznaní časti zmluvnej pokuty neprichádzala zmysluplne do úvahy, mal sa súd prvej inštancie riadne zaoberať naplnením všetkých podmienok moderácie zmluvnej pokuty v § 301 Obchodného zákonníka.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 1,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 966,
+            "token_len": 452
+        }
+    },
+    {
+        "page_content": "3. Rozsudkom (v poradní druhým) súd prvej inštancie I. žalovanej uložil povinnosť zaplatiť žalobkyni sumu 2.400 eur spolu s úrokom z omeškania vo výške 9 % ročne zo sumy 2.400 eur od 29.8.2017 do zaplatenia, a to do troch dní od právoplatnosti rozsudku, II. žalobkyni priznal nárok na náhradu trov prvoinštančného a odvolacieho konania voči žalovanej v plnom rozsahu.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 2,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 367,
+            "token_len": 172
+        }
+    },
+    {
+        "page_content": "Právne svoje rozhodnutie odôvodnil ustanoveniami § 1 ods. 1 a 2, § 261 ods. 1, § 262 ods. 1 a 2, § 269 ods. 2, § 301, § 365, § 369 ods. 1 a 2, § 672a ods. 1 a 2, zákona č. 513/1991 Zb. Obchodný zákonník (ďalej len \"Obchodný zákonník\"), § 491 ods. 2, § 544 ods. 1 a 2 zákona č. 40/1964 Zb. Občiansky zákonník (ďalej len \"Občiansky zákonník\"), § 2 ods. 1, 5, § 8 zákona č. 186/2009 Z.z. o finančnom sprostredkovaní a finančnom poradenstve a o zmene a doplnení niektorých zákonov (ďalej \"zákon o finančnom sprostredkovaní\"), § 1 ods. 1 a 2, § 2 Nariadenia vlády Slovenskej republiky č. 21/2013 Z.z., ktorým sa vykonávajú niektoré ustanovenia Obchodného zákonníka (ďalej \"nariadenie\").",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 3,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 681,
+            "token_len": 358
+        }
+    },
+    {
+        "page_content": "Vecne zdôvodnil, že predmetom konania po nadobudnutí právoplatnosti výroku I. rozsudku súdu prvej inštancie z 9.1.2019 zostal nárok žalobkyne na zaplatenie sumy 2.400 eur spolu s úrokom z omeškania z uvedenej sumy. Vykonaným dokazovaním mal preukázané, že medzi právnym predchodcom žalobkyne a žalovanou prišlo k platnému uzatvoreniu zmluvy o vykonávaní finančného sprostredkovania, predmetom ktorej bola úprava podmienok pri vykonávaní finančného sprostredkovania agentom ako viazaným finančným agentom (t.j. žalovanou) pre právneho predchodcu žalobkyne. Podľa výpisu z registra finančných agentov žalovaná porušila svoju povinnosť vyplývajúcu zo zmluvy, a to nevykonávať obdobnú činnosť v oblasti finančného sprostredkovania a poradenstva po dobu 3 mesiacov od ukončenia zmluvného vzťahu (dňa 1.8.2017 bola zapísaná do registra finančných agentov, hoci trojmesačná doba uplynula až",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 4,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 883,
+            "token_len": 380
+        }
+    },
+    {
+        "page_content": "od ukončenia zmluvného vzťahu (dňa 1.8.2017 bola zapísaná do registra finančných agentov, hoci trojmesačná doba uplynula až dňa 2.9.2017). Mal za to, že žalobkyňa nie je povinná preukazovať ďalšie skutočnosti a na naplnenie následkov konkurenčnej doložky postačuje samotný zápis v predmetnom registri. V súvislosti s námietkou žalovanej, že predmetná konkurenčná doložka je neplatná z dôvodu, že je upravená príliš široko, nekonkrétne a územne neohraničene, konštatoval, že vecný a časový rozsah považuje za určený v súlade s pravidlami upravenými v ustanovení § 672a ods. 2 Obchodného zákonníka. Nemal za to, že by konkurenčná doložka bola neprimeraná a vzájomne nevyvážená, resp. že by žalovanú ako obchodnú zástupkyňu obmedzovala viac, ako vyžaduje potrebná miera ochrany zastúpeného. Poukázal na zásadu zmluvnej voľnosti, keď",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 5,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 829,
+            "token_len": 379
+        }
+    },
+    {
+        "page_content": "zástupkyňu obmedzovala viac, ako vyžaduje potrebná miera ochrany zastúpeného. Poukázal na zásadu zmluvnej voľnosti, keď predmetná konkurenčná doložka bola uzatvorená medzi stranami sporu v rámci ich podnikateľskej činnosti. V súlade s právnym názorom odvolacieho súdu dodal, že aplikácia ustanovenia § 672a ods. 2 Obchodného zákonníka vzhľadom na čiastočne právoplatný výrok o priznaní časti zmluvnej pokuty neprichádzala zmysluplne do úvahy.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 6,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 442,
+            "token_len": 202
+        }
+    },
+    {
+        "page_content": "Súčasne zmluvu nepovažoval za neplatnú pre rozpor s dobrými mravmi, a to s odkazom na ustálenú judikatúru súdov, v zmysle ktorej za právny úkon priečiaci sa dobrým mravom treba považovať len taký úkon, ktorý je všeobecne neakceptovateľný z hľadiska v spoločnosti prevládajúcich mravných zásad a princípov vzájomných vzťahov medzi ľuďmi (ZSP 5/2004). Na základe uvedeného uzavrel, že žalobkyni patrí nárok na zaplatenie dohodnutej zmluvnej pokuty. Na základe návrhu žalovanej preskúmal, či sú naplnené podmienky moderácie zmluvnej pokuty podľa ustanovenia § 301 Obchodného zákonníka, ktorými sú najmä hodnota a význam zabezpečovanej povinnosti, hospodárska pozícia zmluvných strán pri uzatváraní zmluvy, spôsob zapracovania zmluvnej pokuty do zmluvy, reciprocita zmluvnej pokuty, druh zavinenia dlžníka, prípadne či vznikla",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 7,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 822,
+            "token_len": 373
+        }
+    },
+    {
+        "page_content": "spôsob zapracovania zmluvnej pokuty do zmluvy, reciprocita zmluvnej pokuty, druh zavinenia dlžníka, prípadne či vznikla škoda, so zohľadnením prevenčnej a uhradzovacej funkcie zmluvnej pokuty. Keďže tieto skutočnosti bola povinná tvrdiť a dokázať žalovaná, čo však neurobila, neuniesla v spore dôkazné bremeno. Súd tak nemal preukázané podmienky umožňujúce moderáciu zmluvnej pokuty, a preto žalobe vyhovel v celom rozsahu (resp. v rozsahu, ktorý zostal predmetom konania).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 8,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 473,
+            "token_len": 206
+        }
+    },
+    {
+        "page_content": "K argumentácii žalovanej, že žalobkyňa sa v iných obdobných prípadoch nedomáhala zaplatenia zmluvnej pokuty od tretích osôb (obchodných zástupcov) v rovnakom postavení, ktorí takisto porušili konkurenčnú doložku, uviedol, že uvedená skutočnosť bola pre rozhodnutie v danej veci irelevantná a nemala vplyv na posúdenie dôvodnosti výšky zmluvnej pokuty. Vo vzťahu k námietke žalovanej, že okrem životného poistenia vykonávala pre iný subjekt (t.j. pre poisťovňu Uniqa, a.s.) činnosť aj v iných druhoch poistenia, ktorú jej konkurenčná doložka nezakazovala, poukázal na to, že konkurenčnú doložku nepovažuje za neplatnú pre jej neprimeranosť alebo vzájomnú nevyváženosť. Preto postačovalo, že vykonávala pre iný subjekt činnosť upravenú v predmetnej konkurenčnej doložke a nebolo rozhodujúce, či v predmetnom období uzatvorila nejakú zmluvu v odvetví životného poistenia. Súd pri rozhodovaní neprihliadal ani na trestné konanie, na ktoré poukázala žalobkyňa, nakoľko jeho výsledok by nemal pre posúdenie dôvodnosti nároku žalobkyne vplyv, keďže sa týkalo iných skutkových okolností.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 9,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1079,
+            "token_len": 460
+        }
+    },
+    {
+        "page_content": "V časti o trovách konania svoje rozhodnutie odôvodnil ust. § 255 ods. 1 v spojení s § 396 ods. 3, § 262 ods. 2 zákona č. 160/2015 Z.z. Civilný sporový poriadok (ďalej \"CSP\"), vecne úspechom žalobkyne v plnom rozsahu.\n\n4. Proti tomuto rozsudku podala žalovaná včas odvolanie, s návrhom na jeho zmenu zamietnutím žaloby.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 10,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 318,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "Odvolanie odôvodnila ustanovením § 365 ods. 1 písm. b/, f/, h/ CSP. Namietala absolútnu neplatnosť konkurenčnej doložky. Nesúhlasila so záverom súdu prvej inštancie a rovnako aj odvolacieho súdu o tom, že aplikácia § 672a ods. 2 Obchodného zákonníka už vzhľadom na čiastočne právoplatný výrok o priznaní časti zmluvnej pokuty neprichádza zmysluplne do úvahy a že je dôvodné sa zaoberať len možnosťou moderácie zmluvnej pokuty v zmysle § 301 Obchodného zákonníka. Súd prvej inštancie vec ako celok nesprávne právne posúdil. V konaní sa náležite a riadne nezaoberal platnosťou zmluvne dojednanej konkurenčnej doložky a v rozhodnutí absentuje akákoľvek úvaha súdu preukazujúca správnosť záverov o platnosti konkurenčnej doložky. Konkurenčná doložka upravená v zmluve uzatvorenej medzi žalobkyňou a žalovanou v znení Dodatku č. 1 neobsahuje",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 11,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 836,
+            "token_len": 378
+        }
+    },
+    {
+        "page_content": "doložky. Konkurenčná doložka upravená v zmluve uzatvorenej medzi žalobkyňou a žalovanou v znení Dodatku č. 1 neobsahuje vymedzenie teritória, na ktoré by sa mala vzťahovať, a preto konkurenčná doložka nebola medzi žalobkyňou a žalovanou platne dohodnutá. Takto dojednaná konkurenčná doložka je teda absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka, ktorý svojím obsahom odporuje kogentnému ustanoveniu zákona.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 12,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 428,
+            "token_len": 191
+        }
+    },
+    {
+        "page_content": "Žalobkyňa si nemôže úspešne uplatňovať nárok na zaplatenie zmluvnej pokuty, pretože ak hlavný záväzok nie je dohodnutý platne, nemôže nastať ani povinnosť plniť záväzok akcesorický, ktorý mal zabezpečovať plnenie hlavnej zmluvnej povinnosti. Nevymedzenie územnej pôsobnosti konkurenčnej doložky je neprimeraným zásahom aj do ústavne garantovaného práva slobodného podnikania, nakoľko žalobkyňa príliš širokým a neurčitým rozsahom obmedzila žalovanú nad mieru nevyhnutnú na ochranu svojich záujmov. Súd prvej inštancie sa nezaoberal ani rozsahom obmedzovanej činnosti, v zmysle ktorej žalovaná nemohla vykonávať žiadnu činnosť v oblasti finančného sprostredkovania a/alebo finančného poradenstva v sektore poistenia alebo zaistenia, ani žiadnu obdobnú činnosť v rámci finančnej inštitúcie, a to v pracovnom pomere, v inom pracovnoprávnom vzťahu, mimo pracovného pomeru,",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 13,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 868,
+            "token_len": 375
+        }
+    },
+    {
+        "page_content": "činnosť v rámci finančnej inštitúcie, a to v pracovnom pomere, v inom pracovnoprávnom vzťahu, mimo pracovného pomeru, ako podnikateľ, alebo na akomkoľvek inom zmluvnom základe, pre žiadnu fyzickú osobu alebo právnickú osobu. Takto široko koncipovaná konkurenčná doložka (týkajúca sa aj činností, ktoré žalobkyňa nie je oprávnená vykonávať) neprimeraným a nevyváženým spôsobom obmedzila žalovanú v jej ústavne garantovanom práve na slobodné podnikanie. Žalobkyňa sama nevykonáva všetky činnosti v sektore poistenia a zaistenia (naviac nikdy nevykonávala a ani nevykonáva činnosť v sektore zaistenia). Konkurenčnou doložkou sa obmedzila činnosť žalovanej vykonávať aj akúkoľvek obdobnú činnosť v rámci finančnej inštitúcie, čo je potrebné považovať za neurčité vymedzenie. Preto je v rozpore aj s dobrými mravmi, nakoľko sa ňou nesleduje len",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 14,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 839,
+            "token_len": 372
+        }
+    },
+    {
+        "page_content": "čo je potrebné považovať za neurčité vymedzenie. Preto je v rozpore aj s dobrými mravmi, nakoľko sa ňou nesleduje len ochrana žalobkyne pred neprípustným konkurenčným správaním sa žalovanej, ale svojimi dôsledkami znamená popretie práva žalovanej na slobodné podnikanie a vylúčenie konkurencie vôbec, čo zakladá jej absolútnu neplatnosť.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 15,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 337,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "Ďalej namietala, že súd prvej inštancie sa náležite nezaoberal ani splnením podmienok odôvodňujúcich zníženie zmluvnej pokuty a prekvapivo sa odklonil od pôvodného právneho názoru vysloveného v rozsudku z 9.1.2019. Nestotožnila sa s tvrdením súdu, že neuniesla dôkazné bremeno ohľadne dôvodnosti zníženia zmluvnej pokuty. Súd prvej inštancie nezohľadnil skutočnosť, že žalovaná len po dobu jedného mesiaca (doba zostávajúca do uplynutia 3 mesiacov) vykonávala služby v sektore poistenia, že konkurenčná doložka neobsahuje vymedzenie teritória a vymedzený rozsah činností je neprimeraný, nevyvážený a aj neurčitý a že žalobkyni nevznikla žiadna škoda.\n\n5. Žalobkyňa navrhla rozsudok súdu prvej inštancie ako vecne správny potvrdiť. Mala za to, že žalovaná uvádza viaceré novoty v odvolacom konaní, na čo nie sú splnené procesné podmienky.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 16,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 837,
+            "token_len": 379
+        }
+    },
+    {
+        "page_content": "Žalovaná nepreukázala, z akého dôvodu v odvolaní uvádzané novoty nemohla predložiť/uviesť skôr, preto by odvolací súd nemal na takéto prostriedky procesnej obrany/procesného útoku prihliadnuť. Ak mala žalovaná pochybnosti o správnosti výroku I rozsudku z 9.1.2019, nič jej nebránilo podať proti predmetnému výroku odvolanie, nakoľko iba jej svedčala v tomto smere aktívna legitimácia na podanie odvolania. Za nesprávne považovala tvrdenie žalovanej o tom, že súd by mal opätovne preskúmať zákonnosť a dôvodnosť zmluvne dojednanej konkurenčnej doložky podľa § 672a Obchodného zákonníka, nakoľko tak už súd prvej inštancie v rozsudku z 9.1.2019 urobil. Rozhodovanie o platnosti konkurenčnej doložky na účely ďalšieho konania bolo irelevantné, a to aj vzhľadom na už právoplatný výrok I rozsudku z 9.1.2019 tak, ako to uviedol",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 17,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 823,
+            "token_len": 371
+        }
+    },
+    {
+        "page_content": "konania bolo irelevantné, a to aj vzhľadom na už právoplatný výrok I rozsudku z 9.1.2019 tak, ako to uviedol aj odvolací súd vo svojom rozhodnutí z 26.11.2019 sp. zn. 21Cob/43/2019. Nesúhlasila s argumentáciou žalovanej ohľadom absencie teritoriálneho vymedzenia konkurenčnej doložky z dôvodu, že ide o novotu v odvolacom konaní. Znenie konkurenčnej doložky bolo platne dojednané, zo znenia doložky implicitne vyplýva, že sa má vzťahovať na územie Slovenskej republiky, a to aj v kontexte toho, čo sa má ňou chrániť, t.j. poistný kmeň. Územie celej Slovenskej republiky, prípadne dlhšia doba trvania obmedzenia nezakladajú samé o sebe neprimeranosť konkurenčnej doložky. Vecný rozsah obmedzenia bol v konkurenčnej doložke dohodnutý platne, nakoľko vychádza z delenia sektorov podľa zákona o finančnom sprostredkovaní. Žalovaná bola aj naďalej",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 18,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 842,
+            "token_len": 368
+        }
+    },
+    {
+        "page_content": "dohodnutý platne, nakoľko vychádza z delenia sektorov podľa zákona o finančnom sprostredkovaní. Žalovaná bola aj naďalej oprávnená vykonávať niektorú z činností spadajúcich do iných sektorov. Konkurenčná doložka nebola výsledkom príkazu žalobkyne, ale došlo k jej dohodnutiu a uzavretiu medzi dvoma podnikateľskými subjektmi, na ktoré sa vzťahuje princíp zmluvnej voľnosti. Striktne stanovila ako konkurenčné prostredie výlučne iba sektor poistenia a zaistenia a vôbec neobmedzila pôsobenie žalovanej ako finančného agenta v iných sektoroch finančného trhu, čím by došlo skutočne k obmedzeniu jej práva na prácu.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 19,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 612,
+            "token_len": 260
+        }
+    },
+    {
+        "page_content": "Vo vzťahu k moderácii zmluvnej pokuty uviedla, že medzi žalobkyňou a žalovanou nebolo sporné, že žalovaná vykonávala počas doby dohodnutej v konkurenčnej doložke činnosť, ktorá mala konkurenčný charakter k činnosti žalobkyne. Spornou bola doba, počas ktorej žalovaná vykonávala konkurenčnú činnosť, pričom túto dobu žalovaná relativizuje, keď hovorí len o jednom mesiaci. Poukázala pritom na nález Ústavného súdu Českej republiky z 2.5.2019 sp. zn. II. ÚS 3101/18. Konkurenčná doložka upravená v zmluve bola na rozdiel od zákonnej úpravy dohodnutá medzi stranami sporu vo výrazne kratšom čase (t. j. tri mesiace oproti dvom rokom), čo nemôže za daných okolností obmedziť právo žalovanej na podnikanie v takom rozsahu, v akom to prezentuje. Pre uplatnenie dodržiavania konkurenčnej doložky nie je povinnosťou zastúpeného preukázať vznik škody ako",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 20,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 845,
+            "token_len": 365
+        }
+    },
+    {
+        "page_content": "v akom to prezentuje. Pre uplatnenie dodržiavania konkurenčnej doložky nie je povinnosťou zastúpeného preukázať vznik škody ako ani zneužitie informácií na strane finančného agenta. Vo vzťahu k namietanej neprimeranosti dojednanej zmluvnej pokuty poukázala na prehľad vyplatenej provízie žalovanej počas pôsobenia u žalobkyne (preukazujúci objem obratov sprostredkovaných obchodov so zákazníkmi žalobkyne) a dlh žalovanej u žalobkyne vzniknutý v dôsledku zániku sprostredkovaných zmlúv s klientmi v priebehu prvých 24 mesiacov ich existencie, čo môže mať za následok tzv. prezmluvnenie klientov a uzatvorenie nových zmlúv s tými istými klientmi žalobkyne za účelom získania nových a vyšších provízií pre žalovanú ako finančného agenta potenciálne aj u nového zastúpeného. Konkurenčná doložka má chrániť zastúpeného, aby mu bývalý finančný agent po zániku zmluvy o vykonávaní",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 21,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 874,
+            "token_len": 374
+        }
+    },
+    {
+        "page_content": "zastúpeného. Konkurenčná doložka má chrániť zastúpeného, aby mu bývalý finančný agent po zániku zmluvy o vykonávaní finančného sprostredkovania neprevzal sieť zákazníkov a nepreniesol ich k inej osobe, na účet ktorej bude následne vykonávať finančné sprostredkovanie a aby vytvorenú sieť neprevzal sám a nezásoboval ju napr. výrobkami substitučnými k výrobkom zastúpeného. Mala za to, že v konaní preukázala, že konkurenčná doložka bola dohodnutá platne aj primerane (stanovením obdobia 3 mesiacov po ukončení zmluvy a striktne len pre vymedzené pôsobenie u konkurenčnej poisťovne a nie zamedzenie všeobecného pôsobenia finančného agenta na finančnom trhu) a že žalovaná pôsobila počas doby 3 mesiacov od skončenia zmluvy u konkurenčnej poisťovne.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 22,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 747,
+            "token_len": 318
+        }
+    },
+    {
+        "page_content": "6. Žalovaná sa v odvolacej replike pridržala podaného odvolania. Doplnila, že žalobkyňa novoty uvádzané žalovanou žiadnym spôsobom nekonkretizovala, preto nemal by odvolací súd na jej vyjadrenie prihliadať. Odmietla tvrdenie žalobkyne, že poukazovanie na absenciu teritoriálneho vymedzenia konkurenčnej doložky je nutné považovať za neprípustnú novotu v odvolacom konaní. Z vyjadrení žalovanej v priebehu konania jasne vyplýva, že žalovaná opätovne poukazovala na absenciu predmetnej zákonnej náležitosti konkurenčnej doložky a z nej odvodzovala jej neplatnosť. Poukázala pritom na zápisnicu o pojednávaní z 20.5.2020. Z ustanovenia čl. XI bod 2. zmluvy, ako ani z jej celého obsahu explicitne ani implicitne nevyplýva, že sa má konkurenčná doložka vzťahovať na územie Slovenskej republiky. K tvrdeniu žalobkyne, že konkurenčná doložka nebola výsledkom príkazu žalobcu,",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 23,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 869,
+            "token_len": 373
+        }
+    },
+    {
+        "page_content": "vzťahovať na územie Slovenskej republiky. K tvrdeniu žalobkyne, že konkurenčná doložka nebola výsledkom príkazu žalobcu, ale došlo k dohodnutiu a uzavretiu medzi dvoma podnikateľskými subjektami, na ktorých sa vzťahuje princíp zmluvnej voľnosti, uviedla, že zmluvy obsahujúce vzájomne neekvivalentné zmluvné protiplnenia nie sú ako také v rozpore s dobrými mravmi, a teda neplatné v zmysle § 39 Občianskeho zákonníka. Ak by však dojednanie vzájomne nevyvážených plnení bolo výsledkom zneužitia nejakého subjektívneho handicapu zmluvnej strany, výkon práv takto zvýhodnenej zmluvnej strany, by nemusel požívať právnu ochranu v zmysle § 265 Obchodného zákonníka, pokiaľ ide o obchodnoprávne vzťahy. S ohľadom na skutočnosť, že nemala možnosť ovplyvniť obsah zmluvy, bola vo vzťahu k žalobkyni pri podpisovaní zmluvy v nerovnakej",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 24,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 826,
+            "token_len": 367
+        }
+    },
+    {
+        "page_content": "na skutočnosť, že nemala možnosť ovplyvniť obsah zmluvy, bola vo vzťahu k žalobkyni pri podpisovaní zmluvy v nerovnakej pozícií, a teda nemala priestor na vyjednanie lepších, resp. vôbec nejakých zmluvných podmienok. Žalobkyňa tak preukázateľne využila svoje dominantné postavenie a nulovú vyjednávaniu pozíciu žalovanej vo svoj prospech s tým, že žalovaná musela uzavrieť zmluvu aj so zmluvnými podmienkami, na ktoré by inak nepristúpila. Tvrdenie žalobkyne, že konkurenčná doložka striktne stanovila ako konkurenčné prostredie výlučne iba sektor poistenia a zaistenia je zavádzajúce, a to s ohľadom na dodatok v ustanovení čl. XI bod 2. zmluvy, ktorý znie \"ani žiadnu obdobnú činnosť v rámci finančnej inštitúcie\". Dĺžka konkurenčnej činnosti je nepodstatná s ohľadom na skutočnosť, že žalovaná nikdy nedisponovala informáciami, ktorých",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 25,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 838,
+            "token_len": 367
+        }
+    },
+    {
+        "page_content": "inštitúcie\". Dĺžka konkurenčnej činnosti je nepodstatná s ohľadom na skutočnosť, že žalovaná nikdy nedisponovala informáciami, ktorých vyzradenie by bolo spôsobilé ohroziť žalobkyňu. Žalovaná bola počas pôsobenia u žalobkyne radovou poradkyňou a nedisponovala informáciami, ktoré by neboli voľne prístupné na internetových stránkach žalobkyne, rovnako poistný kmeň, ktorý má konkurenčná doložka chrániť, si žalovaná vytvorila sama a nebol je daný žiadny od žalobkyne. Tvrdenia žalobkyne o prezmluvnení klientov a získaní nových vyšších provízií u nového zastúpeného považovala za umelo vykonštruované, bez reálneho podkladu. Žalobkyňa nepreukázala, že ku konaniu, ktoré opísala, reálne došlo, a preto nie je možné na takéto tvrdenia žalobkyne prihliadať.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 26,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 754,
+            "token_len": 331
+        }
+    },
+    {
+        "page_content": "7. Krajský súd v Trnave ako súd odvolací (§ 34 CSP), po zistení, že odvolanie bolo podané včas (§ 362 ods. 1 CSP), oprávneným subjektom - stranou, v ktorej neprospech bolo rozhodnutie vydané (§ 359 CSP), proti rozhodnutiu súdu prvej inštancie, proti ktorému zákon odvolanie pripúšťa (§ 355 ods. 1 CSP), po skonštatovaní, že podané odvolanie má zákonné náležitosti (§ 127 a § 363 CSP) a že odvolateľka použila zákonom prípustné odvolacie dôvody (§ 365 ods. 1 CSP), preskúmal rozhodnutie v medziach daných rozsahom (§ 379 CSP) a dôvodmi odvolania (§ 380 ods. 1 CSP), po zopakovaní dokazovania na pojednávaní v potrebnom rozsahu listinnými dôkazmi, dospel k záveru, že odvolanie žalovanej je dôvodné.\n\n8. V predmetnej veci založil súd prvej inštancie svoje rozhodnutie na názore o vzniku nároku žalobkyne voči žalovanej na zaplatenie zmluvnej pokuty z dôvodu porušenia povinnosti žalovanou vyplývajúcej z konkurenčnej doložky (považujúc konkurenčnú doložku v zmluve o vykonávaní finančného sprostredkovania z 1.9.2013 za platnú a zmluvnú pokutu za primeranú).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 27,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1056,
+            "token_len": 474
+        }
+    },
+    {
+        "page_content": "9. Podľa čl. XI bod 2 zmluvy o vykonávaní finančného sprostredkovania z 1.9.2013 (ďalej \"zmluvy\") agent sa zaväzuje, pokiaľ nie je písomne dohodnuté inak, 6 mesiacov po zániku zmluvy nevykonávať akúkoľvek činnosť v oblasti finančného sprostredkovania a/alebo finančného poradenstva v sektore poistenia alebo zaistenia, ani žiadnu obdobnú činnosť v rámci finančnej inštitúcie, a to v pracovnom pomere, v inom pracovnoprávnom vzťahu, mimo pracovného pomeru, ako podnikateľ, alebo na akomkoľvek inom zmluvnom základe, pre žiadnu fyzickú osobu alebo právnickú osobu.\n\n10. Podľa čl. VII bod 1 druhá veta zmluvy ak agent poruší povinnosť uvedenú v čl. XI bod 1 alebo bod 2 zmluvy, má ING právo požadovať od agenta uhradenie zmluvnej pokuty za každé takéto porušenie povinnosti vo výške 5.000 eur.\n\n11. Podľa bodu 4 dodatku č. 1 z 2.9.2013 k zmluve o vykonávaní finančného sprostredkovania (ďalej \"dodatku\") v článku VII bod 1 druhá veta sa text \"5.000 eur\" mení na \"3.000 eur\".\n\n12. Podľa bodu 5 dodatku v článku XI bod 2 sa text \"6 mesiacov\" mení na \"3 mesiace\".",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 28,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1057,
+            "token_len": 487
+        }
+    },
+    {
+        "page_content": "12. Podľa bodu 5 dodatku v článku XI bod 2 sa text \"6 mesiacov\" mení na \"3 mesiace\".\n\n13. Podľa § 672a ods. 1 Obchodného zákonníka v zmluve možno písomne dohodnúť, že obchodný zástupca nesmie najdlhšie dva roky po skončení zmluvy na určenom území alebo voči určenému okruhu zákazníkov na tomto území vykonávať na vlastný alebo cudzí účet činnosť, ktorá bola predmetom obchodného zastúpenia, alebo inú činnosť, ktorá by mala súťažnú povahu voči podnikaniu zastúpeného.\n\n14. Podľa § 672a ods. 2 Obchodného zákonníka v prípade pochybností môže súd konkurenčnú doložku, ktorá by obmedzovala obchodného zástupcu viac, ako vyžaduje potrebná miera ochrany zastúpeného, obmedziť alebo vyhlásiť za neplatnú.\n\n15. Ustanovenie § 672a Obchodného zákonníka je transpozíciou čl. 20 Smernice Rady 86/653/EHS z 18. decembra 1986 o koordinácii právnych predpisov členských štátov týkajúcich sa samostatných obchodných zástupcov (Mimoriadne vydanie Ú.v. EÚ, kap. 6/zv. 1, Ú.v. ES L 382, 31.12.1986) (ďalej \"smernice o obchodných zástupcoch\").",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 29,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1024,
+            "token_len": 492
+        }
+    },
+    {
+        "page_content": "16. Podľa čl. 20 bod 1 až 4 smernice o obchodných zástupcoch, 1. Na účely tejto smernice sa dohoda, ktorá obmedzuje činnosť obchodného zástupcu po skončení platnosti zmluvy o obchodnom zastúpení ďalej označuje ako doložka o obmedzení obchodu.\n\n2. Doložka o obmedzení obchodu platí však iba vtedy, ak:\n\na) je uzatvorená písomne a b) vzťahuje sa na geografické územie alebo skupinu zákazníkov zverených obchodnému zástupcovi a na druh tovaru, ktorého sa dohoda o obchodnom zastúpení týkala.\n\n3. Doložka o obmedzení obchodu platí najviac dva roky po skončení platnosti dohody o obchodnom zastúpení.\n\n4. Týmto článkom nie sú dotknuté právne predpisy členských štátov, ktoré ukladajú ďalšie obmedzenia platnosti alebo účinnosti doložky o obmedzení obchodu, alebo ktoré umožňujú súdom znížiť povinnosti zmluvných strán vyplývajúcich z takejto dohody.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 30,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 844,
+            "token_len": 384
+        }
+    },
+    {
+        "page_content": "17. Ustanovenie § 672a Obchodného zákonníka umožňuje, aby si zmluvné strany dohodli konkurenčnú doložku, v ktorej sa obchodný zástupca môže zaviazať, že nebude najdlhšie dva roky po skončení zmluvy na určenom území alebo voči určenému okruhu zákazníkov na tomto území vykonávať na vlastný alebo cudzí účet činnosť, ktorá bola predmetom obchodného zastúpenia, alebo aj inú činnosť, ktorá by vo vzťahu k podnikaniu zastúpeného mala súťažnú povahu. Dohoda musí mať písomnú formu a musí byť obmedzená obdobím (najviac dvoch rokov) a môže sa vzťahovať len na určitú územnú oblasť, určitých zákazníkov a určité obchody. V prípade, ak konkurenčná neobsahuje tieto pravidlá, prípadne je s nimi v rozpore, je v danej časti neplatná.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 31,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 723,
+            "token_len": 331
+        }
+    },
+    {
+        "page_content": "18. Smernica o obchodných zástupcoch, ako aj Obchodný zákonník, majú zabezpečovať poskytnutie primeranej miery ochrany záujmov obchodného zástupcu. Táto zvýšená miera ochrany sa prejavuje v možnosti, aby v prípade pochybností súd konkurenčnú doložku, ktorá by obmedzovala obchodného zástupcu viac, ako vyžaduje potrebná miera ochrany zastúpeného, obmedzil alebo vyhlásil za neplatnú, ako aj v možnosti, aby konkrétne sporné konania obchodného zástupcu posudzoval konajúci súd v kontexte tejto zvýšenej miery ochrany.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 32,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 516,
+            "token_len": 225
+        }
+    },
+    {
+        "page_content": "19. Konkurenčná doložka je stanovená na ochranu oprávnených záujmov zastúpeného pri jeho účasti v hospodárskej súťaži;",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 33,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 118,
+            "token_len": 56
+        }
+    },
+    {
+        "page_content": "zastúpený sa konkurenčnou doložkou chráni pred činnosťou obchodného zástupcu, ktorá by mala súťažnú povahu. Požiadavkou na obmedzenie zákazu konkurencie, ako z hľadiska doby jej trvania, tak z hľadiska územného a prípadne tiež osobného rozsahu (čo do okruhu tretích osôb), potom zákonná úprava sleduje ochranu oprávnených záujmov obchodného zástupcu ako podnikateľa. Ide o to, aby obmedzenie práva obchodného zástupcu podnikať malo jasne vymedzené hranice, stanovené v konkurenčnej doložke a aby takto dojednaný zákaz konkurencie neobmedzoval obchodného zástupcu viac, než koľko vyžaduje potrebná miera ochrany zastúpeného. V ust. § 672a Obchodného zákonníka sa premieta ústavný princíp, zakotvený i v čl. 26 ods. 1, 2 Listiny základných práv a slobôd, podľa ktorého, každý má právo na slobodnú voľbu povolania a prípravu na neho, ako",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 34,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 834,
+            "token_len": 373
+        }
+    },
+    {
+        "page_content": "základných práv a slobôd, podľa ktorého, každý má právo na slobodnú voľbu povolania a prípravu na neho, ako aj právo podnikať a uskutočňovať inú hospodársku činnosť (tiež čl. 35 ods. 1 Ústavy Slovenskej republiky) a zákon môže stanoviť podmienky a obmedzenia výkonu určitých povolaní alebo činností (aj čl. 35 ods. 2 Ústavy Slovenskej republiky) (uznesenie Najvyššieho súdu Slovenskej republiky z 27. februára 2018 sp. zn. 5Obdo 14/2017).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 35,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 438,
+            "token_len": 210
+        }
+    },
+    {
+        "page_content": "20. Napriek skutočnosti, že predmetná konkurenčná doložka nebola dojednaná v rámci zmluvy o obchodnom zastúpení, niet pochýb o tom, že ak je pri inom zmluvnom type (príp. inominátnej zmluve) dohodnutý hmotnoprávny inštitút konkurenčnej doložky, ktorá je výslovne upravená v zmluve o obchodnom zastúpení podľa § 672a ods. 1, 2 Obchodného zákonníka, kritériá tohto inštitútu sú použiteľné aj v prípade jeho dojednania pri inom zmluvnom type (resp. inominátnej zmluve) (porov. nález Ústavného súdu Slovenskej republiky z 12.11.2020 sp. zn. III. ÚS 101/2020).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 36,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 555,
+            "token_len": 260
+        }
+    },
+    {
+        "page_content": "21. Z vykonaného dokazovania (resp. po zopakovaní dokazovania) vyplýva, že strany sporu uzavreli dňa 1.9.2013 zmluvu o vykonávaní finančného sprostredkovania podľa § 269 ods. 2 Obchodného zákonníka a zákona o finančnom sprostredkovaní. Žalovaná na základe tejto zmluvy vykonávala finančné sprostredkovanie pre žalobkyňu (ako finančnú inštitúciu) ako viazaný finančný agent. Zákon o finančnom sprostredkovaní ani Obchodný zákonník neupravujú samostatný zmluvný typ pre výkon činnosti viazaného finančného agenta. Finančné sprostredkovanie je viazaný finančný agent oprávnený uskutočňovať len na základe registrácie v registri Národnej banky Slovenska za predpokladu splnenia zákonom ustanovených podmienok. Navrhovateľom na zápis viazaného finančného agenta je finančná inštitúcia so sídlom alebo umiestnením organizačnej zložky na území Slovenskej republiky, s ktorou má viazaný finančný agent",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 37,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 893,
+            "token_len": 390
+        }
+    },
+    {
+        "page_content": "finančná inštitúcia so sídlom alebo umiestnením organizačnej zložky na území Slovenskej republiky, s ktorou má viazaný finančný agent uzatvorenú písomnú zmluvu. Viazaný finančný agent je podnikateľom v súlade s § 2 ods. 2 písm. c) Obchodného zákonníka. Z legálnej definície pojmu finančné sprostredkovanie vyplýva, že toto nie je obmedzené na jednoduchú distribúciu finančných služieb v zmysle obchodného zastúpenia.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 38,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 416,
+            "token_len": 184
+        }
+    },
+    {
+        "page_content": "22. Zmluvná sloboda je v obchodnoprávnym vzťahoch vyjadrená v tom, že účastníci môžu uzavrieť aj inú zmluvu, ktorá nie je upravená v Občianskom alebo Obchodnom zákonníku. Ustanovenie § 269 ods. 2 je totožné s právnou úpravou Občianskeho zákonníka a je potrebné najmä pre vzťahy medzi podnikateľmi, pretože zákon nemôže pri jeho príprave a prijatí reagovať na všetky potreby dynamicky sa vyvíjajúceho trhového prostredia. Obchodný zákonník nepripúšťa vznik zmluvy, ak predmet záväzkov nebude dostatočne určitý. Pre posúdenie, či ide o pomenovaný zmluvný typ alebo ide o zmluvu, ktorá nie je upravená v Občianskom alebo v Obchodnom zákonníku, je právne relevantný jej obsah a nie jej označenie zmluvnými stranami (porov. uznesenie Najvyššieho súdu Slovenskej republiky z 27. augusta 2020 sp. zn. 5Cdo 130/2018).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 39,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 809,
+            "token_len": 362
+        }
+    },
+    {
+        "page_content": "23. V prejednávanej veci strany sporu uzavreli predmetnú zmluvu podľa § 269 ods. 2 Obchodného zákonníka, t.j. zmluvu, ktorá nie je upravená ako typ zmluvy. Odvolací súd sa v danej veci stotožnil s názorom súdu prvej inštancie, že predmetná zmluva o vykonávaní finančného sprostredkovania, ako aj dodatok č. 1 k tejto zmluve, boli platne uzavreté, žiadna zo strán v konečnom dôsledku platnosť týchto vzťahov ani nenamietala (s výnimkou neplatnosti konkurenčnej doložky obsiahnutej v zmluve namietanej žalovanou).\n\n24. Zo znenia konkurenčnej doložky (v čl. XI bod 2 zmluvy) vyplýva, že v nej nebol vymedzený jej územný rozsah, čo je jedna z podstatných náležitosti konkurenčnej doložky, ktorej absencia spôsobuje jej neplatnosť. Nemožno súhlasiť s argumentáciou žalobkyne, že teritoriálne vymedzenie konkurenčnej doložky implicitne vyplývalo z celého obsahu zmluvy, resp. zo zákona o finančnom sprostredkovaní.\n\n25. Pokiaľ ide o obsah zmluvy o vykonávaní finančného sprostredkovania, v žiadnom jej ustanovení nie je uvedené, že by sa finančné sprostredkovanie malo vzťahovať na územie Slovenskej republiky.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 40,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1104,
+            "token_len": 476
+        }
+    },
+    {
+        "page_content": "Z ust. § 6 ods. 4 zákona o finančnom sprostredkovaní vyplýva, že finančný agent je oprávnený vykonávať finančné sprostredkovanie len pre finančnú inštitúciu, ktorá je oprávnená vykonávať činnosť na území Slovenskej republiky. S ohľadom na citované ustanovenie by teda bolo možné konštatovať, že finančné sprostredkovanie žalovanej pre žalobkyňu v zmysle zmluvy bolo obmedzené na územie Slovenskej republiky. V tejto súvislosti však treba uviesť, že aj v prípade, ak by bolo v samotnej zmluve uvedené, že agent je povinný vykonávať finančné sprostredkovanie len na území Slovenskej republiky (teda zmluva by výslovne obsahovala vymedzenie miesta výkonu finančného sprostredkovania žalovanou), nezhojilo by to nedostatok podstatnej náležitosti konkurenčnej doložky podľa § 672a ods. 1 Obchodného zákonníka (v tejto súvislosti porovnaj rozsudok Krajského súdu v Bratislave z 22.2.2018 sp. zn. 1Cob/182/2016).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 41,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 905,
+            "token_len": 404
+        }
+    },
+    {
+        "page_content": "26. Nemožno tiež opomínať, že zákon o finančnom sprostredkovaní v § 20 upravuje vykonávanie finančného poradenstva a finančného sprostredkovania v sektore poistenia alebo zaistenia osobami s trvalým pobytom alebo sídlom na území Slovenskej republiky, na území iného členského štátu Európskej únie za dodržania povinnosti informovať o takej skutočnosti Národnú banku Slovenska.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 42,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 376,
+            "token_len": 157
+        }
+    },
+    {
+        "page_content": "Aplikácia predmetného ustanovenia ako celku vychádza z transpozície čl. 4 až 9 Smernice Európskeho parlamentu a Rady (EÚ) č. 2016/97 z 20. januára 2016 o distribúcii poistenia (prepracované znenie), ktorej cieľom je (v zmysle odôvodnenia smernice) o.i. odstrániť podstatné rozdiely medzi vnútroštátnymi ustanoveniami, ktoré vytvárajú prekážky začatia a vykonávania činností distribúcie poistenia a zaistenia v rámci vnútorného trhu a ešte viac posilniť vnútorný trh a podporiť skutočný vnútorný trh s produktmi a službami v oblasti životného a neživotného poistenia. Je tiež potrebné dodať, že možnosť finančného agenta s trvalým pobytom na území Slovenskej republiky vykonávať finančné sprostredkovanie v sektore poistenia a zaistenia na území iného členského štátu bola v ust. § 20 cit. zákona zavedená už s účinnosťou od 1.1.2010 ako výsledok transpozície Smernice Európskeho parlamentu a Rady 2002/92/ ES z 9. decembra 2002 o sprostredkovaní poistenia (Mimoriadne vydanie Ú.v. EÚ, kap. 06/zv. 04;",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 43,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1000,
+            "token_len": 449
+        }
+    },
+    {
+        "page_content": "Ú.v. ES L 9, 15.1.2003). V prejednávanej veci tak žalovanej nič nebránilo, aby po splnení zákonných podmienok (§ 20 zákona o finančnom sprostredkovaní) vykonávala finančné sprostredkovanie i na území iného/iných členských štátov. Preto neobstojí tvrdenie žalobkyne, že teritoriálne vymedzenie konkurenčnej doložky vyplývalo zo zákona o finančnom sprostredkovaní. Možnosť vykonávať takúto finančnú činnosť mimo Slovenskej republiky súvisí nielen s jednotným trhom, ale konkrétne v danom prípade s uplatňovaním práva slobodného poskytovania služieb bez povinnosti zriadenia pobočky.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 44,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 580,
+            "token_len": 259
+        }
+    },
+    {
+        "page_content": "Okrem skutočnosti, že predmetné právo slobodne poskytovať služby v rámci jednotného vnútorného trhu vychádza z európskeho práva, aj Ústava Slovenskej republiky jednoznačne zaručuje právo podnikať.\n\nAj vďaka uvedenému právu môže každý finančný agent/finančný poradca v sektore poistenia alebo zaistenia expandovať a distribuovať finančné služby aj mimo územia Slovenskej republiky na európsky trh.\n\n27. Konkurenčná doložka tak nepochybne neobsahovala jej teritoriálne obmedzenie. Ustanovenie § 672a Obchodného zákonníka je kogentné (§ 263), čo znamená, že zmluvné strany sa od neho nemôžu odchýliť. Ak podstatné náležitosti konkurenčnej doložky vyžadované ust. § 672a ods. 1 Obchodného zákonníka v nej nie sú uvedené, následkom je absolútna neplatnosť takejto doložky pre rozpor so zákonom (§ 39 Občianskeho zákonníka). Neobmedzeným rozsahom miestnej pôsobnosti konkurenčná doložka v podstate znemožňuje žalovanej vykonávať činnosť, na ktorú má oprávnenie a ktorá je jej zárobkovou činnosťou, čím tiež porušuje jej ústavné právo na slobodný výkon povolania.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 45,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1056,
+            "token_len": 459
+        }
+    },
+    {
+        "page_content": "28. I keď je neplatnosť konkurenčnej doložky pre absenciu teritoriálneho vymedzenia zákazu konkurencie (z logiky veci) stanovená na ochranu obchodného zástupcu a malo by sa teda jednať o relatívnu neplatnosť v zmysle ust. § 267 ods. 1 prvá veta Obchodného zákonníka (ak je neplatnosť právneho úkonu ustanovená na ochranu niektorého účastníka, môže sa tejto neplatnosti dovolávať iba tento účastník), odvolací súd je tohto názoru, že s poukazom na znenie smernice o obchodných zástupcoch (čl. 20 bod 2 \"Doložka o obmedzení obchodu platí však iba vtedy, ak...\" v spojení s bodom 4 \"týmto článkom nie sú dotknuté právne predpisy členských štátov, ktoré ukladajú ďalšie obmedzenia platnosti alebo účinnosti doložky o obmedzení obchodu\") sa jedná o neplatnosť absolútnu, pokiaľ ide podstatné náležitosti konkurenčnej doložky.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 46,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 820,
+            "token_len": 354
+        }
+    },
+    {
+        "page_content": "29. Z rozhodovacej činnosti Súdneho dvora je totiž zrejmé [Case C-106/89 Marleasing vs. La Comercial Internacional de Alimentación (1990) ECR I-4135, bod 8; Case C-334/92 Wagner Miret vs. Fondo de Garantía Salarial (1993) ECR I-6911, bod 20; Faccini Dori, bod 26; and Joined Cases C-240/98 to C-244/98 Océano Grupo Editorial vs. Salvat Editores (2000) ECR I-0000, bod 30], že ak sa aplikuje vnútroštátne právo, či už prijaté pred alebo po prijatí smernice, vnútroštátny súd má povinnosť vykladať právo, pokiaľ je to možné vo svetle znenia a účelu smernice s cieľom dosiahnuť výsledok, ktorý smernica predvída, a tým dosiahnuť súlad s čl. 189 ods. 3 Zmluvy (rozhodnutie Súdneho dvora z 13. júla 2000 Centrosteel Srl vs. Adipol GmbH vo veci C-456/98).\n\n30. Z týchto dôvodov má odvolací súd za to, že pokiaľ konkurenčná doložka neobsahuje jednu z podstatných náležitostí (v prejednávanej veci vymedzenie územia, na ktoré sa zákaz konkurenčnej činnosti vzťahuje) je neplatná absolútne, nielen relatívne v zmysle § 267 Obchodného zákonníka.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 47,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1035,
+            "token_len": 446
+        }
+    },
+    {
+        "page_content": "Podstatným je totiž účel smernice, ktorá bola transponovaná do Obchodného zákonníka ustanovením § 672a Obchodného zákonníka, a tým je o.i. zabezpečiť zvýšenú mieru ochrany obchodnému zástupcovi.\n\n31. Pre úplnosť sa dodáva, že i v prípade, ak by sa jednalo o relatívnu neplatnosť predmetnej konkurenčnej doložky, nemalo by to na rozhodnutie odvolacieho súdu žiadny vplyv. V prejednávanej veci sa totiž žalovaná neplatnosti konkurenčnej doložky z dôvodu absencie jej teritoriálneho vymedzenia dovolala ešte v konaní pred súdom prvej inštancie (zápisnica z pojednávania z 20.5.2020). Preto ani námietka žalobkyne vo vyjadrení k odvolaniu, podľa ktorej sa v prípade tejto námietky žalovanej (neplatnosti konkurenčnej doložky z dôvodu absencie jej teritoriálneho vymedzenia) jednalo o neprípustnú novotu v odvolacom konaní, dôvodná nebola. Na odvolacom pojednávaní pritom žalobkyňa protirečivo s uvedeným tvrdila, že neplatnosť konkurenčnej doložky bola prvýkrát namietaná v odpore proti platobnému rozkazu, ktorý podal právny zástupca žalovanej.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 48,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1041,
+            "token_len": 445
+        }
+    },
+    {
+        "page_content": "32. Pokiaľ ide o novoty v odvolacom konaní (§ 366 CSP), tieto naopak uvádzala žalobkyňa, keď až na pojednávaní pred odvolacím súdom vzniesla námietku premlčania. Tvrdila, že údajná absencia teritoriálneho vymedzenia spôsobuje neplatnosť konkurenčnej doložky v zmysle § 267 ods. 1 Obchodného zákonníka, pričom táto neplatnosť slúži len na ochranu žalovanej, ako obchodného zástupcu, preto by malo ísť o relatívnu neplatnosť. Relatívnu neplatnosť mohla žalovaná namietať v štvorročnej premlčacej lehote odo dňa, kedy tak mohla žalovaná učiniť prvýkrát.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 49,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 550,
+            "token_len": 247
+        }
+    },
+    {
+        "page_content": "33. V súvislosti so žalobkyňou vznesenou námietkou premlčania (t.j. hmotnoprávnou námietkou podľa § 149 a § 152 CSP) je potrebné poukázať na neúplný apelačný systém, ktorým je ovládané odvolacie konanie. Neúplnosť apelácie znamená, že právo odvolateľa, ako aj protistrany (§ 373 ods. 4 CSP) použiť v odvolacom konaní prostriedky procesného útoku a procesnej obrany, ktoré strana neuplatnila pred súdom prvej inštancie je obmedzené. Novoty sú v odvolacom konaní prípustné len za splnenia taxatívne stanovených zákonných podmienok uvedených v § 366 CSP. Keďže žalobkyňa neposkytla žiadne tvrdenia a ani dôkazy, ktorými by preukázala splnenie niektorej z podmienok uvedených v ust.\n\n§ 366 CSP, odvolací súd na vznesenú námietku premlčania nemohol prihliadnuť. Vzhľadom na nový procesný predpis doterajšia judikatúra vo vzťahu k vzneseniu námietky premlčania nie je použiteľná. Pre úplnosť sa dodáva, že námietka premlčania by s ohľadom na vyššie uvedené závery ohľadom absolútnej neplatnosti konkurenčnej doložky dôvodná nebola.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 50,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1025,
+            "token_len": 447
+        }
+    },
+    {
+        "page_content": "34. Keďže záväzok z dohody o zmluvnej pokute je akcesorickým záväzkom, jeho existencia a dôsledky sa viažu na hlavný záväzok. Ak k vzniku hlavného záväzku nedôjde, nemôžu nastať účinky akcesorického záväzku, ktorý mal zabezpečovať plnenie zmluvnej povinnosti (porov. rozsudok Najvyššieho súdu Slovenskej republiky sp. zn. 3 Obo 7/1998). Na základe vyššie uvedeného odvolací súd napadnutý rozsudok súdu prvej inštancie podľa § 388 CSP zmenil tak, žalobu žalobkyne o zaplatenie 2.400 eur s príslušenstvom (t.j. v časti, ktorá zostala predmetom konania) zamietol.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 51,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 560,
+            "token_len": 264
+        }
+    },
+    {
+        "page_content": "35. Pre úplnosť, pokiaľ ide vyjadrenie odvolacieho súdu v zrušujúcom uznesení z 26.11.2019, že aplikácia § 672a ods. 2 Obchodného zákonníka už vzhľadom na čiastočne právoplatný výrok o priznaní časti zmluvnej pokuty neprichádza zmysluplne do úvahy, odvolací súd uvádza, že z ust. § 391 ods. 2 CSP nevyplýva pre odvolací súd viazanosť jeho vlastným právnym názorom a môže svoj skorší záväzný právny názor zmeniť. Aj keď zmena skoršieho, pre súd prvej inštancie záväzného právneho názoru odvolacieho súdu, je v zásade nežiaduca, nemožno ju považovať za nepatričnú, predovšetkým s ohľadom na ústavnoprávny princíp nezávislosti sudcu, ktorý je vo všeobecnosti viazaný len zákonom (porov. nález Ústavného súdu Slovenskej republiky z 3.septembra 2013 sp. zn. III. ÚS 46/2013).",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 52,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 770,
+            "token_len": 372
+        }
+    },
+    {
+        "page_content": "36. Nad rámec uvedeného odvolací súd uvádza, že otázku rozsahu obmedzovanej činnosti by malo význam skúmať iba v tom prípade, ak by konkurenčná doložka bola platná, t.j. ak by obsahovala obligatórne náležitosti stanovené v § 672a ods. 1 Obchodného zákonníka. Z uvedeného dôvodu sa odvolací touto argumentáciou strán sporu nezaoberal.\n\n37. V závere odvolací súd dodáva, že v prípade, ak sa v odôvodnení nezaoberal konkrétnou námietkou sporovej strany, urobil tak preto, že daný argument a taktiež odpoveď naň nepovažoval pre rozhodnutie v danej veci za rozhodujúce (Ruiz Torija c. Španielsko z 9. decembra 1994, séria A, č. 303-A, s.12, § 29; Hiro Balani c. Španielsko z 9. decembra 1994, séria A, č. 303-B; Georgiadis c. Grécko z 29. mája 1997; Higgins c. Francúzsko z 19. februára 1998).\n\n38. Podľa § 396 ods. 1 CSP ustanovenia o trovách konania pred súdom prvej inštancie sa použijú aj na odvolacie konanie.\n\nPodľa § 396 ods. 2 CSP ak odvolací súd zmení rozhodnutie, rozhodne aj o nároku na náhradu trov konania na súde prvej inštancie.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 53,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1038,
+            "token_len": 466
+        }
+    },
+    {
+        "page_content": "Podľa § 396 ods. 2 CSP ak odvolací súd zmení rozhodnutie, rozhodne aj o nároku na náhradu trov konania na súde prvej inštancie.\n\nPodľa § 255 ods. 1 CSP súd prizná strane náhradu trov konania podľa pomeru jej úspechu vo veci.\n\nPodľa § 262 ods. 1 CSP o nároku na náhradu trov konania rozhodne aj bez návrhu súd v rozhodnutí, ktorým sa konanie končí.\n\nO nároku na náhradu trov prvoinštančného konania odvolací súd rozhodol podľa § 255 ods. 1 a § 262 ods. 1 CSP v spojení s § 396 ods. 2 CSP tak, že žalovanej priznal právo na náhradu trov konania (prvoinštančného vrátane trov prvého odvolacieho konania) v rozsahu 60 % z dôvodu jej čiastočného úspechu vo veci, voči neúspešnej žalobkyni (výrok II. rozhodnutia).\n\nO nároku na náhradu trov odvolacieho konania odvolací súd rozhodol podľa § 255 ods. 1 a § 262 ods. 1 CSP v spojení s § 396 ods. 1 CSP tak, že procesne plne úspešnej žalovanej (v odvolacom konaní o zaplatenie sumy 2.400 eur) priznal právo na náhradu trov odvolacieho konania voči žalobkyni v plnej výške.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 54,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 1013,
+            "token_len": 465
+        }
+    },
+    {
+        "page_content": "O výške náhrady trov konania rozhodne podľa § 262 ods. 2 CSP súd prvej inštancie po právoplatnosti tohto rozsudku, a to samostatným uznesením, ktoré vydá súdny úradník.\n\n39. Tento rozsudok prijal senát odvolacieho súdu pomerom hlasov 3: 0.\n\n40. Písomné vyhovenie rozhodnutia vypracovala členka senátu JUDr. Erika Tischlerová.",
+        "metadata": {
+            "date_raw": "18.05.2021",
+            "case_id": "21Cob/109/2020",
+            "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 55,
+            "source_file": "KS_Trnava_21Cob_109_2020_00_dokument.pdf",
+            "strategy": "openai_500",
+            "char_len": 325,
+            "token_len": 150
+        }
+    }
+]

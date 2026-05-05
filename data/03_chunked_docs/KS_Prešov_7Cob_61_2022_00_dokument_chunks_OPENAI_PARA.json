@@ -1,0 +1,527 @@
+[
+    {
+        "page_content": "Napadnutým rozsudkom súd prvej inštancie zaviazal žalovaného zaplatiť žalobcovi 7.800,- eur s prísl., a to do 3 dní od právoplatnosti rozsudku. Určil, že žalovaný je povinný nahradiť žalobcovi trovy konania v rozsahu 100 %.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 0,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 223,
+            "token_len": 101
+        }
+    },
+    {
+        "page_content": "Vychádzal zo zistenia, že podanou žalobou sa žalobca voči žalovanému domáha zaplatenia sumy 7.800,- eur spolu s úrokom z omeškania z dôvodu vykonaných prepráv ako boli objednané objednávkami a ich preprava bola potvrdená medzinárodnými nákladnými listami. Išlo o prepravy zo dňa 15.7.2020, 16.7.2020, 23.7.2020, 28.7.2020, 29.7.2020 v sume po 1.300,- eur. Vykonanie uvedených prepráv žalovaný potvrdil. Potvrdil aj to, že sumu za uvedené prepravy žalobcovi neuhradil, a to z dôvodu, že voči žalobcovi si uplatnil započítaciu pohľadávku, a to vyúčtovanú zmluvnú pokutu, ako mala byť dohodnutá v objednávkach na vykonanie prepravy, a to z dôvodu, že žalobca napriek tomu, že to mal zakázané, vstupoval do priameho kontaktu so zákazníkom žalovaného. Uvedenú započítaciu pohľadávku žalobca namietal. Mal za to, že medzi účastníkmi konania nebola platne dohodnutá zmluvná pokuta, a preto takýto započítací prejav nie je v súlade so zákonom.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 1,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 935,
+            "token_len": 433
+        }
+    },
+    {
+        "page_content": "Medzi účastníkmi konania nebolo sporné, že bola vykonaná preprava, a to viacnásobne, za ktorú zo strany žalovaného nebola vykonaná úhrada pre žalobcu. Sporné bolo medzi účastníkmi konania, či v zmysle objednávok si žalovaný mohol voči žalobcovi vyúčtovať zmluvnú pokutu a použiť ju ako započítaciu pohľadávku voči žalovanej sume.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 2,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 329,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "Na základe vykonaného dokazovania súd prvej inštancie mal za to, že obrana žalovaného nebola dôvodná. Žalovaný nemal nárok na započítaciu pohľadávku, a to vyúčtovanú zmluvnú pokutu za údajné porušenie povinností žalobcu v zmysle objednávok, a to vstupovať priamo do priameho kontaktu so zákazníkmi žalovaného. Na to, aby si ktorákoľvek zo strán právneho vzťahu mohla účtovať zmluvnú pokutu, Obchodný zákonník vo svojom ustanovení odkazuje na presne podmienky, kedy je možné zmluvnú pokutu účtovať. Pre možnosť účtovania zmluvnej pokuty sa vyžaduje písomná dohoda.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 3,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 563,
+            "token_len": 261
+        }
+    },
+    {
+        "page_content": "Občiansky zákonník v § 544 ods. 2 výslovne uvádza, že zmluvnú pokutu možno dojednať len písomne a v dojednaní musí byť určená výška pokuty alebo spôsob jej určenia. Taktiež dohoda o zmluvnej pokute musí obsahovať aké porušenie povinnosti je možné sankcionovať vyúčtovaním zmluvnej pokuty.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 4,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 288,
+            "token_len": 132
+        }
+    },
+    {
+        "page_content": "K posilneniu postavenia veriteľa v záväzkových vzťahoch slúžia zabezpečovacie inštitúty. Jedným z najfrekventovanejších z nich je zmluvná pokuta. Právna úprava je obsiahnutá tak v zákone č. 40/1964 Zb. Občiansky zákonník v znení neskorších právnych predpisov (ďalej len \"OZ\"), ako aj v zákone č. 513/1991 Zb. Obchodný zákonník v znení neskorších právnych predpisov, avšak táto má len dopĺňajúci charakter a zakotvuje len niektoré ustanovenia a odchýlky k úprave obsiahnutej v OZ. Táto základná úprava platí aj pre obchodno-právne vzťahy s tým, že v týchto vzťahoch sa uplatnia niektoré odchylné ustanovenia obsiahnuté v § 300 až § 302 Obchodného zákonníka.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 5,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 656,
+            "token_len": 298
+        }
+    },
+    {
+        "page_content": "Pri rozhodovaní o nároku na zmluvnú pokutu sa skúma, či zmluvná pokuta bola dojednaná platne, t.j. v súlade s § 544 Občianskeho zákonníka. Súd má za to, že zmluvná pokuta nebola dohodnutá platne a to písomne, pretože pre platné dohodnutie písomnou formou je potrebné, aby účastníci konania svojím podpisom potvrdili uzatvorenie takejto zmluvnej pokuty. Žalovaný odkazoval, že dojedanie zmluvnej pokuty má vyplývať z objednávok. Po oboznámení sa z obsahu objednávok však vyplýva, že nedošlo k platnému dojednaniu zmluvnej pokuty, pretože objednávka nie je podpísaná ani žalobcom, ani žalovaným, teda dohoda o zmluvnej pokute v tejto objednávke nebola teda písomne dojednaná. To však nie je prekážkou pre priznanie nároku za vykonanú prepravu, pretože objednanie prepravy a vykonanie je možné vykonať aj ústne, nielen písomne.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 6,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 824,
+            "token_len": 363
+        }
+    },
+    {
+        "page_content": "Súd prvej inštancie teda mal za to, že medzi účastníkmi konania došlo k uzatvoreniu objednávok na vykonanie prepravy a to forme objednávok. Vykonanie týchto prepráv je preukázané medzinárodnými nákladnými listami. Žalovaný aj potvrdil vykonanie tejto prepravy a neuhradenie súm za vykonanú prepravu. Súd preto má za to, že vyúčtované sumy za vykonanú prepravu voči žalovanému sú vyúčtované dôvodne. Žalovaný nepreukázal, žeby túto sumu uhradil, preto súd prvej inštancie zaviazal žalovaného na zaplatenie sumy spolu vo výške 7.800,- eur za vykonané prepravy.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 7,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 558,
+            "token_len": 248
+        }
+    },
+    {
+        "page_content": "Zároveň priznal žalobcovi aj nárok na úrok z omeškania, a to tak, ako to bolo dohodnuté vo vystavených faktúrach. Súd mal za to, že vyhotovenie dátumu splatnosti bolo na základe dohody medzi účastníkmi konania. Táto splatnosť zo strany žalovaného ani namietaná nebola. Nezaplatením ceny v lehote splatnosti podľa faktúr sa žalovaný dostal do omeškania. Preto súd mal zato, že došlo medzi stranami aj ak takejto dohode o lehote splatnosti. Preto súd žalovaného zaviazal na zaplatenie zákonného úroku z omeškania vo výške 9 % ročne zo súm podľa vystavených faktúr. Ku dňu omeškania ako je uvedené vo výroku a podľa lehoty splatnosti uvedenej vo faktúrach výška zákonného úroku z omeškania bola stanovená v obchodných vzťahoch vo výške 9 % ročne.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 8,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 743,
+            "token_len": 325
+        }
+    },
+    {
+        "page_content": "Súd priznal žalobcovi aj sumu 40,- eur ako paušálnu náhradu hotových nákladov spojených s uplatnením pohľadávky v zmysle § 369c ods. 1 Obchodného zákonníka. Výšku paušálnej náhrady nákladov spojených s uplatnením pohľadávky ustanovila vláda Slovenskej republiky nariadením 21/2013 Z.z..",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 9,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 286,
+            "token_len": 137
+        }
+    },
+    {
+        "page_content": "Výška paušálnej náhrady nákladov spojených s uplatnením pohľadávky je 40,- eur jednorazovo bez ohľadu na dĺžku omeškania. Ide o náhradu administratívnych interných monitorovacích nákladov, ktoré vznikajú pri kontrole dodržiavania zmluvných záväzkov (náklady na vedenie evidencie pohľadávok, náklady súvisiace s telefonickou alebo písomnou urgenciou dlžníka, táto však nie je podmienkou pre vznik nároku na paušálnu náhradu nákladov).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 10,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 433,
+            "token_len": 197
+        }
+    },
+    {
+        "page_content": "Súd prvej inštancie vyhovel tejto žalobe z dôvodu, že vykonaným dokazovaním mal za to, že zmluvná pokuta nebola dohodnutá platne, a teda žalovaný si nemal právo uplatniť voči žalobcovi započítací prejav vo výške vyúčtovanej zmluvnej pokuty.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 11,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 240,
+            "token_len": 107
+        }
+    },
+    {
+        "page_content": "Výrok o trovách konania odôvodnil ustanovením § 255 ods. 1 CSP.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 12,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 63,
+            "token_len": 26
+        }
+    },
+    {
+        "page_content": "Proti rozsudku v zákonnej lehote podal odvolanie žalovaný, a to len proti výroku o trovách konania, pričom navrhol, aby odvolací súd rozsudok zmenil a náhradu trov konania v zmysle § 257 CSP sporovým stranám nepriznal.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 13,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 218,
+            "token_len": 90
+        }
+    },
+    {
+        "page_content": "Odvolanie odôvodnil ustanovením § 365 ods. 1 písm. f) CSP, t.j. že súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 14,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 157,
+            "token_len": 73
+        }
+    },
+    {
+        "page_content": "Poukázal na to, že je nesporné, že žalobca konal v rozpore s dobrými mravmi, ako aj zásadami poctivého obchodného styku a v rozpore s podmienkami prepravy, ktoré akceptoval prijatím objednávky od žalovaného. V uvedených bola zásadnou požiadavkou skutočnosť, že žalobca nie je oprávnený kontaktovať zákazníkov žalovaného. Je nesporné, ako vyplýva aj z obsahu súdneho spisu, že žalobca prostredníctvom svojich zamestnancov opakovane kontaktoval zákazníkov žalobcu v snahe obísť žalovaného a získať budúce zákazky priamo od zákazníkov. V tejto činnosti pokračoval opakovane.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 15,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 571,
+            "token_len": 245
+        }
+    },
+    {
+        "page_content": "Žalovaný preto v snahe zabrániť žalobcovi v tomto konaní pristúpil k uplatneniu zmluvnej pokuty.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 16,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 96,
+            "token_len": 43
+        }
+    },
+    {
+        "page_content": "Žalovaný rešpektuje právne posúdenie súdu ohľadom platnosti dojednanej zmluvnej pokuty, ale má za to, že v danom prípade existujú dôvody hodné osobitného zreteľa v zmysle § 257 CSP, aby súd žalovanému (nemá byť žalobcovi?), hoci aj úspešnému účastníkovi konania, náhradu trov konania nepriznal. Konanie žalovaného, t.j. neúspešného účastníka konania vo vzťahu k žalobcovi nebolo samovoľným bezdôvodným rozhodnutím, ale len jeho obranou voči konaniu žalobcu, ktorý sám svojím konaním v rozpore s dobrými mravmi dal príčinu sporu medzi účastníkmi. Ak by žalobca sám nevyvíjal snahu o obídenie žalovaného v budúcich obchodoch s jeho zákazníkmi, pričom na neprijateľnosť takého kontaktu bol opakovane upozorňovaný, nemal by žalovaný žiaden dôvod na uplatňovanie zmluvných pokút a neuhradenie pohľadávok žalobcu. Žalovaný má za to, že konanie žalobcu prispelo k vzniku sporu medzi sporovými stranami a uvedené okolnosti vytvárajú záver o tom, že v danom prípade sú prítomné dôvody hodné osobitného zreteľa odôvodňujúce postup podľa § 257 CSP v otázke náhrady trov konania.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 17,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 1067,
+            "token_len": 475
+        }
+    },
+    {
+        "page_content": "Žalobca sa k odvolaniu žalovaného nevyjadril.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 18,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 45,
+            "token_len": 21
+        }
+    },
+    {
+        "page_content": "Odvolací súd prejednal vec podľa § 378 ods. 1 CSP, a to bez nariadenia odvolacieho pojednávania (§ 385 ods. 1 CSP a contrario) a zistil, že odvolanie žalovaného nie je dôvodné.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 19,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 176,
+            "token_len": 77
+        }
+    },
+    {
+        "page_content": "V otázke náhrady trov konania súd prvej inštancie zistil všetky okolnosti právne významné pre rozhodnutie v tomto smere a vo veci aj správne rozhodol.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 20,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 150,
+            "token_len": 64
+        }
+    },
+    {
+        "page_content": "So zreteľom na obsah odvolania žalovaného, v odvolacom konaní bol preskúmavaný výrok napadnutého rozsudku súdu prvej inštancie o trovách konania, a preto výrok rozsudku, ktorým bolo žalobe vyhovené, ktorý odvolaním žalovaného napadnutý nebol, v odvolacom konaní preskúmavaný nebol a ako taký nadobudol právoplatnosť (§ 367 ods. 2 CSP).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 21,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 335,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "Súd prizná strane náhradu trov konania podľa pomeru jej úspechu vo veci (§ 255 ods. 1 CSP).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 22,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 91,
+            "token_len": 42
+        }
+    },
+    {
+        "page_content": "Ak mala strana vo veci úspech len čiastočný, súd náhradu trov konania pomerne rozdelí, prípadne vysloví, že žiadna zo strán nemá na náhradu trov konania právo (§ 255 ods. 2 CSP).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 23,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 178,
+            "token_len": 77
+        }
+    },
+    {
+        "page_content": "Výnimočne súd neprizná náhradu trov konania, ak existujú dôvody hodné osobitného zreteľa (§ 257 CSP).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 24,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 101,
+            "token_len": 48
+        }
+    },
+    {
+        "page_content": "V prejednávanej veci bolo nepochybne preukázané, že žalobca bol úspešný čo do sumy 7.800,- eur s prísl., ako aj v otázke nákladov spojených s uplatnením pohľadávky vo výške 40,- eur z dôvodu, že žalovaný nezaplatil faktúry, ktoré mu za vykonané prepravy žalobca zaslal a ktoré sú bližšie špecifikované v odôvodnení rozhodnutia súdu prvej inštancie (bod 5. a nasl. napadnutého rozsudku).",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 25,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 386,
+            "token_len": 182
+        }
+    },
+    {
+        "page_content": "Pokiaľ si žalovaný počínal tak, že tieto faktúry nezaplatil z dôvodu účtovania tzv. zmluvnej pokuty v súvislosti s nesprávnym konaním žalobcu, ktorý mal kontaktovať priamo zákazníkov a takýmto spôsobom obchádzať žalovaného, treba konštatovať, že súd prvej inštancie správne zistil, že žalovaný nebol oprávnený na účtovanie zmluvnej pokuty. Stalo sa tak z dôvodu, že túto zmluvnú pokutu nemal v zmysle § 544 ods. 2 Obchodného zákonníka platne dojednanú.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 26,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 452,
+            "token_len": 207
+        }
+    },
+    {
+        "page_content": "Za týchto okolností nemal právo ani na započítanie nárokov na zmluvnú pokutu s nárokmi žalobcu uplatňovanými v tomto konaní na zaplatenie fakturovaných súm za vykonané prepravy v pozícii dopravcu.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 27,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 196,
+            "token_len": 83
+        }
+    },
+    {
+        "page_content": "Rozhodujúcou okolnosťou, ktorú je potrebné vnímať a uplatniť pri rozhodovaní o náhrade trov konania v prejednávanej veci je to, že žalovaný nebol vo veci úspešný z dôvodov, ktoré súd prvej inštancie presne špecifikoval, nebol oprávnený na účtovanie zmluvnej pokuty, a preto zásada úspechu, právne významná pre rozhodnutie o trovách konania, plne svedčí v prospech žalobcu.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 28,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 372,
+            "token_len": 165
+        }
+    },
+    {
+        "page_content": "Tzv. závadné správanie sa žalobcu spočívajúce v tom, že mal obchádzať žalovaného, kontaktovať zákazníkov v snahe získať budúce zákazky priamo od týchto zákazníkov, nebolo dostatočne preukázané, ale rozhodujúcou okolnosťou je to, že ani takéto eventuálne nesprávne konanie žalobcu by nemalo mať za následok ukladanie zmluvnej pokuty, ktorá nemá právny základ v zmluvnom dojednaní medzi stranami zmluvy a takto nelegálne uložená zmluvná pokuta by nemala byť dôvodom pre započítanie voči nárokom na zaplatenie dopravy, ktoré si uplatňuje strana, ktorá túto dopravu v skutočnosti vykonala a ju aj fakturovala.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 29,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 605,
+            "token_len": 262
+        }
+    },
+    {
+        "page_content": "Tieto okolnosti bránia v postupe podľa § 257 CSP v otázke náhrady trov konania, pretože konanie žalovaného nemalo oporu v zmysle vyššie uvedeného v zmluvných dojednaniach medzi sporovými stranami a ani argumentácia (vyššie uvedená) žalovaného nemôže zmeniť záver o správnosti postupu súdu prvej inštancie pokiaľ priznal plnú náhradu trov konania žalobcovi ako plne úspešnej sporovej strane v tomto konaní. V zásade možno teda konštatovať, že eventuálne závadné správanie sa žalobcu vo vzťahu k zákazníkom žalovaného a možné poškodzovanie žalovaného v tomto smere, nemôže byť dôvodom pre postup, ktorý zvolil žalovaný, a preto nemôže byť ani dôvodom pre uplatnenie § 257 CSP v otázke náhrady trov konania.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 30,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 704,
+            "token_len": 299
+        }
+    },
+    {
+        "page_content": "Správne preto postupoval súd prvej inštancie pokiaľ priznal žalobcovi ako úspešnej sporovej strane nárok na náhradu trov konania proti žalovanému v rozsahu 100 %, nakoľko žalovaný bol v konaní neúspešnou sporovou stranou.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 31,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 221,
+            "token_len": 95
+        }
+    },
+    {
+        "page_content": "Preto odvolací súd postupom podľa § 387 ods. 1 CSP rozsudok v napadnutej časti ako vecne správny potvrdil.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 32,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 106,
+            "token_len": 49
+        }
+    },
+    {
+        "page_content": "O trovách odvolacieho konania bolo rozhodnuté podľa § 396 ods. 1 CSP a § 255 ods. 1 CSP, podľa ktorého žalobca ako sporová strana, ktorá mala v odvolacom konaní plný úspech, má nárok na náhradu trov tohto štádia konania proti žalovanému, ktorý v odvolacom konaní úspech nemal. Výšku týchto trov ustáli postupom podľa § 262 ods. 2 CSP súd prvej inštancie po právoplatnosti tohto rozhodnutia odvolacieho súdu samostatným uznesením, ktoré vydá súdny úradník.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 33,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 455,
+            "token_len": 206
+        }
+    },
+    {
+        "page_content": "Toto rozhodnutie prijal senát Krajského súdu v Prešove pomerom hlasov 3: 0.",
+        "metadata": {
+            "date_raw": "20.10.2022",
+            "case_id": "7Cob/61/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6121260960.1",
+            "court": "Krajský súd Prešov",
+            "document_type": "Uznesenie",
+            "chunk_index": 34,
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "strategy": "openai_para",
+            "char_len": 75,
+            "token_len": 35
+        }
+    }
+]

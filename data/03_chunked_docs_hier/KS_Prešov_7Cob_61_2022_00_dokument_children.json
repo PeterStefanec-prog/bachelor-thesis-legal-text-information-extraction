@@ -1,0 +1,835 @@
+[
+    {
+        "page_content": "Napadnutým rozsudkom súd prvej inštancie zaviazal žalovaného zaplatiť žalobcovi 7.800,- eur s prísl., a to do 3 dní od právoplatnosti rozsudku. Určil, že žalovaný je povinný nahradiť žalobcovi trovy konania v rozsahu 100 %.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_000",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_000_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 0,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0143,
+            "char_len": 223,
+            "token_len": 101
+        }
+    },
+    {
+        "page_content": "Vychádzal zo zistenia, že podanou žalobou sa žalobca voči žalovanému domáha zaplatenia sumy 7.800,- eur spolu s úrokom z omeškania z dôvodu vykonaných prepráv ako boli objednané objednávkami a ich preprava bola potvrdená medzinárodnými nákladnými listami. Išlo o prepravy zo dňa 15.7.2020, 16.7.2020, 23.7.2020, 28.7.2020, 29.7.2020 v sume po 1.300,- eur. Vykonanie",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 4,
+            "parent_index": 1,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0429,
+            "char_len": 365,
+            "token_len": 177
+        }
+    },
+    {
+        "page_content": "15.7.2020, 16.7.2020, 23.7.2020, 28.7.2020, 29.7.2020 v sume po 1.300,- eur. Vykonanie uvedených prepráv žalovaný potvrdil. Potvrdil aj to, že sumu za uvedené prepravy žalobcovi neuhradil, a to z dôvodu, že voči žalobcovi si uplatnil započítaciu pohľadávku, a to vyúčtovanú zmluvnú pokutu, ako mala byť dohodnutá v objednávkach na vykonanie",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 4,
+            "parent_index": 1,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0429,
+            "char_len": 340,
+            "token_len": 172
+        }
+    },
+    {
+        "page_content": "a to vyúčtovanú zmluvnú pokutu, ako mala byť dohodnutá v objednávkach na vykonanie prepravy, a to z dôvodu, že žalobca napriek tomu, že to mal zakázané, vstupoval do priameho kontaktu so zákazníkom žalovaného. Uvedenú započítaciu pohľadávku žalobca namietal. Mal za to, že medzi účastníkmi konania nebola platne dohodnutá zmluvná pokuta, a preto takýto započítací",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 4,
+            "parent_index": 1,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0429,
+            "char_len": 363,
+            "token_len": 161
+        }
+    },
+    {
+        "page_content": "to, že medzi účastníkmi konania nebola platne dohodnutá zmluvná pokuta, a preto takýto započítací prejav nie je v súlade so zákonom.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_001_child_03",
+            "child_index": 3,
+            "child_count_in_parent": 4,
+            "parent_index": 1,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0429,
+            "char_len": 132,
+            "token_len": 56
+        }
+    },
+    {
+        "page_content": "Medzi účastníkmi konania nebolo sporné, že bola vykonaná preprava, a to viacnásobne, za ktorú zo strany žalovaného nebola vykonaná úhrada pre žalobcu. Sporné bolo medzi účastníkmi konania, či v zmysle objednávok si žalovaný mohol voči žalobcovi vyúčtovať zmluvnú pokutu a použiť ju ako započítaciu pohľadávku voči žalovanej sume.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_002",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_002_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 2,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.0714,
+            "char_len": 329,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "Na základe vykonaného dokazovania súd prvej inštancie mal za to, že obrana žalovaného nebola dôvodná. Žalovaný nemal nárok na započítaciu pohľadávku, a to vyúčtovanú zmluvnú pokutu za údajné porušenie povinností žalobcu v zmysle objednávok, a to vstupovať priamo do priameho kontaktu so zákazníkmi žalovaného. Na to, aby si ktorákoľvek zo strán právneho vzťahu mohla účtovať zmluvnú pokutu, Obchodný zákonník vo svojom ustanovení odkazuje na presne podmienky, kedy je možné zmluvnú pokutu účtovať. Pre možnosť účtovania zmluvnej pokuty sa vyžaduje písomná dohoda.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_003",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_003_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 3,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1,
+            "char_len": 563,
+            "token_len": 261
+        }
+    },
+    {
+        "page_content": "Občiansky zákonník v § 544 ods. 2 výslovne uvádza, že zmluvnú pokutu možno dojednať len písomne a v dojednaní musí byť určená výška pokuty alebo spôsob jej určenia. Taktiež dohoda o zmluvnej pokute musí obsahovať aké porušenie povinnosti je možné sankcionovať vyúčtovaním zmluvnej pokuty.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_004",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_004_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 4,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1286,
+            "char_len": 288,
+            "token_len": 132
+        }
+    },
+    {
+        "page_content": "K posilneniu postavenia veriteľa v záväzkových vzťahoch slúžia zabezpečovacie inštitúty. Jedným z najfrekventovanejších z nich je zmluvná pokuta. Právna úprava je obsiahnutá tak v zákone č. 40/1964 Zb. Občiansky zákonník v znení neskorších právnych predpisov (ďalej len \"OZ\"), ako aj v zákone č. 513/1991 Zb. Obchodný zákonník v znení neskorších právnych",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 3,
+            "parent_index": 5,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1571,
+            "char_len": 354,
+            "token_len": 164
+        }
+    },
+    {
+        "page_content": "len \"OZ\"), ako aj v zákone č. 513/1991 Zb. Obchodný zákonník v znení neskorších právnych predpisov, avšak táto má len dopĺňajúci charakter a zakotvuje len niektoré ustanovenia a odchýlky k úprave obsiahnutej v OZ. Táto základná úprava platí aj pre obchodno-právne vzťahy s tým, že v týchto vzťahoch sa uplatnia niektoré odchylné ustanovenia obsiahnuté v §",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 3,
+            "parent_index": 5,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1571,
+            "char_len": 355,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "vzťahy s tým, že v týchto vzťahoch sa uplatnia niektoré odchylné ustanovenia obsiahnuté v § 300 až § 302 Obchodného zákonníka.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_005_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 3,
+            "parent_index": 5,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1571,
+            "char_len": 126,
+            "token_len": 58
+        }
+    },
+    {
+        "page_content": "Pri rozhodovaní o nároku na zmluvnú pokutu sa skúma, či zmluvná pokuta bola dojednaná platne, t.j. v súlade s § 544 Občianskeho zákonníka. Súd má za to, že zmluvná pokuta nebola dohodnutá platne a to písomne, pretože pre platné dohodnutie písomnou formou je potrebné, aby účastníci konania svojím podpisom potvrdili uzatvorenie takejto zmluvnej pokuty. Žalovaný",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 3,
+            "parent_index": 6,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1857,
+            "char_len": 361,
+            "token_len": 158
+        }
+    },
+    {
+        "page_content": "je potrebné, aby účastníci konania svojím podpisom potvrdili uzatvorenie takejto zmluvnej pokuty. Žalovaný odkazoval, že dojedanie zmluvnej pokuty má vyplývať z objednávok. Po oboznámení sa z obsahu objednávok však vyplýva, že nedošlo k platnému dojednaniu zmluvnej pokuty, pretože objednávka nie je podpísaná ani žalobcom, ani žalovaným, teda dohoda o zmluvnej pokute v",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 3,
+            "parent_index": 6,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1857,
+            "char_len": 370,
+            "token_len": 161
+        }
+    },
+    {
+        "page_content": "pretože objednávka nie je podpísaná ani žalobcom, ani žalovaným, teda dohoda o zmluvnej pokute v tejto objednávke nebola teda písomne dojednaná. To však nie je prekážkou pre priznanie nároku za vykonanú prepravu, pretože objednanie prepravy a vykonanie je možné vykonať aj ústne, nielen písomne.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_006_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 3,
+            "parent_index": 6,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.1857,
+            "char_len": 295,
+            "token_len": 129
+        }
+    },
+    {
+        "page_content": "Súd prvej inštancie teda mal za to, že medzi účastníkmi konania došlo k uzatvoreniu objednávok na vykonanie prepravy a to forme objednávok. Vykonanie týchto prepráv je preukázané medzinárodnými nákladnými listami. Žalovaný aj potvrdil vykonanie tejto prepravy a neuhradenie súm za vykonanú prepravu. Súd preto má za to, že vyúčtované sumy za vykonanú prepravu voči žalovanému sú vyúčtované dôvodne. Žalovaný nepreukázal, žeby túto sumu uhradil, preto súd prvej inštancie zaviazal žalovaného na zaplatenie sumy spolu vo výške 7.800,- eur za vykonané prepravy.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_007",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_007_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 7,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.2143,
+            "char_len": 558,
+            "token_len": 248
+        }
+    },
+    {
+        "page_content": "Zároveň priznal žalobcovi aj nárok na úrok z omeškania, a to tak, ako to bolo dohodnuté vo vystavených faktúrach. Súd mal za to, že vyhotovenie dátumu splatnosti bolo na základe dohody medzi účastníkmi konania. Táto splatnosť zo strany žalovaného ani namietaná nebola. Nezaplatením ceny v lehote splatnosti podľa faktúr sa žalovaný dostal do omeškania. Preto súd mal zato, že",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 3,
+            "parent_index": 8,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.2429,
+            "char_len": 375,
+            "token_len": 157
+        }
+    },
+    {
+        "page_content": "ceny v lehote splatnosti podľa faktúr sa žalovaný dostal do omeškania. Preto súd mal zato, že došlo medzi stranami aj ak takejto dohode o lehote splatnosti. Preto súd žalovaného zaviazal na zaplatenie zákonného úroku z omeškania vo výške 9 % ročne zo súm podľa vystavených faktúr. Ku dňu omeškania ako je uvedené vo výroku a podľa lehoty splatnosti uvedenej vo",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 3,
+            "parent_index": 8,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.2429,
+            "char_len": 360,
+            "token_len": 160
+        }
+    },
+    {
+        "page_content": "faktúr. Ku dňu omeškania ako je uvedené vo výroku a podľa lehoty splatnosti uvedenej vo faktúrach výška zákonného úroku z omeškania bola stanovená v obchodných vzťahoch vo výške 9 % ročne.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_008_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 3,
+            "parent_index": 8,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.2429,
+            "char_len": 188,
+            "token_len": 90
+        }
+    },
+    {
+        "page_content": "Súd priznal žalobcovi aj sumu 40,- eur ako paušálnu náhradu hotových nákladov spojených s uplatnením pohľadávky v zmysle § 369c ods. 1 Obchodného zákonníka. Výšku paušálnej náhrady nákladov spojených s uplatnením pohľadávky ustanovila vláda Slovenskej republiky nariadením 21/2013 Z.z..",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_009",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_009_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 9,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.2714,
+            "char_len": 286,
+            "token_len": 137
+        }
+    },
+    {
+        "page_content": "Výška paušálnej náhrady nákladov spojených s uplatnením pohľadávky je 40,- eur jednorazovo bez ohľadu na dĺžku omeškania. Ide o náhradu administratívnych interných monitorovacích nákladov, ktoré vznikajú pri kontrole dodržiavania zmluvných záväzkov (náklady na vedenie evidencie pohľadávok, náklady súvisiace s telefonickou alebo písomnou urgenciou dlžníka, táto však nie je podmienkou pre vznik nároku na paušálnu náhradu nákladov).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_010",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_010_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 10,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.3,
+            "char_len": 433,
+            "token_len": 197
+        }
+    },
+    {
+        "page_content": "Súd prvej inštancie vyhovel tejto žalobe z dôvodu, že vykonaným dokazovaním mal za to, že zmluvná pokuta nebola dohodnutá platne, a teda žalovaný si nemal právo uplatniť voči žalobcovi započítací prejav vo výške vyúčtovanej zmluvnej pokuty.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_011",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_011_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 11,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.3286,
+            "char_len": 240,
+            "token_len": 107
+        }
+    },
+    {
+        "page_content": "Výrok o trovách konania odôvodnil ustanovením § 255 ods. 1 CSP.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_012",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_012_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 12,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.3571,
+            "char_len": 63,
+            "token_len": 26
+        }
+    },
+    {
+        "page_content": "Proti rozsudku v zákonnej lehote podal odvolanie žalovaný, a to len proti výroku o trovách konania, pričom navrhol, aby odvolací súd rozsudok zmenil a náhradu trov konania v zmysle § 257 CSP sporovým stranám nepriznal.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_013",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_013_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 13,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.3857,
+            "char_len": 218,
+            "token_len": 90
+        }
+    },
+    {
+        "page_content": "Odvolanie odôvodnil ustanovením § 365 ods. 1 písm. f) CSP, t.j. že súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_014",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_014_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 14,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.4143,
+            "char_len": 157,
+            "token_len": 73
+        }
+    },
+    {
+        "page_content": "Poukázal na to, že je nesporné, že žalobca konal v rozpore s dobrými mravmi, ako aj zásadami poctivého obchodného styku a v rozpore s podmienkami prepravy, ktoré akceptoval prijatím objednávky od žalovaného. V uvedených bola zásadnou požiadavkou skutočnosť, že žalobca nie je oprávnený kontaktovať zákazníkov žalovaného. Je nesporné, ako vyplýva aj z obsahu súdneho spisu, že žalobca prostredníctvom svojich zamestnancov opakovane kontaktoval zákazníkov žalobcu v snahe obísť žalovaného a získať budúce zákazky priamo od zákazníkov. V tejto činnosti pokračoval opakovane.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_015",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_015_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 15,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.4429,
+            "char_len": 571,
+            "token_len": 245
+        }
+    },
+    {
+        "page_content": "Žalovaný preto v snahe zabrániť žalobcovi v tomto konaní pristúpil k uplatneniu zmluvnej pokuty.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_016",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_016_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 16,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.4714,
+            "char_len": 96,
+            "token_len": 43
+        }
+    },
+    {
+        "page_content": "Žalovaný rešpektuje právne posúdenie súdu ohľadom platnosti dojednanej zmluvnej pokuty, ale má za to, že v danom prípade existujú dôvody hodné osobitného zreteľa v zmysle § 257 CSP, aby súd žalovanému (nemá byť žalobcovi?), hoci aj úspešnému účastníkovi konania, náhradu trov konania nepriznal. Konanie žalovaného, t.j. neúspešného účastníka konania vo vzťahu k",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 4,
+            "parent_index": 17,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5,
+            "char_len": 361,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "náhradu trov konania nepriznal. Konanie žalovaného, t.j. neúspešného účastníka konania vo vzťahu k žalobcovi nebolo samovoľným bezdôvodným rozhodnutím, ale len jeho obranou voči konaniu žalobcu, ktorý sám svojím konaním v rozpore s dobrými mravmi dal príčinu sporu medzi účastníkmi. Ak by žalobca sám nevyvíjal snahu o obídenie žalovaného v budúcich obchodoch s",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 4,
+            "parent_index": 17,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5,
+            "char_len": 361,
+            "token_len": 161
+        }
+    },
+    {
+        "page_content": "medzi účastníkmi. Ak by žalobca sám nevyvíjal snahu o obídenie žalovaného v budúcich obchodoch s jeho zákazníkmi, pričom na neprijateľnosť takého kontaktu bol opakovane upozorňovaný, nemal by žalovaný žiaden dôvod na uplatňovanie zmluvných pokút a neuhradenie pohľadávok žalobcu. Žalovaný má za to, že konanie žalobcu prispelo k vzniku sporu medzi sporovými",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 4,
+            "parent_index": 17,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5,
+            "char_len": 357,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "žalobcu. Žalovaný má za to, že konanie žalobcu prispelo k vzniku sporu medzi sporovými stranami a uvedené okolnosti vytvárajú záver o tom, že v danom prípade sú prítomné dôvody hodné osobitného zreteľa odôvodňujúce postup podľa § 257 CSP v otázke náhrady trov konania.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_017_child_03",
+            "child_index": 3,
+            "child_count_in_parent": 4,
+            "parent_index": 17,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5,
+            "char_len": 268,
+            "token_len": 118
+        }
+    },
+    {
+        "page_content": "Žalobca sa k odvolaniu žalovaného nevyjadril.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_018",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_018_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 18,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5286,
+            "char_len": 45,
+            "token_len": 21
+        }
+    },
+    {
+        "page_content": "Odvolací súd prejednal vec podľa § 378 ods. 1 CSP, a to bez nariadenia odvolacieho pojednávania (§ 385 ods. 1 CSP a contrario) a zistil, že odvolanie žalovaného nie je dôvodné.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_019",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_019_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 19,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5571,
+            "char_len": 176,
+            "token_len": 77
+        }
+    },
+    {
+        "page_content": "V otázke náhrady trov konania súd prvej inštancie zistil všetky okolnosti právne významné pre rozhodnutie v tomto smere a vo veci aj správne rozhodol.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_020",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_020_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 20,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.5857,
+            "char_len": 150,
+            "token_len": 64
+        }
+    },
+    {
+        "page_content": "So zreteľom na obsah odvolania žalovaného, v odvolacom konaní bol preskúmavaný výrok napadnutého rozsudku súdu prvej inštancie o trovách konania, a preto výrok rozsudku, ktorým bolo žalobe vyhovené, ktorý odvolaním žalovaného napadnutý nebol, v odvolacom konaní preskúmavaný nebol a ako taký nadobudol právoplatnosť (§ 367 ods. 2 CSP).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_021",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_021_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 21,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.6143,
+            "char_len": 335,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "Súd prizná strane náhradu trov konania podľa pomeru jej úspechu vo veci (§ 255 ods. 1 CSP).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_022",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_022_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 22,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.6429,
+            "char_len": 91,
+            "token_len": 42
+        }
+    },
+    {
+        "page_content": "Ak mala strana vo veci úspech len čiastočný, súd náhradu trov konania pomerne rozdelí, prípadne vysloví, že žiadna zo strán nemá na náhradu trov konania právo (§ 255 ods. 2 CSP).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_023",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_023_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 23,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.6714,
+            "char_len": 178,
+            "token_len": 77
+        }
+    },
+    {
+        "page_content": "Výnimočne súd neprizná náhradu trov konania, ak existujú dôvody hodné osobitného zreteľa (§ 257 CSP).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_024",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_024_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 24,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.7,
+            "char_len": 101,
+            "token_len": 48
+        }
+    },
+    {
+        "page_content": "V prejednávanej veci bolo nepochybne preukázané, že žalobca bol úspešný čo do sumy 7.800,- eur s prísl., ako aj v otázke nákladov spojených s uplatnením pohľadávky vo výške 40,- eur z dôvodu, že žalovaný nezaplatil faktúry, ktoré mu za vykonané prepravy žalobca zaslal a ktoré sú bližšie špecifikované v odôvodnení rozhodnutia súdu prvej inštancie (bod 5. a nasl. napadnutého rozsudku).",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_025",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_025_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 25,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.7286,
+            "char_len": 386,
+            "token_len": 182
+        }
+    },
+    {
+        "page_content": "Pokiaľ si žalovaný počínal tak, že tieto faktúry nezaplatil z dôvodu účtovania tzv. zmluvnej pokuty v súvislosti s nesprávnym konaním žalobcu, ktorý mal kontaktovať priamo zákazníkov a takýmto spôsobom obchádzať žalovaného, treba konštatovať, že súd prvej inštancie správne zistil, že žalovaný nebol oprávnený na účtovanie zmluvnej pokuty. Stalo sa tak z dôvodu, že túto zmluvnú pokutu nemal v zmysle § 544 ods. 2 Obchodného zákonníka platne dojednanú.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_026",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_026_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 26,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.7571,
+            "char_len": 452,
+            "token_len": 207
+        }
+    },
+    {
+        "page_content": "Za týchto okolností nemal právo ani na započítanie nárokov na zmluvnú pokutu s nárokmi žalobcu uplatňovanými v tomto konaní na zaplatenie fakturovaných súm za vykonané prepravy v pozícii dopravcu.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_027",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_027_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 27,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.7857,
+            "char_len": 196,
+            "token_len": 83
+        }
+    },
+    {
+        "page_content": "Rozhodujúcou okolnosťou, ktorú je potrebné vnímať a uplatniť pri rozhodovaní o náhrade trov konania v prejednávanej veci je to, že žalovaný nebol vo veci úspešný z dôvodov, ktoré súd prvej inštancie presne špecifikoval, nebol oprávnený na účtovanie zmluvnej pokuty, a preto zásada úspechu, právne významná pre rozhodnutie o trovách konania, plne svedčí v prospech žalobcu.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_028",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_028_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 28,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.8143,
+            "char_len": 372,
+            "token_len": 165
+        }
+    },
+    {
+        "page_content": "Tzv. závadné správanie sa žalobcu spočívajúce v tom, že mal obchádzať žalovaného, kontaktovať zákazníkov v snahe získať budúce zákazky priamo od týchto zákazníkov, nebolo dostatočne preukázané, ale rozhodujúcou okolnosťou je to, že ani takéto eventuálne nesprávne konanie žalobcu by nemalo mať za následok ukladanie zmluvnej pokuty, ktorá nemá právny základ v zmluvnom dojednaní medzi stranami zmluvy a takto nelegálne uložená zmluvná pokuta by nemala byť dôvodom pre započítanie voči nárokom na zaplatenie dopravy, ktoré si uplatňuje strana, ktorá túto dopravu v skutočnosti vykonala a ju aj fakturovala.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_029",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_029_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 29,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.8429,
+            "char_len": 605,
+            "token_len": 262
+        }
+    },
+    {
+        "page_content": "Tieto okolnosti bránia v postupe podľa § 257 CSP v otázke náhrady trov konania, pretože konanie žalovaného nemalo oporu v zmysle vyššie uvedeného v zmluvných dojednaniach medzi sporovými stranami a ani argumentácia (vyššie uvedená) žalovaného nemôže zmeniť záver o správnosti postupu súdu prvej inštancie pokiaľ priznal plnú náhradu trov konania žalobcovi ako plne úspešnej",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 3,
+            "parent_index": 30,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.8714,
+            "char_len": 373,
+            "token_len": 158
+        }
+    },
+    {
+        "page_content": "postupu súdu prvej inštancie pokiaľ priznal plnú náhradu trov konania žalobcovi ako plne úspešnej sporovej strane v tomto konaní. V zásade možno teda konštatovať, že eventuálne závadné správanie sa žalobcu vo vzťahu k zákazníkom žalovaného a možné poškodzovanie žalovaného v tomto smere, nemôže byť dôvodom pre postup, ktorý zvolil žalovaný, a preto nemôže byť ani",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030_child_01",
+            "child_index": 1,
+            "child_count_in_parent": 3,
+            "parent_index": 30,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.8714,
+            "char_len": 364,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "v tomto smere, nemôže byť dôvodom pre postup, ktorý zvolil žalovaný, a preto nemôže byť ani dôvodom pre uplatnenie § 257 CSP v otázke náhrady trov konania.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_030_child_02",
+            "child_index": 2,
+            "child_count_in_parent": 3,
+            "parent_index": 30,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.8714,
+            "char_len": 155,
+            "token_len": 64
+        }
+    },
+    {
+        "page_content": "Správne preto postupoval súd prvej inštancie pokiaľ priznal žalobcovi ako úspešnej sporovej strane nárok na náhradu trov konania proti žalovanému v rozsahu 100 %, nakoľko žalovaný bol v konaní neúspešnou sporovou stranou.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_031",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_031_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 31,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.9,
+            "char_len": 221,
+            "token_len": 95
+        }
+    },
+    {
+        "page_content": "Preto odvolací súd postupom podľa § 387 ods. 1 CSP rozsudok v napadnutej časti ako vecne správny potvrdil.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_032",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_032_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 32,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.9286,
+            "char_len": 106,
+            "token_len": 49
+        }
+    },
+    {
+        "page_content": "O trovách odvolacieho konania bolo rozhodnuté podľa § 396 ods. 1 CSP a § 255 ods. 1 CSP, podľa ktorého žalobca ako sporová strana, ktorá mala v odvolacom konaní plný úspech, má nárok na náhradu trov tohto štádia konania proti žalovanému, ktorý v odvolacom konaní úspech nemal. Výšku týchto trov ustáli postupom podľa § 262 ods. 2 CSP súd prvej inštancie po právoplatnosti tohto rozhodnutia odvolacieho súdu samostatným uznesením, ktoré vydá súdny úradník.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_033",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_033_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 33,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.9571,
+            "char_len": 455,
+            "token_len": 206
+        }
+    },
+    {
+        "page_content": "Toto rozhodnutie prijal senát Krajského súdu v Prešove pomerom hlasov 3: 0.",
+        "metadata": {
+            "source_file": "KS_Prešov_7Cob_61_2022_00_dokument.pdf",
+            "case_id": "7Cob/61/2022",
+            "parent_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_034",
+            "child_id": "KS_Prešov_7Cob_61_2022_00_dokument_parent_034_child_00",
+            "child_index": 0,
+            "child_count_in_parent": 1,
+            "parent_index": 34,
+            "section": "reasoning",
+            "point_number": -1,
+            "position_ratio": 0.9857,
+            "char_len": 75,
+            "token_len": 35
+        }
+    }
+]

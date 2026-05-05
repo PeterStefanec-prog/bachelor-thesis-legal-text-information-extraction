@@ -1,0 +1,827 @@
+[
+    {
+        "page_content": "1. Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 27.616,83 € spolu - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 2.688,71 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 2.688,71 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 4.498,14 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 4.498,14 € od",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 0,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 585,
+            "token_len": 199
+        }
+    },
+    {
+        "page_content": "do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 4.498,14 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 7.059,04 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 7.059,04 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 13.072,19 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 13.072,19",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 1,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 569,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 13.072,19 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 298,75 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 298,75 € od 11.07.2009 do zaplatenia, ako aj trovy konania vo výške 2.261,- € a trovy právneho zastúpenia vo výške 4.591,20 € k rukám právneho zástupcu žalobcu, všetko do 3 dní od právoplatnosti rozsudku.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 2,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 513,
+            "token_len": 170
+        }
+    },
+    {
+        "page_content": "2. V odôvodnení rozhodnutia súd uviedol, že žalobca sa žalobou doručenou Okresnému súdu Bratislava II dňa 11.03.2013 domáhal vydania rozhodnutia, ktorým by súd uložil žalovanému zaplatiť sumu 27.616,83 € s príslušenstvom. Žalobca svoju žalobu odôvodnil tým, že pohľadávka žalobcu vznikla na základe zmluvy o dielo, ktorú uzatvorili dňa 21.03.2008 žalovaný v postavení objednávateľa a spoločnosť CAKOV-MAKARA, s.r.o. v likvidácii, so sídlom Drieňová 1/G, Bratislava, v postavení zhotoviteľa.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 3,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 490,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "Predmetom tejto zmluvy o dielo bol záväzok zhotoviteľa - spoločnosti CAKOV-MAKARA, s.r.o. v likvidácii, Bratislava spočívajúci v dodávke a montáži kuchynských liniek podľa položkového rozpočtu, ktorý bol prílohou. Odovzdané kuchyne spoločnosť CAKOV-MAKARA, s.r.o. v likvidácii, a teda ich cenu vyúčtovala žalovanému faktúrami: - faktúra č. 880131 zo dňa 03.11.2008 na sumu vo výške 106.652,06 €, - faktúra č. 880143 zo dňa 18.11.2008 na sumu vo výške 178.426,09 €, - faktúra č. 880150 zo dňa 17.12.2008 na sumu vo výške 280.008,66 €, - faktúra č. 980001 zo dňa 21.01.2009 na sumu vo výške 39.500,77 €, - faktúra č. 980028",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 4,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 621,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "zo dňa 21.01.2009 na sumu vo výške 39.500,77 €, - faktúra č. 980028 zo dňa 12.03.2009 na sumu vo výške 11.850,23 €.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 5,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 115,
+            "token_len": 38
+        }
+    },
+    {
+        "page_content": "Úhrada predmetných faktúr bola zúčtovaná, a to na základe dohody o vzájomnom zápočte záväzkov a pohľadávok zo dňa 10.07.2009, na základe ktorej si spoločnosť CAKOV-MAKARA, s.r.o. v likvidácii, Bratislava a žalovaný zúčtovali vzájomné pohľadávky a záväzky vo výške 38.014,41 EUR ku dňu 10.07.2009. Z tejto dohody vyplynulo, že záväzok spoločnosti CAKOV-MAKARA, s.r.o. v likvidácii, Bratislava, z faktúr č. 200906002, 200906023, 200906003, 200906001 vo výške 38.014,41 EUR a záväzok žalovaného plynúci z faktúr č. 880148, 880131, 880143, 880150, 980001, 9800028 vo výške 38.014,41 EUR zanikli ku dňu",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 6,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 597,
+            "token_len": 199
+        }
+    },
+    {
+        "page_content": "880150, 980001, 9800028 vo výške 38.014,41 EUR zanikli ku dňu 10.07.2009 započítaním podľa § 580 Občianskeho zákonníka a § 358 Obchodného zákonníka. Z tohto vzájomného zápočtu zostal dlh žalovaného voči CAKOV-MAKARA, s.r.o. v likvidácii vo výške 27.616,83 EUR titulom zádržného, čo tvorí predmet tohto sporu.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 7,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 308,
+            "token_len": 98
+        }
+    },
+    {
+        "page_content": "3. Žalobca svoju aktívnu legitimáciu preukázal tým, že pôvodný veriteľ CAKOV-MAKARA, s.r.o. v likvidácii, Bratislava, postúpil pohľadávku vo výške neuhradených faktúr č. 880131, 880143, 880150, 980001, 980028, v celkovej výške 27.616,83 EUR na spoločnosť NEUSOHLER, spol. s r.o., Banská Bystrica, táto spoločnosť dňa 09.03.2011 postúpila predmetnú pohľadávku na spoločnosť cesia s.r.o. \"v likvidácii\", Banská Bystrica, a táto dňa 04.02.2013 postúpila pohľadávku voči žalovanému ako dlžníkovi spolu s príslušenstvom a všetkými právami s ňou spojenými na spoločnosť žalobcu, pričom všetky tieto postúpenia boli žalovanému oznámené oznámeniami zo dňa 20.10.2010, 21.03.2011 a",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 8,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 672,
+            "token_len": 199
+        }
+    },
+    {
+        "page_content": "tieto postúpenia boli žalovanému oznámené oznámeniami zo dňa 20.10.2010, 21.03.2011 a 05.02.2013.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 9,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 97,
+            "token_len": 29
+        }
+    },
+    {
+        "page_content": "Žalovaný si svoj záväzok zo zápočtu zo dňa 10.07.2009 nesplnil, a tak sa žalobca domáha jeho splnenia predmetnou žalobou. Žalobca si tiež uplatnil úroky z omeškania v zmluvne dohodnutej výške a nárok titulom zmluvnej pokuty.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 10,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 224,
+            "token_len": 69
+        }
+    },
+    {
+        "page_content": "4. Po vykonaní dokazovania a zistení skutkového stavu mal súd za to, že žalobca predložil všetky zmluvy o postúpení pohľadávok v konaní pred súdom a tiež preukázal splnenie notifikačnej oznamovacej povinnosti voči žalovanému ako dlžníkovi, pričom pohľadávka bola špecifikovaná a individualizovaná. Na základe zmluvy o postúpení pohľadávky (poslednej) sa žalobca stal novým veriteľom a pohľadávka, ktorá bola predmetom postúpenia, prešla na žalobcu. Súhlas žalovaného ako dlžníka k tomuto úkonu zákon nevyžaduje, zmluva má písomnú formu, pohľadávka je špecifikovaná a žalovanému bolo postúpenie oznámené a aj v konaní pred súdom preukázané. Z tohto dôvodu mal súd za to, že žalobca je aktívne legitimovaný.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 11,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 705,
+            "token_len": 194
+        }
+    },
+    {
+        "page_content": "5. Listinný dôkaz, a to \"Dohodu o vzájomnom zápočte záväzkov a pohľadávok\" uzavretú dňa 10.07.2009 medzi žalovaným a spoločnosťou CAKOV-MAKARA, s.r.o., Bratislava, súd vyhodnotil tak, že na základe dohody (compensatio voluntaria) si zúčastnené strany zúčtovali vzájomné pohľadávky a záväzky.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 12,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 291,
+            "token_len": 92
+        }
+    },
+    {
+        "page_content": "Následkom tohto započítania bolo zrušenie vzájomne započítaných pohľadávok a záväzkov, pričom záväzok žalovaného vo výške 27.616,83 € titulom zádržného bol žalovanému zrejmý a je možné usudzovať, že ho uznal čo do základu a výšky, resp. ho nepoprel v čase, kedy k dohode došlo. Z tejto dohody jednoznačne vyplýva dlh žalovaného vo výške 27.616,83 € voči spoločnosti CAKOVMAKARA, s.r.o., pričom aj keď v tejto dohode nie je výslovne uvedené, že žalovaný svoj záväzok voči CAKOV-MAKARA, s.r.o. uznáva, jednoznačnosť spôsobu vymedzenia záväzku žalovaného voči CAKOV-MAKARA, s.r.o. je daná.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 13,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 586,
+            "token_len": 180
+        }
+    },
+    {
+        "page_content": "6. Splatnosť zádržného bola dohodnutá v článku VII bod 7.5 zmluvy o dielo a toto malo byť uvoľňované postupne, pričom práve 3. časť zádržného mala byť uvoľnená po skončení záručnej doby. Vzhľadom na uzavretú zmluvu, čas plnenia a dĺžku záručnej doby bolo v čase rozhodnutia súdu rozumné predpokladať, že táto dávno uplynula a žalovaný mal povinnosť minimálne po skončení záručnej doby uvoľniť zádržné, ktoré je a bolo predmetom sporu.\n\n7. Žalobca si v konaní uplatnil úroky z omeškania z uplatnenej sumy odo dňa nasledujúceho po dni, kedy došlo k dohode o vzájomnej kompenzácii pohľadávok a záväzkov a uznaní žalovaného o svojom dlhu.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 14,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 634,
+            "token_len": 171
+        }
+    },
+    {
+        "page_content": "Aj keď pre zádržné neboli dohodnuté v zmluve o dielo osobitné sankcie - úrok z omeškania či zmluvná pokuta pre nezaplatenie tejto časti záväzku, súd poukázal na to, že žalovaný svoj záväzok nesplnil dobrovoľne, riadne a včas, pričom zadržaná čiastka vyplývala z faktúr, ktoré boli ako dané doklady vystavené a úrok pre nesplnenie tejto povinnosti bol dohodnutý vo výške 0,075 % z neuhradenej čiastky za každý deň omeškania, čo sa rovná zádržnému.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 15,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 446,
+            "token_len": 136
+        }
+    },
+    {
+        "page_content": "8. Zmluvná pokuta ako osobitná zabezpečovacia sankcia bola dohodnutá v článku XII bod 12.2.1 zmluvy o dielo pre prípad omeškania objednávateľa (žalovaného) s úhradou oprávnených faktúr vo výške 0,1 % z dlžnej čiastky za každý deň omeškania až do dátumu zaplatenia. Povinnosť osobitne fakturovať zádržné faktúrou pre žalobcu zo zmluvy o dielo nevyplýva, zádržné bolo súčasťou vyúčtovaných čiastkových faktúr, pričom vyplatenie, resp. uvoľnenie zádržného bolo podmienené splnením dohodnutých právnych okolností.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 16,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 509,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "9. Na základe uvedeného mal súd prvej inštancie za to, že uplatnený nárok žalobcu je dôvodný, keďže faktúry boli vystavené oprávnene a žalovaný svoj záväzok nesplnil dobrovoľne, ani po dohode o kompenzácii, a tak minimálne od dohody o vzájomnej kompenzácii je v omeškaní so splnením svojho dlhu. Súd na základe takto zhodnoteného dokazovania posúdil nárok žalobcu ako dôvodný a žalobe v celom rozsahu vyhovel.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 17,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 409,
+            "token_len": 116
+        }
+    },
+    {
+        "page_content": "10. Súd v napadnutom rozhodnutí zároveň priznal žalobcovi náhradu trov konania, ktoré pozostávajú zo zaplateného súdneho poplatku za žalobu v sume 2.261,- € a z trov právneho zastúpenia v sume 4.591,20 € podľa vyhlášky MS SR č. 655/2004 Z. z. 11. Proti tomuto rozsudku podal v zákonnej lehote odvolanie žalovaný z dôvodov podľa § 205 ods. 2 písm. d) a f) O.s.p. účinného do 30.06.2016 a navrhol, aby odvolací súd rozsudok súdu prvej inštancie zmenil a žalobu zamietol, a aby žalovanému priznal náhradu trov konania.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 18,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 515,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "12. Žalovaný namietal, že do dnešného dňa nebol voči nemu uskutočnený hmotnoprávny úkon, na základe ktorého by postúpenie žalovanej pohľadávky na žalobcu mohlo byť účinným voči žalovanému.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 19,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 188,
+            "token_len": 54
+        }
+    },
+    {
+        "page_content": "Oznámenie o prvom postúpení žalovanej pohľadávky zo dňa 20.10.2010 bolo vykonané neoprávnenou osobou v mene CAKOV MAKARA, s.r.o. v likvidácii, t.j. nie jej likvidátorom, a preto oznámenie nevyvolalo voči žalovanému žiadne právne účinky, v čoho dôsledku sú všetky tri oznámenia o postúpení žalovanej pohľadávky zo dňa 20.10.2009, zo dňa 11.03.2011 a zo dňa 05.02.2013 absolútne neplatné. Žalovaný ďalej poukázal na to, že vo všetkých zmluvách o postúpení je ako dlžník označený Metrostav a.s. organizačná zložka, IČO 31 792 693, so sídlom Košická 56, Bratislava. Keďže však organizačná zložka nemá právnu subjektivitu a ani procesnú spôsobilosť (nie je nositeľom práv a povinností), tak nemôže byť označovaná ako",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 20,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 711,
+            "token_len": 198
+        }
+    },
+    {
+        "page_content": "a ani procesnú spôsobilosť (nie je nositeľom práv a povinností), tak nemôže byť označovaná ako dlžník určitej pohľadávky. Podľa názoru žalovaného preto nie je v zmluvách o postúpení riadne označená osoba dlžníka a ani nie je riadne špecifikovaná postupovaná pohľadávka, čo má za následok absolútnu neplatnosť všetkých zmlúv o postúpení. Z uvedených dôvodov mal žalovaný za to, že žalobca nie je a nikdy ani nebol aktívne legitimovaným na podanie žaloby a súd mal žalobu aj z tohto dôvodu v celom rozsahu zamietnuť.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 21,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 514,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "13. Žalovaný v súvislosti s jeho námietkou premlčania čiastky 7.097,28 Eur z faktúry č. 980001 uviedol, že žalovaná pohľadávka nie je 3. časťou zádržného, ako to nesprávne uvádza súd v rozsudku. Podľa názoru žalovaného je čiastka 7097,28 Eur z faktúry číslo 980001 časťou 1. časti zádržného v zmysle zmluvy a je dávno premlčaná. Žalovaný v konaní pred súdom riadne vzniesol námietku premlčania tejto čiastky, súd však bez ďalšieho (bez akéhokoľvek odôvodnenia), napriek vznesenej námietke premlčania, žalobcovi aj túto premlčanú pohľadávku priznal. Podľa názoru žalovaného pritom právny úkon čiastočného započítania nie je možné v žiadnom prípade posúdiť ako úkon smerujúci k uznaniu",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 22,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 683,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "čiastočného započítania nie je možné v žiadnom prípade posúdiť ako úkon smerujúci k uznaniu zvyšku nezapočítaného záväzku;",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 23,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 122,
+            "token_len": 36
+        }
+    },
+    {
+        "page_content": "z obsahu právneho úkonu započítania žiaden takýto úkon uznania vôbec nevyplýva.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 24,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 79,
+            "token_len": 25
+        }
+    },
+    {
+        "page_content": "14. Žalovaný namietal, že napriek tomu, že súd označil žalovanú istinu ako 3. časť zádržného, na ktorú malo v zmysle zmluvy vzniknúť právo na zaplatenie po skončení záručnej doby, súd priznal podľa názoru žalovaného absolútne nelogicky a v rozpore s platným právnym poriadkom úroky z omeškania a zmluvnú pokutu od momentu vykonania zápočtu, t.j. odo dňa 11.07.2009, a to aj napriek tomu, že 3. časť zádržného v zmysle zmluvy nebola v čase započítania vôbec splatná. Súd pritom v napadnutom rozsudku vôbec neuviedol, akým spôsobom posúdil argumentáciu žalovaného v uvedenom smere, neriešil otázku výkladu sporných ustanovení zmluvy o úrokoch z omeškania a zmluvnej pokute, a ani otázku možnej neplatnosti týchto ustanovení z dôvodu ich",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 25,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 734,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "z omeškania a zmluvnej pokute, a ani otázku možnej neplatnosti týchto ustanovení z dôvodu ich neurčitosti.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 26,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 106,
+            "token_len": 31
+        }
+    },
+    {
+        "page_content": "15. Žalovaný ďalej argumentoval, že v zmluve nebola výslovne dohodnutá splatnosť žiadnej časti zádržného. Preto v zmysle zákona sa zádržné mohlo stať splatným až v momente, kedy by bol žalovaný vyzvaný zo strany veriteľa na zaplatenie. Ani CAKOV MAKARA, s.r.o., ani žiaden z ostatných subjektov, ktoré mali nadobudnúť žalovanú pohľadávku viacnásobným postúpením, však nikdy žalovaného nevyzvali na zaplatenie pohľadávky. Na základe uvedeného žalovaná pohľadávka podľa názoru žalovaného nie je doposiaľ vôbec splatná a žalovaný nie je v omeškaní s jej zaplatením. Preto súd v takomto prípade ani nemohol priznať žalobcovi ním požadované úroky z omeškania a zmluvné pokuty od dátumu 11.07.2009, ale najskôr od",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 27,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 707,
+            "token_len": 199
+        }
+    },
+    {
+        "page_content": "požadované úroky z omeškania a zmluvné pokuty od dátumu 11.07.2009, ale najskôr od dátumu podania žaloby.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 28,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 105,
+            "token_len": 32
+        }
+    },
+    {
+        "page_content": "16. Žalovaný ďalej poukázal na to, že pre omeškanie so zaplatením zádržného nebol v zmluve dohodnutý žiaden zmluvný úrok z omeškania ani zmluvná pokuta. Konajúci súd napriek tomu bez ďalšieho, v rozpore so zákonom a absolútne nelogicky priznal žalobcovi právo na zaplatenie úrokov z omeškania a zmluvnej pokuty tak, ako to žalobca požadoval. Navyše, výšku priznanej zmluvnej pokuty považoval žalovaný za neprimerane vysokú, odporujúcu dobrým mravom a zásadám poctivého obchodného styku, na čo súd vôbec neprihliadol a nevyužil svoje moderačné právo v zmysle ust. § 301 Obchodného zákonníka k zníženiu neprimeranej zmluvnej pokuty (súd ani neodôvodnil prečo v tejto veci nevyužíva svoje moderačné právo).",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 29,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 703,
+            "token_len": 198
+        }
+    },
+    {
+        "page_content": "17. K odvolaniu žalovaného sa dňa 03.09.2014 písomne vyjadril žalobca, ktorý navrhol, aby odvolací súd napadnutý rozsudok súdu prvej inštancie v spojitosti s opravným uznesením č. k. 26Cb/55/2013-244 potvrdil ako vecne správny a zaviazal žalovaného aj na náhradu trov odvolacieho konania.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 30,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 288,
+            "token_len": 85
+        }
+    },
+    {
+        "page_content": "18. Žalobca uviedol, že všetky uvádzané tvrdenia žalovaného už v konaní pred prvoinštančným súdom odzneli a konajúci súd sa nimi v priebehu konania zaoberal, na súdnych pojednávaniach k nim zaujal svoje stanovisko a svoj postoj, ako aj svoje rozhodnutie náležitým spôsobom zdôvodnil. Žalobca z tohto pohľadu pokladá napadnuté rozhodnutie súdu prvej inštancie za vecne správne a jasne, racionálne, logicky a postačujúco zdôvodnené. Na všetky námietky žalovaného poskytol v napadnutom rozhodnutí konajúci súd odpovede a vecne sa vysporiadal s jeho argumentmi.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 31,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 557,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "19. Vo vzťahu k námietkam žalovaného o nedostatku aktívnej legitimácie žalobcu na podanie žaloby v predmetnom konaní žalobca uviedol, že žalobca v konaní nielenže preukázal, že každý z radu postupcov oznámil svojmu dlžníkovi postúpenie pohľadávky, ale navyše žalobca (hoci sám nemal voči žalovanému ako dlžníkovi takú zákonnú povinnosť) na výzvu súdu predložil aj zmluvy o postúpení pohľadávok, tak ako boli v priebehu času medzi zmluvnými stranami uzatvárané. Uvedené námietky žalovaného preto považoval žalobca za irelevantné.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 32,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 528,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "20. Žalobca zdôraznil, že žalovaný nemá žiadne zákonné oprávnenie sa domáhať predloženia zmluvy o postúpení pohľadávky od postupníka, ak mu bolo postúpenie pohľadávky preukázateľne oznámené postupcom. Z toho potom zákonite vyplýva, že žalovaný sa ako dlžník nemôže voči žalobcovi domáhať akýchkoľvek námietok neplatnosti zmlúv o postúpení pohľadávok, nakoľko tieto by sa bez výzvy súdu v konaní na prvej inštancii do jeho dispozičnej sféry nikdy nedostali. Žalovanému bolo postúpenie pohľadávok vždy právne relevantným spôsobom oznámené zo strany postupcov, čo napokon v súdnom konaní žalobca hodnoverne preukázal.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 33,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 614,
+            "token_len": 170
+        }
+    },
+    {
+        "page_content": "21. Žalobca poznamenal, že nikdy počas celej doby od vzniku a existencie pohľadávky žalovaný ako dlžník nijakým spôsobom nepoprel voči žiadnemu zo svojich veriteľov (predošlých vlastníkov pohľadávok) samotnú pohľadávku, pretože si je a musí byť veľmi dobre vedomý právneho základu a titulu jej vzniku. Podstatným a pre rozhodovanie o merite veci aj kľúčovým faktom je tiež to, že žalovaný po tom, ako mu bol doručený napadnutý rozsudok, a tiež po tom, ako podal vo veci samej odvolanie, doručil právnemu zástupcovi žalobcu list zo dňa 20.06.2014, ktorým oznámil svoj úmysel zaplatiť celú žalovanú istinu pohľadávky. Tento zjavný rozpor medzi tvrdeniami žalovaného o úplnej neopodstatnenosti pohľadávky žalobcu na jednej strane a jeho konaním na strane druhej podľa",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 34,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 764,
+            "token_len": 199
+        }
+    },
+    {
+        "page_content": "žalovaného o úplnej neopodstatnenosti pohľadávky žalobcu na jednej strane a jeho konaním na strane druhej podľa názoru žalobcu najlepšie deklaruje skutočnosť, že žalovaný si je vedomý svojho záväzku uhradiť žalovanú istinu pohľadávky spolu s úrokmi z omeškania a zmluvnou pokutou ako sankčnými postihmi za jeho omeškanie s poskytnutím plnenia, na ktoré sa zmluvne zaviazal. Podľa vyjadrenia žalobcu je tiež nesporná tá skutočnosť, že dna 04.07.2014 bola celkovo v piatich osobitných platbách skutočne zaplatená celá suma žalovanej istiny pohľadávky na účet žalobcu.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 35,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 565,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "22. Podaním zo dňa 24.08.2015 žalobca oznámil súdu nespornú skutočnosť, že žalovaný dňa 04.07.2014 v piatich samostatných platbách, osobitne identifikovaných podľa pôvodných vystavených faktúr a s presne určenými sumami v zmysle týchto faktúr, poukázal na bankový účet žalobcu sumu zodpovedajúcu celkovej sume žalovanej istiny pohľadávky, t.j. 27.616,83 Eur. Žalovaný do dnešného dňa neuhradil žalobcovi úroky z omeškania, ani zmluvnú pokutu. Vzhľadom k tomu, že žalovaný pri poukázaných platbách žalobcovi nepochybne určil, že sa má plniť na dlžnú istinu, považuje žalobca prijatými platbami od žalovaného dlh žalovaného v rozsahu žalovanej dlžnej istiny za splatený, a teda za splnený. S poukazom na",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 36,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 701,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "v rozsahu žalovanej dlžnej istiny za splatený, a teda za splnený. S poukazom na uvedené správanie žalovaného (zaplatenie celej dlžnej sumy istiny), žalobca vzal svoju žalobu čiastočne späť, a to v rozsahu žalovanej istiny 27.616,83 Eur s tým, že na prejednaní žaloby trvá len v rozsahu dlžného príslušenstva v podobe úrokov z omeškania a zmluvnej pokuty v zmysle podanej žaloby.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 37,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 378,
+            "token_len": 110
+        }
+    },
+    {
+        "page_content": "23. Dňa 18.09.2015 bolo odvolaciemu súdu doručené podanie žalovaného, v ktorom žalovaný oznámil súdu, že nesúhlasí s čiastočným späťvzatím žaloby a žiadal, aby súd späťvzatie žaloby v zmysle ust. § 208 O.s.p. v znení účinnom do 30.06.2016 nepripustil. Uviedol, že platba istiny žalovanej sumy bola zo strany žalovaného vykonaná s výhradou, pričom zaplatením istiny nedošlo v žiadnom prípade k uznaniu žalovanej istiny, keďže zaplatenie istiny s výhradou nespôsobuje uznanie dlhu. Na základe uvedeného žalovaný navrhol, aby súd prejednal a posúdil všetky žalované nároky, vrátane dôvodnosti zaplatenia istiny, a žalobu v celom rozsahu zamietol. V prípade, že súd rozhodne aj napriek nesúhlasu žalovaného",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 38,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 702,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "a žalobu v celom rozsahu zamietol. V prípade, že súd rozhodne aj napriek nesúhlasu žalovaného o pripustení späťvzatia žaloby a konanie v časti istiny zastaví, žalovaný navrhol, aby súd nepriznal žalobcovi náhradu trov konania, pretože nie sú splnené podmienky na ich priznanie.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 39,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 277,
+            "token_len": 75
+        }
+    },
+    {
+        "page_content": "24. Odvolací súd Uznesením č. k. 1Cob/287/2014-292 zo dňa 28.11.2016 rozhodol tak, že čiastočné späťvzatie žaloby v časti o zaplatenie istiny 27.616,83 EUR pripustil, rozsudok v tejto časti zrušil a konanie zastavil. Vo zvyšnej časti ako aj súvisiacej časti náhrady trov konania rozsudok Okresného súdu Bratislava II č. k. 26Cb/55/2013-216 zo dňa 23.01.2014 zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 40,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 417,
+            "token_len": 126
+        }
+    },
+    {
+        "page_content": "25. V odôvodnení odvolací súd uviedol, že nesúhlas žalovaného vyhodnotil pre účely použitia ust. 370 C.s.p. ako neúčinný, keďže sa nezakladá na takých vážnych dôvodoch, ktoré by v danom prípade mohli byť dôvodom pre nepripustenie čiastočného späťvzatia žaloby súdom.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 41,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 266,
+            "token_len": 79
+        }
+    },
+    {
+        "page_content": "26. Dôvodom zrušenia napadnutého rozsudku súdu prvej inštancie vo zvyšnej časti, t.j. v časti príslušenstva nároku a uplatnenej zmluvnej pokuty, je skutočnosť, že znenie výroku rozsudku v časti výšky úrokov z omeškania vyhláseného na pojednávaní dňa 23.01.2014 a zachyteného v zápisnici z tohto pojednávania na č. l. 195 spisu (0,70 % denne) sa nezhoduje so znením predmetného výroku obsiahnutého v písomnom vyhotovení rozsudku, a to v zmysle opravného uznesenia č. k. 26Cb/55/2013-244, ktorým bola výška denných úrokov opravená z 0,70 % na 0,75 %. So zreteľom na uvedené odvolací súd rozsudok súdu prvej inštancie vo",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 42,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 617,
+            "token_len": 197
+        }
+    },
+    {
+        "page_content": "0,75 %. So zreteľom na uvedené odvolací súd rozsudok súdu prvej inštancie vo zvyšnej časti, t.j. v nezastavenej časti príslušenstva nároku a uplatnenej zmluvnej pokuty, ako aj v súvisiacej časti náhrady trov konania podľa § 389 ods. 1 písm. b) C.s.p. zrušil a podľa § 391 ods. 1 C.s.p. mu vec vrátil v rozsahu zrušenia na ďalšie konanie, v ktorom súd prvej inštancie opätovne prejedná zvyšok žalovaného nároku, pričom nové rozhodnutie vo veci riadne odôvodní v zmysle § 220 ods. 2 C.s.p., a to tak vo vzťahu k (ne)existencii nároku na zaplatenie úrokov z omeškania z uhradenej istiny, ako aj k (ne)existencii",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 43,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 608,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "úrokov z omeškania z uhradenej istiny, ako aj k (ne)existencii uplatneného nároku na zmluvnú pokutu a právneho základu jeho vzniku, pričom sa dostatočne vysporiada aj s argumentmi sporových strán, vrátane argumentov žalovaného obsiahnutých v jeho odvolaní. V novom rozhodnutí o veci rozhodne súd prvej inštancie podľa § 396 ods. 3 C.s.p. aj o náhrade trov odvolacieho konania.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 44,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 376,
+            "token_len": 109
+        }
+    },
+    {
+        "page_content": "27. Na základe dovolania podaného žalovaným Najvyšší súd Slovenskej republiky Uznesením č. k. 2Obdo/72/2019-350 zo dňa 22.09.2020 Uznesenie Krajského súdu v Bratislave zo dňa 28. novembra 2016, č. k. lCob/287/2014-292 v napadnutej časti t.j. výroku o čiastočnom pripustení späťvzatia žaloby, zrušenia rozsudku v tejto časti a zastavení konania, zrušil. V odôvodnení rozhodnutia poukázal na to, že podaním zo dňa 24.08.2015 vzal žalobca vzhľadom na správanie sa žalovaného, svoju žalobu čiastočne späť, a to v rozsahu žalovanej istiny 27.616,83 EUR. Krajský súd v Bratislave dňa 25.08.2015 vyzval žalovaného, aby sa vyjadril, či s čiastočným späťvzatím návrhu podľa § 208 O. s. p. súhlasí.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 45,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 688,
+            "token_len": 198
+        }
+    },
+    {
+        "page_content": "Dňa 18.09.2015 bolo odvolaciemu súdu doručené podanie žalovaného, v ktorom žalovaný oznámil, že s čiastočným späťvzatím žaloby nesúhlasí a žiadal, aby súd späťvzatie nepripustil. V danom spore bola týmto žaloba vzatá späť, ako i nesúhlas žalovaného so späťvzatím, za účinnosti Občianskeho súdneho poriadku. Vzhľadom na účinky právnych úkonov za účinnosti Občianskeho súdneho poriadku, ktoré zostali zachované, odvolací súd mal pri svojom rozhodovaní aplikovať Občiansky súdny poriadok a jeho ustanovenie § 208, ktoré nepredpokladalo vážne dôvody pre nesúhlas so zastavením konania. Najvyšší súd konštatoval, že pokiaľ odvolací súd napriek nesúhlasu žalovaného späťvzatie pripustil a konanie zastavil, rozhodol v rozpore",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 46,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 719,
+            "token_len": 200
+        }
+    },
+    {
+        "page_content": "súd napriek nesúhlasu žalovaného späťvzatie pripustil a konanie zastavil, rozhodol v rozpore s ustanovením § 208 O. s. p.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 47,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 121,
+            "token_len": 34
+        }
+    },
+    {
+        "page_content": "28. Krajský súd v Bratislave ako súd odvolací podľa § 34 zák. č. 160/2015 Z.z. Civilný sporový poriadok (ďalej len C.s.p.) prejednal vec opätovne v napadnutej časti o zaplatenie istiny podľa § 385 ods. 1 v spojení s § 384 ods. 1 C.s.p. s nariadením pojednávania a dospel k záveru, že rozsudok je potrebné v napadnutej časti zmeniť.\n\n29. Odvolací súd viazaný právnym názorom dovolacieho súdu prihliadol na nesúhlas žalovaného so späťvzatím žaloby v časti o zaplatenie istiny a v súlade s § 208 Občianskeho súdneho poriadku čiastočné späťvzatie žaloby nepripustil a pokračoval v odvolacom konaní.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 48,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 594,
+            "token_len": 182
+        }
+    },
+    {
+        "page_content": "30. Odvolací súd z prednesu právneho zástupcu žalobcu zistil, že je nespornou skutočnosťou, že žalovaný po rozhodnutí súdom prvej inštancie istinu v piatich splátkach uhradil, preto žalobca zobral žalobu v časti o zaplatenie istiny späť. Keďže žalovaný svojim procesným postupom zavinil, že na úkon späťvzatia nemožno prihliadať, navrhol, aby bol rozsudok v tejto časti potvrdený.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 49,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 380,
+            "token_len": 111
+        }
+    },
+    {
+        "page_content": "31. Z prednesu právneho zástupcu žalovaného odvolací súd zistil, že je nesporné, že žalovaný istinu uhradil, urobil tak z opatrnosti, aby nenarastali údajné úroky z omeškania. Navrhol, aby odvolací súd žalobu v tejto časti zamietol a to buď z dôvodu, že došlo k úhrade istiny alebo z dôvodu, že po prejednaní odvolacích dôvodov dospeje k záveru, že žaloba je nedôvodná. Poukázal na to, že ak by odvolací súd rozsudok v predmetnej časti potvrdil, založilo by to exekučný titul.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 50,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 476,
+            "token_len": 145
+        }
+    },
+    {
+        "page_content": "32. Vzhľadom na uvedené odvolací súd vychádzal ako z nespornej skutočnosti, že po rozhodnutí súdom prvej inštancie, ktorým bolo neprávoplatne rozhodnuté o povinnosti žalovaného zaplatiť žalovanú istinu s príslušenstvom, žalovaný istinu zaplatil. Keďže späťvzatie žaloby v tejto časti nie je účinné, odvolaciemu súdu nezostávalo nič iné, ako čiastočné späťvzatie žaloby nepripustiť a rozhodnúť o odvolaní žalovaného. Odvolací súd zdôrazňuje, že súd rozhoduje na základe zisteného skutkového stavu, pričom v odvolacom konaní bolo zistené, že istina bola zo strany žalovaného uhradená.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 51,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 582,
+            "token_len": 157
+        }
+    },
+    {
+        "page_content": "Podmienkou pre rozhodnutie súdu však je existencia pohľadávky, keďže súdy poskytujú ochranu len existujúcim právam. V tomto prípade možno konštatovať, že v čase rozhodnutia odvolacieho súdu pohľadávka žalobcu (istina) neexistuje, nakoľko zanikla podľa § 324 Obchodného zákonníka splnením.\n\nSkutočnosť, či žalobca má nárok na zaplatenie úrokov z omeškania a zmluvnej pokuty, teda či sa dostal žalovaný do omeškania bude vzhľadom na zrušujúce uznesenie odvolacieho súdu (viď odsek 24 až 26) predmetom opätovného posúdenia súdom prvej inštancie.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 52,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 542,
+            "token_len": 156
+        }
+    },
+    {
+        "page_content": "33. Podľa odvolacieho súdu nebolo možné v odvolacom konaní prejednávať odvolacie dôvody, keďže predmet sporu v tejto časti odpadol a taktiež nebolo možné ani priznať nárok žalobcovi. Prípadným potvrdením napadnutého rozhodnutia v časti o zaplatenie istiny by disponoval žalobca exekučným titulom napriek tomu, že nárok v časti zaplatenia istiny zanikol splnením.\n\n34. Odvolací súd vzhľadom na vzniknutú procesnú situáciu a zistený skutkový stav v odvolacom konaní rozsudok súdu prvej inštancie v časti o zaplatenie istiny podľa § 388 C.s.p. zmenil tak, že žalobu v tejto časti zamietol.",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 53,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 586,
+            "token_len": 163
+        }
+    },
+    {
+        "page_content": "35. Keďže odvolací súd rozhodoval len o výroku v časti o zaplatenie istiny a súvisiaci výrok o trovách konania bol už zrušený a vrátený na ďalšie konanie citovaným rozhodnutím odvolacieho súdu, o trovách odvolacieho konania ako aj prvoinštančného konania v časti o zaplatenie istiny rozhodne súd prvej inštancie (§ 396 C.s.p.). Odvolací súd je toho názoru, že pri rozhodovaní o nároku na náhradu trov konania bude potrebné zohľadniť, z akého dôvodu došlo k zamietnutiu žaloby v časti o zaplatenie istiny, t.j. že žalovaný plnil.\n\n36. Toto rozhodnutie bolo členmi senátu prijaté pomerom hlasov 3:0 (§ 3 ods. 9 tretia veta zák. č. 757/2004 Z. z. v znení neskorších predpisov).",
+        "metadata": {
+            "date_raw": "15.06.2021",
+            "case_id": "2Cob/33/2021",
+            "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+            "court": "Krajský súd Bratislava",
+            "document_type": "Rozsudok",
+            "chunk_index": 54,
+            "source_file": "KS_Bratislava_2Cob_33_2021_00_dokument.pdf",
+            "strategy": "me5_200",
+            "char_len": 674,
+            "token_len": 198
+        }
+    }
+]

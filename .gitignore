@@ -81,3 +81,7 @@ preprocessing_just_for_showing_to_lawyer/selected_chunks.csv
 scripts/01_data_scraping/bin/
 scripts/02_download_decision/old/
 scripts/02_download_decision/data/
+
+
+!data/03_chunked_docs/
+!data/03_chunked_docs_hier/

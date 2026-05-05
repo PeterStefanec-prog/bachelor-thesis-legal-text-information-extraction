@@ -1,0 +1,1157 @@
+[
+    {
+        "page_content": "1. Žalobca sa návrhom na vydanie platobného rozkazu doručeným Okresnému súdu Banská Bystrica domáhal, aby súd uložil žalovanému povinnosť zaplatiť mu 10.000,- eur s príslušenstvom. Žalobca návrh na vydanie platobného rozkazu odôvodnil tým, že žalovaný porušil svoje povinnosti vyplývajúce mu zo zmluvy o poskytovaní služieb,",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 0,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 324,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "mu zo zmluvy o poskytovaní služieb, keďže po ukončení zmluvného vzťahu v rozpore so zmluvou o poskytovaní služieb nadviazal spoluprácu s jeho obchodným partnerom, v dôsledku čoho mu vznikla povinnosť zaplatiť mu zmluvnú pokutu vo výške 10.000,- eur.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 1,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 249,
+            "token_len": 118
+        }
+    },
+    {
+        "page_content": "2. Okresný súd Prešov (ďalej len \"súd prvej inštancie\") napadnutým rozsudkom uložil žalovanému povinnosť zaplatiť žalobcovi 5.000,- eur, ako aj paušálnu náhradu nákladov spojených s uplatnením pohľadávky vo výške 40,- eur, v pravidelných mesačných splátkach po 500,- eur vždy k 15-temu dňu v mesiaci, počnúc",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 2,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 307,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "k 15-temu dňu v mesiaci, počnúc právoplatnosťou rozsudku s tým, že nezaplatením čo i len jednej zo splátok sa stane splatným celý dlh a priznal žalobcovi proti žalovanému nárok na náhradu trov konania v rozsahu 50 %, o výške ktorej rozhodne po právoplatnosti rozsudku samostatným uznesením.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 3,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 290,
+            "token_len": 133
+        }
+    },
+    {
+        "page_content": "3. Právne súd prvej inštancie vec posúdil podľa § 1, § 261 ods. 1, § 269 ods. 2, § 301, § 672a zákona č. 513/1991 Zb. Obchodný zákonník (ďalej len \"Obchodný zákonník\") a § 544 ods. 1 zákona č. 40/1964 Zb. Občiansky zákonník (ďalej len \"Občiansky zákonník\"). Paušálnu náhradu nákladov spojených",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 4,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 293,
+            "token_len": 162
+        }
+    },
+    {
+        "page_content": "Paušálnu náhradu nákladov spojených s uplatnením pohľadávky priznal súd žalobcovi v súlade s ustanovením § 2 nariadenia vlády Slovenskej republiky č. 21/2013 Z. z., ktorým sa vykonávajú niektoré ustanovenia Obchodného zákonníka.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 5,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 228,
+            "token_len": 110
+        }
+    },
+    {
+        "page_content": "4. Súd prvej inštancie svoje rozhodnutie skutkovo odôvodnil tým, že 8. júna 2019 žalovaný prostredníctvom svojej manželky zaslal žalobcovi potrebné dokumenty za účelom uzatvorenia zmluvy.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 6,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 187,
+            "token_len": 85
+        }
+    },
+    {
+        "page_content": "Žalobca 10. júna 2019 o 9:26 hod. e-mailom zaslal žalovanému návrh zmluvy a žalovaný 10. júna 2019 o 15:53 hod. e-mailom zaslal žalobcovi podpísanú zmluvu. Žalovaný 8. júna 2019 prostredníctvom svojej manželky zaslal žalobcovi potrebné dokumenty za účelom uzatvorenia zmluvy. Žalobca 8. júna 2019 emailom zaslal",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 7,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 311,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "Žalobca 8. júna 2019 emailom zaslal žalovanému adresy na ubytovanie. Sociálna poisťovňa 11. júna 2019 zaslala žalovanému potvrdenie, že jej bola 11. júna 2019 doručená žiadosť o uplatnenie inštitútu vyslania z dôvodu, že žalovaný ako samostatne zárobkovo činná osoba bude vykonávať činnosť na území Rakúska. Žalobca ako",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 8,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 319,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "činnosť na území Rakúska. Žalobca ako objednávateľ a žalovaný ako poskytovateľ 10. júna 2019 uzatvorili zmluvu o poskytovaní služieb, predmetom ktorej bol záväzok žalovaného vykonávať pre žalobcu služby súvisiace s dokončovacími stavebnými prácami v exteriéri a interiéri. Cena bola dohodnutá vo výške 15,- eur za hodinu. V",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 9,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 323,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "vo výške 15,- eur za hodinu. V článku VI. tejto zmluvy si strany dohodli zákaz konkurencie a spolupráce s dodávateľmi služieb druhej strany tak, že po dobu účinnosti zmluvy a v období do 24 mesiacov od ukončenia platnosti tejto zmluvy žalovaný nenadviaže bez písomného súhlasu žalobcu žiadnu formu spolupráce s koncovým",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 10,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 319,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "žalobcu žiadnu formu spolupráce s koncovým zákazníkom žalobcu, konkrétne s obchodnou spoločnosťou C. W. ani s jej nástupníckymi organizáciami. V prípade porušenia tohto ustanovenia bol žalobca oprávnený požadovať od žalovaného náhradu vzniknutej škody a vznikol mu nárok na zmluvnú pokutu vo výške 10.000,- eur. Počas platnosti zmluvy",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 11,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 334,
+            "token_len": 153
+        }
+    },
+    {
+        "page_content": "výške 10.000,- eur. Počas platnosti zmluvy zaplatil žalobca žalovanému za poskytnuté služby 17.044,40 eur. Žalovaný bezprostredne po ukončení spolupráce so žalobcom nadviazal spoluprácu s obchodnou spoločnosťou C. W.. Žalobca listom z 19. marca 2020 vyzval žalovaného na zaplatenie sumy zmluvnej pokuty vo výške 10.000,- eur. Žalovaný mu",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 12,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 337,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "vo výške 10.000,- eur. Žalovaný mu dlžnú sumu neuhradil. Žalobca si voči žalovanému neuplatnil nárok na náhradu škody.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 13,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 118,
+            "token_len": 61
+        }
+    },
+    {
+        "page_content": "5. Súd prvej inštancie svoje rozhodnutie právne odôvodnil tým, že po preskúmaní zmluvy o poskytovaní služieb mal za preukázané, že zmluva bola uzatvorená platne. Skutočnosť, že žalovaný sa so zmluvou riadne neoboznámil, nemôže byť žalobcovi na ťarchu. Žalovaný nepreukázal uzatvorenie zmluvy v tiesni. Žalovaný vykonával",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 14,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 320,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "zmluvy v tiesni. Žalovaný vykonával podnikateľskú činnosť pre žalobcu v období ôsmich mesiacov, za čo mu bolo vyplatených 17.044,40 eur. V priebehu platnosti zmluvy žalovaný nenamietal žiadne jej ustanovenie a úhrady faktúr zaslané žalobcom prijal. Bezprostredne po ukončení spolupráce so žalobcom nadviazal spoluprácu s obchodnou spoločnosťou C.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 15,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 346,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "spoluprácu s obchodnou spoločnosťou C. W., v dôsledku čoho si žalobca v súlade so zmluvou o poskytovaní služieb voči nemu uplatnil zmluvnú pokutu vo výške 10.000,- eur.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 16,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 168,
+            "token_len": 83
+        }
+    },
+    {
+        "page_content": "Ustanovenie inominátnej zmluvy o konkurenčnej doložke súd posúdil v zmysle § 672a Obchodného zákonníka, používanej v zmluve o obchodnom zastúpení. Súd nepovažoval za potrebné ju obmedziť alebo vyhlásiť za neplatnú, nakoľko žalovaný ňou nebol obmedzený viac ako vyžadovala miera ochrany záujmov žalobcu. Žalobca je podnikateľ a svoju",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 17,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 332,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "Žalobca je podnikateľ a svoju činnosť vykonáva za účelom dosiahnutia zisku. Je všeobecne známa skutočnosť, že v odvetví stavebníctva je vysoká miera fluktuácie zamestnancov, resp. podnikateľov, preto žalobca do zmluvy o spolupráci zakomponoval konkurenčnú doložku. Bez aktivity žalobcu by žalovaný nemohol vykonávať podnikateľskú",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 18,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 329,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "žalovaný nemohol vykonávať podnikateľskú činnosť pre obchodnú spoločnosť C.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 19,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 75,
+            "token_len": 36
+        }
+    },
+    {
+        "page_content": "W., konkurenčná doložka ho neobmedzovala vo vzťahu k celému územiu Rakúskej republiky, ale len k jedinému konkrétnemu subjektu, napriek tomu bez písomného súhlasu žalobcu nadviazal spoluprácu s obchodnou spoločnosťou C. W., teda žalovaný v rozpore so zmluvou vykonával činnosť, ktorá má súťažnú povahu voči podnikaniu žalobcu.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 20,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "povahu voči podnikaniu žalobcu. Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur, ktorú",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 21,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "zmluvnej pokuty na sumu 5.000,- eur, ktorú nepovažoval za neúmerne prísnu, resp. vedúcu k neodôvodnenému prospechu na strane žalobcu. Súd tiež zdôraznil, že zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu, s ohľadom na skutočnosť, že Slovenská republika funguje na",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 22,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 339,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "skutočnosť, že Slovenská republika funguje na princípoch trhovej ekonomiky.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 23,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 75,
+            "token_len": 31
+        }
+    },
+    {
+        "page_content": "6. Súd prvej inštancie z vyššie uvedených dôvodov priznal žalobcovi sumu 5.000,- eur titulom zmluvnej pokuty a v prevyšujúcej časti žalobu zamietol. Súd vzhľadom na súhlasné stanovisko žalobcu s tým, že nezaplatením čo i len jednej zo splátok sa stane splatným celý dlh, povolil žalovanému zaplatiť dlžnú sumu v mesačných splátkach po 500,- eur.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 24,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 345,
+            "token_len": 159
+        }
+    },
+    {
+        "page_content": "7. O nároku na náhradu trov konania rozhodol súd prvej inštancie podľa § 255 ods. 1 zákona č. 160/2015 Z. z. Civilný sporový poriadok (ďalej aj \"CSP\") v spojení s ustanovením § 262 ods. 2 CSP a priznal žalobcovi, ktorý bol v spore úspešný v rozsahu 50 %, nárok na náhradu trov konania v rozsahu 50 %.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 25,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 300,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "8. Proti rozsudku podal včas odvolanie žalovaný, a to z dôvodov uvedených v ust. § 365 ods. 1 písm. b), e), f) a h) CSP, teda, že súd nesprávnym procesným postupom znemožnil strane, aby uskutočňovala jej patriace procesné práva v takej miere, že došlo k porušeniu práva na spravodlivý proces, súd prvej inštancie nevykonal",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 26,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 322,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "proces, súd prvej inštancie nevykonal navrhnuté dôkazy, potrebné na zistenie rozhodujúcich skutočností, súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam a rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci. Namietané porušenie práva na spravodlivý proces vzhliadol v postupe súdu",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 27,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 349,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "na spravodlivý proces vzhliadol v postupe súdu prvej inštancie, ktorý vykonal ústne pojednávanie vo veci 17. februára 2021 počas platnosti a účinnosti vyhlášky Ministerstva spravodlivosti Slovenskej republiky č. 24/2021 Z. z. o vykonávaní pojednávaní, hlavných pojednávaní a verejných zasadnutí v čase mimoriadnej situácie a núdzového stavu.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 28,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 341,
+            "token_len": 145
+        }
+    },
+    {
+        "page_content": "mimoriadnej situácie a núdzového stavu. Podľa ustanovenia § 1 ods. 2 citovanej vyhlášky (v znení účinnom do 28. februára 2021) okrem vecí podľa odseku 1 možno v čase mimoriadnej situácie alebo núdzového stavu vykonať pojednávanie, hlavné pojednávanie a verejné zasadnutie aj vtedy, ak ide o vec, ktorá neznesie odklad;",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 29,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 318,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "túto skutočnosť konajúci súd v predvolaní zdôrazní. V zmysle ustanovenia § 1 ods. 1 písm. p) tejto vyhlášky v čase mimoriadnej situácie alebo núdzového stavu sa vykonáva konanie v civilnom sporovom konaní a v civilnom mimosporovom konaní, ak strany sporu alebo účastníci konania súhlasili s pojednávaním v ich neprítomnosti. Ani jednu z",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 30,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "v ich neprítomnosti. Ani jednu z týchto podmienok súd prvej inštancie nesplnil. Jeho právny zástupca e-mailom z 5. februára 2021 požiadal súd o informáciu, či sa s prihliadnutím na epidemiologickú situáciu a vyhlásený núdzový stav uskutoční pojednávanie nariadené na 17. februára 2021 o 9:00 hod. O poskytnutie tejto informácie",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 31,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 327,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "9:00 hod. O poskytnutie tejto informácie požiadal jeho právny zástupca najmä z dôvodu, že v uvedenom čase bol v Nemecku, kde vykonával stavebné práce a potreboval vedieť, či má odcestovať domov za účelom účasti na pojednávaní, na ktorom mal záujem byť prítomný. Ak by pricestoval na Slovensko, musel by absolvovať karanténu a",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 32,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 325,
+            "token_len": 140
+        }
+    },
+    {
+        "page_content": "na Slovensko, musel by absolvovať karanténu a jeho návrat do Nemecka by bol v dôsledku sprísnenia epidemiologických opatrení v Nemecku ohrozený. Súd prvej inštancie odpovedal na žiadosť jeho právneho zástupcu až na základe telefonickej urgencie dva dni pred pojednávaním, čo absolútne obmedzilo jeho účasť na pojednávaní (musel by absolvovať",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 33,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 341,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "na pojednávaní (musel by absolvovať cestu na Slovensko a povinnú karanténu).",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 34,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 76,
+            "token_len": 31
+        }
+    },
+    {
+        "page_content": "Pojednávanie sa tak uskutočnilo bez jeho prítomnosti aj napriek tomu, že výsluch sporových strán bol stranami sporu navrhovaný. K odvolacej námietke, že súd prvej inštancie nevykonal navrhnuté dôkazy, potrebné na zistenie rozhodujúcich skutočností tvrdil, že súd zamietol návrh na doplnenie dokazovania o listinu - faktúru č. XXXXXXX, ktorú",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 35,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 340,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "o listinu - faktúru č. XXXXXXX, ktorú vystavil obchodnej spoločnosti L. W., A.. P.. U.., s ktorou mal uzatvorenú rámcovú zmluvu na poskytovanie služieb a na základe ktorej po ukončení spolupráce so žalobcom vykonával stavebné práce pre obchodnú spoločnosť C. W., čo podľa žalobcu zakladá právo na zaplatenie zmluvnej pokuty vo",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 36,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "právo na zaplatenie zmluvnej pokuty vo výške 10.000,- eur. Táto faktúra preukazuje výšku škody, ktorá vznikla žalobcovi z titulu porušenia konkurenčnej doložky. Bola vystavená na sumu 2.433,- eur, ktorá predstavuje cenu ním vykonaných prác za obdobie od 16. februára 2020 do 5. marca 2020. Od 5. marca 2020 sa zdržiaval na území Slovenskej",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 37,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 339,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "marca 2020 sa zdržiaval na území Slovenskej republiky a na základe zmluvy uzatvorenej s obchodnou spoločnosťou L. W., A.. P.. U.. už ďalšiu činnosť nevykonával. V súvislosti s namietaným nesprávnym právnym posúdením veci súdom prvej inštancie poukázal na skutočnosť, že súd pri rozhodovaní nezobral do úvahy spôsob a formu",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 38,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 322,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "nezobral do úvahy spôsob a formu uzatvorenia zmluvy o poskytovaní služieb, ktorá má znaky charakteristické pre pracovnoprávny vzťah (článok III. ods. 3 vzťah nadriadenosti a podriadenosti, článok I. ods. 2, článok II. ods. 2 povinnosť vykonávať prácu osobne podľa pokynov poskytovateľa, v jeho mene, výkon práce v pracovnom",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 39,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 323,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "v jeho mene, výkon práce v pracovnom čase určenom poskytovateľom, dôkazom čoho sú ním vyhotovené šichtovnice, ich úprava a pod., poskytovanie ubytovania, stravného). Okrem toho podotkol, že je vyučený banský zámočník a vykonáva práce ako tesár, teda jeho vzdelanie a odbornosť neboli postačujúce na posúdenie obsahu zmluvy o spolupráci,",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 40,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "na posúdenie obsahu zmluvy o spolupráci, ktorú považoval za pracovnú zmluvu. Súčasne mal za to, že túto zmluvu uzatvoril v tiesni (10. jún 2019 zmluva mu bola odoslaná a aj ju podpísal, 11. jún 2019 žiadosť na Sociálnu poisťovňu a vydanie potvrdenia Sociálnou poisťovňou, 12. jún 2019 okamžitý nástup do práce,",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 41,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 310,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "jún 2019 okamžitý nástup do práce, dôkazom čoho mal byť jeho výsluch) a konkurenčná doložka zasiahla do jeho základných práv a slobôd, predovšetkým práva na slobodné podnikanie. V nadväznosti na to považoval za významnú okolnosť, že k ukončeniu spolupráce žalobcu s obchodnou spoločnosťou C. W. došlo bez jeho",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 42,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 309,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "spoločnosťou C. W. došlo bez jeho zavinenia. Keďže stratil možnosť byť zárobkovo činný a rakúska obchodná spoločnosť bola s jeho prácou spokojná, bola mu ponúknutá spolupráca s obchodnou spoločnosťou L. W., A.. P.. U... Ukončením spolupráce s touto rakúskou obchodnou spoločnosťou však došlo k strate súťažnej",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 43,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 309,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "však došlo k strate súťažnej povahy jeho pracovnej činnosti voči podnikaniu žalobcu. Ohľadom namietaného nevysporiadania sa súdu prvej inštancie s ustanovením § 265 Obchodného zákonníka konštatoval, že uplatnenie nároku na uhradenie zmluvnej pokuty zo strany žalobcu možno s prihliadnutím na všetky okolnosti vyhodnotiť ako výkon práva v rozpore so",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 44,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 348,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "vyhodnotiť ako výkon práva v rozpore so zásadami poctivého obchodného styku, ktorý nepožíva právnu ochranu. Na základe uvedených skutočností žalovaný navrhol, aby odvolací súd zrušil napadnutý rozsudok súdu prvej inštancie a vrátil vec súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 45,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 294,
+            "token_len": 133
+        }
+    },
+    {
+        "page_content": "9. K odvolaniu žalovaného sa písomne vyjadril žalobca, ktorý uviedol, že žalovaný sa zúčastnil pojednávania konaného 17. februára 2021 prostredníctvom svojho právneho zástupcu, ktorý aktívne vystupoval a prednášal svoje návrhy, avšak ani raz nevyjadril záujem žalovaného zúčastniť sa pojednávania osobne, ani svoj nesúhlas s konaním",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 46,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 332,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "osobne, ani svoj nesúhlas s konaním pojednávania. Napriek tomu, že strany sporu boli riadne poučené o koncentračnej zásade, žalovaný chcel predmetnú faktúru predložiť až na pojednávaní, pričom táto faktúra nemá vo vzťahu k zmluvnej pokute žiadnu relevanciu. V konaní bola preukázaná nepravdivosť tvrdenia žalovaného, že uzatváral",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 47,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 329,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "tvrdenia žalovaného, že uzatváral zmluvu o spolupráci v tiesni, obchodnoprávny charakter právneho vzťahu medzi ním a žalovaným, v ktorom strany sporu vystupovali ako dva rovnocenné subjekty, ale aj porušenie záväzku odôvodňujúce jeho nárok na zmluvnú pokutu. Na základe uvedených skutočností žalobca žiadal, aby odvolací súd napadnutý",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 48,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 334,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "žiadal, aby odvolací súd napadnutý rozsudok súdu prvej inštancie potvrdil a priznal žalobcovi náhradu trov konania v rozsahu úspechu vo veci.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 49,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 141,
+            "token_len": 62
+        }
+    },
+    {
+        "page_content": "10. Žalovaný k vyjadreniu žalobcu nepodal odvolaciu repliku.\n\n11. Krajský súd v Prešove uznesením, č. k. 5Cob/22/2021-111 z 9. septembra 2021 vrátil vec súdu prvej inštancie na rozhodnutie o zamietnutí žaloby v prevyšujúcej časti dopĺňacím rozsudkom.\n\n12. Súd prvej inštancie dopĺňacím rozsudkom, č. k. 24Cb/98/2020-122 z 21. decembra 2021 zamietol žalobu v prevyšujúcej časti.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 50,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 377,
+            "token_len": 182
+        }
+    },
+    {
+        "page_content": "13. Po opätovnom predložení spisu Krajský súd v Prešove (ďalej len \"odvolací súd\") príslušný na rozhodnutie o odvolaní podľa ust. § 34 CSP, v zmysle zásad ust. § 470 ods. 1 a 2 CSP, vzhľadom na včas podané odvolanie preskúmal rozsudok v napadnutom rozsahu, ako aj konanie mu predchádzajúce v zmysle zásad",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 51,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 304,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "aj konanie mu predchádzajúce v zmysle zásad vyplývajúcich z ust. § 379 a nasledujúce CSP bez nariadenia pojednávania (§ 385 CSP a contrario) s tým, že miesto a čas vyhlásenia rozhodnutia oznámil na úradnej tabuli Krajského súdu v Prešove a na jeho webovej stránke najmenej 5 dní vopred a dospel k záveru, že odvolanie žalovaného nie",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 52,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 332,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "dospel k záveru, že odvolanie žalovaného nie je dôvodné.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 53,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 56,
+            "token_len": 24
+        }
+    },
+    {
+        "page_content": "14. Na potvrdenie správnosti prvoinštančného rozhodnutia k odvolacím námietkam žalovaného odvolací súd uvádza nasledovné.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 54,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 121,
+            "token_len": 54
+        }
+    },
+    {
+        "page_content": "15. V odvolacom konaní z dispozičnej zásady vyplýva, že odvolací súd vec prejedná v medziach, v ktorých sa odvolateľ domáha prieskumu. Určením rozsahu napadnutia rozhodnutia súdu prvej inštancie odvolateľ nielen vymedzuje to, ohľadne akých výrokov u rozhodnutia súdu prvej inštancie nastal suspenzívny účinok odvolania, ale súčasne stanoví medze, v ktorých je odvolací súd oprávnený a povinný rozhodnutie súdu prvej inštancie preskúmať.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 55,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 436,
+            "token_len": 196
+        }
+    },
+    {
+        "page_content": "16. Odvolací súd v odvolacom konaní posúdil relevantnosť konkrétnych odvolacích dôvodov v kontexte s namietaným nesprávnym zistením skutkového stavu a nesprávnym právnym zistením, teda, či súd prvej inštancie na zistený skutkový stav správne, v úplnosti, aplikoval príslušné právne predpisy, či riadne svoje rozhodnutie odôvodnil, to všetko s",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 56,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 342,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "svoje rozhodnutie odôvodnil, to všetko s prihliadnutím na to, že v odôvodnení rozhodnutia nemusí byť daná odpoveď na každú námietku alebo argument v opravnom prostriedku, ale iba na tie, ktoré majú rozhodujúci význam pre rozhodnutie o odvolaní (Ústavný súd Slovenskej republiky II. ÚS 78/05).",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 57,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 292,
+            "token_len": 129
+        }
+    },
+    {
+        "page_content": "17. Vo vzťahu k námietke žalovaného, že uskutočnením pojednávania 17. februára 2021 súdom prvej inštancie bolo porušené jeho právo na spravodlivý proces, odvolací súd konštatuje, že z obsahu súdneho spisu nepochybne vyplýva, že toto právo žalovaného porušené nebolo. V skutočnosti právny zástupca žalovaného 6. februára 2021 o",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 58,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "zástupca žalovaného 6. februára 2021 o 11:01 hod. doručil do elektronickej schránky súdu prvej inštancie len žiadosť o informáciu či sa s ohľadom na epidemiologickú situáciu a vyhlásený núdzový stav uskutoční pojednávanie nariadené na 17. februára 2021 o 9:00 hod.. Na túto žiadosť reagovala zákonná sudkyňa e-mailom",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 59,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "reagovala zákonná sudkyňa e-mailom odoslaným 15. februára 2021 o 8:14 hod., ktorým právnemu zástupcovi žalovaného oznámila, že toto pojednávanie sa bude konať. Naviac žalovaný v žiadnom zo svojich podaní výslovne nenavrhoval svoj výsluch, iba vo vyjadrení k vyjadreniu žalobcu (č. l. 56 súdneho spisu) sa zmienil o tom, že sa",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 60,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 325,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "súdneho spisu) sa zmienil o tom, že sa bude snažiť na podporu svojich tvrdení zabezpečiť okrem svojej výpovede aj ďalšieho svedka. Takisto zo žiadosti právneho zástupcu žalovaného o informáciu nevyplýva, že by mal žalovaný záujem zúčastniť sa pojednávania, ani to, že žalovaný sa nachádza mimo územia Slovenskej republiky.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 61,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 322,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "nachádza mimo územia Slovenskej republiky. Zároveň zo strany žalovaného nebola nikdy voči súdu prvej inštancie vznesená požiadavka na odročenie pojednávania z dôvodu, aby sa ho žalovaný mohol zúčastniť.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 62,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 202,
+            "token_len": 92
+        }
+    },
+    {
+        "page_content": "18. Odvolací súd hodnotí ako nedôvodnú aj námietku žalovaného, že súd prvej inštancie nepostupoval správne, keď zamietol jeho návrh na doplnenie dokazovania o listinu - faktúru č. XXXXXXX, ktorú vystavil obchodnej spoločnosti L. W., A.. P.. U.., s ktorou mal uzatvorenú rámcovú zmluvu na poskytovanie služieb a na základe ktorej",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 63,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 328,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "poskytovanie služieb a na základe ktorej po ukončení spolupráce so žalobcom vykonával stavebné práce pre obchodnú spoločnosť C. W., keďže táto faktúra preukazuje výšku škody, ktorá vznikla žalobcovi z titulu porušenia konkurenčnej doložky.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 64,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 239,
+            "token_len": 107
+        }
+    },
+    {
+        "page_content": "19. V nadväznosti na to odvolací súd zdôrazňuje, že účelom moderačného práva je umožniť súdu dodatočne po vzniku nároku na zaplatenie zmluvnej pokuty znížiť zmluvnú pokutu z dvoch dôvodov.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 65,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 188,
+            "token_len": 89
+        }
+    },
+    {
+        "page_content": "Predovšetkým preto, aby bolo možné odstrániť tvrdosť zákona, ku ktorej možno dôjsť pri prísnom uplatňovaní litery zákona, ale tiež preto, aby mal súd v konkrétnom prípade možnosť zabrániť celkom neadekvátnym majetkovým dôsledkom v prípade, keď by neprimerane vysoká zmluvná pokuta mohla viesť až k neprimeraným ziskom vo vzťahu",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 66,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 327,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "až k neprimeraným ziskom vo vzťahu k majetkovej ujme na strane oprávneného a k neprimeranému (vo vzťahu k porušenej povinnosti) hospodárskemu poškodeniu povinného subjektu, prípadne až k jeho likvidácii. Súd pri uplatňovaní moderačného práva nemusí zmluvnú pokutu znížiť vždy na úroveň výšky vzniknutej škody. Súd",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 67,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 313,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "výšky vzniknutej škody. Súd túto otázku posudzuje podľa voľnej úvahy a musí vziať do úvahy všetky okolnosti konkrétneho prípadu. Všeobecne možno konštatovať, že v prípade, ak súd uplatní svoje právo znížiť neprimerane vysokú zmluvnú pokutu, a táto zmluvná pokuta aj napriek tomu prevyšuje škodu vzniknutú v",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 68,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 306,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "napriek tomu prevyšuje škodu vzniknutú v dôsledku porušenia zabezpečenej povinnosti, zmluvná pokuta v týchto prípadoch plní aj sankčnú funkciu. To, či toto sankčné pôsobenie má v konkrétnom prípade opodstatnenie, súd uváži pri moderačnom práve. Keďže možnosť súdu znížiť zmluvnú pokutu neznamená, že súd musí",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 69,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 308,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "pokutu neznamená, že súd musí znížiť zmluvnú pokutu so zreteľom na výšku škody (presne), predpoklad žalovaného, že vykonaním tohto listinného dôkazu by bol dosiahol (ďalšie) zníženie zmluvnej pokuty, je nesprávny. Napriek tomu sa však na základe existencie takejto faktúry možno domnievať, že žalovaný spolupracoval s obchodnou",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 70,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 327,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "že žalovaný spolupracoval s obchodnou spoločnosťou C. W. prostredníctvom obchodnej spoločnosti L. W., A.. P.. U.. práve z dôvodu, aby obišiel svoju povinnosť vyplývajúcu mu z konkurenčnej doložky.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 71,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 196,
+            "token_len": 87
+        }
+    },
+    {
+        "page_content": "20. Odvolací súd sa nestotožňuje ani s argumentáciou žalovaného, že zmluva o poskytovaní služieb, má znaky charakteristické pre pracovnoprávny vzťah, a že jeho vzdelanie a odbornosť neboli postačujúce na posúdenie jej obsahu, pretože z jeho tvrdení, postupu a listinných dôkazov je zrejmé, že si bol vedomý toho, že so žalobcom uzatvára",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 72,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "bol vedomý toho, že so žalobcom uzatvára zmluvu ako živnostník, čo napokon aj sám potvrdzuje tým, že konkurenčná doložka zasiahla do jeho základných práv a slobôd, predovšetkým práva na slobodné podnikanie.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 73,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 206,
+            "token_len": 96
+        }
+    },
+    {
+        "page_content": "21. Pokiaľ sa žalovaný domáhal posúdenia uplatnenia nárokov žalobcu z konkurenčnej doložky ako výkonu práva v rozpore s poctivým obchodným stykom, odvolací súd podotýka, že v článku VI. zmluvy o poskytovaní služieb bola konkurenčná doložka vyjadrená jasne, a preto odvolací súd nemal dôvod posúdiť nárok žalobcu v súlade s požiadavkou žalovaného.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 74,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 346,
+            "token_len": 161
+        }
+    },
+    {
+        "page_content": "22. Z uvedených dôvodov, keďže súd prvej inštancie správne dospel k vyššie uvedeným záverom, odvolací súd rozsudok súdu prvej inštancie v spojení s dopĺňacím rozsudkom v napadnutom rozsahu ako vecne správny podľa ust. § 387 ods. 1 CSP potvrdil.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 75,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 244,
+            "token_len": 119
+        }
+    },
+    {
+        "page_content": "23. O trovách odvolacieho konania bolo rozhodnuté podľa ust. § 396 ods. 1 v spojení s ust. § 255 ods. 1 CSP, pričom odvolanie žalovaného bolo vyhodnotené ako nedôvodné, a preto bol priznaný nárok na náhradu trov odvolacieho konania žalobcovi proti neúspešnému žalovanému v plnom rozsahu.\n\n24. Toto rozhodnutie prijal senát Krajského súdu v Prešove v pomere hlasov 3:0.",
+        "metadata": {
+            "date_raw": "21.06.2022",
+            "case_id": "5Cob/11/2022",
+            "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+            "court": "Krajský súd Prešov",
+            "document_type": "Rozsudok",
+            "chunk_index": 76,
+            "source_file": "KS_Prešov_5Cob_11_2022_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 368,
+            "token_len": 159
+        }
+    }
+]

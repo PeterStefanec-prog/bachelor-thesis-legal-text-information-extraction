@@ -1,0 +1,947 @@
+[
+    {
+        "page_content": "1. Napadnutým rozsudkom súd prvej inštancie uložil žalovanému zaplatiť žalobcovi sumu 218,74 € s úrokom z omeškania: - 0,1 % denne zo sumy 32,21 € od 12.03.2019 do zaplatenia, - 0,1 % denne zo sumy 32,21 € od 09.04.2019 do zaplatenia, - 0,1 % denne zo sumy 32,21 € od 07.05.2019 do zaplatenia, - 0,1 % denne zo sumy 23,28 € od 13.06.2019 do zaplatenia, - 0,1 % denne zo sumy 57,80 € od 11.06.2019 do zaplatenia, - 8 % ročne zo sumy 8,64 € od 12.03.2019 do zaplatenia, - 8 % ročne zo sumy 8,64 € od 09.04.2019 do zaplatenia, - 8 % ročne zo sumy 8,64 € od 07.05.2019 do zaplatenia, - 8 %",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 0,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 585,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "do zaplatenia, - 8 % ročne zo sumy 8,64 € od 07.05.2019 do zaplatenia, - 8 % ročne zo sumy 15,12 € od 11.06.2019 do zaplatenia, a paušálnu náhradu nákladov spojených s uplatnením pohľadávky vo výške 40 € do troch dní od právoplatnosti rozsudku (výrok I), vo zvyšku žalobu zamietol (výrok II) a žalovanému uložil povinnosť nahradiť žalobcovi trovy konania v plnom rozsahu (výrok III).",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 1,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 383,
+            "token_len": 178
+        }
+    },
+    {
+        "page_content": "2. Z napadnutého rozsudku vyplýva, že súd prvej inštancie zistil tento skutkový stav: Sporové strany ako podnikateľské subjekty uzavreli dňa 21.01.2019 tzv. abonentnú zmluvu, predmetom ktorej bolo poskytnutie a montáž zmluvne dohodnutých produktov, pravidelná dodávka čistých uterákových roliek, dodávka náplní do prenajatých produktov, vykonávanie servisnej služby na produkty poskytnuté v rámci služby (abonentná služba UMYVÁRKA) a poskytnutie služieb spočívajúcich v poskytnutí, montáži a nastavení dávkovača, kontroly batérií a výmen náplne (abonentná služba AIR CONTROL). Žalovaný sa za tieto služby zaviazal platiť žalobcovi mesačne paušálne",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 2,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 647,
+            "token_len": 286
+        }
+    },
+    {
+        "page_content": "AIR CONTROL). Žalovaný sa za tieto služby zaviazal platiť žalobcovi mesačne paušálne sumy vo výške 16,04 € s DPH a 10,80 € s DPH. Podľa všeobecných podmienok abonentnej zmluvy (ďalej len \"VPAZ\") zmluvné strany uzatvorili zmluvu na dobu 36 mesiacov s tým, že podľa bodu 3 písm. c) VPAZ je abonent (t. j. žalovaný) povinný zaplatiť dodávateľovi (t. j. žalobcovi) zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac odo dňa odmietnutia poskytovania služieb až do skončenia účinnosti zmluvy.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 3,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 522,
+            "token_len": 253
+        }
+    },
+    {
+        "page_content": "Okrem toho strany medzi sebou uzavreli v ten istý deň aj zmluvu o servisnej službe, predmetom ktorej je servisná služba žalobcu, t. j. odborné vyčistenie a ošetrenie bezpečnostných rohožiek, ich doprava, výmena a uloženie v priestoroch žalovaného. Žalovaný sa zaviazal za poskytnuté služby platiť žalobcovi 3,60 € za 1 výmenu 1 rohože v intervale 1 x za 14 dní. Podľa bodu 6 zmluvy sa strany dohodli, že dodávateľovi (t. j. žalobcovi) pri odmietnutí poskytovania služieb zo strany odberateľa (t. j. žalovaného) vzniká nárok na zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 4,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 599,
+            "token_len": 281
+        }
+    },
+    {
+        "page_content": "pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac odo dňa odmietnutia poskytovania služieb po dobu trvania zmluvy. Strany si dojednali dobu trvania zmluvy na obdobie 36 mesiacov. Žalobca od oboch zmlúv odstúpil listom zo dňa 31.05.2019 (č. l. 21) z dôvodu, že žalovaný odmieta poskytovanie služieb podľa zmlúv. Po odstúpení od zmlúv si žalobca prevzal od žalovaného všetky veci, ktoré žalovanému poskytol v rámci abonentnej zmluvy a zmluvy o servisnej službe. Podľa Protokolu o odovzdaní - prevzatí prenajatých predmetov (č. l. 20) žalobca odobral žalovanému dňa",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 5,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 591,
+            "token_len": 286
+        }
+    },
+    {
+        "page_content": "- prevzatí prenajatých predmetov (č. l. 20) žalobca odobral žalovanému dňa 22.05.2019 predmety nájmu na základe ukončenia zmluvného vzťahu uzatvoreného abonentnou zmluvou a zmluvou o servisnej službe. Žalovaný neuhradil žalobcovi v lehote splatnosti faktúry č. 191103825, č. 191107224 a č. 191110713 vo výške po 40,85 € a faktúru č. 191116279 vo výške 23,28 €. Nárok žalobcu vyplývajúci z uvedených faktúr žalovaný nerozporoval. Namietal len oprávnenosť faktúry č. 191117259 vo výške 429,44 € a faktúry č. 191117260 vo výške 115,20 €. Spornou faktúrou č. 191117259 žalobca fakturoval žalovanému zmluvnú pokutu za nedodržanie",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 6,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 624,
+            "token_len": 291
+        }
+    },
+    {
+        "page_content": "faktúrou č. 191117259 žalobca fakturoval žalovanému zmluvnú pokutu za nedodržanie podmienok zmluvy podľa bod 4 VPAZ. Spornou faktúrou č. 191117260 žalobca fakturoval žalovanému zmluvnú pokutu za nedodržanie podmienok zmluvy podľa bodu 6 zmluvy o servisnej službe.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 7,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 263,
+            "token_len": 121
+        }
+    },
+    {
+        "page_content": "3. Súd prvej inštancie právne posúdil zistený skutkový stav podľa § 261 ods. 1, § 269 ods. 2, § 273 ods. 1, § 301, § 351 ods. 1, 365 ods. 1, § 369 ods. 1 a 2, § 369c ods. 1 OBZ, § 544 ods. 1 a 2 OZ, § 1 ods. 1 a § 2 nariadenia vlády SR č. 21/2013 Z. z. takto:",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 8,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 259,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "4. Sporové strany ako podnikateľské subjekty uzavreli dňa 21.01.2019 tzv. abonentnú zmluvu, ktorá má charakter inominátnej zmluvy v zmysle § 269 ods. 2 OBZ. Okrem toho strany medzi sebou uzavreli v ten istý deň aj zmluvu o servisnej službe, ktorú súd posúdil takisto ako inominátnu zmluvu podľa § 269 ods. 2 OBZ. Ako vyplýva z bodu 4 VPAZ a z bodu 6 zmluvy o servisnej službe, zmluvné strany si pre prípad porušenia zmluvných povinností žalovaného platne dojednali zmluvné pokuty. Podľa oboch zmlúv vzniká žalobcovi právo na zmluvnú pokutu odo dňa odmietnutia poskytovania služieb, pričom za odmietnutie",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 9,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 603,
+            "token_len": 283
+        }
+    },
+    {
+        "page_content": "zmluvnú pokutu odo dňa odmietnutia poskytovania služieb, pričom za odmietnutie poskytovania služieb na strane abonenta sa považuje aj čiastočné neuhradenie aspoň dvoch faktúr za poskytnuté služby. Vzhľadom na to, že nebolo sporné, že žalovaný je v omeškaní s úhradou viac ako dvoch faktúr, je zrejmé, že z jeho strany došlo k porušeniu zmluvných povinností, a žalobcovi tak vznikol nárok na zaplatenie zmluvných pokút. Žalovaný však namietal primeranosť uplatnených zmluvných pokút za obdobie po odstúpení žalobcu od zmlúv (t. j. po 31.05.2019). Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 10,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 614,
+            "token_len": 278
+        }
+    },
+    {
+        "page_content": "po 31.05.2019). Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť s ohľadom na hodnotu a význam zabezpečovanej povinnosti. Účel zmluvnej pokuty spočíva najmä vo vyhrážke citeľnou majetkovou sankciou voči dlžníkovi v prípade nesplnenia jeho povinnosti zo záväzkového vzťahu, a tým aj v zabezpečení veriteľa proti prípadnej ujme, ktorá by mu mohla vzniknúť nesplnením záväzku. Treba posúdiť, či pokuta primerane zabezpečuje veriteľa proti",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 11,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 618,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "nesplnením záväzku. Treba posúdiť, či pokuta primerane zabezpečuje veriteľa proti prípadným škodám, teda či zahŕňa všetky škody, ktoré možno rozumne v danom konkrétnom vzťahu s porušením zmluvnej povinnosti očakávať. Zmluvná pokuta teda musí zahŕňať všetky rozumne očakávateľné škody a musí mať dostatočnú, nie však premrštenú stimulačnú výšku. Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 12,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 479,
+            "token_len": 235
+        }
+    },
+    {
+        "page_content": "Platným odstúpením od zmluvy zanikajú aj všetky vedľajšie záväzky, vrátane záväzku na zmluvnú pokutu, ktoré boli od existencie hlavného záväzku závislé. Ak však nárok na zmluvnú pokutu vznikol ešte pred odstúpením od zmluvy z dôvodu jej skoršieho porušenia, nárok na zmluvnú pokutu nezaniká, ale je obmedzený len do doby platného odstúpenia od zmluvy (rozsudok Najvyššieho súdu SR, sp. zn. M Cdo 264/2002). Napriek tomu, že dojednania o zmluvnej pokute vyhodnotil súd prvej inštancie ako platné, nárok žalobcu na zaplatenie zmluvných pokút nepovažuje za dôvodný v celom uplatnenom rozsahu. Žalovaný síce v konaní",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 13,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 612,
+            "token_len": 286
+        }
+    },
+    {
+        "page_content": "pokút nepovažuje za dôvodný v celom uplatnenom rozsahu. Žalovaný síce v konaní namietal, že v preberacom protokole (č. l. 20 spisu) nie je uvedený dôvod ukončenia zmluvy, aj keď sú tam na to vyhradené kolónky, súd prvej inštancie považoval za nesporné, že žalovaný neuhradil žiadnu zo žalovaných faktúr, napriek tomu, že poskytnutie služby zo strany žalobcu nepopieral. Ako už súd prvej inštancie uviedol, žalobcovi vznikol nárok na zmluvnú pokutu práve z dôvodu omeškania žalovaného s úhradami fakturovaných služieb. Rovnako tak už súd prvej inštancie poukázal na to, že k zániku zmluvného vzťahu medzi žalobcom a",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 14,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 614,
+            "token_len": 275
+        }
+    },
+    {
+        "page_content": "prvej inštancie poukázal na to, že k zániku zmluvného vzťahu medzi žalobcom a žalovaným došlo odstúpením žalobcu od oboch zmlúv ku dňu 31.05.2019. Zmluvná pokuta je akcesorickým záväzkom, ktorý sleduje osud hlavného záväzku. Preto keď zanikol hlavný záväzok, nemôže sa žalobca domáhať nárokov zo zmluvnej pokuty za porušenie zmluvných povinností žalovaným v čase, keď už medzi nimi žiadny záväzkový vzťah neexistoval. Pokiaľ už neexistoval hlavný záväzkový vzťah, k porušeniu zmluvných povinností zo strany žalovaného nemohlo dôjsť, a teda ani žalobcovi nemohlo vzniknúť právo na zaplatenie zmluvnej pokuty, pretože",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 15,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 615,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "a teda ani žalobcovi nemohlo vzniknúť právo na zaplatenie zmluvnej pokuty, pretože nároky z akcesorického záväzku zanikli súčasne s hlavným záväzkom. Na jednej strane súd prvej inštancie akceptuje zmluvnú voľnosť strán, avšak okolnosti prejednávaného prípadu nemôžu ospravedlniť neadekvátny majetkový prospech, ktorý by žalobca získal na úkor žalovaného, ak by bol žalovaný povinný platiť žalobcovi zmluvnú pokutu za dobu 36 mesiacov, hoci zmluvný vzťah trval len necelých 5 mesiacov a navyše za situácie, že všetky prenajaté veci si žalobca od žalovaného po odstúpení od zmluvy prevzal. Za týchto okolností mu nemohla reálne",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 16,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 625,
+            "token_len": 281
+        }
+    },
+    {
+        "page_content": "žalovaného po odstúpení od zmluvy prevzal. Za týchto okolností mu nemohla reálne vznikať po skončení zmluvného vzťahu so žalovaným žiadna škoda. Vzhľadom na dojednania strán o momente vzniku nároku na zmluvné pokuty a určenie výpočtu výšky zmluvnej pokuty, dospel súd prvej inštancie k záveru, že žalobca mohol žiadať od žalovaného zmluvné pokuty od nasledujúceho dňa po splatnosti v poradí druhej nezaplatenej faktúry, t. j. v danom prípade faktúry č. 191107224. Splatnosť predmetnej faktúry bola určená dňom 08.04.2019, a teda nárok na zaplatenie dojednaných zmluvných pokút vznikol žalobcovi odo dňa 09.04.2019",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 17,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 613,
+            "token_len": 282
+        }
+    },
+    {
+        "page_content": "na zaplatenie dojednaných zmluvných pokút vznikol žalobcovi odo dňa 09.04.2019 a trval až do skončenia zmluvného vzťahu, t. j. do 31.05.2019. Žalobcovi tak vznikol nárok na zaplatenie zmluvných pokút za dva mesiace (apríl a máj 2019), pričom výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac. Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške 26,84 eur a podľa zmluvy o servisnej službe vo výške 3,60 €. Výška zmluvnej pokuty v zmysle abonentnej zmluvy tak predstavuje sumu 26,84 €",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 18,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 588,
+            "token_len": 281
+        }
+    },
+    {
+        "page_content": "€. Výška zmluvnej pokuty v zmysle abonentnej zmluvy tak predstavuje sumu 26,84 € (2 mesiace x 26,84 € x 50 %) a výška zmluvnej pokuty v zmysle zmluvy o servisnej službe tak predstavuje sumu 3,60 € (2 mesiace x 3,60 € x 50 %). Keďže však žalovaný písomne uznal nárok žalobcu na zmluvné pokuty v celkovej výške 72,91 € v podanom odpore proti platobnému rozkazu (č. l. 48 spisu), predmetný prejav vôle žalovaného spĺňa podmienky uznania záväzku v zmysle § 323 OBZ, a preto súd prvej inštancie priznal žalobcovi nárok na zmluvné pokuty vo výške 72,91 € a vo zvyšnej časti zmluvnej pokuty žalobu",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 19,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 590,
+            "token_len": 276
+        }
+    },
+    {
+        "page_content": "na zmluvné pokuty vo výške 72,91 € a vo zvyšnej časti zmluvnej pokuty žalobu zamietol. Pri posudzovaní požadovaného úroku z omeškania vyplývajúceho zo zmluvy o servisnej službe vychádzal súd zo skutočnosti, že zo strany žalovaného nedošlo k úhrade dlžnej sumy, čím žalobcovi vznikol zákonný nárok požadovať popri plnení istiny aj úroky z omeškania, a to dňom nasledujúcim po dni splatnosti jednotlivých žalovaných faktúr, preto súd uložil žalovanému povinnosť zaplatiť žalobcovi úrok z omeškania vo výške 8 % ročne z fakturovaných súm až do zaplatenia. Z bodu 2 VPAZ vyplýva, že zmluvné strany si pre prípad omeškania žalovaného",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 20,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 628,
+            "token_len": 283
+        }
+    },
+    {
+        "page_content": "Z bodu 2 VPAZ vyplýva, že zmluvné strany si pre prípad omeškania žalovaného s platbami dohodli úrok z omeškania vo výške 0,1 % z dlžnej sumy za každý deň omeškania. Na základe toho súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi dohodnutý úrok z omeškania vo výške 0,1 % denne z jednotlivých fakturovaných súm, a to odo dňa splatnosti jednotlivých faktúr až do zaplatenia. Pokiaľ ide o úroky z omeškania zo zmluvných pokút, ako vyplýva z vyjadrenia žalovaného v odpore proti platobnému rozkazu, tento uznal nárok žalobcu na zmluvnú pokutu vo výške 72,91 € ako 50 % zo sumy 145,83 €,",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 21,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 601,
+            "token_len": 279
+        }
+    },
+    {
+        "page_content": "žalobcu na zmluvnú pokutu vo výške 72,91 € ako 50 % zo sumy 145,83 €, fakturovanej faktúrami č. 191103825, č. 191107224, č. 191110713 a č. 191116279. Znamená to, že žalovaný uznal uvedenú sumu zmluvných pokút pomerne podľa jednotlivých fakturovaných služieb. Súd prvej inštancie preto priznal žalobcovi nárok na úroky z omeškania 0,1 % denne zo sumy 57,80 € od 11.06.2019 do zaplatenia. Suma 57,80 € vyplýva z fakturovaných služieb vykonaných podľa abonentnej zmluvy (t. j. 50 % zo súčtu 32,21 € + 32,21 € + 32,21 € + 18,96 €). Okrem toho súd prvej inštancie priznal žalobcovi aj nárok na úroky z",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 22,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 596,
+            "token_len": 284
+        }
+    },
+    {
+        "page_content": "18,96 €). Okrem toho súd prvej inštancie priznal žalobcovi aj nárok na úroky z omeškania 8 % ročne zo sumy 15,12 € od 11.06.2019 do zaplatenia, keď suma 15,12 € vyplýva z fakturovaných služieb vykonaných podľa zmluvy o servisnej službe (t. j. 50 % zo súčtu 8,64 € + 8,64 € + 8,64 € + 4,32 €). Okrem úrokov z omeškania vzniklo žalobcovi zo zákona právo na paušálnu náhradu nákladov spojených s uplatnením pohľadávky vo výške 40 €, preto súd prvej inštancie rozhodol aj o priznaní tohto nároku žalobcovi. Súd prvej inštancie nepriznal žalobcovi nárok na úroky z omeškania vyplývajúcich",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 23,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 583,
+            "token_len": 287
+        }
+    },
+    {
+        "page_content": "Súd prvej inštancie nepriznal žalobcovi nárok na úroky z omeškania vyplývajúcich zo zamietnutej časti zmluvných pokút. Hoci žalovaný žiadal o povolenie splatiť dlžnú sumu v splátkach, nepredložil v konaní žiadne doklady, ktoré by preukazovali jeho majetkové pomery odôvodňujúce predĺženie paričnej lehoty. Súd prvej inštancie zároveň zohľadnil aj relatívne nízku výšku sumy, ktorú má žalovaný žalobcovi uhradiť, a na základe toho ponechal žalovanému základnú trojdňovú paričnú lehotu na zaplatenie priznanej sumy. Hoci žalobca bol v konaní úspešný pokiaľ ide o dôvodnosť jeho nároku, mieru jeho úspechu by po uplatnení",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 24,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 618,
+            "token_len": 290
+        }
+    },
+    {
+        "page_content": "pokiaľ ide o dôvodnosť jeho nároku, mieru jeho úspechu by po uplatnení moderačného práva súdu nebolo možné vyčísliť v rozsahu 100 %. Z toho však nemožno vyvodiť procesný úspech žalovaného v zamietnutej časti žaloby, pretože výška priznanej zmluvnej pokuty (vrátane súvisiacich úrokov z omeškania) závisela od uváženia súdu. Predchádzajúci procesný predpis (Občiansky súdny poriadok) určoval pre takýto prípad možnosť priznať plnú náhradu trov konania čiastočne úspešnej strane sporu (§ 142 ods. 3 OSP). Súčasný procesnoprávny predpis (Civilný procesný poriadok) takúto výslovnú právnu úpravu trov konania neobsahuje, avšak súd prvej",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 25,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 632,
+            "token_len": 282
+        }
+    },
+    {
+        "page_content": "takúto výslovnú právnu úpravu trov konania neobsahuje, avšak súd prvej inštancie v zmysle čl. 4 ods. 2 CSP zaujal názor, že aj v prejednávanej veci je napriek tomu namieste priznať žalobcovi plnú náhradu trov konania. Vzhľadom na to súd prvej inštancie o nároku na náhradu trov konania rozhodol podľa § 255 ods. 1 CSP tak, že žalobcovi ako procesne úspešnej strane konania priznal náhradu trov konania v plnom rozsahu s tým, že o výške trov konania rozhodne súd po právoplatnosti tohto rozhodnutia samostatným uznesením.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 26,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 520,
+            "token_len": 234
+        }
+    },
+    {
+        "page_content": "5. Včasným odvolaním sa žalobca domáhal zrušenia napadnutého rozsudku v časti týkajúcej sa výrokov I a II a vrátenia veci v tomto rozsahu súdu prvej inštancie, eventuálne žiadal, aby odvolací súd zmenil rozsudok tak, že žalobe vyhovie. Súd prvej inštancie v predmetnej právnej veci rozhodol zjavne arbitrárne a nesprávne, keďže: i) moderačné právo súdu v zmysle § 301 OBZ uplatnil bezdôvodne, ii) úvahy o neprimeranej výške zmluvných pokút sú nepodložené a iii) výklad ustanovení o zmluvných pokutách nevyplýva zo znenia zmlúv, ale je v priamom rozpore s ním. Zmluvné ustanovenia týkajúce sa zmluvných pokút",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 27,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 607,
+            "token_len": 278
+        }
+    },
+    {
+        "page_content": "ale je v priamom rozpore s ním. Zmluvné ustanovenia týkajúce sa zmluvných pokút nepochybne reflektujú záujem žalobcu mať predmetnými zmluvnými pokutami pokryté prípadné škody spôsobené porušením zmluvných povinností zo strany jeho obchodných partnerov počas celého obdobia (počas celej doby určitej, t. j. 36 mesiacov), na ktoré boli predmetné zmluvy uzatvorené. Úvahy súdu prvej inštancie o ustálení obdobia, za ktoré žalobcovi údajne vznikol nárok na zmluvné pokuty, sú nesprávne, ničím neodôvodnené a nekorešpondujúce s dohodu strán týkajúcou sa zmluvných pokút. Zmluvné pokuty zahŕňajú všetky rozumne očakávateľné",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 28,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 617,
+            "token_len": 296
+        }
+    },
+    {
+        "page_content": "zmluvných pokút. Zmluvné pokuty zahŕňajú všetky rozumne očakávateľné škody a majú dostatočnú, nie však premrštenú stimulačnú výšku. Žalobca dokonca v dobrej viere voči svojim obchodným partnerom znížil výšku predmetných zmluvných pokút na úroveň 50 % potenciálnych škôd (resp. ušlého zisku), ktoré mu v prípade porušenia zmluvných povinností zo strany obchodných partnerov hrozia.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 29,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 380,
+            "token_len": 181
+        }
+    },
+    {
+        "page_content": "Keďže zmluvné pokuty (ako paušálne náhrady škody) uplatňované žalobcom v tomto konaní ani len neprevyšujú výšku škody (resp. ušlého zisku), ktorá žalobcovi vznikla v dôsledku porušenia zmluvných ustanovení zo strany žalovaného (práve naopak, predstavujú len 50 % uvedenej sumy), nemožno za žiadnych okolností uvažovať o ich neprimeranosti a tým pádom o uplatnení moderačného práva podľa § 301 OBZ. Žalobca neuplatňuje nároky zo zmluvných pokút za porušenie zmluvných povinností žalovaným v čase, keď už medzi nimi žiadny záväzkový vzťah neexistoval. Nárok na zmluvné pokuty vznikol z dôvodu odmietnutia poskytovania služieb",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 30,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 623,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "neexistoval. Nárok na zmluvné pokuty vznikol z dôvodu odmietnutia poskytovania služieb (ktorým sa rozumie aj čiastočné neuhradenie aspoň dvoch faktúr za poskytnuté služby). Druhou žalovaným nezaplatenou faktúrou bola fa č. 191107224, splatná 08.04.2019, t. j. uplynutím dňa 08.04.2019 vznikol žalobcovi nárok na zmluvné pokuty vo výške, v ktorej ich aj žalobca v tomto konaní uplatnil. Úvahy súdu o akcesorickej povahe záväzkov v podobe zmluvných pokút, okamihu účinnosti odstúpenia od zmlúv vo vzťahu k limitácii obdobia, za ktoré údajne nárok na zmluvné pokuty žalobcovi vznikol a o domáhaní sa nárokov zo zmluvnej",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 31,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 616,
+            "token_len": 282
+        }
+    },
+    {
+        "page_content": "nárok na zmluvné pokuty žalobcovi vznikol a o domáhaní sa nárokov zo zmluvnej pokuty za porušenie zmluvných povinností žalobcom v čase, keď už medzi stranami žiadny záväzkový vzťah neexistoval, žalobca považuje za absolútne irelevantné. Rozsudok Najvyššieho súdu SR, sp. zn. M Cdo 264/2002 nemožno použiť na prejednávanú otázku. Zmluvné pokuty, ktoré si žalobca uplatnil v tomto konaní, majú odlišný charakter a odlišnú právnu konštrukciu, pretože žalobcov nárok vznikol v momente odmietnutia poskytovania služieb na základe abonentnej zmluvy, resp. zmluvy o servisnej službe. Žalobcovi nie je známe, na základe akých zmluvných",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 32,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 627,
+            "token_len": 281
+        }
+    },
+    {
+        "page_content": "zmluvy o servisnej službe. Žalobcovi nie je známe, na základe akých zmluvných ustanovení došiel súd prvej inštancie k záveru, podľa ktorého \"nárok na zaplatenie dojednaných zmluvných pokút vznikol žalobcovi odo dňa 09.04.2019 a trval až do skončenia zmluvného vzťahu, t. j. do 31.05.2019\". Ustanovenia abonentnej zmluvy, ako aj zmluvy o servisnej službe o zmluvných pokutách jasne, zrozumiteľne a nepochybným spôsobom určujú, že rozhodným obdobím pre výpočet výšky zmluvných pokút je doba od vzniku nároku na zmluvnú pokutu, do uplynutia účinnosti predmetných zmlúv výlučne s odkazom na uplynutie celej doby",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 33,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 607,
+            "token_len": 289
+        }
+    },
+    {
+        "page_content": "do uplynutia účinnosti predmetných zmlúv výlučne s odkazom na uplynutie celej doby určitej, na ktorú boli predmetné zmluvy dojednané. Obmedzenie predmetnej doby súdom prvej inštancie do okamihu odstúpenia od zmluvy (pričom nie je zrejmé, podľa čoho súd ustálil okamih účinnosti odstúpenia od zmlúv, čo však v konečnom dôsledku nemá žiadny vplyv na vznik nároku na zmluvné pokuty) nemá žiadnu oporu v relevantných zmluvných ustanoveniach. Podľa názoru žalobcu sú najmä body 23 až 26 napadnutého rozsudku v celom rozsahu arbitrárne a nesprávne, nezohľadňujúce hospodársky a logický účel zmluvných pokút.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 34,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 601,
+            "token_len": 273
+        }
+    },
+    {
+        "page_content": "6. Žalovaný sa k odvolaniu nevyjadril.\n\n7. Krajský súd v Trnave ako súd odvolací (§ 34 CSP) na úvod konštatuje, že odvolanie žalobcu voči výroku I napadnutého rozsudku smeruje voči rozhodnutiu, ktorým sa žalobe voči žalovanému sčasti vyhovelo, v dôsledku čoho nejde v tomto rozsahu o rozhodnutie vydané v neprospech žalobcu (§ 359 CSP). To potom znamená, že odvolanie žalobcu treba v tejto časti posúdiť ako podané neoprávnenou osobou, a preto ho odvolací súd podľa § 386 písm. a) CSP odmietol (výrok I).",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 35,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 504,
+            "token_len": 230
+        }
+    },
+    {
+        "page_content": "8. Odvolací súd následne, viazaný rozsahom odvolania (§ 379 CSP) a odvolacími dôvodmi (§ 380 ods. 1 CSP), preskúmal napadnutý rozsudok, ako aj predchádzajúce konanie pred súdom prvej inštancie aj z hľadiska vád týkajúcich sa procesných podmienok (§ 380 ods. 2 CSP) bez nariadenia pojednávania, pretože neboli splnené podmienky § 385 ods. 1 CSP, a dospel k záveru, že odvolanie žalobcu voči výroku II napadnutého rozsudku je nedôvodné.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 36,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 434,
+            "token_len": 195
+        }
+    },
+    {
+        "page_content": "9. Predmetom sporu je nárok žalobcu voči žalovanému na písomne dohodnuté (§ 544 ods. 2 OZ) zmluvné pokuty z dôvodu porušenia zmluvnej povinnosti (§ 544 ods. 1 OZ), ktorých výšku súd prvej inštancie znížil s použitím § 301 OBZ. Na účely vyhodnotenia žalobcovej námietky voči tomuto postupu odvolací súd preberá skutkový stav zistený súdom prvej inštancie v rozsahu opísanom v bode 2 vyššie a považuje za potrebné uviesť nasledovné:\n\n10. Ak si žalobca uplatňuje nárok na zmluvnú pokutu, je jeho úlohou preukázať splnenie formálnych požiadaviek (§ 544 ods. 2 OZ) porušenie zmluvnej povinnosti, ktorú zmluvná pokuta zabezpečovala, protistranou (§ 544 ods. 1 OZ).",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 37,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 658,
+            "token_len": 307
+        }
+    },
+    {
+        "page_content": "11. V prípade abonentnej zmluvy, ktorá mala písomnú formu, vznikal nárok žalobcu na zmluvnú pokutu \"odmietnutím poskytovania služby\" [bod 4 písm. c) VPAZ], za ktoré sa považovalo o. i. aj čiastočné neuhradenie aspoň dvoch faktúr za poskytnuté služby (bod 4 druhý odsek prvá odrážka VPAZ). Čo sa týka zmluvy o servisnej službe, ktorá bola taktiež uzavretá písomne, podmienky vzniku nároku žalobcu na zmluvnú pokutu boli dohodnuté v podstate rovnako (bod 6 zmluvy). Nárok žalobu tak v oboch prípadoch závisel od tej istej právnej skutočnosti - omeškania žalovaného so splnením záväzku, teda porušenia zmluvnej povinnosti zaplatiť žalobcovi odmenu na základe aspoň dvoch faktúr (bod 2 VPAZ).",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 38,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 688,
+            "token_len": 325
+        }
+    },
+    {
+        "page_content": "Skutkové okolnosti v tomto zmysle ani neboli medzi stranami sporné. Žalovaný svoje záväzky nesplnil, takže \"odmietol poskytovanie služby\" (mimochodom, správnejšie by bolo \"odmietol prijímať služby\"), v dôsledku čoho žalovanému vznikla povinnosť zaplatiť žalobcovi dohodnuté zmluvné pokuty.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 39,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 289,
+            "token_len": 129
+        }
+    },
+    {
+        "page_content": "12. Sporný medzi stranami bol výklad dohody o výške zmluvných pokút. Tak ustanovenie bodu 4 písm. c) VPAZ, ako aj ustanovenie bodu 6 zmluvy o servisnej službe vymedzovali výšku zmluvnej pokuty podobným spôsobom ako \"50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac odo dňa odmietnutia poskytovania služieb\" až do \"skončenia účinnosti zmluvy podľa bodu 1 [VPAZ]\" (v prípade abonentnej zmluvy), resp. \"po dobu trvania zmluvy v zmysle bodu 4 tejto zmluvy\" (v prípade zmluvy o servisnej službe). Keďže abonentná zmluva sa \"uzatvára na dobu 36 mesiacov odo dňa montáže dohodnutých zariadení\"",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 40,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 600,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "zmluva sa \"uzatvára na dobu 36 mesiacov odo dňa montáže dohodnutých zariadení\" (bod 1 VPAZ), je nepochybné, že uplynutím takto dohodnutého času stráca účinnosť. Podobne bolo dohodnuté aj trvanie zmluvy o servisnej službe, ktorej \"účinnosť nastáva dňom položenia rohože odberateľovi\" a \"uzatvára sa na obdobie 36 mesiacov\". Preto je správny taký výklad ustanovenia bodu 4 písm. c) VPAZ, resp. bodu 6 zmluvy o servisnej službe, ktorý výšku zmluvnej pokuty určuje sumou 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac odo dňa odmietnutia poskytovania služieb až do uplynutia 36 mesiacov odo dňa",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 41,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 606,
+            "token_len": 286
+        }
+    },
+    {
+        "page_content": "odo dňa odmietnutia poskytovania služieb až do uplynutia 36 mesiacov odo dňa montáže dohodnutých zariadení, resp. odo dňa položenia rohože odberateľovi.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 42,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 152,
+            "token_len": 71
+        }
+    },
+    {
+        "page_content": "13. Výšku zmluvnej pokuty teda treba vypočítať od nasledujúceho dňa po splatnosti v poradí druhej nezaplatenej faktúry, t. j. v danom prípade faktúry č. 191107224. Splatnosť predmetnej faktúry bola určená dňom 08.04.2019, v dôsledku čoho je pre výšku zmluvnej pokuty rozhodujúce obdobie od 09.04.2019 do až do uplynutia 36 mesiacov odo dňa montáže dohodnutých zariadení, resp. položeniu rohože. Žalobca tvrdil, že počet uskutočnených služieb bol v danom čase v prípade oboch zmlúv 4, čo vzhľadom na mesačné intervaly znamená, že k montáži dohodnutých zariadení, resp. k položeniu rohože došlo v januári 2019. Matematicky",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 43,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 620,
+            "token_len": 284
+        }
+    },
+    {
+        "page_content": "dohodnutých zariadení, resp. k položeniu rohože došlo v januári 2019. Matematicky správny je preto výpočet predložený žalobcom, ktorý v konečnom dôsledku vychádza z mesačnej fakturácie a 32 mesiacov do uplynutia doby trvania tej-ktorej zmluvy. Výška zmluvnej pokuty za \"odmietnutie poskytovania služby\" podľa abonentnej zmluvy by tak predstavovala (32 x 26,84 €) x 50 % = 858,88 € x 50 % = 429,44 € a podľa zmluvy o servisnej službe (32 x 3,60 € x 1 rohož x 2 výmeny) x 50 % = 230,40 € x 50 % = 115,20 €.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 44,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 504,
+            "token_len": 240
+        }
+    },
+    {
+        "page_content": "14. Pokiaľ ide o otázku primeranosti výšky tejto zmluvnej pokuty, moderačné právo súdu upravené v § 301 OBZ umožňuje súdu reagovať na situácie, keď je výška dohodnutej zmluvnej pokuty v nepomere k hodnote a významu zabezpečovanej povinnosti. Aby mohol súd vyhodnotiť, či je na mieste použiť moderačné právo, musí si najprv nevyhnutne ujasniť, akú povinnosť zmluvná pokuta zabezpečuje.\n\nKeďže ustanovenie § 301 OBZ, ktoré sa nachádza v oddiele OBZ s názvom \"Niektoré ustanovenia o zmluvnej pokute\", systematicky dopĺňa úpravu zmluvnej pokuty obsiahnutú v § 544 a nasl. OZ, je nepochybné, že tak v prípade § 544 ods. 1 OZ, ako aj v prípade § 301 OBZ ide o tú istú povinnosť.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 45,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 672,
+            "token_len": 303
+        }
+    },
+    {
+        "page_content": "15. Žalobca tvrdí, že zmluvné ustanovenia týkajúce sa zmluvných pokút odrážajú jeho záujem mať pokryté prípadné \"očakávateľné\" škody spôsobené porušením zmluvných povinností zo strany jeho obchodných partnerov počas celého obdobia (počas celej doby určitej, t. j. 36 mesiacov), na ktoré boli predmetné zmluvy uzatvorené. Takéto ponímanie dohôd o zmluvnej pokute ale nezodpovedá dokazovaniu vykonanému súdom prvej inštancie. Zo žalobcom predložených zmlúv je totiž zrejmé, že dotknuté ustanovenia zmlúv zabezpečovali zmluvnou pokutou povinnosť žalovaného zaplatiť svoj peňažný záväzok zo zmlúv. Z tohto skutkového",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 46,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 612,
+            "token_len": 293
+        }
+    },
+    {
+        "page_content": "žalovaného zaplatiť svoj peňažný záväzok zo zmlúv. Z tohto skutkového záveru vychádzal aj súd prvej inštancie. Ten zaujal názor, s ktorým sa už odvolací súd vyššie stotožnil, že nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 47,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 284,
+            "token_len": 138
+        }
+    },
+    {
+        "page_content": "16. Odvolací súd nespochybňuje, že žalobca môže mať záujem na tom, aby sa obchody, ktoré uzatvára, plnili počas celej dohodnutej doby ich trvania. Okrem toho, že s jeho argumentáciou týkajúcou sa vzniku ušlého zisku sa odvolací súd nestotožňuje (k tomu ďalej nižšie), musí odvolací súd poznamenať, že tento záujem by sa odrazil len v takej zmluvnej pokute, ktorá by zabezpečovala povinnosť protistrany zotrvať v zmluvnom vzťahu. V prejednávanej veci ale zo znenia dohôd o zmluvnej pokute, na základe ktorých si žalobca uplatňuje svoje nároky, nemožno vyvodiť takýto záver. Tieto nepokrývajú povinnosť žalovaného",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 48,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 611,
+            "token_len": 281
+        }
+    },
+    {
+        "page_content": "nároky, nemožno vyvodiť takýto záver. Tieto nepokrývajú povinnosť žalovaného prijímať, či odoberať služby žalobcu počas dohodnutej doby, ale viažu sa na povinnosť žalovaného zaplatiť svoj peňažný dlh. Na tom nič nemení ani to, že strany porušenie tejto povinnosti považovali za \"odmietnutie poskytovania služby zo strany odberateľa\". Zo žiadnych ďalších ustanovení dotknutých zmlúv totiž nevyplýva, že by takéto \"odmietnutie poskytovania služby\" spôsobovalo zánik povinností strán zmluvu naďalej plniť. Práve naopak, takéto \"odmietnutie\" zakladalo len právo žalobcu od zmlúv odstúpiť, takže nespôsobovalo automatický",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 49,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 616,
+            "token_len": 282
+        }
+    },
+    {
+        "page_content": "zakladalo len právo žalobcu od zmlúv odstúpiť, takže nespôsobovalo automatický zánik zmluvy. Keby žalobca toto právo nevyužil, jeho povinnosť služby poskytovať by pretrvala rovnako, ako povinnosť žalovaného za tieto služby zaplatiť.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 50,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 232,
+            "token_len": 104
+        }
+    },
+    {
+        "page_content": "17. Z týchto úvah je potom nepochybné, že zmluvné pokuty, uplatňované žalobcom vo výške 544,64 € (429,44 € + 115,20 €), ktoré vznikli v dôsledku omeškania žalovaného so zaplatením sumy 81,70 € (súčet odmeny vyúčtovanej prvými dvoma faktúrami č. 191103825 a č. 191107224 po 40,85 €), nie sú primerané hodnote a významu zabezpečovanej povinnosti.\n\n18. Odvolací súd pre poriadok ešte dopĺňa, že keďže žalobca tvrdí, že v dobrej viere znížil zmluvné pokuty na úroveň 50 % potenciálnych škôd (resp. ušlého zisku), je zrejmé, že tvrdí, že cieľom zmluvných pokút bolo pokryť práve ušlý zisk žalobcu.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 51,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 592,
+            "token_len": 285
+        }
+    },
+    {
+        "page_content": "19. Dohoda o zmluvnej pokute musí podľa názoru odvolacieho súdu vyhovieť testu primeranosti už v čase jej uzavretia, teda musí spravodlivo vyvažovať záujmy zmluvných strán. Žalobca tu ale opomína skutočnosť, že prvoradou okolnosťou, ktorá podmieňuje nárok žalobcu na zmluvnú pokutu, je tak podľa VPAZ, ako aj podľa zmluvy o servisnej službe omeškanie žalovaného s úhradou faktúr. Formulácia ustanovení o zmluvných pokutách, ku ktorých autorstvu sa žalobca aj priznáva, tak spôsobuje vznik zmluvnej pokuty v plnej, žalobcom vypočítanej výške už prvým dňom omeškania žalovaného. Dokonca vzniká aj pri čiastočnom (!) nezaplatení",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 52,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 625,
+            "token_len": 283
+        }
+    },
+    {
+        "page_content": "prvým dňom omeškania žalovaného. Dokonca vzniká aj pri čiastočnom (!) nezaplatení faktúry (to znamená aj pri omeškaní so zaplatením 1 €). To napokon tvrdí žalobca aj v odvolaní, keď konštatuje, že \"jej konečná výška je limitovaná už okamihom vzniku nároku žalobcu na ňu\". Takáto vysoká zmluvná pokuta sa podľa citovaných ustanovení zmlúv mala uplatňovať aj naďalej, bez ohľadu na trvanie dĺžku omeškania žalovaného s platením faktúr a výšku omeškaného dlhu, teda aj v prípade, že žalovaný sa dostane do omeškania s 1 € a dlh zaplatí hneď na druhý deň omeškania. Za takej situácie sa nemôže",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 53,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 589,
+            "token_len": 278
+        }
+    },
+    {
+        "page_content": "a dlh zaplatí hneď na druhý deň omeškania. Za takej situácie sa nemôže presadiť argument žalobcu, že zmluvná pokuta je primeranou náhradou ušlého zisku. Ak by totiž žalovaný bol v omeškaní s druhou faktúrou čo i len jeden deň a naďalej by svoje povinnosti plnil, zjavne by žalobcovi žiadny zisk neušiel. Napriek tomu sa žalobca snaží súdy presvedčiť, že zmluvná pokuta, ktorej výška je konečným spôsobom určená na základe predpokladu o omeškaní trvajúcom až do uplynutia účinnosti zmluvy, teda na najvyššej možnej úrovni (v danom prípade 32 mesiacov), by mu právom prináležala v plnej výške. V tomto",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 54,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 599,
+            "token_len": 271
+        }
+    },
+    {
+        "page_content": "(v danom prípade 32 mesiacov), by mu právom prináležala v plnej výške. V tomto prípade ide o zjavný exces. Takto dohodnutú zmluvnú pokutu možno len sotva považovať za primeranú hodnote a významu zabezpečovanej povinnosti.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 55,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 221,
+            "token_len": 97
+        }
+    },
+    {
+        "page_content": "20. Ako to naznačil odvolací súd vyššie, v tomto kontexte je dôležité aj odstúpenie žalobcu od zmluvy.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 56,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 102,
+            "token_len": 48
+        }
+    },
+    {
+        "page_content": "Je to tak preto, lebo odstúpenie od zmluvy spôsobuje v zásade zánik zmluvných záväzkov strán vrátane záväzkov strany, ktorá od zmluvy odstúpila (§ 351 ods. 1 OBZ). V danom spore v dôsledku odstúpenia od zmluvy zanikli v podstate aj všetky záväzky samotného žalobcu. Ten už po účinnosti odstúpenia od zmluvy nemusel žalovanému vôbec nič plniť, takže mohol svoje hmotné i nehmotné zdroje pôvodne vyhradené zaniknuvšiemu zmluvnému vzťahu alokovať inde. Preto neobstojí ani jeho argument, že zmluvná pokuta pokrývajúca aj obdobie od odstúpenia od zmluvy do uplynutia jej pôvodne dohodnutej doby účinnosti slúži na to, aby žalobcovi",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 57,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 627,
+            "token_len": 286
+        }
+    },
+    {
+        "page_content": "do uplynutia jej pôvodne dohodnutej doby účinnosti slúži na to, aby žalobcovi nahrádzala akýsi ušlý zisk. Tak by bolo možné uvažovať len vtedy, keby žalobca nemal vôbec možnosť svoje zdroje použiť inak, čo zjavne nie je prípad v danom spore, keď žalovaný všetky prenajaté predmety vrátil žalobcovi, a to dokonca ešte pred účinnosťou odstúpenia od zmlúv.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 58,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 353,
+            "token_len": 164
+        }
+    },
+    {
+        "page_content": "21. Po zvážení okolností prejednávanej veci preto odvolací súd dospel k záveru, že je namieste zmluvné pokuty primerane znížiť. Hoci terminologicky neobratne, ale v konečnom dôsledku tak urobil aj súd prvej inštancie, ktorý uznal, že žalobcovi vznikol nárok na zmluvnú pokutu, ale jeho výšku znížil tým, že ju priznal len za obdobie od porušenia povinnosti do účinkov odstúpenia od zmluvy. Aj odvolaciemu súdu sa javí ako primerané zmluvnú pokutu obmedziť prinajmenšom do okamihu, kým trvala žalobcova povinnosť plniť zo zmlúv. Tie zanikli v dôsledku jeho vlastného odstúpenia, takže zmluvné pokuty v sume, ktoré by mali zohľadňovať i obdobie neplnenia, sú neprimerané.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 59,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 669,
+            "token_len": 302
+        }
+    },
+    {
+        "page_content": "22. Vzhľadom na to, že žalobca netvrdil vznik žiadnej skutočnej škody a keďže ušlý zisk mu už z vyššie vysvetlených dôvodov vzniknúť nemohol, priznaním 50 % zo súčtu cien mesačného paušálu za obdobie od 09.04.2019 do 31.05.2019, ako to vypočítal súd prvej inštancie v bode 26 napadnutého rozsudku, je tak dodržaná aj podmienka druhej časti prvej vety § 301 OBZ.\n\n23. Dokonca by tu bol priestor aj na ďalšie zníženie zmluvnej pokuty, no keďže žalovaný sa voči rozsudku neodvolal, odvolací súd musí rešpektovať zásadu zákazu reformatio in peius (čl. 16 ods. 3 základných princípov CSP), a preto nemôže svojím rozhodnutím zhoršiť postavenie žalobcu ako strany, ktorá opravný prostriedok uplatnila.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 60,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 694,
+            "token_len": 318
+        }
+    },
+    {
+        "page_content": "24. Pokiaľ ide o príslušenstvo vo vzťahu k pohľadávke zo zmluvných pokút, žalobca napadnutému rozsudku v tejto časti nič nevyčítal, čo s odkazom na zásadu viazanosti rozsahom a dôvodmi odvolania (§ 379 a § 380 ods. 1 CSP) neponecháva odvolaciemu súdu priestor na jeho spochybnenie.\n\n25. Odvolací súd nezistil žiadne dôvody, ktoré by mali viesť k zrušeniu napadnutého rozsudku súdu prvej inštancie v časti týkajúcej sa zamietavého výroku II (§ 389 CSP) a neboli splnené ani podmienky na jeho zmenu (§ 388 CSP). Odvolací súd preto napadnutý rozsudok v tejto časti podľa § 387 ods. 1 CSP ako vecne správny potvrdil (výrok II).",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 61,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 623,
+            "token_len": 287
+        }
+    },
+    {
+        "page_content": "26. Pretože týmto rozhodnutím sa konanie končí, musel odvolací súd rozhodnúť aj o nároku strán na náhradu trov odvolacieho konania (§ 262 ods. 1 v spojení s § 396 ods. 1 CSP). V danom prípade žalobca so svojím odvolaním neuspel, takže odvolací súd podľa § 255 ods. 1 CSP priznal žalovanému voči žalobcovi nárok na náhradu všetkých trov odvolacieho konania (výrok III).\n\n27. Senát odvolacieho súdu prijal toto rozhodnutie jednomyseľne.",
+        "metadata": {
+            "date_raw": "28.06.2022",
+            "case_id": "32Cob/3/2021",
+            "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+            "court": "Krajský súd Trnava",
+            "document_type": "Rozsudok",
+            "chunk_index": 62,
+            "source_file": "KS_Trnava_32Cob_3_2021_00_dokument.pdf",
+            "strategy": "openai_380",
+            "char_len": 434,
+            "token_len": 197
+        }
+    }
+]

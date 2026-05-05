@@ -1,0 +1,872 @@
+[
+    {
+        "page_content": "Napadnutým rozhodnutím okresný súd na návrh povinného exekúciu v časti zmluvnej pokuty vo výške 0,5% denne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011 zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011, zo sumy 1.113,70 Eur od 05.04.2011 do zaplatenia, zo sumy 2.135,53 Eur od 24.02.2011 do zaplatenia, zo sumy",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 0,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 313,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "Eur od 24.02.2011 do zaplatenia, zo sumy 1.146,45 Eur od 03.03.2011 do zaplatenia, zo sumy 1.002,80 Eur od 10.03.2011 do zaplatenia v celkovej výške 15.757,12 Eur zastavil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 1,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 172,
+            "token_len": 81
+        }
+    },
+    {
+        "page_content": "V rozhodnutí uviedol, že dňa 08.06.2012 poveril súdneho exekútora vykonaním exekúcie na vymoženie pohľadávky oprávneného voči povinnému vo výške istiny 5.398,48 Eur, s úrokom z omeškania 9% ročne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011, zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011, zo sumy",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 2,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 303,
+            "token_len": 158
+        }
+    },
+    {
+        "page_content": "od 02.03.2011 do 04.04.2011, zo sumy 1.113,98 Eur od 05.04.2011 do zaplatenia, zo sumy 2.135,53 Eur od 24.02.2011 do zaplatenia, zo sumy 1.146,45 Eur od 03.03.2011 do zaplatenia, zo sumy 1.002,80 Eur od 10.03.2011 do zaplatenia, zmluvnej pokuty vo výške 0,5% denne zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011, zo",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 3,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 317,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "Eur od 02.03.2011 do 04.04.2011, zo sumy 1.113,98 Eur od 05.04.2011 do zaplatenia, zo sumy 2.135,53 Eur od 24.02.2011 do zaplatenia, zo sumy 1.146,45 Eur od 03.03.2011 do zaplatenia, trov predchádzajúceho konania vo výške 981,88 Eur a trov exekúcie na základe exekučného titulu, ktorým je rozhodcovský rozsudok Rozhodcovského súdu",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 4,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 330,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "rozhodcovský rozsudok Rozhodcovského súdu Komory arbitrov s.r.o. vydaný dňa 30.09.2011 pod sp. zn. 83/2010/KA.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 5,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 110,
+            "token_len": 55
+        }
+    },
+    {
+        "page_content": "Súdny exekútor predložil okresnému súdu dňa 22.03.2013 návrh povinného na zastavenie exekúcie, v ktorom povinný žiada exekúciu zastaviť podľa § 45 ods. 1 písm. c) Zákona o rozhodcovskom konaní v časti zmluvnej pokuty, pretože v rozhodcovskom rozsudku priznanú zmluvnú pokutu vo výške 0,5% denne oprávnenému považoval",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 6,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "výške 0,5% denne oprávnenému považoval za neprimerane vysokú, a teda rozpornú s dobrými mravmi. Okresný súd o tomto návrhu rozhodol uznesením č.k. 6Er/489/2012-52 tak, že návrh povinného zmietol z dôvodu, že povinný namieta povinnosť uloženú v právoplatnom a vykonateľnom exekučnom titule.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 7,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 289,
+            "token_len": 135
+        }
+    },
+    {
+        "page_content": "Uvedené rozhodnutie okresného súdu na základe odvolania povinného odvolací súd uznesením č.k. 43CoE/196/2015-68 zo dňa 28.08.2014 pre nejasnosť, nezrozumiteľnosť a nepreskúmateľnosť zrušil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 8,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 189,
+            "token_len": 95
+        }
+    },
+    {
+        "page_content": "Okresný súd po opätovnom preskúmaní návrhu na zastavenie exekúcie dospel k záveru, že výška zmluvnej pokuty 0,5% denne prekračuje účel zmluvnej pokuty najmä v tom, že povinný má v tomto exekučnom konaní na základe rozhodcovského rozsudku uhradiť aj príslušenstvo pohľadávky, a to úroky z omeškania vo výške 9 % z",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 9,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 312,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "úroky z omeškania vo výške 9 % z dlžnej istiny ročne, pričom oprávnený nenamietal a ani žiadnym spôsobom nepreukázal škodu, resp. výšku škody, ktorá by mu vznikla neplnením povinného. Priznanie zmluvnej pokuty mnohonásobne prevyšujúce právo a vedie k neoprávnenému majetkovému prospechu oprávneného, a preto povinnosť uložená v",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 10,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 327,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "a preto povinnosť uložená v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi. Z uvedených dôvodov exekúciu v časti vymoženia zmluvnej pokuty vo výške 0,5% denne zastavil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 11,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 313,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "Proti rozhodnutiu okresného súdu podal v zákonom stanovenej lehote odvolanie oprávnený, v ktorom uviedol, že výšku zmluvnej pokuty nepovažuje za neprimerane vysokú a dojednanie o výške zmluvnej pokuty nepovažuje za rozporné s dobrými mravmi. Poukázal na to, že zmluvnú pokutu vo výške 0,5% si zmluvné strany dohodli v čl. II bode",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 12,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 329,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "zmluvné strany dohodli v čl. II bode 4 Dohody o uznaní dlhu a jeho splnení v splátkach zo dňa 08.02.2011, a teda bola výsledkom konsenzu zmluvných strán resp. výsledkom slobodnej a dobrovoľnej akceptácie zmluvnej pokuty zo strany povinného. Vzhľadom na skutočnosť, že dohoda o zmluvnej pokute je dohodou vyjadrujúcou autonómnu",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 13,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "pokute je dohodou vyjadrujúcou autonómnu vôľu zmluvných strán, oprávnený nepovažoval ingerenciu súdu \"v podobe nepriznania nároku na zaplatenie zmluvnej pokuty\" za náležitú, resp. žiaducu. V nadväznosti na uvedené oprávnený poukázal na ustanovenie § 265 Obchodného zákonníka, podľa ktorého je treba uvedené ustanovenie vnímať ako príkaz",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 14,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 153
+        }
+    },
+    {
+        "page_content": "treba uvedené ustanovenie vnímať ako príkaz sudcovi, aby rozhodoval v súlade s ekvitou, pričom, oproti dobrým mravom dovoľujú zásady poctivého obchodného styku zobrať do úvahy osobitosti profesionálnych vzťahov podnikateľského prostredia a jeho špecifickej etiky, pričom mal za to, dohodnutá výška zmluvnej pokuty nie je v rozpore so",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 15,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 333,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "zmluvnej pokuty nie je v rozpore so zásadou poctivého obchodného styku, keďže žiadnym spôsobom nezneužíva či nešikanuje povinného. Oprávnený rozhodnutie okresného súdu považoval za výrazný zásah do zásady \"pacta sunt servanda\", ktorá je jednou z hlavných zásad vyplývajúcich z čl. 2 ods. 3 Listiny základných práv a slobôd.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 16,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 323,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "3 Listiny základných práv a slobôd. Oprávnený ďalej s poukazom na § 301 Obchodného zákonníka namietal, že toto zákonné ustanovenie súd neoprávňuje k tomu, aby v takýchto prípadoch oprávnenému účastníkovi nárok na zaplatenie zmluvnej pokuty nepriznal, ale umožňuje mu neprimerane vysokú zmluvnú pokutu len moderovať (znížiť). Ak",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 17,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 327,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "pokutu len moderovať (znížiť). Ak bol súd toho názoru, že priznaná zmluvná pokuta je neprimerane vysoká, bolo na mieste nanajvýš zastaviť konanie v časti neprimeranej zmluvnej pokuty, a nie v celom rozsahu. Oprávnený ďalej zdôraznil, že konečná výška zmluvnej pokuty bola plne závislá na dobe, po ktorú povinný nesplnil povinnosť,",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 18,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 330,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "dobe, po ktorú povinný nesplnil povinnosť, ktorú sám na seba zmluvne prevzal. Oprávnený na záver dodal, že namietanie výšky zmluvnej pokuty povinným v exekučnom konaní považuje za účelové a nedôvodné, nakoľko počas celého konania pred rozhodcovským súdom disponoval viacerými právnymi prostriedkami, ktorými mohol preukazovať svoje tvrdenie a",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 19,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 342,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "ktorými mohol preukazovať svoje tvrdenie a obhajovať svoje práva. Žiadny s týchto prostriedkov povinný neuplatnil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 20,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 114,
+            "token_len": 47
+        }
+    },
+    {
+        "page_content": "S poukazom na uvedené oprávnený žiadal napadnuté uznesenie zmeniť tak, že odvolací súd návrh na zastavenie exekúcie zamietne a uloží povinnému povinnosť nahradiť oprávnenému trovy odvolacieho konania.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 21,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 200,
+            "token_len": 87
+        }
+    },
+    {
+        "page_content": "K odvolaniu oprávneného sa povinný vyjadril v podaní zo dňa 17.03.2015 a navrhol napadnuté uznesenie ako vecne správne potvrdiť a zároveň si uplatnil trovy odvolacieho konania. Oprávnený s poukazom na § 265 Obchodného zákonníka uviedol, že zásada poctivého obchodného styku zahŕňa aj ochranu dobromyseľnosti druhej strany a je výrazom",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 22,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 334,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "dobromyseľnosti druhej strany a je výrazom konkretizácie všeobecných morálnych zásad či noriem vyjadrených v pojeme dobré mravy. Z tohto dôvodu považoval tvrdenie oprávneného o tom, že dohoda o zmluvnej pokute v takej výške je výsledkom konsenzu zmluvných strán, za nedôvodné.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 23,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 276,
+            "token_len": 117
+        }
+    },
+    {
+        "page_content": "Povinný sa stotožnil s právnym názorom okresného súdu, že výška zmluvnej pokuty prekračuje jej účel, najmä v tom, že ako povinný bol zaviazaný v exekučnom titule uhradiť aj príslušenstvo, a to úrok z omeškania vo výške 9% z dlžnej istiny, pričom povinný nenamietal a ani žiadnym spôsobom nepreukázal škodu, resp. výšku",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 24,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 318,
+            "token_len": 145
+        }
+    },
+    {
+        "page_content": "nepreukázal škodu, resp. výšku škody, ktorá by mu vznikla neplnením odporcu. Neprimeranosť výšky zmluvnej pokuty súd posúdil v percentuálnom prepočte, čo predstavuje 182,5 % istiny, ktorý povinný považoval z logického hľadiska za jediný objektívne možný výpočet pre posúdenie primeranosti, resp. neprimeranosti predmetnej zmluvnej pokuty.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 25,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 338,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "Krajský súd ako súd odvolací prejednal vec podľa § 212 ods. 1 O. s. p. bez nariadenia pojednávania podľa § 214 ods. 2 O. s. p., pričom dospel k záveru, že napadnuté uznesenie je potrebné zrušiť.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 26,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 194,
+            "token_len": 98
+        }
+    },
+    {
+        "page_content": "Zo spisového materiálu odvolací súd zistil, že okresný súd na základe žiadosti súdneho exekútora o udelenie poverenia na vykonanie exekúcie a návrhu oprávneného na vykonanie exekúcie vydal dňa 08.06.2012 pre súdneho exekútora poverenie pod č. 5613 *053403 na vykonanie exekúcie voči povinnému pre exekučný titul rozhodcovský rozsudok",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 27,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 333,
+            "token_len": 153
+        }
+    },
+    {
+        "page_content": "pre exekučný titul rozhodcovský rozsudok Stáleho rozhodcovského súdu Komory arbitrov s.r.o. vydaný dňa 30.09.2011 pod sp. zn. 83/2010/KA na vymoženie sumy istiny 5.398,48 Eur, s úrokom z omeškania 9% ročne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011, zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011, zo sumy",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 28,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 313,
+            "token_len": 158
+        }
+    },
+    {
+        "page_content": "od 02.03.2011 do 04.04.2011, zo sumy 1.113,98 Eur od 05.04.2011 do zaplatenia, zo sumy 2.135,53 Eur od 24.02.2011 do zaplatenia, zo sumy 1.146,45 Eur od 03.03.2011 do zaplatenia, zo sumy 1.002,80 Eur od 10.03.2011 do zaplatenia, zmluvnej pokuty vo výške 0,5% denne zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011, zo",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 29,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 317,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "Eur od 02.03.2011 do 04.04.2011, zo sumy 1.113,98 Eur od 05.04.2011 do zaplatenia, zo sumy 2.135,53 Eur od 24.02.2011 do zaplatenia, zo sumy 1.146,45 Eur od 03.03.2011 do zaplatenia, trov predchádzajúceho konania vo výške 981,88 Eur a trov exekúcie.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 30,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 249,
+            "token_len": 116
+        }
+    },
+    {
+        "page_content": "Okresnému súdu bol dňa 24.05.2013 doručený návrh povinného zo dňa 10.05.2013, na zastavenie exekúcie v časti zmluvnej pokuty vo výške 0,5% denne. Povinný namietal, že rozhodcovský súd sa nevysporiadal s navrhovateľom predloženými dôkazmi, a to dodacími listami, z ktorých okrem vzniknutého dlhu žiadna zmluvná pokuta",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 31,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 153
+        }
+    },
+    {
+        "page_content": "vzniknutého dlhu žiadna zmluvná pokuta nevyplýva, ako aj dohodou o uznaní dlhu. Rozhodcovský súd pritom mal v zmysle § 301 Obchodného zákonníka posudzovať aj primeranosť zmluvnej pokuty. Uviedol, že ust. § 45 Zákona o rozhodcovskom konaní (ďalej len ZRK) treba považovať za zákonné poverenie, ktoré umožňuje exekučnému súdu",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 32,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 323,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "poverenie, ktoré umožňuje exekučnému súdu preskúmanie exekučného titulu. Povinný mal za to, že výška zmluvnej pokuty 0,5% denne na ktorú bol zaviazaný v exekučnom titule je v rozpore s dobrými mravmi v zmysle ust. § 45 ods. 1 písm. c) ZRK, pričom rozpor s dobrými mravmi je práve v neprimeranosti jej výšky. Z uvedených",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 33,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 319,
+            "token_len": 145
+        }
+    },
+    {
+        "page_content": "v neprimeranosti jej výšky. Z uvedených dôvodov žiadal konanie podľa ust. § 45 ods. 1 písm. c) ZRK zastaviť. O uvedenom návrhu rozhodol okresný súd uznesením č.k. 6Er/489/2012-52 zo dňa 06.02.2014 tak, že ho zamietol, keďže exekučný súd je predloženým exekučným titulom viazaný a neprislúcha mu čokoľvek",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 34,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 303,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "titulom viazaný a neprislúcha mu čokoľvek v ňom meniť, prípadne hodnotiť jeho správnosť. Na základe odvolania povinného Krajský súd v Banskej Bystrici ako súd odvolací uznesením č.k. 43CoE/196/2014-68 zo dňa 28.08.2014 rozhodnutie okresného súdu zrušil pre jeho nepreskúmateľnosť, čo bráni odvolaciemu súdu vyhodnotiť",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 35,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 317,
+            "token_len": 156
+        }
+    },
+    {
+        "page_content": "čo bráni odvolaciemu súdu vyhodnotiť jeho správnosť, a vec mu vrátil na ďalšie konanie, v ktorom sa okresný súd mal vysporiadať so všetkými skutočnosťami namietanými povinným. Ak súd dospeje z záveru, že tvrdenia a námietky povinného nie sú relevantné pre dané exekučné konanie, odvolací súd uviedol, že musí svoje závery riadne",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 36,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 328,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "súd uviedol, že musí svoje závery riadne odôvodniť.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 37,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 51,
+            "token_len": 24
+        }
+    },
+    {
+        "page_content": "Podľa ust. § 45 ods. 1 písm. c) zákona č. 244/2002 Z.z. o rozhodcovskom konaní účinný do 31.12.2014 (ďalej len ZRK) súd príslušný na výkon rozhodnutia alebo na exekúciu podľa osobitných predpisov na návrh účastníka konania, proti ktorému bol nariadený výkon rozhodcovského rozsudku, konanie o výkon rozhodnutia alebo",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 38,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "rozsudku, konanie o výkon rozhodnutia alebo exekučné konanie zastaví, ak rozhodcovský rozsudok zaväzuje účastníka rozhodcovského konania na plnenie, ktoré je objektívne nemožné, právom nedovolené alebo odporuje dobrým mravom.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 39,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 225,
+            "token_len": 97
+        }
+    },
+    {
+        "page_content": "Ustanovenie § 45 ods. 2 ZRK účinné do 31.12.2014 priamo ukladá v prípadoch vymenovaných v § 45 ods. 1 ZRK aj bez návrhu zastaviť exekúciu vedenú na základe rozhodcovského rozsudku.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 40,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 180,
+            "token_len": 89
+        }
+    },
+    {
+        "page_content": "Rozhodcovský rozsudok síce nadobúda účinky právoplatného rozsudku, ale zákonodarca právnou úpravou platnou do 31.12.2015 upravil postup ako zabrániť, aby sa plnenie priznané rozhodcom nevymohlo v prípade, ak sa jedná o plnenie, ktoré je objektívne nemožné, právom nedovolené alebo odporujúce dobrým mravom.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 41,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 306,
+            "token_len": 136
+        }
+    },
+    {
+        "page_content": "Podľa ust. § 54b ods. 1 ZRK v znení účinnom od 01.01.2015 ustanovenia tohto zákona sa použijú aj na konania začaté pred 1. januárom 2015.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 42,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 137,
+            "token_len": 68
+        }
+    },
+    {
+        "page_content": "Od 1. januára 2015 je platná a účinná novela zákona č. 244/2002 Z.z. o rozhodcovskom konaní, vykonaná zákonom č. 336/2014 Z. z., ktorá zrušila ustanovenie § 45 tohto zákona, umožňujúce do 31.12.2014 priamo alebo na návrh v prípadoch vymenovaných v § 45 ods. 1 ZRK zastaviť exekúciu vedenú na základe rozhodcovského",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 43,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 314,
+            "token_len": 156
+        }
+    },
+    {
+        "page_content": "exekúciu vedenú na základe rozhodcovského rozsudku, ak plnenie priznané rozhodcom je plnením, ktoré je objektívne nemožné, právom nedovolené alebo odporujúce dobrým mravom. Na základe intertemporálneho ustanovenia k vyššie uvedenej novele zákona o rozhodcovskom konaní sa nové znenie zákona použije aj na konania začaté pred účinnosťou tohto zákona, a",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 44,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 351,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "začaté pred účinnosťou tohto zákona, a teda aj na prebiehajúce konanie. Z uvedeného dôvodu okresný súd, ktorý vydal napadnuté uznesenie už za účinnosti nového znenia zákona o rozhodcovskom konaní, ktoré možnosť zastavenia exekučného konania vedeného na podklade exekučných titulov, ktorými sú rozhodcovské rozsudky postupom podľa ust. § 45",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 45,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 339,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "rozsudky postupom podľa ust. § 45 ZRK už neupravuje, postupoval nesprávne, keď exekučné konanie v zmysle neexistujúceho zákonného ustanovenia zastavil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 46,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 151,
+            "token_len": 70
+        }
+    },
+    {
+        "page_content": "Aj napriek uvedenému odvolací súd považoval za potrebné k záveru okresného súdu, že plnenie zmluvnej pokuty vo výške 0,5% denne z istiny priznané v exekučnom titule oprávnenému je v rozpore s jeho zákonnými nárokmi uviesť, že na rozdiel od iných exekučných titulov, ktoré sú uvedené v § 41 ods.2 Exekučného poriadku mal",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 47,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 319,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "v § 41 ods.2 Exekučného poriadku mal exekučný súd do 31.12.2014 právo preskúmavať rozhodcovský rozsudok aj z hľadiska hmotného práva, a teda preskúmať aj jeho materiálnu správnosť, a to v zmysle § 45 ZRK. Pri preskúmaní správnosti rozhodcovského rozsudku exekučným súdom postupom podľa ustanovenia 45 ods. l písm.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 48,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 313,
+            "token_len": 153
+        }
+    },
+    {
+        "page_content": "podľa ustanovenia 45 ods. l písm. c) zákona č. 244/2002 Z. z. súd musel vychádzať zo znenia tohto zákonného ustanovenia a posudzovať nedovolenosť plnenia a jeho rozpor s dobrými mravmi len vo vzťahu k plneniu, na ktoré rozhodcovský rozsudok povinného zaväzuje.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 49,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 260,
+            "token_len": 122
+        }
+    },
+    {
+        "page_content": "Odvolací súd je toho právneho názoru, že extenzívna interpretácia ust. § 45 ods. 1 písm. c) ZRK nemala byť zneužívaná ako ďalšia inštancia prieskumu rozhodcovského rozhodnutia. V tejto súvislosti poukazuje na rozhodnutie Najvyššieho súdu ČR sp. zn. 23 Cdo 3728/2011, zo dňa 9. mája 2012, publikované v zbierke",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 50,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 309,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "9. mája 2012, publikované v zbierke rozhodnutí a stanovísk Najvyššieho súdu pod č. 100/2012, v ktorom najvyšší súd uviedol, že za \"nedovolené\" možno považovať plnenie, ktoré nie je aprobované vnútroštátnym právom.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 51,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 213,
+            "token_len": 99
+        }
+    },
+    {
+        "page_content": "Pôjde o plnenie, ktoré je vyhradené len niektorým subjektom, najmä štátu alebo podliehajúce štátnemu dozoru alebo štátnemu povoleniu (napr. strelné zbrane, drogy, nerastné bohatstvo, časti ľudského tela a pod.), pri ktorých je možnosť dispozície s nimi obmedzená alebo vylúčená. Uvedené znamená, že \"nedovolené plnenie\" je spojené s predmetom",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 52,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 342,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "\"nedovolené plnenie\" je spojené s predmetom záväzku, a teda s plnením žalovanej strany a nie s okolnosťami, pre ktoré by mal byť výkon práva na požadované plnenie pre rozpor s dobrými mravmi nepovolený.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 53,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 202,
+            "token_len": 83
+        }
+    },
+    {
+        "page_content": "Dovolenosť, resp. nedovolenosť plnenia pri aplikácii ust. § 45 ods. 1 písm. b) a c) zákona o rozhodcovskom konaní mal súd posudzovať z hľadiska súladu plnenia s platným právom, pričom peňažné plnenie je dovolené a neodporuje dobrým mravom.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 54,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 239,
+            "token_len": 112
+        }
+    },
+    {
+        "page_content": "V prejednávanej veci povinný podal návrh na zastavenie exekúcie podľa ust. § 45 ZRK, ktoré dňom 01.01.2015 stratilo účinnosť. Okresný súd následne rozhodol o tomto návrhu napadnutým uznesením, pričom vec nesprávne právne posúdil, keď dospel k záveru, že plnenie zmluvnej pokuty priznané v exekučnom titule je v rozpore s",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 55,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 320,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "v exekučnom titule je v rozpore s dobrými mravmi a exekúciu v časti vymoženia zmluvnej pokuty podľa neúčinného ust. § 45 ZRK zastavil.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 56,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 134,
+            "token_len": 62
+        }
+    },
+    {
+        "page_content": "Z vyššie uvedených dôvodov musel odvolací súd podľa § 220 O.s.p. napadnuté uznesenie zmeniť tak, že návrh povinného na zastavenie exekúcie, a to nielen pre neexistenciu § 45 ZRK, ale aj pre neodôvodnenosť návrhu, zamieta.",
+        "metadata": {
+            "date_raw": "28.05.2015",
+            "case_id": "43CoE/215/2015",
+            "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+            "court": "Krajský súd Banská Bystrica",
+            "document_type": "Uznesenie",
+            "chunk_index": 57,
+            "source_file": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 221,
+            "token_len": 99
+        }
+    }
+]

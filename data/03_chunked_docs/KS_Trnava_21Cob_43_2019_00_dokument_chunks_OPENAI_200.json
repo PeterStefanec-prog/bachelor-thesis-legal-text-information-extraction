@@ -1,0 +1,842 @@
+[
+    {
+        "page_content": "1. Napadnutým rozsudkom súd prvej inštancie I. zaviazal žalovanú zaplatiť žalobcovi 600 € s úrokom z omeškania ako zmluvnú pokutu za porušenie dohodnutého zákazu konkurencie, II. zamietol žalobu čo do zvyšku (t. j. čo do zaplatenia zvyšných 2.400 € a úroku z omeškania) a III. priznal žalovanej náhradu trov konania.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 0,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "2. Vyšiel zo zistenia, že právny predchodca žalobcu (správne: žalobkyňa sama) a žalovaný uzavreli 1. septembra 2013 zmluvu o vykonávaní finančného sprostredkovania a neskoršie dodatky k nej. V čl. XI ods. 2 sa žalovaná zaviazala, že šesť mesiacov po zániku zmluvy nebude vykonávať činnosť v oblasti finančného sprostredkovania",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 1,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "činnosť v oblasti finančného sprostredkovania a/alebo finančného poradenstva v sektore poistenia alebo zaistenia, ani žiadnu obdobnú činnosť. Za porušenie tejto povinnosti bola v čl. VII ods. 1 zmluvy dohodnutá zmluvná pokuta 3.000 €. Zmluva zanikla k 2. júnu 2017 a žalovaná je od 1. augusta 2017 zapísaná ako viazaný finančný agent pre",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 2,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 337,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "2017 zapísaná ako viazaný finančný agent pre podregister poistenia alebo zaistenia. Túto zmluvu súd posúdil ako zmluvu o obchodnom zastúpení, nie ako pracovnú zmluvu, a uzavrel, že v nej bol dohodnutý zákaz konkurencie podľa § 672a Obchodného zákonníka, ktorý žalovaná porušila. Doložka však podľa súdu obmedzuje žalovanú viac než to",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 3,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 333,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "súdu obmedzuje žalovanú viac než to vyžaduje potrebná miera ochrany žalovaného. Žalobkyňa porušila zákaz konkurencie len počas jedného mesiaca a žalobca nepreukázal konkrétny spôsob porušenia, ani vznik škody. Preto konkurenčnú doložku obmedzil podľa § 672a ods. 2 Obch. zák. a zmluvnú pokutu znížil na 600 €, keďže",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 4,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 315,
+            "token_len": 152
+        }
+    },
+    {
+        "page_content": "pokutu znížil na 600 €, keďže ju nepovažoval za primeranú.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 5,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 58,
+            "token_len": 27
+        }
+    },
+    {
+        "page_content": "3. Včas podaným odvolaním sa žalobkyňa domáha zmeny tohto rozsudku v celom rozsahu tak, že sa žalobe vyhovie, eventuálne jeho zrušenia a vrátenia veci na ďalšie konanie. Nesúhlasil s tým, že by konkurenčná doložka obmedzovala žalovanú viac než je to nutné, keďže bola dohodnutá na podstatne kratšiu dobu (tri mesiace) než",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 6,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 321,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "na podstatne kratšiu dobu (tri mesiace) než dovoľuje zákon (dva roky). Konkurenčné pôsobenie žalovanej je preukázané tým, že je zapísaná ako finančný agent inej poisťovne, a žalobkyňa nemusí preukázať škodu ani zneužitie informácií zo strany žalovanej. Žalovaná nebola obmedzená ani v práve na prácu, lebo konkurenčná doložka bola",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 7,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 330,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "na prácu, lebo konkurenčná doložka bola obmedzená na jeden sektor. Žalobkyňa vytkla súdu prvej inštancie, že v skutočnosti neobmedzil konkurenčnú doložku, ale moderoval zmluvnú pokutu, zodpovedajúce ustanovenie (§ 301 Obch. zák.) však vôbec necitoval, ani nevysvetlil, čím sa pri moderácii spravoval a ako zohľadnil hodnotu a význam",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 8,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 332,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "a ako zohľadnil hodnotu a význam zabezpečovanej povinnosti. K tomu nevykonal žiadne dokazovania, neupozornil na to podľa § 181 ods. 2 C. s. p. Inú súdy pritom žalobkyni uplatnenú zmluvnú pokutu priznali.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 9,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 203,
+            "token_len": 98
+        }
+    },
+    {
+        "page_content": "Napadnutý rozsudok tak treba považovať za arbitrárny a porušuje právo žalobkyne na spravodlivý súdny proces. Okrem toho žalobkyňa pripojila k odvolaniu nové dôkazy na preukázanie výšky provízie vyplatenej žalovanej, dlh žalovanej v dôsledku zániku sprostredkovaných zmlúv, čo považovala za okolnosti, na ktoré by súd mal prihliadnuť pri",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 10,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "na ktoré by súd mal prihliadnuť pri moderácii zmluvnej pokuty. Žalobkyňa nesúhlasila ani s rozdelením náhrady trov konania, keďže moderácia závisí od úvahy súdu.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 11,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 161,
+            "token_len": 74
+        }
+    },
+    {
+        "page_content": "4. Žalovaná vo vyjadrení navrhla napadnutý rozsudok potvrdiť ako vecne správny. Nové dôkazy mala podľa nej žalobkyňa k dispozícii už počas konania pred súdom prvej inštancie.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 12,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 174,
+            "token_len": 82
+        }
+    },
+    {
+        "page_content": "5. Krajský súd v Trnave ako odvolací súd po zistení, že odvolanie je podané včas a oprávnenou osobou proti rozsudku (§ 355 ods. 1 C. s. p.) preskúmal napadnutý rozsudok v celom rozsahu (§ 379 C. s. p.) bez nariadenia pojednávania (§ 385 ods. 1 a contrario C. s. p.) a dospel k záveru, že ho v jeho zamietajúcom výroku treba zrušiť.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 13,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 331,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "6. Pokiaľ ide o subjektívnu prípustnosť dovolania, žalobkyňa napadla rozsudok v celom rozsahu. Podľa § 359 C. s. p. môže odvolanie podať strana, v ktorej neprospech bolo odvolanie vydané. Či ide o rozhodnutie \"v neprospech strany\", treba posúdiť porovnaním výroku rozhodnutia so žalobným petitom žalobcu a zistením, do akej miery",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 14,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 329,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "petitom žalobcu a zistením, do akej miery sa výrok rozsudku od tohto petitu odchyľuje. Ak súd priznal menej, než bolo žiadané, je rozhodnutie v zamietajúcej časti vydané v neprospech žalobcu, vo vyhovujúcej časti však vždy o rozhodnutie vydané v neprospech žalovaného. V prerokúvanej veci napadnutý rozsudok vo výroku I žalobe",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 15,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "napadnutý rozsudok vo výroku I žalobe čiastočne vyhovel, zamietol ju len vo výroku II. Výrokom I teda v tejto časti nebolo rozhodnuté v neprospech žalobkyne, keďže ním bolo čiastočne vyhovené jej žalobe, teda rozhodnuté (čiastočne) v súlade s jeho žalobným petitom. Žalobkyňa tak nemá subjektívnu legitimáciu na",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 16,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 311,
+            "token_len": 142
+        }
+    },
+    {
+        "page_content": "tak nemá subjektívnu legitimáciu na podanie odvolania proti výroku I a jej odvolanie treba v tejto časti považovať za podané neoprávnenou osobou, čo podľa § 386 písm. b) C. s. p. zakladá dôvod na jeho odmietnutie (výrok I).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 17,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 223,
+            "token_len": 97
+        }
+    },
+    {
+        "page_content": "7. Podľa § 220 ods. 2 C. s. p. má súd v odôvodnení rozsudku uviesť, čoho sa žalobca domáhal, aké skutočnosti tvrdil, aké prostriedky procesného útoku použil, ako sa vo veci vyjadril žalovaný a aké prostriedky procesnej obrany použil. Súd jasne a výstižne vysvetlí, ako posúdil podstatné skutkové tvrdenia a právne argumenty",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 18,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 323,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "podstatné skutkové tvrdenia a právne argumenty strán, ktoré skutočnosti považuje za dokázané a ktoré nie, ktoré dôkazy vykonal, z ktorých dôkazov vychádzal a ako ich vyhodnotil a ako vec právne posúdil. Súd dbá aby odôvodnenie rozsudku bolo presvedčivé. Náležitosti odôvodnenia podľa citovaného ustanovenia sú zárukou toho, aby bolo rešpektované právo",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 19,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 351,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "zárukou toho, aby bolo rešpektované právo strán na riadne odôvodnenie súdneho rozhodnutia ako súčasti práva na súdnu ochranu podľa čl. 46 ods. 1 Ústavy Slovenskej republiky (porov. ustálenú judikatúru Ústavného súdu SR).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 20,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 220,
+            "token_len": 102
+        }
+    },
+    {
+        "page_content": "8. Po preskúmaní napadnutého rozsudku dospel odvolací súd k záveru, že jeho odôvodnenie týmto náležitostiam nezodpovedá. Súdne rozhodnutie je vo svojej podstate výsledkom tzv. právneho sylogizmu, kde sa z jednej premisy (norma) a druhej premisy (skutkový stav) vyvodzuje úsudok - záver o tom, či sú naplnené predpoklady normy na to,",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 21,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 332,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "či sú naplnené predpoklady normy na to, aby žalobcovi patril žalovaný nárok alebo nie. Pokiaľ súd nesprávne identifikuje normu, podľa ktorej posúdi zistený skutkový stav, je celá jedna premisa úplne chybná. Potom ale ani výsledok nemôže byť výsledkom právneho sylogizmu, ale v podstate výsledok náhody. Za takých okolností ale nemožno",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 22,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 334,
+            "token_len": 144
+        }
+    },
+    {
+        "page_content": "náhody. Za takých okolností ale nemožno takéto súdne rozhodnutie ani zmysluplne preskúmať, pretože v dôsledku chýbajúcej premisy nemožno vôbec uvažovať, či súd prvej inštancie z oboch premís urobil správny úsudok. Ak by aj súd prvej inštancie dospel k \"správnemu\" riešeniu, išlo by z jeho strany nanajvýš o správny",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 23,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 314,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "by z jeho strany nanajvýš o správny \"tip\", nie však o dôsledok racionálnej úvahy. Súdne rozhodnutie založené na takomto tipovaní potom nemožno považovať za racionálne a presvedčivo odôvodnené tak, aby to vôbec vyhovovalo požiadavkám § 220 ods. 2 C. s. p. a čl. 46 ods. 1 Ústavy SR.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 24,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 281,
+            "token_len": 135
+        }
+    },
+    {
+        "page_content": "9. V prerokúvanej veci súd prvej inštancie posudzoval nárok na zaplatenie zmluvnej pokuty dohodnutej v čl. VII ods. 2 zmluvy o vykonávaní finančného sprostredkovania a finančnom poradenstva z 1. septembra 2013 medzi žalobkyňou a žalovanou. Podľa § 544 ods. 1 Obč. zák. sa zmluvná pokuta dojednáva pre prípad porušenia",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 25,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 317,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "pokuta dojednáva pre prípad porušenia určitej povinnosti, a to v zásade povinnosti akejkoľvek (porov. uznesenie NS SR sp. zn. 2 MObdo 3/2009). V cit. ustanovení zmluvy bola zmluvná pokuta dojednaná pre prípad porušenia povinnosti uvedených v čl. XI ods. 2 zmluvy. V tomto ustanovení bola zasa dohodnutá tzv. konkurenčná doložka,",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 26,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 328,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "dohodnutá tzv. konkurenčná doložka, podľa ktorej sa žalovaná zaviazala nevykonávať činnosť v oblasti finančného sprostredkovania a/alebo finančného poradenstva v sektore poistenia alebo zaistenia, ani žiadnu obdobnú činnosť. Takto vymedzená konkurenčná doložka zodpovedala ustanoveniu § 672a ods. 1 Obch. zák. Vzájomný vzťah týchto ustanovení je",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 27,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 345,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "Vzájomný vzťah týchto ustanovení je vzťahom hypotézy (skutkovej podstaty) a dispozície (následku). Ak bude naplnená hypotéza (znaky skutkovej podstaty) danej normy, teda ak budú preukázané skutočnosti, ktoré sú znakmi skutkovej podstaty nastane dispozícia (právny následok).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 28,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 274,
+            "token_len": 121
+        }
+    },
+    {
+        "page_content": "10. Hypotézou normy upravenej v § 544 Obch. zák. je teda porušenie povinnosti- zákazu konkurencie v zmysle § 672a ods. 1 Obch. zák. Ak súd dospeje k záveru, že sú naplnené znaky skutkovej podstaty (hypotézy) právnej normy, teda ak sú naplnené znaky konania, ktoré sa prieči dohodnutej konkurenčnej doložke, potom nastane následok",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 29,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 329,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "konkurenčnej doložke, potom nastane následok uvedený v hypotéze - povinnosť zaplatiť zmluvnú pokutu. Ak tieto znaky naplnené nie sú, povinnosť platiť zmluvnú pokutu nenastane. Rozdielom medzi ustanovením § 672a ods. 2 a § 301 Obch. zák. je, že prvé z nich dovoľuje meniť rozsah hypotézy (rozsah znakov skutkovej podstaty), na ktorú",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 30,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 331,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "(rozsah znakov skutkovej podstaty), na ktorú je viazaná dispozícia (povinnosť platiť zmluvnú pokutu), druhé potom dovoľuje meniť rozsah dispozície - znížiť rozsah povinnosti platiť zmluvnú pokutu. Zjednodušene povedané to znamená, že ustanovenie § 672a ods. 2 Obch. zák. dovoľuje súdu vysloviť, že činnosť, ktorá by inak spadala",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 31,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 328,
+            "token_len": 155
+        }
+    },
+    {
+        "page_content": "že činnosť, ktorá by inak spadala pod dohodnutý zákaz konkurencie, sa za takú činnosť považovať nebude, pretože sú tu dôvody uvedené v citovanom ustanovení. Súd môže napríklad vysloviť, že činnosť uvedená v konkurenčnej doložke a vykonávaná v čase jej platnosti sa nebude považovať za jej porušenie, pretože doložka sa po taký",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 32,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "jej porušenie, pretože doložka sa po taký dlhý čas nesmie použiť;",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 33,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 65,
+            "token_len": 30
+        }
+    },
+    {
+        "page_content": "rovnako to môže vysloviť o určitej činnosti preto, že by to znamenalo príliš široký vecný rozsah takejto doložky. Dôsledkom tohto postupu súdu potom je, že táto činnosť sa nepovažuje za porušenie konkurenčnej doložky, teda sa nepovažuje za protiprávne konanie a je vylúčené na ňu naviazať povinnosť platiť zmluvnú pokutu.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 34,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 321,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "povinnosť platiť zmluvnú pokutu. Naopak, aplikácia ustanovenia § 301 Obch. zák. predpokladá, že súd posúdil činnosť obchodného zástupcu ako rozpornú s konkurenčnou doložkou, teda ako protiprávnu, a dospel k záveru, že obchodný zástupca je povinný platiť za túto protiprávnu činnosť dohodnutú zmluvnú pokutu. Ešte inak povedané",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 35,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 150
+        }
+    },
+    {
+        "page_content": "zmluvnú pokutu. Ešte inak povedané - ustanovenie § 672a ods. 2 Obch. zák. nedovoľuje súdu zasahovať do právnych následkov, ktoré si strany dohodli pre prípad porušenia konkurenčnej doložky alebo ktoré vyplývajú zo zákona, pokiaľ súd nezistil dôvody, kvôli ktorému mal spornú činnosť obchodného zástupcu vyňať spod pôsobnosti",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 36,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 324,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "zástupcu vyňať spod pôsobnosti konkurenčnej doložky.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 37,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 52,
+            "token_len": 25
+        }
+    },
+    {
+        "page_content": "11. V tu prerokúvanej veci si strany v čl. XI ods. 2 zmluvy o vykonávaní finančného sprostredkovania z 1. septembra 2013 v znení dodatku č. 1 z 2. septembra 2013 dohodli konkurenčnú doložku, podľa ktorej sa žalovaná počas troch mesiacov zaviazala nevykonávať činnosť v oblasti finančného sprostredkovania alebo finančného poradenstva",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 38,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 333,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "sprostredkovania alebo finančného poradenstva v sektore poistenia alebo zaistenia. Ustanovenie § 672a ods. 2 Obch. zák. potom dovoľovalo súdu prvej inštancie dospieť napr. k záveru, že činnosť žalovanej, ktorej sa dopustila od 1. augusta 2017, nemá byť považovaná za porušenie konkurenčnej doložky, pretože doba jej trvania (tri mesiace) je príliš",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 39,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 347,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "doba jej trvania (tri mesiace) je príliš dlhá, prípadne jej rozsah (činnosť v oblasti finančného sprostredkovania alebo finančného poradenstva v sektore poistenia alebo zaistenia) je príliš široký. Pokiaľ by bol súd prvej inštancie k takémuto záveru dospel, znamenalo by to, že činnosť žalovanej by nebola v rozpore s konkurenčnou doložkou. To",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 40,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 343,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "v rozpore s konkurenčnou doložkou. To by potom ale znamenalo, že žalovaná by touto činnosťou neporušila povinnosť uvedenú v čl. XI ods. 2 zmluvy, v dôsledku by žalobkyni vôbec nevzniklo právo na zmluvnú pokutu podľa čl. VII ods. 1 zmluvy. Súd prvej inštancie však v napadnutom rozsudku dospel naopak k záveru,",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 41,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 309,
+            "token_len": 149
+        }
+    },
+    {
+        "page_content": "napadnutom rozsudku dospel naopak k záveru, že konkurenčná doložka sa vzťahuje aj na spornú činnosť žalovanej vykonávanú od 1. augusta 2017, takže táto jej činnosť predstavovala porušenie citovaného ustanovenia a žalobkyni vzniklo právo na zmluvnú pokutu.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 42,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 255,
+            "token_len": 112
+        }
+    },
+    {
+        "page_content": "12. Ak potom súd prvej inštancie za použitia ustanovenia § 672a ods. 2 Obch. zák. rozhodoval o znížení (moderácii) zmluvnej pokuty, postupoval spôsobom, aký toto ustanovenie už pojmovo vôbec nepripúšťalo. Naopak, úpravu následkov (dispozície) právnej normy v podobe moderácie zmluvnej pokuty upravovalo ustanovenie § 301 Obch. zák. Toto",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 43,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 336,
+            "token_len": 148
+        }
+    },
+    {
+        "page_content": "ustanovenie § 301 Obch. zák. Toto ustanovenie však súd prvej inštancie necitoval, ani v napadnutom rozsudku neobjasnil použitie žiadnej z okolností, ktoré sú podľa neho rozhodné pre určenie miery moderácie (hodnota a význam zabezpečovanej povinnosti a škoda, ktorá tým vznikla).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 44,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 278,
+            "token_len": 122
+        }
+    },
+    {
+        "page_content": "Žalobkyňa teda dôvodne vytýka súdu prvej inštancie tento nedostatok, ktorý je logickým dôsledkom celkom nesprávnej aplikácie § 672a Obch. zák. spôsobom, aký toto ustanovenie vôbec nepripúšťa.",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 45,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 191,
+            "token_len": 93
+        }
+    },
+    {
+        "page_content": "Vzhľadom na uvedené dospel odvolací súd k záveru, že odôvodnenie napadnutého rozsudku vykazuje takú mieru vnútornej protirečivosti a nedostatku racionality, že nemožno vôbec hovoriť o odôvodnení v zmysle § 220 ods. 2 C. s. p. a čl. 46 ods. 1 Ústavy SR. Vydaním napadnutého rozsudku tak došlo k porušeniu práva žalobkyne na",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 46,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 322,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "došlo k porušeniu práva žalobkyne na spravodlivý proces v zmysle § 389 ods. 1 písm. b) C. s. p, čo opodstatňuje zrušenie napadnutého rozsudku v jeho zamietavom výroku a vrátenie veci súdu prvej inštancie (§ 391 ods. 1 C. s. p.).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 47,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 228,
+            "token_len": 112
+        }
+    },
+    {
+        "page_content": "13. V ďalšom konaní, ktorého predmetom zostáva len suma 2.400 € s 9 % ročným úrokom z omeškania od 29. augusta 2017, si súd prvej inštancie predovšetkým ujasní a stranám náležite sprístupní (§ 181 ods. 2 C. s. p.) názor, či hodlá zužovať rozsah aplikácie konkurečnej doložky (§ 672a ods. 2 Obch. zák.) alebo",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 48,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 307,
+            "token_len": 151
+        }
+    },
+    {
+        "page_content": "(§ 672a ods. 2 Obch. zák.) alebo znižovať rozsah následku jej porušenia (§ 301 Obch. zák.). Pretože aplikácia § 672a ods. 2 Obch. zák. už vzhľadom na čiastočne právoplatný výrok o priznaní časti zmluvnej pokuty neprichádza zmysluplne do úvahy, bude sa súd prvej inštancie riadne zaoberať naplnením všetkých podmienok",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 49,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 316,
+            "token_len": 154
+        }
+    },
+    {
+        "page_content": "riadne zaoberať naplnením všetkých podmienok moderácie zmluvnej pokuty v § 301 Obchodného zákonníka. Podľa judikatúry k tomuto ustanoveniu by sa súd pri úvahách o primeranosti zmluvnej pokuty mal zaoberať všetkými relevantnými okolnosťami prípadu, a to nielen na hodnotu a význam zabezpečovanej povinnosti, ale aj na iné skutočnosti (napr. hospodársku",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 50,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 351,
+            "token_len": 147
+        }
+    },
+    {
+        "page_content": "ale aj na iné skutočnosti (napr. hospodársku pozíciu zmluvných strán pri uzatváraní zmluvy, spôsob zapracovania zmluvnej pokuty do zmluvy, reciprocitu zmluvnej pokuty, druh zavinenia dlžníka, ako aj na skutočnosť, či došlo k vzniku škody alebo nie a pod., porov. rozsudok NS SR sp. zn. 3 Obdo 283/98, uzn. NS SR sp. zn. 2 Obdo",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 51,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 326,
+            "token_len": 143
+        }
+    },
+    {
+        "page_content": "283/98, uzn. NS SR sp. zn. 2 Obdo 39/2010 a z posledného obdobia R 43/2019). Osobitne je potrebné zohľadniť jej funkciu prevenčnú a uhradzovaciu (rozsudok NS SR sp. zn. 2 Cdo 172/2007). Ďalej súd prvej inštancie vezme do úvahy, že skutočnosti rozhodné pre rozsah moderácie zmluvnej pokuty je povinná tvrdiť a v",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 52,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 310,
+            "token_len": 146
+        }
+    },
+    {
+        "page_content": "zmluvnej pokuty je povinná tvrdiť a v prípade sporu aj dokázať žalovaná, keďže jej je následok tejto právnej normy na prospech (porov. uznesenie NS SR sp. zn. 4 Cdo 13/2009). Po riadnom zhodnotení týchto skutočností súd prvej inštancie vo veci znova rozhodne, pričom svoje závery súd prvej inštancie v novom rozsudku odôvodní",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 53,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 325,
+            "token_len": 141
+        }
+    },
+    {
+        "page_content": "prvej inštancie v novom rozsudku odôvodní spôsobom súladným s § 220 ods. 2 C. s. p. Zároveň rozhodne aj o trovách prvoinštančného aj odvolacieho konania (§ 396 ods. 3 C. s. p.).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 54,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 177,
+            "token_len": 86
+        }
+    },
+    {
+        "page_content": "14. Uznesenie prijal senát jednomyseľne (3: 0).",
+        "metadata": {
+            "date_raw": "26.11.2019",
+            "case_id": "21Cob/43/2019",
+            "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+            "court": "Krajský súd Trnava",
+            "document_type": "Uznesenie",
+            "chunk_index": 55,
+            "source_file": "KS_Trnava_21Cob_43_2019_00_dokument.pdf",
+            "strategy": "openai_200",
+            "char_len": 47,
+            "token_len": 23
+        }
+    }
+]
