@@ -1,11 +1,11 @@
 """
 Reranker for Slovak legal court decisions about contractual penalties (zmluvna pokuta).
 
-This is basically a post-processing step that runs AFTER retrieval and BEFORE the LLM.
-The problem is that retrieval sometimes returns chunks that are semantically similar
-to the query but dont actually contain the useful information. For example, a chunk
-about an appeal ("odvolanie") mentions "zmluvna pokuta" many times but doesnt have
-the actual penalty amount or the court's reasoning.
+This is post-processing step that runs AFTER retrieval and BEFORE the LLM.
+The problem is that retrieval sometimes returns chunks that are semantically similar to  query
+but dont actually contain the useful information.
+For example, a chunk about an appeal ("odvolanie") mentions "zmluvna pokuta" many times but doesnt have
+ actual penalty amount or the court's reasoning.
 
 So what this does:
   1. Retrieval returns more chunks than we need (e.g. 10 instead of 5)
@@ -14,47 +14,44 @@ So what this does:
   4. Returns only the best top_k chunks
 
 I figured out the keywords by reading through 15+ court decisions and noting which
-phrases appear in the "useful" chunks vs the "noise" chunks. The patterns themselves
-are in legal_patterns.py - centralized there for easier maintenance.
+phrases appear in the "useful" chunks vs the "noise" chunks.
+The patterns themselves are in legal_patterns.py - centralized there for easier maintenance.
 """
 
 import re
 
-# all patterns live in legal_patterns.py so i dont maintain two copies
-from src.candidates.legal_patterns import (
+# all patterns are in legal_patterns.py so i dont maintain two copies
+from src.reranking.legal_patterns import (
     PATTERNS_FOR_QUERY,
-    FIRST_CHUNK_BONUS,
+    FIRST_CHUNK_BONUS,      # bonus is applied only if first chunks already has some positive keyword signal
 )
 
 
-# ==========================================
+# ##############################
 # SCORING FUNCTION
-# ==========================================
-# Goes through all patterns for the given query type and adds up the weights
-# for each pattern that matches in the chunk text.
+# ##############################
+# Goes through all patterns for the given query type and adds up the weights for each pattern that matches in the chunk text
 
 def get_keyword_score(text, query_key):
     """
-    Score a chunk based on how many legal keywords it contains.
+    Score chunk based on how many legal keywords it contains.
 
-    Returns (score, matched_patterns) where matched_patterns is a dict
-    showing which patterns matched and how many times. I use matched_patterns
-    for debugging - it helps me understand why a chunk got a high or low score.
+    Returns (score, matched_patterns) where matched_patterns is dict showing which patterns matched and how many times.
+    I use matched_patterns for debugging - it helps me understand why  chunk got  high or low score.
     """
-    pattern_groups = PATTERNS_FOR_QUERY.get(query_key, [])
+    pattern_groups = PATTERNS_FOR_QUERY.get(query_key, [])  # get patterns for the query
     score = 0.0
     matched_patterns = {}
 
-    for group in pattern_groups:
-        for pattern, weight in group:
+    for group in pattern_groups:    # going through groups
+        for pattern, weight in group:   # going through exact patterns (pattern - compoiled regex, weight - number like +3, -2)
             matches = pattern.findall(text)
             if matches:
                 if weight < 0:
                     # FIX: noise penalties should only count once!
                     # I originally multiplied by match count, but that was wrong.
-                    # A chunk mentioning "trovy konania" 3 times is the same procedural
-                    # section - it shouldnt get 3x the penalty. This was causing chunk_0
-                    # (which mentions "nahradu trov" twice in the verdict summary) to get
+                    # Chunk mentioning "trovy konania" 3 times is the same procedural section - it shouldnt get 3x the penalty
+                    # This was causing chunk_0 (which mentions "nahradu trov" twice in the verdict summary) to get
                     # an unfairly low score and drop out of the top-5 for q_breach.
                     points = weight  # just apply the penalty once
                 else:
@@ -64,14 +61,30 @@ def get_keyword_score(text, query_key):
                     points = weight * how_many
 
                 score += points
-                matched_patterns[pattern.pattern[:50]] = len(matches)
+                matched_patterns[pattern.pattern[:50]] = len(matches)   # just for debug
+
+    # FIX: dampen noise penalties for chunks that have strong positive signal.
+    # Problem:  chunk can contain both useful legal content (e.g. "zmluvná pokut vo výške 300 EUR" -> +3) AND noise patterns (e.g. "žalovaný namietal" -> -1).
+    # Before this fix, both penalties applied at full strenght regardless of positive signal.
+    # But  chunk with score 8 that mentions  party argument is not the same as chunk with score 1 that mentions  party argument.
+    # Now: if chunk has positive score >= 5, i halve the noise penalty that was already applied
+    # This keeps the noise penalty for weak chunks (where it  correctly pushes procedural text down) but reduces it for strong chunks (where the positive content outweighs the noise).
+    #
+    # IMPORTANT: i import NOISE_PATTERNS directly instead of iterating pattern_groups
+    # because pattern_groups may contain NOISE_PATTERNS multiple times (its appende to every query's group list).
+    # Iterating pattern_groups would undo the penalty 2-3x instead of once, which made the dampening way too agressive.
+    if score >= 5:
+        from src.reranking.legal_patterns import NOISE_PATTERNS
+        for pattern, weight in NOISE_PATTERNS:
+            if weight < 0 and pattern.findall(text):
+                score -= weight * 0.5  # undo half of the negative penalty
 
     return score, matched_patterns
 
 
-def get_chunk_number(chunk_id):
+def get_chunk_number(chunk_id):     # i use it for first chunk bonus, etc..
     """
-    Get the chunk number from a chunk ID like 'document.pdf_chunk_5'.
+    Get the chunk number from  chunk ID like 'document.pdf_chunk_5'.
     Returns None if the ID doesnt match the expected format.
     """
     found = re.search(r'_chunk_(\d+)$', chunk_id)
@@ -80,18 +93,18 @@ def get_chunk_number(chunk_id):
     return None
 
 
-# ==========================================
+# ########################################
 # MAIN RERANKING FUNCTION
-# ==========================================
+# #######################################
 
 def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
                   top_k=5, alpha=0.6, debug=False):
     """
-    Rerank retrieved chunks using keyword-based scoring.
+    Rerank retrieved chunks using keyword-based scoring
 
     This takes the output of do_retrieve() (which returned more chunks than needed)
-    and re-scores each chunk by combining the original retrieval score with a
-    keyword-based score. Then it picks the best top_k chunks.
+    and re-scores each chunk by combining the original retrieval score with  keyword-based score.
+    Then it picks the best top_k chunks.
 
     The formula is:
         final_score = alpha * retrieval_score_normalized + (1 - alpha) * keyword_score_normalized
@@ -108,9 +121,11 @@ def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
 
     Returns (reranked_texts, reranked_scores, reranked_ids) with only top_k items.
     """
+    # if retrieval returned nothing
     if not chunk_texts:
         return [], [], []
 
+    # size of reranking pool
     total_chunks = len(chunk_texts)
 
     # Step 1: score every chunk with keyword patterns
@@ -121,9 +136,8 @@ def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
         kw_score, debug_info = get_keyword_score(chunk_texts[i], query_key)
 
         # add bonus for chunk_0 (first chunk of the document)
-        # CONDITIONAL: only apply if chunk_0 already matched at least one positive pattern.
-        # This prevents giving a free bonus to verdict-summary chunk_0s that contain
-        # no breach/contract info (happened in 4/10 golden dataset docs).
+        # CONDITIONAL: only apply if chunk_0 already matched at least one positive pattern
+        # This prevents giving a free bonus to verdict-summary chunk_0s that contain no breach/contract info (happened in 4/10 golden dataset docs)
         chunk_number = get_chunk_number(chunk_ids[i]) if i < len(chunk_ids) else None
         if chunk_number == 0 and kw_score > 0:
             bonus = FIRST_CHUNK_BONUS.get(query_key, 0)
@@ -131,11 +145,10 @@ def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
             if bonus > 0:
                 debug_info["first_chunk_bonus"] = bonus
 
-        # Position bonus for breach/contract queries: court decisions always start
-        # with factual description (contract type, parties, breach). Chunks 1-5
-        # are very likely to contain this info. Bonus decays with position.
-        # Only applies when chunk already has SOME keyword match (kw_score > 0)
-        # to avoid boosting completely irrelevant early chunks.
+        # Position bonus for breach/contract queries: court decisions always start with factual description (contract type, parties, breach).
+        # Chunks 1-5 are very likely to contain this info.
+        # Bonus decays with position.
+        # Only applies when chunk already has SOME keyword match (kw_score > 0) to avoid boosting completely irrelevant early chunks.
         if query_key in ("q_breach", "q_contract") and chunk_number is not None and kw_score > 0:
             if 1 <= chunk_number <= 3:
                 pos_bonus = 2
@@ -147,11 +160,12 @@ def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
                 kw_score += pos_bonus
                 debug_info["position_bonus"] = pos_bonus
 
+        # saving keyword scores
         keyword_scores.append(kw_score)
         all_debug_info.append(debug_info)
 
     # Step 2: normalize both scores to [0, 1] so they are comparable
-    # without normalization, retrieval scores are like 0.7-0.9 and keyword
+        # without normalization, retrieval scores are like 0.7-0.9 and keyword
     # scores are like 3-15, so they cant be combined fairly
     def min_max_normalize(scores):
         if not scores:
@@ -161,15 +175,17 @@ def rerank_chunks(query_key, chunk_texts, chunk_scores, chunk_ids,
         if highest == lowest:
             # all scores are the same, just give everyone 0.5
             return [0.5] * len(scores)
-        return [(s - lowest) / (highest - lowest) for s in scores]
+        return [(s - lowest) / (highest - lowest) for s in scores]  # [10, 20, 30] - > [0.0, 0.5, 1.0]
 
+    # retrieval score 0-1
     retrieval_normalized = min_max_normalize(chunk_scores)
+    # keyword score 0-1
     keyword_normalized = min_max_normalize(keyword_scores)
 
     # Step 3: combine both scores using the alpha weight
     combined_scores = []
     for i in range(total_chunks):
-        final = alpha * retrieval_normalized[i] + (1 - alpha) * keyword_normalized[i]
+        final = alpha * retrieval_normalized[i] + (1 - alpha) * keyword_normalized[i]       # RERANKING FORMULA
         combined_scores.append(round(final, 6))
 
     # Step 4: sort by combined score (highest first) and take top_k

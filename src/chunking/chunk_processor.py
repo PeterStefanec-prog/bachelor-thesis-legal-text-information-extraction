@@ -20,7 +20,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter # splitter f
 import tiktoken # tokenizer for OpenAi embedding modl
 from transformers import AutoTokenizer # tokenizer for me5 model - from hugging face
 
-# fix: need project root in path so i can import from src.candidates
+# fix: need project root in path so i can import from src.reranking
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
 
 # ####################### 1. PATH SETUP CONFIG ######################

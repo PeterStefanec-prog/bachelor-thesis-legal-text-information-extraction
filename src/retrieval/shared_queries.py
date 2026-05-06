@@ -1,9 +1,8 @@
-# ==========================================
+# #####################
 # Shared query definitions for retrieval evaluation
-# ==========================================
-# i moved these here from evaluate_retrieval.py because both flat and
-# hierarchical evaluation modes use the exact same queries. Having them
-# in one place means i dont maintain two copies.
+# #####################
+# i moved these here from evaluate_retrieval.py because both flat and hierarchical evaluation modes use the exact same queries.
+# Having them in one place means i dont maintain two copies.
 
 
 # Dense retrieval queries - full Slovak questions that capture semantic intent.
@@ -47,8 +46,7 @@ BM25_QUERIES = {
 
 
 # Maps each query key to the golden dataset CSV column for evaluation.
-# Some queries share a column - their retrieved chunks are merged before
-# checking against golden quotes.
+# Some queries share a column - their retrieved chunks are merged before checking against golden quotes.
 QUERY_TO_CSV_COLUMN = {
     "q_breach":    "q1_context_quotes",
     "q_contract":  "q1_context_quotes",    # evaluated together with q_breach

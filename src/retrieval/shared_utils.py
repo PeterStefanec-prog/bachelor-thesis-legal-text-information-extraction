@@ -4,9 +4,9 @@ import json
 import glob
 
 
-# ==========================================
+# #############################################
 # Shared utilities for retrieval evaluation
-# ==========================================
+# ############################################
 # These were originally inline in evaluate_retrieval.py but i extracted them
 # here when i added hierarchical mode - both flat and hierarchical evaluation
 # need the same text cleaning, tokenization and normalization functions
@@ -14,9 +14,9 @@ import glob
 # also evalutate_retrieval is too long so tried to shorten it with extracting duplicated functions
 
 
-# ==========================================
+# ############################################
 # TEXT CLEANING
-# ==========================================
+# ############################################
 # If my PDF has "500 \n eur" but golden dataset has "500 eur", normal Python
 # substring match says "MISS!". This removes newlines and extra spaces so
 # matching works regardless of whitespace differences.
@@ -33,9 +33,9 @@ def safe_avg(lst):
     return round(sum(lst) / len(lst), 4) if lst else ""
 
 
-# ==========================================
+# #######################################################
 # TOKEN LENGTH ESTIMATION
-# ==========================================
+# #######################################################
 # i use tiktoken (the official OpenAI tokenizer) to count tokens accurately.
 # if tiktoken is not installed, fall back to rough whitespace count.
 
@@ -58,9 +58,9 @@ def get_openai_length_function():
 openai_token_len = get_openai_length_function()
 
 
-# ==========================================
+# ############################################
 # MIN-MAX NORMALIZATION for score dictionaries
-# ==========================================
+# ############################################
 
 def min_max_normalize(score_dict):
     if not score_dict:
@@ -77,9 +77,9 @@ def min_max_normalize(score_dict):
     return normalized
 # for example from {"a": 2, "b": 6, "c": 10} to  {"a": 0.0, "b": 0.5, "c": 1.0}
 
-# ==========================================
+# ############################################
 # HEADER + VERDICT LOADER
-# ==========================================
+# ############################################
 # Both pipelines always send header and verdict to the LLM alongside the
 # retrieved chunks/parents. This function loads them from the processed JSON
 # so evaluation can check golden quotes against header/verdict text too.
@@ -105,9 +105,9 @@ def load_header_verdict(pdf_filename):
     return header, verdict
 
 
-# ==========================================
+# ############################################
 # SLOVAK LEGAL TEXT TOKENIZER (used by BM25 in both pipelines)
-# ==========================================
+# ############################################
 # Design decisions:
 # 1. PRESERVE NUMBERS & PERCENTAGES: "0,05%" stays as one token
 #    Legal texts have specific amounts (15.234,60 EUR) and rates (0,05% rocne)
@@ -139,7 +139,11 @@ SLOVAK_STOPWORDS = {
 
 
 def tokenize_slovak(text):
-    """Tokenize Slovak legal text with number preservation and lemmatization - good for BM25"""
+    """Tokenize Slovak legal text with number preservation and lemmatization - good for BM25
+    INPUT "Zmluvná pokuta vo výške 0,05% denne z nezaplatenej istiny podľa § 301 ObchZ"
+    OUTPUT ["zmluvný", "pokuta", "výška", "0,05%", "denný", "nezaplatený", "istina", "§301", "obchz"]
+    """
+
     text = (text or "").lower()     # "Pokuta" must be the same as "pokuta"
 
     # join paragraph sign with following number: "§ 301" -> "§301"

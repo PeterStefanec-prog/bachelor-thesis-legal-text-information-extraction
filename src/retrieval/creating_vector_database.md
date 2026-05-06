@@ -17,7 +17,7 @@ This script takes chunks from step 3 and turns them into a searchable vector dat
 
 ## Multiple collections
 
-For the thesis experiments i run this script multiple times — once per chunking strategy. Each strategy gets its own separate ChromaDB collection so the results don't mix:
+For the thesis experiments i run this script multiple times - once per chunking strategy. Each strategy gets its own separate ChromaDB collection so the results don't mix:
 
 | CHUNK_SUFFIX | COLLECTION_NAME | Model |
 |---|---|---|

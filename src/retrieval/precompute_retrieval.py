@@ -1,3 +1,25 @@
+# INPUT data is vector database data/04_vectorstore and processed jsons from data/02_processed_json
+# OUTPUT it creates final chunks and other data of each document - "data/06_retrieval_results"
+
+# cd /Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction
+# export OPENAI_API_KEY="sk-..."
+#
+# # 1. Build vector store
+'''
+MODEL_TYPE=openai \
+CHUNK_SUFFIX=OPENAI_PARA \
+COLLECTION_NAME=legal_decisions_openai_para \
+.venv/bin/python src/retrieval/vector_store.py
+'''
+#
+# # 2. Precompute retrieval pre extraction
+# .venv/bin/python src/retrieval/precompute_retrieval.py
+
+# .venv/bin/python src/retrieval/precompute_retrieval.py
+# change this for debug:
+    # SINGLE_DOC_TEST = "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf"
+    # SINGLE_DOC_TEST = None
+
 """
 Precompute retrieval results for extraction pipeline.
 
@@ -9,8 +31,7 @@ This way the extraction is reproducible - same chunks every time.
 Runin also from project root:
     python src/retrieval/precompute_retrieval.py
 """
-# input data is vector database data/04_vectorstore and processed jsons from data/02_processed_json
-# it creates final chunks and other data of each document - "data/06_retrieval_results"
+
 
 import os
 import sys
@@ -20,14 +41,15 @@ import glob
 import chromadb
 from tqdm import tqdm
 
-# ==========================================
+# #########################################
 # CONFIG - hardcoded winning retrieval config
-# ==========================================
+# #########################################
 # this is the exact same config that got 90.5% recall in experiments
 # i set env vars BEFORE importing evaluate_retrieval.py because it reads
-# them at import time (module-level variables). if i set them after import
-# it wont work - the old defaults would already be loaded (lots of time spend looking whats wrong ...)
+# them at import time (module-level variables).
+# if i set them after import it wont work - the old defaults would already be loaded (lots of time spend looking whats wrong ...)
 
+# ################### HRADCODED WINNING CONFIG (optimal) ######################
 os.environ["MODEL_TYPE"]         = "openai"
 os.environ["COLLECTION_NAME"]    = "legal_decisions_openai_para"
 os.environ["RETRIEVAL_MODE"]     = "hybrid"
@@ -58,13 +80,16 @@ from src.evaluation_retrieval.evaluate_retrieval import (      # do_retrieve - o
     do_retrieve, get_doc_total_chunks       # get_doc_total_chunks - just for number of chunks of document
 )
 from src.retrieval.shared_queries import QUERIES, BM25_QUERIES      # mapping query key - query text
-from src.candidates.legal_patterns import CALL_TO_QUERIES   # mapping call1/call2 - query keys
+from src.reranking.legal_patterns import CALL_TO_QUERIES   # mapping call1/call2 - query keys
 
 TOP_K = 7
 DB_DIR = "data/04_vectorstore"  # where is ChromDB
 COLLECTION_NAME = "legal_decisions_openai_para"
 OUTPUT_DIR = "data/06_retrieval_results"        # there will precomputed retrieval jsons be saved
 PROCESSED_DIR = "data/02_processed_json"    # there are processed json dokcument - i get metadata, header, verdict, resoning from there
+
+##################################################################
+##################################################################
 
 # connect to ChromaDB - same settings as vector_store.py and evaluate_retrieval.py
 print("Connecting to ChromaDB...")
@@ -80,9 +105,9 @@ SINGLE_DOC_TEST = None
 os.makedirs(OUTPUT_DIR, exist_ok=True)  # just to be sure that data/06_retrieval_results exists
 
 
-# ==========================================
+# ############################################
 # EMBEDDING - precompute query vectors once
-# ==========================================
+# ############################################
 # i only need to embed the 7 queries once, then reuse for every document.
 # this saves API calls (7 total instead of 7 * 176 = 1232)
 
@@ -112,9 +137,9 @@ for i, key in enumerate(query_keys):
 print(f"Done - {len(precalculated_vectors)} query vectors ready.\n")
 
 
-# ==========================================
+# ############################################
 # HELPER FUNCTIONS
-# ==========================================
+# ############################################
 
 def parse_chunk_index(chunk_id):
     """Extract chunk index number from chunk_id like 'docname.pdf_chunk_7' -> 7"""
@@ -153,17 +178,16 @@ def load_document_data(pdf_filename):
 def retrieve_call_chunks(call_queries, pdf_filename, top_k_override=None):
     """Run retrieval for a group of queries (call1 or call2) and deduplicate.
 
-    Each query returns its own top_k chunks. Some chunks will appear in results
-    from multiple queries (e.g. a chunk about 'zmluva o dielo' matches both
-    q_breach and q_contract). I merge those duplicates so the LLM doesnt
-    read the same text twice.
+    Each query returns its own top_k chunks. Some chunks will appear in results from multiple queries
+    (e.g. a chunk about 'zmluva o dielo' matches both q_breach and q_contract).
+    I merge those duplicates so the LLM doesnt read the same text twice.
 
     NOTE about scores: the reranker uses min-max normalization WITHIN each query's
-    candidate pool. So a score of 0.98 from q_rate and 0.72 from q_breach are NOT
-    comparable - they are normalized in different pools (different candidates, different
-    keyword patterns). When i merge duplicates i keep max(scores) but thats just for
-    rough sorting/debugging, not for any real ranking decision. The LLM never sees
-    these scores anyway - chunks are ordered by document position (chunk_index).
+    candidate pool.
+    So a score of 0.98 from q_rate and 0.72 from q_breach are NOT comparable
+        - they are normalized in different pools (different candidates, different keyword patterns).
+    When i merge duplicates i keep max(scores) but thats just for rough sorting/debugging, not for any real ranking decision.
+    The LLM never sees these scores anyway - chunks are ordered by document position (chunk_index).
 
     Returns list of chunk dicts sorted by chunk_index (document order).
     """
@@ -206,9 +230,9 @@ def retrieve_call_chunks(call_queries, pdf_filename, top_k_override=None):
     return sorted_chunks
 
 
-# =========================================
+# ############################################
 # MAIN LOOP
-# ==========================================
+# ############################################
 
 # get all unique documents from ChromaDB
 print("Getting document list from ChromaDB...")
@@ -243,12 +267,18 @@ for pdf_filename in tqdm(all_source_files, desc="Precomputing retrieval"):
     # adaptive top_k for call1 - same logic as evaluate_retrieval.py line 1074
     # larger documents (>30 chunks) need more chunks to find contract context
     # because the factual background is spread across more numbered points
+    #
+    # FIX: raised the cap from TOP_K+3 to TOP_K+5 and changed divisor from 20 to 15.
+    # Before this fix, an 86-chunk doc (eval_09, 43Cob/75/2024) got only top_k=9, with oversample pool covering just 52% of the document.
+    # After fix, it gets top_k=10 and the oversample covers ~58%. For 120-chunk docs the cap goes from 10 to 12.
+    # This is still well below 60% coverage, so single-document RAG retains its selectivity advantage over full-doc.
     if total_doc_chunks > 30:
-        call1_top_k = min(TOP_K + 3, TOP_K + (total_doc_chunks - 30) // 20)
+        # Add 1 extra retrieved chunk for every 15 chunks above 30. But Do not increase TOP_K by more than 5.
+        call1_top_k = min(TOP_K + 5, TOP_K + (total_doc_chunks - 30) // 15)
     else:
         call1_top_k = TOP_K
 
-    # --- CALL 1: contract facts + penalty definition ---
+    # ##### CALL 1: contract facts + penalty definition #####
     # q_breach and q_contract get adaptive top_k (more chunks for big docs)
     # q_rate and q_principal use standard top_k
     call1_adaptive_queries = ["q_breach", "q_contract"]
@@ -271,17 +301,28 @@ for pdf_filename in tqdm(all_source_files, desc="Precomputing retrieval"):
 
     call1_chunks = sorted(call1_pool.values(), key=lambda c: c["chunk_index"])  # sorted based on doc
 
-    # --- CALL 2: moderation analysis ---
+    # ### CALL 2: moderation analysis ###
     call2_queries = CALL_TO_QUERIES["call2"]
-    call2_chunks = retrieve_call_chunks(call2_queries, pdf_filename, TOP_K)
+    # FIX: call2 now also uses adaptive top_k for larger documents.
+    # Before this fix, call2 always used flat TOP_K=7, even for a 64-chunk NS SR decision
+    # where the moderation analysis spans chunks 25-55.
+    # With flat 7, only small fraction of the legal reasoning was retrieved for call2.
+    # I use a slightly less agressive formula than call1 (divisor 20 instead
+    # of 15) because call2 queries (q_outcome, q_reasoning, q_factors) are more
+    # focused and dont need as many chunks as the broader call1 queries.
+    if total_doc_chunks > 30:
+        call2_top_k = min(TOP_K + 3, TOP_K + (total_doc_chunks - 30) // 20)
+    else:
+        call2_top_k = TOP_K
+    call2_chunks = retrieve_call_chunks(call2_queries, pdf_filename, call2_top_k)
 
-    # --- LOAD DOCUMENT DATA ---
+    # ### LOAD DOCUMENT DATA ###
     doc_data = load_document_data(pdf_filename)
     if doc_data is None:
         print(f"  Skipping {pdf_filename} - no processed JSON")
         continue
 
-    # --- BUILD OUTPUT - what i will next use in prompts for llm ---
+    # ### BUILD OUTPUT - what i will next use in prompts for llm ###
     output = {
         "source_file": pdf_filename,
         "case_id": doc_data["metadata"].get("case_id", ""),
@@ -295,6 +336,7 @@ for pdf_filename in tqdm(all_source_files, desc="Precomputing retrieval"):
             "reranker_alpha": 0.6,
             "reranker_oversample": 5,
             "adaptive_top_k_call1": call1_top_k,
+            "adaptive_top_k_call2": call2_top_k,
         },
         "document_metadata": doc_data["metadata"],
         "header": doc_data["header"],
@@ -324,9 +366,9 @@ for pdf_filename in tqdm(all_source_files, desc="Precomputing retrieval"):
     })
 
 
-# ==========================================
+# ##########################################
 # SUMMARY
-# ==========================================
+# ########################################
 print(f"\n{'='*60}")
 print(f"PRECOMPUTE DONE — {len(results_summary)} documents processed")
 print(f"Output directory: {OUTPUT_DIR}")
