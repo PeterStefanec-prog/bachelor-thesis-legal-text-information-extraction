@@ -15,7 +15,21 @@
 #   2) EVALUATION LOGIC  (find_hits, evaluate_query_group, run_hier_evaluation, main).
 #       this is what this file is supposed to contain - it compares
 #       retrieved chunks against the golden dataset and writes the experiment results CSV.
-#
+'''
+Lines 1-22       : Header docstring (priznáva retrieval/eval split)
+Lines 39-215     : Config (env vars - 30+ parameters!)
+Lines 232-240    : RETRIEVAL ALGORITHMS marker
+Lines 228-322    : BM25 (get_bm25_index, retrieve_bm25)
+Lines 320-425    : Hybrid RRF (retrieve_hybrid_rrf)
+Lines 423-480    : Dense (retrieve_super_chunks)
+Lines 485-530    : [EVAL] find_hits
+Lines 532-560    : Coverage helpers
+Lines 563-640    : do_retrieve (main entry point)
+Lines 647-760    : Hier mode helpers
+Lines 813-1049   : EVALUATION ORCHESTRATORS marker + run_hier_evaluation
+Lines 1042-1175  : evaluate_query_group (per-document flat eval)
+Lines 1178-1510  : main()
+'''
 # i added clear section markers below to make the split visible.
 # proper refactor (move retrieval out into src/retrieval/) is left as future
 # work to avoid breaking pipeline behaviour right before submission.
@@ -38,6 +52,8 @@ if PROJECT_ROOT not in sys.path:
 from src.retrieval.shared_queries import QUERIES, BM25_QUERIES  # dictionary with natural queries for dense retrieval and optimalized querie sfor BMT (keywords)
 from src.retrieval.shared_utils import clean_text, safe_avg, tokenize_slovak    # tokenize slovak - for BM25 - lemmatization
 
+##################################################
+######### CONFIG ###########
 # these are set by experiment_runner.py via env variables so i dont have to edit this file
 # for each experiment.
 # if running manually, just change the defaults here
@@ -96,7 +112,7 @@ RRF_ALPHA = float(os.environ.get("RRF_ALPHA", "0.5"))  # default 0.5 = standard 
 USE_RERANKER = os.environ.get("USE_RERANKER", "0") == "1"
 RERANKER_ALPHA = float(os.environ.get("RERANKER_ALPHA", "0.6"))
 # oversample=5 means we fetch 5*top_k candidates and rerank to top_k.
-# i tested 3x and 5x — with 5x the reranker sees more chunks from large
+# i tested 3x and 5x - with 5x the reranker sees more chunks from large
 # documents (50-84 chunks) and has better chance of finding the relevant
 # ones that rank low in pure dense/hybrid similarity.
 RERANKER_OVERSAMPLE = int(os.environ.get("RERANKER_OVERSAMPLE", "5"))
@@ -172,7 +188,7 @@ RESULTS_DETAILS_CSV = os.path.join(EVAL_DIR, "experiment_results_details.csv")
 # ###################################
 # BM25 SUPPORT
 # ###################################
-# BM25 tokenizer for Slovak legal text. Key design decisions:
+# BM25 tokenizer for Slovak legal text. Main things:
 #
 # 1. PRESERVE NUMBERS & PERCENTAGES: "0,05%" stays as one token, not ["0", "05"]
 #    Legal texts are full of specific amounts (15.234,60 EUR) and rates (0,05% ročne)
@@ -258,7 +274,7 @@ def retrieve_bm25(collection, query_text, pdf_filename, top_k, window_size):
     bm25_index, all_ids, all_texts, all_metas = get_bm25_index(collection, pdf_filename)
 
     tokenized_query = tokenize_slovak(query_text) # tokenizing query
-    bm25_scores = bm25_index.get_scores(tokenized_query) # calculate bm25 score for each chunk
+    bm25_scores = bm25_index.get_scores(tokenized_query) # calculate bm25 score for each chunk  (array score)
 
     # Get top_k indices by BM25 score (descending)
     ranked_indices = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)[:top_k]
@@ -332,9 +348,9 @@ def retrieve_hybrid_rrf(collection, query_vector, query_text, pdf_filename, top_
     dense_ranks = {doc_id: rank for rank, doc_id in enumerate(dense_ids)}   # for each dense result - save his rank
 
     # ### do BM25 ranking the same ###
-    bm25_index, all_ids, all_texts, all_metas = get_bm25_index(collection, pdf_filename)
-    tokenized_query = tokenize_slovak(query_text)
-    bm25_scores = bm25_index.get_scores(tokenized_query)
+    bm25_index, all_ids, all_texts, all_metas = get_bm25_index(collection, pdf_filename)    # load existing BM25 index
+    tokenized_query = tokenize_slovak(query_text)       # tokenizing question
+    bm25_scores = bm25_index.get_scores(tokenized_query)        # calculate bm25 score for each chunk
     bm25_ranked_indices = sorted(range(len(bm25_scores)), key=lambda i: bm25_scores[i], reverse=True)
     bm25_id_ranks = {
         all_ids[idx]: rank for rank,
@@ -405,7 +421,7 @@ def retrieve_hybrid_rrf(collection, query_vector, query_text, pdf_filename, top_
     return super_chunks, scores, ret_ids, fetched_chunk_ids
 
 
-# #### DENSE RETREIVAL #####
+# #### PURE DENSE RETREIVAL #####
 def retrieve_super_chunks(collection, query_vector, pdf_filename, top_k, window_size):
     """Run one query, return (super_chunks, cosine_sims, retrieved_ids, fetched_chunk_ids).
     - find top-k chunkov in one document based  - cosine similarity
@@ -421,8 +437,9 @@ def retrieve_super_chunks(collection, query_vector, pdf_filename, top_k, window_
     )
 
     raw_distances = results['distances'][0] if results['distances'] else []     # just for the query
+    # chromadb returns distance when cosine metrice - i change it to cosime similarity
     cosine_sims = [round(1 - d, 4) for d in raw_distances]  # cosine similarities = 1 - distance = similarity e.g. 0.82
-    ret_ids = results['ids'][0] if results['ids'] else []   # ids of found chunks
+    ret_ids = results['ids'][0] if results['ids'] else []   # save ids of found chunks
 
     super_chunks = []
     fetched_chunk_ids = set()  # track every chunk we actually read (TOP_K + their neighbors)
@@ -1013,16 +1030,16 @@ def run_hier_evaluation():
         print("\nNo questions to evaluate.")
 
 
-# ==========================================
+# ##################################################
 # Shared helper: evaluate one query group (q1, q2, or q3)
-# ==========================================
+# ##################################################
 # This function runs retrieval for all sub-queries of one question group,
 # merges their results, deduplicates, scores, prints, and builds the detail row.
 # Extracted from main() because q1, q2, q3 used the same ~80 lines of code with
 # only small differences (different sub-queries, different csv column,
 # different "call" set, different per-sub-query detail fields for q2/q3).
 #
-# Behavior is preserved exactly — same retrieval calls, same dedup logic,
+# Behavior is preserved exactly - same retrieval calls, same dedup logic,
 # same find_hits, same hit classification, same print output, same CSV row.
 def evaluate_query_group(
     *,
@@ -1074,7 +1091,7 @@ def evaluate_query_group(
         merged_cosine_sims += sims
         merged_ids += ids
 
-    # 4. Deduplicate by chunk_id before find_hits — without this, duplicate chunks
+    # 4. Deduplicate by chunk_id before find_hits - without this, duplicate chunks
     # inflate the P@k denominator (making it artificially low) and add noise to
     # MRR ranking. Recall and coverage are unaffected (already use set-based dedup).
     seen_ids = set()
@@ -1109,7 +1126,7 @@ def evaluate_query_group(
     # 7. Print per-sub-query cosine scores with correct cumulative offsets.
     # Note: chunks_with_hits indices refer to dedup_chunks, not the merged list.
     # We use cumulative offset on the merged-list positions to keep visual
-    # alignment with the original (non-dedup) order — same as the original code.
+    # alignment with the original (non-dedup) order - same as the original code.
     cumulative_offset = 0
     for i, (_query_key, sc, sims, ids, _fetched) in enumerate(sub_results):
         _qk, padded_label, _detail_field = sub_queries[i]
@@ -1168,7 +1185,7 @@ def main():
         return run_hier_evaluation()
 
     # ==========================================
-    # FIX: BIG BRAIN MOMENT!
+    # FIX:
     # I MUST initialize colorama here ONLY ONCE at the start!
     # Omg I had it inside the loop before and it was restarting my terminal 30 times.
     # It was completely freezing my Mac and I couldn't find the error for 5 hours! :D
@@ -1188,7 +1205,7 @@ def main():
 
     # ==========================================
     # MODEL LOADING - only needed for dense and hybrid modes
-    # BM25 mode doesn't need any embedding model!
+    # BM25 mode doesnt need any embedding model!
     # ==========================================
     precalculated_vectors = {}
 

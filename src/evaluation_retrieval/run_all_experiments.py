@@ -1,11 +1,16 @@
+# cd /Users/stefanec/STU_FIIT/bachelor-thesis-legal-text-information-extraction
+# export OPENAI_API_KEY="sk-..."
+#   .venv/bin/python src/evaluation_retrieval/run_all_experiments.py
+#      duration - 4 to 8 hours (macbook M2 RAM 24GB)
+
 import subprocess
 import sys
 import os
 import chromadb
 
-# ==========================================
+# ########################################
 # MASTER EXPERIMENT RUNNER
-# ==========================================
+# ########################################
 # Runs ALL experiment combinations systematically:
 #   1. For each (model_type, chunk_suffix) pair:
 #      a) Creates ChromaDB vector store (if needed)
@@ -15,24 +20,21 @@ import chromadb
 #
 # This is the ONE script you run to get all results for the thesis.
 #
-# Usage:
-#   python src/evaluation_retrieval/run_all_experiments.py
-#
-# Prerequisites:
+# Prerequisites INPUT:
 #   - Chunks must already exist in data/03_chunked_docs/
 #     (run: python src/chunking/chunk_processor.py)
 #   - For hierarchical: data/03_chunked_docs_hier/ must exist too
 #   - For OpenAI experiments: OPENAI_API_KEY must be set in environment
 #
-# Results are APPENDED to:
+# Results are appended to OUTPUT:
 #   - data/05_retrieval_evaluation/experiment_results_summary.csv
 #   - data/05_retrieval_evaluation/experiment_results_details.csv
-# ==========================================
+# ###############################################
 
 VECTOR_STORE_SCRIPT = "src/retrieval/vector_store.py"
 EVAL_SCRIPT         = "src/evaluation_retrieval/evaluate_retrieval.py"
 
-# --- EXPERIMENT GRID ---
+# ### EXPERIMENT GRID ###
 # Each entry: (model_type, chunk_suffix, short_name_for_experiment, retrieval_mode)
 # short_name is used in experiment_name column in CSV results
 # retrieval_mode: "dense" (default), "bm25", or "hybrid"
@@ -43,6 +45,7 @@ EXPERIMENTS = [
 
     # Phase 2: OpenAI text-embedding-3-small with different chunk sizes (dense)
     ("openai", "OPENAI_200",  "openai3s_200",   "dense"),
+    ("openai", "OPENAI_380",  "openai3s_380",   "dense"),  # added for fair embedding-model comparison
     ("openai", "OPENAI_500",  "openai3s_500",   "dense"),
     ("openai", "OPENAI_PARA", "openai3s_para",  "dense"),
 
@@ -55,9 +58,8 @@ EXPERIMENTS = [
     ("openai", "OPENAI_PARA", "hybrid_para",    "hybrid"),
 
     # Phase 5: Hybrid with lower RRF_K
-    # Our documents have only 10-21 chunks, so with k=60 the rank differences are almost zero
-    # (rank 1 → 1/61=0.0164, rank 5 → 1/65=0.0154 — only 6% difference!)
-    # Lower k=20 makes top ranks matter more (rank 1 → 1/21=0.048, rank 5 → 1/25=0.040 — 19% diff)
+    # Our documents have only 10-21 chunks, so with k=60 the rank differences are almost zero (rank 1 -> 1/61=0.0164, rank 5 -> 1/65=0.0154 - only 6% difference!)
+    # Lower k=20 makes top ranks matter more (rank 1 -> 1/21=0.048, rank 5 -> 1/25=0.040 - 19% diff)
     # This should help hybrid combine dense + BM25 better on small document collections
     ("openai", "OPENAI_PARA", "hybrid_para_k20", "hybrid"),
 
@@ -78,10 +80,10 @@ EXPERIMENTS = [
     ("openai", "OPENAI_PARA", "hybrid_weighted_a8", "hybrid"),  # alpha=0.8
 
     # Phase 7: OpenAI text-embedding-3-large (SOTA) - paragraph chunks only
-    # Hypothesis: larger model (3072-dim) finds better semantic matches,
-    # potentially achieving same recall at lower top_k (= less noise for LLM).
+    # Hypothesis: larger model (3072-dim) finds better semantic matches potentially achieving same recall at lower top_k (= less noise for LLM).
     # Uses same OPENAI_PARA chunks (same tokenizer) but different collection for embeddings.
     ("openai_large", "OPENAI_PARA", "openai3l_para", "dense"),
+    ("openai_large", "OPENAI_380",  "openai3l_380",  "dense"),  # added for fair 380t embedding-model ablation
 
     # Phase 8: Reranking experiments - domain-specific keyword reranker on top of retrieval
     # The reranker fetches 2x chunks (oversample=2), re-scores them with legal keyword
@@ -103,19 +105,24 @@ EXPERIMENTS = [
 
 ]
 
-# ==========================================
+# ########################################
 # HIERARCHICAL EXPERIMENTS (Phase 10+)
-# ==========================================
-# After flat experiments plateaued (~93% recall, ~76% coverage), we tried
-# a different architecture: retrieve small children (~220 tokens), group by
-# parent, send complete parents to LLM. Goal is better COVERAGE - the LLM
-# sees full legal arguments instead of chopped-up paragraph pieces.
+# ########################################
+# After flat experiments plateaued (~93% recall, ~76% coverage), we tried  different architecture: retrieve small children (~220 tokens),
+# group by parent, send complete parents to LLM.
+# Goal is better COVERAGE -  LLM sees full legal arguments instead of chopped-up paragraph pieces.
 #
 # Grid: model × retrieval_mode × fetch_k × call1_parents × call2_parents
 # These use CHUNK_MODE=hier and the same evaluate_retrieval.py script.
-# No TOP_K/WINDOW grid — parent selection replaces that.
+# No TOP_K/WINDOW grid - parent selection replaces that.
 #
 # Each entry: (model_type, retrieval_mode, short_name_prefix)
+# Hierarchical experiments are kept for comparison purposes - they don't
+# benefit from v2 reranker fixes (hier doesn't use the reranker), but
+# the existing archived vectorstore at data/04_vectorstore_hier
+# (restored from data/04_vectorstore_hier_04_03) makes them runnable
+# without re-embedding. Each hier group runs the
+# fetch_k × call1_parents × call2_parents grid (18 configs each → 90 total).
 HIER_EXPERIMENTS = [
     # Phase 10: mE5 local scan (free, fast) - find best config
     ("me5",    "dense",  "hier_me5_dense"),
@@ -132,9 +139,13 @@ HIER_FETCH_K_VALUES      = [6, 8]
 HIER_CALL1_PARENT_VALUES = [5, 7, 9]
 HIER_CALL2_PARENT_VALUES = [7, 9, 11]
 
+
 # RRF params for hierarchical hybrid experiments
 HIER_RRF_K     = "20"
 HIER_RRF_ALPHA = "0.7"
+
+
+
 
 # RRF_K overrides per experiment - when experiment needs different RRF_K than default (60)
 # evaluate_retrieval.py reads RRF_K from env variable, default is 60
@@ -155,21 +166,27 @@ RRF_ALPHA_OVERRIDES = {
 # Reranker overrides per experiment - which experiments use the domain-specific reranker
 # USE_RERANKER=1 turns it on, RERANKER_ALPHA controls retrieval vs keyword balance,
 # RERANKER_OVERSAMPLE controls how many extra chunks to fetch (2 = fetch 2x top_k)
+#
+# FIX: changed RERANKER_OVERSAMPLE from 3 to 5 to match the production pipeline
+# (precompute_retrieval.py uses oversample=5).
+# Before this, experiments tested with oversample=3 but the actual extraction used oversample=5 - so experiments
+# underestimated the reranker's real recall. With 5, the reranker picks top_k
+# from 5*k candidates which should improve results especially for hybrid_a7_reranked.
 RERANKER_OVERRIDES = {
     "hybrid_a7_reranked": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.6",
-        "RERANKER_OVERSAMPLE": "3",
+        "RERANKER_OVERSAMPLE": "5",
     },
     "dense_reranked": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.6",
-        "RERANKER_OVERSAMPLE": "3",
+        "RERANKER_OVERSAMPLE": "5",
     },
     "hybrid_a7_reranked_a85": {
         "USE_RERANKER": "1",
         "RERANKER_ALPHA": "0.85",
-        "RERANKER_OVERSAMPLE": "3",
+        "RERANKER_OVERSAMPLE": "5",
     },
 }
 
@@ -190,12 +207,35 @@ WINDOW_VALUES = [0, 1]
 # Fresh run: empty set = run everything
 # skip fixed-size experiments that didn't change (only PARA chunks changed)
 # remove these after running PARA experiments to get complete results
-SKIP = {"mE5base_200", "mE5base_380", "openai3s_200", "openai3s_500"}
+SKIP = {
+    # PARA + fixed-size (126 rows already in CSV)
+    "bm25_para",
+    "dense_reranked",
+    "hybrid_a7_reranked",
+    "hybrid_a7_reranked_a85",
+    "hybrid_para",
+    "hybrid_para_k20",
+    "hybrid_weighted_a7",
+    "hybrid_weighted_a8",
+    "mE5base_200",
+    "mE5base_380",
+    "openai3l_para",
+    "openai3s_200",
+    "openai3s_500",
+    "openai3s_para",
+    # mE5 hier (54 rows already in CSV - successful previous run)
+    "hier_me5_dense",
+    "hier_me5_bm25",
+    "hier_me5_hybrid",
+    # OpenAI hier (46 rows already in CSV from earlier run - DON'T re-run, costly)
+    "hier_openai_dense",
+    "hier_openai_hybrid",
+}
 
 
 
 def collection_exists(db_dir, collection_name):
-    """Check if a ChromaDB collection already exists and has data.
+    """Check if  ChromaDB collection already exists and has data.
     Returns chunk count if exists, 0 otherwise."""
     try:
         client = chromadb.PersistentClient(path=db_dir)
@@ -207,7 +247,7 @@ def collection_exists(db_dir, collection_name):
 
 
 def run_command(description, script, env_vars):
-    """Run a Python script with extra env variables. Returns True on success."""
+    """Run  Python script with extra env variables. Returns True on success."""
     print(f"\n{'─'*60}")
     print(f"  {description}")
     print(f"{'─'*60}")
@@ -285,7 +325,7 @@ def main():
         # For paragraph-level chunks (BM25/hybrid), window=1 reads ~70-100% of the doc
         # which defeats the purpose of RAG. Only use window=0 for paragraph experiments.
         # For small fixed-size chunks, use extended TOP_K range (up to 8) to give them
-        # a fair shot at matching PARA recall — even at higher coverage.
+        # a fair shot at matching PARA recall - even at higher coverage.
         window_values = [0] if chunk_suffix == "OPENAI_PARA" else WINDOW_VALUES
         top_k_values  = TOP_K_VALUES if chunk_suffix == "OPENAI_PARA" else TOP_K_VALUES_SMALL
 
@@ -325,9 +365,9 @@ def main():
                 if not eval_ok:
                     failed_configs.append(exp_name)
 
-    # ==========================================
+    # ##################################################
     # HIERARCHICAL EXPERIMENTS
-    # ==========================================
+    # ##################################################
     # Same evaluate_retrieval.py but with CHUNK_MODE=hier.
     # Instead of TOP_K × WINDOW, we iterate over fetch_k × parent counts.
     vectorized_hier_collections = set()

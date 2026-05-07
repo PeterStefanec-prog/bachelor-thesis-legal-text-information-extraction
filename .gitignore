@@ -56,7 +56,10 @@ data/*
 !data/01_raw_pdfs/
 !data/02_processed_json/
 !data/02_debug_steps/
+!data/05_retrieval_evaluation/
 
+# eval CSV backup - never commit
+data/05_retrieval_evaluation/experiment_results_summary.csv.bak
 
 # never commit - too big
 data/04_vectorstore/
@@ -82,6 +85,16 @@ scripts/01_data_scraping/bin/
 scripts/02_download_decision/old/
 scripts/02_download_decision/data/
 
+################################
+# evaluation_retrieval — dev tools moved to bin/, keep just locally
+################################
+src/evaluation_retrieval/bin/
+src/evaluation_retrieval/data/
+
 
 !data/03_chunked_docs/
 !data/03_chunked_docs_hier/
+
+
+
+!data/06_retrieval_results/
