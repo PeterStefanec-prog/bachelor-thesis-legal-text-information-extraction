@@ -102,3 +102,8 @@ src/evaluation_retrieval/data/
 
 
 !data/10_penalty_index/
+
+
+
+!data/08_evaluation_sheets_simple/
+!data/08_evaluation_sheets_detailed/
