@@ -1,5 +1,5 @@
 """
-Pipeline orchestrator — ties all 5 stages together into single search() call.
+Pipeline orchestrator - ties all 4 stages together into single search() call.
 
 This is what you call to use the system:
 
@@ -8,11 +8,20 @@ This is what you call to use the system:
     pipeline = PrecedentSearchPipeline()
     result = pipeline.search("Robim zmluvu o dielo za 50k EUR. Aku pokutu za omeskanie?")
     print(result["statistics_text"])
-    print(result["llm_answer"])
+    for card in result["precedent_cards"]:
+        print(card)
 
 It loads penalty index once at startup, then for each query runs:
-  Stage 1: parse query (LLM) -> Stage 2: filter penalties -> Stage 3: rank
-  -> Stage 4: compute analytics -> Stage 5: synthesize answer (LLM)
+  Stage 1: parse query (LLM Gemini Flash)
+  Stage 2: filter penalties (Python)
+  Stage 3: rank filtered penalties (numpy + OpenAI embedding)
+  Stage 4: compute analytics (Python)
+
+I do NOT generate LLM-synthesized answer at the end.
+After lawyer feedback i decided that LLM-synthesis adds risk (hallucination,
+smooth-talking generalizations from small samples) without real new information.
+Statistics + precedent cards are deterministic and lawyer reads concrete cases
+themselves. The system is a precedent SEARCH engine, not a chatbot.
 """
 
 import os
@@ -27,8 +36,42 @@ os.chdir(PROJECT_ROOT)
 from src.multi_doc.penalty_index import PenaltyIndex
 from src.multi_doc.query_analyzer import analyze_query
 from src.multi_doc.ranker import rank_penalties
-from src.multi_doc.analytics import compute_analytics
-from src.multi_doc.synthesizer import synthesize
+from src.multi_doc.analytics import compute_analytics, format_for_lawyer
+
+
+# #########################################
+# BUILD PRECEDENT CARD (display-friendly dict for one ranked penalty)
+# #########################################
+# i used to build these in synthesizer.py but synthesizer is gone now.
+# Each card is a flat dict with everything lawyer needs to see for one precedent.
+# IMPORTANT: one card = one PENALTY, not one court decision. If a decision has
+# multiple penalties (15 docs in our dataset do), each penalty gets its own card.
+
+def _build_precedent_card(rec, score, rank):
+    """Build display dict for one precedent card (one penalty, not one decision).
+
+    rec is penalty record from index, score is final ranking score, rank is 1-based position.
+    """
+    return {
+        "rank": rank,
+        "penalty_id": rec.get("penalty_id", "pokuta_1"),
+        "case_number": rec.get("case_number", ""),
+        "court_name": rec.get("court_name", ""),
+        "decision_date": rec.get("decision_date", ""),
+        "contract_type": rec.get("contract_type", ""),
+        "relationship_type": rec.get("relationship_type", ""),
+        "breach_type": rec.get("breach_type", ""),
+        "rate_value_raw": rec.get("rate_value_raw", ""),
+        "currency": rec.get("currency", "EUR"),
+        "secured_principal": rec.get("secured_principal"),
+        "original_claimed": rec.get("original_claimed"),
+        "final_awarded": rec.get("final_awarded"),
+        "decision": rec.get("decision", ""),
+        "legal_reasoning_summary": rec.get("legal_reasoning_summary", ""),
+        "key_quotes": rec.get("key_quotes", []),
+        "score": round(score, 3),
+        "authority_level": rec.get("authority_level", 1),
+    }
 
 
 class PrecedentSearchPipeline:
@@ -42,11 +85,11 @@ class PrecedentSearchPipeline:
         self.index = PenaltyIndex(index_dir)
         print(f"Ready. {len(self.index.records)} penalties loaded.\n")
 
-    def search(self, query_text, top_n_ranking=15, top_n_precedents=5):
+    def search(self, query_text, top_n=5):
         """Run full search pipeline for a lawyer's query.
 
-        Returns dict with: query, intent, filter_metadata, analytics,
-        statistics_text, llm_answer, precedent_cards, timing.
+        Returns dict with: query, intent, filter_metadata,
+        statistics_text, precedent_cards, timing.
         """
         print(f"{'=' * 60}")
         print(f"QUERY: {query_text}")
@@ -56,7 +99,7 @@ class PrecedentSearchPipeline:
         total_start = time.time()
 
         # #########################################
-        # STAGE 1: Query Understanding (LLM — Gemini Flash)
+        # STAGE 1: Query Understanding (LLM - Gemini Flash)
         # #########################################
         print("\n[Stage 1] Analyzing query...")
         t0 = time.time()
@@ -111,10 +154,7 @@ class PrecedentSearchPipeline:
         print("\n[Stage 3] Ranking penalties...")
         t0 = time.time()
 
-        ranked = rank_penalties(
-            filtered_records, filtered_embeddings,
-            intent, top_n=top_n_ranking,
-        )
+        ranked = rank_penalties(filtered_records, filtered_embeddings, intent, top_n=top_n)
 
         timing["stage3_ranking"] = round(time.time() - t0, 2)
 
@@ -124,47 +164,21 @@ class PrecedentSearchPipeline:
         print("\n[Stage 4] Computing analytics...")
         t0 = time.time()
 
-        analytics = compute_analytics(filtered_records, intent)
+        analytics = compute_analytics(filtered_records)
+        statistics_text = format_for_lawyer(analytics)
 
         timing["stage4_analytics"] = round(time.time() - t0, 4)
         print(f"  n={analytics['n']}")
 
         # #########################################
-        # STAGE 5: LLM Synthesis
+        # BUILD PRECEDENT CARDS (top N ranked)
         # #########################################
-        print("\n[Stage 5] Synthesizing answer...")
-        t0 = time.time()
-
-        # take top N penalties for precedent display
-        # for safe_rate intent: make sure we include at least 1 moderated case
-        # in the top results, so the LLM can discuss what crosses the line
-        # (without this, ranking naturally promotes awarded cases only)
-        top_for_synthesis = ranked[:top_n_precedents]
-
-        if intent_type == "safe_rate":
-            # check if there is any moderated case in top results already
-            has_moderated = False
-            for entry in top_for_synthesis:
-                rec = entry[0]
-                if rec.get("decision") == "moderated_301":
-                    has_moderated = True
-                    break
-
-            # if no moderated case, find the best one from ranked and add it
-            if not has_moderated:
-                for entry in ranked:
-                    rec = entry[0]
-                    if rec.get("decision") == "moderated_301":
-                        # replace last item in top list with this moderated case
-                        top_for_synthesis = list(top_for_synthesis)
-                        top_for_synthesis[-1] = entry
-                        break
-
-        synthesis = synthesize(
-            query_text, intent, analytics, top_for_synthesis,
-        )
-
-        timing["stage5_synthesis"] = round(time.time() - t0, 2)
+        # i build display cards directly from ranked tuples (rec, score)
+        # no LLM synthesis - lawyer reads precedents themselves
+        precedent_cards = []
+        for i, (rec, score) in enumerate(ranked):
+            card = _build_precedent_card(rec, score, rank=i + 1)
+            precedent_cards.append(card)
 
         # #########################################
         # ASSEMBLE RESULT
@@ -172,19 +186,14 @@ class PrecedentSearchPipeline:
         timing["total"] = round(time.time() - total_start, 2)
 
         # build intent dict without internal metadata
-        clean_intent = {}
-        for key, value in intent.items():
-            if key != "_metadata":
-                clean_intent[key] = value
+        clean_intent = {k: v for k, v in intent.items() if k != "_metadata"}
 
         result = {
             "query": query_text,
             "intent": clean_intent,
             "filter_metadata": filter_meta,
-            "analytics": analytics,
-            "statistics_text": synthesis["statistics_text"],
-            "llm_answer": synthesis["llm_answer"],
-            "precedent_cards": synthesis["precedent_cards"],
+            "statistics_text": statistics_text,
+            "precedent_cards": precedent_cards,
             "timing": timing,
         }
 
@@ -194,6 +203,5 @@ class PrecedentSearchPipeline:
         print(f"  Stage 2 (filter): {timing['stage2_filtering']}s")
         print(f"  Stage 3 (rank): {timing['stage3_ranking']}s")
         print(f"  Stage 4 (analytics): {timing['stage4_analytics']}s")
-        print(f"  Stage 5 (synthesis): {timing['stage5_synthesis']}s")
 
         return result

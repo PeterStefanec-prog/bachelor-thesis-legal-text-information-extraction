@@ -1,7 +1,7 @@
 """
 JSON schemas for multi-document precedent search.
 
-I have 2 things here — enum values and the JSON schema for query understanding.
+I have 2 things here - enum values and the JSON schema for query understanding.
 The schema forces LLM (Gemini Flash) to return exactly  fields i need when arsing a lawyer's query.
 Same idea as in my extraction pipeline (src/extraction/schemas/output_schemas.py) where i force GPT-4o to return exact JSON structure.
 
@@ -9,7 +9,7 @@ example: lawyer writes "zmluva o dielo za 50k, omeskanie" and the LLM returns:
   {contract_type: "dielo", breach_type: "late_payment", amount_hint: 50000}
 
 I use Gemini structured output (response_schema parameter) so it  cannot return something outside my enum lists.
-Thats the same approach i used in extraction — without it the model sometimes skipped fields.
+Thats the same approach i used in extraction - without it the model sometimes skipped fields.
 """
 
 
@@ -53,7 +53,7 @@ FACTOR_LABELS = [
     "spravanie_veritela",
 ]
 
-# what the lawyer wants — this determines what kind of answer we generate
+# what the lawyer wants - this determines what kind of answer we generate
 INTENT_TYPES = [
     "safe_rate",           # lawyer is writing contract, wants to know safe penalty rate
     "defense_args",        # lawyer is defending client on court, wants moderation arguments
@@ -65,20 +65,20 @@ INTENT_TYPES = [
 # QUERY UNDERSTANDING SCHEMA (for Stage 1)
 # #########################################
 # this schema tells the LLM what to extract from the lawyer's query
-# all filter fields are nullable — if lawyer doesnt mention contract type,
+# all filter fields are nullable - if lawyer doesnt mention contract type,
 # LLM returns null (not guess). Null = "dont filter on this"
 
 def get_query_understanding_schema():
     """Build  JSON schema that Gemini uses for structured output.
 
-    I define  schema as nested dicts — same approach as in my extractiom output_schemas.py.
+    I define  schema as nested dicts - same approach as in my extractiom output_schemas.py.
     Gemini reads this and guarantees  response matches.
     """
     schema = {
         "type": "OBJECT",
         "properties": {
 
-            # --- structured filters (nullable — null if not in query) ---
+            # --- structured filters (nullable - null if not in query) ---
 
             "contract_type": {
                 "type": "STRING",
@@ -131,7 +131,7 @@ def get_query_understanding_schema():
                 "type": "STRING",
                 "description": (
                     "Preformuluj povodnu otazku do kratkeho textu (max 2 vety) "
-                    "ktory zachytava podstatu hladania — typ zmluvy, typ porusenia, "
+                    "ktory zachytava podstatu hladania - typ zmluvy, typ porusenia, "
                     "klucove faktory. Tento text sa pouzije na semanticke vyhladavanie."
                 ),
             },
@@ -162,9 +162,9 @@ PRAVIDLA:
 - breach_type: "omeskanie", "neplatenie", "nezaplatil" = late_payment.
   "nesplnil", "nedodal", "neodovzdal" = non_monetary_performance.
 - intent:
-  * safe_rate — ak pravnik tvori zmluvu a chce vediet aku sadzbu nastavit
-  * defense_args — ak pravnik zastupuje klienta a chce argumenty na znizenie/moderaciu
-  * general_precedent — vsetko ostatne (hladanie precedensov, statistik, prehladov)
+  * safe_rate - ak pravnik tvori zmluvu a chce vediet aku sadzbu nastavit
+  * defense_args - ak pravnik zastupuje klienta a chce argumenty na znizenie/moderaciu
+  * general_precedent - vsetko ostatne (hladanie precedensov, statistik, prehladov)
 - semantic_query: preformuluj dotaz do 1-2 viet zachytavajucich podstatu hladania.
 
 TYPY ZMLUV: uver, pozicka, najom, dielo, kupna, dodavka_sluzieb, sprostredkovatelska, telekom, preprava, mandatna, ine, nezname

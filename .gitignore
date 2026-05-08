@@ -99,3 +99,6 @@ src/evaluation_retrieval/data/
 
 
 !data/06_retrieval_results/
+
+
+!data/10_penalty_index/

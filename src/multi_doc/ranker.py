@@ -1,19 +1,19 @@
 """
-Stage 3: Ranking — rank filtered penalties by how similar they are to query.
+Stage 3: Ranking - rank filtered penalties by how similar they are to query.
 It narrows the filter.
 
 After Stage 2 filters to subset (e.g. 49 penalties matching "dielo + late_payment"),
 this module ranks them by similarity to the lawyer's specific situation.
 
 I use 4 dimensions:
-  1. Embedding similarity (40%) — semantic match between query and penalty card text
-  2. Amount proximity (25%) — how close contract amounts are
-  3. Bonus attributes (20%) — extra points for matching decision, factors
-  4. Authority (15%) — Supreme Court ranks higher than Regional court
+  1. Embedding similarity (40%) - semantic match between query and penalty card text
+  2. Amount proximity (25%) - how close contract amounts are
+  3. Bonus attributes (20%) - extra points for matching decision, factors
+  4. Authority (15%) - Supreme Court ranks higher than Regional court
 
 Why these weights? After Stage 2 already filtered by contract_type and breach_type,
 those fields are same for all filtered records.
-So ranking needs to differentiate on OTHER things — embedding captures semantic
+So ranking needs to differentiate on OTHER things - embedding captures semantic
 similarity, amount captures financial proximity, bonus captures specific legal
 attributes, authority captures legal weight.
 """
@@ -40,7 +40,7 @@ EMBEDDING_MODEL = "text-embedding-3-small"
 # #########################################
 # these are my starting weights based on domain reasoning, but mainly on experiments
 # embedding gets most weight because it captures "situational similarity"
-# that simple field matching cant — e.g. "argumentacia funkciou pokuty"
+# that simple field matching cant - e.g. "argumentacia funkciou pokuty"
 # matches "zabezpecovacia funkcia" through embedding but not through fields.
 
 W_EMBEDDING = 0.40      # 40%
@@ -114,7 +114,7 @@ def _amount_score(query_amount, penalty_record):
     if penalty_amount is None or penalty_amount <= 0:
         return 0.5
 
-    # ratio of smaller to larger — always between 0 and 1
+    # ratio of smaller to larger - always between 0 and 1
     smaller = min(query_amount, penalty_amount)
     larger = max(query_amount, penalty_amount)
     return smaller / larger
@@ -125,7 +125,7 @@ def _bonus_score(intent, penalty_record):
 
     These used to be hard filters in Stage 2, but that caused tautological statistics
     (filtering on decision=awarded_full -> 100% awarded, duh).
-    Now they are SOFT ranking signals — matching cases rank higher but non-matching
+    Now they are SOFT ranking signals - matching cases rank higher but non-matching
     cases stay in pool for meaningful analytics.
 
     Returns score between 0 and 1.
@@ -133,7 +133,7 @@ def _bonus_score(intent, penalty_record):
     score = 0.0
     max_possible = 0.0
 
-    # decision match — if lawyer interested in moderation, moderated cases rank higher
+    # decision match - if lawyer interested in moderation, moderated cases rank higher
     # but upheld cases stay in pool so we can compute factor lift
     dec_interest = intent.get("decision_interest")
     if dec_interest:
@@ -141,7 +141,7 @@ def _bonus_score(intent, penalty_record):
         if penalty_record.get("decision") == dec_interest:
             score += 2.0
 
-    # factor overlap — if lawyer mentioned specific factors, penalties where
+    # factor overlap - if lawyer mentioned specific factors, penalties where
     # those factors were mentioned get bonus points
     factors_interest = intent.get("factor_interest", [])
     if factors_interest:
@@ -183,10 +183,12 @@ def _authority_score(penalty_record):
 # MAIN RANKING FUNCTION
 # #########################################
 
-def rank_penalties(filtered_records, filtered_embeddings, intent, top_n=15):
+def rank_penalties(filtered_records, filtered_embeddings, intent, top_n=5):
     """Rank filtered penalties by multi-dimensional similarity to query.
 
-    Returns list of (record, score) tuples sorted by score descending.
+    Returns list of (record, score) tuples sorted by score descending, top N.
+    Default top_n=5 - pipeline shows top 5 PENALTIES (not 5 court decisions -
+    one decision can have multiple penalties, each becomes its own precedent card).
     """
     if not filtered_records:
         return []
@@ -224,7 +226,7 @@ def rank_penalties(filtered_records, filtered_embeddings, intent, top_n=15):
 
         results.append((rec, final))
 
-    # sort by final score (second element from tuple) — best match first
+    # sort by final score (second element from tuple) - best match first
     results.sort(key=lambda x: x[1], reverse=True)
 
     latency = round(time.time() - start, 2)

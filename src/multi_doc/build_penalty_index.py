@@ -1,3 +1,13 @@
+# INPUT
+#           data/07_extractions/gpt-4o_fulldoc/ - can be changes
+# OUTPUT
+#           data/10_penalty_index/penalty_index.jsonl  - one JSON line per penalty
+#           data/10_penalty_index/embeddings.npy       - numpy array of penalty card embeddings [N x 1536]
+
+# Run from project root:    - run only when extraction was changed
+#   export OPENAI_API_KEY="sk-..."
+#   .venv/bin/python src/multi_doc/build_penalty_index.py
+
 """
 Build the penalty-level index for multi-document precedent search.
 
@@ -7,15 +17,9 @@ I read all extraction JSONs (one per  decision) and create flat index where each
 Why penalty-level and not document-level?
   One court decision can have multiple penalties with diffrent breach types, rates, outcomes.
   For example KS_Trencin_8Cob_38_2012 has pokuta_1 (dismissed, non_monetary_performance) and pokuta_2 (moderated_301, early_termination).
-  If i filter at document level, i could get false matches — document matching "late_payment + awarded_full" when  those are 2 different penalties, neither of which is late_payment + awarded_full.
+  If i filter at document level, i could get false matches - document matching "late_payment + awarded_full" when  those are 2 different penalties, neither of which is late_payment + awarded_full.
   I checked - 8.5% of documents have multiple penalties with mixed attributes.
 
-Output:
-  data/10_penalty_index/penalty_index.jsonl  — one JSON line per penalty
-  data/10_penalty_index/embeddings.npy       — numpy array of penalty card embeddings [N x 1536]
-
-Run from project root:
-  python src/multi_doc/build_penalty_index.py
 """
 
 import os
@@ -36,19 +40,20 @@ os.chdir(PROJECT_ROOT)
 # #########################################
 
 # reading extraction jsons from (gpt-4o with RAG mode)
-EXTRACTION_DIR = "data/07_extractions/gpt-4o_rag"
+# EXTRACTION_DIR = "data/07_extractions/gpt-4o_rag"
+EXTRACTION_DIR = "data/07_extractions/gpt-4o_fulldoc"
 
 #  saving penalty index
 OUTPUT_DIR = "data/10_penalty_index"
 
-# embedding model — same as in my retrieval pipeline (src/retrieval/vector_store.py)
+# embedding model - same as in my retrieval pipeline (src/retrieval/vector_store.py)
 EMBEDDING_MODEL = "text-embedding-3-small"  # 1536 dimensions
 
 
 # #########################################
 # AUTHORITY LEVEL
 # #########################################
-# for ranking later — Supreme Court decision has more legal weight than regional court.
+# for ranking later - Supreme Court decision has more legal weight than regional court.
 # in my dataset i have: 8 "Krajsky sud" (regional) + 1 "Najvyssi sud" (supreme)
 
 def get_authority_level(court_name):
@@ -74,7 +79,7 @@ def get_authority_level(court_name):
 # #########################################
 # PENALTY CARD TEXT
 # #########################################
-# i generate short text description for each penalty — its "signature"
+# i generate short text description for each penalty - its "signature"
 # this text gets embedded and used for semantic similarity search in ranking (Stage 3)
 # when lawyer searches "zmluva o dielo, omeskanie, 50k EUR", the embedding of
 # their query should be close to embeddings of penalty cards from similar cases
@@ -83,7 +88,7 @@ def build_penalty_card_text(rec):
     """Build short text summary of  penalty for embedding.
 
     I put the most important attributes here: contract type, breach, rate, amounts, decision, factors, and reasoning summary.
-    Text is ~60-100 tokens — good size for embedding
+    Text is ~60-100 tokens - good size for embedding
 
     Input - Penalty record (flat)
     """
@@ -145,7 +150,7 @@ def build_penalty_card_text(rec):
     if factor_strs:
         parts.append(f"Faktory: {', '.join(factor_strs)}.")
 
-    # reasoning summary — the most semantically rich part
+    # reasoning summary - the most semantically rich part
     # i trim to 200 chars so the card doesnt get too long
     reasoning = rec.get("legal_reasoning_summary", "")
     if reasoning:
@@ -192,7 +197,7 @@ def flatten_penalty(doc_data, penalty_obj):
         "authority_level": get_authority_level(meta.get("court_name", "")),
     }
 
-    # source file — i can reconstruct it from doc_id (might need later for chunk retrieval)
+    # source file - i can reconstruct it from doc_id (might need later for chunk retrieval)
     rec["source_file"] = rec["doc_id"] + ".pdf"
 
     # case context (same for all penalties in one document)
@@ -214,7 +219,7 @@ def flatten_penalty(doc_data, penalty_obj):
     rec["rate_type"] = rd.get("type", "ine")
     rec["rate_value_raw"] = rd.get("value_raw", "")
 
-    # amounts — extract numeric values, keep None if missing
+    # amounts - extract numeric values, keep None if missing
     amounts = penalty_obj.get("amounts", {})
     rec["currency"] = amounts.get("currency", "unknown")
 
@@ -282,7 +287,7 @@ def _safe_number(val):
 def compute_embeddings(texts):
     """Compute embeddings for list of texts using OpenAI API.
 
-    Same approach as in src/retrieval/vector_store.py — send all texts in one batch.
+    Same approach as in src/retrieval/vector_store.py - send all texts in one batch.
     OpenAI supports up to 2048 texts per request, so far i hve 202 now
     Returns numpy array [len(texts), 1536].
     """
@@ -327,7 +332,7 @@ def main():
             json_files.append(f)
     print(f"\nFound {len(json_files)} extraction files in {EXTRACTION_DIR}")
 
-    # flatten all penalties — one record per penalty, not per document (so if does court have 4 penalties - i have 4 records)
+    # flatten all penalties - one record per penalty, not per document (so if does court have 4 penalties - i have 4 records)
     records = []
     docs_with_multiple = 0
 
@@ -425,21 +430,17 @@ def main():
     print(f"  original_claimed:  {has_claimed}/{total} ({100*has_claimed/total:.1f}%)")
     print(f"  final_awarded:     {has_awarded}/{total} ({100*has_awarded/total:.1f}%)")
 
-    # count quality flags
+    # count quality flags - i use any() so each penalty counts at most once per category
     flagged = 0
     anon = 0
     currency_mm = 0
     for r in records:
         if r["flags"]:
             flagged += 1
-        for flag in r["flags"]:
-            if "ANONYMIZED" in flag:
-                anon += 1
-                break  # count once per record
-        for flag in r["flags"]:
-            if "CURRENCY_MISMATCH" in flag:
-                currency_mm += 1
-                break
+        if any("ANONYMIZED" in flag for flag in r["flags"]):
+            anon += 1
+        if any("CURRENCY_MISMATCH" in flag for flag in r["flags"]):
+            currency_mm += 1
     print(f"\nQuality flags:")
     print(f"  Total flagged:       {flagged}")
     print(f"  ANONYMIZED_AMOUNT:   {anon}")

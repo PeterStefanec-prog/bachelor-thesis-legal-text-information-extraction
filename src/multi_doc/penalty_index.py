@@ -1,17 +1,17 @@
 """
-Stage 2: Penalty Index — load penalty index and filter it.
+Stage 2: Penalty Index - load penalty index and filter it.
 
 This loads penalty_index.jsonl + embeddings.npy at startup and provides filter function that returns only penalties matching  query.
 
 Key design decisions:
 - I filter at PENALTY level, not document level (prevents false cross-penalty matches)
-- I use SIMILAR_CONTRACT_TYPES map for near-miss filtering — "dielo" also matches
+- I use SIMILAR_CONTRACT_TYPES map for near-miss filtering - "dielo" also matches
   "dodavka_sluzieb" because IT projects can be classified as either in practice
 - Only contract_type and breach_type are HARD filters
-- decision_interest and factor_interest are NOT hard filters — they go to ranker as soft bonus signals.
+- decision_interest and factor_interest are NOT hard filters - they go to ranker as soft bonus signals.
         Reason: if i hard-filter on decision=awarded_full, analytics shows "100% upheld" which is trivially true and useless.
         I need BOTH awarded and moderated cases for meaningful factor lift computation.
-        This was a bug in v1 — 3/5 demo queries produced tautological results.
+        This was a bug in v1 - 3/5 demo queries produced tautological results.
 
 Index lives in memory. Even at 1000+ docs (~1500 penalties) the JSONL is maybe 3-4 MB and Python filtering takes ~2ms.
 No database needed (alsono FAISS - just having embeddings in numpy array in variable and filtering through python loop)
@@ -32,7 +32,7 @@ if PROJECT_ROOT not in sys.path:
 # #########################################
 # when  query LLM says "dodavka_sluzieb" but extraction says "dielo", exact match would miss it
 # This map defines which types are close enough.
-# i know this from domain knowledge — IT contract can be "dielo" or "dodavka_sluzieb" depending on how the court described it.
+# i know this from domain knowledge - IT contract can be "dielo" or "dodavka_sluzieb" depending on how the court described it.
 # Same for "uver" and "pozicka".
 
 SIMILAR_CONTRACT_TYPES = {
@@ -66,10 +66,10 @@ class PenaltyIndex:
                 if line:
                     self.records.append(json.loads(line))
 
-        # load embeddings — shape [N, 1536], same order as records
+        # load embeddings - shape [N, 1536], same order as records
         self.embeddings = np.load(npy_path)
 
-        # sanity check — records and embeddings must have same count
+        # sanity check - records and embeddings must have same count
         assert len(self.records) == self.embeddings.shape[0], (
             f"Mismatch: {len(self.records)} records but {self.embeddings.shape[0]} embeddings"
         )
@@ -81,7 +81,7 @@ class PenaltyIndex:
         """Filter penalties based on query intent.
 
         Only hard-filters on contract_type and breach_type.
-        decision_interest and factor_interest are NOT used here — they go to ranker as soft scoring signals instead.
+        decision_interest and factor_interest are NOT used here - they go to ranker as soft scoring signals instead.
 
         Returns (filtered_records, filtered_embeddings, filter_metadata).
         """
@@ -102,34 +102,32 @@ class PenaltyIndex:
                 acceptable_types.add(similar_type)
             active_filters.append(f"contract_type IN {acceptable_types}")
 
-        # go through all records and decide which to keep
-        mask = []  # True = keep this record, False = skip it
+        # go through all records and decide which to keep - single pass
+        # mask is True/False per record (used for slicing numpy embeddings)
+        # filtered_records collects matching records as we go
+        mask = []
+        filtered_records = []
         for rec in self.records:
             keep = True
 
             # contract type filter (with near-miss map)
-            if acceptable_types is not None:
-                if rec["contract_type"] not in acceptable_types:
-                    keep = False
+            if acceptable_types is not None and rec["contract_type"] not in acceptable_types:
+                keep = False
 
             # breach type filter (exact match)
-            if keep and bt is not None:
-                if rec["breach_type"] != bt:
-                    keep = False
+            if keep and bt is not None and rec["breach_type"] != bt:
+                keep = False
 
             # NOTE: decision and factors are NOT filtered here (soft ranking only)
             mask.append(keep)
+            if keep:
+                filtered_records.append(rec)
 
         if bt:
             active_filters.append(f"breach_type = {bt}")
 
-        # apply mask — keep only records and embeddings where mask is True
-        mask_array = np.array(mask)
-        filtered_records = []
-        for i, rec in enumerate(self.records):
-            if mask[i]:
-                filtered_records.append(rec)
-        filtered_embeddings = self.embeddings[mask_array]
+        # slice numpy embeddings using boolean mask
+        filtered_embeddings = self.embeddings[np.array(mask)]
 
         # metadata about what we did (for transparency)
         meta = {

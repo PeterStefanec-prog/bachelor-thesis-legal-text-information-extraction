@@ -1,5 +1,7 @@
+
+
 """
-Stage 1: Query Understanding — parse lawyer's query into structured filters.
+Stage 1: Query Understanding - parse lawyers query into structured filters.
 
 This is the entry point of the multi-doc pipeline.
 Lawyer types something like "Robim zmluvu o dielo za 50k EUR, aku pokutu za omeskanie?" and this module turns it into structured filters:
@@ -18,7 +20,7 @@ I use Gemini 2.5 Flash with structured output for this.
 I originaly considered regex but Slovak has 6 grammatical cases (zmluva/zmluvy/zmluvou/zmluve...) which makes regex not really working.
 LLM handles morphology natively and costs about $0.003 per query.
 
-The LLM also classifies  intent — is the lawyer writing a contract (safe_rate), defending a client (defense_args), or just searching (general_precedent)?
+The LLM also classifies  intent - is the lawyer writing a contract (safe_rate), defending a client (defense_args), or just searching (general_precedent)?
 This changes what output the system produces in later stages.
 """
 
@@ -40,14 +42,14 @@ from src.multi_doc.schemas import (
 # #########################################
 # CONFIG
 # #########################################
-# gemini 2.5 flash — fast and cheap, good at classification tasks
+# gemini 2.5 flash - fast and cheap, good at classification tasks
 # flash-lite would also work but flash handles nuanced Slovak better
 
 MODEL_NAME = "gemini-2.5-flash"
 
 
 # #########################################
-# GEMINI CLIENT (singleton — same pattern as extraction llm_client.py)
+# GEMINI CLIENT (singleton - same pattern as extraction llm_client.py)
 # #########################################
 # i create client once and reuse it for all queries in the session
 # google.genai.Client() reads GEMINI_API_KEY or GOOGLE_API_KEY from env
@@ -76,7 +78,7 @@ def analyze_query(query_text):
     structured output schema, returns dict with contract_type, breach_type,
     decision_interest, factor_interest, amount_hint, intent, semantic_query.
 
-    Any filter field can be None — means "dont filter on this".
+    Any filter field can be None - means "dont filter on this".
     """
     from google.genai import types
 
@@ -85,7 +87,7 @@ def analyze_query(query_text):
 
     start = time.time()
 
-    # retry on 503 errors — Gemini sometimes gets overloaded
+    # retry on 503 errors - Gemini sometimes gets overloaded
     # same retry pattern as in my extraction llm_client.py
     max_retries = 4
     response = None
@@ -98,9 +100,9 @@ def analyze_query(query_text):
                 contents=query_text,
                 config=types.GenerateContentConfig(
                     system_instruction=QUERY_UNDERSTANDING_SYSTEM_PROMPT,
-                    temperature=0.0,          # deterministic — same query = same filters
+                    temperature=0.0,          # deterministic - same query = same filters
                     max_output_tokens=1024,   # structured output is small
-                    # i disable thinking (budget=0) — for simple classification
+                    # i disable thinking (budget=0) - for simple classification
                     # thinking just wastes tokens without improving results
                     thinking_config=types.ThinkingConfig(thinking_budget=0),
                     response_mime_type="application/json",
@@ -127,7 +129,7 @@ def analyze_query(query_text):
     except (json.JSONDecodeError, TypeError) as e:
         print(f"  WARNING: Failed to parse query analysis response: {e}")
         print(f"  Raw response: {response.text[:300]}")
-        # fallback — return empty intent so pipeline continues without filters
+        # fallback - return empty intent so pipeline continues without filters
         result = {
             "contract_type": None,
             "breach_type": None,

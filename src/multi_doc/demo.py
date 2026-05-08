@@ -1,10 +1,16 @@
+
+# Run from project root:
+#       export GEMINI_API_KEY="AIzaSy..."
+#     export GOOGLE_API_KEY="..."
+#     .venv/bin/python src/multi_doc/demo.py
+
 """
-Demo script for thesis defense — runs queries and prints formatted results.
+Demo script for thesis defense - runs queries and prints formatted results.
 
-Shows full pipeline in action: query -> parse -> filter -> rank -> analytics -> synthesis.
+Shows full pipeline in action: query -> parse -> filter -> rank -> analytics.
+Output for each query: STATISTIKY + PRECEDENSY (no LLM-generated answer).
 
-Run from project root:
-    python src/multi_doc/demo.py
+
 
 I run 5 demo queries covering main use cases:
 1. Contract drafter looking for safe penalty rate
@@ -32,19 +38,19 @@ from src.multi_doc.pipeline import PrecedentSearchPipeline
 # written in casual Slovak like a real lawyer would type
 
 DEMO_QUERIES = [
-    # 1. safe_rate — lawyer writing a contract
+    # 1. safe_rate - lawyer writing a contract
     "Idem pisat zmluvu o dielo, hodnota je cca 50 tisic eur. Aku vysoku pokutu mozem dat za omeskanie aby to sud potom neznizil?",
 
-    # 2. defense_args — litigation lawyer
+    # 2. defense_args - litigation lawyer
     "Zastupujem klienta na sude, dostal pokutu 0,5 percenta denne z najomnej zmluvy, je to dost vysoke. Cim mozem argumentovat aby sud pokutu znizil?",
 
-    # 3. general — broad question about factors
+    # 3. general - broad question about factors
     "Zaujima ma, co vlastne sud berie do uvahy ked rozhoduje ci pokutu znici alebo necha? Ake su tie faktory?",
 
-    # 4. general — specific contract type
+    # 4. general - specific contract type
     "Mame zmluvu o uvere a dlznik neplati, chceme uplatnit pokutu. Je tam nejaka sudna prax k pokutam pri uveroch?",
 
-    # 5. general — specific factor (cumulation)
+    # 5. general - specific factor (cumulation)
     "Ak mame v zmluve aj urok z omeskania aj pokutu, je to problem? Ako to sudy posudzuju?",
 ]
 
@@ -85,11 +91,6 @@ def print_result(result, query_num):
     print("-" * 50)
     print(result["statistics_text"])
 
-    # LLM answer
-    print(f"\nODPOVED")
-    print("-" * 50)
-    print(result["llm_answer"])
-
     # precedent cards
     card_count = len(result["precedent_cards"])
     print(f"\nPRECEDENSY (top {card_count})")
@@ -101,7 +102,7 @@ def print_result(result, query_num):
         all_case_nums.append(card["case_number"])
 
     for card in result["precedent_cards"]:
-        # authority marker — just text label for supreme court
+        # authority marker - just text label for supreme court
         auth_level = card.get("authority_level", 1)
         if auth_level == 3:
             auth_label = "[NS SR] "
@@ -123,7 +124,7 @@ def print_result(result, query_num):
         if all_case_nums.count(card["case_number"]) > 1:
             pid_label = f" [{card.get('penalty_id', '')}]"
 
-        # rate — show "nespecifikovana" instead of empty string
+        # rate - show "nespecifikovana" instead of empty string
         rate = card.get("rate_value_raw") or "nespecifikovana"
 
         # print the card
@@ -138,8 +139,7 @@ def print_result(result, query_num):
           f"(query: {t['stage1_query_understanding']}s, "
           f"filter: {t['stage2_filtering']}s, "
           f"rank: {t['stage3_ranking']}s, "
-          f"analytics: {t['stage4_analytics']}s, "
-          f"synthesis: {t['stage5_synthesis']}s)")
+          f"analytics: {t['stage4_analytics']}s)")
 
 
 # ==========================================
@@ -148,7 +148,7 @@ def print_result(result, query_num):
 
 def main():
     print("=" * 70)
-    print("MULTI-DOCUMENT PRECEDENT SEARCH — DEMO")
+    print("MULTI-DOCUMENT PRECEDENT SEARCH - DEMO")
     print("=" * 70)
 
     # load penalty index once
