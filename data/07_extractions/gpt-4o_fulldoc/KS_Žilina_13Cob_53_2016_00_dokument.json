@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13369,
+    "completion_tokens": 1231,
+    "cost_usd": 0.0457,
+    "latency_seconds": 33.34,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca AB - OIL s.r.o. sa domáhal zaplatenia zmluvnej pokuty vo výške 113.142,61 Kč a úroku z omeškania od žalovaného IMI SPED, spol. s r.o. na základe kúpnej zmluvy, kde žalovaný meškal so zaplatením kúpnej ceny za dodané rafinérske výrobky.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Žilina, ktorý priznal žalobcovi zmluvnú pokutu a úrok z omeškania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "S ohľadom na omeškanie žalovaného so zaplatením kúpnej ceny konštatoval okresný súd dôvodne uplatnenú sankciu žalobcom za takéto omeškanie v podobe zmluvnej pokuty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05 % denne zo sumy 204.968,50 Kč",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "CZK",
+          "secured_principal": {
+            "value": 204968.5,
+            "evidence": {
+              "quote": "dlžnú kúpnu cenu 204.968,50 Kč",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "Právo na zaplatenie zmluvnej pokuty bolo priznané vo výške 113.142,61 Kč",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8,75 % ročne zo sumy 204.968,50 Kč",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd na základe vykonaného dokazovania konštatoval skutkovú a právnu dôvodnosť žaloby.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd priznal zmluvnú pokutu na základe kúpnej zmluvy, ktorá stanovila pokutu 0,05 % denne z dlžnej sumy. Súd považoval pokutu za primeranú vzhľadom na význam zabezpečovanej povinnosti. Žalovaný nenavrhol použitie moderačného oprávnenia, a preto súd nevidel priestor pre jeho aplikáciu. Súd tiež priznal úrok z omeškania podľa príslušných právnych predpisov.",
+          "key_quotes": [
+            {
+              "quote": "S ohľadom na omeškanie žalovaného so zaplatením kúpnej ceny konštatoval okresný súd dôvodne uplatnenú sankciu žalobcom za takéto omeškanie v podobe zmluvnej pokuty podľa článku IV. ods. 2 Kúpnej zmluvy zo dňa 28.5.2004 v sadzbe 0,05 % denne z dlžnej kúpnej ceny.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 0,5% denne posudzovaná ako platné dojednanie, ktoré je v súlade s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvnú pokutu nepovažuje za neprimeranú predovšetkým vzhľadom na význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvnú pokutu nepovažuje za neprimeranú predovšetkým vzhľadom na význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný vo svojej procesnej obrane nenamietal skutočnosť vystavenia faktúry k 25.1.2010",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Priznanie nároku na zmluvnú pokutu je preto duplicitné a okresný súd mal jej výšku znížiť, resp. ju nepriznať vôbec.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca sa prostredníctvom právneho zástupcu vo vyjadrení k odvolaniu žalovaného stotožnil s rozsudkom okresného súdu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_53_2016_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/53/2016",
+      "decision_date": "29.06.2016",
+      "ecli": "ECLI:SK:KSZA:2016:5113203768.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

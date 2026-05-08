@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11599,
+    "completion_tokens": 2318,
+    "cost_usd": 0.0377,
+    "latency_seconds": 9.7,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 5.905,66 Eur ako zmluvnej pokuty za to, že žalovaný neodobral objednaný tovar v celkovej hodnote 11.811,32 Eur. Žalovaný namietal neplatnosť kúpnej zmluvy a dohody o zmluvnej pokute z dôvodu nedodržania písomnej formy a neurčitosti.",
+      "verdict_summary": "Krajský súd zrušil rozsudok okresného súdu, ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi sumu 5.905,66 Eur s príslušenstvom, a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak žalovaný neodoberie tovar, žalobca je oprávnený požadovať ako sankciu zmluvnú pokutu vo výške 50 % z celkovej čiastky objednaného tovaru.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "50 % z celkovej čiastky objednaného tovaru",
+          "evidence": {
+            "quote": "žalobca je oprávnený požadovať ako sankciu zmluvnú pokutu vo výške 50 % z celkovej čiastky objednaného tovaru.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 11811.32,
+            "evidence": {
+              "quote": "žalobca dodať žalovanému tovar v celkovej hodnote 11.811,32 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 5905.66,
+            "evidence": {
+              "quote": "Žalobca dôvodil tým, že medzi ním a žalovaným vznikol obchodno-záväzkový vzťah na základe objednávky žalovaného, v zmysle ktorej mal žalobca dodať žalovanému tovar v celkovej hodnote 11.811,32 Eur s tým, že ak žalovaný neodoberie tovar, žalobca je oprávnený požadovať ako sankciu zmluvnú pokutu vo výške 50 % z celkovej čiastky objednaného tovaru. Žalovaný aj napriek výzvam tovar neodobral, preto žalobca faktúrou č. 311002 vyúčtoval sumu 5.905,66 Eur ako zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Žiline ako súd odvolací (§ 10 ods. 1 OSP) postupom v medziach podľa § 212 ods. 1, 3 OSP, bez nariadenia pojednávania podľa § 214 ods. 2 OSP, rozsudok okresného súdu v napadnutých výrokoch o povinnosti žalovaného zaplatiť žalobcovi 5.905,66 Eur s príslušenstvom a vo výroku o trovách prvostupňového konania v spojení s doplňujúcim rozsudkom zrušil podľa § 221 ods. 1 písm. f), h) OSP a podľa § 221 ods. 2 OSP vrátil vec súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročne",
+          "evidence": {
+            "quote": "okresný súd zaviazal žalovaného povinnosťou zaplatiť žalobcovi sumu 5.905,66 Eur spolu s úrokom z omeškania 6 % ročne od 29.06.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "3 OSP, bez nariadenia pojednávania podľa § 214 ods. 2 OSP, rozsudok okresného súdu v napadnutých výrokoch o povinnosti žalovaného zaplatiť žalobcovi 5.905,66 Eur s príslušenstvom a vo výroku o trovách prvostupňového konania v spojení s doplňujúcim rozsudkom zrušil podľa § 221 ods. 1 písm. f), h) OSP a podľa § 221 ods. 2 OSP vrátil vec súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil rozsudok prvostupňového súdu a vrátil vec na ďalšie konanie, pretože okresný súd predčasne dospel k záveru o dôvodnosti nároku na zmluvnú pokutu bez dostatočného vyhodnotenia všetkých zákonných podmienok pre jej priznanie. Okresný súd sa nedostatočne vysporiadal s námietkami žalovaného týkajúcimi sa platnosti kúpnej zmluvy a dohody o zmluvnej pokute, najmä s ohľadom na písomnú formu a určitosť. Odvolací súd tiež poukázal na nedostatočnú špecifikáciu výpočtu zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Nosným odvolacím dôvodom žalovaného bolo posúdenie (ne)dôvodnosti žalobcom uplatneného nároku na zaplatenie 5.905,66 Eur titulom zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ak okresný súd aj bez takéhoto vyhodnotenia dospel k záveru, že uplatnený nárok žalobcu na zaplatenie žalovanej sumy titulom zmluvnej pokuty je dôvodný, tak tento jeho záver bol krajským súdom považovaný za predčasný.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z odôvodnenia napadnutého rozsudku okresného súdu súčasne nevyplýva ani špecifikácia zmluvnej pokuty uplatnenej žalobcom, tak, aby bolo zrejmé, ktoré ceny objednaných tovarov a v akej sume boli základom pre jej výpočet zo strany žalobcu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Krajský súd považuje za podstatné uviesť, že zmluvná pokuta má akcesorickú povahu, pri svojom vzniku predpokladá existenciu hlavného záväzku, na zabezpečenie ktorého má slúžiť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_124_2012_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/124/2012",
+      "decision_date": "05.11.2012",
+      "ecli": "ECLI:SK:KSZA:2012:5711206993.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

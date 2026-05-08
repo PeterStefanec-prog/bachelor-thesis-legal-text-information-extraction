@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11153,
+    "completion_tokens": 1960,
+    "cost_usd": 0.0089,
+    "latency_seconds": 25.36,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovatelia (spotrebitelia) sa domáhali zaplatenia zmluvnej pokuty od odporcu (stavebnej spoločnosti) za omeškanie s dokončením výstavby rodinného domu podľa Zmluvy o dielo. Odporca namietal nesprávny výpočet lehoty na dokončenie diela a neoprávnenosť nároku na pokutu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bola odporcovi uložená povinnosť zaplatiť navrhovateľom sumu 2.870,40 eur ako zmluvnú pokutu. Súd konštatoval, že išlo o spotrebiteľskú zmluvu a výška pokuty nie je neprimeraná.",
+      "contract_type": "dielo",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v článku IV. ods. 4 Zmluvy o dielo sa účastníci dohodli na zmluvnej pokute pre prípad nedodržania termínu dokončenia výstavby domu odporcom v termíne určenom v Zmluve o dielo",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% za každý deň omeškania z ceny diela",
+          "evidence": {
+            "quote": "vznikol nárok na zaplatenie uplatnenej zmluvnej pokuty za obdobie od 20.02.2009 do 31.03.2009, t.j. za 40 dní vo výške 0,05% za každý deň omeškania z ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 143524.165,
+            "evidence": {
+              "quote": "0,05% za každý deň omeškania zo sumy 4.323.809,Sk /143.524,165 eur/",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2870.4,
+            "evidence": {
+              "quote": "zmluvná pokuta za omeškanie odporcu od 20.02.2009 do 31.03.2009, t.j. za 40 dní omeškania predstavuje sumu 2.870,40 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2870.4,
+            "evidence": {
+              "quote": "Súd prvého stupňa napadnutým rozsudkom uložil odporcovi povinnosť zaplatiť navrhovateľom 1/ a 2/ sumu 2.870,40 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd vypočítal výšku pokuty ako 0,05 % z ceny diela (4.323.809 Sk) za každý deň omeškania v trvaní 40 dní, čo predstavovalo sumu 2.870,40 EUR. Odporca namietal neprimeranosť výšky pokuty a nesprávny výpočet lehoty, súd však tieto námietky zamietol s odôvodnením, že išlo o spotrebiteľskú zmluvu, kde odporca konal ako podnikateľ a navrhovatelia nemali možnosť obsah zmluvy ovplyvniť. Súd tiež konštatoval, že povinnosť zaplatiť pokutu vznikla riadne a nebola v rozpore s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta za omeškanie odporcu od 20.02.2009 do 31.03.2009, t.j. za 40 dní omeškania predstavuje sumu 2.870,40 eur (71,76 eur x 40 dní).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "v danom prípade išlo o spotrebiteľskú zmluvu, keďže pri uzavretí zmluvy o dielo navrhovatelia nekonali ako podnikatelia v rámci predmetu svojej obchodnej činnosti",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nestotožnil sa ani s názorom odporcu o potrebe zmluvnú pokutu v prípade vyhovenia návrhu navrhovateľov znížiť z dôvodu jej neprimeranej výšky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca bol v omeškaní s dokončením výstavby domu od 06.06.2008 a medzi účastníkmi nebolo sporné, že odporca výstavbu nedokončil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "navrhovatelia 1/ a 2/ sa s plnením do omeškania nedostali a teda nenastali okolnosti, ktoré by mali za následok predĺženie lehoty na výstavbu domu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Co_380_2011_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Co/380/2011",
+      "decision_date": "12.06.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1109215097.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

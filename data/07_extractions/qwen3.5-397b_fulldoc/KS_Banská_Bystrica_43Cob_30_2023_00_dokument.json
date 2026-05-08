@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 33740,
+    "completion_tokens": 2099,
+    "cost_usd": 0.0181,
+    "latency_seconds": 30.49,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za stavebné práce a viacpráce vo výške 101.171,10 EUR. Žalovaný uplatnil kompenzačnú námietku voči nároku na zmluvnú pokutu za omeškanie s odovzdaním diela, ktorú pôvodne vyčísli na sumu prevyšujúcu pohľadávku, no súd ju moderoval.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý čiastočne vyhovel žalobe priznaním sumy 31.235,70 EUR a zamietol zvyšok žaloby v dôsledku započítania moderovanej zmluvnej pokuty.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca bol od 01.07.2019 do 15.11.2019 v omeškaní s povinnosťou včas protokolárne odovzdať dielo podľa zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "2,5% za každý aj začatý deň omeškania",
+          "evidence": {
+            "quote": "dohodnutá výška zmluvnej pokuty v prospech objednávateľa diela za každý aj začatý deň omeškania (2,5%)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 218548.11,
+            "evidence": {
+              "quote": "hodnotu si strany stanovili v čl. IV. v sume 218.548,11 Eur bez DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 748527.26,
+            "evidence": {
+              "quote": "Za uvedené obdobie by tak prislúchala žalovanému zmluvná pokuta vo výške 748.527,26 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 69935.4,
+            "evidence": {
+              "quote": "Súd prvej inštancie považoval vzhľadom na uvedené za primeranú výšku nároku žalovaného na zmluvnú pokutu len vo výške 69.935,40 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "pod č.k. 62Cb/74/2020. Súd prvej inštancie preto zobral do úvahy namietanú neprimeranosť dohodnutej výšky zmluvnej pokuty v zmysle čl. VI. bod 1 Zmluvy žalobcom, takto neprimerane vysokú pokutu znížil len na žalovaným stanovenú zmluvnú pokutu vo výške 69.935,40",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že hoci by pôvodná zmluvná pokuta za 137 dní omeškania predstavovala sumu 748.527,26 EUR, jej uplatnenie v plnej výške by bolo neprimerané. Pri moderácii podľa § 301 Obchodného zákonníka súd prihliadal na to, že žalovaný si nárok nešpecifikoval presným výpočtom, nepreukázal vzniknutú škodu a sám svojím konaním (objednávanie viacprác po lehote, meškanie so stavebným povolením) prispel k omeškaniu. Súd tiež považoval duplicitné uplatňovanie tej istej sumy pokuty vo viacerých konaniach za rozporné s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie považoval vzhľadom na uvedené za primeranú výšku nároku žalovaného na zmluvnú pokutu len vo výške 69.935,40 Eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný výšku škody, ktorá mu v dôsledku oneskoreného odovzdania predmetu diela vznikla, nešpecifikoval a poukazoval len na uplatňovanie zmluvných sankcií od investora, ktoré však žiadnym spôsobom nezdokladoval",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "jej duplicitné uplatňovanie súd považoval v rozpore s dobrými mravmi a zásadou poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Dohodnutou zmluvnou sankciou v čl. VI. bod 1 Zmluvy si žalobca mienil zabezpečiť včasné protokolárne odovzdanie diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný výšku škody, ktorá mu v dôsledku oneskoreného odovzdania predmetu diela vznikla, nešpecifikoval",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pri uplatňovaní moderačného práva nemusí zmluvnú pokutu znížiť vždy na úroveň výšky vzniknutej škody, túto posudzuje podľa voľnej úvahy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "hoci bol žalobca v omeškaní s odovzdaním diela už od 01.07.2019, žalovaný ani žiadnym spôsobom žalobcovi neavizoval možné uplatnenie si tohto nároku voči nemu v zmysle zmluvy až do odovzdania diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Naviac sám žalovaný dva mesiace meškal s vybavením stavebného povolenia pre výkon prác zo strany žalobcu, ktoré oneskorenie zo strany žalovaného mohlo mať rovnako podstatný vplyv na pôvodne dohodnuté termíny",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/30/2023",
+      "decision_date": "27.07.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6119440157.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

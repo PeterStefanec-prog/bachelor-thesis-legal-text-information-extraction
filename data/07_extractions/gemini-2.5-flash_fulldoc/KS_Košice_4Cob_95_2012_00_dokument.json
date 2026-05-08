@@ -1,0 +1,195 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11804,
+    "completion_tokens": 2681,
+    "cost_usd": 0.0416,
+    "latency_seconds": 10.44,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 22 300,00 eura od žalovaného na základe zmluvy o dielo, pretože žalovaný neuhradil faktúru za dodávku a montáž drevených priehradových väzníkov. Súd prvého stupňa zmluvnú pokutu moderoval a priznal žalobcovi len časť uplatnenej sumy.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvého stupňa vo výroku o povinnosti žalovaného zaplatiť žalobcovi 5 575,00 eura a vo výroku o zamietnutí žaloby v prevyšujúcej časti vo výške 16 725,00 eura. Zrušil však výrok o náhrade trov konania a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za porušenie zmluvnej povinnosti objednávateľa zaplatiť riadne a včas cenu diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% z nezaplatenej zvyšnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zhotoviteľ môže požadovať zmluvnú pokutu vo výške X,X% z nezaplatenej zvyšnej čiastky za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 22300.0,
+            "evidence": {
+              "quote": "X.X.XXXX a následne žalobca podľa zmluvy plnil. Dohodnutou zmluvnou pokutou bolo teda zabezpečené splnenie povinnosti žalovaného doplatiť zostatok ceny diela len vo výške XXX.XXX,- Sk, t. j.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 22300.0,
+            "evidence": {
+              "quote": "za to, že žalobcom uplatnená zmluvná pokuta vo výške XX.XXX,XX eura je neprimerane vysoká",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5575.0,
+            "evidence": {
+              "quote": "zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške X.XXX,XX eura, t. j. v jednej štvrtine z uplatneného nároku a v prevyšujúcej časti žalobu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": "0,05% z nezaplatenej zvyšnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "odovzdaní a prevzatí diela, zhotoviteľ môže požadovať zaplatenie úroku z omeškania vo výške X,XX% z nezaplatenej zvyšnej čiastky za každý deň",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "navrhol aj žalovaný. Súd prvého stupňa v nadväznosti na uplatnený úrok z omeškania vo výške XX,XX% považoval dojednanú zmluvnú pokutu X,X% denne z dlžnej sumy za neprimeranú a zákonu odporujúcu, preto zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške X.XXX,XX eura, t. j. v jednej štvrtine z uplatneného nároku a v prevyšujúcej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z 22 300,00 eura na 5 575,00 eura, pretože ju považoval za neprimerane vysokú, najmä vzhľadom na súbeh s úrokmi z omeškania a jej ročnú výšku 36,5%. Odvolací súd sa stotožnil so záverom, že denná sadzba 0,1% je neprimeraná, pretože niekoľkonásobne prevyšuje bežné úrokové sadzby bánk za úvery a viedla by k neprimeraným ziskom žalobcu. Súd tiež zohľadnil, že zmluvná pokuta dosahovala skoro výšku zabezpečovanej povinnosti (22 300,00 eura z 22 300,00 eura).",
+          "key_quotes": [
+            {
+              "quote": "navrhol aj žalovaný. Súd prvého stupňa v nadväznosti na uplatnený úrok z omeškania vo výške XX,XX% považoval dojednanú zmluvnú pokutu X,X% denne z dlžnej sumy za neprimeranú a zákonu odporujúcu, preto zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške X.XXX,XX eura, t. j. v jednej štvrtine z uplatneného nároku a v prevyšujúcej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "následne žalobca podľa zmluvy plnil. Dohodnutou zmluvnou pokutou bolo teda zabezpečené splnenie povinnosti žalovaného doplatiť zostatok ceny diela len vo výške XXX.XXX,- Sk, t. j. XX..XXX,XX eura.. Uplatnená zmluvná pokuta XX.XXX,XX eura (XXX.XXX,XX Sk) dosahuje skoro výšku zabezpečovanej povinnosti (XX%), čo je neprimeraná suma vzhľadom na zabezpečovaciu, sankčnú i uhradzovaciu funkciu zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "prvého stupňa, že dohoda o zmluvnej pokute vo výške X,X% denne z dlžnej sumy, čo predstavuje XX% úrok ročne, je neprimeraná už svojou samotnou výškou.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "sa v danom prípade nestalo. Žalovaný namietal neplatnosť dojednania o zmluvnej pokute pre rozpor s dobrými mravmi s poukazom na výšku zmluvnej pokuty X,X% denne, čo je",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "j. XX..XXX,XX eura.. Uplatnená zmluvná pokuta XX.XXX,XX eura (XXX.XXX,XX Sk) dosahuje skoro výšku zabezpečovanej povinnosti (XX%), čo je neprimeraná suma vzhľadom na zabezpečovaciu, sankčnú i uhradzovaciu funkciu zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "priznanie uplatnenej zmluvnej pokuty by viedlo k neprimeraným ziskom na strane žalobcu vo vzťahu k majetkovej ujme, ktorú porušením zmluvnej povinnosti žalovaným utrpel.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "j. XX..XXX,XX eura.. Uplatnená zmluvná pokuta XX.XXX,XX eura (XXX.XXX,XX Sk) dosahuje skoro výšku zabezpečovanej povinnosti (XX%), čo je neprimeraná suma vzhľadom na zabezpečovaciu, sankčnú i uhradzovaciu funkciu zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Výška zmluvnej pokuty, tak ako ju uplatnil žalobca, teda závisela od doby, po ktorú žalovaný ako dlžník svoje zmluvnou pokutou zaistené povinnosti neplnil, to znamená, čím je dlhšia doba omeškania, tým je vyššia aj zmluvná pokuta.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pokuty navrhol aj žalovaný. Súd prvého stupňa v nadväznosti na uplatnený úrok z omeškania vo výške XX,XX% považoval dojednanú zmluvnú pokutu X,X% denne z dlžnej sumy za neprimeranú a zákonu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvná pokuta sa nezvyšovala ešte viac len preto, že žalobca skutočne urobil všetky kroky preto, aby svoju pohľadávku vymohol v čo najkratšom čase.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.secured_principal",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_2",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.kumulacia_s_urokom"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_95_2012_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/95/2012",
+      "decision_date": "27.02.2013",
+      "ecli": "ECLI:SK:KSKE:2013:7209209563.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

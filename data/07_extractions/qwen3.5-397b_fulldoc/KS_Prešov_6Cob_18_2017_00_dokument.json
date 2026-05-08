@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13046,
+    "completion_tokens": 1928,
+    "cost_usd": 0.0096,
+    "latency_seconds": 14.55,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 47.063,55 eur z dôvodu nedodania dohodnutého objemu drevnej hmoty žalovaným v príslušných štvrťrokoch podľa Rámcovej kúpnej zmluvy. Žalovaný argumentoval neplatnosťou dojednania a absenciou potvrdenia objednávok.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvej inštancie, ktorý žalobu zamietol, pretože dojednanie zmluvnej pokuty bolo neurčité a neplatné, keďže nebolo vymedzené množstvo tovaru na jednotlivé štvrťroky.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade nedodania dohodnutého objemu tovaru (sortiment drevnej hmoty) v príslušnom štvrťroku žalovaným, je žalobca oprávnený uplatniť si zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "15 % z ceny (cena = nedodané množstvo násobené priemernou dosiahnutou cenou tohto sortimentu v danom štvrťroku) z nedodaného objemu tovaru",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 15 % z ceny (cena = nedodané množstvo násobené priemernou dosiahnutou cenou tohto sortimentu v danom štvrťroku) z nedodaného objemu tovaru (sortimentu drevnej hmoty) za príslušný štvrťrok",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 47063.55,
+            "evidence": {
+              "quote": "Žalobca si v tomto konaní uplatňuje zaplatenie zmluvnej pokuty, teda škodu za obdobie od 1.12.2014 do 28.2.2015 a za obdobie od 1.2.2015 do 31.5.2015 v celkovej výške 47.063,55 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "ten-ktorý štvrťrok zmluvného obdobia. Nakoľko je takéto dojednanie zmluvnej pokuty neurčité a nezrozumiteľné z dôvodu, že nedošlo k vymedzeniu povinnosti žalovaného za konkrétny štvrťrok zmluvného obdobia, pričom cena drevnej hmoty, ako aj sortiment sa za ten-ktorý štvrťrok mohli líšiť, je takéto dojednanie zmluvnej pokuty neplatné pre rozpor s § 39 Občianskeho",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd rozhodol, že dojednanie zmluvnej pokuty je neplatné pre neurčitosť a nezrozumiteľnosť, pretože Rámcová zmluva nešpecifikovala množstvo tovaru, ktoré má byť dodané v jednotlivých štvrťrokoch, ale iba celkové množstvo za celé zmluvné obdobie. Bez vymedzenia povinnosti za konkrétný štvrťrok a sortimentu nie možné určiť výšku pokuty podľa dohodnutého mechanizmu (15 % z ceny nedodaného objemu). Neplatnosť je absolútna podľa § 39 Občianskeho zákonníka a súd na nią prihliada z úradnej povinnosti. Existencia nároku na zmluvnú pokutu je podmienená existenciou hlavného záväzku, ktorý však v tomto prípade nie je jednoznačne určený pre jednotlivé štvrťroky.",
+          "key_quotes": [
+            {
+              "quote": "je takéto dojednanie zmluvnej pokuty neplatné pre rozpor s § 39 Občianskeho zákonníka, a na takúto absolútnu neplatnosť musí súd prihliadať z úradnej povinnosti (ex offo) aj bez námietky",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "ak hlavný záväzok bol síce dojednaný za celé zmluvné obdobie určito, kde však nárok na zmluvnú pokutu sa odvíjal od jednotlivých štvrťrokov tohto zmluvného obdobia, ktoré už určito dojednané neboli, nemôže nastať ani povinnosť plniť záväzok akcesorický",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.final_awarded:full_doc",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded.value",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_6Cob_18_2017_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "6Cob/18/2017",
+      "decision_date": "31.05.2018",
+      "ecli": "ECLI:SK:KSPO:2018:8415204382.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

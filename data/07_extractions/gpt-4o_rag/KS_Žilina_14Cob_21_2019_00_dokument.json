@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10,
+      "adaptive_top_k_call2": 9
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 19654,
+      "completion_tokens": 602,
+      "cost_usd": 0.0552,
+      "latency_seconds": 44.43,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 19889,
+      "completion_tokens": 855,
+      "cost_usd": 0.0583,
+      "latency_seconds": 32.74,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca 2.QUADRANT APP, s.r.o. požadoval zaplatenie zmluvnej pokuty za porušenie povinnosti zachovávať mlčanlivosť podľa Zmluvy o spolupráci zo strany žalovaného E. V. Žalovaný mal vyzradiť dôverné informácie tretím osobám, čo malo byť sankcionované zmluvnou pokutou vo výške 10.000 EUR za každé porušenie.",
+      "verdict_summary": "Súd znížil zmluvnú pokutu z 10.000 EUR na 500 EUR za každé porušenie povinnosti a potvrdil úrok z omeškania vo výške 9% ročne.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "zmluvnou pokutou zabezpečené porušenie povinností poskytovateľa obsiahnutých v čl. V. bod 5. Zmluvy o spolupráci",
+            "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_6"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,00 Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10.000,00 Eur, a to do 30-tich dní odo dňa porušenia zmluvnej povinnosti",
+            "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_6"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 10.000,00 Eur",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_6"
+            }
+          },
+          "final_awarded": {
+            "value": 500,
+            "evidence": {
+              "quote": "znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 9% ročne zo sumy 500,- Eur",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Z toho dôvodu okresný súd, vzhľadom k tomu, že bolo preukázané porušenie zmluvne dojednaných povinností zo strany žalovaného znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil zmluvnú pokutu z 10.000 EUR na 500 EUR, pretože považoval pôvodnú výšku za neprimerane vysokú. Pri rozhodovaní zohľadnil, že žalobca nepreukázal vznik skutočnej škody. Súd tiež prihliadal na povahu a význam zabezpečovanej povinnosti a na výšku odmeny žalovaného, ktorá bola 500 EUR mesačne.",
+          "key_quotes": [
+            {
+              "quote": "Ustanovenie § 301 Obchodného zákonníka zakladá oprávnenie súdu neprimerane vysokú zmluvnú pokutu znížiť, pričom jej primeranosť posudzuje najmä s prihliadnutí na hodnotu a význam povinností, ktorej splnenie zmluvná pokuta zabezpečuje.",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_16"
+            },
+            {
+              "quote": "Z toho dôvodu okresný súd, vzhľadom k tomu, že bolo preukázané porušenie zmluvne dojednaných povinností zo strany žalovaného znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uvedené dojednanie je navyše v rozpore s pravidlami poctivého obchodného styku.",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_26"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pri posúdení primeranosti dojednanej výšky zmluvnej pokuty je potrebné prihliadnuť na hodnotu a význam zabezpečovanej povinnosti, na okolnosti, pohnútky a účel, ktorý bol sledovaný dojednaním zmluvnej pokuty.",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_16"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "súd má za to, že v danom prípade, i keď porušil žalovaný zmluvné povinnosti, žalobcovi nevznikla škoda, resp. takúto škodu nepreukázal",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_17"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_21_2019_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/21/2019",
+      "decision_date": "26.09.2019",
+      "ecli": "ECLI:SK:KSZA:2019:8713217772.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

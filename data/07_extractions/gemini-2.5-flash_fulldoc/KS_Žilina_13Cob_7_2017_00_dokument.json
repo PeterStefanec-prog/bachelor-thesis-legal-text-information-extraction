@@ -1,0 +1,441 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5967,
+    "completion_tokens": 4611,
+    "cost_usd": 0.0536,
+    "latency_seconds": 16.68,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny 1.819,93 Eur spolu s príslušenstvom, a to úrokom z omeškania, na základe zmlúv o poskytovaní elektronických komunikačných služieb a dodatkov k nim, ktorými odpredal žalovanému mobilné telefóny. Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb, čím porušil zmluvné povinnosti a vznikla mu povinnosť zaplatiť zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok okresného súdu, ktorým bol žalovaný povinný zaplatiť žalobcovi sumu 1.718,93 Eur s 0,05% úrokom z omeškania denne a nahradiť trovy konania a právneho zastúpenia.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Dodatok ku Zmluve č. A5761158",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb vyfakturovaných v období marec až máj 2012, čím porušil zmluvné povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnou pokutou 101 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Orange San Francisco za kúpnu cenu 59 Eur s dohodnutou zmluvnou pokutou 101 Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 101,
+            "evidence": {
+              "quote": "s dohodnutou zmluvnou pokutou 101 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd dospel k záveru o dôvodnosti žaloby na základe vykonaného dokazovania, vrátane svedeckej výpovede a listinných dôkazov. Súd zohľadnil svedeckú výpoveď svedkyne, ktorá potvrdila preverovanie totožnosti zákazníkov pri podpisovaní zmlúv a dohôd. Taktiež bolo preukázané, že konateľ žalovaného komunikoval so žalobcom ohľadom prevodu telefónneho čísla a uzatvoril ďalšie zmluvy cez internet. Súd potvrdil nárok žalobcu na zaplatenie zmluvnej pokuty v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Svedkyňa sa vyjadrila v tom smere, že pri podpisovaní akýchkoľvek dokladov zákazníkom preverovala ich totožnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Po vznesení tejto procesnej obrany žalovaného žalobca bol v konaní dôkazne aktívny a navrhol vo veci vypočuť svedka a oboznámiť listinný dôkaz na č.l. 197 a nasl. spisu, ktoré okresný súd vykonal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "Dodatok ku Zmluve č. A6208913",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb vyfakturovaných v období marec až máj 2012, čím porušil zmluvné povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnou pokutou 661 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur s dohodnutou zmluvnou pokutou 661 Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 661,
+            "evidence": {
+              "quote": "s dohodnutou zmluvnou pokutou 661 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd dospel k záveru o dôvodnosti žaloby na základe vykonaného dokazovania, vrátane svedeckej výpovede a listinných dôkazov. Súd zohľadnil svedeckú výpoveď svedkyne, ktorá potvrdila preverovanie totožnosti zákazníkov pri podpisovaní zmlúv a dohôd. Taktiež bolo preukázané, že konateľ žalovaného komunikoval so žalobcom ohľadom prevodu telefónneho čísla a uzatvoril ďalšie zmluvy cez internet. Súd potvrdil nárok žalobcu na zaplatenie zmluvnej pokuty v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Svedkyňa sa vyjadrila v tom smere, že pri podpisovaní akýchkoľvek dokladov zákazníkom preverovala ich totožnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Po vznesení tejto procesnej obrany žalovaného žalobca bol v konaní dôkazne aktívny a navrhol vo veci vypočuť svedka a oboznámiť listinný dôkaz na č.l. 197 a nasl. spisu, ktoré okresný súd vykonal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "Dodatok ku Zmluve č. A6209667",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb vyfakturovaných v období marec až máj 2012, čím porušil zmluvné povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnej pokute 661 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur pri dohodnutej zmluvnej pokute 661 Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 661,
+            "evidence": {
+              "quote": "pri dohodnutej zmluvnej pokute 661 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd dospel k záveru o dôvodnosti žaloby na základe vykonaného dokazovania, vrátane svedeckej výpovede a listinných dôkazov. Súd zohľadnil svedeckú výpoveď svedkyne, ktorá potvrdila preverovanie totožnosti zákazníkov pri podpisovaní zmlúv a dohôd. Taktiež bolo preukázané, že konateľ žalovaného komunikoval so žalobcom ohľadom prevodu telefónneho čísla a uzatvoril ďalšie zmluvy cez internet. Súd potvrdil nárok žalobcu na zaplatenie zmluvnej pokuty v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Svedkyňa sa vyjadrila v tom smere, že pri podpisovaní akýchkoľvek dokladov zákazníkom preverovala ich totožnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Po vznesení tejto procesnej obrany žalovaného žalobca bol v konaní dôkazne aktívny a navrhol vo veci vypočuť svedka a oboznámiť listinný dôkaz na č.l. 197 a nasl. spisu, ktoré okresný súd vykonal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.final_awarded",
+        "contractual_penalties[2].amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_7_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/7/2017",
+      "decision_date": "28.06.2017",
+      "ecli": "ECLI:SK:KSZA:2017:5113242552.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

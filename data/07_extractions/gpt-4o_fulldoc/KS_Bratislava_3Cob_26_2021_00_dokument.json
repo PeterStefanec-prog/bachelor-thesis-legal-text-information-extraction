@@ -1,0 +1,306 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14740,
+    "completion_tokens": 2026,
+    "cost_usd": 0.0571,
+    "latency_seconds": 35.5,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Remo & partners, s.r.o. sa domáhal zaplatenia sumy 22.802,26 EUR s príslušenstvom titulom zmluvnej pokuty od žalovaného CEVASERVIS a.s. Žalobca tvrdil, že žalovaný meškal s úhradou zálohovej faktúry na cenu diela, čo malo za následok vznik nároku na zmluvnú pokutu vo výške 15% z ceny diela.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Malacky, ktorý znížil zmluvnú pokutu na sumu 1.508,18 EUR a vo zvyšku žalobu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania objednávateľa s úhradou faktúry alebo iného peňažného záväzku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "15% z ceny diela",
+          "evidence": {
+            "quote": "zmluvnú pokutu podľa bodu 11.4 zmluvy vo výške 15% z ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 152015.08,
+            "evidence": {
+              "quote": "za dojednanú cenu diela 3.870.000 Kč bez DPH (152 015,08 EUR)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 22802.26,
+            "evidence": {
+              "quote": "čo predstavuje sumu 580.500 Kč/ 22.802,26 EUR/",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1508.18,
+            "evidence": {
+              "quote": "znížil žalobcom uplatnenú zmluvnú pokutu na sumu 1.508,18 EUR",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8% ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8% ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že zmluvná pokuta bola dojednaná v predpísanej písomnej forme, ale jej výška bola neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Súd zohľadnil, že úhrada zálohovej faktúry nebola nevyhnutnou podmienkou pre plnenie zmluvy a že zmluvné strany prejavili vôľu predčasne ukončiť zmluvu. Súd znížil zmluvnú pokutu na 15% z omeškanej sumy 10.054,53 EUR, čo predstavuje 1.508,18 EUR.",
+          "key_quotes": [
+            {
+              "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nebolo podľa názoru súdu primerané a súladné so zásadou poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nezodpovedá žiadnej z funkcií zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nebolo preukázané ani tvrdené, že žalobcovi neuhradením časti zálohovej platby vo výške 10.054,55 EUR v lehote viac ako 30 dní odo dňa splatnosti vznikla škoda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca mohol faktúru vystaviť kedykoľvek",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania objednávateľa s úhradou faktúry alebo iného peňažného záväzku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,02 % denne",
+          "evidence": {
+            "quote": "v prípade, že by žalobca uplatnil zmluvnú pokutu dojednanú v čl. 11 bod 11.3. v sadzbe 0,02 % denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 10054.53,
+            "evidence": {
+              "quote": "z omeškanej sumy 10.054,53 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 190.53,
+            "evidence": {
+              "quote": "patril by mu nárok na zaplatenie zmluvnej pokuty za dobu omeškania celom sumou 190,53 EUR",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8% ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8% ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že zmluvná pokuta bola dojednaná v predpísanej písomnej forme, ale jej výška bola neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Súd zohľadnil, že úhrada zálohovej faktúry nebola nevyhnutnou podmienkou pre plnenie zmluvy a že zmluvné strany prejavili vôľu predčasne ukončiť zmluvu. Súd znížil zmluvnú pokutu na 15% z omeškanej sumy 10.054,53 EUR, čo predstavuje 1.508,18 EUR.",
+          "key_quotes": [
+            {
+              "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nebolo podľa názoru súdu primerané a súladné so zásadou poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nezodpovedá žiadnej z funkcií zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nebolo preukázané ani tvrdené, že žalobcovi neuhradením časti zálohovej platby vo výške 10.054,55 EUR v lehote viac ako 30 dní odo dňa splatnosti vznikla škoda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca mohol faktúru vystaviť kedykoľvek",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.dobre_mravy"
+      ],
+      "missing_fields": [
+        "contractual_penalties[1].amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_26_2021_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/26/2021",
+      "decision_date": "28.09.2022",
+      "ecli": "ECLI:SK:KSBA:2022:6119337417.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 25400,
+    "completion_tokens": 1064,
+    "cost_usd": 0.0741,
+    "latency_seconds": 48.63,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 322.507,55 Eur s úrokom z omeškania, pričom tvrdil, že žalovaný nevyplatil sumu 30.000,- Eur za franchisingovú licenciu a 20.000,- Eur ako zábezpeku. Žalobca tiež žiadal náhradu škody a ušlého zisku.",
+      "verdict_summary": "Najvyšší súd odmietol dovolanie žalobcu a potvrdil rozhodnutie odvolacieho súdu, ktorý zamietol žalobu žalobcu.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "bolo dohodnuté, že v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000,- Eur",
+          "evidence": {
+            "quote": "nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000,
+            "evidence": {
+              "quote": "o žalovaným vyúčtovanej zmluvnej pokute vo výške 20.000,Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000,
+            "evidence": {
+              "quote": "odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o žalovaným vyúčtovanej zmluvnej pokute vo výške 20.000,Eur, ktorú si žalovaný uplatnil v zmysle medzi stranami sporu platne uzatvorenej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd považoval zmluvnú pokutu za primeranú vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí vystavovali žalovaného riziku sankcií. Súd konštatoval, že pokuta bola dohodnutá zmluvne a nebola neprimeraná. Žalobca nepreukázal, že by pokuta bola neprimeraná, a preto súd nevyužil moderačné oprávnenie.",
+          "key_quotes": [
+            {
+              "quote": "odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "NS_SR_2Obdo_57_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "2Obdo/57/2021",
+      "decision_date": "31.05.2022",
+      "ecli": "ECLI:SK:NSSR:2022:6619200251.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

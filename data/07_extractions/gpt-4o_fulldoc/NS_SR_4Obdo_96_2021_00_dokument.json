@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17272,
+    "completion_tokens": 1285,
+    "cost_usd": 0.056,
+    "latency_seconds": 74.95,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Arcus International, s. r. o. požadoval zaplatenie zmluvnej pokuty od žalovaného RetroTatry, spol. s r. o. za omeškanie s úhradou ceny diela. Zmluvná pokuta bola dohodnutá vo výške 25,- eur za každý deň omeškania.",
+      "verdict_summary": "Najvyšší súd odmietol dovolanie žalovaného a priznal žalobcovi nárok na náhradu trov dovolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvná pokuta, ktorá bola dojednaná v prospech žalobcu pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "25,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvná pokuta, ktorá bola dojednaná v prospech žalobcu pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela, a to vo výške 25,- eur za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 24650.42,
+            "evidence": {
+              "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 87775,
+            "evidence": {
+              "quote": "žalobca si uplatnil iba sumu 87.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 82775,
+            "evidence": {
+              "quote": "súd viazaný žalobným návrhom žalobcu po prihliadnutí na už priznanú výšku zmluvnej pokuty vo výške 5.000,- eur, zaviazal žalovaného na zaplatenie zmluvnej pokuty vo výške 82.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 7.891,02 eur od 16.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie dospel k správnemu právnemu záveru, že zmluvná pokuta dohodnutá vo VOP žalobcu nie je neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta vo výške 25,- eur za každý deň omeškania je primeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Zmluvná pokuta bola dohodnutá na zabezpečenie úhrady ceny diela vo výške 24.650,42 eur. Súd zohľadnil aj dĺžku omeškania žalovaného, ktorá bola spôsobená jeho pasivitou a zmenou právnej argumentácie. Celková výška zmluvnej pokuty bola dôsledkom dlhodobého porušovania povinnosti žalovaným.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta, ktorá bola dojednaná v prospech žalobcu pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela, a to vo výške 25,- eur za každý deň omeškania",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "námietka žalovaného týkajúca sa dobrých mravov je nedôvodná, nakoľko tvrdenia žalovaného neboli v konaní preukázané",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "súdne konanie trvalo 8 rokov aj pre pasivitu zo strany žalovaného a z dôvodu zmeny jeho právnej argumentácie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca vykonal všetko pre to, aby čím skôr bol predmetný spor ukončený",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_4Obdo_96_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "4Obdo/96/2021",
+      "decision_date": "30.09.2022",
+      "ecli": "ECLI:SK:NSSR:2022:8719204171.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

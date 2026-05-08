@@ -1,0 +1,315 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10788,
+    "completion_tokens": 4059,
+    "cost_usd": 0.0541,
+    "latency_seconds": 14.94,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (Orange Slovensko) sa domáhal zaplatenia 249,26 eur s príslušenstvom od žalovaného za telekomunikačné služby a zmluvné pokuty. Žalovaný nezaplatil cenu služieb a porušil zmluvné povinnosti, čo viedlo k uplatneniu zmluvných pokút vo výške 170 eur.",
+      "verdict_summary": "Krajský súd zmenil rozsudok prvostupňového súdu a zaviazal žalovaného zaplatiť žalobcovi 170 eur spolu s úrokom z omeškania vo výške 0,05% denne od 1.3.2011 do zaplatenia, ako aj trovy konania a právneho zastúpenia.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "dodatok k zmluve č. A4963035",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný nezaplatil cenu služieb za obdobie od 2010/10 - 2010/12 v celkovej výške 79,26 eur, čím porušil zmluvné povinnosti a v zmysle dodatkov je povinný zaplatiť aj zmluvnú pokutu celkom vo výške 170,- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 100,- eur",
+          "evidence": {
+            "quote": "v prípade dodatku k zmluve č. A4963035 vo výške 100,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 100,
+            "evidence": {
+              "quote": "Žalobca okrem ceny služieb v konaní uplatňovala ja nároky na zaplatenie zmluvných pokút (100 + 70 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 100,
+            "evidence": {
+              "quote": "Preto v napadnutom výroku rozsudok súdu prvého stupňa zmenil (§ 220 O.s.p.) a priznal žalobcovi tento nárok.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "Pokiaľ sa týka uplatňovaného úroku z omeškania treba uviesť to, že v odvolaní sa práve viaže uplatňovaný úrok z omeškania na čas od 1.3.2011. Podaný odvolací návrh už neuplatňuje úrok z omeškania z týchto nárokov na zmluvnú pokutu od 18.2.2011, tak ako to bolo v pôvodnom návrhu. Pri viazanosti návrhom i viazanosti rozsahom podaného odvolania, preto odvolací súd okrem istiny priznával žalobcovi aj úrok z omeškania z týchto nárokov na zmluvnú pokutu, práve od dátumu žiadaného v odvolaní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto v napadnutom výroku rozsudok súdu prvého stupňa zmenil (§ 220 O.s.p.) a priznal žalobcovi tento nárok.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Prvostupňový súd zamietol nárok na zmluvnú pokutu pre nejasnosť a neurčitosť dohody o zabezpečenej povinnosti. Odvolací súd však dospel k záveru, že v obchodnoprávnych vzťahoch je rozhodujúci úmysel konajúceho a žalovaný nepreukázal pochybnosti o tom, že úmyslom bolo zabezpečiť aj splnenie povinnosti platiť cenu služieb. Keďže žalovaný neplatil faktúry, odvolací súd priznal žalobcovi nárok na zmluvnú pokutu v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "Dohoda o zmluvnej pokute tak, ako je vyjadrená v oboch dodatkoch k zmluvám o pripojení, je preto pre jej nejasnosť a neurčitosť, najmä v časti opisu povinností, ktorých splnenie malo byť zmluvnou pokutou zabezpečené, v zmysle § 37 Občianskeho zákonníka absolútne neplatná a nemôže tak byť základom pre povinnosť žalovaného zaplatiť žalobcovi zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pre výklad obsahu týchto dojednaní sú v obchodnoprávnych záväzkových vzťahoch relevantné interpretačné pravidlá vyplývajúce z ust. § 266 Obch. zák.. Tieto vychádzajú z iných kritérií, než sú pravidlá pre interpretáciu právnych úkonov obsiahnuté v § 35 ods. 2 Obč. zák..",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Za takéhoto stavu odvolací súd je toho názoru, že žalobca má nárok na zaplatenie zmluvných pokút vyplývajúcich z uzavretých zmlúv, pretože žalovaný povinnosti platiť cenu služby nesplnil a pre toto porušenie bola uzavretá aj dohoda o zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "úmyslom uzavrieť dohodu o zmluvnej pokute bolo zabezpečiť aj splnenie povinnosti platiť cenu služieb.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný bol v konaní pasívny. Neprodukoval, také skutočnosti a dôkazy, ktoré by viedli k pochybnostiam o dostatočnej presnosti, či určitosti identifikácie povinnosti, ktorej splnenie by zmluvná pokuta zabezpečovala.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "dodatok k zmluve č. A4963128",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný nezaplatil cenu služieb za obdobie od 2010/10 - 2010/12 v celkovej výške 79,26 eur, čím porušil zmluvné povinnosti a v zmysle dodatkov je povinný zaplatiť aj zmluvnú pokutu celkom vo výške 170,- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 70,- eur",
+          "evidence": {
+            "quote": "v prípade dodatku k zmluve č. A4963128 vo výške 70,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 70,
+            "evidence": {
+              "quote": "Žalobca okrem ceny služieb v konaní uplatňovala ja nároky na zaplatenie zmluvných pokút (100 + 70 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 70,
+            "evidence": {
+              "quote": "Preto v napadnutom výroku rozsudok súdu prvého stupňa zmenil (§ 220 O.s.p.) a priznal žalobcovi tento nárok.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "Pokiaľ sa týka uplatňovaného úroku z omeškania treba uviesť to, že v odvolaní sa práve viaže uplatňovaný úrok z omeškania na čas od 1.3.2011. Podaný odvolací návrh už neuplatňuje úrok z omeškania z týchto nárokov na zmluvnú pokutu od 18.2.2011, tak ako to bolo v pôvodnom návrhu. Pri viazanosti návrhom i viazanosti rozsahom podaného odvolania, preto odvolací súd okrem istiny priznával žalobcovi aj úrok z omeškania z týchto nárokov na zmluvnú pokutu, práve od dátumu žiadaného v odvolaní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto v napadnutom výroku rozsudok súdu prvého stupňa zmenil (§ 220 O.s.p.) a priznal žalobcovi tento nárok.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Prvostupňový súd zamietol nárok na zmluvnú pokutu pre nejasnosť a neurčitosť dohody o zabezpečenej povinnosti. Odvolací súd však dospel k záveru, že v obchodnoprávnych vzťahoch je rozhodujúci úmysel konajúceho a žalovaný nepreukázal pochybnosti o tom, že úmyslom bolo zabezpečiť aj splnenie povinnosti platiť cenu služieb. Keďže žalovaný neplatil faktúry, odvolací súd priznal žalobcovi nárok na zmluvnú pokutu v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "Dohoda o zmluvnej pokute tak, ako je vyjadrená v oboch dodatkoch k zmluvám o pripojení, je preto pre jej nejasnosť a neurčitosť, najmä v časti opisu povinností, ktorých splnenie malo byť zmluvnou pokutou zabezpečené, v zmysle § 37 Občianskeho zákonníka absolútne neplatná a nemôže tak byť základom pre povinnosť žalovaného zaplatiť žalobcovi zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pre výklad obsahu týchto dojednaní sú v obchodnoprávnych záväzkových vzťahoch relevantné interpretačné pravidlá vyplývajúce z ust. § 266 Obch. zák.. Tieto vychádzajú z iných kritérií, než sú pravidlá pre interpretáciu právnych úkonov obsiahnuté v § 35 ods. 2 Obč. zák..",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Za takéhoto stavu odvolací súd je toho názoru, že žalobca má nárok na zaplatenie zmluvných pokút vyplývajúcich z uzavretých zmlúv, pretože žalovaný povinnosti platiť cenu služby nesplnil a pre toto porušenie bola uzavretá aj dohoda o zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "úmyslom uzavrieť dohodu o zmluvnej pokute bolo zabezpečiť aj splnenie povinnosti platiť cenu služieb.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný bol v konaní pasívny. Neprodukoval, také skutočnosti a dôkazy, ktoré by viedli k pochybnostiam o dostatočnej presnosti, či určitosti identifikácie povinnosti, ktorej splnenie by zmluvná pokuta zabezpečovala.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_2Cob_37_2013_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "2Cob/37/2013",
+      "decision_date": "21.11.2013",
+      "ecli": "ECLI:SK:KSPO:2013:8212208617.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

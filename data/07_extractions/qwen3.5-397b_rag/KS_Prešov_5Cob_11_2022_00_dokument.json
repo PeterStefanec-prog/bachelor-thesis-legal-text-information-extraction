@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 8662,
+      "completion_tokens": 853,
+      "cost_usd": 0.0054,
+      "latency_seconds": 5.58,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 8939,
+      "completion_tokens": 1564,
+      "cost_usd": 0.0071,
+      "latency_seconds": 17.1,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000,- eur za porušenie konkurenčnej doložky, keď žalovaný po ukončení zmluvného vzťahu nadviazal spoluprácu s obchodným partnerom žalobcu. Žalovaný namietal neplatnosť zmluvy, jej pracovnoprávny charakter a neprimeranosť výšky pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý znížil pôvodne požadovanú zmluvnú pokutu z 10.000,- eur na 5.000,- eur a povolil jej splácanie v mesačných splátkach.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "žalovaný porušil svoje povinnosti vyplývajúce mu zo zmluvy o poskytovaní služieb, keďže po ukončení zmluvného vzťahu v rozpore so zmluvou o poskytovaní služieb nadviazal spoluprácu s jeho obchodným partnerom",
+            "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,- eur",
+          "evidence": {
+            "quote": "vznikol mu nárok na zmluvnú pokutu vo výške 10.000,- eur",
+            "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_3"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "domáhal, aby súd uložil žalovanému povinnosť zaplatiť mu 10.000,- eur s príslušenstvom",
+              "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_0"
+            }
+          },
+          "final_awarded": {
+            "value": 5000,
+            "evidence": {
+              "quote": "znížil sumu zmluvnej pokuty na sumu 5.000,- eur, ktorú nepovažoval za neúmerne prísnu",
+              "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+              "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur"
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+                "quote": "Súd nepovažoval za potrebné ju obmedziť alebo vyhlásiť za neplatnú, nakoľko žalovaný ňou nebol obmedzený viac ako vyžadovala miera ochrany záujmov žalobcu."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+                "quote": "Súd tiež zdôraznil, že zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_18",
+                "quote": "Súd pri uplatňovaní moderačného práva nemusí zmluvnú pokutu znížiť vždy na úroveň výšky vzniknutej škody."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+                "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+                "quote": "napriek tomu bez písomného súhlasu žalobcu nadviazal spoluprácu s obchodnou spoločnosťou C. W., teda žalovaný v rozpore so zmluvou vykonával činnosť, ktorá má súťažnú povahu voči podnikaniu žalobcu."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+              "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur, ktorú nepovažoval za neúmerne prísnu, resp. vedúcu k neodôvodnenému prospechu na strane žalobcu."
+            },
+            {
+              "chunk_id": "KS_Prešov_5Cob_11_2022_00_dokument.pdf_chunk_4",
+              "quote": "Súd tiež zdôraznil, že zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu, s ohľadom na skutočnosť, že Slovenská republika funguje na princípoch trhovej ekonomiky."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie aplikoval § 301 Obchodného zákonníka a znížil pôvodne požadovanú zmluvnú pokutu z 10.000 EUR na 5.000 EUR, keďže dospel k záveru, že pôvodná suma bola neprimerane vysoká, pretože predstavovala viac ako 50 % všetkých úhrad poskytnutých žalovanému za dobu trvania zmluvy. Súd však zároveň zdôraznil, že znížená suma nie je neúmerne prísna a plní svoju zabezpečovaciu funkciu, keďže postup žalovaného ohrozoval podnikanie žalobcu v podmienkach trhovej ekonomiky. Odvolací súd toto rozhodnutie potvrdil a odmietol argumentáciu žalovaného, že pokuta mala byť znížená presne na úroveň preukázanej škody, keďže súd nie je viazaný výškou škody pri uplatňovaní moderačného práva."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_11_2022_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/11/2022",
+      "decision_date": "21.06.2022",
+      "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

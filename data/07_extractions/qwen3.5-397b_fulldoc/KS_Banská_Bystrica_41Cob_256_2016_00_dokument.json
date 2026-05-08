@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19026,
+    "completion_tokens": 2153,
+    "cost_usd": 0.0125,
+    "latency_seconds": 22.56,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Mayerhofer-Agrarhandel GmbH uplatnil proti žalovanému OSIVO a.s. nárok na zaplatenie zmluvnej pokuty vo výške 297.458 EUR pre porušenie zmluvných povinností podľa Zmluvy o produkcii a predaji č. 3A/2011, konkrétne pre nedodanie dohodnutého množstva repky olejnej v rokoch 2012 a 2013. Žalovaný argumentoval neplatnosťou zmluvy, vyššou mocou a neprimeranosťou pokuty.",
+      "verdict_summary": "Odvolací súd zmenil rozhodnutie prvého stupňa v časti, kde súd priznal žalobcovi 48.780,31 EUR, a žalobu v tejto časti zamietal. Vo zvyšku, kde prvostupňový súd žalobu zamietol, rozhodnutie potvrdil.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalobca uviedol, že strany si dohodli zmluvnú pokutu vo výške 100,-Eur za každú nedodanú tonu predmetu plnenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "100,-Eur za každú nedodanú tonu predmetu plnenia",
+          "evidence": {
+            "quote": "Žalobca uviedol, že strany si dohodli zmluvnú pokutu vo výške 100,-Eur za každú nedodanú tonu predmetu plnenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 297458,
+            "evidence": {
+              "quote": "Žalobca si žalobou doručenou na Okresný súd vo Zvolene dňa 27.9.2013 uplatnil proti žalovanému právo na zaplatenie 297.458,-Eur s príslušenstvom, ako zaplatenie zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "I. Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "other",
+            "evidence": {
+              "quote": "I. Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Prvostupňový súd originally priznal žalobcovi sumu 48.780,31 EUR, pričom využil moderačné právo podľa § 301 Obchodného zákonníka a znížil vypočítanú pokutu z 97.500 EUR na výšku vzniknuté škody. Odvolací súd však toto rozhodnutie zmenil a žalobu v celej časti týkajúcej sa zmluvnej pokuty zamietal, čím sa nárok na pokutu stal neuspokojeným. Súd prvej inštancie akceptoval námietku vyššej moci v určitom rozsahu a zohľadnil dovolenú odchýlku plnenia.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie však využil svoje moderačné právo podľa § 301 Obchodného zákonníka, pretože vyhodnotil zmluvnú pokutu ako neprimerane vysokú a znížil ju na čiastku 48.780,31 Eur, t.j. do výšky škody, ktorá podľa názoru súdu prvej inštancie vznikla žalobcovi.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "I. Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "znížil ju na čiastku 48.780,31 Eur, t.j. do výšky škody, ktorá podľa názoru súdu prvej inštancie vznikla žalobcovi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "vyhodnotil zmluvnú pokutu ako neprimerane vysokú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded.evidence (specific reasoning quote for dismissal in full_doc)"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_256_2016_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/256/2016",
+      "decision_date": "29.11.2017",
+      "ecli": "ECLI:SK:KSBB:2017:6713216434.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

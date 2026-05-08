@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6543,
+    "completion_tokens": 2271,
+    "cost_usd": 0.0309,
+    "latency_seconds": 8.99,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ Orange Slovensko, a.s. žaloval odporcu VAZOL spol. s.r.o. o zaplatenie sumy 48.468,21 EUR s príslušenstvom, ktorá pozostávala z neuhradených platieb za poskytnuté telekomunikačné služby a zmluvných pokút. Odporca sa dostal do omeškania s platbami za služby poskytované na základe viacerých zmlúv o pripojení a ich dodatkov.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Pezinok, ktorý zamietol návrh navrhovateľa v časti zaplatenia sumy 32.198,18 EUR (zmluvné pokuty) s príslušenstvom a úrok z omeškania zo sumy 1,33 EUR, a priznal navrhovateľovi len sumu 16.268,70 EUR s úrokom z omeškania. Odvolací súd nepriznal odporcovi náhradu trov odvolacieho konania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "v prípade, ak nesplní bezo zvyšku niektorý zo svojich záväzkov podľa čl. 2 ods. 4 a 3 preto, že pred uplynutím doby uvedenej v čl. 2 ods. 3 písm. a/ jeho zavinením dôjde ku skončeniu platnosti tohto dodatku alebo aj zmluvy v ich zmysle, alebo že si riadne a včas nesplní niektorý iný záväzok podľa nich, bude povinný zaplatiť zmluvnú pokutu vo výške zľavy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "vo výške zľavy",
+          "evidence": {
+            "quote": "bude povinný zaplatiť zmluvnú pokutu vo výške zľavy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 32198.18,
+            "evidence": {
+              "quote": "ďalej návrh v časti zaplatenia sumy 32.198,18 EUR s príslušenstvom a úrok z omeškania vo výške 0,05 % denne zo sumy 1,33 EUR od 3.7.2009 do zaplatenia zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "ďalej návrh v časti zaplatenia sumy 32.198,18 EUR s príslušenstvom a úrok z omeškania vo výške 0,05 % denne zo sumy 1,33 EUR od 3.7.2009 do zaplatenia zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "návrh v časti zaplatenia sumy 32.198,18 EUR s príslušenstvom a úrok z omeškania vo výške 0,05 % denne zo sumy 1,33 EUR od 3.7.2009 do zaplatenia zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "V tejto časti súd prvého stupňa vyhodnotil návrh za predčasne podaný, keď ani prostredníctvom súdu nebola odporcovi žiadna písomnosť doručená s hmotnoprávnymi účinkami, a preto návrh v časti zaplatenia zmluvnej pokuty vrátane úroku z omeškania zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože výzva na zaplatenie zmluvnej pokuty (Pokus o pokonávku zo dňa 18.6.2009) bola neurčitá. Nebolo v nej špecifikované, ktoré konkrétne porušenie zmluvnej povinnosti odporcu je sankcionované, ani ktorý článok a ktorej zmluvy bol porušený. Z tohto dôvodu súd považoval návrh za predčasne podaný, keďže odporcovi nebola doručená písomnosť s hmotnoprávnymi účinkami. Odvolací súd sa s týmto záverom stotožnil.",
+          "key_quotes": [
+            {
+              "quote": "Samotnú výzvu navrhovateľa obsiahnutú v listine Pokus o pokonávku zo dňa 18.6.2009 súd prvého stupňa vyhodnotil ako neurčitú, nakoľko v nej nebolo uvedené, ktoré konkrétne porušenie zmluvnej povinnosti odporcu je sankcionované, a preto súd prvého stupňa vyhodnotil tento právny úkon ako neurčitý, ktorý nemá za následok splatnosť zmluvnej pokuty, ktorej zaplatenia sa navrhovateľ v konaní domáhal.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V tejto časti súd prvého stupňa vyhodnotil návrh za predčasne podaný, keď ani prostredníctvom súdu nebola odporcovi žiadna písomnosť doručená s hmotnoprávnymi účinkami, a preto návrh v časti zaplatenia zmluvnej pokuty vrátane úroku z omeškania zamietol.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "z pokusu o pokonávku nie je zrejmé, ktoré konkrétne porušenie zmluvnej povinnosti odporcu je sankcionované, nakoľko z nej vyplýva iba všeobecný dôvod, a to porušenie zmluvných povinností, no ďalej nie je špecifikované, ktorý článok a ktorej zmluvy/zmlúv, resp. ich dodatkov bol porušený.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Samotnú výzvu navrhovateľa obsiahnutú v listine Pokus o pokonávku zo dňa 18.6.2009 súd prvého stupňa vyhodnotil ako neurčitú, nakoľko v nej nebolo uvedené, ktoré konkrétne porušenie zmluvnej povinnosti odporcu je sankcionované",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_387_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/387/2013",
+      "decision_date": "22.10.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1712220787.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

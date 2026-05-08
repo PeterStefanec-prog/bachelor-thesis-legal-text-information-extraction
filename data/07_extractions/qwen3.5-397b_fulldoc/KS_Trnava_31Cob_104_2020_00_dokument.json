@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 30057,
+    "completion_tokens": 1892,
+    "cost_usd": 0.0161,
+    "latency_seconds": 38.9,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za omeškanie žalovaného s odovzdaním diela (stavebné práce na stavbe Rotunda) podľa zmluvy o dielo. Žalovaný namietal neplatnosť dojednania o zmluvnej pokute pre neurčitosť termínu a základu výpočtu, ako aj absenciu omeškania z dôvodu neposkytnutia súčinnosti žalobcom.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovanému uložený záväzok zaplatiť žalobcovi zmluvnú pokutu vo výške 57.812,09 eura. Súd uznal platnosť dojednania o zmluvnej pokute a určil, že k odovzdaniu diela došlo až dňom podpisu protokolu 9.11.2009."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd žalobe po jej čiastočnom späťvzatí vyhovel v rozsahu 57.812,09 eura."
+            },
+            "value": 57812.09
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "zmluvná pokuta za 131 dní činí 69.325,59 eura."
+            },
+            "value": 69325.59
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "cena diela 889.416,80 eura"
+            },
+            "value": 889416.8
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Nárok na zmluvnú pokutu však je aj v prípade, ak v dôsledku porušenia povinnosti zabezpečenej zmluvnou pokutou škoda nevznikla."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Zhotoviteľ sa dostal do omeškania s odovzdaním diela v rozsahu 131 dní, z jeho strany došlo k porušeniu zmluvy"
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalovaný návrh na zníženie zmluvnej pokuty v zmysle ust. § 301 OBZ nedal."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Sama neprimeraná výška zmluvnej pokuty nekvalifikuje jej dojednanie za také, ktoré je v rozpore s dobrými mravmi v zmysle § 39 OZ"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta totiž plní nielen reparačnú, ale aj sankčnú funkciu, t. j. je sankciou za nesplnenie zmluvnou pokutou zabezpečenej povinnosti."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "nie je v predmetnej veci podstatné, či objednávateľovi v súvislosti s oneskoreným odovzdaním diela vznikla reálna škoda a v akej výške."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalovaný teda nepreukázal skutočnosť, že predmetné rozhodnutie o zmene stavby malo vplyv na práce ním vykonávané a jeho omeškanie so zhotovením diela."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Naopak žalobca dôvodil, že oneskorené odovzdanie diela, viedlo k tomu, že žalobca počas letnej sezóny nemohol prevádzkovať časť kúpaliska, prečo nedosiahol očakávané zisky."
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "positive"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "zmluvná pokuta vo výške 0,05% z ceny diela za každý deň omeškania"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Žalovaný návrh na zníženie zmluvnej pokuty v zmysle ust. § 301 OBZ nedal."
+            }
+          ],
+          "legal_reasoning_summary": "Súd potvrdil platnosť dojednania o zmluvnej pokute a určil, že základom pre výpočet je cena diela bez DPH. Hoci žalovaný namietal neprimeranosť pokuty a absenciu škody, súd zdôraznil sankčnú funkciu pokuty a skutočnosť, že žalovaný nepodal návrh na jej zníženie podľa § 301 OBZ. Výška pokuty bola vypočítaná ako 0,05 % z ceny diela bez DPH za každý deň omeškania (130 dní), čo predstavuje sumu 57.812,09 EUR."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu vo výške 0,05% z ceny diela za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,05% z ceny diela za každý deň omeškania"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_104_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/104/2020",
+      "decision_date": "24.02.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2212208449.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

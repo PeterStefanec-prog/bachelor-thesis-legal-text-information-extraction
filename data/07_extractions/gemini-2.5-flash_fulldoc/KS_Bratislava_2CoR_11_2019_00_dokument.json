@@ -1,0 +1,579 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16374,
+    "completion_tokens": 7210,
+    "cost_usd": 0.0926,
+    "latency_seconds": 24.94,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zrušenia rozhodcovského rozsudku, ktorým mu bola zamietnutá žaloba na zaplatenie zádržného a zmluvnej pokuty, a zároveň bol zaviazaný zaplatiť žalovanému zmluvnú pokutu. Žalobca namietal nepreskúmateľné odôvodnenie rozhodcovského rozsudku, narušenie rovnosti strán v konaní a rozpor zmluvných pokút s verejným poriadkom.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý zamietol žalobu žalobcu o zrušenie rozhodcovského rozsudku. Žalovanému bol priznaný nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "za omeškanie žalobcu so splnením zmluvnej povinnosti vinkulácie poistenia v zmluvne dohodnutej poisťovni v zmysle bodu 11.2 zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+          "evidence": {
+            "quote": "vo výške 0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 93246.99,
+            "evidence": {
+              "quote": "vo výške 93.246,99 Eur za omeškanie žalobcu so splnením zmluvnej povinnosti vinkulácie poistenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozhodcovský súd rozhodcovským rozsudkom sp. zn. Rsp V-77/2013 vydaným dňa 28.11.2014 zamietol žalobu žalobcu v časti zaplatenia čiastky 125.164,50 Eur s príslušenstvom, zastavil konanie v časti žaloby 4.201,36 Eur z dôvodu jej späťvzatia žalobcom, zastavil konanie v časti žaloby a vzájomnej žaloby 61.159,69 Eur z dôvodu zániku pohľadávky jej započítaním, zaviazal žalobcu zaplatiť žalovanému čiastku 483.976,01 Eur v lehote 15 dní odo dňa právoplatnosti rozhodcovského rozsudku",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie nezistil žiadne procesné pochybenie rozhodcovského súdu, ktoré by viedlo k zrušeniu rozhodcovského rozsudku. Žalobca tieto zmluvné pokuty nespochybňoval, a preto nebol dôvod na ich zrušenie. Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán.",
+          "key_quotes": [
+            {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán, teda dostatočne jasne vyjadril v tomto smere aj svoj právny názor a odôvodnil aj svoj postup.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "titulom neposkytnutia súčinnosti počas kolaudačného konania, nakoľko túto zmluvnú povinnosť si žalobca neplnil v období od 15.08.2012 do 11.09.2012",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "600,00 Eur denne",
+          "evidence": {
+            "quote": "v dohodnutej výške 600,00 Eur denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 16200.0,
+            "evidence": {
+              "quote": "spolu vo výške 16.200,00 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozhodcovský súd rozhodcovským rozsudkom sp. zn. Rsp V-77/2013 vydaným dňa 28.11.2014 zamietol žalobu žalobcu v časti zaplatenia čiastky 125.164,50 Eur s príslušenstvom, zastavil konanie v časti žaloby 4.201,36 Eur z dôvodu jej späťvzatia žalobcom, zastavil konanie v časti žaloby a vzájomnej žaloby 61.159,69 Eur z dôvodu zániku pohľadávky jej započítaním, zaviazal žalobcu zaplatiť žalovanému čiastku 483.976,01 Eur v lehote 15 dní odo dňa právoplatnosti rozhodcovského rozsudku",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie nezistil žiadne procesné pochybenie rozhodcovského súdu, ktoré by viedlo k zrušeniu rozhodcovského rozsudku. Žalobca tieto zmluvné pokuty nespochybňoval, a preto nebol dôvod na ich zrušenie. Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán.",
+          "key_quotes": [
+            {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán, teda dostatočne jasne vyjadril v tomto smere aj svoj právny názor a odôvodnil aj svoj postup.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Nebol dodržaný porušením zmluvných povinností žalobcu zmluvný termín kolaudácie taktiež po dobu od 15.08.2012 (termín podľa zmluvy) do 11.09.2012 (nadobudnutie právoplatnosti kolaudačného rozhodnutia)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+          "evidence": {
+            "quote": "vo výške 0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 37024.54,
+            "evidence": {
+              "quote": "spolu vo výške 37.024,54 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozhodcovský súd rozhodcovským rozsudkom sp. zn. Rsp V-77/2013 vydaným dňa 28.11.2014 zamietol žalobu žalobcu v časti zaplatenia čiastky 125.164,50 Eur s príslušenstvom, zastavil konanie v časti žaloby 4.201,36 Eur z dôvodu jej späťvzatia žalobcom, zastavil konanie v časti žaloby a vzájomnej žaloby 61.159,69 Eur z dôvodu zániku pohľadávky jej započítaním, zaviazal žalobcu zaplatiť žalovanému čiastku 483.976,01 Eur v lehote 15 dní odo dňa právoplatnosti rozhodcovského rozsudku",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie nezistil žiadne procesné pochybenie rozhodcovského súdu, ktoré by viedlo k zrušeniu rozhodcovského rozsudku. Žalobca tieto zmluvné pokuty nespochybňoval, a preto nebol dôvod na ich zrušenie. Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán.",
+          "key_quotes": [
+            {
+              "quote": "Žalobca síce žalobou žiadal zrušiť napadnutý rozhodcovský rozsudok v celom rozsahu, avšak tieto zmluvné pokuty v žalobe ani čo do výšky ani čo do dôvodu nespochybňoval.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán, teda dostatočne jasne vyjadril v tomto smere aj svoj právny názor a odôvodnil aj svoj postup.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_4",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "titulom nepredloženia vyhlásenia o splnení finančných povinností voči jeho rozhodujúcim subdodávateľom formou čestného vyhlásenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne zo zmluvnej ceny diela",
+          "evidence": {
+            "quote": "vo výške 0,05 % denne zo zmluvnej ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 398664.17,
+            "evidence": {
+              "quote": "vo výške 398.664,17 Eur titulom nepredloženia vyhlásenia o splnení finančných povinností voči jeho rozhodujúcim subdodávateľom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozhodcovský súd rozhodcovským rozsudkom sp. zn. Rsp V-77/2013 vydaným dňa 28.11.2014 zamietol žalobu žalobcu v časti zaplatenia čiastky 125.164,50 Eur s príslušenstvom, zastavil konanie v časti žaloby 4.201,36 Eur z dôvodu jej späťvzatia žalobcom, zastavil konanie v časti žaloby a vzájomnej žaloby 61.159,69 Eur z dôvodu zániku pohľadávky jej započítaním, zaviazal žalobcu zaplatiť žalovanému čiastku 483.976,01 Eur v lehote 15 dní odo dňa právoplatnosti rozhodcovského rozsudku",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto svoj právny názor vyslovený už v pôvodnom konaní na túto námietku žalobcu nezmenil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne zrušil časť rozhodcovského rozsudku týkajúcu sa tejto pokuty pre neprimeranosť podľa § 301 Obch. zák. Odvolací súd však toto rozhodnutie zrušil s odôvodnením, že súd prvej inštancie nemôže vykonávať vecný prieskum rozhodcovského rozsudku a čiastočné zrušenie nie je zákonom umožnené. Následne súd prvej inštancie zamietol žalobu v celom rozsahu, keďže nezistil žiadne procesné pochybenia rozhodcovského súdu, ktoré by odôvodňovali zrušenie rozsudku. Rozhodcovský súd sa námietkou neprimeranosti zaoberal a odôvodnil ju rovnosťou strán v zmluve.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie mal za to, že Rozhodcovský súd sa tejto žalobcom vznesenej oprávnenej námietke dostatočne nevenoval, neskúmal s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti jej primeranosť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozhodcovský súd v danom prípade opomenul prihliadať na hodnotu a význam zabezpečovanej povinnosti, priznaná zmluvná pokuta má charakter výlučne sankčný, ale nemôže mať charakter až likvidačný.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie preto v pôvodnom konaní rozsudkom sp. zn. 21Cr/9/2015-282 zo dňa 14.02.2017 žalobou napadnutý rozhodcovský rozsudok čo do výšky uplatneného nároku na zmluvnú pokutu v jej časti 261.536,25 Eur zrušil, čo evidentne odôvodnil len s poukazom na ustanovenie § 301 veta prvá Obch. zák.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie napadnutým rozsudkom zrušil rozhodcovský rozsudok v časti týkajúcej sa nároku žalovaného na zaplatenie zmluvnej pokuty a vo zvyšku žalobu zamietol, čím vykonal vecný prieskum rozhodcovského rozsudku a rozhodol spôsobom, ktorý zákon neumožňuje.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozhodcovský súd sa námietkou žalobcu k výške žalovaným uplatňovanej zmluvnej pokute dostatočne vyjadril v odôvodnení žalobou napadnutého rozhodcovského rozsudku s poukazom práve na rovnosť strán, teda dostatočne jasne vyjadril v tomto smere aj svoj právny názor a odôvodnil aj svoj postup.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Rozhodcovský súd v odôvodnení rozhodcovského rozsudku len konštatoval, že zmluvná pokuta je \"primeraná\", pričom odkázal na rovnakú percentuálnu výšku zmluvnej pokuty uplatnenej žalobcom. Toto porovnanie však ako odôvodnenie neobstojí.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Rozhodcovský súd v danom prípade opomenul prihliadať na hodnotu a význam zabezpečovanej povinnosti, priznaná zmluvná pokuta má charakter výlučne sankčný, ale nemôže mať charakter až likvidačný.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "absencia čestného prehlásenia zhotoviteľa o uspokojení svojich subdodávateľov ako listina nemá sama osebe za následok vznik škody na strane objednávateľa, a teda žalovanému nepredložením tejto listiny v určenej lehote nevznikla žiadna skutočná škoda, a to ani titulom ušlého zisku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Následne súd prvej inštancie s poukazom na dlhodobú rozhodovaciu prax a známe skutočnosti z obdobných zmlúv o dielo, prípadne i iných obchodnoprávnych vzťahov, kde sa okrem percentuálneho denného rozsahu zmluvnej pokuty obvykle uvádza i maximálna výška tejto sankcie, a to do 10 % zo zmluvnej ceny diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2CoR_11_2019_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2CoR/11/2019",
+      "decision_date": "14.07.2020",
+      "ecli": "ECLI:SK:KSBA:2020:1515897608.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

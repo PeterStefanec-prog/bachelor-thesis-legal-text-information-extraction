@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14358,
+    "completion_tokens": 1582,
+    "cost_usd": 0.0517,
+    "latency_seconds": 26.72,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Premier Consulting EU, s.r.o. podal žalobu na zaplatenie sumy 16.963,43 eur spolu s úrokom z omeškania a zmluvnou pokutou vo výške 0,1% denne. Žalovaný PEKÁREŇ ILaS s.r.o. nesúhlasil s uplatňovanou zmluvnou pokutou a tvrdil, že žalobca od neho duplicitne požaduje plnenie, ktoré je v rozpore so zákonom a dobrými mravmi.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na zaplatenie sumy 16.963,43 eur spolu s úrokom z omeškania a zmluvnou pokutou.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur od 26.10.2016 do 24.8.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur od 26.10.2016 do 24.8.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 16963.43,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vec právne posúdil podľa ust. § 536 ods. 1,2,3 Obchodného zákonníka, § 546 ods. 1, 548 ods. 1, 554 ods. 1, 554 ods. 6, 544 ods. 1,2 Obchodného zákonníka, § 1, § 365, 369c, Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9% ročne zo sumy 16963,43 eur od 26.10.2016 až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vec právne posúdil podľa ust. § 536 ods. 1,2,3 Obchodného zákonníka, § 546 ods. 1, 548 ods. 1, 554 ods. 1, 554 ods. 6, 544 ods. 1,2 Obchodného zákonníka, § 1, § 365, 369c, Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že žaloba je v celom rozsahu dôvodná a je potrebné jej vyhovieť. Zmluvná pokuta vo výške 0,1% denne bola dohodnutá v zmluve a súd nepovažoval za potrebné použiť moderačné právo, pretože výška pokuty nie je neprimeraná. Súd priznal žalobcovi aj úroky z omeškania vo výške 9% ročne, pretože táto výška je v súlade s obchodným zákonníkom.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie vec právne posúdil podľa ust. § 536 ods. 1,2,3 Obchodného zákonníka, § 546 ods. 1, 548 ods. 1, 554 ods. 1, 554 ods. 6, 544 ods. 1,2 Obchodného zákonníka, § 1, § 365, 369c, Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "S tým istým peňažným plnením a oba tieto nároky možno uplatňovať popri sebe kumulatívne a nie je to v rozpore so zákonom ani v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta má preventívny charakter a zabezpečí v danom prípade povinnosť objednávateľa zaplatiť dohodnutú cenu diela.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvnú pokutu žalobca obmedzil od- do a teda sa ďalej nenavyšuje oproti úrokom z omeškania, ktoré bežia až do zaplatenia dlžnej žalovanej pohľadávky zo strany dlžníka - žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný počas konania poukázal na to, že bol uzavretý dodatok k zmluve, kde došlo k úprave sumy príspevku poskytnutého žalovanému na základe žalobcom vypracovanej žiadosti na sumu 89.686,93 eur a teda aj žalovaná suma mala vychádzať z tejto sumy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "S tým istým peňažným plnením a oba tieto nároky možno uplatňovať popri sebe kumulatívne a nie je to v rozpore so zákonom ani v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca vo všeobecnosti informuje svojich klientov o podmienke a čerpaní dotácie vyplývajúcich z predpisov vydaný ministerstvami a agentúrou (PPA).",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_46_2018_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/46/2018",
+      "decision_date": "08.11.2018",
+      "ecli": "ECLI:SK:KSPO:2018:6117230109.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

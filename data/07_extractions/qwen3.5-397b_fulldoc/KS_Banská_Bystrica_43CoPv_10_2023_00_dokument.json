@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21886,
+    "completion_tokens": 3047,
+    "cost_usd": 0.0157,
+    "latency_seconds": 39.4,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 50.000 EUR za porušenie zmluvne dohodnutého zákazu konkurencie žalovaným po skončení zmluvného vzťahu. Žalovaný namietal neplatnosť konkurenčnej doložky a neprimeranosť výšky zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorým bol žalovanému uložený zákaz konkurenčného konania a povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 50.000 EUR.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Poradca vyhlasuje, že v prípade, ak poruší svoju povinnosť zákazu konkurencie vyplývajúcu z tohto § 5 tejto Zmluvy, Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "25.000,00 Eur za každé jednotlivé porušenie",
+          "evidence": {
+            "quote": "Poradca vyhlasuje, že v prípade, ak poruší svoju povinnosť zákazu konkurencie vyplývajúcu z tohto § 5 tejto Zmluvy, Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 50000,
+            "evidence": {
+              "quote": "vznikol žalobcovi aj nárok na zaplatenie zmluvnej pokuty podľa § 5 ods. 4 zmluvy v celkovej výške 50.000,- Eur, t.j. 2 x 25.000,- Eur za jednotlivé porušenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 50000,
+            "evidence": {
+              "quote": "Súd prvej inštancie potom dospel súd k záveru, že žalovaný pri výkone svojej činnosti spočívajúcej v poskytovaní výživového poradenstva používa, resp. používal označenie \"metabolic balance\", a to bez súhlasu majiteľa ochrannej známky EÚ č. 006151799, čím dochádza k porušovaniu práv k ochrannej známke žalobcu, čo je porušením čl. 9 Nariadenia Európskeho parlamentu a rady (EU) č. 2017/1001 o ochrannej známke Európskej únie, a preto uložil žalovanému povinnosť zdržať sa používania označenia \"metabolic balance\" v súvislosti s ponukou, distribúciou, skladovaním, nákupom, predajom a reklamou produktov, doplnkov, zariadení a služieb v oblasti zdravého životného štýlu, výživy, stravovania, telesnej kultúry a dietetického poradenstva (výrok I. rozhodnutia). Používaním označenia \"metabolic balance\", ako aj propagáciou a prezentáciou svojej činnosti, pri ktorej žalovaný uvádzal, že vykonáva výživové poradenstvo, prípadne diagnostiku cez vzorku krvi, žalovaný porušil zmluvne dojednaný zákaz konkurencie a dopustil sa zároveň nekalosúťažného konania v zmysle § 44, § 47 Obchodného zákonníka, a preto súd prvej inštancie uložil žalovanému povinnosť zdržať sa predaja, prípadne vývoja vlastných nutričných plánov alebo programov založených na báze krvných výsledkov a predaja nutričných plánov alebo programov tretích osôb založených na báze krvných výsledkov (výrok II. rozhodnutia). Pretože žalovaný na základe uvedeného porušil svoje zmluvné povinnosti vyplývajúce z § 5 písm. a) a c) Zmluvy o spolupráci, čím porušil zmluvne dojednaný zákaz konkurencie, vznikol žalobcovi aj nárok na zaplatenie zmluvnej pokuty podľa § 5 ods. 4 zmluvy v celkovej výške 50.000,- Eur, t.j. 2 x 25.000,- Eur za jednotlivé porušenia (výrok III. rozhodnutia), keď nárok na zaplatenie zmluvnej pokuty bol dojednaný zmluvne medzi žalobcom a žalovaným, žalovaný mal vedomosť o povinnostiach, v prípade porušenia ktorých bude povinný zaplatiť zmluvnú pokutu a rovnako tak mal vedomosť aj o výške zmluvnej pokuty za jednotlivé porušenie, pričom ak žalovaný nesúhlasil so zmluvne stanovenou výškou zmluvnej pokuty, prípadne porušeniami povinností, na ktoré je naviazaná, mohol vyjadriť svoju nevôľu pri podpise zmluvy.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "vo výroku III. uložil žalovanému povinnosť do 3 dní od právoplatnosti rozhodnutia zaplatiť žalobcovi zmluvnú pokutu vo výške 50.000,- Eur, s úrokom z omeškania vo výške 9% ročne od 03.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd je potom toho právneho názoru, že ak v rámci zmluvnej voľnosti strany dojednajú konkurenčnú doložku aj v inom zmluvnom type ako zmluve o obchodnom zastúpení, súdy môžu dospieť k záveru, že takáto doložka je absolútne neplatná, avšak nie bez ďalšieho len z dôvodu, že konkurenčná doložka nebude mať náležitosti definované v ustanovení § 672a ods. 1 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že ide o vzťah medzi obchodnými spoločnosťami, kde platí zásada zmluvnej voľnosti a ustanovenie § 672a Obchodného zákonníka sa aplikuje len na zmluvy o obchodnom zastúpení. Žalovaný nepreukázal, že by dojednaná konkurenčná doložka bola v rozpore s dobrými mravmi alebo zásadami poctivého obchodného styku. Súd tiež odmietol moderáciu zmluvnej pokuty podľa § 301 Obchodného zákonníka, keďže žalovaný nepreukázal neprimeranosť výšky pokuty vo vzťahu k hodnote zabezpečovanej povinnosti a jeho tvrdenia o výnosoch neboli podložené dôkazmi.",
+          "key_quotes": [
+            {
+              "quote": "Nakoľko v súdenej veci sa jedná o vzťah medzi obchodnými spoločnosťami bolo ich slobodnou vôľou, akým spôsobom a v akom znení si dojednajú konkurenčnú doložku, ktorá ich bude obmedzovať počas, prípadne po skončení ich vzájomnej spolupráci.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Všeobecné a dôkazom nepodopreté tvrdenie žalovaného o výnosoch z uzavretej Zmluvy strán preto neboli spôsobilé na to, aby súdy k moderácii zmluvnej pokuty pristúpili.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Skutočnosť, že konkurenčná doložka dojednaná v inom zmluvnom type ako zmluve o obchodnom zastúpení nemá náležitosti definované v ustanovení § 672a Obchodného zákonníka preto bez ďalšieho nemôže byť hodnotená ako absolútne neplatná pre rozpor s § 672a Obchodného zákonníka alebo obchádzanie § 672a Obchodného zákonníka, ale v konkrétnych okolnostiach tej ktorej veci môže byť hodnotená len ako v rozpore so zásadami poctivého obchodného styku, prípadne s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "v zmysle § 301 Obchodného zákonníka zákonným rámcom pre moderáciu zmluvnej pokuty súdom je práve prihliadnutie na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Rovnako nie je možné primeranosť zmluvnej pokuty odvodzovať ani od výšky škody, nakoľko túto si žalobca v žalobe neuplatnil a ani nepreukázal je vznik a výšku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný dlhodobo a preukázateľne porušoval zmluvne dohodnutý zákaz konkurencie a k porušovaniu dochádzalo tým, že žalovaný preukázateľne a dlhodobo používal označenie \"metabolic balance\" v období po ukončení zmluvného vzťahu so žalobcom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoPv/10/2023",
+      "decision_date": "14.09.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6120386576.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

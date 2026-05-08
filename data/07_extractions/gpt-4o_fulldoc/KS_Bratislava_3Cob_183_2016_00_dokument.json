@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9407,
+    "completion_tokens": 999,
+    "cost_usd": 0.0335,
+    "latency_seconds": 21.96,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca NORDBELLs.r.o. sa domáhal zaplatenia sumy 8.000 EUR s príslušenstvom od žalovaného Orange Slovensko, a.s. na základe Zmluvy o obchodnom zastúpení. Žalovaný si uplatnil nárok na zaplatenie zmluvnej pokuty vo výške 8.000 EUR ako kompenzáciu.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý priznal žalobcovi nárok na zaplatenie sumy 8.000 EUR s príslušenstvom.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V Zmluve a jej čl. 6 bod 12 a čl. 23 bod 3 písm. k) je presne určená povinnosť ktorou je zabezpečovaná zmluvná pokuta. Ide o povinnosť dodržiavať model odmeňovania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": "zmluvnej pokuty zakotvenej v Zmluve vo výške 8.000 EUR",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 8000,
+            "evidence": {
+              "quote": "zmluvnej pokuty zakotvenej v Zmluve vo výške 8.000 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že dojednania o zmluvnej pokute sú absolútne neplatné, pretože povinnosť, ktorú mala zmluvná pokuta zabezpečiť, nebola dostatočne určitá. Súd uviedol, že neurčitosť a nejednoznačnosť vymedzenia povinnosti robí dojednanie neplatným. Odvolací súd potvrdil tento záver a rozsudok súdu prvej inštancie.",
+          "key_quotes": [
+            {
+              "quote": "dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_183_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/183/2016",
+      "decision_date": "21.03.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1214203205.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

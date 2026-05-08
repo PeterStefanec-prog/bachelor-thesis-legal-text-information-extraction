@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9426,
+    "completion_tokens": 1903,
+    "cost_usd": 0.0081,
+    "latency_seconds": 17.88,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ Orange Slovensko, a.s. sa domáhal zaplatenia sumy 873,55 eur s príslušenstvom od odporcu, ktorý ako podnikateľ nezaplatil fakturované telekomunikačné služby a porušil povinnosť zotrvať v zmluvnom vzťahu počas doby viazanosti. Spornou bola najmä výška uplatnenej zmluvnej pokuty, ktorú odporca považoval za neprimeranú a namietal aplikáciu spotrebiteľského práva.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok okresného súdu, ktorý znížil pôvodne uplatnenú zmluvnú pokutu z 663,88 eur na 400 eur a uložil odporcovi povinnosť zaplatiť celkovú sumu 549,46 eur spolu s úrokom z omeškania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "výšku škody, ktorá navrhovateľovi vznikla v dôsledku nesplnenia si povinnosti odporcom zotrvať v zmluvnom vzťahu po stanovenú dobu viazanosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20 000,- Sk (663,88 eur)",
+          "evidence": {
+            "quote": "bol v prípade porušenia niektorej zo zmluvne dohodnutých povinností účastník povinný zaplatiť zmluvnú pokutu vo výške 20 000,- Sk (663,88 eur)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 663.88,
+            "evidence": {
+              "quote": "Spornou zostala navrhovateľom uplatnená zmluvná pokuta pôvodne v sume 663,88 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 400.0,
+            "evidence": {
+              "quote": "považoval za primeranú zmluvnú pokutu vo výške 400 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,5 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 8,5% ročne z tejto sumy odo dňa omeškania 26.06.2008 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd správne považoval zmluvnú pokutu uplatnenú v takejto sume za neprimerane vysokú a následne potom zmluvnú pokutu s poukazom na ustanovenie § 301 Obchodného zákonníka znížil na sumu 400 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd využil svoje moderačné oprávnenie podľa § 301 Obchodného zákonníka, keďže považoval pôvodnú výšku pokuty za neprimerane vysokú. Výšku škody určil súčtom rozdielu medzi predajnou a zaplatenou cenou mobilného telefónu (300 eur) a pomernou časťou mesačných poplatkov za zostávajúce mesiace doby viazanosti (100 eur). Celková škoda tak bola stanovená na 400 eur, čo zodpovedá priznanej výške zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "vychádzajúc z výšky škody spôsobenej navrhovateľovi porušením zmluvnej povinnosti zo strany odporcu považoval za primeranú zmluvnú pokutu vo výške 400 eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ustanovenie § 301 Obchodného zákonníka umožňuje súdu neprimerane vysokú zmluvnú pokutu znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vychádzajúc z výšky škody spôsobenej navrhovateľovi porušením zmluvnej povinnosti zo strany odporcu považoval za primeranú zmluvnú pokutu vo výške 400 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "moderation_analysis.factors.dobre_mravy.evidence",
+        "moderation_analysis.factors.pomer_k_istine.evidence",
+        "moderation_analysis.factors.spravanie_dlznika.evidence",
+        "moderation_analysis.factors.kumulacia_s_urokom.evidence",
+        "moderation_analysis.factors.spravanie_veritela.evidence"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_14Co_371_2012_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "14Co/371/2012",
+      "decision_date": "03.09.2013",
+      "ecli": "ECLI:SK:KSBB:2013:6712203774.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

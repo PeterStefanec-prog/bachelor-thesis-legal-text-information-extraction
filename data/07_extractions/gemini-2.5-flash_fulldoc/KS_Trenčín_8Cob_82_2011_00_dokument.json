@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5976,
+    "completion_tokens": 2368,
+    "cost_usd": 0.0312,
+    "latency_seconds": 9.12,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 6.875,46 eur s príslušenstvom, ktorá pozostávala z neuhradeného podnájomného za mesiace júl a august 2006 a zmluvnej pokuty. Súd prvého stupňa žalobe čiastočne vyhovel v časti podnájomného a úrokov z omeškania, ale zamietol ju v časti zmluvnej pokuty a úrokov z omeškania z nej.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby ohľadom zmluvnej pokuty a v časti náhrady trov konania a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania žalovaného ako podnájomcu so zaplatením odplaty za podnájom alebo odplaty za služby spojené s užívaním o viac ako 30 dní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "3 násobku mesačného podnájmu pre prípad omeškania sa zo zaplatením podnájomného alebo odplaty za služby spojené s podnájmom o viac ako 30 dní",
+          "evidence": {
+            "quote": "Pri určovaní výšky zmluvnej pokuty, zmluvné strany vychádzali z 3 násobku mesačného podnájmu pre prípad omeškania sa zo zaplatením podnájomného alebo odplaty za služby spojené s podnájmom o viac ako 30 dní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3833.9,
+            "evidence": {
+              "quote": "V časti uplatnenej zmluvnej pokuty vo výške 3.833,90 eur a úroku z omeškania z tejto sumy, žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v časti výroku, ktorým vo zvyšku žalobu zamietol a vo výroku o náhrade trov konania zrušujea vec vracia tomuto súdu na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1% denne",
+          "evidence": {
+            "quote": "s 0,1% úrokom z omeškania od 26.08.2006 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa pri rozhodovaní o zmluvnej pokute vychádzal z nesprávneho právneho posúdenia veci, preto odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie (§ 221 ods. 1 písm. h/ a § 221 ods. 2 O.s.p.).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu s odôvodnením, že je v rozpore s dobrými mravmi, pretože povinnosť je už zabezpečená úrokom z omeškania. Odvolací súd s týmto názorom nesúhlasil, konštatoval platnosť dojednania o zmluvnej pokute a uviedol, že kumulácia zmluvnej pokuty a úrokov z omeškania je prípustná. Odvolací súd zrušil rozhodnutie súdu prvého stupňa a vrátil mu vec na ďalšie konanie, aby sa vysporiadal s výškou zmluvnej pokuty s ohľadom na moderačné právo podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Dospel k záveru, že zmluvná pokuta dohodnutá v čl. IV. bod 4.7 zmluvy o podnájme, je vzhľadom na povahu zabezpečovacej povinnosti, t.j. splatenie odplaty za podnájom, ktorá je zabezpečená úrokom z omeškania vo výške 0,1% z dlžnej sumy za každý deň omeškania, dojednaná v rozpore s dobrými mravmi.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa nestotožňuje s právnym názorom súdu prvého stupňa, že výška zmluvnej pokuty, ktorú si účastníci dojednali, je v rozpore s dobrými mravmi a preto je toto dojednanie neplatné.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z uvedeného vyplýva, že zmluvná pokuta môže byť dohodnutá popri zákonnej sankcii za omeškanie s plnením peňažného záväzku, t.j. popri úrokov z omeškania.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ak súd prvého stupňa pri právnom závere o platnom dojednaní zmluvnej pokuty dospeje k názoru, že výška pokuty je neprimerane vysoká, avšak z iného ako šikanózneho dôvodu, tak tento predpoklad je podmienkou pre použitie moderačného práva súdu podľa § 301 Ob.z. a následne nepriznanie nároku žalobcu v plnej výške.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dospel k záveru, že zmluvná pokuta dohodnutá v čl. IV. bod 4.7 zmluvy o podnájme, je vzhľadom na povahu zabezpečovacej povinnosti, t.j. splatenie odplaty za podnájom, ktorá je zabezpečená úrokom z omeškania vo výške 0,1% z dlžnej sumy za každý deň omeškania, dojednaná v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Poukázal na funkciu zmluvnej pokuty ako zabezpečovacieho prostriedku, ktorého použitie a aplikáciu si musia písomne zmluvné strany dohodnúť v zmluve.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Ust. § 301 Ob.z. stanovuje, že súd môže zmluvnú pokutu znížiť až do výšky, ktorá bola spôsobená veriteľovi porušením zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Z uvedeného vyplýva, že zmluvná pokuta môže byť dohodnutá popri zákonnej sankcii za omeškanie s plnením peňažného záväzku, t.j. popri úrokov z omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_82_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/82/2011",
+      "decision_date": "29.02.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3107214675.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11701,
+    "completion_tokens": 2210,
+    "cost_usd": 0.0097,
+    "latency_seconds": 35.62,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Navrhovateľ (Mesto Čadca) sa domáhal zaplatenia zmluvnej pokuty vo výške 8.298,47 EUR od odporcu (EURO HOME EAST, a.s.) z dôvodu odstúpenia od nájomnej zmluvy, keďže odporca nezačal v lehote dvoch rokov s výstavbou bytových domov podľa zmluvných podmienok. Odporca namietal neprimeranosť pokuty a zmenu hospodárskych podmienok, súd však jeho námietky zamietol.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bola odporcovi uložená povinnosť zaplatiť navrhovateľovi zmluvnú pokutu v plnej výške 8.298,47 EUR s príslušenstvom."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Napadnutým rozsudkom súd prvého stupňa uložil odporcovi povinnosť zaplatiť navrhovateľovi 8.298,47 eura s 9% úrokom z omeškania ročne od 10.12.2010 do zaplatenia"
+            },
+            "value": 8298.47
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "navrhovateľ sa návrhom na začatie konania doručeným súdu prvého stupňa dňa 23.08.2011 voči odporcovi domáhal zaplatenia istiny 8.298,47 eura s príslušenstvom, titulom zmluvnej pokuty"
+            },
+            "value": 8298.47
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "25.11.2010, t.j. do 09.11.2010, súd prvého stupňa odporcu podľa § 369 ods. 1 Obch. zákonníka zaviazal na zaplatenie úroku z omeškania vo výške 9%, a to podľa návrhu"
+          },
+          "rate_value": "9% ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "navrhovateľ pristúpil k odstúpeniu od zmluvy v dôsledku porušenia zmluvnej povinnosti, keď podľa čl. III bod 7 písm. a/ Zmluvy navrhovateľovi nepredložil právoplatné stavebné povolenie a písomné oznámenie o termíne zahájenia stavebných prác a nezačal s výstavbou bytových domov v lehote do 2 rokov"
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "dospel k záveru, že 8 % zmluvná pokuta z výšky dohodnutého nájmu za obdobie piatich rokov je primeraná, nie je neetická; vo vzťahu k odporcovi, ktorý nepredložil žiadne dôkazy ani likvidačná, z ktorého dôvodu moderačné právo na zníženie zmluvnej pokuty neaplikoval"
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Pri jej výške súd hodnotil súlad dohody o zmluvnej pokute so všeobecnými požiadavkami zákona, predovšetkým § 39 Obč. zákonníka, požadujúceho pre občianskoprávne a obchodnoprávne vzťahy súlad právneho úkonu s dobrými mravmi"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Prihliadol na hodnotu a význam zabezpečovanej povinnosti (realizácia a dokončenie výstavby bytových domov od stavebného povolenia, realizáciu a kolaudačného rozhodnutia včas pre zabezpečenie plánu obyvateľov mesta Čadca"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "zníženie zmluvnej pokuty neaplikoval"
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "dospel k záveru, že 8 % zmluvná pokuta z výšky dohodnutého nájmu za obdobie piatich rokov je primeraná"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "odporca o tejto skutočnosti nepredložil žiadny dôkaz a tvrdenia o výraznej zmene hospodárskych podmienok bližšie neozrejmil"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "dospel k záveru, že 8 % zmluvná pokuta z výšky dohodnutého nájmu za obdobie piatich rokov je primeraná, nie je neetická"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "moderačné právo na zníženie zmluvnej pokuty neaplikoval"
+            }
+          ],
+          "legal_reasoning_summary": "Súd posúdil výšku zmluvnej pokuty vo vzťahu k hodnote a významu zabezpečovanej povinnosti, ktorou bola výstavba bytových domov pre mesto. Zmluvná pokuta vo výške 250.000 Sk (8.298,47 EUR) predstavovala približne 8 % z celkového dohodnutého nájomného za päťročné obdobie, čo súd považoval za primerané a nie neetické. Odporca nepredložil žiadne dôkazy o tom, že by bola pokuta likvidačná alebo že by nastala zmena okolností zakladajúca nárok na zníženie podľa § 301 Obchodného zákonníka, preto súd moderačné právo neaplikoval."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvné strany v čl. V Zmluvy dohodli, že sa nájomca zaväzuje zaplatiť prenajímateľovi zmluvnú pokutu vo výške 250.000,Sk (8.298,47 eura) ak prenajímateľ odstúpi od zmluvy o nájme z ktoréhokoľvek dôvodu podľa čl. III bod 7 Zmluvy"
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "250.000,Sk (8.298,47 eura)"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Co_246_2014_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Co/246/2014",
+      "decision_date": "31.03.2015",
+      "ecli": "ECLI:SK:KSBA:2015:1111227329.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

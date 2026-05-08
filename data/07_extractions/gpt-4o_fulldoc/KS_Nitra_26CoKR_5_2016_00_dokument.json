@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5901,
+    "completion_tokens": 1003,
+    "cost_usd": 0.0248,
+    "latency_seconds": 6.68,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca BPT LEASING, a.s. sa domáhal určenia pravosti pohľadávky voči úpadcovi V. L. v konkurze, pričom pohľadávka pozostávala zo zmluvnej pokuty a úroku z omeškania zo zmluvy o finančnom lízingu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu, ktorý moderoval zmluvnú pokutu a zamietol žalobu vo zvyšku.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 10.251,08 eura a úroku z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.251,08 eura",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 10.251,08 eura",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 27671.85,
+            "evidence": {
+              "quote": "zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10251.08,
+            "evidence": {
+              "quote": "že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "23,75 eura",
+          "evidence": {
+            "quote": "úroku z omeškania vo výške 23,75 eura",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z pôvodne uplatnenej sumy 27.671,85 eura na 10.251,08 eura, pretože považoval pôvodnú výšku za neprimerane vysokú. Pri rozhodovaní súd zohľadnil význam zabezpečovanej povinnosti a využil moderačné oprávnenie podľa § 301 Obchodného zákonníka. Odvolací súd potvrdil toto rozhodnutie ako vecne správne.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26CoKR_5_2016_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26CoKR/5/2016",
+      "decision_date": "29.06.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4115201281.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

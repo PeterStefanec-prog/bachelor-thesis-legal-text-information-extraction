@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17237,
+    "completion_tokens": 1086,
+    "cost_usd": 0.054,
+    "latency_seconds": 26.9,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Eiffage Construction Slovenská republika, s. r. o. sa domáhal zrušenia rozhodcovského rozsudku, ktorým bol zamietnutý jeho nárok na zaplatenie zádržného vo výške 125.164,50 Eur a zmluvnej pokuty vo výške 61.159,69 Eur. Žalovaný LBG palác Poprad s. r. o. si uplatnil nárok na zmluvnú pokutu vo výške 545.135,70 Eur za rôzne porušenia zmluvy o dielo.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý žalobu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 545.135,70 Eur titulom absencie vinkulácie poistného krytia, opomenutia súčinnosti v kolaudačnom konaní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+          "evidence": {
+            "quote": "vo výške 0,05 % denne zo zmluvnej ceny za zhotovenie diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 545135.7,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 545.135,70 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu žalobcu v celom rozsahu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "úroky z omeškania uplatnené žalobou voči žalovanému rozhodcovský súd uznal ako dôvodne, ale po podaní vzájomnej žaloby žalovaným tieto zanikli započítaním",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu žalobcu v celom rozsahu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu žalobcu, pretože žalobca nepreukázal, že žalovaný odsúhlasil text bankovej záruky, a nepredložil dôkazy o splnení zmluvných povinností. Rozhodcovský súd uznal nároky na zmluvnú pokutu a úroky z omeškania, ale tieto zanikli započítaním. Súd prvej inštancie tiež konštatoval, že rozhodcovský súd sa dostatočne nevenoval námietke primeranosti zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie žalobu žalobcu v celom rozsahu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "absencia čestného prehlásenia zhotoviteľa o uspokojení svojich subdodávateľov ako listina nemá sama osebe za následok vznik škody na strane objednávateľa",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pomer medzi priznanou zmluvnou pokutou žalovanému a cenou za dielo",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2CoR_11_2019_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2CoR/11/2019",
+      "decision_date": "14.07.2020",
+      "ecli": "ECLI:SK:KSBA:2020:1515897608.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

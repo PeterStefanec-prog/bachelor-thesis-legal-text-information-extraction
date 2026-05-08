@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12213,
+    "completion_tokens": 1103,
+    "cost_usd": 0.0416,
+    "latency_seconds": 25.9,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny 356,00 eur a zmluvnej pokuty vo výške 25 % z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry, vo výške 1.261,09 eur. Žalovaný neuhradil faktúry včas a žalobca ukončil činnosť k 31.3.2007.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok v napadnutej časti a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "že žalovaný nemal uhradený dlh, ukončil žalobca činnosť k 31.3.2007 v zmysle Dohody, avšak ani po tomto období nebola úhrada vykonaná.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "25 % z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 25 % z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 348.93,
+            "evidence": {
+              "quote": "Dlžná istina uplatňovaná žalobcom bola 348,93 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1520.98,
+            "evidence": {
+              "quote": "Trval na zaplatení zmluvnej pokuty vo výške 1.520,98 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 760.49,
+            "evidence": {
+              "quote": "súd prvého stupňa priznal žalobcovi zmluvnú pokutu len v rozsahu 50% žalovanej zmluvnej pokuty t.j. vo výške 760,49 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14,25 % ročne",
+          "evidence": {
+            "quote": "úroku z omeškania vo výške 14,25 % ročne zo sumy 159,33 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "rozsudok v napadnutej časti (t.j. pokiaľ bola žaloba v prevyšujúcej časti zamietnutá, ako aj vo výroku o náhrade trov konania) zrušil a v zrušenom rozsahu vrátil súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa priznal žalobcovi zmluvnú pokutu len v rozsahu 50% žalovanej zmluvnej pokuty, pretože celková suma sa javila ako neprimeraná vo vzťahu k dlžnej sume. Súd zohľadnil aj zaplatené úroky z omeškania ako sankciu za neplnenie platobnej povinnosti. Odvolací súd zrušil rozsudok a vrátil vec na ďalšie konanie, aby súd prvého stupňa podrobne skúmal dôvody pre zníženie zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "súd prvého stupňa priznal žalobcovi zmluvnú pokutu len v rozsahu 50% žalovanej zmluvnej pokuty t.j. vo výške 760,49 eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_239_2012_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/239/2012",
+      "decision_date": "30.09.2013",
+      "ecli": "ECLI:SK:KSKE:2013:7710213676.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

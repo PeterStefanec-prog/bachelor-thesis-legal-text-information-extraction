@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7808,
+    "completion_tokens": 2137,
+    "cost_usd": 0.0311,
+    "latency_seconds": 7.97,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 2 000 EUR s príslušenstvom od žalovaného z dôvodu porušenia zmluvných povinností vyplývajúcich zo zmluvy o spolupráci a partnerstve pri zabezpečení individuálnej prepravy cestujúcich. Žalovaný namietal neplatnosť zmluvy pre neurčitosť a nezrozumiteľnosť a neprimeranosť výšky zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa, ktorý žalobe vyhovel, a vec vrátil súdu prvého stupňa na ďalšie konanie z dôvodu nesprávneho právneho posúdenia a nedostatočne zisteného skutkového stavu.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalobca dňa 11.01.2012 vyzval žalovaného na zaplatenie zmluvnej pokuty z dôvodu porušenia čl. VIII. zmluvy, konkrétne žalovaného upozorňujúc, že zmluvný vzťah mohol byť ukončený len výpoveďou po uplynutí výpovednej doby 3 mesiace.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "2.000,--eur",
+          "evidence": {
+            "quote": "Na porušenie tejto povinnosti je zmluvne viazaná sankcia podľa čl. XI. ods. 2, konkrétne zmluvná pokuta 2.000,--eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "o zaplatenie 2.000,--eur s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok Okresného súdu Nové Zámky č.k. 15Cb/138/2012-52 zo dňa 05.11.2012 zrušujea vec vracia súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročnými",
+          "evidence": {
+            "quote": "Súd prvého stupňa napadnutým rozsudkom žalovanému uložil povinnosť zaplatiť žalobcovi sumu 2.000,--eur s 9% ročnými úrokmi z omeškania od 01.02.2012 do zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok podľa § 221 ods. 1 písm. h) OSP zrušil, keďže súd prvého stupňa nesprávne právne vec posúdil a nedostatočne zistil skutkový stav. Jeho povinnosťou po vrátení veci (§ 221 ods. 2 OSP) je dôsledne posúdiť akú povinnosť a kedy žalovaný vo vzťahu k žalobcovi, vyplývajúcu zo zmluvy, porušil",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa nesprávne vyhodnotil a dal do vzájomných súvislostí jednotlivé ustanovenia zmluvy, nedostatočne odôvodnil porušenie predmetu zmluvy žalovaným, napriek tomu, že plnenie bolo podmienené písomnou objednávkou žalobcu. Odvolací súd zrušil rozsudok a vrátil vec súdu prvého stupňa na ďalšie konanie, aby dôsledne posúdil porušenie zmluvných povinností žalovaným a žalobcom, a ak dospeje k záveru o dôvodnosti pokuty, aby sa zaoberal jej primeranosťou, keďže pôvodné odôvodnenie bolo nepreskúmateľné.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd rozsudok podľa § 221 ods. 1 písm. h) OSP zrušil, keďže súd prvého stupňa nesprávne právne vec posúdil a nedostatočne zistil skutkový stav.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odôvodnenie súdu prvého stupňa, podľa ktorého \"napriek skutočnosti, že zo samotnej zmluvy nie je zrejmá hodnota a význam zabezpečovacej povinnosti, súd nezistil skutočnosť, ktorá by ho oprávňovala moderovať jej výšku\", je nepreskúmateľné pre nedostatok dôvodov.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "napriek skutočnosti, že zo samotnej zmluvy nie je zrejmá hodnota a význam zabezpečovacej povinnosti, súd nezistil skutočnosť, ktorá by ho oprávňovala moderovať jej výšku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvého stupňa by mal zhodnotiť aj tú dôležitú okolnosť, s akou odbornou starostlivosťou žalobca uzatváral so žalovaným zmluvu, keď dňa 08.12.2011 žalovaný nemal v predmete svojho podnikania predmet činnosti potrebný pre uzatvorenie zmluvy o spolupráci a partnerstve.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvého stupňa by mal zhodnotiť aj tú dôležitú okolnosť, s akou odbornou starostlivosťou žalobca uzatváral so žalovaným zmluvu, keď dňa 08.12.2011 žalovaný nemal v predmete svojho podnikania predmet činnosti potrebný pre uzatvorenie zmluvy o spolupráci a partnerstve.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_7_2013_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/7/2013",
+      "decision_date": "24.04.2013",
+      "ecli": "ECLI:SK:KSNR:2013:4412205698.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

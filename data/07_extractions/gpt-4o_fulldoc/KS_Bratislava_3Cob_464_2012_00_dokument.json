@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8915,
+    "completion_tokens": 1136,
+    "cost_usd": 0.0336,
+    "latency_seconds": 27.7,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Mesto Pezinok žaluje žalovaného Development in Slovak Investments, s.r.o. o zaplatenie zmluvnej pokuty vo výške 165.969,59 EUR za oneskorené dodanie diela podľa dohody o zmluvnej pokute zo dňa 29.9.2005. Žalovaný namieta, že nebola dohodnutá povinnosť vybudovať prepojenie, a teda nemohlo dôjsť k porušeniu povinnosti.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Pezinok, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi zmluvnú pokutu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v konštantnej výške pre prípad porušenia povinnosti žalovaného vybudovať a dokončiť dielo",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "165.969,59 EUR",
+          "evidence": {
+            "quote": "priznaná suma predstavuje zmluvnú pokutu dohodnutú účastníkmi v dohode o zmluvnej pokute zo dňa 29.9.2005 za oneskorené dodanie diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 165969.59,
+            "evidence": {
+              "quote": "o 165.969,59 EUR",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 165969.59,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Pezinok č.k. 26Cb/164/2009-222 zo 14. mája 2012 potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Pezinok č.k. 26Cb/164/2009-222 zo 14. mája 2012 potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa konštatoval, že dohoda o zmluvnej pokute bola dohodnutá v zákonom vyžadovanej forme a že povinnosť zaplatiť zmluvnú pokutu je objektívna. Súd tiež posúdil primeranosť výšky zmluvnej pokuty a jej súlad s dobrými mravmi, pričom zohľadnil vyváženosť záväzkového vzťahu účastníkov. Odvolací súd sa stotožnil so závermi súdu prvého stupňa a potvrdil rozsudok.",
+          "key_quotes": [
+            {
+              "quote": "priznaná suma predstavuje zmluvnú pokutu dohodnutú účastníkmi v dohode o zmluvnej pokute zo dňa 29.9.2005 za oneskorené dodanie diela",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "považoval súd prvého stupňa výšku dohodnutej zmluvnej pokuty za primeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "účelom hrozby sankciou zmluvnej pokuty bolo motivovať žalovaného zhotoviť čo najskôr prepojenie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "jednostranne dohodnutú zmluvnú pokutu v prejednávanej veci nemožno hodnotiť negatívne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný s nimi nemusel súhlasiť",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohoda o zmluvnej pokute, ako aj jej dodatok č. 1 boli výsledkom slobodnej vôle ich účastníkov",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type"
+      ],
+      "missing_fields": [
+        "associated_interest.rate_value",
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_464_2012_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/464/2012",
+      "decision_date": "29.01.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1709203574.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

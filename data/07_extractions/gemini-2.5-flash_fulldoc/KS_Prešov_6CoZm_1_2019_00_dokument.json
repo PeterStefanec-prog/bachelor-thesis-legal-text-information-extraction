@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 15406,
+    "completion_tokens": 2362,
+    "cost_usd": 0.0429,
+    "latency_seconds": 10.44,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 4.231,95 eur zo zmenky, ktorá zabezpečovala záväzky žalovanej z leasingovej zmluvy. Žalovaná namietala neplatnosť dohody o vyplnení blankozmenky a spochybňovala výšku nároku žalobcu, vrátane zmluvnej pokuty, ktorú považovala za rozpornú s dobrými mravmi a navrhovala jej moderáciu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý zaviazal žalovanú zaplatiť žalobcovi sumu 4.231,95 eur s úrokom a odmenou, a priznal žalobcovi nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "obidve zmluvné pokuty uplatnené žalobcom v tomto konaní predstavujú škodu, ktorá žalobcovi vznikla z dôvodu predčasného ukončenia leasingu zavineného žalovanou",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvných pokút vo výške nedoplatku z hodnoty predmetu leasingu, ktorý predstavoval hodnotu nesplatenej časti obstarávacej ceny predmetu leasingu ku dňu prvej neuhradenej leasingovej splátky, ako aj zmluvnej pokuty vo výške ušlého zisku prenajímateľa ako rozdiel medzi hodnotou leasingovej a bankovej leasingovej zmluvy do pôvodne stanoveného termínu riadneho ukončenia leasingového vzťahu",
+          "evidence": {
+            "quote": "zmluvných pokút vo výške nedoplatku z hodnoty predmetu leasingu, ktorý predstavoval hodnotu nesplatenej časti obstarávacej ceny predmetu leasingu ku dňu prvej neuhradenej leasingovej splátky, ako aj zmluvnej pokuty vo výške ušlého zisku prenajímateľa ako rozdiel medzi hodnotou leasingovej a bankovej leasingovej zmluvy do pôvodne stanoveného termínu riadneho ukončenia leasingového vzťahu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 %",
+          "evidence": {
+            "quote": "Žalovaná je povinná zaplatiť žalobcovi 4.231,95 eura spolu s úrokom vo výške 6 % zo sumy 4.231,95 eura od 25.2.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na uvedené preto neprichádza v prejednávanej veci v úvahu aplikácii moderačného práva, ktoré si naviac žalovaná neuplatnila v konaní pred súdom prvej inštancie, ale až ako novotu v podanom odvolaní.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd odmietol aplikovať moderačné právo, pretože žalovaná si ho neuplatnila v konaní pred súdom prvej inštancie, ale až v odvolaní. Navyše, súd konštatoval, že zmluvné pokuty predstavovali škodu, ktorá žalobcovi vznikla z dôvodu predčasného ukončenia leasingu zavineného žalovanou, a podľa § 301 Obchodného zákonníka môže súd neprimerane vysokú zmluvnú pokutu znížiť len do výšky vzniknutej škody.",
+          "key_quotes": [
+            {
+              "quote": "Zároveň, nakoľko časť nároku pozostávala z nároku na zaplatenie zmluvnej pokuty, navrhla žalovaná aby súd využil svoje moderačné právo v súlade s ust. § 300 a násl. Obchodného zákonníka a nepriznal žalobcovi zmluvnú pokutu v zmysle § 265 Obchodného zákonníka, pretože takýto nárok je v rozpore so zásadami poctivého obchodného styku a nepožíva právnu ochranu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Vzhľadom na uvedené preto neprichádza v prejednávanej veci v úvahu aplikácii moderačného práva, ktoré si naviac žalovaná neuplatnila v konaní pred súdom prvej inštancie, ale až ako novotu v podanom odvolaní.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "obidve zmluvné pokuty uplatnené žalobcom v tomto konaní predstavujú škodu, ktorá žalobcovi vznikla z dôvodu predčasného ukončenia leasingu zavineného žalovanou, pričom v zmysle § 301 Obchodného zákonníka môže súd neprimerane vysokú zmluvnú pokutu znížiť len do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konanie žalobcu, t.j. predaj odobratého predmetu leasingu za 4 % jeho kúpnej ceny je v hlbokom rozpore s dobrými mravmi, poctivým obchodným stykom a zákonom o ochrane spotrebiteľa.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "obidve zmluvné pokuty uplatnené žalobcom v tomto konaní predstavujú škodu, ktorá žalobcovi vznikla z dôvodu predčasného ukončenia leasingu zavineného žalovanou, pričom v zmysle § 301 Obchodného zákonníka môže súd neprimerane vysokú zmluvnú pokutu znížiť len do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "obidve zmluvné pokuty uplatnené žalobcom v tomto konaní predstavujú škodu, ktorá žalobcovi vznikla z dôvodu predčasného ukončenia leasingu zavineného žalovanou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konanie žalobcu, t.j. predaj odobratého predmetu leasingu za 4 % jeho kúpnej ceny je v hlbokom rozpore s dobrými mravmi, poctivým obchodným stykom a zákonom o ochrane spotrebiteľa.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed.value",
+        "contractual_penalties[0].amounts.final_awarded.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_6CoZm_1_2019_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "6CoZm/1/2019",
+      "decision_date": "30.01.2020",
+      "ecli": "ECLI:SK:KSPO:2020:8111217289.5",
+      "document_type": "Rozsudok"
+    }
+  }
+}

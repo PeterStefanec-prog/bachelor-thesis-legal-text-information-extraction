@@ -1,0 +1,192 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 8292,
+      "completion_tokens": 1118,
+      "cost_usd": 0.0215,
+      "latency_seconds": 5.24,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 9309,
+      "completion_tokens": 1562,
+      "cost_usd": 0.0273,
+      "latency_seconds": 8.51,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa (predávajúca) a žalovaná (kupujúca) uzavreli Rámcovú kúpnu zmluvu o podmienkach dodávok tovaru (pracovné rukavice), ktorá obsahovala klauzulu o zmluvnej pokute pre prípad porušenia povinnosti žalovanej odobrať minimálne množstvo tovaru. Žalobkyňa požadovala zaplatenie zmluvnej pokuty za neodobratý tovar po výpovedi zmluvy žalovanou.",
+      "verdict_summary": "Najvyšší súd odmietol dovolanie žalobkyne proti rozsudku Krajského súdu, ktorý znížil pôvodne priznanú zmluvnú pokutu súdom prvej inštancie o 50% s odôvodnením, že bola neprimerane vysoká a uplatnil moderačné právo.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Pre prípad porušenia povinnosti žalovanej zakúpiť od žalobkyne v zmluve dohodnuté minimálne množstvá tovaru si platne dohodli zmluvnú pokutu",
+            "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_2"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "vo výške neodobratého dohodnutého minimálneho množstva tovaru určeného čo do druhu a veľkosti v zmluve, v období dvanásť mesiacov, počínajúc podpisom zmluvy",
+          "evidence": {
+            "quote": "Rovnako je v zmluve písomne dohodnutá zmluvná pokuta a spôsob jej určenia - vo výške neodobratého dohodnutého minimálneho množstva tovaru určeného čo do druhu a veľkosti v zmluv",
+            "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 33111.0,
+            "evidence": {
+              "quote": "o zaplatenie 33.111,-€ s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 15202.18,
+            "evidence": {
+              "quote": "žalovanej uložil povinnosť zaplatiť žalobkyni sumu 15.202,18 €",
+              "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_3"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,25% ročne zo sumy 9.247,50 € od 10. marca 2014 do zaplatenia a vo výške 8,05% ročne zo sumy 5.954,68 € od 18. januára 2015 do zaplatenia",
+          "evidence": {
+            "quote": "žalovanej uložil povinnosť zaplatiť žalobkyni úrok z omeškania vo výške 8,25% ročne zo sumy 9.247,50 € od 10. marca 2014 do zaplatenia a vo výške 8,05% ročne zo sumy 5.954,68 € od 18. januára 2015 do zaplatenia",
+            "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_3"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd podľa ust. § 388 CSP zmenil rozsudok súdu prvej inštancie v napadnutej časti tak, že zmluvnú pokutu spolu s príslušenstvom za použitia moderačného práva znížil.",
+              "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+            }
+          },
+          "legal_reasoning_summary": "Krajský súd znížil zmluvnú pokutu o 50% na základe moderačného práva podľa § 301 Obchodného zákonníka, pretože ju považoval za neprimerane vysokú. Súd prvej inštancie moderačné právo nevyužil. Odvolací súd argumentoval, že zmluvná pokuta vo výške kúpnej ceny neodobratého tovaru je neprimeraná, najmä keďže žalobkyňa nemala náklady na výrobu tovaru a nešlo o špecifický tovar, s ktorým by mala problémy s predajom. Za primeranú považoval pokutu vo výške 50% kúpnej ceny neodobratého tovaru, ktorá by dostatočne plnila všetky funkcie.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd v odôvodnení rozhodnutia konštatoval dôvodnosť žalovanou podaného odvolania. V súvislosti s uplatneným odvolacím dôvodom podľa ust. § 365 ods. 1 písm. h/ CSP, a to, že rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci, poukázal na nesprávnu aplikáciu ust. § 301 zákona č. 513/1991 Zb. Obchodného zákonníka (ďalej aj ako \"Obchodný zákonník\"), keď súd prvej inštancie nepristúpil k uplatneniu moderačného práva vo vzťahu k neprimerane vysokej zmluvnej pokute, dohodnutej v Rámcovej zmluve, čím bol uvedený odvolací dôvod daný.",
+              "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+            },
+            {
+              "quote": "Zmluvná pokuta dohodnutá vo výške kúpnej ceny zvyšného neodobratého tovaru, tvoriaceho ročný objem, je neprimeraná k hodnote zabezpečeného záväzku, keďže sa rovná kúpnej cene tovaru, ktorý žalovaná neodobrala, ale s výrobou ktorého nemala žalobkyňa ani žiadne náklady.",
+              "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+            },
+            {
+              "quote": "za primeranú zmluvnú pokutu v danej veci považuje pokutu vo výške 50% kúpnej ceny neodobratého dohodnutého ročného objemu tovaru špecifikovaného v čl. II bode 2 Rámcovej zmluvy, pretože už v takej výške by dostatočne plnila všetky svoje funkcie (preventívnu, uhradzovaciu a sankčnú) a zároveň by bola primeranou motiváciou žalovanej k splneniu záväzku.",
+              "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Nepovažoval za dôvodnú námietku žalovanej, že zmluvná pokuta je neplatná pre rozpor s dobrými mravmi, pretože sa jedná o bežný zabezpečovací inštitút v obchodných vzťahoch, ktorého cieľom je zabezpečiť riadne dodržiavanie dohodnutých zmluvných podmienok.",
+                "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_2"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta dohodnutá vo výške kúpnej ceny zvyšného neodobratého tovaru, tvoriaceho ročný objem, je neprimeraná k hodnote zabezpečeného záväzku, keďže sa rovná kúpnej cene tovaru, ktorý žalovaná neodobrala, ale s výrobou ktorého nemala žalobkyňa ani žiadne náklady.",
+                "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Prihliadol pritom aj na to, že ani žalobkyňa netvrdila, že by jej neodobraním minimálneho množstva tovaru žalovanou, t.j. porušením dohodnutého zmluvného záväzku vyplývajúceho z Rámcovej zmluvy vznikla nejaká škoda.",
+                "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta dohodnutá vo výške kúpnej ceny zvyšného neodobratého tovaru, tvoriaceho ročný objem, je neprimeraná k hodnote zabezpečeného záväzku, keďže sa rovná kúpnej cene tovaru, ktorý žalovaná neodobrala, ale s výrobou ktorého nemala žalobkyňa ani žiadne náklady.",
+                "chunk_id": "NS_SR_1Obdo_66_2018_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_1Obdo_66_2018_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "1Obdo/66/2018",
+      "decision_date": "25.09.2019",
+      "ecli": "ECLI:SK:NSSR:2019:7215201451.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

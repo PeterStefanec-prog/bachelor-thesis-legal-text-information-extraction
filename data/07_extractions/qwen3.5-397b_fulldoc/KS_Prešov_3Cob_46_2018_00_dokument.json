@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13740,
+    "completion_tokens": 1832,
+    "cost_usd": 0.0096,
+    "latency_seconds": 21.17,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia odmeny za vypracovanie žiadosti o nenávratný finančný príspevok, zmluvnej pokuty za omeškanie s úhradou a príslušenstva. Žalovaný namietal predčasnosť nároku, neplatnosť zmluvy o dielo a neprimeranosť výšky zmluvnej pokuty, ktorú považoval za duplicitnú voči úrokom z omeškania.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobe v celom rozsahu vyhovel a priznal žalobcovi nárok na istinu, zmluvnú pokutu v dohodnutej výške bez moderácie, ako aj úroky z omeškania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "si zmluvné strany pre prípad porušenia povinnosti objednávateľa zaplatiť čo i len časť ktorejkoľvek platby odmeny dohodli na zmluvnej pokute",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% z dlžnej sumy odmeny za každá deň omeškania so zaplatením dlžnej sumy odmeny",
+          "evidence": {
+            "quote": "si zmluvné strany pre prípad porušenia povinnosti objednávateľa zaplatiť čo i len časť ktorejkoľvek platby odmeny dohodli na zmluvnej pokute vo výške 0,1% z dlžnej sumy odmeny za každá deň omeškania so zaplatením dlžnej sumy odmeny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 16963.43,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "súd priznal žalobcovi aj uplatnené úroky z omeškania vo výške 9 % ročne z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd nepovažoval za potrebné v tomto prípade použiť moderačné právo podľa § 301 Obchodného zákonníka pretože táto so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta vo výške 0,1 % denne (36 % ročne) nie je v rozpore so zákonom ani dobrými mravmi ani pri kumulácii s úrokmi z omeškania. Súd zdôraznil preventívny charakter pokuty a jej primeranosť vo vzťahu k hodnote zabezpečovanej povinnosti, keďže ide o najvýznamnejšiu povinnosť objednávateľa. Odvolací súd sa stotožnil s názorom, že výška pokuty závisí od vôle strán a nie je limitovaná úrokovou sadzbou ECB, pokiaľ nie je neprimeraná.",
+          "key_quotes": [
+            {
+              "quote": "súd nepovažoval za potrebné v tomto prípade použiť moderačné právo podľa § 301 Obchodného zákonníka pretože táto so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta má preventívny charakter a zabezpečí v danom prípade povinnosť objednávateľa zaplatiť dohodnutú cenu diela.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nie je ani v rozpore so zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta má preventívny charakter a zabezpečí v danom prípade povinnosť objednávateľa zaplatiť dohodnutú cenu diela.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žiaden právny predpis nevylučuje uplatňovanie zmluvnej pokuty dohodnutej v zmluve pre prípad omeškania dlžníka s plnením peňažného záväzku pri zákonnom úroku z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_46_2018_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/46/2018",
+      "decision_date": "08.11.2018",
+      "ecli": "ECLI:SK:KSPO:2018:6117230109.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

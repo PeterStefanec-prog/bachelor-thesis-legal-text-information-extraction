@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8598,
+    "completion_tokens": 2738,
+    "cost_usd": 0.0381,
+    "latency_seconds": 10.02,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny diela vo výške 1.185,02 eur, úrokov z omeškania a zmluvnej pokuty vo výške 0,1 % z dlžnej sumy denne za omeškanie so zaplatením. Žalovaný žiadal návrh zamietnuť, namietal neskoré doručenie diela a neplatnosť zmluvy o dielo.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa v časti priznania zmluvnej pokuty a úrokov z omeškania, ale zmenil rozhodnutie o náhrade trov konania v prospech žalobcu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Dohodli si ju vo výške 0,1 % z dlžnej sumy za každý deň omeškania so zaplatením čo i len časti ktorejkoľvek platby odmeny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej sumy denne",
+          "evidence": {
+            "quote": "Dohodli si ju vo výške 0,1 % z dlžnej sumy za každý deň omeškania so zaplatením čo i len časti ktorejkoľvek platby odmeny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1185.02,
+            "evidence": {
+              "quote": "0,1 % denný úrok zo sumy 1.185,02 eur predstavuje ročne 432,53 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd zvážil všetky okolnosti tohto prípadu a ním prispôsobil svoje rozhodnutie v časti výšky zmluvnej pokuty tak, že ju priznal žalobcovi v sume 0,05 % denne z istiny, t.j. znížil ju na 1/2-icu.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14,25 % ročne",
+          "evidence": {
+            "quote": "Súd priznal žalobcovi zmluvnú pokutu len vo výške 0,05 % na miesto požadovanej 0,1 % denne a preto i vo zvyšku návrh zamietol.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú pokutu z dôvodu, že v tomto konkrétnom prípade chcel takto zabrániť celkom neadekvátnym majetkovým dôsledkom, lebo neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu (získal by plnenie, pričom žalovaný nezískal žiadne finančné prostriedky z eurofondov a práve za tým účelom si dal vyhotoviť dielo žalobcom) a k neprimeranému hospodárskemu poškodeniu žalovaného.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa využil moderačné právo podľa § 301 Obchodného zákonníka a znížil zmluvnú pokutu z 0,1 % na 0,05 % denne z istiny. Dôvodom bolo zabrániť neadekvátnym majetkovým dôsledkom a neprimeranému zisku žalobcu vzhľadom na to, že žalovaný nezískal žiadne finančné prostriedky z eurofondov. Súd posudzoval primeranosť zmluvnej pokuty vzhľadom na hodnotu a význam zabezpečenej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú pokutu z dôvodu, že v tomto konkrétnom prípade chcel takto zabrániť celkom neadekvátnym majetkovým dôsledkom, lebo neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu (získal by plnenie, pričom žalovaný nezískal žiadne finančné prostriedky z eurofondov a práve za tým účelom si dal vyhotoviť dielo žalobcom) a k neprimeranému hospodárskemu poškodeniu žalovaného.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd zvážil všetky okolnosti tohto prípadu a ním prispôsobil svoje rozhodnutie v časti výšky zmluvnej pokuty tak, že ju priznal žalobcovi v sume 0,05 % denne z istiny, t.j. znížil ju na 1/2-icu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "skutočnosť dojednania zmluvnej pokuty pre prípad porušenia povinnosti len jednou zmluvnou stranou neznamená, že takáto dohoda odporuje zásadám poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd zvážil všetky okolnosti tohto prípadu a ním prispôsobil svoje rozhodnutie v časti výšky zmluvnej pokuty tak, že ju priznal žalobcovi v sume 0,05 % denne z istiny, t.j. znížil ju na 1/2-icu. Z vecného hľadiska súd pri aplikácii moderačného práva posudzoval primeranosť zmluvnej pokuty vzhľadom na kritérium hodnoty zabezpečenej povinnosti a význam zabezpečenej povinnosti (ZSP 18/1999).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu (získal by plnenie, pričom žalovaný nezískal žiadne finančné prostriedky z eurofondov a práve za tým účelom si dal vyhotoviť dielo žalobcom) a k neprimeranému hospodárskemu poškodeniu žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu (získal by plnenie, pričom žalovaný nezískal žiadne finančné prostriedky z eurofondov a práve za tým účelom si dal vyhotoviť dielo žalobcom) a k neprimeranému hospodárskemu poškodeniu žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd bral pritom do úvahy i tú skutočnosť, že žalovaný dielo neodovzdal príslušnej organizácii. Súd prihliadal na to, že pokiaľ mal žalovaný vedomosť, že bude koncom apríla 2008 odcestovaný, mal si zabezpečiť splnomocnenie na úkony potrebné s dispozíciou s dielom resp. mal požiadať žalobcu, aby zabezpečil sám plnú moc potrebnú na disponovanie s dielom a odovzdanie ho príslušnej organizácii.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta a úrok z omeškania sú svojou podstatou a charakterom odlišné právne inštitúty, pričom zákon ich súčasné uplatnenie v prípade porušenia zmluvných platobných povinností nevylučuje a nárok na zmluvnú pokutu ani nepodmieňuje reálnym vznikom škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Tvrdenie žalovaného, že telefonoval pracovníčke žalobcu (Mgr. J. I.) ohľadom svojho cestovania mimo sídla ale nič nezmenilo na dohodnutom obsahu zmluvy o dielo.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_41_2011_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/41/2011",
+      "decision_date": "25.10.2011",
+      "ecli": "ECLI:SK:KSTT:2011:2508210924.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

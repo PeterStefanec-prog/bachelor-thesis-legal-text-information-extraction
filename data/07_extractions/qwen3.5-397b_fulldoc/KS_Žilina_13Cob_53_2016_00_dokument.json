@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13154,
+    "completion_tokens": 2053,
+    "cost_usd": 0.0099,
+    "latency_seconds": 23.47,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úroku z omeškania z nezaplatenej kúpnej ceny za dodávky rafinérskych výrobkov. Žalovaný zaplatil dlžnú kúpnu cenu po začatí konania, žalobca preto žalobu v časti istiny stiahol a konanie pokračovalo len o sankcie. Žalovaný spochybňoval vznik omeškania a neprimeranosť zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý žalovanému uložil povinnosť zaplatiť zmluvnú pokutu vo výške 113.142,61 Kč a príslušný úrok z omeškania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 540031",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade omeškania kupujúceho so zaplatením kúpnej ceny tovaru je predávajúci oprávnený požadovať od kupujúceho zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05% dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "CZK",
+          "secured_principal": {
+            "value": 204968.5,
+            "evidence": {
+              "quote": "zo sumy 204.968,50 Kč od 1.2.2010 do 8.2.2013 vo výške 113.142,61 Kč",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "domáhal zaviazania žalovaného na zaplatenie peňažnej pohľadávky v sume 204.968,50 Kč spolu s 0,05 % úrokom z omeškania denne z tejto sumy od 1.2.2010 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "Právo na zaplatenie zmluvnej pokuty bolo priznané vo výške 113.142,61 Kč za aplikácie § 544 ods. 1, 2 Občianskeho zákonníka za omeškanie so splnením záväzku zaplatiť dlžnú kúpnu cenu 204.968,50 Kč za čas od 1.2.2010 do 8.2.2013.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne (a následne 8,5 % a 8,05 %)",
+          "evidence": {
+            "quote": "Okresný súd priznal žalobcovi tiež úrok z omeškania v sadzbách vyplývajúcich z úpravy § 369 ods. 1 Obchodního zákonníka, v spojení s § 517 ods. 2 Občanského zákonníka a § 1 Nariadenia vlády ČR č. 163/2005 Zb.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalovaný vo vzťahu k uplatnenej zmluvnej pokute nenavrhol použitie moderačného oprávnenia podľa § 301 Obchodného zákonníka a za absencie takejto dispozície zo strany žalovaného okresný súd nevidel priestor pre aplikáciu svojho moderačného oprávnenia.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal zmluvnú pokutu v plnej výške, pretože žalovaný nepožadal o jej zníženie podľa § 301 Obchodného zákonníka. Súd považoval pokutu za primeranú vzhľadom na význam zabezpečovanej povinnosti (zaplatenie kúpnej ceny). Súd tiež konštatoval, že zmluvná pokuta a úrok z omeškania sú dva samostatné nároky a ich paralelné uplatnenie nie je v rozpore s právnym poriadkom, keďže zmluvná pokuta má sankčný a preventívny charakter.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu nepovažuje za neprimeranú predovšetkým vzhľadom na význam zabezpečovanej povinnosti, riadne a včasné splnenie ktorej bolo zmluvnou pokutou zabezpečené",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Úrok z omeškania a zmluvná pokuta predstavujú dva samostatné nároky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "podľa ktorého je zmluvná pokuta vo výške 0,5% denne posudzovaná ako platné dojednanie, ktoré je v súlade s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vzhľadom na význam zabezpečovanej povinnosti, riadne a včasné splnenie ktorej bolo zmluvnou pokutou zabezpečené",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný po začatí konania dňa 8.2.2013 dlžnú kúpnu cenu zaplatil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Úrok z omeškania a zmluvná pokuta predstavujú dva samostatné nároky.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_53_2016_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/53/2016",
+      "decision_date": "29.06.2016",
+      "ecli": "ECLI:SK:KSZA:2016:5113203768.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

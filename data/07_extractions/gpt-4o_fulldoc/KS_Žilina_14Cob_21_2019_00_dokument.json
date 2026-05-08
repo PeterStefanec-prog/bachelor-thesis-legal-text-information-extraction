@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 32263,
+    "completion_tokens": 1127,
+    "cost_usd": 0.0919,
+    "latency_seconds": 53.4,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca 2.QUADRANT APP, s.r.o. žiadal zaplatenie zmluvnej pokuty vo výške 10.000 EUR za každé porušenie povinnosti zachovávať mlčanlivosť podľa Zmluvy o spolupráci. Žalovaný E. V. mal porušiť túto povinnosť odoslaním e-mailov obsahujúcich dôverné informácie tretím osobám.",
+      "verdict_summary": "Krajský súd potvrdil rozhodnutie okresného súdu, ktorý znížil zmluvnú pokutu na 500 EUR za každé porušenie povinnosti.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "V prejednávanej veci je zmluvnou pokutou zabezpečené porušenie povinností poskytovateľa obsiahnutých v čl. V. bod 5. Zmluvy o spolupráci zo dňa 07.05.2009, v zmysle ktorého ustanovenia je poskytovateľ, teda žalovaný povinný zachovávať mlčanlivosť o všetkých skutočnostiach, o ktorých sa dozvedel pri vykonávaní svojej činnosti v prospech záujemcu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,00 Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10.000,00 Eur, a to do 30-tich dní odo dňa porušenia zmluvnej povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 10.000,00 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 500,
+            "evidence": {
+              "quote": "znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 9 % ročne zo sumy 500,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil zmluvnú pokutu z 10.000 EUR na 500 EUR, pretože považoval pôvodnú výšku za neprimerane vysokú. Pri posúdení primeranosti zmluvnej pokuty súd zohľadnil hodnotu a význam zabezpečovanej povinnosti a okolnosti prípadu. Súd konštatoval, že žalobca nepreukázal vznik skutočnej škody, čo ovplyvnilo rozhodnutie o znížení pokuty.",
+          "key_quotes": [
+            {
+              "quote": "znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "v určitom zmysle okrem zabezpečovacej funkcie plní aj funkciu paušalizovanej náhrady škody, keď uľahčuje veriteľovi, v danom prípade žalobcovi, postavenie v prípadnom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca v súvislosti s porušením dohodnutých povinností nepreukázal skutočnú škodu, ktorá mu mala vzniknúť",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_21_2019_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/21/2019",
+      "decision_date": "26.09.2019",
+      "ecli": "ECLI:SK:KSZA:2019:8713217772.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

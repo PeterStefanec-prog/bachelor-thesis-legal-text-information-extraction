@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11029,
+    "completion_tokens": 1988,
+    "cost_usd": 0.009,
+    "latency_seconds": 44.7,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Orange Slovensko, a.s. sa domáhal zaplatenia sumy 249,26 eur, ktorá pozostávala z ceny telekomunikačných služieb (79,26 eur) a zmluvných pokút (170 eur) za nezaplatenie faktúr v období október až december 2010. Žalovaný CRONOS GROUP s.r.o. nezaplatil vyfakturované služby a porušil tým zmluvné povinnosti.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvého stupňa a zaviazal žalovaného zaplatiť žalobcovi nielen cenu služieb, ale aj zmluvné pokuty vo výške 170 eur spolu s úrokom z omeškania. Súd prvostupňový pôvodne nárok na zmluvné pokuty zamietol pre neurčitosť dohody, čo odvolací súd opravil.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "dodatok k zmluve č. A4963035",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný nezaplatil cenu služieb za obdobie od 2010/10 - 2010/12 v celkovej výške 79,26 eur, čím porušil zmluvné povinnosti a v zmysle dodatkov je povinný zaplatiť aj zmluvnú pokutu celkom vo výške 170,- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "100,- eur",
+          "evidence": {
+            "quote": "v prípade dodatku k zmluve č. A4963035 vo výške 100,- eur a v prípade dodatku k zmluve č. A4963128 vo výške 70,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 170.0,
+            "evidence": {
+              "quote": "Žalobca okrem ceny služieb v konaní uplatňovala ja nároky na zaplatenie zmluvných pokút (100 + 70 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 170.0,
+            "evidence": {
+              "quote": "Žalovaný je povinný zaplatiť žalobcovi 170,- eur spolu s úrokom z omeškania vo výške 0,05% denne od 1.3.2011 do zaplatenia do 3 dní od právoplatnosti rozsudku.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05% denne",
+          "evidence": {
+            "quote": "Žalovaný je povinný zaplatiť žalobcovi 170,- eur spolu s úrokom z omeškania vo výške 0,05% denne od 1.3.2011 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto v napadnutom výroku rozsudok súdu prvého stupňa zmenil (§ 220 O.s.p.) a priznal žalobcovi tento nárok.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvné pokuty s odôvodnením, že dohoda o nich bola absolútne neplatná pre neurčitosť povinností, ktorých splnenie mala zabezpečovať. Odvolací súd však dospel k záveru, že v obchodnoprávnych vzťahoch platia iné interpretačné pravidlá (§ 266 Obch. zákonníka), ktoré uprednostňujú vôľu strán pred doslovným znením. Keďže žalovaný nepoprel, že úmyslom bolo sankcionovať neplatenie služieb, a keďže išlo o podnikateľský vzťah, odvolací súd uznal platnosť dohody a priznal nárok v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "Dohoda o zmluvnej pokute tak, ako je vyjadrená v oboch dodatkoch k zmluvám o pripojení, je preto pre jej nejasnosť a neurčitosť, najmä v časti opisu povinností, ktorých splnenie malo byť zmluvnou pokutou zabezpečené, v zmysle § 37 Občianskeho zákonníka absolútne neplatná",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V konaní nebolo vyvrátené tvrdenie žalobcu o tom, že zmluvné pokuty sa uplatňujú práve pre porušenie povinnosti platiť mesačné poplatky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta nastupuje ako sankcia za porušenie zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný porušil svoje základné zmluvné povinnosti, pretože neplatil žalobcovi za poskytnuté služby ceny riadne a včas.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný je povinný zaplatiť žalobcovi 170,- eur spolu s úrokom z omeškania vo výške 0,05% denne",
+                "chunk_id": "verdict"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_2Cob_37_2013_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "2Cob/37/2013",
+      "decision_date": "21.11.2013",
+      "ecli": "ECLI:SK:KSPO:2013:8212208617.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

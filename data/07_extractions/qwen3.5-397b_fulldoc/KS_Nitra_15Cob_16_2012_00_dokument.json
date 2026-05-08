@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 4983,
+    "completion_tokens": 1584,
+    "cost_usd": 0.0056,
+    "latency_seconds": 17.93,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal určenia neprimeranosti zmluvnej pokuty dohodnutej v zmluve o budúcej zmluve (kupnej zmluve) a jej zníženia na 1/50 zo zabezpečeného záväzku. Tvrdil, že žalovaný si ponechal zaplatené splátky a nevznikla mu škoda.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý žalobu zamietol pre nedostatok naliehavého právneho záujmu žalobcu na určení neprimeranosti zmluvnej pokuty.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "uzavreté dva dodatky, pričom súčasťou zmluvy bola aj dohoda o zmluvnej",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur",
+          "evidence": {
+            "quote": "určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur, t. j. vo výške 3.400,-- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 170000,
+            "evidence": {
+              "quote": "určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "pre nedostatok naliehavého právneho záujmu je dôvod na zamietnutie žaloby",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietal žalobu nie pre neprimeranosť samotnej pokuty, ale pre procesný nedostatok – absenciu naliehavého právneho záujmu. Súd vysvetlil, že otázku neprimeranosti zmluvnej pokuty možno riešiť ako predbežnú otázku v konaní o plnenie (napr. pri žalobe na vrátenie časti pokuty), nie samostatnou určovacou žalobou. Keďže žalobca mohol podať žalobu na plnenie, neexistovala neistota jeho právneho postavenia, ktorá by zakladala naliehavý právny záujem na určení.",
+          "key_quotes": [
+            {
+              "quote": "Nie je možné domáhať sa určovacou žalobou toho, čo sa dá vyriešiť ako predbežná otázka v konaní na plnenie",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "pre nedostatok naliehavého právneho záujmu je dôvod na zamietnutie žaloby",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovanému konaním žalobcu nevznikla žiadna škoda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný prijal od žalobcu splátky kúpnej ceny v celkovej výške 44.000,-eur, ktoré si ponechal a odmieta ich žalobcovi vrátiť",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_16_2012_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/16/2012",
+      "decision_date": "21.03.2012",
+      "ecli": "ECLI:SK:KSNR:2012:4111214044.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

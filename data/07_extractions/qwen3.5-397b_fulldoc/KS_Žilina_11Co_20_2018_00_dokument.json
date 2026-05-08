@@ -1,0 +1,319 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12298,
+    "completion_tokens": 3324,
+    "cost_usd": 0.0126,
+    "latency_seconds": 36.56,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia dvoch zmluvných pokút vo výške 1 000 EUR a 3 000 EUR od žalovaného (modela) pre porušenie podmienky zmluvy o exkluzívnom zastúpení, konkrétne nedodržanie všeobecných pravidiel modelingu, podmienky agentúry a nepredloženie vierohodného lekárskeho potvrdenia pri odmietaní práce.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobu žalobcu v celom rozsahu zamietol, pretože nárok na zmluvné pokuty nevznikol pre neurčitost dôvodov a preukázanie oprávneného ospravedlnenia žalovaného.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca domáhal voči žalovanému zaplatenia zmluvnej pokuty vo výške 1 000,- eur, pretože nedodržal všeobecné pravidlá modelingu a podmienky agentúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "1 000,- eur",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 1 000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1000,
+            "evidence": {
+              "quote": "domáhal voči žalovanému zaplatenia zmluvnej pokuty vo výške 1 000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd návrh na jej zaplatenie zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Pretože žalobca porušenie všeobecných pravidiel modelingu vo vyúčtovaní zmluvnej pokuty vo výške 1 000,- eur nijakým spôsobom nešpecifikoval a nekonkretizoval a nebolo preukázané ani to, čo konkrétne sú to všeobecné pravidlá modelingu, a to, že žalovaný bol s nimi riadne oboznámený, nemôže žalovaný zodpovedať za porušenie týchto povinností",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na túto pokutu, pretože žalobca vo vyúčtovaní nešpecifikoval konkrétne porušenie povinnosti ani obsah všeobecných pravidiel modelingu, ktoré žalovaný údajne porušil. Žalovaný tvrdil, že o týchto pravidlách nebol informovaný a žalobca nepreukázal, že by ich obsah existoval alebo že bol žalovaný poučený. Dodatočné upresňovanie dôvodov v žalobe súd neprijal, keďže dôvody pre uplatnenie pokuty musia byť jasné a určité už pri jej vyúčtovaní.",
+          "key_quotes": [
+            {
+              "quote": "Vyúčtovanie zmluvnej pokuty obsahuje len toto všeobecné konštatovanie. Konkrétne porušenie povinnosti žalovaného neuvádza.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalobca ani dodatočne nepreukázal, aký je obsah všeobecných pravidiel modelingu a obsah pravidiel a podmienky agentúry.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvy vykonával žalovaný. Navyše udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na jeho príjem, neprimerane vysoké, a teda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "štatutárna zástupkyňa vypovedala, že v súvislosti s porušením všeobecných pravidiel modelingu im žiadna škoda nevznikla",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvy vykonával žalovaný. Navyše udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na jeho príjem, neprimerane",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný vypovedal, že nemá žiadne poňatie o tom, čo sú všeobecné pravidlá modelingu a nikto ho s nimi neoboznamoval",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca ani dodatočne nepreukázal, aký je obsah všeobecných pravidiel modelingu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "domáhal zaplatenia zmluvnej pokuty vo výške 3 000,- eur, pretože nepredložil vierohodné potvrdenie od lekára a odmietal bez odôvodnenia práce pre žalobcu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3 000,- eur",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 3 000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3000,
+            "evidence": {
+              "quote": "domáhal zaplatenia zmluvnej pokuty vo výške 3 000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie považoval uloženie zmluvnej pokuty vo výške 3 000,- eur za neodôvodnené a žalobu v časti o zaplatenie sumy 3 000,- eur zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "dňa 23.09.2015 a zo dňa 31.08.2015. Súd prvej inštancie považoval tieto doklady, ktorými žalobca preukázal svoj zlý zdravotný stav, za vierohodné a dostatočné. Vzhľadom na zlý zdravotný stav sa žalovaný módnej prehliadky dňa 18.09.2015 nemohol zúčastniť.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na túto pokutu, pretože žalovaný riadne ospravedlnil svoju neúčasť na práci (módnej prehliadke) lekárskymi potvrdeniami o chorobe a odporúčanej liečbe. Žalobca považoval tieto doklady za nedostatočné, no súd ich vyhodnotil ako vierohodné. Nárok bol tiež považovaný za nejasný a neurčitý, keďže žalobca dodatočne menil dôvody uplatnenia pokuty počas konania.",
+          "key_quotes": [
+            {
+              "quote": "Požiadavka na zaplatenie zmluvnej pokuty vo výške 3 000,- eur je teda nejasná a neurčitá, teda neplatná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "31.08.2015. Súd prvej inštancie považoval tieto doklady, ktorými žalobca preukázal svoj zlý zdravotný stav, za vierohodné a dostatočné. Vzhľadom na zlý zdravotný stav",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "37 Občianskeho zákonníka). Navyše uloženie takej vysokej pokuty vo vzťahu k príjmom žalobcu a k zabezpečovanej povinnosti bolo neprimerane",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pri rozhodovaní o znížení zmluvnej pokuty súd prvej inštancie prihliadal aj na príjem žalovaného, ktorý bol v pomere k uplatnenej zmluvnej pokute nízky.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalovaný však svoju neúčasť v práci riadnym spôsobom ospravedlnil už dňa 31.08.2015, teda v dostatočnom predstihu a žalobcovi predložil potvrdenie svojho praktického lekára",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dôvody pre uplatnenie zmluvnej pokuty nie je možné dodatočne dopĺňať a meniť.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.dobre_mravy"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal for both penalties",
+        "associated_interest.rate_value for both penalties"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_11Co_20_2018_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "11Co/20/2018",
+      "decision_date": "28.08.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5716201789.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

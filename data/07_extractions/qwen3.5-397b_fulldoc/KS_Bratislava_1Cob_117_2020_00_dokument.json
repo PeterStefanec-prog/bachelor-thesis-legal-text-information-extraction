@@ -1,0 +1,186 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 20051,
+    "completion_tokens": 1879,
+    "cost_usd": 0.0122,
+    "latency_seconds": 33.42,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "mandatna",
+      "dispute_summary": "Žalobca sa domáhal určenia neplatnosti výpovede obchodnej zmluvy (mandátnej zmluvy), ktorú vypovedal listom zo dňa 21.02.2000. Žalovaný 1/ ako právny nástupca pôvodného kontrahenta následne vymáhal zaplatenie zmluvnej pokuty vo výške 80 000 000 SK, ktorá bola dohodnutá pre prípad skončenia zmluvy z iného dôvodu, než bol stanovený v zmluve.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorým bola žaloba zamietnutá z dôvodu chýbajúceho naliehavého právneho záujmu žalobcu na určení neplatnosti výpovede, keďže táto otázka sa rieši ako predbežná v prebiehajúcom konaní o zaplatenie zmluvnej pokuty."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie žalobu z dôvodu nepreukázania naliehavého právneho záujmu na určení neplatnosti výpovede z Obchodnej zmluvy ako nedôvodnú zamietol"
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "vo vzťahu k žalovanému 1/, ktorý ako singulárny nástupca žalovaného 2/ neustále žiada od žalobcu zaplatenie zmluvnej pokuty vo výške 2.655.513,51 EUR (80.000.000"
+            },
+            "value": 80000000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": null,
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žiadal, aby mu žalobca zaplatil 80.000.000 SK spolu s príslušenstvom"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "v prípade, ak zo strany žalobcu dôjde k skončeniu obchodnej zmluvy (výpoveďou, odstúpením alebo zrušením) z iného dôvodu než je obsiahnutý v článku IV bod 2 Obchodnej zmluvy"
+          },
+          "value": "early_termination"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie žalobu z dôvodu nepreukázania naliehavého právneho záujmu na určení neplatnosti výpovede z Obchodnej zmluvy ako nedôvodnú zamietol"
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie žalobu z dôvodu nepreukázania naliehavého právneho záujmu na určení neplatnosti výpovede z Obchodnej zmluvy ako nedôvodnú zamietol"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "právna istota, ako i právne postavenie žalobcu, t.j. či bude žalobca povinný zaplatiť žalovanému 1/ ako právnemu nástupcovi žalovaného 2/ zmluvnú pokutu, bude ovplyvnené práve rozhodnutím Okresného súdu v Piešťanoch"
+            }
+          ],
+          "legal_reasoning_summary": "Súd nezaujal stanovisko k meritórnej otázke výšky alebo primeranosti zmluvnej pokuty podľa § 301 Obchodného zákonníka. Rozhodnutie o zamietnutí žaloby bolo založené výlučne na procesnom dôvode chýbajúceho naliehavého právneho záujmu žalobcu na určení neplatnosti výpovede. Súd konštatoval, že táto otázka sa ako predbežná rieši v inom prebiehajúcom konaní o zaplatenie pohľadávky, preto nie je potrebné samostatné určovacie konanie."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žalobca zaplatí žalovanému 2/ zmluvnú pokutu v súlade s § 300 až 302 Obchodného zákonníka a to jednorazovo v celkovej čiastke 80.000.000 SK"
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "80.000.000 SK"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_dismissed_on_procedural_grounds",
+        "no_merit_analysis_of_penalty",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.final_awarded",
+        "amounts.secured_principal",
+        "associated_interest.rate_value",
+        "moderation_analysis.factors"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_117_2020_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/117/2020",
+      "decision_date": "26.01.2023",
+      "ecli": "ECLI:SK:KSBA:2023:1108220015.5",
+      "document_type": "Rozsudok"
+    }
+  }
+}

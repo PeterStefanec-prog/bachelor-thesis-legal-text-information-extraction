@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 12340,
+      "completion_tokens": 1093,
+      "cost_usd": 0.0074,
+      "latency_seconds": 17.47,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 9961,
+      "completion_tokens": 2011,
+      "cost_usd": 0.0086,
+      "latency_seconds": 30.76,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "ine",
+      "dispute_summary": "Žalobca sa domáhal ochrany známkových práv a zákazu nekalosúťažného konania žalovaného, ktorý po skončení Zmluvy o spolupráci naďalej používal označenie \"metabolic balance\" a ponúkal nutričné plány založené na krvných výsledkoch. Žalobca zároveň požadoval zaplatenie zmluvnej pokuty za porušenie zmluvne dojednaného zákazu konkurencie.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorým uložil žalovanému povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške 50.000 EUR za porušenie zákazu konkurencie."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_0",
+              "quote": "vo výroku III. uložil žalovanému povinnosť do 3 dní od právoplatnosti rozhodnutia zaplatiť žalobcovi zmluvnú pokutu vo výške 50.000,- Eur"
+            },
+            "value": 50000
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_6",
+              "quote": "vznikol žalobcovi aj nárok na zaplatenie zmluvnej pokuty podľa § 5 ods. 4 zmluvy v celkovej výške 50.000,- Eur, t.j. 2 x 25.000,- Eur za jednotlivé porušenia"
+            },
+            "value": 50000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_29",
+              "quote": "Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie."
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_0",
+            "quote": "zaplatiť žalobcovi zmluvnú pokutu vo výške 50.000,- Eur, s úrokom z omeškania vo výške 9% ročne od 03.10.2020 do zaplatenia"
+          },
+          "rate_value": "9% ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_6",
+            "quote": "Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie."
+          },
+          "value": "other"
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_29",
+            "quote": "Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "25.000,00 Eur za každé jednotlivé porušenie"
+        },
+        "related_claim_ref": null,
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_31",
+              "quote": "Odvolací súd preskúmal rozhodnutie súdu prvej inštancie v rozsahu a z dôvodov uvedených žalovaným v odvolaní a dospel k záveru, že súd prvej inštancie na základe vykonaných dôkazov dospel k správnym skutkovým zisteniam a vec správne právne posúdil, keď vyhovel žalobe žalobcu v časti o zaplatenie sumy 50.000,- Eur titulom zmluvnej pokuty dojednanej stranami za porušenie zmluvne dohodnutého zákazu konkurencie žalovaným a v konaní na súde prvej inštancie odvolací súd nezistil ani vady procesných podmienok."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_41",
+                "quote": "Všeobecné tvrdenia žalovaného o tom, že v konkurenčnej doložke dojednanej medzi žalobcom a žalovaným absentuje určenie územia alebo okruhu osôb a že časové vymedzenie konkurenčnej doložky je v rozpore s § 672a Obchodného zákonníka, avšak bez bližšej konkretizácie a špecifikácie prečo a v čom neurčenie územia alebo okruhu osôb je v rozpore s poctivým obchodným stykom, prípadne dobrými mravmi alebo spôsobuje neurčitosť tohto dojednania a prečo a v čom doba trvania konkurenčnej doložky neprimerane obmedzuje žalovaného, preto boli nepostačujúce pre záver, že stranami dohodnutá konkurenčná doložka je v rozpore so zásadami poctivého obchodného styku alebo dobrými mravmi, prípadne že ide o neurčitý právny úkon."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_47",
+                "quote": "Obchodný zákonník v ustanovení § 301 umožňuje súdu znížiť neprimerane vysokú zmluvnú pokutu s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_13",
+                "quote": "Rovnako nie je možné primeranosť zmluvnej pokuty odvodzovať ani od výšky škody, nakoľko túto si žalobca v žalobe neuplatnil a ani nepreukázal je vznik a výšku."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_47",
+                "quote": "Žalovaný síce v konaní na súde prvej inštancie poukázal na neprimeranosť výšky zmluvných pokút, a to najmä vo vzťahu k výnosom, ktorý mal žalovaný zo spolupráce so žalobcom, avšak výnosy, resp. zisky zmluvných strán nevyjadrujú hodnotu a ani význam zabezpečovanej povinnosti, ktorou zabezpečovanou povinnosťou v súdenej veci boli špecifikované záväzky (povinnosti) žalovaného z titulu zmluvne dohodnutého zákazu konkurencie, pričom v zmysle § 301 Obchodného zákonníka zákonným rámcom pre moderáciu zmluvnej pokuty súdom je práve prihliadnutie na hodnotu a význam zabezpečovanej povinnosti."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_46",
+              "quote": "Obchodný zákonník v ustanovení § 301 umožňuje súdu znížiť neprimerane vysokú zmluvnú pokutu s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta. V tomto zákonnom ustanovení je teda upravená možnosť, nie povinnosť súdu zmluvnú pokutu moderovať, a preto toto zákonné ustanovenie nie je možné vykladať tak, že sám súd má nájsť dôvody pre moderáciu zmluvnej povinnosti, ale je na tej strane sporu, ktorá má povinnosť zmluvnú pokutu platiť, aby sa moderácie zmluvnej pokuty domáhala."
+            },
+            {
+              "chunk_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_47",
+              "quote": "Všeobecné a dôkazom nepodopreté tvrdenie žalovaného o výnosoch z uzavretej Zmluvy strán preto neboli spôsobilé na to, aby súdy k moderácii zmluvnej pokuty pristúpili."
+            }
+          ],
+          "legal_reasoning_summary": "Súd odmietol návr na zníženie zmluvnej pokuty podľa § 301 Obchodného zákonníka, pretože žalovaný nepreukázal, že by výška pokuty bola neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti, ktorou bol zákaz konkurencie. Súd zdôraznil, že moderačné právo nie je povinnosťou súdu, ale musí byť inicioíciované stranou, ktorá preukáže relevantné skutočnosti, čo žalovaný neurobil, keďže jeho argumentácia o výnosoch zo zmluvy nepostačovala na preukázanie neprimeranosti. Konkurenčná doložka bola vyhodnotená ako platná a v súlade so zásadami poctivého obchodného styku, keďže bola dojednaná konkrétne a úzko medzi obchodnými spoločnosťami."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.breach_type:KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_6",
+        "EVIDENCE_NOT_FOUND:pokuta_1.factor.zabezpecovacia_funkcia:KS_Banská_Bystrica_43CoPv_10_2023_00_dokument.pdf_chunk_47"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoPv/10/2023",
+      "decision_date": "14.09.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6120386576.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

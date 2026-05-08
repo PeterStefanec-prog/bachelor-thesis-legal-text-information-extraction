@@ -1,0 +1,307 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12053,
+    "completion_tokens": 2026,
+    "cost_usd": 0.0504,
+    "latency_seconds": 29.17,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľka ADRIA PLUS, s. r. o. sa domáhala určenia pravosti pohľadávky vo výške 876.826,32 eur z titulu zmluvnej pokuty a náhrady škody. Pohľadávka vznikla z dôvodu nedodržania termínov ukončenia diela zo strany úpadcu SUBRIMEX, s. r. o.",
+      "verdict_summary": "Súd určil, že pohľadávka navrhovateľky vo výške 149.936,93 eur je oprávnená. Vo zvyšku súd žalobu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Keďže úpadca uvedené predmety zmluvy neodovzdal v stanovenom termíne, vyzvala ho navrhovateľka na odovzdanie diela, toto dielo nebolo vykonané riadne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "10.000,--Sk za každý deň omeškania",
+          "evidence": {
+            "quote": "účastníci zmluvy pre prípad, ak zhotoviteľ nedodrží z vlastnej viny termín ukončenia diela dohodli zmluvnú pokutu vo výške 10.000,--Sk za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 837150.63,
+            "evidence": {
+              "quote": "pohľadávku, jednak vo výške 837.150,63 eur (25.220.000,--Sk) titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 116178.71,
+            "evidence": {
+              "quote": "znížil zmluvnú pokutu vyplývajúcu z predmetnej zmluvy o dielo na sumu 116.178,71 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "v zmysle vyššie citovaného ust. § 301 Obchodného zákonníka znížil zmluvnú pokutu vyplývajúcu z predmetnej zmluvy o dielo na sumu 116.178,71 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zistil, že nesplnenie zmluvnej povinnosti zhotoviteľa bolo spôsobené čiastočne aj konaním objednávateľky. Preto súd považoval zmluvnú pokutu za oprávnenú len v jednej polovici. Aj takto priznanej výške bola pokuta považovaná za neprimerane vysokú, a preto súd využil moderačné právo podľa § 301 Obchodného zákonníka a znížil ju na 116.178,71 eur.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta, ktorú si navrhovateľka uplatňovala vo výške 837.150,63 eur (25.220.000,--Sk) je pre tieto čiastočné porušenia z oboch strán oprávnená v jednej polovici",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta nie je primeraná významu a hodnote zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Hodnota predmetu zmluvy o dielo je podstatne nižšia ako výška zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "úpadca dielo nedokončil, neodovzdal",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "navrhovateľka neplnila svoje povinnosti voči úpadcovi",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "úpadca uvedené dielo neodovzdal v stanovenom termíne, vyzvala ho navrhovateľka na odovzdanie diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "3.000,--Sk za každý deň omeškania",
+          "evidence": {
+            "quote": "účastníci zmluvy v prípade, ak zhotoviteľ nedodrží z vlastnej viny termín ukončenia diela, uhradí objednávateľovi zmluvnú pokutu vo výške 3.000,--Sk za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 33758.22,
+            "evidence": {
+              "quote": "pohľadávky vo výške 33.758,22 eur, ktorá predstavuje nárok na zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 33758.22,
+            "evidence": {
+              "quote": "že návrh navrhovateľky na zmluvnú pokutu vyplývajúcu z tejto zmluvy o dielo spolu vo výške 33.758,22 eur (1.017.000,--Sk) je oprávnený a dôvodný",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "že návrh navrhovateľky na zmluvnú pokutu vyplývajúcu z tejto zmluvy o dielo spolu vo výške 33.758,22 eur (1.017.000,--Sk) je oprávnený a dôvodný",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zistil, že odporkyňa nepreukázala, že by zo strany navrhovateľky došlo k tomu, že úpadca nemohol dokončiť dielo riadne a včas. Tvrdenie navrhovateľky ohľadne nedokončenia a neodovzdania predmetnej stavby potvrdili aj svedkovia. Preto súd považoval pohľadávku za oprávnenú a dôvodnú.",
+          "key_quotes": [
+            {
+              "quote": "že návrh navrhovateľky na zmluvnú pokutu vyplývajúcu z tejto zmluvy o dielo spolu vo výške 33.758,22 eur (1.017.000,--Sk) je oprávnený a dôvodný",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "úpadca dielo nedokončil, neodovzdal",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].associated_interest.rate_value",
+        "contractual_penalties[1].associated_interest.rate_value",
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[1].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_35Cbi_59_2006_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "35Cbi/59/2006",
+      "decision_date": "04.06.2012",
+      "ecli": "ECLI:SK:KSBB:2012:6006201162.14",
+      "document_type": "Rozsudok"
+    }
+  }
+}

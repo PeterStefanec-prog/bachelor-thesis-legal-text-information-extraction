@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10,
+      "adaptive_top_k_call2": 9
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 19579,
+      "completion_tokens": 978,
+      "cost_usd": 0.0099,
+      "latency_seconds": 20.96,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 20224,
+      "completion_tokens": 1383,
+      "cost_usd": 0.0111,
+      "latency_seconds": 29.04,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000,00 EUR za každé porušenie povinnosti zachovávať mlčanlivosť zo strany žalovaného, ktorý mal neoprávnene odosielať dôverné informácie tretím osobám. Žalovaný namietal neplatnosť dojednania o zmluvnej pokute pre neurčitosť a nepreukázanie porušenia povinnosti.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvého stupňa, ktorý priznal žalobcovi zmluvnú pokutu v celkovej výške 2.000,00 EUR (zníženú z pôvodne nárokovaných 50.000,00 EUR na 500,00 EUR za každé z piatich preukázaných porušení) spolu s úrokom z omeškania.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "V prípade vyzradenia týchto skutočností tretím osobám, zaväzuje sa poskytovateľ, v danom prípade žalovaný zaplatiť záujemcovi, teda žalobcovi zmluvnú pokutu vo výške 10.000,00 Eur",
+            "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_6"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,00 Eur za každé vyzradenie uvedenej skutočnosti",
+          "evidence": {
+            "quote": "za každé vyzradenie uvedenej skutočnosti bude poskytovateľ povinný zaplatiť zmluvnú pokutu zvlášť",
+            "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_6"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 50000.0,
+            "evidence": {
+              "quote": "Z toho dôvodu prislúcha žalobcovi nárok na zmluvnú pokutu vo výške 2.500,- Eur (5x500,- Eur).",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            }
+          },
+          "final_awarded": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "Pripúšťa späťvzatie žaloby v časti o zaplatenie 2.000,- Eur s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi úrok z omeškania vo výške 9% ročne zo sumy 500,- Eur od 09.02.2012 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd teda dospel k záveru, že zasielaním predmetnej e-mailovej korešpondencie tretím osobám došlo k porušeniu čl. V. bod 5. Zmluvy o spolupráci, a teda základ nároku žalobcu na zaplatenie zmluvnej pokuty je daný.",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_16"
+            }
+          },
+          "legal_reasoning_summary": "Súd aplikoval moderačné právo podľa § 301 Obchodného zákonníka, keďže dohodnutú zmluvnú pokutu vo výške 10.000 EUR za každé porušenie považoval za neprimerane vysokú. Kľúčovým argumentom pre zníženie bola skutočnosť, že žalobcovi v dôsledku porušenia povinnosti nevznikla preukázateľná škoda, resp. túto škodu nepreukázal. Výšku zníženej pokuty súd ustálil na 500 EUR, čo zodpovedalo výške mesačnej odmeny žalovaného, pričom zdôraznil, že priznanie pôvodnej sumy by bolo neúmerne prísnou sankciou.",
+          "key_quotes": [
+            {
+              "quote": "Priznanie zmluvnej pokuty vo výške 10.000,-Eur za každé porušenie povinnosti by bolo neúmerne prísnou a bezdôvodnou sankciou, pričom žalobca v súvislosti s porušením dohodnutých povinností nepreukázal skutočnú škodu, ktorá mu mala vzniknúť.",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            },
+            {
+              "quote": "Z toho dôvodu okresný súd, vzhľadom k tomu, že bolo preukázané porušenie zmluvne dojednaných povinností zo strany žalovaného znížil zmluvnú pokutu, a to zo sumy 10.000,- Eur na sumu 500,- Eur, vychádzajúc pri tom z povahy a samotnej podstaty zmluvného vzťahu medzi stranami sporu",
+              "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pri posúdení primeranosti dojednanej výšky zmluvnej pokuty je potrebné prihliadnuť na hodnotu a význam zabezpečovanej povinnosti, na okolnosti, pohnútky a účel, ktorý bol sledovaný dojednaním zmluvnej pokuty.",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_16"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "súd má za to, že v danom prípade, i keď porušil žalovaný zmluvné povinnosti, žalobcovi nevznikla škoda, resp. takúto škodu nepreukázal, z toho dôvodu súd má za to, že zníženie zmluvnej pokuty je v danom prípade odôvodnené",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_17"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "vychádzajúc pri tom z povahy a samotnej podstaty zmluvného vzťahu medzi stranami sporu, keď žalovaný na základe zmluvy o spolupráci sa zaviazal vykonávať činnosti v zmysle uzavretej zmluvy",
+                "chunk_id": "KS_Žilina_14Cob_21_2019_00_dokument.pdf_chunk_18"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_21_2019_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/21/2019",
+      "decision_date": "26.09.2019",
+      "ecli": "ECLI:SK:KSZA:2019:8713217772.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

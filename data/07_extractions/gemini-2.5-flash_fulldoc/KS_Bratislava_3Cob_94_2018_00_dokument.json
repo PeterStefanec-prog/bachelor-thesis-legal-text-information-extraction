@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7278,
+    "completion_tokens": 2058,
+    "cost_usd": 0.0297,
+    "latency_seconds": 8.18,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 1.800 EUR za zrušenú prepravu po pristavení vozidla na nakládku. Žalovaný tvrdil, že čas nakládky bol rozhodujúci a nebol dodržaný, pričom sporná bola záväznosť prepravného poriadku žalobcu.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava III, ktorý znížil zmluvnú pokutu z 1.800 EUR na 180 EUR, a vrátil vec súdu prvej inštancie na ďalšie konanie a nové rozhodnutie, pretože súd prvej inštancie sa nedostatočne zaoberal platnosťou dojednania zmluvnej pokuty.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "ak bola preprava zrušená po pristavení vozidla na nakládku, vzniká dopravcovi nárok na zaplatenie zmluvnej pokuty vo výške 10 násobku ceny prepravy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "10 násobku ceny prepravy",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10 násobku ceny prepravy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 180.0,
+            "evidence": {
+              "quote": "prepravu z nemeckého mesta Bützow do Senca v cene 180,- EUR bez DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1800.0,
+            "evidence": {
+              "quote": "žalobca domáhal, aby súd zaviazal žalovaného na zaplatenie istiny vo výške 1.800,- EUR titulom vyčíslenej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 26Cb/9/2017-81 zo dňa 8.1.2018 zrušujea vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 26Cb/9/2017-81 zo dňa 8.1.2018 zrušujea vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu na 180 EUR, považujúc 10-násobok ceny prepravy za neprimeraný. Odvolací súd však zrušil rozsudok a vrátil vec na ďalšie konanie, pretože súd prvej inštancie sa nedostatočne zaoberal platnosťou dojednania zmluvnej pokuty a jej písomnou formou, čo je podmienkou platného uzavretia dohody o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie zmluvnú pokutu, ktorá prestavuje 10 násobok dohodnutej ceny považoval za neprimeranú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie využil v zmysle § 301 Obch. zák. svoje moderačné oprávnenie na zníženie zmluvnej pokuty, pričom sa však nezaoberal či zmluvná pokuta bola i platne dojednaná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podmienkou platného uzavretia dohody o zmluvnej pokute je jej písomná forma - § 544 ods. 2 Obč. zák.. Touto podmienkou sa však súd prvej inštancie dôsledne nezaoberal.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takto dojednaná zmluvná pokuta mala sankčný charakter bez toho, aby bolo zrejmé aké zabezpečenie záväzku chcel dopravca dosiahnuť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zníženie neprimeranej zmluvnej pokuty je možné iba do výšky škody. Ako však vyplýva z rozsudku, súd prvej inštancie sa nijako nezaoberal určením výšky škody, preto nie je jasné, ako dospel k sume 180,- EUR, ktorú žalobcovi priznal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Preto je nelogické v prípade zrušenia prepravy požadovať 10 násobne viac, ako by dosiahol pri bežnom chode v prípade riadneho splnenia záväzku. Priznaním takejto zmluvnej pokuty by vznikol hrubý nepomer medzi vzájomnými povinnosťami strán",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Konanie žalovaného, ktorý si zmätočne objednal vzápätí zrušenú prepravu, a ktorý následne špekulatívne nebol ochotný ani zaplatiť cenu tejto prepravy bez toho, aby sa o to žalobca musel domáhať súdnou cestou, súd prvej inštancie de facto nijako nesankcionoval.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_94_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/94/2018",
+      "decision_date": "22.05.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1317200425.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

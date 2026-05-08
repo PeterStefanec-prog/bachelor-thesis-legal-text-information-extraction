@@ -1,0 +1,316 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 32262,
+    "completion_tokens": 3383,
+    "cost_usd": 0.1145,
+    "latency_seconds": 70.48,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca REALITA - JAROŠČIAK, v.o.s. požadoval zaplatenie peňažnej pohľadávky v sume 23.235,74 Eur s príslušenstvom, vrátane zmluvnej pokuty a úrokov z omeškania, od žalovaných, ktorí sú dedičmi po poručiteľovi. Žalobca tvrdil, že žalovaní sú povinní zaplatiť zmluvnú pokutu a úroky z omeškania za omeškanie s plnením dlhu, ktorý na nich prešiel po smrti poručiteľa.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Žilina v napadnutých výrokoch I., II. a III. a zrušil výroky o trovách konania IV. a V., pričom vec vrátil súdu prvej inštancie na ďalšie konanie.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalobca tvrdil, že žalovaní sú povinní zaplatiť zmluvnú pokutu a úroky z omeškania za omeškanie s plnením dlhu, ktorý na nich prešiel po smrti poručiteľa.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2 % denne",
+          "evidence": {
+            "quote": "Zmluvná pokuta bola v tomto prípade medzi účastníkmi dojednaná vo výške 0,2 % denne, čo po prepočítaní predstavuje 73 % ročne.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 581165,
+            "evidence": {
+              "quote": "Ku dňu 13. októbra 2004 boli dlžníci povinní vrátiť žalobcovi sumu 581.165,- Sk, ktorá predstavuje súčet istiny a vyčísleného úroku z úveru.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 146162.99,
+            "evidence": {
+              "quote": "Zmluvná pokuta vo výške 0,05 % denne vyčíslená za obdobie odo dňa nasledujúceho po splatnosti úveru, teda od 14.10.2004, do 28.02.2006, dokedy žalobca túto zmluvnú pokutu požadoval, predstavuje 146.162,99 Sk.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie po oboznámení sa s argumentáciou žalobcu uvádzanou k aplikácii moderačného oprávnenia súdu, vo vzťahu ku zmluvnej pokute podľa § 301 Obchodného zákonníka v odvolaní žalobcu konštatoval, že nevzhliada dôvod pre odchýlenie sa od záveru o dôvodnosti zníženia žalobcom uplatnenej zmluvnej pokuty tak, ako to bolo súdom prvej inštancie učinené v prvom meritórnom rozhodnutí.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "15 % ročne",
+          "evidence": {
+            "quote": "Žalobca požadoval zaplatenie úroku z omeškania vo výške 15 % ročne, pričom tento úrok požadoval výlučne z istiny odo dňa nasledujúceho po jej splatnosti podľa zmlúv až do dňa zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie po oboznámení sa s argumentáciou žalobcu uvádzanou k aplikácii moderačného oprávnenia súdu, vo vzťahu ku zmluvnej pokute podľa § 301 Obchodného zákonníka v odvolaní žalobcu konštatoval, že nevzhliada dôvod pre odchýlenie sa od záveru o dôvodnosti zníženia žalobcom uplatnenej zmluvnej pokuty tak, ako to bolo súdom prvej inštancie učinené v prvom meritórnom rozhodnutí.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu z pôvodne dohodnutej výšky 0,2 % denne na 0,05 % denne, čo predstavuje 18,25 % ročne. Súd zohľadnil, že žalobca nie je bankovou inštitúciou a že vysoká zmluvná pokuta by mohla viesť k neúmernému obohateniu veriteľa. Zároveň súd zohľadnil, že žalobca už kompenzoval riziko vysokou úrokovou mierou z úveru. Celkové zaťaženie žalovaného tak predstavuje 32,5 % ročne, čo súd považoval za dostatočné pokrytie nárokov žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvná pokuta bola v tomto prípade medzi účastníkmi dojednaná vo výške 0,2 % denne, čo po prepočítaní predstavuje 73 % ročne.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Výkon práva z neprimerane vysokej zmluvnej pokuty nesleduje hospodársky cieľ, ale smeruje skôr k poškodeniu druhej strany.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta medzi účastníkmi bola dojednaná ako súčasť písomne uzavretej zmluvy o úvere a dohoda o zmluvnej pokute je tak platná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "úroku z omeškania, poškodený. Argumentáciu uvedenú žalobcom v odôvodnení odvolania o tom, že sa okresný súd nezaoberal otázkou vzniku a výšky škody, ktorá vznikla žalobcovi do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa zmluvná pokuta vťahuje, hodnotil okresný súd ako",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výške 15 % ročne. Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výške 15 % ročne. Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalobca tvrdil, že žalovaní sú povinní zaplatiť zmluvnú pokutu a úroky z omeškania za omeškanie s plnením dlhu, ktorý na nich prešiel po smrti poručiteľa.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "Okresný súd teda po zohľadnení všetkých vyššie uvedených okolností, medzi ktoré patrí predovšetkým záujem žalobcu na riadnom a včasnom plnení a hospodársku situáciu dlžníka, ktorému vysoká zmluvná pokuta môže spôsobiť problémy, dospel k záveru, že v tomto prípade je primeranou zmluvnou pokutou zmluvná pokuta vo výške 0,05 % denne, teda 18,25 % ročne.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 581165,
+            "evidence": {
+              "quote": "Ku dňu 13. októbra 2004 boli dlžníci povinní vrátiť žalobcovi sumu 581.165,- Sk, ktorá predstavuje súčet istiny a vyčísleného úroku z úveru.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie po oboznámení sa s argumentáciou žalobcu uvádzanou k aplikácii moderačného oprávnenia súdu, vo vzťahu ku zmluvnej pokute podľa § 301 Obchodného zákonníka v odvolaní žalobcu konštatoval, že nevzhliada dôvod pre odchýlenie sa od záveru o dôvodnosti zníženia žalobcom uplatnenej zmluvnej pokuty tak, ako to bolo súdom prvej inštancie učinené v prvom meritórnom rozhodnutí.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "15 % ročne",
+          "evidence": {
+            "quote": "Žalobca požadoval zaplatenie úroku z omeškania vo výške 15 % ročne, pričom tento úrok požadoval výlučne z istiny odo dňa nasledujúceho po jej splatnosti podľa zmlúv až do dňa zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie po oboznámení sa s argumentáciou žalobcu uvádzanou k aplikácii moderačného oprávnenia súdu, vo vzťahu ku zmluvnej pokute podľa § 301 Obchodného zákonníka v odvolaní žalobcu konštatoval, že nevzhliada dôvod pre odchýlenie sa od záveru o dôvodnosti zníženia žalobcom uplatnenej zmluvnej pokuty tak, ako to bolo súdom prvej inštancie učinené v prvom meritórnom rozhodnutí.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu z pôvodne dohodnutej výšky 0,2 % denne na 0,05 % denne, čo predstavuje 18,25 % ročne. Súd zohľadnil, že žalobca nie je bankovou inštitúciou a že vysoká zmluvná pokuta by mohla viesť k neúmernému obohateniu veriteľa. Zároveň súd zohľadnil, že žalobca už kompenzoval riziko vysokou úrokovou mierou z úveru. Celkové zaťaženie žalovaného tak predstavuje 32,5 % ročne, čo súd považoval za dostatočné pokrytie nárokov žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd teda po zohľadnení všetkých vyššie uvedených okolností, medzi ktoré patrí predovšetkým záujem žalobcu na riadnom a včasnom plnení a hospodársku situáciu dlžníka, ktorému vysoká zmluvná pokuta môže spôsobiť problémy, dospel k záveru, že v tomto prípade je primeranou zmluvnou pokutou zmluvná pokuta vo výške 0,05 % denne, teda 18,25 % ročne.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Výkon práva z neprimerane vysokej zmluvnej pokuty nesleduje hospodársky cieľ, ale smeruje skôr k poškodeniu druhej strany.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta medzi účastníkmi bola dojednaná ako súčasť písomne uzavretej zmluvy o úvere a dohoda o zmluvnej pokute je tak platná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "úroku z omeškania, poškodený. Argumentáciu uvedenú žalobcom v odôvodnení odvolania o tom, že sa okresný súd nezaoberal otázkou vzniku a výšky škody, ktorá vznikla žalobcovi do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa zmluvná pokuta vťahuje, hodnotil okresný súd ako",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výške 15 % ročne. Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výške 15 % ročne. Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.breach_type:full_doc",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.kumulacia_s_urokom",
+        "EVIDENCE_NOT_FOUND:pokuta_2.breach_type:full_doc",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.vyska_skody",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.kumulacia_s_urokom"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.original_claimed",
+        "contractual_penalties[1].amounts.final_awarded",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_109_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/109/2017",
+      "decision_date": "11.10.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5108224890.7",
+      "document_type": "Rozsudok"
+    }
+  }
+}

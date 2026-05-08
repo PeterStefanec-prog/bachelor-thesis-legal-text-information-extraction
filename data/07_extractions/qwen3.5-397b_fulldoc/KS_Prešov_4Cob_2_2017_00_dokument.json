@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8374,
+    "completion_tokens": 2185,
+    "cost_usd": 0.0084,
+    "latency_seconds": 30.71,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 3 300 eur za porušenie konkurenčnej doložky žalovanou, ktorá po skončení zmluvy o obchodnom zastúpení začala podnikať pre konkurenčnú spoločnosť. Žalovaná namietala neplatnosť zmluvy a neprimeranosť výšky pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý znížil zmluvnú pokutu na 300 eur a zamietol zvyšok nároku žalobcu. Odvolanie žalobcu proti výroku o priznaní 300 eur bolo odmietnuté, keďže týmto výrokom bolo vyhovené jeho nároku.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "žalovaná okrem iného sa zaviazala, že počas trvania zmluvy až do uplynutia šiestich mesiacov odo dňa zániku zmluvy nebude vo svojom mene alebo v mene inej osoby ako žalobcu vykonávať činnosť, ktorá bola predmetom obchodného zastúpenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "pokuta 3.300,-eur",
+          "evidence": {
+            "quote": "S porušením tejto povinnosti bola spojená pokuta 3.300,-eur splatná do 10. kalendárneho dňa odo dňa doručenia písomnej výzvy žalobcu na jej uhradenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 3300,
+            "evidence": {
+              "quote": "žalobca podal žalobu na zaplatenie sumy 3.300,- eur spolu s úrokom z omeškania 8,25 % ročne",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 300,
+            "evidence": {
+              "quote": "súd potom považoval za primeranú pokutu 300,- eur. Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,25 % ročne",
+          "evidence": {
+            "quote": "Okresný súd Humenné rozsudkom č. k. 11Cb/64/2014-253 rozhodol o povinnosti žalovanej zaplatiť žalobcovi sumu 300,- eur spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 300,- eur od 08.04.2014 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-. Vo zvyšku nárok žalobcu na zaplatenie 3.000,- zmluvnej pokuty zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že hoci došlo k porušeniu konkurenčnej doložky, výška dojednanej pokuty je neprimeraná vzhľadom na skutočný prospech, ktorý žalovaná získala (provízia 140,50 eur). Pri posudzovaní primeranosti súd prihliadal na to, že išlo o vedľajšiu činnosť žalovanej v jej nepriaznivej finančnej situácii bez úmyslu poškodiť žalobcu. Súd aplikoval moderačné právo podľa § 545a Občianskeho zákonníka a § 301 Obchodného zákonníka, keďže ochrana konkurencie nemôže byť bezbrehá.",
+          "key_quotes": [
+            {
+              "quote": "Ak konkurenčná doložka chráni čistotu podnikania v relevantnom obchodnom prostredí, tak táto ochrana nemôže byť bezbrehá pri stanovení výšky zmluvnej pokuty za porušenie zmluvnej povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta 300,- eur znamená dosť výrazné upozornenie žalovanej na porušenie zmluvnej povinnosti, pričom prihliada aj na okolnosti sociálnej situácie žalovanej, ktorá si zmluvou o obchodnom zastúpení chcela len privyrobiť a nemala priamy úmysel poškodiť žalobcu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Preto odvolací súd nepovažoval konkurenčnú doložku za v rozpore s dobrými mravmi a poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Konkurenčné doložky sú určitým povoleným zákonným spôsobom obmedzujúci obchodných zástupcov, aby neprechádzali ku konkurencii po určitú dobu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "je potrebné posúdiť primeranosť výšky zmluvnej pokuty 3.300,- eur oproti profitu, ktorý získala žalovaná ako províziu z dojednávaných zmlúv pre spoločnosť Telervis Plus, ktorá dosiahla výšku len 140,50 eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V danom stave, by snaha žalovanej si privyrobiť premietnutá do zisku 140,50 eur by znamenalo jej postih v rozsahu 3.300,-, čo nie je primerané.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliada aj na okolnosti sociálnej situácie žalovanej, ktorá si zmluvou o obchodnom zastúpení chcela len privyrobiť a nemala priamy úmysel poškodiť žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_2_2017_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/2/2017",
+      "decision_date": "14.11.2017",
+      "ecli": "ECLI:SK:KSPO:2017:8314205357.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

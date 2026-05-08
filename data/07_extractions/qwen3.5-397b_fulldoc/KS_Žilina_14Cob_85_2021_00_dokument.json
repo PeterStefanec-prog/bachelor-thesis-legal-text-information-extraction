@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 22040,
+    "completion_tokens": 1805,
+    "cost_usd": 0.0128,
+    "latency_seconds": 33.7,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 17.131,29 EUR za oneskorené odovzdanie IV. etapy diela (register obnovenej evidencie pozemkov) podľa Zmluvy o dielo. Žalovaný namietal nedostatok aktívnej vecnej legitimácie žalobcu z dôvodu neplatnosti zmluvy o prevode práv a povinností a neurčitosť dojednania o zmluvnej pokute.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok okresného súdu, ktorým bola žaloba zamietnutá. Súd rozhodol, že žalobca nie je aktívne vecne legitimovaný a dohoda o zmluvnej pokute je neplatná pre neurčitosť."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Okresný súd tak vzhľadom na nedostatok aktívnej vecnej legitimácie a z dôvodu neplatnosti dohody o zmluvnej pokute žalobu zamietol"
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobca žiadal zaviazať žalovaného na zaplatenie sumy 17.131,29 Eur s úrokom z omeškania 8% ročne od 19.10.2017 do zaplatenia"
+            },
+            "value": 17131.29
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Cena za IV. etapu diela ROEP pre k.ú. P. predstavuje sumu 15 573,90 EUR"
+            },
+            "value": 15573.9
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žalobca žiadal zaviazať žalovaného na zaplatenie sumy 17.131,29 Eur s úrokom z omeškania 8% ročne od 19.10.2017 do zaplatenia"
+          },
+          "rate_value": "8% ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "v prípade, ak zhotoviteľ nedodrží niektorú z lehôt ukončenia etapy spracovania diela uvedenú v čl. III. tejto zmluvy, je povinný zaplatiť objednávateľovi zmluvnú pokutu"
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Okresný súd tak vzhľadom na nedostatok aktívnej vecnej legitimácie a z dôvodu neplatnosti dohody o zmluvnej pokute žalobu zamietol"
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "zo žiadneho zo zmluvných dojednaní ani zo špecifikácie prác, ktorá je prílohou zmluvy, nie je možné jednoznačným a nespochybniteľným spôsobom stanoviť, aká časť dohodnutej ceny za dielo má byť cenou za IV. etapu vykonávania diela"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "nemožno dospieť k inému záveru, než záveru o neurčitosti a teda neplatnosti takéhoto zmluvného dojednania"
+            }
+          ],
+          "legal_reasoning_summary": "Súd zamietol žalobu z dvoch hlavných dôvodov: nedostatok aktívnej vecnej legitimácie žalobcu a neplatnosť dohody o zmluvnej pokute. Pokiaľ ide o neplatnosť, súd konštatoval, že hoci zmluva určovala sadzbu pokuty (5 %), neurčovala jednoznačne základ pre jej výpočet, teda cenu za konkrétnu IV. etapu diela. Keďže zo zmluvy a jej príloh nebolo možné vyvodiť cenu za jednotlivé etapy, dohoda bola považovaná za neurčitú podľa § 37 Občianskeho zákonníka a tým neplatnú."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "je povinný zaplatiť objednávateľovi zmluvnú pokutu vo výške 5% z ceny za príslušnú etapu spracovania za každý začatý týždeň omeškania"
+          },
+          "type": "percent_z_ceny",
+          "value_raw": "5% z ceny za príslušnú etapu spracovania za každý začatý týždeň omeškania"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_85_2021_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/85/2021",
+      "decision_date": "25.11.2021",
+      "ecli": "ECLI:SK:KSZA:2021:5819200497.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

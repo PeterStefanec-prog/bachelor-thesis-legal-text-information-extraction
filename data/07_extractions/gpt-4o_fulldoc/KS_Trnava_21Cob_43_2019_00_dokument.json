@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9123,
+    "completion_tokens": 970,
+    "cost_usd": 0.0325,
+    "latency_seconds": 57.61,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa NN Životná poisťovňa, a.s. žiadala zaplatenie zmluvnej pokuty vo výške 3.000 € za porušenie zákazu konkurencie zo strany žalovanej Renáty Hasákovej. Žalovaná mala vykonávať činnosť v oblasti finančného sprostredkovania po zániku zmluvy, čo bolo v rozpore s dohodnutou konkurenčnou doložkou.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvej inštancie vo výrokoch II a III a vrátil vec na ďalšie konanie.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnú pokutu za porušenie dohodnutého zákazu konkurencie",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.000 €",
+          "evidence": {
+            "quote": "Za porušenie tejto povinnosti bola v čl. VII ods. 1 zmluvy dohodnutá zmluvná pokuta 3.000 €.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3000,
+            "evidence": {
+              "quote": "o 3.000 € s prísl.",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 600,
+            "evidence": {
+              "quote": "zmluvnú pokutu znížil na 600 €",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zmluvnú pokutu znížil na 600 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu z 3.000 € na 600 €, pretože žalobkyňa nepreukázala konkrétny spôsob porušenia ani vznik škody. Súd považoval konkurenčnú doložku za obmedzujúcu viac, než je potrebné, a preto zmluvnú pokutu moderoval podľa § 301 Obchodného zákonníka. Odvolací súd zistil, že súd prvej inštancie nesprávne aplikoval § 672a Obch. zák. a vrátil vec na ďalšie konanie.",
+          "key_quotes": [
+            {
+              "quote": "obmedzená na jeden sektor. Žalobkyňa vytkla súdu prvej inštancie, že v skutočnosti neobmedzil konkurenčnú doložku, ale moderoval zmluvnú pokutu, zodpovedajúce ustanovenie (§ 301 Obch. zák.) však vôbec",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca nepreukázal konkrétny spôsob porušenia, ani vznik škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_43_2019_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/43/2019",
+      "decision_date": "26.11.2019",
+      "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

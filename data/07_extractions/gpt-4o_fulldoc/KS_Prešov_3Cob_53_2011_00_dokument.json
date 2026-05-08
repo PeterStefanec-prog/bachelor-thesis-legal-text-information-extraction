@@ -1,0 +1,307 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8520,
+    "completion_tokens": 2087,
+    "cost_usd": 0.0422,
+    "latency_seconds": 26.62,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca EOS KSI Slovensko, s.r.o. sa domáhal zaplatenia zmluvnej pokuty vo výške 91,50 Eur a úrokov z omeškania vo výške 0,1 % denne zo sumy 457,49 Eur od žalovanej W. T. na základe zmluvy o revolvingovom úvere.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa o zamietnutí zmluvnej pokuty vo výške 26,56 Eur a zrušil výrok o neprijateľnosti zmluvnej podmienky.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru vo výške 20 % z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "20 % z dlžnej sumy",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru vo výške 20 % z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 457.49,
+            "evidence": {
+              "quote": "Dlžná suma vo výške 574,73 Eur pozostávala z istiny vo výške 457,49 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 91.5,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 91,50 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd nepriznal žalobcovi nárok na zaplatenie zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 0,1 % denne z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimerane vysokú, predstavujúcu 20 % z dlžnej sumy. Odvolací súd potvrdil tento záver, pričom konštatoval, že zmluvná pokuta nebola dohodnutá v súlade s § 544 ods. 2 Občianskeho zákonníka, čo spôsobuje jej neplatnosť. Súd tiež zohľadnil, že obchodné podmienky neboli podpísané účastníkmi zmluvného vzťahu, čo prispelo k neplatnosti zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca na realizáciu prístupu k spravodlivosti využil neprimeraný prostriedok, ktorým vyvolal zbytočné trovy konania",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške zodpovedajúcej súhrnnej výške úrokov, ktoré by bola žalovaná povinná platiť od momentu uplatnenia práva žalobcu na predčasné splatenie",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvnú pokutu vo výške zodpovedajúcej súhrnnej výške úrokov",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške zodpovedajúcej súhrnnej výške úrokov, ktoré by bola žalovaná povinná platiť od momentu uplatnenia práva žalobcu na predčasné splatenie",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd nepriznal žalobcovi nárok na zaplatenie zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "súd nepriznal žalobcovi nárok na zaplatenie zmluvnej pokuty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimerane vysokú, predstavujúcu 20 % z dlžnej sumy. Odvolací súd potvrdil tento záver, pričom konštatoval, že zmluvná pokuta nebola dohodnutá v súlade s § 544 ods. 2 Občianskeho zákonníka, čo spôsobuje jej neplatnosť. Súd tiež zohľadnil, že obchodné podmienky neboli podpísané účastníkmi zmluvného vzťahu, čo prispelo k neplatnosti zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje 1/5 z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca na realizáciu prístupu k spravodlivosti využil neprimeraný prostriedok, ktorým vyvolal zbytočné trovy konania",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_veritela",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "contractual_penalties[1].amounts.secured_principal",
+        "contractual_penalties[1].amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_53_2011_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/53/2011",
+      "decision_date": "29.11.2011",
+      "ecli": "ECLI:SK:KSPO:2011:8110223535.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

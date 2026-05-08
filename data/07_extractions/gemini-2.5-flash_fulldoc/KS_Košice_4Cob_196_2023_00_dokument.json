@@ -1,0 +1,173 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9531,
+    "completion_tokens": 1849,
+    "cost_usd": 0.0304,
+    "latency_seconds": 7.16,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 3.500 eur s príslušenstvom titulom nároku z ručenia za záväzok hlavného dlžníka zaplatiť žalobcovi zmluvnú pokutu za omeškanie s odovzdaním diela. Žalovaný namietal neplatnosť ručiteľského vyhlásenia, nedodržanie zásady subsidiarity a neprimeranú výšku zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu Košice II, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania a priznal žalobcovi náhradu trov odvolacieho konania v plnom rozsahu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Ak zhotoviteľ neodovzdá dielo riadne ani do 60 kalendárnych dní odo dňa určeného v zmluve ako deň odovzdania, zaplatí objednávateľovi zmluvnú pokutu vo výške 3.500,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.500,- eur",
+          "evidence": {
+            "quote": "Ak zhotoviteľ neodovzdá dielo riadne ani do 60 kalendárnych dní odo dňa určeného v zmluve ako deň odovzdania, zaplatí objednávateľovi zmluvnú pokutu vo výške 3.500,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3500,
+            "evidence": {
+              "quote": "žalobca sa žalobou podanou dňa 21.06.2020 domáhal, aby súd žalovanému uložil povinnosť zaplatiť mu sumu 3.500 eur s prísl. titulom nároku z ručenia za záväzok hlavného dlžníka zaplatiť žalobcovi zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3500,
+            "evidence": {
+              "quote": "žalovanému uložil povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania vo výške 8 % ročne od 27.04.2017 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8 % ročne",
+          "evidence": {
+            "quote": "žalovanému uložil povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania vo výške 8 % ročne od 27.04.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie zároveň uzavrel, že nie je dôvod na moderáciu zmluvnej pokuty so zreteľom na hodnotu a význam zabezpečenej povinnosti, keďže výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že nie je dôvod na moderáciu zmluvnej pokuty, pretože jej výška 3.500 Eur nie je neprimerane vysoká vzhľadom na hodnotu a význam zabezpečenej povinnosti, ktorá je podstatnou zmluvnou náležitosťou zmluvy o dielo. Odvolací súd potvrdil tento záver a považoval ho za vecne správny.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie zároveň uzavrel, že nie je dôvod na moderáciu zmluvnej pokuty so zreteľom na hodnotu a význam zabezpečenej povinnosti, keďže výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti, ktorá je v tomto prípade podstatnou zmluvnou náležitosťou zmluvy o dielo.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti, ktorá je v tomto prípade podstatnou zmluvnou náležitosťou zmluvy o dielo.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_196_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/196/2023",
+      "decision_date": "26.03.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6120323583.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

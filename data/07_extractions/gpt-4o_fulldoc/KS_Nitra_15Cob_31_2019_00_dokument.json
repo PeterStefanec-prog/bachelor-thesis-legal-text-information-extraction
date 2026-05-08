@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10730,
+    "completion_tokens": 1169,
+    "cost_usd": 0.0385,
+    "latency_seconds": 33.16,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca STAVBA A INŽINIERING, s.r.o. sa domáhal zaplatenia sumy 34.130,62 eura s príslušenstvom od žalovaného Kaška 973 na základe zmluvy o dielo č. 2012001, ktorá sa týkala obnovy bytového domu. Žalobca uplatnil zmluvnú pokutu za omeškanie s úhradou faktúry.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok Okresného súdu Nitra, ktorý zaviazal žalovaného zaplatiť žalobcovi požadovanú sumu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 2012071",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V čl. VII. bod 2 zmluvy bola pre prípad omeškania s úhradou faktúr dohodnutá zmluvná pokuta vo výške 0,25 % z dlžnej sumy za každý začatý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,25 % z dlžnej sumy za každý začatý deň omeškania",
+          "evidence": {
+            "quote": "V čl. VII. bod 2 zmluvy bola pre prípad omeškania s úhradou faktúr dohodnutá zmluvná pokuta vo výške 0,25 % z dlžnej sumy za každý začatý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 26927.51,
+            "evidence": {
+              "quote": "Žalobca vystavil žalovanému aj faktúru č. 2012071, ktorá bola splatná dňa 13. 10. 2012 a znela na sumu 26.927,51 eura.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 34130.62,
+            "evidence": {
+              "quote": "Žalobca si uplatnil zmluvnú pokutu vo výške 0,25 % denne zo sumy 26.927,51 eura od 14. 10. 2012 do 04. 03. 2014, čo predstavuje sumu 34.130,62 eura.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 34130.62,
+            "evidence": {
+              "quote": "Súd dospel k záveru, že žalobcom uplatnená zmluvná pokuta je dôvodná.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd dospel k záveru, že žalobcom uplatnená zmluvná pokuta je dôvodná.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že žalobcom uplatnená zmluvná pokuta je dôvodná, pretože žalovaný nesplnil svoju povinnosť včas. Odvolací súd potvrdil tento rozsudok, keďže žalovaný nepreukázal, že omeškanie bolo spôsobené výlučne na strane ŠFRB. Súd nevyužil moderačné právo podľa § 301 Obchodného zákonníka, pretože výška pokuty bola dohodnutá v zmluve a žalovaný mohol predísť jej vzniku skoršou úhradou faktúry.",
+          "key_quotes": [
+            {
+              "quote": "Súd dospel k záveru, že žalobcom uplatnená zmluvná pokuta je dôvodná.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaného v podanom odpore uviedol, že žalobu považuje za podanú v rozpore s dobrými mravmi a zásadami poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pokutu by bol nedôvodný. Žalovaný v konaní nepreukázal, že sa dostal do omeškania bez svojho",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_31_2019_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/31/2019",
+      "decision_date": "15.10.2019",
+      "ecli": "ECLI:SK:KSNR:2019:4115215881.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

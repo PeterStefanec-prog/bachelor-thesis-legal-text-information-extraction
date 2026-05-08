@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17721,
+    "completion_tokens": 1057,
+    "cost_usd": 0.0549,
+    "latency_seconds": 33.11,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca KOLIBA ZP s.r.o. požadoval zaplatenie zmluvnej pokuty vo výške 30.000 EUR od žalovaného UMBRELLA FF, s.r.o. za porušenie zmluvných povinností v rámci Zmluvy o odbornej spolupráci, kde žalovaný údajne porušil obchodné tajomstvo a neoznámil využitie subdodávateľa.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Žilina, ktorý žalobu zamietol z dôvodu neplatnosti dojednania o zmluvnej pokute.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "žalovaný tak porušoval obchodné tajomstvo, nakoľko danej osobe vedome a dlhodobo sprístupňoval obchodné a daňové tajomstvo žalobcu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "maximálne do výšky 30.000,- Eur",
+          "evidence": {
+            "quote": "Za porušenie môže byť spracovateľovi udelená zmluvná pokuta maximálne do výšky 30.000,- Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 30000,
+            "evidence": {
+              "quote": "zotrval na zmluvnej pokute vo výške 30.000,- Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "iba tejto časti. 12. Vzhľadom na neplatnosť zmluvného dojednania o zmluvnej pokute okresný súd dospel k záveru, že žalobcovi nevznikol nárok na zmluvnú",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "súd sa už nezaoberal porušením zmluvnej povinnosti žalovaným, nakoľko by to bolo nadbytočné, keďže prípadným porušením povinnosti nemožno priznať nárok na zmluvnú pokutu z dôvodu vyslovenia neplatnosti takej dohody.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "dohodnuté zmluvné dojednanie v Článku VII. Zmluvy o obchodnej spolupráci bod 2/ je neplatným zmluvným dojednaním.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol žalobu, pretože dojednanie o zmluvnej pokute bolo neplatné z dôvodu neurčitosti. Zmluvná pokuta bola dohodnutá ako maximálna suma bez jasného spôsobu určenia konkrétnej výšky. Súd konštatoval, že takáto dohoda nespĺňa zákonné požiadavky na určitú a zrozumiteľnú dohodu o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "dohodnuté zmluvné dojednanie v Článku VII. Zmluvy o obchodnej spolupráci bod 2/ je neplatným zmluvným dojednaním.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_150_2020_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/150/2020",
+      "decision_date": "27.05.2021",
+      "ecli": "ECLI:SK:KSZA:2021:6119391603.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

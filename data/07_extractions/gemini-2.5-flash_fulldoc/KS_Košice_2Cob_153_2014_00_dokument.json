@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14831,
+    "completion_tokens": 2378,
+    "cost_usd": 0.0423,
+    "latency_seconds": 9.83,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 53 790 eur za nedodaný tovar – repku ozimnú v objeme 537,90 ton, na základe kúpnej zmluvy. Žalovaný namietal, že tovar bol odmietnutý žalobcom a že zmluvná pokuta je neprimerane vysoká.",
+      "verdict_summary": "Krajský súd v Košiciach potvrdil rozsudok súdu prvého stupňa, ktorý zaviazal žalovaného na zaplatenie sumy 53 790 eur s príslušenstvom a náhradu trov konania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca sa domáhal, aby súd zaviazal žalovaného na zaplatenie sumy 53.790,- eur s príslušenstvom ako vyúčtovanej zmluvnej pokuty za nedodaný tovar - repku ozimnú v objeme 537,90 ton",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "100,- eur za každú nedodanú tonu",
+          "evidence": {
+            "quote": "1,70/tona %\" a zmluvná pokuta \"v prípade, že predávajúci nedodá zmluvné dohodnuté množstvo predmetu kúpy zaväzuje sa zaplatiť kupujúcemu zmluvnú pokutu vo výške 100,- eur za každú nedodanú tonu\".",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 537.9,
+            "evidence": {
+              "quote": "za nedodaný tovar - repku ozimnú v objeme 537,90 ton",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 53790.0,
+            "evidence": {
+              "quote": "žalobca sa domáhal, aby súd zaviazal žalovaného na zaplatenie sumy 53.790,- eur s príslušenstvom ako vyúčtovanej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 53790.0,
+            "evidence": {
+              "quote": "Súd prvého stupňa rozsudkom uložil žalovanému povinnosť uhradiť žalobcovi sumu 53.790,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť uhradiť žalobcovi sumu 53.790,- eur s 9% úrokom z omeškania ročne od 1.4.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa rozsudkom uložil žalovanému povinnosť uhradiť žalobcovi sumu 53.790,- eur s 9% úrokom z omeškania ročne od 1.4.2011 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že žalovaný bol v omeškaní s dodaním tovaru, keďže nedodal žalobcovi 537,9 ton repky riadne a včas a nedisponoval dostatočným objemom repky. Súd tiež konštatoval, že zmluvné dojednanie o vlhkosti tovaru nad 8% bolo neplatné pre rozpor so zákonom, a teda žalobca bol oprávnený tovar s vyššou vlhkosťou odmietnuť. Súd nepoužil moderačné oprávnenie, pretože výška pokuty zodpovedala hodnote a významu povinnosti a neprimerane nezaťažovala žalovaného, pričom zohľadnil aj vzniknutú škodu žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "žalobcom uplatnená výška zmluvnej pokuty 100,- eur za každú nedodanú tonu repky zodpovedá hodnote a významu povinnosti zabezpečenej zmluvnou pokutou, ktorá sa nevymyká bežne dohodnutej zmluvnej pokute medzi podnikateľskými subjektmi pre prípad nesplnenia takejto povinnosti",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "zmluvná pokuta v celkovej výške 53.790,- eur zodpovedá sankčnej, zaisťovacej a reparačnej funkcii zmluvnej pokuty a jej zaplatenie nemôže neprimerane zaťažovať žalovaného.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "konaní sa preukázalo, že žalovaný dodal žalobcovi iba 462,10 ton a nedodal žalobcovi 537,9 ton repky riadne a včas, čím žalobcovi vznikol nárok na zaplatenie dojednanej zmluvnej pokuty. Bolo preukázané,",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Uplatnenie práva žalobcom nemožno považovať za výkon práva v rozpore so zásadami poctivého obchodného styku. Z obsahu vykonaného dokazovania pred súdom prvého stupňa je nepochybné, že žalobca nijako nevybočoval zo štandardného správania sa bežných podnikateľov.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta v celkovej výške 53.790,- eur zodpovedá sankčnej, zaisťovacej a reparačnej funkcii zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prihliadol aj na nárast ceny komodity repky o 200,- eur/tona v roku 2010, čím žalobcovi reálne vznikla škoda, keďže musel uzavrieť zmluvu s cenou 280,- eur/tona na rok 2011 so svojim zmluvným partnerom, čo predstavuje stratu pri objeme 537,90 ton vo výške 107.580 eur, teda uplatnená zmluvná pokuta predstavuje iba 50 % tejto sumy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "uplatnená zmluvná pokuta predstavuje iba 50 % tejto sumy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "bolo preukázané, že žalovaný nedisponoval \"voľným\" objemom 1 000 ton repky pre žalobcu, keďže svojim jednotlivým zmluvným partnerom dodal repku z úrody 2010 iba pomerne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "O tom, že žalobca nebol v omeškaní s prevzatím tovaru, teda ten neodmietol prijať, svedčí aj vzájomná komunikácia medzi účastníkmi konania zo dňa 3.8.2010",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_2",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_153_2014_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/153/2014",
+      "decision_date": "28.11.2014",
+      "ecli": "ECLI:SK:KSKE:2014:7712204158.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

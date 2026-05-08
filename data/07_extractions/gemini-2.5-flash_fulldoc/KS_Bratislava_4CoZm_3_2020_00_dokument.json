@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11517,
+    "completion_tokens": 2279,
+    "cost_usd": 0.0372,
+    "latency_seconds": 9.41,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmenkovej sumy 1.738,80 Eur s príslušenstvom a zmenkovou odmenou, ktorá predstavovala dve zmluvné pokuty za omeškanie s úhradou splátok z revolvingovej pôžičky. Žalovaný namietal výšku pokuty a úrokov, pričom tvrdil, že už vrátil viac ako požičanú sumu a zmluva môže obsahovať nezákonné podmienky.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý zaviazal žalovaného zaplatiť žalobcovi zmenkovú sumu 1.738,80 Eur s príslušenstvom a zmenkovou odmenou.",
+      "contract_type": "pozicka",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaná suma 1.738,80 Eur predstavuje dve zmluvné pokuty za omeškanie s úhradou splátok.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "jednorazovú úhradu zmluvnej pokuty vo výške 10 % z nominálnej výšky pôžičky",
+          "evidence": {
+            "quote": "Podľa čl. 12 bod 12.1. zmluvy o revolvingovej pôžičke v prípade omeškania dlžníka s úhradou splátky pôžičky o viac ako 15 dní po termíne splatnosti je veriteľ oprávnený požadovať jednorazovú úhradu zmluvnej pokuty vo výške 10 % z nominálnej výšky pôžičky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 8694.0,
+            "evidence": {
+              "quote": "zaviazal poskytnúť žalovanému ako dlžníkovi na účely výkonu jeho podnikateľskej činnosti peňažné prostriedky vo výške 8.694 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1738.8,
+            "evidence": {
+              "quote": "o zaplatenie 1.738,80 Eur s príslušenstvom a odmenou zo zmenky",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 1738.8,
+            "evidence": {
+              "quote": "I. výrokom zaviazal žalovaného zaplatiť žalobcovi zmenkovú sumu vo výške 1.738,80 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročným úrokom zo sumy 1.738,80 Eur od 14.07.2015 do zaplatenia",
+          "evidence": {
+            "quote": "spolu so 6 % ročným úrokom zo sumy 1.738,80 Eur od 14.07.2015 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd sa potom stotožnil s právnym názorom súdu, ktorý dve zmluvné pokuty vo výške 10 % z nominálnej výšky úveru považoval za primerané povahe a významu zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie, a následne aj odvolací súd, považoval dve zmluvné pokuty vo výške 10 % z nominálnej výšky úveru za primerané vzhľadom na povahu a význam zabezpečenej povinnosti. Súd konštatoval, že žalovaný je podnikateľ, znalý svojich práv, a preto mu neprináleží ochrana spotrebiteľa. Žalovaný sa nedomáhal zníženia zmluvných pokút, len opakovane uviedol, že nemá záujem zaplatiť žalobcovi nič viac. Súd nemal právny základ na odpustenie zmluvných pokút.",
+          "key_quotes": [
+            {
+              "quote": "Dve zmluvné pokuty vo výške 10 % z nominálnej výšky úveru považoval súd za primerané povahe a významu zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný sa však vo svojich podaniach a prednesoch nedomáhal, aby súd zmluvné pokuty znížil, len opakovane uviedol, že nemá záujem zaplatiť žalobcovi nič viac.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd pri svojom rozhodovaní zobral na vedomie skutočnosť, že žalovaný zaplatil žalobcovi celú požičanú sumu úveru, ako aj to, že do omeškania so splácaním splátok sa nedostal vlastnou vinou a mal záujem svoj dlh uhradiť, čo aj urobil, avšak vzhľadom na vyššie uvedené dôvody nemal možnosť rozhodnúť o odpustení zmluvných pokút.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zdôraznil, že pri dojednávaní úrokov pri poskytovaní úveru koná v súlade so zásadami poctivého obchodného styku len ten veriteľ, ktorý požaduje primeraný úrok bez ohľadu na to, že dlžník uzatvára zmluvu v situácii pre neho nepriaznivej.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dve zmluvné pokuty vo výške 10 % z nominálnej výšky úveru považoval súd za primerané povahe a významu zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dve zmluvné pokuty vo výške 10 % z nominálnej výšky úveru považoval súd za primerané povahe a významu zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd pri svojom rozhodovaní zobral na vedomie skutočnosť, že žalovaný zaplatil žalobcovi celú požičanú sumu úveru, ako aj to, že do omeškania so splácaním splátok sa nedostal vlastnou vinou a mal záujem svoj dlh uhradiť, čo aj urobil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca na začiatku pojednávania dňa 07.10.2019 deklaroval záujem rokovať so žalovaným o mimosúdnom rokovaní a ponúkol možnosť ďalšieho zníženia zmluvných pokút.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4CoZm_3_2020_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4CoZm/3/2020",
+      "decision_date": "29.10.2020",
+      "ecli": "ECLI:SK:KSBA:2020:1515217069.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

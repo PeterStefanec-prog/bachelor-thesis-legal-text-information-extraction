@@ -1,0 +1,309 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11705,
+    "completion_tokens": 1984,
+    "cost_usd": 0.0491,
+    "latency_seconds": 35.72,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca QSR24h Slovakia, s. r. o. sa domáhal zaplatenia sumy 28.000 eur s príslušenstvom titulom zmluvnej pokuty za nevrátenie reklamných predmetov. Žalovaný Ing. Dalibor Beránek namietal výšku zmluvnej pokuty ako neprimerane vysokú a v rozpore s dobrými mravmi.",
+      "verdict_summary": "Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III zrušil a vec v tomto rozsahu vrátil súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak žalovaný nevráti žalobcovi do 3 dní od doručenia výzvy reklamné predmety, je povinný zaplatiť žalobcovi zmluvnú pokutu 1.000 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "1.000 eur",
+          "evidence": {
+            "quote": "ak žalovaný nevráti žalobcovi do 3 dní od doručenia výzvy reklamné predmety, je povinný zaplatiť žalobcovi zmluvnú pokutu 1.000 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1000,
+            "evidence": {
+              "quote": "po čiastočnom späťvzatí predmetom konania zostal nárok na zaplatenie zmluvnej pokuty 1.000 eur (2016)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že súd prvej inštancie nesprávne posúdil právne otázky týkajúce sa primeranosti zmluvnej pokuty a rozloženia dôkazného bremena. Súd prvej inštancie sa nezaoberal hodnotou a významom zabezpečovanej povinnosti a nesprávne aplikoval ustanovenie § 301 OBZ. Odvolací súd preto zrušil rozhodnutie a vrátil vec na ďalšie konanie.",
+          "key_quotes": [
+            {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak žalovaný nevráti žalobcovi do 3 dní od doručenia výzvy reklamné predmety poskytnuté v zmysle zmluvy, je povinný zaplatiť žalobcovi zmluvnú pokutu 1.000 eur za každého pracovníka, ktorého reklamné predmety nebudú odovzdané.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "1.000 eur za každého pracovníka",
+          "evidence": {
+            "quote": "ak žalovaný nevráti žalobcovi do 3 dní od doručenia výzvy reklamné predmety poskytnuté v zmysle zmluvy, je povinný zaplatiť žalobcovi zmluvnú pokutu 1.000 eur za každého pracovníka, ktorého reklamné predmety nebudú odovzdané.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 16000,
+            "evidence": {
+              "quote": "že po čiastočnom späťvzatí predmetom konania zostal nárok na zaplatenie zmluvnej pokuty 1.000 eur (2016) a 16.000",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že súd prvej inštancie nesprávne posúdil právne otázky týkajúce sa primeranosti zmluvnej pokuty a rozloženia dôkazného bremena. Súd prvej inštancie sa nezaoberal hodnotou a významom zabezpečovanej povinnosti a nesprávne aplikoval ustanovenie § 301 OBZ. Odvolací súd preto zrušil rozhodnutie a vrátil vec na ďalšie konanie.",
+          "key_quotes": [
+            {
+              "quote": "III, takto rozhodol: Odvolací súd rozsudok súdu prvej inštancie v napadnutých výrokoch II a III ruší a vec v tomto rozsahu vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_128_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/128/2020",
+      "decision_date": "12.01.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2318207656.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

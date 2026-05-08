@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10075,
+    "completion_tokens": 1294,
+    "cost_usd": 0.0381,
+    "latency_seconds": 12.51,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ČSOB Leasing, a. s. požadoval od žalovaného Mgr. O. D. zaplatenie sumy 2.142,68 eur vrátane zmluvnej pokuty a úrokov z omeškania za neplatenie splátok z operatívneho leasingu. Žalovaný nesplnil svoje povinnosti platiť dohodnuté splátky za prenájom vozidla.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý žalovanému uložil povinnosť zaplatiť žalobcovi sumu 757,28 eur ako zmluvnú pokutu a zamietol žalobu vo zvyšnej časti.",
+      "contract_type": "ine",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný v rozpore so svojimi povinnosťami vyplývajúcimi mu zo zmluvy o operatívnom leasingu riadne a včas dojednané splátky za nájom a služby (ďalej len \"splátky\") neplnil.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "zmluvnú pokutu vo výške 757,28 eur",
+          "evidence": {
+            "quote": "Žalobca si v konaní voči žalovanému uplatnil aj nárok na zaplatenie sumy vo výške 757,28 eur z titulu zmluvnej pokuty podľa čl. 6.1 písm. b) Všeobecných zmluvných podmienok.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 757.28,
+            "evidence": {
+              "quote": "Žalobca si v konaní voči žalovanému uplatnil aj nárok na zaplatenie sumy vo výške 757,28 eur z titulu zmluvnej pokuty podľa čl. 6.1 písm. b) Všeobecných zmluvných podmienok.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 757.28,
+            "evidence": {
+              "quote": "súd preto nárok žalobcu na zmluvnú pokutu vo výške 757,28 eur vyhodnotil ako dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,5 % ročne",
+          "evidence": {
+            "quote": "zaplatiť žalobcovi sumu 757,28 eur spolu s 9,5 % úrokom z omeškania ročne zo sumy 757,28 eur od 30.09.2011 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd preto nárok žalobcu na zmluvnú pokutu vo výške 757,28 eur vyhodnotil ako dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta bola dojednaná písomne a zabezpečovala splnenie povinnosti platiť dohodnuté splátky. Žalovaný žiadal o moderáciu pokuty, ale súd nenašiel dôvody na jej zníženie. Súd konštatoval, že samotná existencia úrokov z omeškania nie je dôvodom na moderáciu pokuty. Zmluvná pokuta bola považovaná za dôvodnú, pretože žalovaný hrubo porušil dohodnuté podmienky.",
+          "key_quotes": [
+            {
+              "quote": "súd preto nárok žalobcu na zmluvnú pokutu vo výške 757,28 eur vyhodnotil ako dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "čo je v rozpore s dobrými mravmi a nemôže požívať súdnu ochranu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala splnenie povinnosti platiť dohodnuté splátky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný v rozpore so svojimi povinnosťami vyplývajúcimi mu zo zmluvy o operatívnom leasingu riadne a včas dojednané splátky za nájom a služby (ďalej len \"splátky\") neplnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Samotná skutočnosť, že si žalobca uplatňuje nárok na úroky z omeškania, preto sama osebe nie je dôvodom pre moderáciu uplatnenej zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_11Co_272_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "11Co/272/2017",
+      "decision_date": "30.01.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5313212516.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

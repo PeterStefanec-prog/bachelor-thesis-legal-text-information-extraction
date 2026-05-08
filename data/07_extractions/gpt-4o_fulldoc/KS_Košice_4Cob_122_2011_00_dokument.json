@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9956,
+    "completion_tokens": 1203,
+    "cost_usd": 0.0369,
+    "latency_seconds": 28.46,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca G., a.s. požadoval zaplatenie zmluvnej pokuty za porušenie kúpnej zmluvy, ktorou sa žalovaný zaviazal dodať sladovnícky jačmeň. Žalovaný nedodal dohodnuté množstvo jačmeňa a predal ho inému subjektu.",
+      "verdict_summary": "Súd potvrdil povinnosť žalovaného zaplatiť zmluvnú pokutu, ale znížil jej výšku na základe § 301 Obchodného zákonníka.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "predmetom konania je zaplatenie zmluvnej pokuty za porušenie podmienok zmluvy uzavretej medzi účastníkmi konania a to nesplnenie povinnosti žalovaného dodať žalobcovi sladovnícky jačmeň",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "X XXX,XX Sk za každú nedodanú tonu sladovníckeho jačmeňa",
+          "evidence": {
+            "quote": "musí žalovaný zaplatiť žalobcovi zmluvnú pokutu X XXX,XX Sk za každú nedodanú tonu sladovníckeho jačmeňa",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 300000.0,
+            "evidence": {
+              "quote": "vyzval na úhradu dohodnutej zmluvnej pokuty XXX XXX,XX Sk za nedodaných XXX ton sladovníckeho jačmeňa",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10000.0,
+            "evidence": {
+              "quote": "Pri takto určenej zmluvnej pokute XXX,XX Sk za tonu za XXX ton nedodaného dopestovaného jačmeňa to predstavuje XX XXX,XX Sk (X XXX,XX eur).",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa preto považoval za primeranú zmluvnú pokutu len v rozsahu XX % dojednanej výšky, teda XXX,XX Sk za každú nedodanú tonu sladovníckeho jačmeňa.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že žalovaný porušil povinnosť dodať sladovnícky jačmeň a predal ho inému subjektu. Zmluvná pokuta bola považovaná za neprimerane vysokú, pretože tvorila takmer XX % dohodnutej kúpnej ceny. Súd znížil pokutu na XXX,XX Sk za tonu, čo predstavuje XX XXX,XX Sk za XXX ton nedodaného jačmeňa.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa preto považoval za primeranú zmluvnú pokutu len v rozsahu XX % dojednanej výšky, teda XXX,XX Sk za každú nedodanú tonu sladovníckeho jačmeňa.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca taktiež nezohľadnil dovtedajšie dobré obchodné vzťahy so žalovaným, ktorý bol jedným z jeho najlepších zmluvných partnerov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta tvorí takmer XX % dohodnutej kúpnej ceny sladovníckeho jačmeňa, čo odporuje zásade primeranosti výšky zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný porušil svoju povinnosť zo zmluvy neodpredať sladovnícky jačmeň z úrody roku XXXX inému podnikateľskému subjektu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca uviedol, že v spornom období nie všetci zmluvní partneri mu dodali dojednané množstvo jačmeňa, ale voči iným obchodným partnerom zmluvnú pokutu neuplatňoval.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1",
+        "ANONYMIZED_AMOUNT_final_awarded_pokuta_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_122_2011_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/122/2011",
+      "decision_date": "22.02.2012",
+      "ecli": "ECLI:SK:KSKE:2012:7908218998.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

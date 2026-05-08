@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26284,
+    "completion_tokens": 2345,
+    "cost_usd": 0.0563,
+    "latency_seconds": 9.71,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 2 659,82 Eur s príslušenstvom titulom nájomného a prevádzkových nákladov za nájom nebytových priestorov za obdobie november a december 2019. Žalovaný vzniesol kompenzačnú námietku na zľavu z nájomného z dôvodu vád nebytových priestorov, ktoré obmedzovali ich užívanie.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi žalovanú sumu s úrokmi z omeškania a zmluvnou pokutou, a priznal žalobcovi nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný je so splnením jeho zmluvnej povinnosti uhradiť dohodnuté nájomné v omeškaní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu 0,5 % denne zo sumy 1 008,89 Eur od 11.11.2019 do zaplatenia, zo sumy 1 008,89 Eur od 11.12.2019 do zaplatenia, zo sumy 642,04 Eur od 11.12.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2659.82,
+            "evidence": {
+              "quote": "zo sumy 1 008,89 Eur od 11.11.2019 do zaplatenia, zo sumy 1 008,89 Eur od 11.12.2019 do zaplatenia, zo sumy 642,04 Eur od 11.12.2019 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "správne zaviazal žalovaného na zaplatenie takto dojednanej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8 % ročným",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi 2 659,82 Eur s 8 % ročným úrokom z omeškania zo sumy 1 008,89 Eur od 11.11.2019 do zaplatenia, zo sumy 1 008,89 Eur od 11.12.2019 do zaplatenia, zo sumy 642,04 Eur od 11.11.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Námietku neprimerane vysokej zmluvnej pokuty súd posúdil v tomto prípade, v zmysle § 301 Obch. zák. ako neopodstatnenú.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil námietku neprimerane vysokej zmluvnej pokuty ako neopodstatnenú, pričom bral zreteľ na to, že ide o právny vzťah medzi podnikateľmi, ktorí mali posúdiť primeranosť pokuty. Súd konštatoval, že výška zmluvnej pokuty, ovplyvnená dobou porušenia zabezpečenej povinnosti, bola výrazne ovplyvnená konaním žalovaného. Odvolací súd sa stotožnil so závermi súdu prvej inštancie, že neprimeranosť zmluvnej pokuty nemožno usudzovať z jej celkovej výšky, ak je dôsledkom dlhodobého omeškania a s tým spojeného navyšovania o inak primeranú dennú sadzbu.",
+          "key_quotes": [
+            {
+              "quote": "Námietku neprimerane vysokej zmluvnej pokuty súd posúdil v tomto prípade, v zmysle § 301 Obch. zák. ako neopodstatnenú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ako neprimerane vysokú nemožno posúdiť zmluvnú pokutu dohodnutú vo forme určitej sadzby za určené časové obdobie, ktorej celková výška je dôsledkom dlhodobého porušovania zabezpečenej povinnosti dlžníkom a s tým spojeným navyšovaním o inak primeranú sadzbu zmluvnej pokuty za určené časové obdobie.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V danom prípade súd pri posúdení výšky dohodnutej zmluvnej pokuty bral zreteľ najmä na skutočnosť, že ide o právny vzťah medzi podnikateľmi, ktorí mohli a mali odborne a zodpovedne posúdiť primeranosť a únosnosť dojednanej zmluvnej pokuty, ako aj posúdiť mieru rizika pri jej dohode.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Neprimeraná výška zmluvnej pokuty nekvalifikuje jej dojednanie za také, ktoré je v rozpore s dobrými mravmi práve preto, že zákon umožňuje moderovať výšku zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Porušovanie povinnosti platiť nájomné v obchodno-právnych vzťahoch zvyšuje požiadavky na zmluvnú úpravu zabezpečovacích inštitútov v záujme dosiahnutia jej preventívnej, reparačnej, ako aj sankčnej funkcie.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zmluvou určená peňažná suma, ktorú je dlžník povinný zaplatiť veriteľovi, alebo veriteľ dlžníkovi, ak dôjde k porušeniu povinností, ktoré na seba zmluvou prevzali, a to aj vtedy, keď porušením povinnosti veriteľovi alebo dlžníkovi nevznikla škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zákonným kritériom posúdenia primeranosti zmluvnej pokuty je hodnota zabezpečovanej povinnosti a jej význam.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalovaný ako podnikateľ podpisom zmluvy prevzal dobrovoľne svoj záväzok a výšku zmluvnej pokuty ovplyvnenej dobou porušenia zabezpečenej povinnosti sám svojím konaním výrazne ovplyvnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition"
+      ],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_112_2021_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/112/2021",
+      "decision_date": "22.06.2022",
+      "ecli": "ECLI:SK:KSTN:2022:6120270927.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16747,
+    "completion_tokens": 2367,
+    "cost_usd": 0.0446,
+    "latency_seconds": 9.51,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal určenia popretých pohľadávok prihlásených do konkurzu na majetok úpadcu, ktoré zahŕňali úrok z omeškania, zmluvnú pokutu a úrok z omeškania zo zmluvnej pokuty, v dôsledku nezaplatenia faktúr vystavených na základe Zmluvy o dielo. Správca konkurznej podstaty poprel pohľadávky z titulu zmluvnej pokuty z dôvodu rozporu s dobrými mravmi a poctivým obchodným stykom.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava I a vrátil vec súdu prvého stupňa na ďalšie konanie, pretože súd prvého stupňa sa nedostatočne vysporiadal s hodnotením platnosti a primeranosti zmluvnej pokuty a pasívnou legitimáciou odporcu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "prihláškami č. 122, 124 a 126",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v ktorej sa zmluvné strany dohodli na tom, že v prípade, ak objednávateľ nedodrží dohodnutú lehotu splatnosti, zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne za každý deň omeškania",
+          "evidence": {
+            "quote": "zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "v časti úrokov z omeškania zo zmluvnej pokuty pri prihláškach 122, 124 a 126 zobral návrh späť.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na vyššie uvedené odvolací súd uznesenie súdu prvého stupňa zrušil podľa § 221 ods. 1 písm. f/ O.s.p. a vec mu vrátil na ďalšie konanie, v ktorom bude jeho povinnosťou postupovať v naznačenom smere.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu z prihlášok č. 122, 124 a 126, pretože pôvodná výška 0,5 % denne bola v rozpore s dobrými mravmi a zásadami poctivého obchodného styku, a teda išlo o absolútne neplatný právny úkon. Súd prvého stupňa odmietol aplikovať moderačné právo podľa § 301 ObchZ, pretože neplatný právny úkon nemožno konvalidovať jednostranným späťvzatím návrhu na 0,25 % denne. Odvolací súd však zrušil rozhodnutie a vrátil vec na ďalšie konanie, pretože súd prvého stupňa nedostatočne odôvodnil svoje závery a nemal k dispozícii Zmluvu o dielo a faktúry pre posúdenie primeranosti pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa ustálil, že nárok na zmluvnú pokutu nie je priamym dôsledkom príslušných ustanovení zákona o zmluve o dielo, a preto nárok na zmluvnú pokutu nevyplýva zo zákona, ale zo záväznej dohody zmluvných strán.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podľa názoru súdu je nesporné, že pôvodná dohodnutá výška zmluvných pokút je v rozpore s dobrými mravmi pre neprimeranosť výšky zmluvnej pokuty a jej rozporu s dobrými mravmi a zásadou poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Preto súd nepovažuje za možné ani uplatnenie moderačného práva v zmysle § 301 ObchZ, na ktoré vo svojom vyjadrení poukázal navrhovateľ.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolaciemu súdu nie je zrejmé, akými úvahami sa súd prvého stupňa pri hodnotení platnosti či neplatnosti dohody o zmluvnej pokute spravoval, na základe čoho hodnotil dohodu o zmluvnej pokute, keď sa predmetná Zmluva o dielo zo dňa 15.04.2004 v spise nenachádza.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pôvodnú výšku zmluvnej pokuty síce navrhovateľ čiastočným späťvzatím znížil, ale právny titul vzniku nároku na zmluvnú pokutu ostal totožný. Uviedol, že absolútne neplatný právny úkon nemožno ďalším právnym úkonom konvalidovať, nakoľko konvalidácia je možná len pri relatívnej neplatnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta je jedným z osobitných inštitútov záväzkového práva na zabezpečenie záväzkov.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd preto dospel k správnemu záveru, že zmluvnú pokutu v uvedenej výške nemožno považovať za primeranú hodnote a významu zabezpečovanej povinnosti, v dôsledku čoho je dohoda o zmluvnej pokute pre rozpor s dobrými mravmi absolútne neplatná podľa § 39 Občianskeho zákonníka",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Odvolací súd sa nestotožnil s názorom súdu prvého stupňa, že navrhovateľ sám nemôže jednostranne znížiť výšku pokuty z 0,5 % na 0,25 %. Veriteľ totiž nemusí od dlžníka vymáhať celú výšku pokuty.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "contractual_penalties.0.amounts.secured_principal.value",
+        "contractual_penalties.0.amounts.original_claimed.value",
+        "contractual_penalties.0.amounts.final_awarded.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2CoKR_71_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2CoKR/71/2013",
+      "decision_date": "28.08.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1108234551.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

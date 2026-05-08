@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21501,
+    "completion_tokens": 1869,
+    "cost_usd": 0.0128,
+    "latency_seconds": 22.42,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal vrátenia plnenia z bankovej záruky v sume 91.513,09 EUR, ktorú žalovaný neoprávnene čerpal na úhradu nárokov z vád diela a zmluvnej pokuty. Spor sa týkal oprávnenosti čerpania záruky, pričom žalobca namietal neprimeranosť uplatnenej zmluvnej pokuty vo výške 36.605,24 EUR.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie o vrátení časti prostriedkov (16.086,34 EUR), ale zrušil zamietavý výrok týkajúci sa zmluvnej pokuty a vrátil vec súdu prvej inštancie na posúdenie moderačného práva podľa § 301 Obchodného zákonníka.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Výzva banke zo dňa 04.05.2015",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Zmluvné strany sa dohodli, že objednávateľ je oprávnený uspokojiť si jednostranným zápočtom zo zádržného a z garančnej zábezpeky svoje nároky z vád diela, nároky na zmluvnú pokutu, náhradu škody, dodatočné náklady a straty objednávateľa, plynúce z nedodržania doby výstavby zhotoviteľom",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "36.605,24 Eur",
+          "evidence": {
+            "quote": "Celková oprávnená suma čerpania bankovej záruky je tak 333,51 Eur + 35,- Eur + 36.605,24 Eur (zmluvná pokuta požadovaná žalovanou - uvedená vo výzve banke zo 04.05.2015).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 36605.24,
+            "evidence": {
+              "quote": "Žalobca svoje odvolanie proti rozsudku súdu prvej inštancie v časti výroku II. v rozsahu 36.605,24 Eur a súvisiacemu výroku III. odôvodnil tým, že súd prvej inštancie vec nesprávne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd preto rozsudok v napadnutom rozsahu výroku II. podľa § 389 ods.1 písm. b), c) C.s.p. zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Úlohou súdu prvej inštancie bude vysporiadať sa s návrhom žalobcu na zníženie zmluvnej pokuty, t.j. posúdiť, či je dôvod na uplatnenie moderačného práva.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie súdu prvej inštancie, ktorý odmietol aplikovať moderačné právo s odôvodnením, že súd môže moderovať len pokutu uplatnenú v konaní, nie už zaplatenú. Odvolací súd konštatoval, že tento záver nie je podložený zákonom ani judikatúrou a že skutočnosť, že pokuta bola uhradená z bankovej záruky, nebráni jej následnému preskúmaniu a prípadnému zníženiu v konaní o vrátenie plnenia.",
+          "key_quotes": [
+            {
+              "quote": "Podľa názoru odvolacieho súdu zo zákona ani zo súdnej praxe nevyplýva, že by súd nemal právomoc znížiť neprimerane vysokú zmluvnú pokutu, ak už bola dlžníkom uhradená.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Skutočnosť, že zmluvná pokuta nie je uplatnená ako samostatný nárok veriteľa v súdnom konaní, nie je dôvodom, aby súd vylúčil aplikáciu citovaného ustanovenia.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Case returned for further proceedings regarding penalty moderation"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded",
+        "moderation_analysis.factors"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_60_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/60/2023",
+      "decision_date": "11.06.2024",
+      "ecli": "ECLI:SK:KSBA:2024:1116213513.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17873,
+    "completion_tokens": 2927,
+    "cost_usd": 0.0138,
+    "latency_seconds": 29.66,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 9 216,14 EUR s príslušenstvom titulom nárokov vzniknutých z porušenia Zmluvy o spolupráci, konkrétne išlo o storno provízie, neuhradené faktúry za telefón a zmluvnú pokutu za porušenie konkurenčnej doložky. Súd prvej inštancie žalobe vyhovel v celom rozsahu, proti čomu sa odvolal žalovaný.",
+      "verdict_summary": "Odvolací súd rozsudok súdu prvej inštancie zrušil a vec vrátil na ďalšie konanie a nové rozhodnutie pre nepreskúmateľnosť rozhodnutia a nedostatky v odôvodnení.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Nárok žalobcu na zaplatenie zmluvnej pokuty 5200 eur je podľa názoru preukázaný, a to čo do právneho dôvodu jeho vzniku, aj do výšky. Pohľadávka žalobcu voči žalovanému z titulu zmluvnej pokuty (§ 544 a nasl. Občianskeho zákonníka v spojení s ust. § 300 a nasl. Obchodného zákonníka) vznikla na základe ustanovení čl. IV. bod 4.8 Dodatku k Zmluve o spolupráci - GST (\"Dodatok\"), ktoré boli zmluvnými stranami dojednané pre prípad porušenia článku 6, bod 6.5 Zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "za prvý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2015 do 28.02.2016) bola uplatnená zmluvná pokuta vo výške 2 000,- eur, za druhý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2016 do 28.02.2017) bola uplatnená zmluvná pokuta vo výške 800,- eur, za tretí rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2017 do 28.02.2018) bola uplatnená zmluvná pokuta vo výške 800,- eur, za štvrtý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2018 do 28.02.2019) bola uplatnená zmluvná pokuta vo výške 800,- eur, za piaty rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2019 do 28.02.2020) bola uplatnená zmluvná pokuta vo výške 800,- eur, čo predstavuje zmluvnú pokutu spolu vo výške 5.200 eur",
+          "evidence": {
+            "quote": "V zmysle predmetného ustanovenia: za prvý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2015 do 28.02.2016) bola uplatnená zmluvná pokuta vo výške 2 000,- eur, za druhý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2016 do 28.02.2017) bola uplatnená zmluvná pokuta vo výške 800,- eur, za tretí rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2017 do 28.02.2018) bola uplatnená zmluvná pokuta vo výške 800,- eur, za štvrtý rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2018 do 28.02.2019) bola uplatnená zmluvná pokuta vo výške 800,- eur, za piaty rok, počas ktorého pôsobil žalovaný v pozícii GST (od 01.03.2019 do 28.02.2020) bola uplatnená zmluvná pokuta vo výške 800,- eur, čo predstavuje zmluvnú pokutu spolu vo výške 5.200 eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5200,
+            "evidence": {
+              "quote": "Podľa čl. IV bodu 4.8 zmluvy vzniklo žalobcovi právo na uplatnenie zmluvnej pokuty vo výške 5200 eur, nakoľko žalovaný zastával pozíciu GST od 01.03.2015.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok Okresného súdu Galanta č.k. 26C/12/2021 - 285 zo dňa 15.11.2022 zrušuje a vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": "9,00% ročne",
+          "evidence": {
+            "quote": "Súd žalobu za dôvodnú považoval aj v časti uplatneného úroku z omeškania z dlžnej istiny 9216,14 eur, a to vzhľadom na percentuálne vyčíslenie úroku v intenciách ust. § 369 ods. 1 Obchodného zákonníka v spojitosti s ust. § 1 ods. 2 Nariadenie Vlády SR č. 21/2013 (9,00% ročne), od 20.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na skutočnosť, že rozhodnutie súdu prvej inštancie je z vyššie uvedených dôvodov nepreskúmateľné, pričom nešlo o nedostatok, ktoré by mohol odstrániť tento súd pre takmer absentujúce odôvodnenie rozhodujúcich otázok, odvolací súd odvolaním napadnutý rozsudok súdu prvej inštancie podľa § 389 ods. 1 písm. b) zrušil v celom rozsahu a podľa § 391 ods. 1 CSP rozhodol o vrátení veci súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie súdu prvej inštancie pre nepreskúmateľnosť, keďže z odôvodnenia nevyplývalo, porušenie akej konkrétnej povinnosti súd skúmal a aké konkrétne porušenie zistil. Súd prvej inštanc síce konštatoval platnosť zmluvnej pokuty a jej primeranosť, ale odvolací súd poukázal na chýbajúce špecifikovanie porušenej povinnosti v odôvodnení. Keďže bola vec vrátená na nové konanie, meritórne posúdenie výšky pokuty a jej prípadná moderácia neboli odvolacím súdom vykonané.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa stotožňuje s tým, že ustanovenia o zmluvnej pokute je potrebné vykladať materiálne, avšak reštriktívne. Dohoda o zmluvnej pokute je prísne formálny inštitút, preto možnosť úspešne sa dožadovať zmluvnej pokuty je na mieste iba v prípade porušenia takej povinnosti, ktorá je v dojednaní o zmluvnej pokute výslovne uvedená.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "z odôvodnenia napadnutého rozsudku odvolací súd nezistil, porušenie akej konkrétnej povinnosti vo vzťahu na odkazované zmluvné dojednania súd prvej inštancie skúmal a aké konkrétne porušenie zmluvnej povinnosti zistil, a kedy a akým spôsobom malo k tomuto porušeniu nešpecifikovanej povinnosti dôjsť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_returned_for_retrial",
+        "first_instance_judgment_overturned"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Cob_51_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Cob/51/2023",
+      "decision_date": "30.07.2024",
+      "ecli": "ECLI:SK:KSBA:2024:6120446496.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

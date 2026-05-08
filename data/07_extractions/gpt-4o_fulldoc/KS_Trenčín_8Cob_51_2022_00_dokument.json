@@ -1,0 +1,566 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 15230,
+    "completion_tokens": 3949,
+    "cost_usd": 0.0776,
+    "latency_seconds": 34.09,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ČAKO, s.r.o. požadoval od žalovaného Sursumcorda s.r.o. zaplatenie sumy 9.522,88 EUR s príslušenstvom, vrátane zmluvnej pokuty, na základe zmluvy o nájme nebytových priestorov. Žalovaný tvrdil, že nájomný vzťah bol ukončený dohodou, čo žalobca popieral.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie v časti o zaplatení sumy a zmluvnej pokuty, ale zrušil rozhodnutie o trovách konania a vrátil vec na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 400,- Eur od 01.05.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 400.0,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 400,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9 % ročne zo sumy 400,- Eur od 01.05.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, pretože sa mu nejavila v rozpore s poctivým obchodným stykom. Žalovaný sa dostal do omeškania s platením nájomného, čo bolo dôvodom pre uplatnenie zmluvnej pokuty. Súd konštatoval, že súbežné uplatnenie úroku z omeškania a zmluvnej pokuty je v obchodno-záväzkových vzťahoch možné.",
+          "key_quotes": [
+            {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pre porušenie ktorých bola zmluvná pokuta dohodnutá",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zo sumy 2.400,Eur od 31.05.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2400.0,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, pretože sa mu nejavila v rozpore s poctivým obchodným stykom. Žalovaný sa dostal do omeškania s platením nájomného, čo bolo dôvodom pre uplatnenie zmluvnej pokuty. Súd konštatoval, že súbežné uplatnenie úroku z omeškania a zmluvnej pokuty je v obchodno-záväzkových vzťahoch možné.",
+          "key_quotes": [
+            {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pre porušenie ktorých bola zmluvná pokuta dohodnutá",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2400.0,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, pretože sa mu nejavila v rozpore s poctivým obchodným stykom. Žalovaný sa dostal do omeškania s platením nájomného, čo bolo dôvodom pre uplatnenie zmluvnej pokuty. Súd konštatoval, že súbežné uplatnenie úroku z omeškania a zmluvnej pokuty je v obchodno-záväzkových vzťahoch možné.",
+          "key_quotes": [
+            {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pre porušenie ktorých bola zmluvná pokuta dohodnutá",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_4",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2400.0,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, pretože sa mu nejavila v rozpore s poctivým obchodným stykom. Žalovaný sa dostal do omeškania s platením nájomného, čo bolo dôvodom pre uplatnenie zmluvnej pokuty. Súd konštatoval, že súbežné uplatnenie úroku z omeškania a zmluvnej pokuty je v obchodno-záväzkových vzťahoch možné.",
+          "key_quotes": [
+            {
+              "quote": "priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pre porušenie ktorých bola zmluvná pokuta dohodnutá",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s platením nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.rate_definition"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.original_claimed",
+        "contractual_penalties[1].amounts.final_awarded",
+        "contractual_penalties[2].amounts.original_claimed",
+        "contractual_penalties[2].amounts.final_awarded",
+        "contractual_penalties[3].amounts.original_claimed",
+        "contractual_penalties[3].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed",
+        "pokuta_3.amounts.original_claimed",
+        "pokuta_4.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_51_2022_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/51/2022",
+      "decision_date": "26.07.2022",
+      "ecli": "ECLI:SK:KSTN:2022:6119381659.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

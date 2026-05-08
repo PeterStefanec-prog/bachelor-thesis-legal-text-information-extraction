@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10630,
+    "completion_tokens": 1505,
+    "cost_usd": 0.0416,
+    "latency_seconds": 55.04,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ E. X., a.s. sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000 Sk (331,94 eur) a úrokov z omeškania od odporcu Q. Q. za nezaplatené telekomunikačné služby poskytnuté na základe zmluvy o pripojení.",
+      "verdict_summary": "Odvolací súd znížil zmluvnú pokutu na 129,42 eur a potvrdil úroky z omeškania vo výške 8,5% ročne.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Pre prípad porušenia niektorej zo zmluvných povinností odporcom, ktorými sú: mať na SIM karte aktivovaný počas doby viazanosti taký účastnícky program, u ktorého je výška mesačného poplatku (bez DPH) stanovená najmenej na sumu 9 Sk, po dobu viazanosti (24 mesiacov) zotrvať v zmluvnom vzťahu s navrhovateľom, nepožiadať o vypojenie z prevádzky, alebo o dočasnú deaktiváciu SIM karty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000 Sk",
+          "evidence": {
+            "quote": "si účastníci dojednali zaplatenie zmluvnej pokuty vo výške 10.000 Sk",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 331.94,
+            "evidence": {
+              "quote": "navrhovateľ sa dôvodne domáhal od odporcu zaplatenia zmluvnej pokuty vo výške 10.000 Sk (331,94 eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 129.42,
+            "evidence": {
+              "quote": "odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,5% ročne",
+          "evidence": {
+            "quote": "Odporca je povinný zaplatiť navrhovateľovi istinu 129,42 eur s 8,5% ročným úrokom z omeškania od 04.10.2007 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd znížil zmluvnú pokutu z 331,94 eur na 129,42 eur, čo zodpovedá zľave z ceny telekomunikačného zariadenia poskytnutého odporcovi. Súd považoval pôvodnú výšku pokuty za neprimeranú vzhľadom na hodnotu zabezpečovanej povinnosti, ktorá bola len 7,17 eur. Súd tiež potvrdil, že úrok z omeškania vo výške 8,5% ročne je v súlade s právnymi predpismi.",
+          "key_quotes": [
+            {
+              "quote": "odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podľa jeho názoru premlčacia doba v danom prípade nie je štvorročná, ale maximálne dvojročná. Pri tovare v hodnote 0,003 eur považuje priznanie sumy 331,94 eur za absurdné.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "ktorého zmluvná pokuta v danom prípade zabezpečovala dobu viazanosti odporcu mať aktivovaný účastnícky program vo výške mesačného poplatku najmenej vo výške 0,30 eur na dobu 24",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala záväzok odporcu v celkovej hodnote vo výške 7,17 eur (24 mesiacov x 9 Sk/ mesiac), vo vzťahu ku ktorému je podľa názoru odvolacieho súdu na rozdiel od názoru okresného súdu dohodnutá zmluvná pokuta vo výške 331,94 eur zjavne neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_6Co_52_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "6Co/52/2011",
+      "decision_date": "27.11.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3109223626.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

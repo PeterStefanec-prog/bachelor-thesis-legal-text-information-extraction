@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10288,
+    "completion_tokens": 1892,
+    "cost_usd": 0.0084,
+    "latency_seconds": 42.52,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia zmluvnej pokuty vo výške 1.948,58 Eur spolu s úrokom z omeškania z dôvodu oneskorenej úhrady faktúr za dodaný tovar podľa Kúpnej zmluvy. Odporca namietal neplatnosť dohody o zmluvnej pokute, keďže nemal vedomosť o všeobecných obchodných podmienkach, a uplatnil započítaciu námietku.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvého stupňa, ktorým bola odporcovi uložená povinnosť zaplatiť navrhovateľovi sumu 1.948,58 Eur s príslušenstvom. Súd dospel k záveru, že zmluvná pokuta bola platne dohodnutá a započítacia námietka odporcu bola neplatná.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zaplatiť za ním prevzaté liečivé prípravky, zdravotnícke pomôcky a doplnkový sortiment kúpnu cenu v lehote splatnosti nesplnil",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% za každý deň omeškania z dlžnej sumy",
+          "evidence": {
+            "quote": "dohoda o výške zmluvnej pokuty 0,05% za každý deň omeškania z kúpnej ceny, jej časti alebo inej platby",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1948.58,
+            "evidence": {
+              "quote": "Navrhovateľ vyúčtoval odporcovi zmluvnú pokutu vyúčtovaním pod č. XXXXXXXXXX vo výške 1.948,58 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1948.58,
+            "evidence": {
+              "quote": "odôvodnenie: Napadnutým rozhodnutím uložil okresný súd odporcovi povinnosť zaplatiť navrhovateľovi sumu 1.948,58 Eur s 0,1% úrokom z omeškania denne",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1% denne",
+          "evidence": {
+            "quote": "dohodli v čl. V. kúpnej zmluvy vo výške 0,1% z neuhradenej splatnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd správne zistil skutkový stav a vec správne právne posúdil, keď odporcu zaviazal na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania v",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že všeobecné obchodné podmienky boli platnou súčasťou kúpnej zmluvy, keďže na ne bolo v zmluve odkázané a prokurista odporcu mal o nich vedomosť. Dohoda o zmluvnej pokute bola považovaná za platný písomný právny úkon podľa Občianskeho zákonníka. Súd tiež zamietol započítaciu námietku odporcu ako neurčitú a nejednoznačnú, čím potvrdil existenciu dlhu.",
+          "key_quotes": [
+            {
+              "quote": "Podpis odporcu na kúpnej zmluve s odkazom na VOP, ktoré obsahujú dohodu o zmluvnej pokute stačí k tomu, aby bolo možné takúto dohodu podľa § 544 ods.2 OZ v spojení s § 40 ods.3 OZ vyhodnotiť ako platný písomný právny úkon",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "jednostranný právny úkon započítania nie je platným právnym úkonom a odporca je naďalej dlžníkom navrhovateľa pre pohľadávku uplatnenú v tomto konaní",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Výška úroku 36,5% ročne nie je dohodnutá v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "je účastník, ktorý túto povinnosť poruší, zaviazaný pokutu zaplatiť, aj keď oprávnenému účastníkovi porušením povinnosti nevznikne škoda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "ak sa dôsledne neoboznámil s ich obsahom, nesie si zodpovednosť za to len sám",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nárok na zaplatenie zmluvnej pokuty pritom vzniká popri nároku na zaplatenie zákonných úrokov, prípadne úrokov, na platení ktorých sa zmluvné strany dohodli",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_20_2016_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/20/2016",
+      "decision_date": "10.03.2016",
+      "ecli": "ECLI:SK:KSBB:2016:6713210429.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6836,
+    "completion_tokens": 1643,
+    "cost_usd": 0.025,
+    "latency_seconds": 7.15,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovatelia sa domáhali zaplatenia zmluvnej pokuty vo výške 4899,00 EUR s úrokom z omeškania, ktorá vznikla z omeškania odporcu s dokončením diela (rodinného domu) podľa zmluvy o dielo. Súd prvého stupňa priznal zmluvnú pokutu vo výške 4899 EUR a úrok z omeškania, pričom zamietol zvyšok návrhu a nepovažoval za opodstatnenú požiadavku odporcu na zníženie pokuty.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v napadnutej časti a vec mu vrátil na ďalšie konanie z dôvodu nepreskúmateľnosti a nevykonateľnosti výroku rozsudku.",
+      "contract_type": "dielo",
+      "relationship_type": "unknown"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "odporca sa dostal s termínom dokončenia diela do omeškania 115 dní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "0,05% z ceny diela",
+          "evidence": {
+            "quote": "priznal zmluvnú pokutu 0,05% z ceny diela vo výške XXXXX,XX I.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 426000,
+            "evidence": {
+              "quote": "0,05% z ceny diela vo výške XXXXX,XX I.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 4899,
+            "evidence": {
+              "quote": "uložil súd prvého stupňa odporcovi povinnosť zaplatiť navrhovateľovi X.XXX,- I. titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v napadnutej časti zrušujea vec mu v tejto časti vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9% ročne zo sumy X.XXX,- I. P. XX.X.XXXX do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v napadnutej časti zrušujea vec mu v tejto časti vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa priznal zmluvnú pokutu za omeškanie s dokončením diela o 115 dní, vypočítanú ako 0,05% z ceny diela. Odvolací súd však rozsudok zrušil a vrátil vec na ďalšie konanie z dôvodu nepreskúmateľnosti a nevykonateľnosti výroku, keďže nebolo zrejmé, voči ktorému z navrhovateľov bol nárok priznaný a odôvodnenie nebolo dostatočné.",
+          "key_quotes": [
+            {
+              "quote": "Rozsudok súdu prvého stupňa tak v napadnutej (vyhovujúcej) časti nemožno na základe jeho odôvodnenia preskúmať, a navyše jeho napadnutý výrok je nevykonateľný",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvého stupňa však vo výroku rozsudku rozhodol o uplatňovanom nároku len vo vzťahu k jednému z navrhovateľov, pričom nie je zrejmé, voči ktorému z navrhovateľov a či súčasne voči druhému z navrhovateľov návrh zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_secured_principal_pokuta_1",
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_8Co_332_2012_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "8Co/332/2012",
+      "decision_date": "29.11.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1111201797.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

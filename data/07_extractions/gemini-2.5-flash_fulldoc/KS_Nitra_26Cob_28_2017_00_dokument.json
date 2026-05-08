@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6933,
+    "completion_tokens": 2004,
+    "cost_usd": 0.0287,
+    "latency_seconds": 8.17,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 15.692 eur s príslušenstvom za vykonané montážne práce v Nemecku, ktoré žalovaný neuhradil. Žalovaný si voči tejto pohľadávke započítal zmluvnú pokutu vo výške 10.000 eur z dôvodu porušenia zmluvnej povinnosti žalobcom.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi 15.692 eur s úrokmi z omeškania, pretože žalovaný nepreukázal existenciu nároku na zmluvnú pokutu.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade, ak poskytovateľ poruší jeho povinnosti vyplývajúce z tejto zmluvy najmä tým, že začne vykonávať práce pre zmluvného partnera objednávateľa vo vlastnom mene a nie prostredníctvom objednávateľa, ktorý ho na výkon práce vyslal",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "čiastkou 10.000,-- eur",
+          "evidence": {
+            "quote": "objednávateľ ho môže sankcionovať čiastkou 10.000,-- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "započítal pohľadávku v celkovej výške 10.000,-- eur titulom porušenia povinnosti podľa ust. čl. VII., bod 7.1 písm. e) zmluvy o poskytnutí prác zo dňa 23.08.2013 proti pohľadávke v celkovej výške 15.892,-- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Z tohto dôvodu súd prvej inštancie na započítaciu námietku vznesenou žalovaným neprihliadal, a žalobe vyhovel v celom rozsahu.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "súd žalobcovi priznal okrem dlžnej sumy aj zákonné úroky z omeškania podľa § 369 Obchodného zákonníka, a to vo výške 9 % ročne zo sumy 6.675,-- eur od 01.05.2012 do zaplatenia, zo sumy 5.450,-- eur od 01.06.2012 do zaplatenia, zo sumy 3.567,-- eur od 01.07.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Žalovaný tak do rozhodnutia súdu neurobil a to ani na základe uznesenia, ako ani na nariadenom pojednávaní, a preto súd vychádzajúc z obsahu spisu dospel k záveru, že ide zo strany žalovaného o nepreukázanú obranu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie neprihliadal na započítaciu námietku žalovaného, pretože žalovaný nepreukázal, že by žalobca porušil svoju zmluvnú povinnosť, ktorá by zakladala nárok na zmluvnú pokutu. Žalovaný neuniesol dôkazné bremeno ohľadom svojej obrany, a preto súd vyhovel žalobe v celom rozsahu. Odvolací súd sa stotožnil so závermi prvoinštančného súdu, že žalovaný nepreukázal existenciu nároku na zaplatenie zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Žalovaný tak do rozhodnutia súdu neurobil a to ani na základe uznesenia, ako ani na nariadenom pojednávaní, a preto súd vychádzajúc z obsahu spisu dospel k záveru, že ide zo strany žalovaného o nepreukázanú obranu",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Naviac v konaní žalovaný žiadnym spôsobom nepreukázal, že by žalobca porušil svoju zmluvnú povinnosť a tiež, že by mu zmluvnú pokutu fakturoval, resp. si ju u neho uplatnil ako svoju pohľadávku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa v plnom rozsahu stotožňuje so závermi prvoinštančného súdu, že žalovaný neuniesol dôkazné bremeno ohľadne svojho skutkového tvrdenia, že žalobca porušil zmluvnú povinnosť, na porušenie ktorej malo byť právo na zaplatenie zmluvnej pokuty 10.000,-- eur podľa príslušnej zmluvy naviazané.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_28_2017_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/28/2017",
+      "decision_date": "25.01.2018",
+      "ecli": "ECLI:SK:KSNR:2018:4315212254.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

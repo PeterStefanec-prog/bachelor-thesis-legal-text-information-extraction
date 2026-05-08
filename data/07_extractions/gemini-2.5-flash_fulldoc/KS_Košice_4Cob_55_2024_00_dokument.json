@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13338,
+    "completion_tokens": 2287,
+    "cost_usd": 0.0395,
+    "latency_seconds": 8.9,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 3.300 Eur od žalovaného, ktorú pôvodne uplatňoval ako zmluvnú pokutu za nevykonanie diela, neskôr ako náhradu škody spôsobenú krádežou, ktorej sa mal žalovaný dopustiť. Žalobca tvrdil, že mu jeho objednávateľ vyfakturoval zmluvnú pokutu vo výške 3.300 Eur, ktorú uhradil a ktorú si následne uplatňuje od žalovaného.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu Prešov, ktorý žalobu zamietol v celom rozsahu a priznal žalovanému náhradu trov odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Zmluvné strany sa dohodli, že v prípade, ak žalovaný tieto práce nevykoná v určenej lehote, žalobca má voči nemu nárok na zmluvnú pokutu vo výške 0,05 % denne za každý aj začatý deň omeškania (článok VII. bod 1. zmluvy).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne za každý aj začatý deň omeškania",
+          "evidence": {
+            "quote": "Zmluvné strany sa dohodli, že v prípade, ak žalovaný tieto práce nevykoná v určenej lehote, žalobca má voči nemu nárok na zmluvnú pokutu vo výške 0,05 % denne za každý aj začatý deň omeškania (článok VII. bod 1. zmluvy).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": "Zmluvnú pokutu mali strany konania dohodnutú tak, že žalovaný je povinný ju zaplatiť vo výške 0,05 % denne za každý deň omeškania s vykonaním prác z dohodnutej ceny diela. Cena diela bola medzi stranami konania určená v hodinovej sadzbe, t.j. 9,- Eur za odpracovanú hodinu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 3300,
+            "evidence": {
+              "quote": "žalobca v plnej výške uhradil. Uviedol, že v tomto konaní si uplatňuje náhradu tejto pokuty, keďže ju zaplatil nedodržaním zmluvných podmienok",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vo veci dostatočne zistil skutkový stav, vec správne právne posúdil a vo veci rozhodol správne, keď žalobu žalobcu zamietol z dôvodu, že žalobca neuniesol dôkazné bremeno a nepreukázal, že žalovaný je povinný zaplatiť mu sumu, ktorej zaplatenia sa v konaní domáhal.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvej inštancie vo veci dostatočne zistil skutkový stav, vec správne právne posúdil a vo veci rozhodol správne, keď žalobu žalobcu zamietol z dôvodu, že žalobca neuniesol dôkazné bremeno a nepreukázal, že žalovaný je povinný zaplatiť mu sumu, ktorej zaplatenia sa v konaní domáhal.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu, pretože žalobca riadne nešpecifikoval uplatnenú zmluvnú pokutu, neuviedol počet dní omeškania ani výšku sumy, z ktorej pokutu vyčísľoval. Taktiež nepreukázal samotné omeškanie žalovaného s vykonaním diela, ani rozsah prác, ktoré mal žalovaný vykonať. Žalobca neuniesol dôkazné bremeno ohľadom svojich tvrdení.",
+          "key_quotes": [
+            {
+              "quote": "Súd v zmysle uvedeného dospel k záveru, že ak by sa žalobca domáhal nároku titulom zmluvnej pokuty, žalobca riadne nešpecifikoval uplatnenú zmluvnú pokutu, keď síce odkazuje na zmluvnú pokutu, ktorá mu bola vyfakturovaná obchodným partnerom, avšak takúto zmluvnú pokutu nemožno pretransformovať do zmluvného vzťahu so žalovaným.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Navyše žalobca bol povinný v prípade, ak si voči žalovanému uplatnil zmluvnú pokutu vo výške vyčíslenej podľa článku VII. bod. 1. zmluvy vyčísliť túto zmluvnú pokutu, čo taktiež neurobil, keď neuviedol koľko dní je žalovaný v omeškaní a neuviedol ani výšku sumy, z ktorej túto zmluvnú pokutu vyčísľoval.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Okrem toho mal žalobca preukázať aj samotné omeškanie žalovaného s vykonaním diela, pričom sám žalobca predložil do konania listinné dôkazy o úhrade faktúry vystavenej žalovaným za vykonané práce.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takisto žalobca v konečnom dôsledku ani neozrejmil ako vypočítal ním uplatnenú výšku náhradu škody v sume 3.300,- Eur. Výšku uplatneného nároku žalobca automaticky prevzal z faktúry vyúčtovanej jemu, pričom nezohľadnil záväzkový vzťah medzi ním a žalovaným.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca nijako v konaní na súde prvej inštancie a rovnako ani v odvolacom konaní nešpecifikoval jasne a určito práce, z ktorých vyplýva jeho nárok na náhradu škody a ktoré nemal žalovaný vykonať (nenavrhol ohľadne tejto skutočnosti ani žiadne dôkazy), neohraničil ani časový okamih dokedy mal vytýkané práce vykonať.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_55_2024_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/55/2024",
+      "decision_date": "29.04.2025",
+      "ecli": "ECLI:SK:KSKE:2025:8622201668.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

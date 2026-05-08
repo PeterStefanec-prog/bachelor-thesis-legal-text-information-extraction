@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6903,
+    "completion_tokens": 1681,
+    "cost_usd": 0.0254,
+    "latency_seconds": 15.85,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia 87,84 Eur, čo predstavuje úrok z omeškania, na ktorý mu vznikol nárok na základe dohody o zmluvnej pokute za nedodržanie lehoty splatnosti faktúr za telekomunikačné služby. Odporkyňa sa dostala do omeškania so zaplatením viacerých faktúr.",
+      "verdict_summary": "Okresný súd zamietol návrh navrhovateľa z dôvodu premlčania. Krajský súd potvrdil uznesenie okresného súdu vo výroku o náhrade trov vedľajšieho účastníka a nepriznal náhradu trov odvolacieho konania odporkyni a vedľajšiemu účastníkovi.",
+      "contract_type": "telekom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "dohodli zmluvnú pokutu za nedodržanie lehoty splatnosti faktúr",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "podľa tarify spoločnosti D. P.",
+          "evidence": {
+            "quote": "dohodli zmluvnú pokutu za nedodržanie lehoty splatnosti faktúr podľa tarify spoločnosti D. P.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "žalobný návrh ako nedôvodný v celom rozsahu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "Zmluvné strany si ďalej dohodli úrok z omeškania vo výške 0,05 % denne z dlžnej čiastky pre prípad omeškania s úhradou splatnej dlžnej čiastky za poskytnuté alebo požadované telekomunikačné služby.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať (§ 100 ods. 1 Občianskeho zákonníka).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol návrh navrhovateľa z dôvodu premlčania práva. Navrhovateľ uplatnil právo na súde po uplynutí trojročnej premlčacej doby. Súd tiež konštatoval, že uznanie dlhu zo strany odporkyne nebolo platné, pretože listina nespĺňala zákonné náležitosti pre uznanie dlhu, konkrétne chýbala špecifikácia dlhu čo do dôvodu a výšky.",
+          "key_quotes": [
+            {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať (§ 100 ods. 1 Občianskeho zákonníka).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Uvedená listina o uznaní záväzku teda nie je platným právnym úkonom, nakoľko samotný právny úkon je neurčitý. Z uznania záväzku totiž nevyplýva, ktorý konkrétny dlh uznala odporkyňa voči pôvodnému veriteľom - D. (tento údaj v uznaní záväzku chýba).",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal.value",
+        "contractual_penalties[0].amounts.original_claimed.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_6Co_65_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "6Co/65/2013",
+      "decision_date": "26.02.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3111225477.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

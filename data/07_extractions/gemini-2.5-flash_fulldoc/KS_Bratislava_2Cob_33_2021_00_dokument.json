@@ -1,0 +1,193 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12990,
+    "completion_tokens": 2867,
+    "cost_usd": 0.0449,
+    "latency_seconds": 14.27,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 27.616,83 EUR s príslušenstvom, ktorá vznikla na základe zmluvy o dielo a následného zápočtu záväzkov a pohľadávok. Žalovaný neuhradil zádržné, ktoré tvorilo predmet sporu, a žalobca si uplatnil úroky z omeškania a zmluvnú pokutu.",
+      "verdict_summary": "Krajský súd v Bratislave nepripustil späťvzatie žaloby v časti istiny 27.616,83 EUR a zmenil rozsudok súdu prvej inštancie tak, že žalobu v tejto časti zamietol, pretože istina bola žalovaným uhradená po rozhodnutí súdu prvej inštancie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zmluvná pokuta ako osobitná zabezpečovacia sankcia bola dohodnutá v článku XII bod 12.2.1 zmluvy o dielo pre prípad omeškania objednávateľa (žalovaného) s úhradou oprávnených faktúr",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,1 % denne zo sumy 2.688,71 € od 11.07.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 27616.83,
+            "evidence": {
+              "quote": "vo výške 0,1 % denne zo sumy 2.688,71 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 4.498,14 € od 11.07.2009 do zaplatenia, - zmluvnú pokutu vo výške 0,1 % denne zo sumy 4.498,14 € od 11.07.2009 do zaplatenia, - s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 7.059,04",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Skutočnosť, či žalobca má nárok na zaplatenie úrokov z omeškania a zmluvnej pokuty, teda či sa dostal žalovaný do omeškania bude vzhľadom na zrušujúce uznesenie odvolacieho súdu (viď odsek 24 až 26) predmetom opätovného posúdenia súdom prvej inštancie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": "0,075 % denne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 0,07 % (v znení opravného uznesenia č. k. 26Cb/55/2013-244 vo výške 0,075 %) denne zo sumy 2.688,71 € od 11.07.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Dôvodom zrušenia napadnutého rozsudku súdu prvej inštancie vo zvyšnej časti, t.j. v časti príslušenstva nároku a uplatnenej zmluvnej pokuty, je skutočnosť, že znenie výroku rozsudku v časti výšky úrokov z omeškania vyhláseného na pojednávaní dňa 23.01.2014 a zachyteného v zápisnici z tohto pojednávania na č. l. 195 spisu (0,70 % denne) sa nezhoduje so znením predmetného výroku obsiahnutého v písomnom vyhotovení rozsudku, a to v zmysle opravného uznesenia č. k. 26Cb/55/2013-244, ktorým bola výška denných úrokov opravená z 0,70 % na 0,75 %.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne priznal zmluvnú pokutu v plnej výške. Odvolací súd však zrušil rozsudok v časti príslušenstva a zmluvnej pokuty a vrátil vec súdu prvej inštancie na ďalšie konanie. Dôvodom bolo, že výrok rozsudku o výške úrokov z omeškania sa nezhodoval s písomným vyhotovením a súd prvej inštancie sa nedostatočne vysporiadal s argumentmi žalovaného ohľadom splatnosti zádržného a neprimeranosti zmluvnej pokuty. Súd prvej inštancie má opätovne prejednať nárok na zmluvnú pokutu a úroky z omeškania.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvná pokuta ako osobitná zabezpečovacia sankcia bola dohodnutá v článku XII bod 12.2.1 zmluvy o dielo pre prípad omeškania objednávateľa (žalovaného) s úhradou oprávnených faktúr vo výške 0,1 % z dlžnej čiastky za každý deň omeškania až do dátumu zaplatenia.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Dôvodom zrušenia napadnutého rozsudku súdu prvej inštancie vo zvyšnej časti, t.j. v časti príslušenstva nároku a uplatnenej zmluvnej pokuty, je skutočnosť, že znenie výroku rozsudku v časti výšky úrokov z omeškania vyhláseného na pojednávaní dňa 23.01.2014 a zachyteného v zápisnici z tohto pojednávania na č. l. 195 spisu (0,70 % denne) sa nezhoduje so znením predmetného výroku obsiahnutého v písomnom vyhotovení rozsudku, a to v zmysle opravného uznesenia č. k. 26Cb/55/2013-244, ktorým bola výška denných úrokov opravená z 0,70 % na 0,75 %.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný ďalej poukázal na to, že pre omeškanie so zaplatením zádržného nebol v zmluve dohodnutý žiaden zmluvný úrok z omeškania ani zmluvná pokuta. Konajúci súd napriek tomu bez ďalšieho, v rozpore so zákonom a absolútne nelogicky priznal žalobcovi právo na zaplatenie úrokov z omeškania a zmluvnej pokuty tak, ako to žalobca požadoval. Navyše, výšku priznanej zmluvnej pokuty považoval žalovaný za neprimerane vysokú, odporujúcu dobrým mravom a zásadám poctivého obchodného styku, na čo súd vôbec neprihliadol a nevyužil svoje moderačné právo v zmysle ust. § 301 Obchodného zákonníka k zníženiu neprimeranej zmluvnej pokuty (súd ani neodôvodnil prečo v tejto veci nevyužíva svoje moderačné právo).",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.secured_principal"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].moderation_analysis.factors[0].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[1].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[2].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[3].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[4].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[5].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[6].evidence.quote",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_33_2021_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/33/2021",
+      "decision_date": "15.06.2021",
+      "ecli": "ECLI:SK:KSBA:2021:1213206609.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

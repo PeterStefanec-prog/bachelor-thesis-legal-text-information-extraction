@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13421,
+    "completion_tokens": 2272,
+    "cost_usd": 0.0395,
+    "latency_seconds": 8.97,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 16.963,43 eur s príslušenstvom, vrátane úrokov z omeškania a zmluvnej pokuty, za vykonané dielo spočívajúce vo vypracovaní žiadosti o nenávratný finančný príspevok. Žalovaný namietal predčasnosť nároku na istinu a nedôvodnosť zmluvnej pokuty, ktorú považoval za duplicitnú a v rozpore s dobrými mravmi, a navrhol jej moderáciu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 16.943,43 eur s úrokom z omeškania a zmluvnou pokutou, a priznal žalobcovi nárok na náhradu trov odvolacieho konania v rozsahu 100 %.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad porušenia povinnosti objednávateľa zaplatiť čo i len časť ktorejkoľvek platby odmeny dohodli na zmluvnej pokute vo výške 0,1% z dlžnej sumy odmeny za každá deň omeškania so zaplatením dlžnej sumy odmeny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% denne zo sumy 16963,43 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur od 26.10.2016 do 24.8.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 16963.43,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur od 26.10.2016 do 24.8.2017",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 16.943,43 eur spolu s úrokom z omeškania vo výške 9% ročne zo sumy 16963,43 eur od 26.10.2016 až do zaplatenia, zmluvnú pokutu vo výške 0,1% denne zo sumy 16963,43 eur od 26.10.2016 do 24.8.2017",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 9% ročne zo sumy 16963,43 eur od 26.10.2016 až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd nepovažoval za potrebné v tomto prípade použiť moderačné právo podľa § 301 Obchodného zákonníka pretože táto so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná a nie je ani v rozpore so zásadami poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že žaloba je dôvodná v celom rozsahu. Konštatoval, že žalobca riadne a včas vykonal dielo a žalovaný bol v omeškaní s platbou. Súd nepovažoval za potrebné použiť moderačné právo, pretože zmluvná pokuta vo výške 0,1% denne (36% ročne) nebola neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti a nebola v rozpore so zásadami poctivého obchodného styku. Súd tiež potvrdil, že uplatňovanie zmluvnej pokuty popri úrokoch z omeškania nie je v rozpore so zákonom ani dobrými mravmi. Zmluvná pokuta bola obmedzená do dňa podania žaloby.",
+          "key_quotes": [
+            {
+              "quote": "žiaden právny predpis nevylučuje uplatňovanie zmluvnej pokuty dohodnutej v zmluve pre prípad omeškania dlžníka s plnením peňažného záväzku pri zákonnom úroku z omeškania. S tým istým peňažným plnením a oba tieto nároky možno uplatňovať popri sebe kumulatívne a nie je to v rozpore so zákonom ani v rozpore s dobrými mravmi.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "súd nepovažoval za potrebné v tomto prípade použiť moderačné právo podľa § 301 Obchodného zákonníka pretože táto so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná a nie je ani v rozpore so zásadami poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvnú pokutu žalobca obmedzil od- do a teda sa ďalej nenavyšuje oproti úrokom z omeškania, ktoré bežia až do zaplatenia dlžnej žalovanej pohľadávky zo strany dlžníka - žalovaného.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "nie je to v rozpore so zákonom ani v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "so zreteľom na hodnotu a význam zabezpečovanej povinnosti nie je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žiaden právny predpis nevylučuje uplatňovanie zmluvnej pokuty dohodnutej v zmluve pre prípad omeškania dlžníka s plnením peňažného záväzku pri zákonnom úroku z omeškania. S tým istým peňažným plnením a oba tieto nároky možno uplatňovať popri sebe kumulatívne a nie je to v rozpore so zákonom ani v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_46_2018_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/46/2018",
+      "decision_date": "08.11.2018",
+      "ecli": "ECLI:SK:KSPO:2018:6117230109.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

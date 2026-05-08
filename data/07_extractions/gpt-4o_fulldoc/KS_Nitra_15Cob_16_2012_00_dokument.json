@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5825,
+    "completion_tokens": 1030,
+    "cost_usd": 0.0249,
+    "latency_seconds": 7.77,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Milan Cabadaj podal žalobu na určenie neprimeranosti zmluvnej pokuty, ktorú mal zaplatiť žalovanému FERAUT s.r.o. na základe zmluvy o budúcej zmluve. Žalobca tvrdil, že zmluvná pokuta bola neprimerane vysoká a žiadal jej zníženie na 1/50 zo zabezpečeného záväzku.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok Okresného súdu Nitra, ktorý žalobu zamietol pre nedostatok naliehavého právneho záujmu.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "že žalobca ako budúci kupujúci a žalovaný ako budúci predávajúci uzavreli dňa 09.04.2009 zmluvu o budúcej zmluve.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur",
+          "evidence": {
+            "quote": "určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 170000,
+            "evidence": {
+              "quote": "zabezpečeného záväzku zo sumy 170.000,-- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 3400,
+            "evidence": {
+              "quote": "určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur, t. j. vo výške 3.400,-- eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu pre nedostatok naliehavého právneho záujmu, keďže žalobca nepreukázal, že by jeho právne postavenie bolo neisté bez určenia primeranosti pokuty. Odvolací súd potvrdil toto rozhodnutie, pretože žalobca mohol podať žalobu na plnenie, kde by sa otázka primeranosti pokuty riešila ako predbežná otázka.",
+          "key_quotes": [
+            {
+              "quote": "Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_16_2012_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/16/2012",
+      "decision_date": "21.03.2012",
+      "ecli": "ECLI:SK:KSNR:2012:4111214044.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

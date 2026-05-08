@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7470,
+    "completion_tokens": 1926,
+    "cost_usd": 0.0074,
+    "latency_seconds": 21.32,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 1.143,34 eura s príslušenstvom, ktorá pozostávala z neuhradených faktúr za telekomunikačné služby a uplatnenej zmluvnej pokuty vo výške 746 eur za predčasné ukončenie zmluvy. Žalovaný namietal neprimeranosť zmluvnej pokuty vzhľadom na poskytnutý benefit (4% zľavu) a absenciu vzniku škody na strane veriteľa.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý znížil pôvodne požadovanú zmluvnú pokutu zo 746 eur na 100 eur a zaviazal žalovaného k úhrade tejto sumy spolu s istinou.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Žalobca si uplatnil zmluvnú pokutu dohodnutú pre prípad odstúpenia od zmluvy podľa bodu 5.1 rámcovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "výpočet vo vzorci je uvedený v zmluve v bode 5.2 a do tohto vzorca pod písmenom d) bola dosadená zostávajúca doba splatnosti a minimálny obrat",
+          "evidence": {
+            "quote": "ktorej výpočet vo vzorci je uvedený v zmluve v bode 5.2 a do tohto vzorca pod písmenom d) bola dosadená zostávajúca doba splatnosti a minimálny obrat",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 746,
+            "evidence": {
+              "quote": "Právny predchodca žalobcu tak následne vystavil žalovanému faktúru na zaplatenie zmluvnej pokuty vo výške 746 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 100,
+            "evidence": {
+              "quote": "neprimerane vysokú zmluvnú pokutu znížil práve s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti a to na sumu 100 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "zaviazal ho aj na zaplatenie úrokov z omeškania vo výške 9 % ročne odo dňa nasledujúceho po splatnosti faktúr",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa žalobný návrh zamietol len čiastočne, keď uplatnil svoje moderačné oprávnenie a dohodnutú zmluvnú pokutu, ktorú považoval za neprimerane vysokú so zreteľom na hodnotu a význam zabezpečovanej povinnosti, znížil zo sumy 746,- eur na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd aplikoval § 301 Obchodného zákonníka a konštatoval, že zmluvná pokuta vo výške 746 eur je neprimerane vysoká v porovnaní s benefitom, ktorý žalovaný získal (4% zľava z fakturácie). Súd vzal do úvahy, že veriteľovi nevznikla žiadna škoda porušením zmluvnej povinnosti a že mesačná sadzba pokuty (37,30 eur) takmer dosahuje výšku minimálnej fakturácie. Z týchto dôvodov súd znížil pokutu na 100 eur, čo považoval za primerané vzhľadom na hodnotu a význam zabezpečovanej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Mal za to, že zmluvná pokuta v požadovanej výške 746 eur je neúmerne vysoká v porovnaní s benefitom, ktorý bol žalovanému poskytnutý.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "vzal do úvahu aj skutočnosť, že právnemu predchodcovi žalobcu porušením zmluvnej povinnosti žalovaným nevznikla škoda",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "vzal do úvahu aj skutočnosť, že právnemu predchodcovi žalobcu porušením zmluvnej povinnosti žalovaným nevznikla škoda",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Len v dôsledku zľavy z fakturácie si žalobca uplatňuje zmluvnú pokutu vo výške 746 eur, čo považoval za neprimerané vo vzťahu k porušeniu zmluvnej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_25Co_896_2015_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "25Co/896/2015",
+      "decision_date": "15.06.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4114214797.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

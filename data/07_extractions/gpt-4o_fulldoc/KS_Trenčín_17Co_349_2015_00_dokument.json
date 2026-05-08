@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9728,
+    "completion_tokens": 1116,
+    "cost_usd": 0.0355,
+    "latency_seconds": 53.1,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 0,5% z dlžnej čiastky za každý deň omeškania, po čiastočnom späťvzatí žaloby zo sumy 650 eur od 29.07.2012 do 11.02.2013, teda za 198 dní omeškania. Žalovaný nezaplatil nájomné za mesiac august 2012, vyúčtované faktúrou č. 16/2012, splatnou 14.07.2012.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a priznal žalobcovi zmluvnú pokutu aj za obdobie po skončení nájomnej zmluvy až do zaplatenia dlžného nájomného.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnej pokuty v prípade porušenia vymedzených zmluvných povinností teda meškania s platbou nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "0,5% z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "v prípade omeškania nájomcu so zaplatením mesačného nájomného o viac ako 14 dní sa nájomca zaväzuje zaplatiť prenajímateľovi zmluvnú pokutu vo výške 0,5% z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 650,
+            "evidence": {
+              "quote": "mesačné nájomné 650 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 891,
+            "evidence": {
+              "quote": "o zaplatenie 891 eur",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 533,
+            "evidence": {
+              "quote": "že žalovaný je povinný zaplatiť žalobcovi sumu 533 eur",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd je preto toho názoru, že žalobca má nárok na zaplatenie zmluvnej pokuty aj za nasledujúce obdobie od skončenia nájomnej zmluvy až do zaplatenia dlžného nájomného",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu za obdobie do zániku nájomnej zmluvy, ale zamietol ju za obdobie po zániku. Odvolací súd zmenil tento rozsudok, keďže zmluvná pokuta nie je viazaná na skončenie nájomného vzťahu, ale na porušenie povinnosti zaplatiť nájomné. Odvolací súd priznal zmluvnú pokutu aj za obdobie po skončení nájomnej zmluvy až do zaplatenia dlžného nájomného.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd je preto toho názoru, že žalobca má nárok na zaplatenie zmluvnej pokuty aj za nasledujúce obdobie od skončenia nájomnej zmluvy až do zaplatenia dlžného nájomného",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "súd nedospel k názoru, že postup žalobcu bol v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta má akcesorickú povahu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "suma zmluvnej pokuty narastala postupne, každým dňom omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type"
+      ],
+      "missing_fields": [
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_17Co_349_2015_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "17Co/349/2015",
+      "decision_date": "17.08.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3814202672.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

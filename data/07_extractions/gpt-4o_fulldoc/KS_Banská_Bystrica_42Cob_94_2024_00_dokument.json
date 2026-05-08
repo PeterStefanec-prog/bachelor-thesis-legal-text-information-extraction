@@ -1,0 +1,313 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26787,
+    "completion_tokens": 2567,
+    "cost_usd": 0.0926,
+    "latency_seconds": 79.56,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Nakaza s.r.o. sa domáhal zaplatenia sumy 22.790,40 Eur spolu s úrokmi z omeškania a zmluvnými pokutami od žalovaného AQUATREND, s.r.o. na základe zmlúv o poskytovaní reklamných služieb, ktoré žalovaný prestal uhrádzať.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie okresného súdu, ktorý priznal žalobcovi nárok na zmluvné pokuty a úroky z omeškania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12 % ročne",
+          "evidence": {
+            "quote": "úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil zmluvy ako platné a zrozumiteľné, pričom žalovaný nepreukázal, že by žalobca porušil zmluvné povinnosti. Zmluvná pokuta bola považovaná za primeranú a súd potvrdil, že súbežné uplatnenie úrokov z omeškania a zmluvnej pokuty je prípustné.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný zároveň rozporoval aj výšku dojednanej zmluvnej pokuty, ktorú považoval za neprimerane vysokú, čo má taktiež za následok neplatnosť jej dojednania z dôvodu rozporu s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Druhou zmluvnou pokutou bolo zabezpečené riadne a včasné uhrádzanie faktúr vystavených žalobcom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom konštatoval, že žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný nikdy netvrdil, že by poskytovaným službám nerozumel. Dokonca žalovaný niekoľkokrát prejavil vôľu rozšíriť rozsah poskytovaných služieb",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom konštatoval, že žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca poukázal na to, že žalovaný niekoľko mesiacov uhrádzal faktúry vystavené žalobcom a neposkytoval žiadne vyjadrenia, ktoré by nasvedčovali, že by obsahu zmluvy nerozumel",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnú pokutu si uplatňuje z dôvodu, že žalovaný bol v omeškaní s úhradami, zároveň že neposkytoval súčinnosť žalobcovi a nezotrval vo vzťahu v zmysle zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "5.000,- Eur z každej zmluvy",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 5.000,- Eur z každej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 5.000,- Eur z každej zmluvy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12 % ročne",
+          "evidence": {
+            "quote": "úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil zmluvy ako platné a zrozumiteľné, pričom žalovaný nepreukázal, že by žalobca porušil zmluvné povinnosti. Zmluvná pokuta bola považovaná za primeranú a súd potvrdil, že súbežné uplatnenie úrokov z omeškania a zmluvnej pokuty je prípustné.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie vykonal dokazovanie v požadovanom rozsahu pre správne zistenie skutkového stavu, na základe vykonaných dôkazov dospel k správnym skutkovým záverom, na takto zistený skutkový stav aplikoval správnu právnu normu a vec správne právne posúdil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný zároveň rozporoval aj výšku dojednanej zmluvnej pokuty, ktorú považoval za neprimerane vysokú, čo má taktiež za následok neplatnosť jej dojednania z dôvodu rozporu s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Druhou zmluvnou pokutou bolo zabezpečené riadne a včasné uhrádzanie faktúr vystavených žalobcom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom konštatoval, že žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný nikdy netvrdil, že by poskytovaným službám nerozumel. Dokonca žalovaný niekoľkokrát prejavil vôľu rozšíriť rozsah poskytovaných služieb",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom konštatoval, že žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca poukázal na to, že žalovaný niekoľko mesiacov uhrádzal faktúry vystavené žalobcom a neposkytoval žiadne vyjadrenia, ktoré by nasvedčovali, že by obsahu zmluvy nerozumel",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.key_quote_0"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_42Cob_94_2024_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "42Cob/94/2024",
+      "decision_date": "09.09.2025",
+      "ecli": "ECLI:SK:KSBB:2025:6123462118.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

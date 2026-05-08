@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 20981,
+    "completion_tokens": 2228,
+    "cost_usd": 0.0485,
+    "latency_seconds": 9.19,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal nárokov z titulu porušovania známkových práv a nekalosúťažného konania, keď žalovaný aj po ukončení Zmluvy o spolupráci naďalej používal ochrannú známku \"metabolic balance\" a ponúkal služby predaja alebo vývoja nutričných plánov založených na báze krvných výsledkov. Žalobca žiadal zdržanie sa porušovania, odstránenie následkov, zaplatenie zmluvnej pokuty a primerané zadosťučinenie.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorým bola žalovanému uložená povinnosť zaplatiť zmluvnú pokutu vo výške 50 000 EUR s úrokom z omeškania a priznal žalobcovi nárok na náhradu trov odvolacieho konania v rozsahu 100%.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný naďalej používal ochrannú známku, resp. označenie \"metabolic balance\" a naďalej ponúkal, prezentoval, propagoval a poskytoval služby predaja alebo vývoja vlastných nutričných plánov alebo programov založených na báze krvných výsledkov",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "25.000,00 Eur za každé jednotlivé porušenie",
+          "evidence": {
+            "quote": "Poradca je povinný zaplatiť Poskytovateľovi licencie zmluvnú pokutu vo výške 25.000,00 Eur za každé jednotlivé porušenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 50000.0,
+            "evidence": {
+              "quote": "§ 5 ods. 4 zmluvy v celkovej výške 50.000,- Eur, t.j. 2 x 25.000,- Eur za jednotlivé porušenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 50000.0,
+            "evidence": {
+              "quote": "uložil žalovanému povinnosť do 3 dní od právoplatnosti rozhodnutia zaplatiť žalobcovi zmluvnú pokutu vo výške 50.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9% ročne od 03.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd dospel k záveru, že rozhodnutie súdu prvej inštancie v napadnutom výroku III. vo veci samej je vecne správne, preto podľa § 387 ods. 1 CSP rozhodnutie vo výroku III. potvrdil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že konkurenčná doložka bola platne dojednaná, keďže ide o vzťah medzi obchodnými spoločnosťami a ich slobodnú vôľu. Odvolací súd potvrdil, že ustanovenie § 672a Obchodného zákonníka sa aplikuje len na zmluvy o obchodnom zastúpení a nie na inominátne zmluvy. Žalovaný neuviedol dostatočné dôvody pre neplatnosť doložky ani pre moderáciu zmluvnej pokuty, keďže jeho tvrdenia o neprimeranosti výšky vo vzťahu k výnosom neboli spôsobilé pre moderáciu a ďalšie námietky boli novoty.",
+          "key_quotes": [
+            {
+              "quote": "Pretože žalovaný na základe uvedeného porušil svoje zmluvné povinnosti vyplývajúce z § 5 písm. a) a c) Zmluvy o spolupráci, čím porušil zmluvne dojednaný zákaz konkurencie, vznikol žalobcovi aj nárok na zaplatenie zmluvnej pokuty podľa § 5 ods. 4 zmluvy v celkovej výške 50.000,- Eur, t.j. 2 x 25.000,- Eur za jednotlivé porušenia",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd je potom toho právneho názoru, že ak v rámci zmluvnej voľnosti strany dojednajú konkurenčnú doložku aj v inom zmluvnom type ako zmluve o obchodnom zastúpení, súdy môžu dospieť k záveru, že takáto doložka je absolútne neplatná, avšak nie bez ďalšieho len z dôvodu, že konkurenčná doložka nebude mať náležitosti definované v ustanovení § 672a ods. 1 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Všeobecné a dôkazom nepodopreté tvrdenie žalovaného o výnosoch z uzavretej Zmluvy strán preto neboli spôsobilé na to, aby súdy k moderácii zmluvnej pokuty pristúpili.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "ale v konkrétnych okolnostiach tej ktorej veci môže byť hodnotená len ako v rozpore so zásadami poctivého obchodného styku, prípadne s dobrými mravmi alebo že nezodpovedá všeobecným náležitostiam právneho úkonu podľa § 37 a § 38 Občianskeho zákonníka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Rovnako nie je možné primeranosť zmluvnej pokuty odvodzovať ani od výšky škody, nakoľko túto si žalobca v žalobe neuplatnil a ani nepreukázal je vznik a výšku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "k porušeniu povinnosti nepoužívať označenie \"metabolic balance\" došlo výlučne nedopatrením, keď bolo ponechaných niekoľko ojedinelých odkazov na ochrannú známku, resp. označenie \"metabolic balance\" na webových stránkach a sociálnych sieťach",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoPv/10/2023",
+      "decision_date": "14.09.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6120386576.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

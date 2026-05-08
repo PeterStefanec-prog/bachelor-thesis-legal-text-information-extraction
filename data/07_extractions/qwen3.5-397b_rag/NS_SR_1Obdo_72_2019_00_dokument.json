@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 8132,
+      "completion_tokens": 1008,
+      "cost_usd": 0.0055,
+      "latency_seconds": 15.15,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 6060,
+      "completion_tokens": 1740,
+      "cost_usd": 0.0064,
+      "latency_seconds": 25.27,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa sa domáhala zaplatenia zmluvnej pokuty vo výške 10.000 € za podstatné porušenie zmluvy o poskytovaní služieb žalovanou, konkrétne za uzatváranie realitných obchodov bez vedomia žalobkyne a neoprávnené vyberanie peňazí od klientov. Žalovaná namietala neprimeranost výšky pokuty a spochybňovala skutkový stav.",
+      "verdict_summary": "Najvyšší súd odmietal dovolanie žalovanej a potvrdil rozhodnutie nižších súdov, ktoré znížili zmluvnú pokutu na 5.000 € a uložili žalovanej povinnosť túto sumu zaplatiť.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Sporným medzi stranami bolo, či žalovaná sa dopustila konania, ktorým podstatne porušila zásadné ustanovenia zmluvy uvedené v článku VII. bode 7./A, písm. (e) uzatváranie realitných obchodov bez vedomia HALO reality a nepriznanie rezervačnej zálohy a odmeny za sprostredkovanie realitného obchodu",
+            "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_1"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000 €",
+          "evidence": {
+            "quote": "Pre prípad podstatného porušenia zásadných ustanovení zmluvy poskytovateľkou, teda žalovanou, bola v zmluve dohodnutá zmluvná pokuta vo výške 10.000 €",
+            "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_4"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "následne sa podanou žalobou domáhala proti žalovanej zaplatenia zmluvnej pokuty vo výške 10.000 € v zmysle článku VII. bodu 7./A zmluvy",
+              "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 5000,
+            "evidence": {
+              "quote": "12C/193/2014-163 zo dňa 17. októbra 2017 uložil žalovanej povinnosť zaplatiť žalobkyni sumu 5.000 € spolu s úrokom z omeškania",
+              "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_0"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5,25 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 5,25 % ročne od 12.02.2014 do zaplatenia",
+            "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+              "quote": "Na základe uvedeného súd prvej inštancie uplatnil moderačné oprávnenie podľa ustanovenia § 301 Obchodného zákonníka (ďalej aj \"Obch. zák.\") a zmluvnú pokutu znížil o polovicu na sumu 5.000 €"
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "Súd tiež prihliadol na skutočnosť, že dojednanie o zmluvnej pokute bolo v zmluve dohodnuté jednostranne, keďže zmluvná pokuta bola dohodnutá iba v prospech žalobkyne, naproti čomu žalovaná nemala možnosť domáhať sa finančných čiastok z titulu zmluvnej pokuty."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "zmluvnú pokutu znížil o polovicu na sumu 5.000 € s tým, že ju možno považovať za dostatočne účinnú náhradu, odrádzajúcu od neplnenia zmluvných povinností a za primeranú s poukazom na hodnotu a význam zabezpečovanej povinnosti"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "Keďže zmluvná pokuta plní aj funkciu paušalizovanej náhrady škody, súd prihliadol aj na výšku vzniknutej škody, ktorá v prejednávanom prípade bola 300 €."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "Pri posudzovaní primeranosti výšky zmluvnej pokuty súd prvej inštancie vzal do úvahy mieru rizika, ktorú žalobkyňa vzala na seba uzavretím zmluvy o poskytovaní služieb, ako aj výšku odplát, ktoré sú obvyklé v realitných obchodoch a ktoré hradia klienti realitným kanceláriám"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "zohľadnil hodnotu zabezpečovaného záväzku a jeho význam, a preto jeho úvahu pri určení výšky priznanej zmluvnej pokuty nemožno označiť za svojvoľnú."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+                "quote": "Poukázal na to, že žalobkyňa je spoločnosťou s ručením obmedzeným a žalovaná je živnostníčkou, ktorá ručí za svoje záväzky celým svojím majetkom. Hospodárska sila a pozícia žalobkyne je nepochybne silnejšia oproti žalovanej."
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "negative"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5",
+              "quote": "Na základe uvedeného súd prvej inštancie uplatnil moderačné oprávnenie podľa ustanovenia § 301 Obchodného zákonníka (ďalej aj \"Obch. zák.\") a zmluvnú pokutu znížil o polovicu na sumu 5.000 € s tým, že ju možno považovať za dostatočne účinnú náhradu, odrádzajúcu od neplnenia zmluvných povinností a za primeranú s poukazom na hodnotu a význam zabezpečovanej povinnosti, ako aj s poukazom na hospodársku pozíciu zmluvných strán, reciprocitu zmluvnej pokuty, druh zavinenia žalovanej a výšku vzniknutej škody."
+            },
+            {
+              "chunk_id": "NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_11",
+              "quote": "Ustanovením týchto požiadaviek zákon akcentuje primeranosť zmluvnej pokuty vo vzťahu k záujmu na plnení zmluvy tej strany, ktorá si zmluvnou pokutou splnenie zmluvy zabezpečuje."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie využil moderačné právo podľa § 301 Obchodného zákonníka a znížil pôvodne dohodnutú pokutu 10.000 € na 5.000 €, keďže považoval pôvodnú sumu za neprimeranú vzhľadom na skutočnú výšku vzniknutej škody (300 €) a jednostrannosť dojednania v prospech žalobkyne. Pri určení novej výšky súd zohľadnil hospodársku pozíciu strán, kde žalobkyňa ako s.r.o. mala silnejšie postavenie než žalovaná živnostníčka, ako aj hodnotu a význam zabezpečovanej povinnosti. Odvolací aj dovolací súd potvrdili tento postup, keďže súd prvej inštancie riadne odôvodnil svoje hodnotenie a nezistili dôvody na zmenu rozhodnutia."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_NOT_FOUND:pokuta_1.factor.spravanie_dlznika:NS_SR_1Obdo_72_2019_00_dokument.pdf_chunk_5"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_1Obdo_72_2019_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "1Obdo/72/2019",
+      "decision_date": "29.09.2020",
+      "ecli": "ECLI:SK:NSSR:2020:2514201620.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

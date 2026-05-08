@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 25853,
+    "completion_tokens": 1050,
+    "cost_usd": 0.0751,
+    "latency_seconds": 48.78,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ASEKOL SK s.r.o. požadoval od žalovaného AT Computer, s.r.o. zaplatenie zmluvnej pokuty vo výške 4.800 Eur za neposkytnutie súčinnosti pri kontrolách elektrozariadení. Žalovaný namietal neoprávnenosť kontrol a neplatnosť zmluvných ustanovení.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok okresného súdu, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 4.800 Eur.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "za neposkytnutie súčinnosti pri kontrole",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "2.400 Eur za každú jednotlivú zmarenú kontrolu",
+          "evidence": {
+            "quote": "má žalobca nárok aj na zmluvnú pokutu vo výške 2.000 Eur za každú jednotlivú zmarenú kontrolu alebo za každý prípad neposkytnutia súčinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4800,
+            "evidence": {
+              "quote": "o zaplatenie 9.600 Eur s príslušenstvom, o odvolaní žalovaného proti výroku o povinnosti zaplatiť žalobcovi sumu vo výške 4.800 Eur",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 4800,
+            "evidence": {
+              "quote": "nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,05% ročne",
+          "evidence": {
+            "quote": "úrokmi z omeškania vo výške 9,05% ročne zo sumy 2.400 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že žalobca má nárok na zmluvnú pokutu za dve zmarené kontroly, pretože žalovaný neposkytol potrebnú súčinnosť. Zmluvná pokuta bola dohodnutá v zmluve a súd nenašiel dôvody na jej zníženie podľa § 301 Obchodného zákonníka. Žalovaný nepreukázal, že by faktúry neboli doručené, a preto súd priznal žalobcovi plnú výšku pokuty.",
+          "key_quotes": [
+            {
+              "quote": "nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta pri porušení akejkoľvek povinnosti v zmysle čl. 4",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný neviedol riadnu evidenciu podľa zmluvy a zmaril vykonanie kontrol",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_128_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/128/2017",
+      "decision_date": "24.01.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5115233752.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

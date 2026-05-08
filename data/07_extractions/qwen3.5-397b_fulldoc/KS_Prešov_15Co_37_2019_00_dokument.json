@@ -1,0 +1,186 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11126,
+    "completion_tokens": 1808,
+    "cost_usd": 0.0086,
+    "latency_seconds": 24.95,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobcovia sa domáhali určenia, že nehnuteľnosti nie sú zaťažené záložným právom v prospech žalovaného (banky), keďže zmluva o zriadení záložného práva bola uzavretá na zabezpečenie úveru. Hlavným bodom sporu bola platnosť záložnej zmluvy, ktorá obsahovala aj dojednanie o zmluvnej pokute, pričom chýbalo určenie najvyššej hodnoty istiny.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorým sa určilo, že nehnuteľnosti nie sú zaťažené záložným právom, pretože záložná zmluva bola vyhlásená za absolútne neplatnú pre absenciu zákonom požadovaných náležitostí.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "za každý prípad nesplnenia ktoréhokoľvek zo záväzkov záložcu vyplývajúceho z tejto zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "10% zo sumy poskytnutého úveru",
+          "evidence": {
+            "quote": "záložný veriteľ právo vyúčtovať záložcovi podľa § 300 a nasl. Obchodného zákonníka zmluvnú pokutu vo výške 10% zo sumy poskytnutého úveru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 70000,
+            "evidence": {
+              "quote": "žalovaný v l. rade ako záložný veriteľ poskytol dlžníkom mimoriadny medziúver vo výške 70.000,00 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "quote": "sporná záložná zmluva uzatvorená medzi žalobcami ako záložcami a žalovaným 1 ako záložným veriteľom z 19.01.2012 neurčuje hodnotu zabezpečenej pohľadávky a pre takýto prípad ani neurčuje najvyššiu hodnotu istiny, do ktorej sa pohľadávka zabezpečuje, čo spôsobuje jej absolútnu neplatnosť",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že záložná zmluva je absolútne neplatná podľa § 151b ods. 2 a 3 Občianskeho zákonníka v spojení s § 39 Občianskeho zákonníka, pretože neobsahuje určenie hodnoty zabezpečenej pohľadávky ani najvyššej hodnoty istiny. Keďže ide o absolútne neplatný právny úkon v celom rozsahu, ani zmluvná pokuta založená na tejto zmluve nemôže vzniknúť. Súd nepristúpil k moderácii výšky pokuty, keďže celá zmluva bola vyhlásená za neplatnú.",
+          "key_quotes": [
+            {
+              "quote": "stojace povinné obsahové náležitosti záložnej zmluvy) podľa potreby len násilným a účelovým výkladom zmluvy spájať alebo zamieňať a v prípade, že by zmluva takúto možnosť obsahovala (čo nie je prípad práve posudzovanej veci), stávala by sa neurčitou a nezrozumiteľnou a v konečnom dôsledku taktiež absolútne neplatnou",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Keďže napadnutá zmluva o zriadení záložného práva bola súdom vyhodnotená ako absolútne neplatný právny úkon, nebolo platne zriadené záložné právo k nehnuteľnostiam",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Penalty dismissed due to absolute invalidity of the entire mortgage contract, not specific penalty clause invalidity under §301.",
+        "No specific monetary claim for the penalty was adjudicated as the contract was void ab initio.",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "associated_interest.rate_value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_15Co_37_2019_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "15Co/37/2019",
+      "decision_date": "17.03.2020",
+      "ecli": "ECLI:SK:KSPO:2020:8118207061.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

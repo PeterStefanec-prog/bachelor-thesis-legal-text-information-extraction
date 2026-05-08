@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7364,
+    "completion_tokens": 2238,
+    "cost_usd": 0.0316,
+    "latency_seconds": 8.5,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 1.143,34 eura s príslušenstvom od žalovaného na základe Rámcovej zmluvy o poskytnutí osobitných podmienok pri poskytovaní elektronických komunikačných služieb a Zmluvy o pripojení. Žalovaný neuhradil faktúry za poskytnuté služby a žalobca si uplatnil zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa v zamietajúcej časti, čím potvrdil zníženie zmluvnej pokuty na 100 eur a zamietnutie zvyšku nároku žalobcu. Žalovanému nebola priznaná náhrada trov odvolacieho konania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný sa dostal od 22.12.2011 do omeškania s platením prvej faktúry, celkovo neuhradil faktúry za poskytnuté služby v sume 393,84 eura. Neuhradením tejto sumy žalovaný porušil zmluvu, pričom išlo o podstatné porušenie zmluvy podľa čl. 3 bod 1 písm. c), nezaplatenie faktúr za služby do 30-tich dní od ich splatnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "výpočet vo vzorci je uvedený v zmluve v bode 5.2 a do tohto vzorca pod písmenom d) bola dosadená zostávajúca doba splatnosti a minimálny obrat dohodnutý na 40 eur bez DPH, čo znamená 48 eur s DPH",
+          "evidence": {
+            "quote": "zmluvnú pokutu, ktorej výpočet vo vzorci je uvedený v zmluve v bode 5.2 a do tohto vzorca pod písmenom d) bola dosadená zostávajúca doba splatnosti a minimálny obrat dohodnutý na 40 eur bez DPH, čo znamená 48 eur s DPH.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 746.0,
+            "evidence": {
+              "quote": "Právny predchodca žalobcu tak následne vystavil žalovanému faktúru na zaplatenie zmluvnej pokuty vo výške 746 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 100.0,
+            "evidence": {
+              "quote": "Preto s poukazom na § 301 Obchodného zákonníka neprimerane vysokú zmluvnú pokutu znížil práve s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti a to na sumu 100 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "zaviazal ho aj na zaplatenie úrokov z omeškania vo výške 9 % ročne odo dňa nasledujúceho po splatnosti faktúr.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa žalobný návrh zamietol len čiastočne, keď uplatnil svoje moderačné oprávnenie a dohodnutú zmluvnú pokutu, ktorú považoval za neprimerane vysokú so zreteľom na hodnotu a význam zabezpečovanej povinnosti, znížil zo sumy 746,- eur na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z 746 eur na 100 eur s odkazom na § 301 Obchodného zákonníka, považujúc ju za neúmerne vysokú vzhľadom na poskytnutý benefit (4% zľava z fakturácie) a skutočnosť, že právnemu predchodcovi žalobcu nevznikla škoda. Odvolací súd sa s týmto záverom stotožnil, pričom zdôraznil, že rozhodujúcim kritériom pre moderáciu je hodnota a význam zabezpečovanej povinnosti. Konštatoval, že zmluvná pokuta 746 eur za nedodržanie viazanosti 20 mesiacov je neprimerane vysoká v porovnaní s benefitom 32 eur.",
+          "key_quotes": [
+            {
+              "quote": "Mal za to, že zmluvná pokuta v požadovanej výške 746 eur je neúmerne vysoká v porovnaní s benefitom, ktorý bol žalovanému poskytnutý.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Preto s poukazom na § 301 Obchodného zákonníka neprimerane vysokú zmluvnú pokutu znížil práve s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti a to na sumu 100 eur, pričom vzal do úvahu aj skutočnosť, že právnemu predchodcovi žalobcu porušením zmluvnej povinnosti žalovaným nevznikla škoda.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Za poskytnutie tohto benefitu potom zmluvná pokuta 746 eur je aj podľa názoru odvolacieho súdu neprimerane vysoká, preto uvedená námietka žalobcu nie je dôvodná.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd teda predovšetkým a v prvom rade skúma hodnotu a význam zabezpečenej povinnosti a až na základe stanovenia tejto hodnoty a významu pre zmluvný vzťah zmluvných strán pristúpi k posúdeniu primeranosti zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pričom vzal do úvahu aj skutočnosť, že právnemu predchodcovi žalobcu porušením zmluvnej povinnosti žalovaným nevznikla škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Mal za to, že zmluvná pokuta v požadovanej výške 746 eur je neúmerne vysoká v porovnaní s benefitom, ktorý bol žalovanému poskytnutý.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_25Co_896_2015_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "25Co/896/2015",
+      "decision_date": "15.06.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4114214797.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16654,
+    "completion_tokens": 2251,
+    "cost_usd": 0.0433,
+    "latency_seconds": 9.43,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty od žalovaného, ktorá bola dohodnutá pre prípad omeškania žalovaného s úhradou ceny diela. Súdy nižšej inštancie pôvodne zmluvnú pokutu moderovali, avšak Najvyšší súd SR ich rozhodnutia zrušil a vrátil vec na opätovné prejednanie s právnym názorom na posudzovanie primeranosti zmluvnej pokuty.",
+      "verdict_summary": "Najvyšší súd Slovenskej republiky odmietol dovolanie žalovaného proti rozsudku Krajského súdu v Prešove, čím potvrdil rozhodnutie o povinnosti žalovaného zaplatiť žalobcovi zmluvnú pokutu a náhradu trov konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "dohoda o zmluvnej pokute, ktorá bola dojednaná v prospech žalobcu pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "vo výške 25,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "vo výške 25,- eur za každý deň omeškania, po márnom uplynutí doby splatnosti príslušného daňového dokladu vystaveného žalobcom po zhotovení diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 24650.42,
+            "evidence": {
+              "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 87775.0,
+            "evidence": {
+              "quote": "žalobca si uplatnil iba sumu 87.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 82775.0,
+            "evidence": {
+              "quote": "zaviazal žalovaného na zaplatenie zmluvnej pokuty vo výške 82.775,- eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 9.616,52 eur s úrokom z omeškania vo výške 9 % ročne zo sumy 7.891,02 eur od 16.12.2009 do zaplatenia a zo sumy 1.725,50 eur od 2. apríla 2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie správne ustálil nárok na sumu 82.775,eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie, viazaný právnym názorom Najvyššieho súdu SR, posudzoval primeranosť zmluvnej pokuty v čase porušenia povinnosti. Dospel k záveru, že dohodnutá zmluvná pokuta vo výške 25 eur denne je primeraná, vzhľadom na zabezpečovanú hlavnú povinnosť zaplatiť cenu diela vo výške 24 650,42 eur a dlhodobé omeškanie žalovaného. Celková výška pokuty bola dôsledkom dlhého trvania sporu a pasivity žalovaného. Súd potvrdil nárok na sumu 82 775 eur po odpočítaní už priznaných 5 000 eur.",
+          "key_quotes": [
+            {
+              "quote": "dospel k záveru, že dohodnutá zmluvná pokuta je primeraná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "zmluvná pokuta medzi stranami sporu dohodnutá a uvedená vo VOP žalobcu nebola neprimeraná s poukazom na doterajšiu judikatúru súdov a na skutočnosť, že samotné dojednanie výšky zmluvnej pokuty je potrebné posudzovať ku dňu porušenia zmluvnej povinnosti, ktorá je zabezpečená zmluvnou pokutou a nie s ohľadom na celkovú výšku zmluvnej pokuty, ktorej konečná výška závisela od doby, po ktorú bol žalovaný ako dlžník v omeškaní so zaplatením ceny za dielo.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "celková výška zmluvnej pokuty bola spôsobená zavinením žalovaného, ktorý nesplnil svoju zmluvnú povinnosť zabezpečenú zmluvnou pokutou po dobu takmer 9 rokov.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný v odvolaní namietal, že súd neposúdil nárok žalobcu na zmluvnú pokutu v korelácií s otázkou dobrých mravov, nakoľko mal zato, že je nespravodlivé, aby žalobcovi vznikol nárok na zmluvnú pokutu, ak tento dodal dielo oneskorene a vadne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur), ktorej hodnota nebola zanedbateľná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "k neuhradeniu žalovanej časti ceny diela došlo v čase hospodárskej krízy, čo vzhľadom na výšku neuhradenej sumy mohlo mať zásadný vplyv aj na podnikanie žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "samotná výška neuhradenej ceny za dielo bola značná s ohľadom na aktuálnu hospodársku krízu v rokoch 2009 - 2011.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dĺžka samotného súdneho konania bola ovplyvnená aj aktivitou žalovaného, ktorý počas konania menil svoju argumentáciu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca vykonal všetko pre to, aby čím skôr bol predmetný spor ukončený, avšak konaním žalovaného bol spor predlžovaný.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_4Obdo_96_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "4Obdo/96/2021",
+      "decision_date": "30.09.2022",
+      "ecli": "ECLI:SK:NSSR:2022:8719204171.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

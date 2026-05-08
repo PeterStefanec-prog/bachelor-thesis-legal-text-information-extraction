@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8232,
+    "completion_tokens": 1830,
+    "cost_usd": 0.0286,
+    "latency_seconds": 7.26,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia neuhradenej časti faktúry titulom zmluvy o dočasnom odbere elektrickej energie spolu s príslušným úrokom z omeškania, paušálnou náhradou nákladov spojených s uplatnením pohľadávky a zmluvnou pokutou. Súčasne si uplatňoval nárok na zaplatenie zmluvnej pokuty a úrokov z omeškania zo zvyšnej časti pohľadávky, ktorú žalovaný uhradil platbou zo dňa 15.06.2022.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil dopĺňací rozsudok Mestského súdu Bratislava III, ktorým bola žalovanému uložená povinnosť zaplatiť úrok z omeškania a zmluvnú pokutu, a priznal žalovanému nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,035% denne zo sumy 2.698,55 eur od 27.05.2022 do 15.06.2022",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,035% denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,035% denne zo sumy 2.698,55 eur od 27.05.2022 do 15.06.2022",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2698.55,
+            "evidence": {
+              "quote": "zo sumy 2.698,55 eur od 27.05.2022 do 15.06.2022",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave dopĺňací rozsudok Mestského súdu Bratislava III č. k. 62Cb/64/2023 - 68 zo dňa 18. júla 2024 zrušuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 9% ročne zo sumy 2.698,55 eur od 27.05.2022 do 15.06.2022",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Odvolací súd preto postupujúc podľa ust. § 389 ods. 1 písm. a/ CSP napadnutý dopĺňací rozsudok súdu prvej inštancie zrušil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil dopĺňací rozsudok súdu prvej inštancie, pretože súd prvej inštancie už v pôvodnom rozsudku žalobu zamietol v celom rozsahu, čím rozhodol o celom žalobcom uplatňovanom nároku. Dopĺňacím rozsudkom tak nebolo možné zaviazať žalovaného na zaplatenie zmluvnej pokuty a úrokov z omeškania vo zvyšnej časti nároku, keďže o tom už bolo rozhodnuté zamietnutím žaloby v celom rozsahu.",
+          "key_quotes": [
+            {
+              "quote": "Zo znenia výroku I. rozsudku č. k. 62Cb/64/2023 - 59 tak, ako bol vyhlásený za prítomnosti právneho zástupcu žalovaného na pojednávaní dňa 11.06.2024 vyplýva, že súd žalobu v celom rozsahu zamietol (cit.: \"I. Žalobu zamieta. II. Žalovaný má voči žalobcovi nárok na náhradu trov konania vo výške 100%.\").",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Za danej procesnej situácie preto dopĺňacím rozsudkom nebolo možné žalovaného zaviazať na zaplatenie zmluvnej pokuty a úrokov z omeškania vo zvyšnej časti žalobcovho nároku.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Cob_216_2024_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Cob/216/2024",
+      "decision_date": "27.11.2024",
+      "ecli": "ECLI:SK:KSBA:2024:1323206582.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

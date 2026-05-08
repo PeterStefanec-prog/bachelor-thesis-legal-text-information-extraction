@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6627,
+    "completion_tokens": 1684,
+    "cost_usd": 0.0065,
+    "latency_seconds": 20.0,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ Orange Slovensko, a.s. sa domáhal zaplatenia zmluvnej pokuty vo výške 32.198,18 EUR spolu s príslušenstvom od odporcu VAZOL spol. s.r.o. z dôvodu porušenia zmluvných povinností podľa dodatkov k zmluvám o pripojení. Odporca nezaplatil faktúry za poskytnuté telekomunikačné služby a navrhovateľ uplatnil nárok na zmluvnú pokutu vo výške poskytnutej zľavy.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvého stupňa, ktorý zamietol návrh na zaplatenie zmluvnej pokuty ako predčasne podaný a právne neurčitý, keďže výzva na úhradu nešpecifikovala konkrétne porušenie zmluvnej povinnosti.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "zmluvná pokuta vo výške 32.198,18 EUR",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre neplnenie si zmluvných povinností, a to neplatenie platieb za poskytnuté služby",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "zmluvnú pokutu vo výške zľavy",
+          "evidence": {
+            "quote": "bude povinný zaplatiť zmluvnú pokutu vo výške zľavy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 32198.18,
+            "evidence": {
+              "quote": "návrh v časti zaplatenia sumy 32.198,18 EUR s príslušenstvom a úrok z omeškania",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "návrh v časti zaplatenia zmluvnej pokuty vrátane úroku z omeškania zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "návrh v časti zaplatenia zmluvnej pokuty vrátane úroku z omeškania zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "súd prvého stupňa vyhodnotil tento právny úkon ako neurčitý, ktorý nemá za následok splatnosť zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu z procesných dôvodov, keďže predsporová výzva (pokus o pokonávku) bola vyhodnotená ako právne neurčitá. Výzva síce obsahovala sumu, ale nešpecifikovala, ktoré konkrétne porušenie zmluvnej povinnosti (ktorý článok ktorej zmluvy) je sankcionované. Podľa § 37 ods. 1 Občianskeho zákonníka takýto úkon nemá hmotnoprávne účinky a nárok na zmluvnú pokutu ešte nevznikol, preto bol návrh zamietnutý ako predčasne podaný.",
+          "key_quotes": [
+            {
+              "quote": "z pokusu o pokonávku nie je zrejmé, ktoré konkrétne porušenie zmluvnej povinnosti odporcu je sankcionované",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "považuje tento úkon navrhovateľa za právne neurčitý",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Samotnú výzvu navrhovateľa obsiahnutú v listine Pokus o pokonávku zo dňa 18.6.2009 súd prvého stupňa vyhodnotil ako neurčitú",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded.value",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_387_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/387/2013",
+      "decision_date": "22.10.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1712220787.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 11865,
+      "completion_tokens": 1135,
+      "cost_usd": 0.0262,
+      "latency_seconds": 5.52,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 10259,
+      "completion_tokens": 1460,
+      "cost_usd": 0.0274,
+      "latency_seconds": 7.2,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia dlžného nájomného a zmluvnej pokuty za porušenie zmluvných povinností žalovaným, ktoré spočívalo v predčasnom ukončení nájomného vzťahu. Žalovaný namietal neprimeranosť zmluvnej pokuty a tvrdil, že nemohol užívať dopravné prostriedky pre ich nespôsobilosť.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 10 245,97 eur s príslušenstvom a zmluvnú pokutu vo výške 20 440 eur. Žalobcovi bol priznaný nárok na náhradu trov odvolacieho konania v plnom rozsahu.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Zmluvná pokuta bola stranami dojednaná pre prípad, že dôjde k predčasnému skončeniu nájomného vzťahu z dôvodov, ktoré sú na strane nájomcu (napríklad z dôvodu, že nájomca nesplnil svoje zmluvné povinnosti), t.j. pre prípad straty očakávaných príjmov žalobcu.",
+            "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_3"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "6x základného nájomného",
+          "evidence": {
+            "quote": "zmluvnej pokuty podľa bodu 7.6 Všeobecných zmluvných podmienok v sume 6x základného nájomného.",
+            "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_1"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 170640.0,
+            "evidence": {
+              "quote": "celková hodnota kontraktu zabezpečeného zmluvnou pokutou pre žalobcu bola v sume 170.640,- eur, a to 36-krát mesačné nájomné 1.750,- eur bez DPH pre vozidlo A., 36-krát mesačné nájomné 1.750,- eur bez DPH pre vozidlo A., 36-krát mesačné nájomné 620,- eur bez DPH, pre náves B. 36-krát nájomné 620,- eur bez DPH pre náves.",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_9"
+            }
+          },
+          "original_claimed": {
+            "value": 20440.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu 20.440,- eur",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 20440.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 20.440,- eur (výrok II)",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_0"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,00 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania 9,00 % ročne zo sumy 20,79 eur od 18.3.2020 do zaplatenia",
+            "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_1"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie napadnutým rozsudkom rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi sumu 10.245,97 eur s príslušenstvom (výrok I) a zmluvnú pokutu vo výške 20.440,- eur (výrok II)",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_0"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu v plnej výške 20 440 eur. Súd dospel k záveru, že zmluvná pokuta bola dojednaná na zabezpečenie zotrvania žalovaného v nájomnom vzťahu po celú dohodnutú dobu a na zabezpečenie návratnosti investícií žalobcu. Vzhľadom na celkovú hodnotu kontraktu (170 640 eur) a skutočnosť, že zmluva mala trvať ešte viac ako 24 mesiacov, súd nepovažoval výšku pokuty za neprimeranú, pričom poukázal na bežné dojednania v obchodnom styku. Žalovaný nepreukázal neprimeranosť pokuty ani existenciu predpokladov na náhradu škody.",
+          "key_quotes": [
+            {
+              "quote": "Na celkovú sumu zmluvnej pokuty je potrebné prihliadnuť z pohľadu, že celková hodnota kontraktu zabezpečeného zmluvnou pokutou pre žalobcu bola v sume 170.640,- eur, a to 36-krát mesačné nájomné 1.750,- eur bez DPH pre vozidlo A., 36-krát mesačné nájomné 1.750,- eur bez DPH pre vozidlo A., 36-krát mesačné nájomné 620,- eur bez DPH, pre náves B. 36-krát nájomné 620,- eur bez DPH pre náves. Tento záujem bol chránený v konkrétnom prípade zmluvnou pokutou v sume šesť násobku nájomného. Nakoľko v čase zániku zmluvy mala zmluva trvať ešte viac ako 24 mesiacov, nie je možné takto dohodnutú výšku zmluvnej pokuty považovať za neprimeranú, v obchodnom styku je bežné dojednanie zmluvnej pokuty aj vo výške 100 % hodnoty kontraktu.",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_9"
+            },
+            {
+              "quote": "Žalobca v konaní tvrdil, že zmluvná pokuta bola dojednaná za účelom zabezpečenia zotrvania nájomcu v zmluvnom vzťahu po celú pôvodne dohodnutú dobu (t.j. 36 mesiacov) a zabezpečenia návratnosti investícii žalobcu do prenajatých dopravných prostriedkov (v prejednávanom prípade výroby muldových návesov).",
+              "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_39"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "sporovými stranami dojednaná zmluvná pokuta slúžila na zabezpečenie toho, že žalovaný zotrvá v nájomnom vzťahu po celú dohodnutú dobu.",
+                "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_9"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Škoda, ktorú žalobca utrpel v dôsledku porušenia povinnosti žalovaným je vyššia než požadovaná zmluvná pokuta.",
+                "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Na celkovú sumu zmluvnej pokuty je potrebné prihliadnuť z pohľadu, že celková hodnota kontraktu zabezpečeného zmluvnou pokutou pre žalobcu bola v sume 170.640,- eur",
+                "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_9"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný neuniesol dôkazné bremeno, že prenajaté prostriedky nemohol používať po dlhšiu dobu, ako bolo dobropisované.",
+                "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_9"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca zdôraznil, že žalovaný mal možnosť ukončiť zmluvný vzťah, ak bol vylúčený z užívania dopravného prostriedku po dlhší čas, toto právo však nevyužil.",
+                "chunk_id": "KS_Košice_4Cob_116_2023_00_dokument.pdf_chunk_13"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_116_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/116/2023",
+      "decision_date": "26.03.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6120341555.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

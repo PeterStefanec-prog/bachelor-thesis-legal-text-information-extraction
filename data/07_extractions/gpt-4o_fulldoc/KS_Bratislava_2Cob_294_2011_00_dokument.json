@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9668,
+    "completion_tokens": 1110,
+    "cost_usd": 0.0353,
+    "latency_seconds": 25.14,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny vo výške 2.102.758,50 Sk (69.798,80 eura) spolu s 13%-ným úrokom z omeškania ročne z titulu zmluvnej pokuty. Sporné bolo uzavretie dodatku č. 1, ktorý menil cenu a platobné podmienky.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava III a vec vrátil na ďalšie konanie.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Porušením zmluvnej povinnosti, a to nevykonaním inštalácie zariadenia okamžite po jeho dodaní a neuvedením zariadenia do prevádzky vznikla žalobcovi škoda, ktorá bola zabezpečená zmluvnou pokutou",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,3% denne",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 0,3% denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 69798.8,
+            "evidence": {
+              "quote": "domáhal zaplatenia istiny vo výške 2.102.758,50 Sk (69.798,80 eura)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Keďže žalobca neuniesol dôkazné bremeno, neoznačil také dôkazy, ktoré by dostatočne a dôveryhodne preukázali, že žalovaný porušil zmluvnú povinnosť zabezpečenú zmluvnou pokutou, súd jeho návrh zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "domáhal zaplatenia istiny vo výške 2.102.758,50 Sk (69.798,80 eura) spolu s 13%-ným úrokom z omeškania ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 27Cb/129-2006-241 zo dňa 26.04.2011 zrušuje a vec vracia súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože žalobca nepreukázal uzavretie dodatku č. 1, ktorý by zakladal nárok na zmluvnú pokutu. Odvolací súd zistil, že súd prvého stupňa nedostatočne zistil skutkový stav a nevyhodnotil dôkazy správne. Vec bola vrátená na ďalšie konanie, aby sa odstránili nedostatky v dokazovaní a posúdila sa dôvodnosť žaloby.",
+          "key_quotes": [
+            {
+              "quote": "Súd zároveň uviedol, že zmluvná pokuta vo výške 0,3% denne je neprimeraná vo vzťahu k zabezpečovanej povinnosti a v prípade splnenia všetkých ostatných predpokladov by žalobcovi zmluvnú pokutu v tejto výške nepriznal a využil moderačné právo podľa § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_294_2011_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/294/2011",
+      "decision_date": "19.02.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1305219662.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

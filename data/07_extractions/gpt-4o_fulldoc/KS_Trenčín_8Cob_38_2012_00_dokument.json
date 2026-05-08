@@ -1,0 +1,309 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7804,
+    "completion_tokens": 2057,
+    "cost_usd": 0.0401,
+    "latency_seconds": 21.88,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ILLE-Papier-Service SK, spol. s r.o. požadoval zaplatenie zmluvnej pokuty za porušenie zmluvnej povinnosti žalovaným, ktorý neodoberal náplne do zapožičaných dávkovačov. Žalobca tiež uplatňoval náhradu škody za obdobie do ukončenia zmluvy.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bola žaloba v časti o zaplatenie sumy 705,29 eur zamietnutá.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný porušil zmluvnú povinnosť tým, že neodoberal náplne do dávkovačov",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "50 % z ceny služby nájomného servisu za obdobie, ktoré by inak zostávalo do skončenia zmluvy",
+          "evidence": {
+            "quote": "zmluvnú pokutu, ktorej výšku pre jej neprimeranosť znížil a titulom uplatneného nároku priznal žalobcovi časť vo výške 500,- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2410.56,
+            "evidence": {
+              "quote": "v čase odstúpenia od zmluvy zostávalo do skončenia zmluvy 27 štvortýždňových servisných cyklov, čo predstavuje výšku škody v sume 2 410,56 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1205.28,
+            "evidence": {
+              "quote": "O nároku žalobcu na zaplatenie 1 205,28 eur v zmysle § 6 ods. 3 VOP uplatneného ako náhrada škody",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 500.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu znížil zo sumy 1 205,28 eur na 500,- eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "návrh v časti o zaplatenie úroku z omeškania vo výške 9,25% ročne zo sumy 89,27 eur od 30.12.2008 do zaplatenia zamieta",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zmluvnú pokutu znížil zo sumy 1 205,28 eur na 500,- eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z dôvodu jej neprimeranosti, pričom prihliadol na hodnotu a význam zabezpečovacej povinnosti. Zmluvná pokuta bola pôvodne stanovená ako 50% z ceny služby za obdobie do skončenia zmluvy. Súd použil moderačné právo podľa § 301 Ob.z. a znížil pokutu na 500 eur, čo považoval za primerané vzhľadom na vzniknutú škodu.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu znížil zo sumy 1 205,28 eur na 500,- eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta je neprimerane vysoká a zmluvné podmienky poskytujú výhody iba dodávateľovi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliadol na hodnotu a význam zabezpečovacej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výška škody v sume 2 410,56 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvnú pokutu znížil zo sumy 1 205,28 eur na 500,- eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný porušil zmluvnú povinnosť tým, že neodoberal náplne do dávkovačov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca chcel dosiahnuť zisk napriek odstúpeniu od zmluvy",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný bol v omeškaní s jej zaplatením takmer dva roky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "zmluvnú pokutu vo výške 5 000,- Sk (165,97 eur)",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 5 000,- Sk (165,97 eur)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 89.27,
+            "evidence": {
+              "quote": "zmluvná pokuta sa vzťahuje k povinnosti žalovaného zaplatiť faktúru vo výške 89,27 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 165.97,
+            "evidence": {
+              "quote": "žalobcu na zaplatenie zmluvnej pokuty pôvodne vo výške 165,97 eur za porušenie zmluvnej povinnosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 165.97,
+            "evidence": {
+              "quote": "súd prvého stupňa mu ju priznal v plnej výške za porušenie zmluvnej povinnosti žalovaným",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "návrh v časti o zaplatenie úroku z omeškania vo výške 9,25% ročne zo sumy 89,27 eur od 30.12.2008 do zaplatenia zamieta",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvého stupňa mu ju priznal v plnej výške za porušenie zmluvnej povinnosti žalovaným",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa priznal žalobcovi zmluvnú pokutu vo výške 165,97 eur za omeškanie žalovaného s úhradou faktúry. Pokuta bola dohodnutá ako jednorazová suma za porušenie zmluvnej povinnosti. Súd považoval výšku pokuty za primeranú vzhľadom na zabezpečovaciu funkciu a hodnotu dlžnej sumy.",
+          "key_quotes": [
+            {
+              "quote": "súd prvého stupňa mu ju priznal v plnej výške za porušenie zmluvnej povinnosti žalovaným",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliadol na hodnotu a význam zabezpečovacej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta sa vzťahuje k povinnosti žalovaného zaplatiť faktúru vo výške 89,27 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný bol v omeškaní s jej zaplatením takmer dva roky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca chcel dosiahnuť zisk napriek odstúpeniu od zmluvy",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.secured_principal",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_38_2012_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/38/2012",
+      "decision_date": "20.03.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3210201818.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

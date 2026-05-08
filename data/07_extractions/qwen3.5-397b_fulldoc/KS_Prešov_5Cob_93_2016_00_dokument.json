@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8881,
+    "completion_tokens": 1946,
+    "cost_usd": 0.008,
+    "latency_seconds": 46.27,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za nevrátenie prenajatých oceľových fliaš podľa čiarových kódov, ktoré žalovaný podľa jeho názoru porušil vrátením iných fliaš. Žalovaný namietal, že fľaše sú veci druhovo určené a počet vrátených fliaš sedel, hoci mali iné čiarové kódy.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobu zamietol ako nedôvodnú, keďže nebolo preukázané porušenie zmluvnej povinnosti vrátiť konkrétne individuálne určené veci."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Keďže porušenie akejkoľvek povinnosti zo strany žalovaného nebolo preukázané, správne považoval nárok žalobcu na zaplatenie zmluvnej pokuty za nedôvodný."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Z toho dôvodu v tomto počte, teda celkom 30 kusov oceľových fliaš si žalobca vyúčtoval voči žalovanému zmluvné pokuty tak, ako boli dojednané v zmysle rámcových zmlúv a všeobecných obchodných podmienok"
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Predmetom sporu je nárok žalobcu na zaplatenie nájomného ZP po odstúpení od zmlúv a úroky z omeškania."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Po odstúpení od zmluvy si žalobca uplatnil zmluvnú pokutu za nevrátenie predmetu nájmu, ktorú vyčíslil podľa článku 3.3 VOP."
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie mal za to, že žalobca v konaní nepreukázal, ktorú konkrétnu povinnosť žalovaný porušil, čo je zákonným predpokladom pre priznanie zmluvnej pokuty."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone práva za šikanózny a žalovaný nárok za nedôvodný"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "správny, zákonný a spravodlivý. Zdôraznil, že žalobca si uplatňuje zaplatenie tak vysokej sumy bez toho, aby mu vznikla čo i len minimálna ujma."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Boli vrátené obaly s iným čiarovým označením, ktoré následne žalobca prenajal inému zákazníkovi. Takýto postup žalovaného nepovažoval súd prvej inštancie za porušenie zmluvných povinností"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone práva za šikanózny"
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "negative"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie mal za to, že žalobca v konaní nepreukázal, ktorú konkrétnu povinnosť žalovaný porušil, čo je zákonným predpokladom pre priznanie zmluvnej pokuty."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd presvedčenie (v súlade so súdom prvej inštancie), že oceľové fľaše majú charakter veci určenej genericky (druhovo)."
+            }
+          ],
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu, pretože dospel k záveru, že predmetom nájmu boli veci druhovo určené (oceľové fľaše), nie individuálne určené konkrétne kusy podľa čiarového kódu. Keďže žalovaný vrátil rovnaký počet fliaš, aké prevzal, nedošlo k porušeniu zmluvnej povinnosti, čo je nevyhnutný predpoklad pre uplatnenie zmluvnej pokuty. Súd navyše označil postup žalobcu pri uplatňovaní práva za šikanózny podľa § 265 Obchodného zákonníka."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Po odstúpení od zmluvy si žalobca uplatnil zmluvnú pokutu za nevrátenie predmetu nájmu, ktorú vyčíslil podľa článku 3.3 VOP."
+          },
+          "type": "ine",
+          "value_raw": "podľa článku 3.3 VOP"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.vyska_skody"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "rate_definition.value_raw",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_93_2016_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/93/2016",
+      "decision_date": "26.04.2018",
+      "ecli": "ECLI:SK:KSPO:2018:8515204257.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

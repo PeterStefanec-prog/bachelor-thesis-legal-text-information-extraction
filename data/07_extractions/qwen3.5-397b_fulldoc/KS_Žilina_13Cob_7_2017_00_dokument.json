@@ -1,0 +1,434 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5970,
+    "completion_tokens": 4362,
+    "cost_usd": 0.0125,
+    "latency_seconds": 48.31,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia pohľadávky vo výške 1.819,93 Eur s príslušenstvom, ktorá pozostávala z ceny za poskytnuté telekomunikačné služby a dohodnutých zmluvných pokút za nedodržanie zmluvných podmienok pri predaji mobilných telefónov. Žalovaný namietal neplatnosť podpisov na zmluvách a nepreukázateľnosť plnenia.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi sumu 1.718,93 Eur s príslušenstvom, čím bola žaloba čiastočne vyhovená a čiastočne zamietnutá.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Dodatok č. A5761158",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Orange San Francisco za kúpnu cenu 59 Eur s dohodnutou zmluvnou pokutou 101 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "101 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Orange San Francisco za kúpnu cenu 59 Eur s dohodnutou zmluvnou pokutou 101 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 59,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Orange San Francisco za kúpnu cenu 59 Eur s dohodnutou zmluvnou pokutou 101 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 101,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Orange San Francisco za kúpnu cenu 59 Eur s dohodnutou zmluvnou pokutou 101 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 101,
+            "evidence": {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúceho z výroku rozsudku",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že žaloba je dôvodná čo do základu aj výšky, keďže žalovaný nepreukázal svoje námietky ohľadom neplatnosti podpisov. Súd akceptoval vykonané dôkazy vrátane výsluchu svedkyne, ktorá potvrdila identifikáciu zákazníka a platnosť úkonov. Zmluvné pokuty boli priznané v plnej dohodnutej výške podľa dodatkov k zmluvám.",
+          "key_quotes": [
+            {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúceho z výroku rozsudku",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "Dodatok č. A6208913",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur s dohodnutou zmluvnou pokutou 661 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "661 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur s dohodnutou zmluvnou pokutou 661 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 29,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur s dohodnutou zmluvnou pokutou 661 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 661,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur s dohodnutou zmluvnou pokutou 661 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 661,
+            "evidence": {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúceho z výroku rozsudku",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd akceptoval nárok na zmluvnú pokutu vo výške 661 Eur ako súčasť celkovej sumy 1.423 Eur. Dôvodom bolo preukázanie existencie zmluvného vzťahu a jeho porušenia nezaplatením faktúr. Súd nezasiahol do výšky pokuty podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "Dodatok č. A6209667",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur pri dohodnutej zmluvnej pokute 661 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "661 Eur",
+          "evidence": {
+            "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur pri dohodnutej zmluvnej pokute 661 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 29,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur pri dohodnutej zmluvnej pokute 661 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 661,
+            "evidence": {
+              "quote": "odpredal žalovanému mobilný telefón značky Apple iPhone 4S 16GB Black za kúpnu cenu 29 Eur pri dohodnutej zmluvnej pokute 661 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 661,
+            "evidence": {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúceho z výroku rozsudku",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Tretia zmluvná pokuta vo výške 661 Eur bola súdom priznaná v plnej výške ako súčasť celkového nároku. Súd vychádzal z platnosti uzavretých dodatkov k zmluve a porušenia povinnosti uhradiť faktúry. Neaplikoval moderáciu sumy.",
+          "key_quotes": [
+            {
+              "quote": "vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.decision",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_3.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_7_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/7/2017",
+      "decision_date": "28.06.2017",
+      "ecli": "ECLI:SK:KSZA:2017:5113242552.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

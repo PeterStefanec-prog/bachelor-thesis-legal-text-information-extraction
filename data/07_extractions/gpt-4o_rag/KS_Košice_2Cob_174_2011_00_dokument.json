@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 7597,
+      "completion_tokens": 713,
+      "cost_usd": 0.0261,
+      "latency_seconds": 7.47,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 7580,
+      "completion_tokens": 854,
+      "cost_usd": 0.0275,
+      "latency_seconds": 10.42,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia 85.140,01 eur s príslušenstvom za vykonané stavebné práce. Žalovaný započítal pohľadávku vo výške 57.124,87 eur na základe vyúčtovanej zmluvnej pokuty za omeškanie s ukončením diela.",
+      "verdict_summary": "Súd potvrdil rozsudok prvého stupňa, ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi 53.338,12 eur s úrokom z omeškania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný vyfakturoval faktúrou č. XXXXXXXXX splatnou 16.11.2010 sumu 30.074,67 eur a faktúrou č. XXXXXXXXX splatnou 16.11.2010 sumu 27.050,20 eur ako zmluvnú pokutu za omeškanie s ukončením diela",
+            "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% denne zo sumy diela uvedenej v zmluve",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie s ukončením diela vo výške 0,05% denne zo sumy diela uvedenej v zmluve",
+            "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 424260.03,
+            "evidence": {
+              "quote": "Jednalo sa o zrealizovanie stavebných prác v hodnote 424.260,03 eur.",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            }
+          },
+          "original_claimed": {
+            "value": 57124.16,
+            "evidence": {
+              "quote": "žalovaný doručil faktúry ohľadom zmluvnej pokuty vo výške 57.124,16 eur",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            }
+          },
+          "final_awarded": {
+            "value": 28562.08,
+            "evidence": {
+              "quote": "V rámci moderačného práva priznal polovicu vyčíslenej zmluvnej pokuty, t.j. 28.562,08 eur.",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "zaviazal žalovaného na zaplatenie úrokov z omeškania vo výške 9% ročne zo sumy 53.338,12 eur od 2.9.2010 do zaplatenia",
+            "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Pri rozhodovaní použil moderačné právo, teda nepriznal zmluvnú pokutu v celej výške ako ju vyčíslil žalovaný.",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa použil moderačné právo podľa § 301 Obchodného zákonníka a znížil zmluvnú pokutu na polovicu, teda na 28.562,08 eur. Dôvodom bolo, že žalobca vynaložil všetko úsilie na včasné dokončenie diela, ale omeškanie bolo spôsobené aj nedostatkom finančných prostriedkov od žalovaného. Súd považoval pôvodnú výšku pokuty za neprimerane vysokú a mohla by viesť k neprimeranému poškodeniu žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Pri rozhodovaní použil moderačné právo, teda nepriznal zmluvnú pokutu v celej výške ako ju vyčíslil žalovaný.",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            },
+            {
+              "quote": "Dospel k záveru, že vypočítaná zmluvná pokuta je neprimerane vysoká a mohla by viesť k neprimeranému poškodeniu žalobcu vo vzťahu k porušenej povinnosti.",
+              "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dospel k záveru, že vypočítaná zmluvná pokuta je neprimerane vysoká a mohla by viesť k neprimeranému poškodeniu žalobcu vo vzťahu k porušenej povinnosti.",
+                "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dospel k záveru, že vypočítaná zmluvná pokuta je neprimerane vysoká a mohla by viesť k neprimeranému poškodeniu žalobcu vo vzťahu k porušenej povinnosti.",
+                "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "bolo preukázané, že žalobca vynaložil všetko úsilie, aby dielo včas dokončil a dôvodom oneskoreného ukončenia bolo aj to, že žalobca nemal finančné prostriedky od žalovaného",
+                "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný nepožadoval zmluvnú pokutu od žalobcu, urobil tak až keď žalobca podal na súd návrh",
+                "chunk_id": "KS_Košice_2Cob_174_2011_00_dokument.pdf_chunk_0"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_174_2011_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/174/2011",
+      "decision_date": "29.03.2012",
+      "ecli": "ECLI:SK:KSKE:2012:7910213305.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

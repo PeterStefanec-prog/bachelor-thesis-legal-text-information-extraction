@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7656,
+    "completion_tokens": 976,
+    "cost_usd": 0.0289,
+    "latency_seconds": 51.09,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Alexander Besse žiadal zaplatenie 15.692 eur s príslušenstvom od žalovaného B.S. s.r.o. na základe zmluvy o poskytovaní prác. Žalovaný započítal pohľadávku vo výške 10.000 eur ako zmluvnú pokutu za porušenie zmluvy.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu, ktorý žalobe vyhovel v plnom rozsahu.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "že v prípade, ak poskytovateľ poruší jeho povinnosti vyplývajúce z tejto zmluvy najmä tým, že začne vykonávať práce pre zmluvného partnera objednávateľa vo vlastnom mene",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,-- eur",
+          "evidence": {
+            "quote": "objednávateľ ho môže sankcionovať čiastkou 10.000,-- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "započítal pohľadávku v celkovej výške 10.000,-- eur titulom porušenia povinnosti podľa ust. čl. VII., bod 7.1 písm. e) zmluvy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd sa v plnom rozsahu stotožňuje so závermi prvoinštančného súdu, že žalovaný neuniesol dôkazné bremeno ohľadne svojho skutkového tvrdenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "spor nastal výlučne ohľadom zmluvnej pokuty, ktorou žalovaný znížil dlžnú sumu na sumu 5.692,-- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "žalovaný nepreukázal existenciu nároku na zaplatenie predmetnej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že žalovaný nepreukázal porušenie zmluvnej povinnosti žalobcom, ktoré by zakladalo nárok na zmluvnú pokutu. Žalovaný nepredložil dôkazy na podporu svojho tvrdenia o porušení zmluvy. Odvolací súd potvrdil tento záver, keďže žalovaný neuniesol dôkazné bremeno.",
+          "key_quotes": [
+            {
+              "quote": "žalovaný nepreukázal existenciu nároku na zaplatenie predmetnej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.associated_interest"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_28_2017_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/28/2017",
+      "decision_date": "25.01.2018",
+      "ecli": "ECLI:SK:KSNR:2018:4315212254.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

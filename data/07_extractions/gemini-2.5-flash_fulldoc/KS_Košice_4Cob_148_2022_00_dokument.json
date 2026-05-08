@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13081,
+    "completion_tokens": 2231,
+    "cost_usd": 0.0387,
+    "latency_seconds": 9.0,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca žiadal zaplatiť sumu 10.627,15 eur s príslušenstvom za združenú dodávku elektriny, pričom žalovaný namietal neoprávnenosť fakturácie sumy 5.339,66 eur, ktorú žalobca označil ako refakturáciu sankčného poplatku za prekročenie maximálnej rezervovanej kapacity, a žalovaný ju považoval za neprimeranú zmluvnú pokutu. Žalovaný tiež namietal zmenu tarify a ťažkú ekonomickú situáciu spôsobenú pandémiou.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu Spišská Nová Ves, ktorý zaviazal žalovaného zaplatiť žalobcovi 10.627,15 eur s 9 % úrokom z omeškania ročne a priznal žalobcovi náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 3021060538 zo dňa 9.7.2021",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "nedodržanie technických podmienok distribúcie 5.339,66 eur. Vyfakturovaná položka vo výške 5.339,66 eur nemá v žiadnom prípade charakter zmluvnej pokuty, ale ide o sumu za nedodržanie technických podmienok distribúcie, a to za prekročenie maximálnej rezervovanej kapacity (5.339,66 eur).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "refakturácia sankčného poplatku za prekročenie maximálnej rezervovanej kapacity",
+          "evidence": {
+            "quote": "Predmetný nárok žalobcu 5.339,66 eur uplatnený v tomto konaní nie je zmluvnou pokutou, ale refakturáciou sankčného poplatku za prekročenie maximálnej rezervovanej kapacity od distribučnej spoločnosti Stredoslovenská distribučná a.s.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5339.66,
+            "evidence": {
+              "quote": "Žalovaný nesúhlasil ani s uplatneným nárokom žalobcu na zmluvnú pokutu vo výške 5.339,66 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5339.66,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto dospel k záveru, že žalobca preukázal svoj uplatnený nárok čo do rozsahu a výšky",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "Žalovaný je povinný zaplatiť žalobcovi 10.627,15 eur s 9 % úrokom z omeškania ročne zo sumy 10.627,15 eur od 27.7.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto žalobe vyhovel v celom rozsahu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že suma 5.339,66 eur nie je zmluvnou pokutou, ktorú by mohol moderovať, ale ide o refakturáciu sankčného poplatku za prekročenie maximálnej rezervovanej kapacity od distribučnej spoločnosti. Žalobca tento poplatok uhradil Stredoslovenskej distribučnej a.s. a následne ho refakturoval žalovanému. Súd uznal, že žalovaný mal vedomosť o rezervovanej kapacite a následkoch jej prekročenia, a sám zmaril možnosť úpravy kapacity tým, že nezaslal žiadosť o pridelenie režimu fakturácie.",
+          "key_quotes": [
+            {
+              "quote": "Súd z vykonaného dokazovania mal preukázané, že medzi stranami sporu nedošlo k dojednaniu zmluvnej pokuty. Predmetný nárok žalobcu 5.339,66 eur uplatnený v tomto konaní nie je zmluvnou pokutou, ale refakturáciou sankčného poplatku za prekročenie maximálnej rezervovanej kapacity od distribučnej spoločnosti Stredoslovenská distribučná a.s.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný mal podľa rozhodnutia Úradu regulácie sieťových odvetví z 2.12.2019 povinnosť zaslať do 15.12. predchádzajúceho kalendárneho roka žiadosť o pridelenie režimu fakturácie rezervovanej kapacity, čo žalovaný nevyužil, čím sám zmaril možnosť navýšenia rezervovanej kapacity, resp. jej úpravy tak, aby nedošlo k jej prekročeniu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca konal v rozpore s dobrými mravmi a poctivým obchodným stykom a žalovaný ako subjekt nepodnikajúci v energetike nemohol predpokladať, že žalobca nebude mať vedomosť o predmetnom Rozhodnutí Úradu pre reguláciu sieťových odvetví.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný mal podľa rozhodnutia Úradu regulácie sieťových odvetví z 2.12.2019 povinnosť zaslať do 15.12. predchádzajúceho kalendárneho roka žiadosť o pridelenie režimu fakturácie rezervovanej kapacity, čo žalovaný nevyužil, čím sám zmaril možnosť navýšenia rezervovanej kapacity, resp. jej úpravy tak, aby nedošlo k jej prekročeniu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca ako subjekt podnikajúci s energiou si nesplnil svoju prevenčnú povinnosť voči žalovanému a preto nemá žalobca nárok na \"nezmluvnú pokutu\" za odber nezmeneného množstva energie po preparametrizovaní.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_148_2022_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/148/2022",
+      "decision_date": "25.01.2023",
+      "ecli": "ECLI:SK:KSKE:2023:7621204916.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

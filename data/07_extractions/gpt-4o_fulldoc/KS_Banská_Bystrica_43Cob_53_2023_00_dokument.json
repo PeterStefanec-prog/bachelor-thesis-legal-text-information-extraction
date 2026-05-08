@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18319,
+    "completion_tokens": 1378,
+    "cost_usd": 0.0596,
+    "latency_seconds": 33.15,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca DELTA-TRUCK s. r. o. sa domáhal zaplatenia sumy 14.567,20 Eur s príslušenstvom od žalovaného B.B.T.I.R., s.r.o. na základe zmluvy o nájme dopravného prostriedku. Žalobca tvrdil, že žalovaný neuhradil faktúry za nájomné a zmluvné pokuty po predčasnom ukončení zmluvy.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 7.600,- Eur.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "22PI0552",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Zmluvné pokuty boli dohodnuté vo výške zodpovedajúcej 6-im nájomným pre prípad, že z dôvodov na strane žalovaného dôjde k ukončeniu nájomného vzťahu skôr, ako bolo dohodnuté",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "11.400,- Eur (z toho neuhradená časť 7.600 Eur)",
+          "evidence": {
+            "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur (z toho neuhradená časť 2.160,- Eur) splatná 15.07.2022 a č. 22PI0552",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 7600,
+            "evidence": {
+              "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur (z toho neuhradená časť 2.160,- Eur) splatná 15.07.2022 a č. 22PI0552",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 7600,
+            "evidence": {
+              "quote": "súd prvej inštancie vyhodnotiť, že si žalobca dôvodne od žalovaného uplatnil zvyšnú časť zmluvnej pokuty vo výške 7.600,- Eur (výrok III.)",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur (z toho neuhradená časť 2.160,- Eur) splatná 15.07.2022 a č. 22PI0552",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie vyhodnotiť, že si žalobca dôvodne od žalovaného uplatnil zvyšnú časť zmluvnej pokuty vo výške 7.600,- Eur (výrok III.)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta zabezpečovala dodržanie zmluvy a predstavovala 16,67 % z celkovej výšky nájomného, čo nie je neprimerané. Žalobca utrpel škodu vyššiu než zmluvná pokuta, preto nebola moderovaná. Odvolací súd potvrdil tento záver.",
+          "key_quotes": [
+            {
+              "quote": "k právu súdu moderovať zmluvnú pokutu, pričom dospel k záveru, že zmluvná pokuta zabezpečovala dodržanie trvania zmluvy a v konkrétnych okolnostiach súdenej veci zmluvná pokuta predstavovala 16,67% z celkovej výšky nájomného, čo nie je možné považovať za",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "nájomného, čo nie je v žiadnom prípade možné považovať za neprimerané a podľa názoru súdu prvej inštancie ani v rozpore so zásadami poctivého obchodného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "že si zmluvnou pokutou nezabezpečil prípadný nedoplatok na nájomnom, ale dodržanie zmluvy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "škoda, ktorú žalobca utrpel v dôsledku porušenia povinnosti žalovaného je vyššia, než požadovaná zmluvná pokuta",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta predstavovala 16,67 % z celkovej výšky nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_53_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/53/2023",
+      "decision_date": "07.08.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6122386080.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18396,
+    "completion_tokens": 349,
+    "cost_usd": 0.008,
+    "latency_seconds": 6.4,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny a príslušenstva z titulu ručiteľského záväzku žalovaného, ktorý zabezpečoval záväzok dlžníka CL TREND s.r.o. vyplývajúci zo zmluvy o úvere. Predmetom sporu bola výška istiny, spôsob započítania čiastočných platieb a výška úrokov z omeškania, pričom žalovaný namietal neplatnosť úrokovej sadzby pre rozpor s dobrými mravmi.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný povinný zaplatiť žalobcovi istinu vo výške 67.506,13 eura spolu s úrokmi z omeškania. Žaloba bola v zostávajúcej časti zamietnutá.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [],
+    "quality_control": {
+      "flags": [
+        "No contractual penalty (zmluvná pokuta) found in the text. The document discusses 'úrok z omeškania' (late payment interest) which is a distinct legal instrument from contractual penalty under Slovak law.",
+        "NO_PENALTIES_EXTRACTED"
+      ],
+      "missing_fields": [
+        "contractual_penalties"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_22_2018_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/22/2018",
+      "decision_date": "29.11.2018",
+      "ecli": "ECLI:SK:KSNR:2018:1110227885.8",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8770,
+    "completion_tokens": 2194,
+    "cost_usd": 0.0086,
+    "latency_seconds": 27.58,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny diela vo výške 1.185,02 EUR a zmluvnej pokuty za oneskorené zaplatenie prvej časti odmeny podľa zmluvy o dielo. Žalovaný namietal neplatnosť zmluvy a neprimeranosť výšky zmluvnej pokuty.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvého stupňa vo veci samej, ktorým bola priznaná zmluvná pokuta vo výške 0,05 % denne, a zmenil rozhodnutie o náhrade trov konania."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd priznal žalobcovi zmluvnú pokutu len vo výške 0,05 % na miesto požadovanej 0,1 % denne a preto i vo zvyšku návrh zamietol."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žiadal zaviazať žalovaného k povinnosti zaplatiť mu zmluvnú pokutu dojednanú v bode 6.1. zmluvy vo výške 0,1 % z dlžnej sumy denne od 7.2.2008."
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "0,1 % denný úrok zo sumy 1.185,02 eur predstavuje ročne 432,53 eur."
+            },
+            "value": 1185.02
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "súd uložil žalovanému povinnosť platiť i úroky z omeškania v tejto zákonnej výške."
+          },
+          "rate_value": "14,25 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Dohodli si ju vo výške 0,1 % z dlžnej sumy za každý deň omeškania so zaplatením čo i len časti ktorejkoľvek platby odmeny."
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "za obdobie roka 2008. Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú pokutu z dôvodu, že v tomto konkrétnom prípade chcel takto zabrániť celkom neadekvátnym majetkovým"
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Z vecného hľadiska súd pri aplikácii moderačného práva posudzoval primeranosť zmluvnej pokuty vzhľadom na kritérium hodnoty zabezpečenej povinnosti a význam zabezpečenej povinnosti"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "žalovaný nezískal žiadne finančné prostriedky z eurofondov a práve za tým účelom si dal vyhotoviť dielo žalobcom"
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd zvážil všetky okolnosti tohto prípadu a ním prispôsobil svoje rozhodnutie v časti výšky zmluvnej pokuty tak, že ju priznal žalobcovi v sume 0,05 % denne z istiny, t.j. znížil ju na 1/2-icu."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "odporca mal vedomosť, že koncom apríla 2008 bude odcestovaný a mal možnosť si zabezpečiť (niekoho splnomocniť), aby ho zastupoval pri prevzatí diela"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta a úrok z omeškania sú svojou podstatou a charakterom odlišné právne inštitúty, pričom zákon ich súčasné uplatnenie v prípade porušenia zmluvných platobných povinností nevylučuje"
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "za obdobie roka 2008. Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú pokutu z dôvodu, že v tomto konkrétnom prípade chcel takto zabrániť celkom neadekvátnym majetkovým"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd zvážil všetky okolnosti tohto prípadu a ním prispôsobil svoje rozhodnutie v časti výšky zmluvnej pokuty tak, že ju priznal žalobcovi v sume 0,05 % denne z istiny, t.j. znížil ju na 1/2-icu."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvého stupňa využil moderačné právo podľa § 301 Obchodného zákonníka na zníženie zmluvnej pokuty z dôvodu jej neprimeranej výšky vo vzťahu k majetkovej ujme žalobcu. Pôvodne dohodnutá sadzba 0,1 % denne by predstavovala ročne 432,53 EUR, čo súd považoval za neprimeraný zisk, keďže žalovaný nezískal žiadne prostriedky z eurofondov. Súd prihliadal na to, že pokuta sa viazala len na nesplnenie platobnej povinnosti jednej strany a že žalovaný mal vedomosť o svojom odchode do zahraničia. Výška pokuty bola znížená na polovicu, teda na 0,05 % denne z istiny."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Dohodli si ju vo výške 0,1 % z dlžnej sumy za každý deň omeškania so zaplatením čo i len časti ktorejkoľvek platby odmeny."
+          },
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej sumy denne"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_41_2011_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/41/2011",
+      "decision_date": "25.10.2011",
+      "ecli": "ECLI:SK:KSTT:2011:2508210924.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

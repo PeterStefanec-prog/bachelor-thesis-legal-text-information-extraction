@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12069,
+    "completion_tokens": 1226,
+    "cost_usd": 0.0424,
+    "latency_seconds": 28.85,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Športové stavby, s.r.o. požadoval od žalovaného Obec Rohožník zaplatenie sumy 39.553,56 eur s príslušenstvom za vykonanie diela - futbalového ihriska. Žalovaný nezaplatil celú cenu diela, čo viedlo k uplatneniu zmluvnej pokuty a úroku z omeškania.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Malacky, ktorý zaviazal žalovaného zaplatiť žalobcovi požadované sumy vrátane zmluvnej pokuty.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvná pokuta bola medzi účastníkmi dohodnutá v písomnej forme, bola dojednaná za konkrétne porušenie zmluvnej povinnosti, ktorým je nezaplatenie ceny diela alebo jej časti v lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne zo sumy 79.107,11 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05 % denne zo sumy 79.107,11 eur od 20.12.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 79107.11,
+            "evidence": {
+              "quote": "v sume 79.107,11 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Malacky č. k. 10 Cb/3/2013 - 374 zo dňa 29.04.2015 v napadnutej časti potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 9 % ročne zo sumy 39.553,56 eur od 20.12.2011 do 26.03.2012",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Malacky č. k. 10 Cb/3/2013 - 374 zo dňa 29.04.2015 v napadnutej časti potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta bola dohodnutá v písomnej forme a za konkrétne porušenie povinnosti. Výška pokuty bola považovaná za primeranú, keďže predstavuje približne dvojnásobok úroku z omeškania. Odvolací súd potvrdil, že výška pokuty je primeraná vzhľadom na význam a hodnotu zabezpečovanej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta bola medzi účastníkmi dohodnutá v písomnej forme, bola dojednaná za konkrétne porušenie zmluvnej povinnosti, ktorým je nezaplatenie ceny diela alebo jej časti v lehote splatnosti",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zmluvou určená peňažná suma, ktorú je dlžník povinný zaplatiť veriteľovi alebo veriteľ dlžníkovi, ak dôjde k porušeniu povinností, ktoré na seba zmluvou prevzali",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd považoval zmluvnú pokutu za primeranú zabezpečovanej povinnosti, ktorou je cena diela, táto predstavuje v ročnom prepočte 18,25 % ročne, teda približne dvojnásobok sadzby úroku z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_216_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/216/2015",
+      "decision_date": "03.11.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1612203556.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12095,
+    "completion_tokens": 1185,
+    "cost_usd": 0.0421,
+    "latency_seconds": 21.42,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca SAPELI SK s.r.o. sa domáhal zaplatenia sumy 31.075,80 EUR ako zmluvnej pokuty za porušenie zmluvy o nájme nebytových priestorov zo strany žalovaného P13 Retail park s. r. o. Žalovaný uzatvoril zmluvu s tretím subjektom, ktorý prevádzkoval rovnakú činnosť ako žalobca, čo bolo v rozpore s dohodou v zmluve.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý priznal žalobcovi nárok na zmluvnú pokutu v plnej výške.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca vyzval žalovaného prípisom zo dňa 12.5.2016 na zaplatenie zmluvnej pokuty v celkovej výške 31.075,80 EUR, a to v lehote 14 dní plynúcej dňom doručenia výzvy žalovaného (t.j. od 16.5.2016).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "šesťmesačného nájomného",
+          "evidence": {
+            "quote": "podľa ktorého ak prenajímateľ poruší svoju povinnosť uvedenú v tomto bode zmluvy, vzniká nájomcovi právo uplatniť si voči prenajímateľovi nárok na zmluvnú pokutu vo výške šesťmesačného nájomného.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 31075.8,
+            "evidence": {
+              "quote": "žalobca vyzval žalovaného prípisom zo dňa 12.5.2016 na zaplatenie zmluvnej pokuty v celkovej výške 31.075,80 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 31075.8,
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobe vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročným úrokom z omeškania",
+          "evidence": {
+            "quote": "istinu 31.075,80 EUR spolu s 9 % ročným úrokom z omeškania od 31.5.2016 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobe vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil skutkový stav podľa zmluvy o nájme nebytových priestorov a príslušných právnych predpisov. Zistil, že žalovaný porušil zmluvu tým, že prenajal priestory subjektu, ktorý prevádzkoval rovnakú činnosť ako žalobca. Výška zmluvnej pokuty bola vypočítaná ako šesťnásobok mesačného nájmu. Súd nepovažoval pokutu za neprimerane vysokú, keďže porušenie zmluvy mohlo mať negatívny dopad na podnikanie žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie žalobe vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "ide o vážne porušenie zmluvy, ktoré mohlo mať za následok zníženie predaja interiérových dverí a zárubní na strane žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 31.075,80 EUR k obratu 13.630,65 EUR",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný sa dostal podľa názoru žalobcu do omeškania s plnením zmluvnej pokuty dňom 31.5.2016.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_122_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/122/2018",
+      "decision_date": "24.10.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1216210972.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

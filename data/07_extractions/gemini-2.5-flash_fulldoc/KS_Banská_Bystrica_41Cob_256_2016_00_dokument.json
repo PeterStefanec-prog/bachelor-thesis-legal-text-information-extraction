@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18627,
+    "completion_tokens": 2773,
+    "cost_usd": 0.051,
+    "latency_seconds": 10.87,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil proti žalovanému právo na zaplatenie zmluvnej pokuty vo výške 297 458 EUR pre porušenie zmluvných povinností vyplývajúcich zo Zmluvy o produkcii a predaji č. 3A/2011, konkrétne nedodanie dohodnutého množstva repky erukovanej. Žalovaný namietal neplatnosť zmluvy, nemožnosť plnenia z dôvodu vyššej moci a neprimeranosť zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie tak, že žalobu žalobcu na zaplatenie 48 780,31 Eur so súvisiacim úrokom z omeškania zamietol a vo zvyšnej zamietajúcej časti rozsudok potvrdil. Žalovaný má nárok na náhradu trov konania v rozsahu 100 %.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ako zaplatenie zmluvnej pokuty na tom skutkovom základe, že medzi stranami bola uzatvorená Zmluva o produkcii a predaji č. 3A/2011, na základe ktorej bol predávajúci, t.j. žalovaný povinný v roku 2012-2013 osiať na území SR minimálne 1000 ha odrody repky olejnej pod názvom P. U. a dodať kupujúcemu produkciu celej osevnej plochy repky erukovej v objeme min. 3000 ton",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "100,-Eur za každú nedodanú tonu predmetu plnenia",
+          "evidence": {
+            "quote": "Žalobca uviedol, že strany si dohodli zmluvnú pokutu vo výške 100,-Eur za každú nedodanú tonu predmetu plnenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 297458.0,
+            "evidence": {
+              "quote": "Žalobca si žalobou doručenou na Okresný súd vo Zvolene dňa 27.9.2013 uplatnil proti žalovanému právo na zaplatenie 297.458,-Eur s príslušenstvom, ako zaplatenie zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": "8,25 % ročne",
+          "evidence": {
+            "quote": "Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne znížil zmluvnú pokutu z 97 500 EUR na 48 780,31 EUR s odôvodnením, že je neprimerane vysoká a znížil ju do výšky škody, ktorá podľa jeho názoru vznikla žalobcovi. Odvolací súd však zistil, že súd prvej inštancie nesprávne vyhodnotil dôkazy týkajúce sa povinnosti žalobcu dodať osivo a tiež nesprávne posúdil námietku vyššej moci zo strany žalovaného. Odvolací súd dospel k záveru, že žalovaný neporušil povinnosť dodať repku v roku 2012 a v roku 2013 bola jeho povinnosť znížená z dôvodu vyššej moci, a preto žalobu v celej časti zamietol.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie však využil svoje moderačné právo podľa § 301 Obchodného zákonníka, pretože vyhodnotil zmluvnú pokutu ako neprimerane vysokú a znížil ju na čiastku 48.780,31 Eur, t.j. do výšky škody, ktorá podľa názoru súdu prvej inštancie vznikla žalobcovi.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rozsudok Okresného súdu Zvolen, č.k. 8Cb/22/2013-583 zo dňa 13. apríla 2016 vo výroku, ktorým súd zaviazal žalovaného zaplatiť žalobcovi 48.780,31 Eur s spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 48.780,31 Eur od 21.2.2014 do zaplatenia mení tak, že žalobu žalobcu v tejto časti zamieta.",
+              "chunk_id": "verdict"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Mal tiež za to, že žalobca koná v rozpore so zásadami poctivého obchodného styku a chce zarobiť na neopodstatnených, neúmerne vysokých zmluvných pokutách, ktorých zaplatením by sa žalovaný dostal do existenčných problémov, čo by viedlo až ku konkurznému konaniu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca tiež tvrdí, že nemožno prijať ani to, že by priznanie zmluvnej pokuty viedlo k celkom neodôvodnenému majetkovému prospechu žalobcu a vo vzťahu k žalovanému by bolo neúmerne prísnou a bezdôvodnou sankciou, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie však využil svoje moderačné právo podľa § 301 Obchodného zákonníka, pretože vyhodnotil zmluvnú pokutu ako neprimerane vysokú a znížil ju na čiastku 48.780,31 Eur, t.j. do výšky škody, ktorá podľa názoru súdu prvej inštancie vznikla žalobcovi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný tiež zdôraznil, že v konaní opakovane namietal neprimeranú výšku zmluvnej pokuty k zabezpečovanému záväzku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podľa názoru súdu prvej inštancie mal podľa zmluvy povinnosť dodať osivo žalobca, čo si však nesplnil, resp. splnil len v minimálnom množstve, lebo dodal v poslednom možnom termíne 12 vriec osiva z dojednaných aspoň 28 vriec",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_256_2016_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/256/2016",
+      "decision_date": "29.11.2017",
+      "ecli": "ECLI:SK:KSBB:2017:6713216434.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

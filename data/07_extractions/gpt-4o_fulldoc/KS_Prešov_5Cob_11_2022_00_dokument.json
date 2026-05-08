@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11275,
+    "completion_tokens": 1160,
+    "cost_usd": 0.0398,
+    "latency_seconds": 25.92,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000,- eur, pretože žalovaný porušil zákaz konkurencie zo zmluvy o poskytovaní služieb tým, že nadviazal spoluprácu s obchodným partnerom žalobcu po ukončení zmluvného vzťahu.",
+      "verdict_summary": "Súd potvrdil rozsudok prvej inštancie, ktorý znížil zmluvnú pokutu na 5.000,- eur a zamietol žalobu v prevyšujúcej časti.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný porušil svoje povinnosti vyplývajúce mu zo zmluvy o poskytovaní služieb, keďže po ukončení zmluvného vzťahu v rozpore so zmluvou o poskytovaní služieb nadviazal spoluprácu s jeho obchodným partnerom",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,- eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10.000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 10.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5000,
+            "evidence": {
+              "quote": "priznal žalobcovi sumu 5.000,- eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zistil, že zmluvná pokuta vo výške 10.000,- eur je neprimerane vysoká, pretože predstavuje viac ako 50 % úhrad poskytnutých žalovanému. Súd znížil pokutu na 5.000,- eur podľa § 301 Obchodného zákonníka, čo považoval za primerané. Zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného mohol ohroziť podnikanie žalobcu. Súd zohľadnil aj to, že konkurenčná doložka neobmedzovala žalovaného viac, než bolo potrebné na ochranu záujmov žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný bezprostredne po ukončení spolupráce so žalobcom nadviazal spoluprácu s obchodnou spoločnosťou C. W.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_11_2022_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/11/2022",
+      "decision_date": "21.06.2022",
+      "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

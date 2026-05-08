@@ -1,0 +1,309 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14110,
+    "completion_tokens": 1989,
+    "cost_usd": 0.0552,
+    "latency_seconds": 34.26,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Claims Collection, s.r.o. si uplatnil nárok na zaplatenie pohľadávok voči žalovanému ZOLCO s.r.o. na základe zmluvy o dielo, ktorú uzavrel žalovaný s C. D. - MALF. Žalobca požadoval zaplatenie istiny a zmluvnej pokuty za omeškanie s úhradou faktúr.",
+      "verdict_summary": "Krajský súd v Košiciach potvrdil rozsudok Okresného súdu Michalovce, ktorým bol žalobcovi priznaný nárok na zmluvnú pokutu a úroky z omeškania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu 2 % denne zo sumy 439,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "2 % denne zo sumy 439,- eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu 2 % denne zo sumy 439,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 439,
+            "evidence": {
+              "quote": "istinu 439,- eur s úrokom z omeškania 9 % ročne zo sumy 439,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "istinu 439,- eur s úrokom z omeškania 9 % ročne zo sumy 439,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta je primeraná, pretože bola dohodnutá medzi stranami a zabezpečuje hlavný záväzok zo zmluvy. Súd neaplikoval moderačné právo podľa § 301 Obchodného zákonníka, pretože výška pokuty je výsledkom dlhodobého porušovania povinnosti žalovaným. Odvolací súd potvrdil tento záver a považoval zmluvnú pokutu za primeranú vzhľadom na dohodnutú sadzbu a dlhodobé porušovanie povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "súd prvej inštancie zmluvnú pokutu za primeranú, pričom vychádzal aj z rozhodnutí Najvyššieho súdu SR",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Hodnota zabezpečovanej povinnosti 2.576,- EUR v súhrne je v zjavnom nepomere k dohodnutej zmluvnej pokute",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty v predmetnej veci je výsledkom dlhodobého porušovania zabezpečenej povinnosti zo strany žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu 2 % denne zo sumy 2.137,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "2 % denne zo sumy 2.137,- eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu 2 % denne zo sumy 2.137,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2137,
+            "evidence": {
+              "quote": "istinu 2.137,- eur s úrokom z omeškania 9 % ročne zo sumy 2.137,eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "istinu 2.137,- eur s úrokom z omeškania 9 % ročne zo sumy 2.137,eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta je primeraná, pretože bola dohodnutá medzi stranami a zabezpečuje hlavný záväzok zo zmluvy. Súd neaplikoval moderačné právo podľa § 301 Obchodného zákonníka, pretože výška pokuty je výsledkom dlhodobého porušovania povinnosti žalovaným. Odvolací súd potvrdil tento záver a považoval zmluvnú pokutu za primeranú vzhľadom na dohodnutú sadzbu a dlhodobé porušovanie povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "súd prvej inštancie zmluvnú pokutu za primeranú, pričom vychádzal aj z rozhodnutí Najvyššieho súdu SR",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Hodnota zabezpečovanej povinnosti 2.576,- EUR v súhrne je v zjavnom nepomere k dohodnutej zmluvnej pokute",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty v predmetnej veci je výsledkom dlhodobého porušovania zabezpečenej povinnosti zo strany žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.original_claimed",
+        "contractual_penalties[1].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_219_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/219/2023",
+      "decision_date": "31.07.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6122327846.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -81,7 +81,7 @@ IMPORTANT NOTES ON FACTORS:
 - pomer_k_istine = pomer pokuty k istine / celkovej cene zmluvy
 - spravanie_dlznika = miera zavinenia, správanie dlžníka
 - kumulacia_s_urokom = kumulácia pokuty s úrokom z omeškania
-- spravanie_veritela = pasivita veriteľa — či veriteľ nečinne čakal kým pokuta narastie namiesto toho, aby vymáhal plnenie alebo uplatnil právo skôr
+- spravanie_veritela = pasivita veriteľa - či veriteľ nečinne čakal kým pokuta narastie namiesto toho, aby vymáhal plnenie alebo uplatnil právo skôr
 
 NOTES ON DECISION:
 - awarded_full = court awarded the full penalty amount (no reduction)
@@ -91,4 +91,4 @@ NOTES ON DECISION:
 - dismissal_reason is ONLY used when decision = dismissed. Otherwise set to null.
 
 IMPORTANT NOTE ON DECISION EVIDENCE:
-The verdict section is a formal legal text written as one long sentence. Do NOT try to summarize it as your evidence quote — that would not be a verbatim substring. Instead, for the decision evidence, quote from the REASONING CHUNKS where the court explains its decision in simpler terms (e.g. "Súd prvej inštancie žalobu zamietol" or "odvolací súd rozsudok potvrdil" or "znížil zmluvnú pokutu na sumu..."). These chunks almost always contain a sentence that states the outcome more clearly than the formal verdict does. Only cite from the verdict if you can find an exact substring there.
+The verdict section is a formal legal text written as one long sentence. Do NOT try to summarize it as your evidence quote - that would not be a verbatim substring. Instead, for the decision evidence, quote from the REASONING CHUNKS where the court explains its decision in simpler terms (e.g. "Súd prvej inštancie žalobu zamietol" or "odvolací súd rozsudok potvrdil" or "znížil zmluvnú pokutu na sumu..."). These chunks almost always contain a sentence that states the outcome more clearly than the formal verdict does. Only cite from the verdict if you can find an exact substring there.

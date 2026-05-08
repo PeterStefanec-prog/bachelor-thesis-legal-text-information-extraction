@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10648,
+    "completion_tokens": 2098,
+    "cost_usd": 0.0091,
+    "latency_seconds": 21.06,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za oneskorené dodanie tovaru (dubové lisy) podľa kúpnej zmluvy, ktorú žalovaný nedodal v dohodnutom množstve. Prvostupňový súd žalobu zamietol s odôvodnením, že uplatnenie pokuty je v rozpore s dobrými mravmi, keďže žalobca dlhodobo nevyzýval na plnenie a nechal narásť pokutu na neprimeranú sumu.",
+      "verdict_summary": "Krajský súd zrušil rozsudok okresného súdu a vrátil vec na ďalšie konanie, pretože prvostupňový súd nedostatočne odôvodnil svoj záver o rozpore s dobrými mravmi a nevykonal potrebné dokazovanie o primeranosti pokuty.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca si uplatňuje právo v súvislosti so zmluvnou pokutou, ktorá bola dojednaná pre prípad omeškania žalovaného s dodaním tovaru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "1 % z ceny tovaru za každý deň omeškania s dodávkou tovaru",
+          "evidence": {
+            "quote": "kupujúci má právo účtovať predávajúcemu zmluvnú pokutu vo výške 1 % z ceny tovaru za každý deň omeškania s dodávkou tovaru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 34634.12,
+            "evidence": {
+              "quote": "Žalobca si pôvodne uplatnil právo na zaplatenie zmluvnej pokuty za obdobie od 4.10.2008 do 3.10.2011, teda za 1460 dní omeškania, čo predstavuje sumu 34.634,12 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rozsudok Okresného súdu Lučenec č.k. 13 Cb/110/2012-81 zo dňa 21.3.2013 v napadnutej časti výroku, ktorým okresný súd žalobu o zaplatenie 24.860,66 Eur s príslušenstvom zamietol zrušuje a vec vracia okresnému súdu na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd napadnutý rozsudok zrušil a vec vrátil okresnému súdu na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd konštatoval, že prvostupňový súd nesprávne aplikoval § 265 Obchodného zákonníka, keďže zo zmluvy ani zákona nevyplýva povinnosť veriteľa vyzývať dlžníka na plnenie. Súd poukázal na to, že jednostrannosť zmluvnej pokuty sama o sebe nie je v rozpore s dobrými mravmi a že skutočnosť, že pokuta časom narástla, neznamená automaticky zneužitie práva. Vec bola vrátená na doplnenie dokazovania a posúdenie primeranosti pokuty podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Skutočnosť, že žalobca na splnenie zmluvných povinností žalovaného nevyzval a nedomáhal sa plnenia, nemôže žalovaný využívať vo svoj prospech s cieľom zbaviť sa zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Priznanie zmluvnej pokuty mnohonásobne prevyšujúcej právo, ktoré zabezpečuje, by viedlo k celkom neodôvodnenému majetkovému prospechu oprávneného",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Sama skutočnosť, že strany dojednali zmluvnú pokutu pre prípad porušenia zmluvnej povinnosti iba jednou zmluvnou stranou neznamená, že táto dohoda odporuje zásadám poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta plní okrem zabezpečovacej funkcie aj funkciu paušalizovanej náhrady škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Podľa § 544 ods. 1 Občianskeho zákonníka je účastník, ktorý porušil povinnosť sankcionovanou zmluvnou pokutou, povinný túto pokutu zaplatiť, i keď oprávnenému škoda nevznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nechal plynúť lehotu až do navýšenia zmluvnej pokuty výška ktorej niekoľko násobne prevyšuje hodnotu samotného plnenie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný napriek tomu na list z 1.8.2012 nereagoval a ani sa nepokúsil splniť svoju záväzkovú povinnosť a dodať žalobcovi doteraz nedodané množstvo tovaru.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluva, ani zákon žalobcovi neukladá povinnosť domáhať sa splnenia záväzkovej povinnosti zo strany žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_154_2013_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/154/2013",
+      "decision_date": "30.12.2013",
+      "ecli": "ECLI:SK:KSBB:2013:6612216782.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

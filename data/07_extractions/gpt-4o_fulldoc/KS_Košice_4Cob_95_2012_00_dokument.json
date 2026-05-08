@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13041,
+    "completion_tokens": 1262,
+    "cost_usd": 0.0452,
+    "latency_seconds": 27.05,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Q. stavebné montáže, spol. s r. o., požadoval od žalovaného E. spoločnosť s ručením obmedzeným Q. zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry za dielo. Žalobca tvrdil, že zmluvná pokuta bola dohodnutá vo výške X,X% denne z dlžnej sumy.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý znížil zmluvnú pokutu na X.XXX,XX eura a zamietol žalobu v prevyšujúcej časti.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak objednávateľ nevykoná úhradu ani v lehote nasledujúcich XX dní, zhotoviteľ môže požadovať zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "X,X% denne z dlžnej sumy",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške X,X% z nezaplatenej zvyšnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 1000.0,
+            "evidence": {
+              "quote": "zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške X.XXX,XX eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "X,XX% denne",
+          "evidence": {
+            "quote": "úroku z omeškania vo výške X,XX% z nezaplatenej zvyšnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvého stupňa v nadväznosti na uplatnený úrok z omeškania vo výške XX,XX% považoval dojednanú zmluvnú pokutu X,X% denne z dlžnej sumy za neprimeranú a zákonu odporujúcu, preto zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške X.XXX,XX eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že zmluvná pokuta vo výške X,X% denne je neprimeraná vzhľadom na úrok z omeškania a hodnotu zabezpečovanej povinnosti. Preto znížil zmluvnú pokutu na X.XXX,XX eura, čo predstavuje jednu štvrtinu z uplatneného nároku. Odvolací súd potvrdil tento rozsudok, keďže dojednaná pokuta výrazne prevyšovala úroky z úverov v čase uzavretia zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "dohoda o zmluvnej pokute vo výške X,X% denne z dlžnej sumy, čo predstavuje XX% úrok ročne, je neprimeraná už svojou samotnou výškou",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohoda o zmluvnej pokute vo výške X,X% denne z dlžnej sumy, čo predstavuje XX% úrok ročne, je neprimeraná už svojou samotnou výškou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zabezpečovacím inštitútom záväzkového práva, ktorá na základe dohody strán predstavuje určité peňažné plnenie pre prípad porušenia zabezpečenej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "škoda žalobcu už bola krytá úrokmi z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Uplatnená zmluvná pokuta XX.XXX,XX eura (XXX.XXX,XX Sk) dosahuje skoro výšku zabezpečovanej povinnosti (XX%), čo je neprimeraná suma",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dojednaná pre rovnaké porušenie zmluvnej povinnosti žalovaným, t. j. pre omeškanie so splnením peňažného záväzku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_final_awarded_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[0].amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_95_2012_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/95/2012",
+      "decision_date": "27.02.2013",
+      "ecli": "ECLI:SK:KSKE:2013:7209209563.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

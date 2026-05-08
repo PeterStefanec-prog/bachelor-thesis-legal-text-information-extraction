@@ -1,0 +1,567 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6598,
+    "completion_tokens": 6660,
+    "cost_usd": 0.0748,
+    "latency_seconds": 23.67,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 12.973,38 eur s príslušenstvom, ktorá zahŕňala viacero zmluvných pokút a náhradu škody (ušlý zisk) podľa mandátnej zmluvy, z dôvodu porušenia zmluvných povinností žalovanou, najmä odpojenia videohry a umiestnenia hracích prístrojov iného prevádzkovateľa. Žalovaná namietala neplatnosť zmluvy a porušenie dobrých mravov.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa v napadnutej časti, ktorým bola žalovanej uložená povinnosť zaplatiť žalobcovi 5.673,05 eur s úrokom z omeškania, pričom vo zvyšku bola žaloba zamietnutá.",
+      "contract_type": "mandatna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "článok V bod 5. mandátnej zmluvy",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "zmluvnú pokutu podľa článku V bod 5. mandátnej zmluvy zo dňa 1.10.2009, ktorej predmetom bolo prevádzkovanie videohry VLT: ML10811866 v pohostinskom zariadení, vo výške zaplateného správneho poplatku za vydanie licencie na prevádzkovanie hazardnej hry 3.319,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške zaplateného správneho poplatku za vydanie licencie na prevádzkovanie hazardnej hry 3.319,- eur",
+          "evidence": {
+            "quote": "vo výške zaplateného správneho poplatku za vydanie licencie na prevádzkovanie hazardnej hry 3.319,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3319.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu podľa článku V bod 5. mandátnej zmluvy zo dňa 1.10.2009, ktorej predmetom bolo prevádzkovanie videohry VLT: ML10811866 v pohostinskom zariadení, vo výške zaplateného správneho poplatku za vydanie licencie na prevádzkovanie hazardnej hry 3.319,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Čo sa týka časti žalovanej sumy vo výške 3.319,- eur podľa čl. V ods. 5 MZ sankciu súd považuje za neprimeranú, nedôvodnú a najmä odporujúcu dobrým mravom",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Vo zvyšku súd žalobu zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Čo sa týka časti žalovanej sumy vo výške 3.319,- eur podľa čl. V ods. 5 MZ sankciu súd považuje za neprimeranú, nedôvodnú a najmä odporujúcu dobrým mravom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na túto zmluvnú pokutu, pretože ju považoval za neprimeranú, nedôvodnú a odporujúcu dobrým mravom. Zdôvodnil to tým, že suma licenčného poplatku bola uhradená za viaceré výherné zariadenia žalobcu (cca 200), a uplatňovanie plnej výšky poplatku voči jednému subjektu je neakceptovateľné. Súd navrhol, že akceptovateľná by bola alikvotná časť poplatku.",
+          "key_quotes": [
+            {
+              "quote": "sankciu súd považuje za neprimeranú, nedôvodnú a najmä odporujúcu dobrým mravom, pretože nepochybne aj výpoveďou samotného žalobcu bolo preukázané, že táto suma ako licenčný poplatok bola uhradená za viaceré výherné zariadenia, pričom podľa žalobcu v tomto období takýchto zariadení mal si 200.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Akceptovateľnou, primeranou a najmä dobrým mravom neodporujúcou sankciou z tohto titulu by bola suma zodpovedajúca alikvotnej časti licenčného poplatku podľa aktuálneho počtu výherných zariadení žalobcu v tom ktorom čase.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "sankciu súd považuje za neprimeranú, nedôvodnú a najmä odporujúcu dobrým mravom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "táto suma ako licenčný poplatok bola uhradená za viaceré výherné zariadenia, pričom podľa žalobcu v tomto období takýchto zariadení mal si 200.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "takáto sankcia za jeden licenčný poplatok je v jeho plnej výške uplatňovaná voči viacerým subjektom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "článok VI bod 3. mandátnej zmluvy",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnú pokutu podľa článku VI bod 3. vo výške 3.403,83 eur za odpojenie výherného zariadenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 3.403,83 eur",
+          "evidence": {
+            "quote": "vo výške 3.403,83 eur za odpojenie výherného zariadenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3403.83,
+            "evidence": {
+              "quote": "zmluvnú pokutu podľa článku VI bod 3. vo výške 3.403,83 eur za odpojenie výherného zariadenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3403.83,
+            "evidence": {
+              "quote": "sankcia podľa čl. VI ods. 3 MZ a náhrada škody podľa čl. VI. ods. 2 MZ nie sú v rozpore s dobrými mravmi a sú primerané",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 %",
+          "evidence": {
+            "quote": "uložil žalovanej povinnosť zaplatiť žalobcovi 5.673,05 eur s 9 % úrokom z omeškania od 29.3.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "sankcia podľa čl. VI ods. 3 MZ a náhrada škody podľa čl. VI. ods. 2 MZ nie sú v rozpore s dobrými mravmi a sú primerané",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa priznal túto zmluvnú pokutu v plnej výške, pretože ju považoval za primeranú a nie v rozpore s dobrými mravmi. Žalovaná ani jej syn nevedeli vysvetliť dôvod odpojenia výherného zariadenia. Odvolací súd potvrdil rozhodnutie súdu prvého stupňa a neuplatnil moderačné právo, s prihliadnutím na nepriznanie iných pokút a možnosť dlhodobých výnosov zo zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "sankcia podľa čl. VI ods. 3 MZ a náhrada škody podľa čl. VI. ods. 2 MZ nie sú v rozpore s dobrými mravmi a sú primerané, najmä keď žalovaná a napokon ani jej syn nevedeli žiadnym spôsobom vysvetliť dôvod odpojenia výherného zariadenia žalobcu",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "odvolací súd nemal výhrady ani voči neuplatneniu moderačného práva súdu v zmysle § 301 Obch. zák. vo vzťahu k priznanej zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "sankcia podľa čl. VI ods. 3 MZ a náhrada škody podľa čl. VI. ods. 2 MZ nie sú v rozpore s dobrými mravmi a sú primerané",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nejaví sa dôvodným posudzovať v jeho neprospech zabezpečenia plnenia povinnosti žalovanej zmluvnými pokutami.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaná a napokon ani jej syn nevedeli žiadnym spôsobom vysvetliť dôvod odpojenia výherného zariadenia žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "článok III bod 2 písm. v) zmluvy",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "vo výške 3.403,83 eur za porušenie ustanovenia článku III bod 2 písm. v) zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 3.403,83 eur",
+          "evidence": {
+            "quote": "vo výške 3.403,83 eur za porušenie ustanovenia článku III bod 2 písm. v) zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3403.83,
+            "evidence": {
+              "quote": "vo výške 3.403,83 eur za porušenie ustanovenia článku III bod 2 písm. v) zmluvy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "v časti 3.403,83 eur a 577,50 eur ktorých súm sa žalobca domáhal podľa čl. III ods. 2 písm. v) MZ, súd návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Vo zvyšku súd žalobu zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "súd návrh zamietol z toho dôvodu, že žalovaná neporušila dohodu zakotvenú v tejto časti MZ, pretože bolo medzi účastníkmi nesporne preukázané, že v čase umiestnenia výherného zariadenia žalobu boli na prevádzke žalovanej 3 iné výherné zariadenia inej spoločnosti, a teda o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na túto zmluvnú pokutu, pretože žalovaná neporušila dohodu. Bolo preukázané, že žalobca mal vedomosť o prítomnosti iných výherných zariadení v prevádzke žalovanej už pri uzatváraní zmluvy. Zmena jedného typu zariadenia za iný, bez zvýšenia ich počtu, nebola považovaná za porušenie zmluvy, ktorá sa zameriavala na situácie, kde iné zariadenia vôbec neboli.",
+          "key_quotes": [
+            {
+              "quote": "súd návrh zamietol z toho dôvodu, že žalovaná neporušila dohodu zakotvenú v tejto časti MZ, pretože bolo medzi účastníkmi nesporne preukázané, že v čase umiestnenia výherného zariadenia žalobu boli na prevádzke žalovanej 3 iné výherné zariadenia inej spoločnosti, a teda o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Skutočnosť, že v januári 2010 žalovaná na tejto prevádzke vymenila jeden druh výherného zariadenia za iný, pričom nezvýšila ich počet, nemôže byť porušením hore uvedeného článku zmluvy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalovaná neporušila dohodu zakotvenú v tejto časti MZ",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_4",
+        "related_claim_ref": "článok III bod 2 písm. v) zmluvy",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 577,50 eur, t.j. 16,50 eur za každý deň porušenia zákazu umiestniť do svojej prevádzky hracie prístroje iného prevádzkovateľa v období od 1.1. do 4.2.2010",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "16,50 eur za každý deň",
+          "evidence": {
+            "quote": "16,50 eur za každý deň porušenia zákazu umiestniť do svojej prevádzky hracie prístroje iného prevádzkovateľa v období od 1.1. do 4.2.2010",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 577.5,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 577,50 eur, t.j. 16,50 eur za každý deň porušenia zákazu umiestniť do svojej prevádzky hracie prístroje iného prevádzkovateľa v období od 1.1. do 4.2.2010",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "v časti 3.403,83 eur a 577,50 eur ktorých súm sa žalobca domáhal podľa čl. III ods. 2 písm. v) MZ, súd návrh zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Vo zvyšku súd žalobu zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "súd návrh zamietol z toho dôvodu, že žalovaná neporušila dohodu zakotvenú v tejto časti MZ, pretože bolo medzi účastníkmi nesporne preukázané, že v čase umiestnenia výherného zariadenia žalobu boli na prevádzke žalovanej 3 iné výherné zariadenia inej spoločnosti, a teda o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na túto zmluvnú pokutu, pretože žalovaná neporušila dohodu. Bolo preukázané, že žalobca mal vedomosť o prítomnosti iných výherných zariadení v prevádzke žalovanej už pri uzatváraní zmluvy. Zmena jedného typu zariadenia za iný, bez zvýšenia ich počtu, nebola považovaná za porušenie zmluvy, ktorá sa zameriavala na situácie, kde iné zariadenia vôbec neboli.",
+          "key_quotes": [
+            {
+              "quote": "súd návrh zamietol z toho dôvodu, že žalovaná neporušila dohodu zakotvenú v tejto časti MZ, pretože bolo medzi účastníkmi nesporne preukázané, že v čase umiestnenia výherného zariadenia žalobu boli na prevádzke žalovanej 3 iné výherné zariadenia inej spoločnosti, a teda o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Skutočnosť, že v januári 2010 žalovaná na tejto prevádzke vymenila jeden druh výherného zariadenia za iný, pričom nezvýšila ich počet, nemôže byť porušením hore uvedeného článku zmluvy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalovaná neporušila dohodu zakotvenú v tejto časti MZ",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "o tejto skutočnosti mal žalobca vedomosť už v čase uzatvárania zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_64_2011_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/64/2011",
+      "decision_date": "20.12.2011",
+      "ecli": "ECLI:SK:KSTT:2011:2610203435.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

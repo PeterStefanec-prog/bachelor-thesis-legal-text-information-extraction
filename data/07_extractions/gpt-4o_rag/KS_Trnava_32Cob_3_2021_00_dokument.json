@@ -1,0 +1,316 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 12342,
+      "completion_tokens": 1347,
+      "cost_usd": 0.0443,
+      "latency_seconds": 35.18,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 10446,
+      "completion_tokens": 2395,
+      "cost_usd": 0.0501,
+      "latency_seconds": 30.65,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca CWS-boco Slovensko, s.r.o. sa domáhal zaplatenia zmluvných pokút od žalovaného Denisa Lopoura za porušenie zmluvných povinností vyplývajúcich z abonentnej zmluvy a zmluvy o servisnej službe. Žalobca tvrdil, že žalovaný neuhradil faktúry za poskytnuté služby, čím vznikol nárok na zmluvné pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi zmluvné pokuty v zníženej výške a zamietol zvyšok žaloby.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 191117259",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_15"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_1"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 26.84,
+            "evidence": {
+              "quote": "Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške 26,84 eur",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+            }
+          },
+          "original_claimed": {
+            "value": 429.44,
+            "evidence": {
+              "quote": "Výška zmluvnej pokuty za \"odmietnutie poskytovania služby\" podľa abonentnej zmluvy by tak predstavovala (32 x 26,84 €) x 50 % = 858,88 € x 50 % = 429,44 €",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_13"
+            }
+          },
+          "final_awarded": {
+            "value": 26.84,
+            "evidence": {
+              "quote": "výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac. Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške 26,84 eur",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "základe toho súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi dohodnutý úrok z omeškania vo výške 0,1 % denne z jednotlivých fakturovaných",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť s ohľadom na hodnotu a význam zabezpečovanej povinnosti.",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu, pretože považoval jej výšku za neprimeranú vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Zmluvná pokuta bola znížená na obdobie od porušenia povinnosti do účinkov odstúpenia od zmluvy. Súd dospel k záveru, že pokuta výrazne prevyšuje skutočne vzniknutú škodu a je v rozpore s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť s ohľadom na hodnotu a význam zabezpečovanej povinnosti.",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Treba posúdiť, či pokuta primerane zabezpečuje veriteľa proti prípadným škodám, teda či zahŕňa všetky škody, ktoré možno rozumne v danom konkrétnom vzťahu s porušením zmluvnej povinnosti očakávať.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Z týchto úvah je potom nepochybné, že zmluvné pokuty, uplatňované žalobcom vo výške 544,64 € (429,44 € + 115,20 €), ktoré vznikli v dôsledku omeškania žalovaného so zaplatením sumy 81,70 € (súčet odmeny vyúčtovanej prvými dvoma faktúrami č. 191103825 a č. 191107224 po 40,85 €), nie sú primerané hodnote a významu zabezpečovanej povinnosti.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_17"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný síce v konaní namietal, že v preberacom protokole (č. l. 20 spisu) nie je uvedený dôvod ukončenia zmluvy, aj keď sú tam na to vyhradené kolónky, súd prvej inštancie považoval za nesporné, že žalovaný neuhradil žiadnu zo žalovaných faktúr, napriek tomu, že poskytnutie služby zo strany žalobcu nepopieral.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "záväzkom. Na jednej strane súd prvej inštancie akceptuje zmluvnú voľnosť strán, avšak okolnosti prejednávaného prípadu nemôžu ospravedlniť neadekvátny majetkový prospech, ktorý by žalobca získal na úkor",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "faktúra č. 191117260",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_15"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_1"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 3.6,
+            "evidence": {
+              "quote": "podľa zmluvy o servisnej službe vo výške 3,60 €",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+            }
+          },
+          "original_claimed": {
+            "value": 115.2,
+            "evidence": {
+              "quote": "podľa zmluvy o servisnej službe (32 x 3,60 € x 1 rohož x 2 výmeny) x 50 % = 230,40 € x 50 % = 115,20 €",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_13"
+            }
+          },
+          "final_awarded": {
+            "value": 3.6,
+            "evidence": {
+              "quote": "(apríl a máj 2019), pričom výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac. Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "základe toho súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi dohodnutý úrok z omeškania vo výške 0,1 % denne z jednotlivých fakturovaných",
+            "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť s ohľadom na hodnotu a význam zabezpečovanej povinnosti.",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu, pretože považoval jej výšku za neprimeranú vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Zmluvná pokuta bola znížená na obdobie od porušenia povinnosti do účinkov odstúpenia od zmluvy. Súd dospel k záveru, že pokuta výrazne prevyšuje skutočne vzniknutú škodu a je v rozpore s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť s ohľadom na hodnotu a význam zabezpečovanej povinnosti.",
+              "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Treba posúdiť, či pokuta primerane zabezpečuje veriteľa proti prípadným škodám, teda či zahŕňa všetky škody, ktoré možno rozumne v danom konkrétnom vzťahu s porušením zmluvnej povinnosti očakávať.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_3"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Z týchto úvah je potom nepochybné, že zmluvné pokuty, uplatňované žalobcom vo výške 544,64 € (429,44 € + 115,20 €), ktoré vznikli v dôsledku omeškania žalovaného so zaplatením sumy 81,70 € (súčet odmeny vyúčtovanej prvými dvoma faktúrami č. 191103825 a č. 191107224 po 40,85 €), nie sú primerané hodnote a významu zabezpečovanej povinnosti.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_17"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný síce v konaní namietal, že v preberacom protokole (č. l. 20 spisu) nie je uvedený dôvod ukončenia zmluvy, aj keď sú tam na to vyhradené kolónky, súd prvej inštancie považoval za nesporné, že žalovaný neuhradil žiadnu zo žalovaných faktúr, napriek tomu, že poskytnutie služby zo strany žalobcu nepopieral.",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "záväzkom. Na jednej strane súd prvej inštancie akceptuje zmluvnú voľnosť strán, avšak okolnosti prejednávaného prípadu nemôžu ospravedlniť neadekvátny majetkový prospech, ktorý by žalobca získal na úkor",
+                "chunk_id": "KS_Trnava_32Cob_3_2021_00_dokument.pdf_chunk_4"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.spravanie_veritela"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_3_2021_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/3/2021",
+      "decision_date": "28.06.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

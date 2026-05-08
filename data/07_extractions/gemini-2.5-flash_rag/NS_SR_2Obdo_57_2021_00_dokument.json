@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 12970,
+      "completion_tokens": 1093,
+      "cost_usd": 0.0271,
+      "latency_seconds": 5.82,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 14770,
+      "completion_tokens": 1568,
+      "cost_usd": 0.0341,
+      "latency_seconds": 12.47,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 322 507,55 Eur s úrokom z omeškania, pričom žiadal vydanie bezdôvodného obohatenia za licenčný poplatok a kauciu, náhradu škody a ušlý zisk. Žalovaný si uplatnil zmluvnú pokutu vo výške 20 000 Eur, ktorú započítal voči pohľadávkam žalobcu.",
+      "verdict_summary": "Najvyšší súd odmietol dovolanie žalobcu a priznal žalovanému nárok na náhradu trov dovolacieho konania, čím potvrdil zamietnutie väčšiny nárokov žalobcu a platnosť započítania zmluvnej pokuty žalovaným.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych predpisov, ktoré sa vzťahujú na vykonávanie činnosti finančného sprostredkovania",
+            "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_2"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 20.000,- Eur",
+          "evidence": {
+            "quote": "má banka právo uplatniť si voči viazanému finančnému agentovi nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,- Eur.",
+            "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_2"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "nebolo možné započítať zmluvnú pokutu vo výške 20.000,- Eur",
+              "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_3"
+            }
+          },
+          "final_awarded": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "o žalovaným vyúčtovanej zmluvnej pokute vo výške 20.000,Eur, ktorú si žalovaný uplatnil v zmysle medzi stranami sporu platne uzatvorenej zmluvy, nič nebránilo, aby žalovaný si zmluvne dohodnutú splatnú zmluvnú pokutu započítal voči splatným pohľadávkam žalobcu.",
+              "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "nebolo možné započítať zmluvnú pokutu vo výške 20.000,- Eur, pretože podľa názoru súdu táto nebola spôsobilá k započítaniu, pretože nebola priznaná súdom a výška tejto vyúčtovanej zmluvnej pokuty sa javí byť vo vzťahu ku konaniu žalobcu a spôsobenej škode neadekvátna.",
+            "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_3"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách. Odvolací súd tiež konštatuje, že oprávnenosť žalovaným vyúčtovanej zmluvnej pokuty vo výške 20.000,- Eur je preukázaná dohodou zmluvných strán, pričom tvrdenia žalobcu o neprimeranosti tejto zmluvnej pokuty považoval odvolací súd za nedôvodné a dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu ohľadne žalovaným vyúčtovanej zmluvnej pokuty.",
+              "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd pôvodne zamietol započítanie zmluvnej pokuty, pretože ju považoval za neprimeranú a nebola priznaná súdom. Krajský súd však s týmto názorom nesúhlasil, uviedol, že na započítanie sú spôsobilé pohľadávky, ktoré možno uplatniť na súde, a že o zmluvnej pokute nemusí byť vopred rozhodnuté súdom. Krajský súd dospel k záveru, že zmluvná pokuta vo výške 20 000 Eur nie je neprimeraná vzhľadom na závažnosť porušenia zmluvných povinností žalobcom a nevidí dôvod na jej moderáciu. Najvyšší súd dovolanie žalobcu odmietol, čím potvrdil rozhodnutie krajského súdu.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+            },
+            {
+              "quote": "Odvolací súd tiež konštatuje, že oprávnenosť žalovaným vyúčtovanej zmluvnej pokuty vo výške 20.000,- Eur je preukázaná dohodou zmluvných strán, pričom tvrdenia žalobcu o neprimeranosti tejto zmluvnej pokuty považoval odvolací súd za nedôvodné a dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu ohľadne žalovaným vyúčtovanej zmluvnej pokuty.",
+              "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pokiaľ dovolateľ tvrdí, že správanie žalovaného voči žalobcovi ako svojmu zmluvnému partnerovi odporovalo normám a zaužívaným zvyklostiam v súvislosti s,,poctivým obchodnými vzťahmi\" a v obchodnoprávnych vzťahoch platí, že výkon práva, ktorý je v rozpore so zásadami poctivého obchodného styku nepožíva právnu ochranu dovolací súd uvádza, že z uvedeného popri skutočnosti, že nie je možné vyvodiť, akú právnu otázku mal dovolateľ vo vzťahu k namietanému nesprávnemu právnemu posúdeniu veci zo strany súdov na mysli, je naviac jednoznačné, že uvedená námietka ani z hľadiska rozhodnutia súdov nebola rozhodujúca a kľúčová.",
+                "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_38"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+                "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+                "chunk_id": "NS_SR_2Obdo_57_2021_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_2Obdo_57_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "2Obdo/57/2021",
+      "decision_date": "31.05.2022",
+      "ecli": "ECLI:SK:NSSR:2022:6619200251.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

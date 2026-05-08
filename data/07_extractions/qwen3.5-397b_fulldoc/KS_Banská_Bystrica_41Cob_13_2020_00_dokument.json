@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 31362,
+    "completion_tokens": 2062,
+    "cost_usd": 0.0171,
+    "latency_seconds": 25.15,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal náhrady škody a vydania bezdôvodného obohatenia vo výške 322.507,55 Eur po tom, čo žalovaný (Tatra banka) odstúpil od franchisingovej zmluvy a zmluvy o finančnom sprostredkovaní pre porušenie povinností zo strany žalobcu. Žalovaný si uplatnil nárok na zmluvnú pokutu vo výške 20.000 Eur a rozhodol o prepadnutí kaucie, čo žalobca napadol ako neoprávnené.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie tak, že žalobu zamietol v celom rozsahu, keďže konštatoval platnosť odstúpenia od zmluvy a oprávnenosť započítania pohľadávky žalobcu proti nároku na zmluvnú pokutu.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych predpisov, ktoré sa vzťahujú na vykonávanie činnosti finančného sprostredkovania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000,-Eur",
+          "evidence": {
+            "quote": "má banka právo uplatniť si voči viazanému finančnému agentovi nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,-Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "Zároveň aj napriek predchádzajúcemu upozorneniu sa opakovane vyskytovalo aj porušenie \" kontroly štyroch očí\" pri uzavieraní obchodov. Žalovaný za účelom overenia si týchto porušení kontaktoval aj niektorých klientov a overoval si, či mali alebo nie vedomosť o tom, že sú klientami Raiffeisen banky. Po vyhodnotení všetkých porušení žalovaný pristúpil k okamžitému skončeniu spolupráce so žalobcom a k odstúpeniu od predmetných zmlúv.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "Odvolací súd má za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,-Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu ohľadne žalovaným vyúčtovanej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne odmietol započítanie pohľadávky žalobcu proti zmluvnej pokute s odôvodnením, že pokuta nebola priznaná súdom a jej výška sa javila ako neadekvátna. Odvolací súd však tento názor zmenil, keďže podľa Obchodného zákonníka sú na započítanie spôsobilé všetky pohľadávky, ktoré možno uplatniť na súde, bez potreby predchádzajúceho súdneho rozhodnutia. Odvolací súd konštatoval, že výška 20.000 Eur nie je neprimeraná vzhľadom na závažnosť porušenia povinností (otváranie fiktívnych účtov), ktoré vystavovalo banku riziku vysokých sankcií od regulátora.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd má za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,-Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "tvrdenie súdu, že o zmluvnej pokute doposiaľ nebolo rozhodnuté súdom, je právne irelevantné",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "za porušenie týchto pravidiel hrozí žalovanému pokuta až do výške 332.000,-Eur, prípadne až pokuta do 10.000.000,-Eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_13_2020_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/13/2020",
+      "decision_date": "18.11.2020",
+      "ecli": "ECLI:SK:KSBB:2020:6619200251.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

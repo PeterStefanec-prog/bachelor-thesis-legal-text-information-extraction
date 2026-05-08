@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8053,
+    "completion_tokens": 1061,
+    "cost_usd": 0.0307,
+    "latency_seconds": 18.6,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Unistav Teplička s.r.o. požadoval zaplatenie sumy 108.045,26 eur za vykonané dielo, ktoré žalovaný FORVIA s.r.o. neuhradil. Žalovaný tvrdil, že došlo k zániku pohľadávok a záväzkov dodatkom k zmluve a uplatnil si zmluvnú pokutu za nedodržanie zmluvy.",
+      "verdict_summary": "Odvolací súd odmietol odvolanie žalovaného a potvrdil rozsudok súdu prvej inštancie o trovách konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný si uplatnil v tomto konaní od žalobcu zmluvnú pokutu ako sankciu z titulu nedodržania zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 29567.31,
+            "evidence": {
+              "quote": "Žalovaný si uplatnil v tomto konaní od žalobcu zmluvnú pokutu ako sankciu z titulu nedodržania zmluvy v celkovej výške 29.567,31 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie ďalej uviedol, že v konaní neprihliadal na započítaciu námietku žalovaného titulom zaplatenia zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Súd prvej inštancie ďalej uviedol, že v konaní neprihliadal na započítaciu námietku žalovaného titulom zaplatenia zmluvnej pokuty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Súd prvej inštancie ďalej uviedol, že v konaní neprihliadal na započítaciu námietku žalovaného titulom zaplatenia zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie neprihliadal na započítaciu námietku žalovaného, pretože žalovaný nepredložil súdu započítací prejav, ktorý by bol doručený žalobcovi a z ktorého by bolo zrejmé, akú pohľadávku presne započítava. Inventarizácia pohľadávok a záväzkov predložená žalovaným nebola podpísaná a nebolo preukázané, kedy bola doručená žalobcovi. Súd tiež konštatoval, že dodatok k zmluve nie je podpísaný žalovaným a nemožno ho považovať za dohodu o urovnaní.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie ďalej uviedol, že v konaní neprihliadal na započítaciu námietku žalovaného titulom zaplatenia zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw",
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_77_2017_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/77/2017",
+      "decision_date": "09.08.2017",
+      "ecli": "ECLI:SK:KSKE:2017:5115214486.3",
+      "document_type": "Uznesenie"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8067,
+    "completion_tokens": 1956,
+    "cost_usd": 0.0077,
+    "latency_seconds": 24.31,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Navrhovateľ (ručiteľ) sa domáhal zníženia zmluvnej pokuty dohodnutej v zmluve o nájme s právom kúpy prenajatej veci z 0,1 % na 0,01 % za každý deň omeškania, keďže ju považoval za neprimerane vysokú (až 800 % oproti zabezpečovanej pohľadávke). Súd prvého stupňa žalobu zamietol s odôvodnením, že veriteľ zmluvnú pokutu doposiaľ nevyúčtoval ani nepožadoval, preto nie sú splnené podmienky na uplatnenie moderačného práva súdu podľa § 301 Obchodného zákonníka.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd rozsudok Okresného súdu Nitra potvrdil a zamietol návrh na zníženie zmluvnej pokuty, pretože veriteľ si ešte neuplatnil nárok na jej zaplatenie, čím nie je známa definitívna výška požadovanej pokuty potrebná na posúdenie jej primeranosti."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "zmluvná pokuta 0,1 % denne od 06.05.1999 do zaplatenia z 5.722.935,40 Sk a 0,1 % denne od 07.02.2000 do vrátenia z 4.592.943,- Sk"
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "pohľadávka 5.722.935,40 Sk, zmluvná pokuta 0,1 % denne od 06.05.1999 do zaplatenia z 5.722.935,40 Sk a 0,1 % denne od 07.02.2000 do vrátenia z 4.592.943,- Sk"
+            },
+            "value": 5722935.4
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "ak je nájomca v omeškaní s úhradou splátky je prenajímateľ oprávnený vyúčtovať nájomcovi zmluvnú pokutu"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "v súčasnosti predstavuje zmluvná pokuta za omeškané plnenie až 800 % oproti zabezpečovanej pohľadávke"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval"
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "neutral"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "použitie moderačného práva súdu vo vzťahu k výške zmluvnej pokuty je možné len v konaní, o ktorom sa oprávnený domáha od osoby povinnej na zmluvnú pokutu jej zaplatenia"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "v takomto štádiu výška oprávnenou osobou požadovanej zmluvnej pokuty ešte nie je známa"
+            }
+          ],
+          "legal_reasoning_summary": "Súd zamietol návrh na zníženie zmluvnej pokuty z procesných dôvodov, pretože veriteľ si doposiaľ neuplatnil nárok na jej zaplatenie ani ju nevyúčtoval. Podľa § 301 Obchodného zákonníka môže súd moderovať výšku zmluvnej pokuty len v konaní, kde sa veriteľ domáha jej zaplatenia, keďže len vtedy je definitívne známa výška požadovanej pokuty. Preventívne žaloby na zníženie pokuty pred jej vyčíslením nie sú prípustné, pretože chýba nevyhnutný predpoklad na posúdenie jej primeranosti."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu vo výške 0,1 % z dlžnej sumy za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej sumy za každý deň omeškania"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_135_2012_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/135/2012",
+      "decision_date": "28.02.2013",
+      "ecli": "ECLI:SK:KSNR:2013:4111204662.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

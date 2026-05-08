@@ -1,0 +1,186 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 5829,
+      "completion_tokens": 639,
+      "cost_usd": 0.021,
+      "latency_seconds": 6.94,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 5526,
+      "completion_tokens": 1014,
+      "cost_usd": 0.024,
+      "latency_seconds": 10.34,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Ministerstvo vnútra Slovenskej republiky, požadoval od žalovaného, Jozefa Zuzulu, zaplatenie zmluvnej pokuty za omeškanie s odstránením vád diela podľa zmluvy o dielo č. 1/2000. Žalovaný nevykonal opravy striech na objektoch v správe Krajského riaditeľstva PZ Nitra riadne a včas, čo viedlo k uplatneniu zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd znížil zmluvnú pokutu na 8.220,86 eura a zamietol žalobu v časti o zvyšných 13.222,41 eura.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný si svoju povinnosť nesplnil, v lehote 3 dní nepredložil písomný návrh na odstránenie vád a vady diela neodstránil",
+            "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_20"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "1.000,-- Sk za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 1.000,-- Sk za každý deň omeškania až do odstránenia poslednej vady diela",
+            "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_2"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 21443.27,
+            "evidence": {
+              "quote": "žalobca si uplatňoval zmluvnú pokutu vo výške 21.443,27 eur",
+              "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_53"
+            }
+          },
+          "final_awarded": {
+            "value": 8220.86,
+            "evidence": {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura",
+              "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_52"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "žalobcom uplatnená a zmluvne dohodnutá zmluvná pokuta nie je neprimerane vysoká",
+            "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_48"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura, teda vo výške rovnajúcej sa dvojnásobku ceny diela (4.110,43 eur), ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+              "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_52"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd znížil zmluvnú pokutu na 8.220,86 eura, čo je dvojnásobok ceny diela. Súd považoval pôvodnú výšku pokuty za neprimeranú vzhľadom na hodnotu a význam zabezpečenej povinnosti. Rozhodnutie bolo založené na ustanovení § 301 Obchodného zákonníka, ktoré umožňuje súdu modifikovať výšku zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura, teda vo výške rovnajúcej sa dvojnásobku ceny diela (4.110,43 eur), ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+              "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_52"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura, teda vo výške rovnajúcej sa dvojnásobku ceny diela (4.110,43 eur), ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+                "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_52"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje čiastku 2,6-krát vyššiu ako vyúčtovaná škoda (škoda 8.101,08 €, zmluvná pokuta 21.443,27 €.) Neprimeranosť výšky zmluvnej pokuty je zrejmá, a súd ju môže znížiť s prihliadnutí na hodnotu a význam zabezpečovanej povinnosti.",
+                "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_29"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje čiastku 2,6-krát vyššiu ako vyúčtovaná škoda (škoda 8.101,08 €, zmluvná pokuta 21.443,27 €.) Neprimeranosť výšky zmluvnej pokuty je zrejmá, a súd ju môže znížiť s prihliadnutí na hodnotu a význam zabezpečovanej povinnosti.",
+                "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_29"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Aj na základe tejto námietky možno usúdiť, že odvolateľ si je vedomý svojej zodpovednosti za vadne vykonané dielo a následkov s tým spojených (vznik škody a zmluvnej pokuty).",
+                "chunk_id": "KS_Nitra_26Cob_52_2016_00_dokument.pdf_chunk_36"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_52_2016_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/52/2016",
+      "decision_date": "01.12.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4105220661.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

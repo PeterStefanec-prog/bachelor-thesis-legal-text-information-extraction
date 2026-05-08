@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14401,
+    "completion_tokens": 1389,
+    "cost_usd": 0.0499,
+    "latency_seconds": 41.97,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca SMART ENERGO s. r. o. žiadal od žalovaného PCH Servis, s. r. o. zaplatenie zmluvnej pokuty vo výške 2.689,90 eur z dôvodu omeškania s úhradou ceny diela podľa zmluvy o dielo uzavretej dňa 13.4.2015.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalovanému uložil povinnosť zaplatiť žalobcovi zmluvnú pokutu 2.689,90 eur.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.689,90 eur, ktorú si žalobca uplatňuje voči žalovanému na základe čl. IX zmluvy o dielo uzavretej sporovými stranami dňa 13.4.2015 z dôvodu omeškania žalovaného s povinnosťou zaplatiť cenu diela včas.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % za každý začatý deň omeškania z neuhradenej časti ceny diela",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou faktúry v súlade s čl. VI tejto zmluvy má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,5 % za každý začatý deň omeškania z neuhradenej časti ceny diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2077.15,
+            "evidence": {
+              "quote": "Žalobca vyzval žalovaného na úhradu ceny diela vo výške 2.477,15 eur (neuhradená časť ceny diela znížená o zľavu z ceny diela vo výške 400,- eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2689.9,
+            "evidence": {
+              "quote": "nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.689,90 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2689.9,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto žalobe vyhovel v celom rozsahu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,05 % ročne",
+          "evidence": {
+            "quote": "sumu 2.077,15 eura s u´rokom z omesˇkania 8,05 % rocˇne od 1.7.2015 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto žalobe vyhovel v celom rozsahu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie konštatoval, že dohoda o zmluvnej pokute je platná a neodporuje zásadám poctivého obchodného styku. Zmluvná pokuta bola dohodnutá v rovnakej výške pre obe strany a jej výška závisela od postoja povinnej strany. Súd nepoužil moderačné právo, pretože pokuta nebola považovaná za neprimerane tvrdú.",
+          "key_quotes": [
+            {
+              "quote": "dojednanej zmluvnej pokuty. 9. Súd prvej inštancie konštatoval, že dohoda zmluvných strán o zmluvnej pokute je platná, nebola dojednaná v rozpore so zásadami poctivého obchodného",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohoda bola uzavretá zmluvnými stranami slobodne, vážne, neobchádzala zákon a ani žiadnemu zákonu neodporuje a nie je ani v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prvotným účelom dohody zmluvných strán o zmluvnej pokute bolo zabezpečenie riadneho a včasného vykonania a odovzdania diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovanému vznikla len lokálna škoda, výšku škody znalec odhadol na 20,- eur a náklady na opravu na 48,- eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Celková výška zmluvnej pokuty (v sume 11.999,34 eura) by tak prevyšovala zabezpečenú pohľadávku (2.077,15 eura) viac ako päťnásobne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dlžník, ktorý (vedome) dlhodobo porušuje (ignoruje) svoje záväzky (a neplní si zmluvné povinnosti), nemôže byť následne zvýhodňovaný v súdnom konaní",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca v spore sa nedomáha zmluvnej pokuty za celé obdobie omeškania žalovaného, ale iba za obdobie do podania žaloby vo veci samej.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_181_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/181/2023",
+      "decision_date": "29.10.2024",
+      "ecli": "ECLI:SK:KSKE:2024:7216206988.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

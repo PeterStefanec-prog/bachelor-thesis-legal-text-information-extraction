@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17924,
+    "completion_tokens": 1834,
+    "cost_usd": 0.0113,
+    "latency_seconds": 26.48,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 1.592,37 eur s príslušenstvom titulom nezaplatenia faktúry a zádržného za dodávku a montáž krytín. Žalovaný uplatnil proti tejto pohľadávke kompenzačnú námietku a jednostranné započítanie zmluvnej pokuty za nedodržanie termínu odovzdania diela na inej stavbe.",
+      "verdict_summary": "Krajský súd zrušil rozsudok súdu prvej inštancie, ktorý žalobu zamietol, a vec vrátil súdu prvej inštancie na ďalšie konanie, pretože prvoinštančný súd sa dostatočne nevysporiadal s dôkazmi týkajúcimi sa omeškania žalovaného a možnosti započítania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "objednávka č. NS/5624/2011 (stavba Prešov)",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnú pokutu za nedodržanie termínu dodávky/ realizácie predmetu objednávky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % z ceny predmetu objednávky za každý i začatý deň omeškania",
+          "evidence": {
+            "quote": "vo výške 0,5 % z ceny predmetu objednávky za každý i začatý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 197000,
+            "evidence": {
+              "quote": "Cena predmetu objednávky je uvedená v bode 5 tejto objednávky a to vo výške 197.000,- eur bez DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2955,
+            "evidence": {
+              "quote": "uplatňuje voči žalovanému zmluvnú pokutu za 3 dni omeškania, a to od 26.09.2012 do 28.09.2012 v sume 2.955,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava II č.k. 22Cb/442/2015-180 zo dňa 15.5.2017 zrušuje a vec vracia súdu prvej inštancie na ďalšie konanie",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozhodnutie súdu prvej inštancie s poukazom na ust. § 389 ods. 1 písm. c) CSP zrušil a vec mu vrátil na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie pretože súd prvej inštancie sa dostatočne nevysporiadal s listinnými dôkazmi a tvrdeniami žalobcu, či omeškanie žalobcu nebolo zapríčinené omeškaním zo strany žalovaného (neposkytnutie spolupôsobenia, chýbajúce položky vo výkaze výmer). Súd musí opätovne posúdiť, či mohlo dôjsť k započítaniu pohľadávky žalovaného voči pohľadávke žalobcu a kedy sa pohľadávky stretli, keďže žalovaný svoju pohľadávku na zmluvnú pokutu nevyzval na splnenie pred započítaním.",
+          "key_quotes": [
+            {
+              "quote": "poukazuje na skutočnosť, že súd prvej inštancie sa nedostatočne vysporiadal so skutočnosťou či mohlo dôjsť k započítaniu pohľadávky žalovaného voči pohľadávke žalobcu a či nedošlo k omeškaniu aj z dôvodov na strane",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Je potrebné opätovne vykonať dokazovanie či žalovaný vyzval žalobcu na zaplatenie zmluvnej pokuty za omeškanie z odovzdaním diela za obdobie od 26.9.2012 do 28.9.2012",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.final_awarded",
+        "associated_interest.rate_value",
+        "associated_interest.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_186_2017_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/186/2017",
+      "decision_date": "10.07.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1215224642.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

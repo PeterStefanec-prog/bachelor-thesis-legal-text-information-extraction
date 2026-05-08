@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10243,
+    "completion_tokens": 1093,
+    "cost_usd": 0.0365,
+    "latency_seconds": 9.33,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ ČSOB Leasing, a.s. žiadal zaplatenie zmenkovej sumy 24.307,46 eur s príslušenstvom od odporcov, ktorí boli zmenkovými ručiteľmi. Odporca v 2. rade namietal vyplnenie blankozmenky a zánik záväzku z leasingovej zmluvy.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý ponechal v platnosti zmenkový platobný rozkaz.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur ako neprimeranú zabezpečovanej povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur",
+          "evidence": {
+            "quote": "zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3092.88,
+            "evidence": {
+              "quote": "zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3092.88,
+            "evidence": {
+              "quote": "zo dňa 22.01.2015, takto rozhodol: Krajský súd v Bratislave rozsudok Okresného súdu Bratislava",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6%",
+          "evidence": {
+            "quote": "6% úrok od 30.12.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd sa v celom rozsahu stotožňuje s napadnutým rozsudkom súdu prvého stupňa",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že námietky odporcu sú nedôvodné, a preto ponechal zmenkový platobný rozkaz v celom rozsahu v platnosti. Odvolací súd sa stotožnil s napadnutým rozsudkom súdu prvého stupňa a ako vecne správne rozhodnutie v zmysle § 219 ods. 2 O.s.p. tento potvrdil. Odporca nepreukázal, že by jeho povinnosť poskytnúť navrhovateľovi plnenie zo zmenky zanikla úplne alebo čiastočne.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa v celom rozsahu stotožňuje s napadnutým rozsudkom súdu prvého stupňa",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmenkový záväzok, ktorý plnil zabezpečovaciu funkciu k hlavnému záväzku z úverovej zmluvy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnej pokuty z porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1CoZm_72_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1CoZm/72/2015",
+      "decision_date": "25.08.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1512206237.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

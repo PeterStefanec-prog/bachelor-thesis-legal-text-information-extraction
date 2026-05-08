@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12422,
+    "completion_tokens": 1050,
+    "cost_usd": 0.0416,
+    "latency_seconds": 9.02,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Y. A. Y. N. s.r.o. sa domáhal zaplatenia 34.885,39 EUR s príslušenstvom od žalovaného R. X. na základe leasingových zmlúv o finančnom prenájme motorových vozidiel, ktoré žalovaný neplnil riadne a včas. Žalobca požadoval úhradu neuhradených splátok, zmluvnej pokuty a náhrady škody.",
+      "verdict_summary": "Krajský súd v Košiciach potvrdil rozsudok prvostupňového súdu, ktorý zaviazal žalovaného zaplatiť žalobcovi požadované sumy.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný si svoje povinnosti vyplývajúce zo zmlúv neplnil, t.j. neplatil žalobcovi leasingové splátky riadne a včas",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,025 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu 0,025 % denne zo sumy 1.516,- eur od 2.7.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1516,
+            "evidence": {
+              "quote": "zmluvnú pokutu 0,025 % denne zo sumy 1.516,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd v zmysle ustanovenia § 301 Obchodného zákonníka využil moderačné právo a znížil zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "úrokmi z omeškania 0,05 % denne zo sumy 1.516,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd v zmysle ustanovenia § 301 Obchodného zákonníka využil moderačné právo a znížil zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zistil, že žalovaný neplatil dohodnuté leasingové splátky riadne a včas, čím sa dostal do omeškania. Žalobca si uplatnil zmluvnú pokutu vo výške 0,025 % denne. Súd využil moderačné právo podľa § 301 Obchodného zákonníka a znížil zmluvnú pokutu z dôvodu jej neprimeranosti a časového neobmedzenia, ktoré by mohlo viesť k neprimeranému zisku a hospodárskemu poškodeniu žalovaného.",
+          "key_quotes": [
+            {
+              "quote": "Súd v zmysle ustanovenia § 301 Obchodného zákonníka využil moderačné právo a znížil zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "znížil zmluvnú pokutu z dôvodu jej neprimeranosti a časového neobmedzenia by mohla viesť k neprimeranému zisku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_35_2015_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/35/2015",
+      "decision_date": "20.10.2015",
+      "ecli": "ECLI:SK:KSKE:2015:7111220136.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

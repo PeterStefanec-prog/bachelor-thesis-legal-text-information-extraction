@@ -1,0 +1,49 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18110,
+    "completion_tokens": 297,
+    "cost_usd": 0.0256,
+    "latency_seconds": 1.95,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Pôvodný žalobca sa domáhal zaplatenia 72.428,50 eura s príslušenstvom z titulu ručiteľského záväzku zo zmluvy o úvere. Žalovaný namietal výšku pohľadávky, nedostatok aktívnej legitimácie žalobcu, neplatnosť zmluvy o úvere a neprimerane vysoké ceny dodaného tovaru.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi istinu vo výške 67.506,13 eura spolu s úrokom z omeškania a priznal žalobcovi náhradu trov odvolacieho konania v rozsahu 100 %.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [],
+    "quality_control": {
+      "flags": [
+        "NO_CONTRACTUAL_PENALTY_FOUND",
+        "NO_PENALTIES_EXTRACTED"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_22_2018_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/22/2018",
+      "decision_date": "29.11.2018",
+      "ecli": "ECLI:SK:KSNR:2018:1110227885.8",
+      "document_type": "Rozsudok"
+    }
+  }
+}

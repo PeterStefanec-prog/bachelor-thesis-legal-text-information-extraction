@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19284,
+    "completion_tokens": 1308,
+    "cost_usd": 0.0613,
+    "latency_seconds": 41.57,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca DEMÄNOVÁ s.r.o. sa domáhal zaplatenia sumy 12.788,80 Eur s príslušenstvom od žalovaného SINICA, s.r.o. na základe dohody o ukončení nájmu. Žalovaný si uplatnil pohľadávku na započítanie zmluvnej pokuty a úrokov z omeškania.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Liptovský Mikuláš, ktorý žalobu zamietol z dôvodu započítania pohľadávky žalovaným.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa dostane nájomca do omeškania so splnením svojho záväzku zaplatiť prenajímateľovi faktúry, je prenajímateľ oprávnený účtovať nájomcovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% z dlžnej sumy za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,5% z dlžnej sumy za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 14691.01,
+            "evidence": {
+              "quote": "vyzval právneho predchodcu žalobcu na zaplatenie ním vyčíslenej zmluvnej pokuty a úrokov z omeškania vo výške 14.691,01 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 13615.03,
+            "evidence": {
+              "quote": "preto bola okresným súdom priznaná výška zmluvnej pokuty 13.615,03 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,5 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9,5 % ročne zo sumy 7.788,80 Eur od 1.8.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Z titulu vznesenej kompenzačnej námietky zo strany žalovaného okresný súd žalobu zamietol ako nedôvodnú, keďže k zániku záväzku došlo započítaním",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd zamietol žalobu, pretože žalovaný si uplatnil pohľadávku na započítanie zmluvnej pokuty a úrokov z omeškania, čím došlo k zániku záväzku. Súd konštatoval, že zmluvná pokuta bola dohodnutá platne a určito. Žalobca nenamietal výšku zmluvnej pokuty, a preto súd nemoderoval jej výšku podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "námietky zo strany žalovaného okresný súd žalobu zamietol ako nedôvodnú, keďže k zániku záväzku došlo započítaním",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "K neprimeranosti zmluvnej pokuty vo výške 0,5% denne žalobca uviedol, že považuje rozsudok súdu prvého stupňa za nesprávny, pretože zmluvná pokuta je v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečuje plnenie zmluvných povinností - záväzkov žalobcu, resp. jeho právneho predchodcu ako nájomcu na riadne plnenie platieb vyplývajúcich práve z uzavretých zmlúv o nájme.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Celková suma, pri ktorej sa žalobca dostal do omeškania, bola viac ako 50.000 Eur, a preto porovnávať nájomné za jeden mesiac s celkovou výškou zmluvnej pokuty bolo neopodstatnené.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca opomenul spomenúť, že do omeškania sa dostal pri takmer každom plnení nájmu za jednotlivé kvartály, teda nedošlo k porušeniu povinnosti zo strany žalobcu iba jediný krát, resp. príležitostne, ale prakticky išlo o permanentný stav.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_323_2012_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/323/2012",
+      "decision_date": "13.03.2013",
+      "ecli": "ECLI:SK:KSZA:2013:5611211404.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

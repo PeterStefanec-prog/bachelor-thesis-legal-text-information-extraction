@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21403,
+    "completion_tokens": 1953,
+    "cost_usd": 0.0129,
+    "latency_seconds": 30.39,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia nedoplatkov na nájomnom a úhradách za energie spolu so zmluvnou pokutou za oneskorené platenie nájomného. Žalovaný namietal platnosť započítania svojej pohľadávky na náhradu škody spôsobenej pádom konštrukcie v areáli proti pohľadávkam žalobcu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi sumu 5 102,62 EUR vrátane zmluvnej pokuty vo výške 3 839,48 EUR a úrokov z omeškania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 19551003",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, ak bude žalovaný v omeškaní s platením nájomného a/alebo úhrad spojených s užívaním nájmu o viac ako 30 dní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "trojnásobku mesačného nájomného",
+          "evidence": {
+            "quote": "Dohodli sa tiež na povinnosti nájomcu v tomto prípadne zaplatiť žalobcovi zmluvnú pokutu vo výške zodpovedajúcej trojnásobku mesačného nájomného (čl. X.2).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 6639.48,
+            "evidence": {
+              "quote": "Faktúrou č. 19551003 vyúčtoval žalobca žalovanému zmluvnú pokutu za nevyplatenie nájmu v mesiaci december 2018 vo výške 6.639,48 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3839.48,
+            "evidence": {
+              "quote": "zmluvnú pokutu 3 839,48 eur do troch dní (výrok I.)",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5 % ročne",
+          "evidence": {
+            "quote": "Súd prvej inštancie napadnutým rozsudkom uložil žalovanému povinnosť zaplatiť žalobcovi 5 102,62 eur s 5 % ročným úrokom z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd žalovaného zaviazal k zaplateniu úroku z omeškania od 20.01.2019, teda deň nasledujúci po splatnosti tejto sumy.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal nárok na zmluvnú pokutu, keďže žalobca preukázal platné dohodnutie pokuty v nájomnej zmluve a porušenie povinnosti platiť nájomné zo strany žalovaného. Pôvodne vyčíslená pokuta vo výške 6 639,48 EUR bola znížená na sumu 3 839,48 EUR, ktorú si žalobca uplatnil v žalobe. Súd konštatoval, že žalovaný bol v omeškaní s platením nájomného za december 2018 a január 2019 viac ako 30 dní, čo splnilo podmienku pre uplatnenie pokuty.",
+          "key_quotes": [
+            {
+              "quote": "V konaní žalobca preukázal platné dohodnutie zmluvnej pokuty v Nájomnej zmluve, keď zmluvná pokuta presne identifikovala povinnosť zabezpečovanú zmluvou pokutou a tiež porušenie tejto povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "pokuty nemá. Žalobca si totiž uplatňuje nárok na nájomné iba do 15.01.2019, keďže faktúrou č. 2520190001 dobropisoval žalovanému nájomné za dobu od 16.01.2019 do 31.01.2019 v celkovej sume 1.142,28 Eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje zabezpečovací inštitút záväzkového práva, a to či už ju posudzujeme podľa Občianskeho alebo Obchodného zákonníka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Je zrejmé, že k porušeniu povinnosti platiť nájomné a úhrady zo strany žalovaného došlo, pričom až do súčasnosti nie sú zaplatené nájom a úhrady za december 2018 a január 2019",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca si uplatnil úrok z omeškania vo výške 5 % ročne, teda v sadzbe nižšej ako je minimálna sadzba (8 %).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_11_2022_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/11/2022",
+      "decision_date": "12.10.2022",
+      "ecli": "ECLI:SK:KSTN:2022:6119237962.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

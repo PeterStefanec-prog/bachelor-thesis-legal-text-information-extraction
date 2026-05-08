@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10101,
+    "completion_tokens": 2435,
+    "cost_usd": 0.037,
+    "latency_seconds": 9.2,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia zmluvnej pokuty vo výške 1.948,58 Eur s príslušenstvom od odporcu za omeškanie s úhradou kúpnej ceny za dodané liečivé prípravky, zdravotnícke pomôcky a doplnkový sortiment na základe Kúpnej zmluvy č. XX/XXXX. Odporca namietal neplatnosť dohody o zmluvnej pokute a vzniesol započítaciu námietku.",
+      "verdict_summary": "Krajský súd potvrdil rozhodnutie okresného súdu, ktorým bol odporca zaviazaný zaplatiť navrhovateľovi sumu 1.948,58 Eur so zmluvným úrokom z omeškania a nahradiť trovy konania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "liečivé prípravky, zdravotnícke pomôcky a doplnkový sortiment v dohodnutom množstve. Zmluvné strany prehlásili za neoddeliteľnú súčasť kúpnej zmluvy aj VOP predávajúceho, ktoré nie sú samostatne podpísané. Okrem úroku z omeškania, ktorý zmluvné strany dohodli v čl. V. kúpnej zmluvy vo výške 0,1% z neuhradenej splatnej čiastky za každý deň omeškania, dohodli v časti III. VOP pre predaj tovaru označenej ako Kúpna cena a platobné podmienky platenie zmluvnej pokute, výšku ktorej stanovili na 0,05% za každý deň omeškania z dlžnej sumy, t.j. z kúpnej ceny, jej časti alebo inej platby, ak kupujúci na základe faktúry navrhovateľovi vyfakturovanú sumu nezaplatí. Navrhovateľ v konaní tvrdil, že",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% za každý deň omeškania z dlžnej sumy",
+          "evidence": {
+            "quote": "dohodli v časti III. VOP pre predaj tovaru označenej ako Kúpna cena a platobné podmienky platenie zmluvnej pokute, výšku ktorej stanovili na 0,05% za každý deň omeškania z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1948.58,
+            "evidence": {
+              "quote": "Navrhovateľ vyúčtoval odporcovi zmluvnú pokutu vyúčtovaním pod č. XXXXXXXXXX vo výške 1.948,58 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1948.58,
+            "evidence": {
+              "quote": "okresný súd správne zistil skutkový stav a vec správne právne posúdil, keď odporcu zaviazal na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania v dohodnutej výške.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1% denne",
+          "evidence": {
+            "quote": "Napadnutým rozhodnutím uložil okresný súd odporcovi povinnosť zaplatiť navrhovateľovi sumu 1.948,58 Eur s 0,1% úrokom z omeškania denne z tejto sumy od 25.05.2013 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "okresný súd správne zistil skutkový stav a vec správne právne posúdil, keď odporcu zaviazal na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania v dohodnutej výške.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd potvrdil, že zmluvná pokuta bola platne dohodnutá v obchodných podmienkach, ktoré boli neoddeliteľnou súčasťou kúpnej zmluvy a odporcovi boli známe. Odporca svoj záväzok zaplatiť kúpnu cenu v lehote splatnosti nesplnil. Súd tiež zamietol započítaciu námietku odporcu ako neurčitú a nejednoznačnú. Výška úroku z omeškania bola považovaná za primeranú a nie v rozpore s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "navrhovateľ sa svojim návrhom domáha voči odporcovi zaplatenia zmluvnej pokuty dôvodne, pretože odporca 1/ svoj záväzok z Kúpnej zmluvy č. XX/XXXX. uzavretej medzi ním a navrhovateľom, a to zaplatiť za ním prevzaté liečivé prípravky, zdravotnícke pomôcky a doplnkový sortiment kúpnu cenu v lehote splatnosti nesplnil.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podľa názoru okresného súdu bol platne dohodnutý nielen úrok z omeškania, a to v čl. 5 kúpnej zmluvy vo výške 0,1% z neuhradenej splatnej čiastky za každý deň omeškania, ale aj zmluvná pokuta, ktorej výška 0,05% za každý deň omeškania z dlžnej sumy bola dohodnutá v časti III. VOP pre predaj tovaru.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "okresný súd po preskúmaní veci dospel správne aj k záveru, že započítacia námietka odporcu je právnym úkonom absolútne neplatným s poukazom na § 37 ods.1 OZ, pretože je neurčitá a nejednoznačná.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Takto dohodnutú výšku úroku z omeškania nepovažoval preto súd za dohodnutú v rozpore s dobrými mravmi a ani s poctivým obchodným stykom.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca 1/ svoj záväzok z Kúpnej zmluvy č. XX/XXXX. uzavretej medzi ním a navrhovateľom, a to zaplatiť za ním prevzaté liečivé prípravky, zdravotnícke pomôcky a doplnkový sortiment kúpnu cenu v lehote splatnosti nesplnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nárok na zaplatenie zmluvnej pokuty pritom vzniká popri nároku na zaplatenie zákonných úrokov, prípadne úrokov, na platení ktorých sa zmluvné strany dohodli. Zákon preto nevylučuje možnosť dohodnúť zmluvnú pokutu za omeškanie s platením peňažného záväzku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Navyše navrhovateľ poskytol odporcovi na zaplatenie kúpnych cien dlhšiu lehotu splatnosti než je obvyklá, a to 4 až 5 mesiacov oproti bežnej 30-dňovej lehote.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_2"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_20_2016_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/20/2016",
+      "decision_date": "10.03.2016",
+      "ecli": "ECLI:SK:KSBB:2016:6713210429.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9569,
+    "completion_tokens": 3051,
+    "cost_usd": 0.0425,
+    "latency_seconds": 11.94,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za poskytnuté telekomunikačné služby a zmluvnej pokuty. Žalovaný neuhradil faktúry za internetové pripojenie a dátové spojenia a predčasne ukončil zmluvný vzťah.",
+      "verdict_summary": "Krajský súd zmenil rozsudok prvoinštančného súdu a priznal žalobcovi sumu 199 eur so súvisiacim úrokom z omeškania, ako aj plnú náhradu trov konania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "150 eur",
+          "evidence": {
+            "quote": "nárok na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 150,
+            "evidence": {
+              "quote": "nárok na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 150,
+            "evidence": {
+              "quote": "vyhovel žalobcovi aj čo do nároku na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Konajúci súd nezistil žiadny dôvod pre využitie moderačného práva v zmysle § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 150 eur za nevrátenie telekomunikačného zariadenia. Súd nezistil žiadny dôvod na využitie moderačného práva, a preto priznal pokutu v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "Konajúci súd nezistil žiadny dôvod pre využitie moderačného práva v zmysle § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "faktúrou č. 20110574 zo dňa 09.06.2011",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "199 eur",
+          "evidence": {
+            "quote": "len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 199,
+            "evidence": {
+              "quote": "V časti nároku na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, súd prvej inštancie žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 199,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,25 % ročne",
+          "evidence": {
+            "quote": "Žalovanému vznikla povinnosť v zmysle cit. ust. zákona zaplatiť zo sumy 199 eur aj úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol nárok na zmluvnú pokutu 199 eur, pretože dospel k záveru, že nebol naplnený dohodnutý zmluvný titul pre jej uplatnenie. Odvolací súd však zistil, že žalovaný porušil záväzok zotrvať v zmluvnom vzťahu počas dohodnutej doby viazanosti 24 mesiacov, čím boli splnené podmienky pre uplatnenie zmluvnej pokuty. Odvolací súd preto zmenil rozhodnutie prvoinštančného súdu a priznal žalobcovi zmluvnú pokutu v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "V časti nároku na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, súd prvej inštancie žalobu zamietol, nakoľko dospel k záveru, že pre jej uplatnenie nebol naplnený dohodnutý zmluvný titul.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V konaní nebolo sporné, že hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.rate_definition"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_57_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/57/2015",
+      "decision_date": "13.04.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1613203938.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

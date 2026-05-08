@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9359,
+    "completion_tokens": 1858,
+    "cost_usd": 0.008,
+    "latency_seconds": 26.23,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za dielo a príslušenstva, konkrétne úrokov z omeškania a zmluvnej pokuty vo výške 240 eur za oneskorenú úhradu faktúry. Žalovaný namietal, že dohoda o zmluvnej pokute nebola platne uzavretá, keďže všeobecné obchodné podmienky obsahujúce túto pokutu mu neboli riadne doručené ani podpísané.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na úroky z omeškania, ale zamietol nárok na zaplatenie zmluvnej pokuty z dôvodu neplatnosti dohody o nej."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie po vykonanom dokazovaní dospel k záveru, že nárok na zaplatenie zmluvnej pokuty nebol oprávnený."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "výška zmluvnej pokuty za obdobie od 15.12.2012 do zaplatenia vo výške 240,- eur"
+            },
+            "value": 240
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca za vykonanie diela vystavil žalovanému faktúru č. 112017 na sumu 1.966,16 eur"
+            },
+            "value": 1966.16
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Úroky z omeškania súd prvej inštancie priznal s poukazom na § 3 ods. 1 Nariadenia vlády č. 87/1995 Zb. a to vo výške 11,30 eur"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Keďže žalovaný sa dostal s úhradou uvedenej faktúry do omeškania, vzniklo podľa žalobcu v zmysle čl. III bod 8 Všeobecných obchodných podmienok žalobcu právo na zaplatenie žalobcovi dohodnutých úrokov z omeškania a zmluvnej pokuty"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Všeobecné obchodné podmienky žalobcu sa tak nestali súčasťou písomnej zmluvy o dielo a preto prvoinštančný súd žalobný návrh na zaplatenie zmluvnej pokuty vo výške 240,- eur zamietol."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "podľa §§ 300 až 302 Obchodného zákonníka v spojení s § 544 ods. 2 Občianskeho zákonníka zmluvnú pokutu možno dojednať len písomne a v dojednaní musí byť určená výška pokuty alebo určený spôsob jej určenia."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca v konaní nepreukázal, že jeho všeobecné obchodné podmienky, ktorých súčasťou bolo dojednanie o zmluvnej pokute, boli osobitne (okrem objednávky) podpísané konajúcou osobou, teda žalovaným."
+            }
+          ],
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu z dôvodu, že dohoda o nej nebola platne uzavretá v požadovanej písomnej forme. Hoci strany uzavreli zmluvu o dielo podpisom objednávky, všeobecné obchodné podmienky obsahujúce ustanovenie o zmluvnej pokute neboli žalovaným podpísané ani preukázateľne doručené ako príloha. Keďže zákon vyžaduje pre dojednanie zmluvnej pokuty písomnú formu, ktorá zahŕňa podpis konajúcej osoby aj na obchodných podmienkach, ak sú v nich obsiahnuté, súd dospel k záveru, že takéto dojednanie nevyvoláva právne následky."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnej pokuty vo výške 10,- eur za každý deň omeškania"
+          },
+          "type": "fixna_suma_denne",
+          "value_raw": "10,- eur za každý deň omeškania"
+        },
+        "related_claim_ref": "faktúra č. 112017"
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_93_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/93/2016",
+      "decision_date": "26.10.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1713214705.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9622,
+    "completion_tokens": 1171,
+    "cost_usd": 0.0358,
+    "latency_seconds": 22.4,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Messer Tatragas, spol. s.r.o., sa domáhal zaplatenia 16 874,85 EUR s príslušenstvom od žalovaného, GASCENTRUM, s.r.o., na základe tvrdenia, že žalovaný nevrátil prenajaté oceľové fľaše podľa dohodnutých podmienok. Žalobca tvrdil, že žalovaný porušil povinnosť vrátiť fľaše s konkrétnym čiarovým kódom, čo malo za následok vyúčtovanie zmluvných pokút.",
+      "verdict_summary": "Krajský súd v Prešove potvrdil rozsudok súdu prvej inštancie, ktorý žalobu zamietol ako nedôvodnú.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca v konaní nepreukázal, ktorú konkrétnu povinnosť žalovaný porušil, čo je zákonným predpokladom pre priznanie zmluvnej pokuty.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvnú pokutu vo výške podľa cenníka MT platného v čase udelenia súhlasu nájomcu s VOP",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške podľa cenníka MT platného v čase udelenia súhlasu nájomcu s VOP",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 16874.85,
+            "evidence": {
+              "quote": "žalobca domáhal voči žalovanému zaplatenia 16 874,85 EUR s prísl.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Predmetom sporu je nárok žalobcu na zaplatenie nájomného ZP po odstúpení od zmlúv a úroky z omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu, pretože žalobca nepreukázal, že žalovaný porušil konkrétnu povinnosť vrátiť oceľové fľaše s konkrétnym čiarovým kódom. Súd dospel k záveru, že oceľové fľaše boli určené genericky, nie individuálne, a preto neexistovala povinnosť vrátiť presne tie isté fľaše. Odvolací súd potvrdil tento záver a považoval argumentáciu žalobcu za účelovú.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie mal za to, že žalobca v konaní nepreukázal, ktorú konkrétnu povinnosť žalovaný porušil, čo je zákonným predpokladom pre priznanie zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca si uplatňuje zaplatenie tak vysokej sumy bez toho, aby mu vznikla čo i len minimálna ujma.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Koľko fliaš bolo prevzatých, toľko bolo aj vrátených, teda tvrdenie žalobcu, že mu nebolo vrátených 30 kusov fliaš nepovažoval za pravdivé.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.final_awarded:full_doc",
+        "EVIDENCE_NOT_FOUND:pokuta_1.decision:full_doc",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_93_2016_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/93/2016",
+      "decision_date": "26.04.2018",
+      "ecli": "ECLI:SK:KSPO:2018:8515204257.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

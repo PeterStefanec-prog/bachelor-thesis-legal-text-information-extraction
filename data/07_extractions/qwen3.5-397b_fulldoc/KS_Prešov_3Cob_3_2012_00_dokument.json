@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8456,
+    "completion_tokens": 1720,
+    "cost_usd": 0.0073,
+    "latency_seconds": 15.04,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 26,56 eur (po čiastočnom vzetí žaloby späť z pôvodných 128,39 eur) a úrokov z omeškania na základe zmluvy o revolvingovom úvere. Žalovaný bol v omeškaní s platením mesačných splátok, čo viedlo k zročnosti úveru.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý zamietol návrh na zaplatenie zmluvnej pokuty ako neprimeranej a neprijateľnej zmluvnej podmienky, ktorá nebola platne dohodnutá v písomnej forme.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "20 % z dlžnej sumy",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru vo výške 20 % z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 641.96,
+            "evidence": {
+              "quote": "z istiny vo výške 641,96 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 128.39,
+            "evidence": {
+              "quote": "zaplatenie zmluvnej pokuty vo výške 128,39 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd nepriznal žalobcovi nárok na jej plnenie",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6,5 % ročne",
+          "evidence": {
+            "quote": "úroky z omeškania, tieto ustálil vo výške 6,5% ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Vzhľadom na tieto skutočnosti zamietol žalobu v časti týkajúcej sa zaplatenia zmluvnej pokuty vo výške 26,56 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká, pretože predstavuje až jednu pätinu dlžnej sumy, čo je neprijateľná zmluvná podmienka. Odvolací súd dodal, že zmluvná pokuta musí byť podľa § 544 ods. 2 Obč. zák. uzavretá písomne, čo v tomto prípade nebolo dodržané, keďže Obchodné podmienky obsahujúce dohodu o pokute neboli podpísané účastníkmi, hoci tvorili neoddeliteľnú súčasť zmluvy. Nedodržanie písomnej formy vedie k neplatnosti dohody o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "Dospel k záveru, že dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až jednu pätinu dlžnej sumy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "byť potom Obchodné podmienky podpísané účastníkmi zmluvného vzťahu, inak je potom takáto zmluva, ktorá vyžaduje pre svoju platnosť písomnú formu, neplatná, ak takáto forma dodržaná nie je.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd sa zaoberal výškou dohodnutej zmluvnej pokuty a jej primeranosťou vo vzťahu k zabezpečovanej pohľadávke",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "predstavuje až jednu pätinu dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný bol v zmysle Obchodných podmienok v omeškaní s platením viac ako troch splátok",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Obchodné podmienky nie sú podpísané účastníkmi zmluvného vzťahu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_3_2012_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/3/2012",
+      "decision_date": "10.04.2012",
+      "ecli": "ECLI:SK:KSPO:2012:8110220146.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

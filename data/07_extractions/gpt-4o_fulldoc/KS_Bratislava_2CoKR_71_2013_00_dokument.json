@@ -1,0 +1,434 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17575,
+    "completion_tokens": 3292,
+    "cost_usd": 0.0769,
+    "latency_seconds": 73.27,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ TIPL spol. s r.o. sa domáhal určenia pohľadávok prihlásených do konkurzu na majetok úpadcu VUIS NOVA, spol. s r.o., ktoré zahŕňali zmluvnú pokutu za omeškanie úhrady faktúr podľa Zmluvy o dielo. Navrhovateľ tvrdil, že zmluvná pokuta vo výške 0,5 % denne nie je neprimeraná.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava I a vec vrátil na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "prihláška č. 122",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, ak objednávateľ nedodrží dohodnutú lehotu splatnosti, zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "zmluvná pokuta za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2559585.5,
+            "evidence": {
+              "quote": "prihláškou č. 122 pohľadávku v celkovej výške 3.297.639,49 Sk, z toho istinu - zmluvnú pokutu vo výške 2.559.585,5 Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "s úrokmi z omeškania zo zmluvnej pokuty nie je primeraná významu a hodnote zabezpečovanej povinnosti, v dôsledku čoho je v rozpore s dobrými mravmi",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Správca konkurznej podstaty vyššie uvedené pohľadávky prihlásené titulom zmluvnej pokuty poprel čo do výšky a právneho dôvodu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimeranú a v rozpore s dobrými mravmi. Navrhovateľ argumentoval, že výška 0,5 % denne je primeraná, avšak súd sa s týmto názorom nestotožnil. Súd tiež odmietol uplatniť moderačné právo podľa § 301 Obchodného zákonníka, pretože považoval dohodu o zmluvnej pokute za absolútne neplatnú. Odvolací súd zrušil rozhodnutie a vrátil vec na ďalšie konanie, pričom zdôraznil potrebu preskúmať platnosť dohody o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta v požadovanej výške je v rozpore s dobrými mravmi a poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "ročná výška zmluvnej pokuty 182,5 % je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "právu na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania z takejto pokuty v požadovanej výške, t. j. sankcie zo sankcie, nemožno v súlade s § 265 Obchodného zákonníka priznať súdnu ochranu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "prihláška č. 124",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, ak objednávateľ nedodrží dohodnutú lehotu splatnosti, zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "zmluvná pokuta za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1151417.11,
+            "evidence": {
+              "quote": "prihláškou č. 124 pohľadávku v celkovej výške 1.477.467,2 Sk, z toho istinu - zmluvnú pokutu vo výške 1.151.417,11 Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "s úrokmi z omeškania zo zmluvnej pokuty nie je primeraná významu a hodnote zabezpečovanej povinnosti, v dôsledku čoho je v rozpore s dobrými mravmi",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Správca konkurznej podstaty vyššie uvedené pohľadávky prihlásené titulom zmluvnej pokuty poprel čo do výšky a právneho dôvodu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimeranú a v rozpore s dobrými mravmi. Navrhovateľ argumentoval, že výška 0,5 % denne je primeraná, avšak súd sa s týmto názorom nestotožnil. Súd tiež odmietol uplatniť moderačné právo podľa § 301 Obchodného zákonníka, pretože považoval dohodu o zmluvnej pokute za absolútne neplatnú. Odvolací súd zrušil rozhodnutie a vrátil vec na ďalšie konanie, pričom zdôraznil potrebu preskúmať platnosť dohody o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta v požadovanej výške je v rozpore s dobrými mravmi a poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "ročná výška zmluvnej pokuty 182,5 % je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "právu na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania z takejto pokuty v požadovanej výške, t. j. sankcie zo sankcie, nemožno v súlade s § 265 Obchodného zákonníka priznať súdnu ochranu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "prihláška č. 126",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, ak objednávateľ nedodrží dohodnutú lehotu splatnosti, zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "zmluvná pokuta za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 180913.44,
+            "evidence": {
+              "quote": "prihláškou č. 126 pohľadávku v celkovej výške 231.164,03 Sk, z toho istinu - zmluvnú pokutu vo výške 180.913,44 Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "s úrokmi z omeškania zo zmluvnej pokuty nie je primeraná významu a hodnote zabezpečovanej povinnosti, v dôsledku čoho je v rozpore s dobrými mravmi",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Správca konkurznej podstaty vyššie uvedené pohľadávky prihlásené titulom zmluvnej pokuty poprel čo do výšky a právneho dôvodu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimeranú a v rozpore s dobrými mravmi. Navrhovateľ argumentoval, že výška 0,5 % denne je primeraná, avšak súd sa s týmto názorom nestotožnil. Súd tiež odmietol uplatniť moderačné právo podľa § 301 Obchodného zákonníka, pretože považoval dohodu o zmluvnej pokute za absolútne neplatnú. Odvolací súd zrušil rozhodnutie a vrátil vec na ďalšie konanie, pričom zdôraznil potrebu preskúmať platnosť dohody o zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 0,5 % denne je v rozpore s ust. § 39 OZ v spojení s ust. § 311 ObZ",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta v požadovanej výške je v rozpore s dobrými mravmi a poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "ročná výška zmluvnej pokuty 182,5 % je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "právu na zaplatenie zmluvnej pokuty spolu s úrokom z omeškania z takejto pokuty v požadovanej výške, t. j. sankcie zo sankcie, nemožno v súlade s § 265 Obchodného zákonníka priznať súdnu ochranu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_3.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.amounts.final_awarded"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2CoKR_71_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2CoKR/71/2013",
+      "decision_date": "28.08.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1108234551.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

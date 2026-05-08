@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8155,
+    "completion_tokens": 1944,
+    "cost_usd": 0.0296,
+    "latency_seconds": 7.78,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa sa domáhala zaplatenia zmluvnej pokuty vo výške 3 000 € s príslušenstvom od žalovanej za porušenie konkurenčnej doložky v zmluve o finančnom sprostredkovaní. Súd prvej inštancie priznal žalobkyni 600 € a zvyšok žaloby zamietol, pričom zmluvnú pokutu znížil.",
+      "verdict_summary": "Odvolací súd odmietol odvolanie žalobkyne proti výroku I (priznanie 600 €) a zrušil rozsudok súdu prvej inštancie vo výrokoch II a III (zamietnutie zvyšku žaloby a trovy konania), pričom vec vrátil súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zaviazala, že šesť mesiacov po zániku zmluvy nebude vykonávať činnosť v oblasti finančného sprostredkovania a/alebo finančného poradenstva v sektore poistenia alebo zaistenia, ani žiadnu obdobnú činnosť. Za porušenie tejto povinnosti bola v čl. VII ods. 1 zmluvy dohodnutá zmluvná pokuta 3.000 €.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.000 €",
+          "evidence": {
+            "quote": "Za porušenie tejto povinnosti bola v čl. VII ods. 1 zmluvy dohodnutá zmluvná pokuta 3.000 €.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3000,
+            "evidence": {
+              "quote": "o 3.000 € s prísl.",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Napadnutý rozsudok sa zrušuje vo výrokoch II a III a v tomto rozsahu sa vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročným úrokom z omeškania",
+          "evidence": {
+            "quote": "V ďalšom konaní, ktorého predmetom zostáva len suma 2.400 € s 9 % ročným úrokom z omeškania od 29. augusta 2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Napadnutý rozsudok sa zrušuje vo výrokoch II a III a v tomto rozsahu sa vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu na 600 € s odôvodnením, že konkurenčná doložka obmedzuje žalovanú viac než je potrebné a žalobca nepreukázal vznik škody. Odvolací súd však konštatoval, že súd prvej inštancie nesprávne aplikoval § 672a ods. 2 Obch. zák. namiesto § 301 Obch. zák. pre moderáciu zmluvnej pokuty a jeho odôvodnenie bolo vnútorne protirečivé a nedostatočné. Preto odvolací súd zrušil zamietajúcu časť rozsudku a vrátil vec na nové konanie, aby súd prvej inštancie riadne posúdil podmienky moderácie podľa § 301 Obch. zák.",
+          "key_quotes": [
+            {
+              "quote": "Žalobkyňa porušila zákaz konkurencie len počas jedného mesiaca a žalobca nepreukázal konkrétny spôsob porušenia, ani vznik škody. Preto konkurenčnú doložku obmedzil podľa § 672a ods. 2 Obch. zák. a zmluvnú pokutu znížil na 600 €, keďže ju nepovažoval za primeranú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ak potom súd prvej inštancie za použitia ustanovenia § 672a ods. 2 Obch. zák. rozhodoval o znížení (moderácii) zmluvnej pokuty, postupoval spôsobom, aký toto ustanovenie už pojmovo vôbec nepripúšťalo. Naopak, úpravu následkov (dispozície) právnej normy v podobe moderácie zmluvnej pokuty upravovalo ustanovenie § 301 Obch. zák.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Osobitne je potrebné zohľadniť jej funkciu prevenčnú a uhradzovaciu (rozsudok NS SR sp. zn. 2 Cdo 172/2007).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca nepreukázal konkrétny spôsob porušenia, ani vznik škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_43_2019_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/43/2019",
+      "decision_date": "26.11.2019",
+      "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

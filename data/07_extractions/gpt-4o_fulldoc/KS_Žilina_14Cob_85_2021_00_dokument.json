@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 22616,
+    "completion_tokens": 1282,
+    "cost_usd": 0.0694,
+    "latency_seconds": 78.2,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Úrad geodézie, kartografie a katastra SR, sa domáhal zaplatenia sumy 17.131,29 Eur titulom zmluvnej pokuty od žalovaného, Ing. Mariána Bullu, z dôvodu omeškania s odovzdaním IV. etapy diela podľa zmluvy o dielo. Žalobca tvrdil, že žalovaný sa omeškal s odovzdaním diela o 22 týždňov a požadoval zmluvnú pokutu vo výške 5% z ceny za príslušnú etapu spracovania za každý začatý týždeň omeškania.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Námestovo, ktorý žalobu zamietol z dôvodu nedostatku aktívnej vecnej legitimácie žalobcu a neplatnosti dohody o zmluvnej pokute.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak zhotoviteľ nedodrží niektorú z lehôt ukončenia etapy spracovania diela uvedenú v čl. III. tejto zmluvy, je povinný zaplatiť objednávateľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "5% z ceny za príslušnú etapu spracovania za každý začatý týždeň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 5% z ceny za príslušnú etapu spracovania za každý začatý týždeň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 15573.9,
+            "evidence": {
+              "quote": "Cena za IV. etapu diela ROEP pre k.ú. P. predstavuje sumu 15 573,90 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 17131.29,
+            "evidence": {
+              "quote": "žalobca sa domáha zaplatenia sumy 17.131,29 Eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "pričom uplatňuje zmluvnú pokutu, ktorá uvádzanú cenu prevyšuje. 4. Okresný súd uviedol, že obranu žalovaného považuje za dôvodnú. Žalobca svoju aktívnu vecnú legitimáciu vyvodzuje zo zmluvy o prevode práv a",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "žalobca žiadal zaviazať žalovaného na zaplatenie sumy 17.131,29 Eur s úrokom z omeškania 8% ročne od 19.10.2017 do zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "quote": "pričom uplatňuje zmluvnú pokutu, ktorá uvádzanú cenu prevyšuje. 4. Okresný súd uviedol, že obranu žalovaného považuje za dôvodnú. Žalobca svoju aktívnu vecnú legitimáciu vyvodzuje zo zmluvy o prevode práv a",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol žalobu z dôvodu nedostatku aktívnej vecnej legitimácie žalobcu, pretože zmluva o prevode práv a povinností bola uzavretá bez súhlasu žalovaného, čo ju robí neplatnou. Okrem toho, dohoda o zmluvnej pokute bola považovaná za neurčitú, pretože nebolo možné jednoznačne určiť cenu za jednotlivé etapy diela, z ktorej by sa pokuta vypočítala. Súd sa stotožnil s názorom, že zmluvná pokuta nebola dohodnutá určitým a zrozumiteľným spôsobom, čo vedie k jej neplatnosti.",
+          "key_quotes": [
+            {
+              "quote": "pričom uplatňuje zmluvnú pokutu, ktorá uvádzanú cenu prevyšuje. 4. Okresný súd uviedol, že obranu žalovaného považuje za dôvodnú. Žalobca svoju aktívnu vecnú legitimáciu vyvodzuje zo zmluvy o prevode práv a",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "contractual_penalties.associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_85_2021_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/85/2021",
+      "decision_date": "25.11.2021",
+      "ecli": "ECLI:SK:KSZA:2021:5819200497.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

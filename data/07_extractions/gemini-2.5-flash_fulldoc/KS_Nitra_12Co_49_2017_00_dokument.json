@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8792,
+    "completion_tokens": 2154,
+    "cost_usd": 0.0325,
+    "latency_seconds": 10.8,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvných úrokov, úrokov z omeškania, zmluvnej pokuty, nákladov spojených s uplatnením pohľadávky, trov mediačného a rozhodcovského konania a poplatku za upomienky zo zmluvy o úvere, ktorú uzavrel so žalovanou. Súd prvej inštancie žalobu zamietol, pretože úver považoval za bezúročný a bez poplatkov z dôvodu absencie obligatórnych náležitostí zmluvy o spotrebiteľskom úvere a zmluvnú pokutu za neprijateľnú podmienku.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý zamietol žalobu žalobcu v celom rozsahu, a žalovanej nepriznal nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalobca nerozlišuje, či spotrebiteľ porušil svoju povinnosť riadne splácať úver krátko pred ukončením zmluvy alebo hneď na začiatku plnenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "v sume 312 eur",
+          "evidence": {
+            "quote": "Rovnako súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 400,
+            "evidence": {
+              "quote": "na základe ktorej jej poskytol úver 400 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 312,
+            "evidence": {
+              "quote": "Rovnako súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Rovnako súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Uplatnený úrok z omeškania vo výške 8 % z dlžných splátok za obdobie od 26.05.2012 do 13.05.2015 v sume 128,77 eura súd považoval za neopodstatnený, pretože žalovaná na úvere zaplatila o 470 eur viac než mala, čím plne uspokojila pohľadávku žalobcu, vrátane prípadného úroku z omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Rovnako súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur, pretože žalobca nepreukázal existenciu písomnej dohody zmluvných strán o zmluvnej pokute v súlade s ustanovením § 544 Občianskeho zákonníka a § 300 až 302 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu, pretože žalobca nepreukázal písomnú dohodu o zmluvnej pokute. Zmluvná podmienka o pokute bola súčasťou štandardného formulára, ktorý žalovaná nemala možnosť ovplyvniť, a preto nebola individuálne dojednaná a je neplatná. Súd tiež považoval výšku pokuty za neprimerane vysokú vzhľadom na výšku úveru a nezohľadňovala dĺžku riadneho plnenia povinností spotrebiteľa.",
+          "key_quotes": [
+            {
+              "quote": "Rovnako súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur, pretože žalobca nepreukázal existenciu písomnej dohody zmluvných strán o zmluvnej pokute v súlade s ustanovením § 544 Občianskeho zákonníka a § 300 až 302 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Táto zmluvná podmienka s ňou nebola individuálne dojednaná, preto je neplatná. Takáto zmluvná pokuta poškodzuje spotrebiteľa tým, že vôbec nezohľadňuje dĺžku obdobia, po ktorú spotrebiteľ riadne plnil svoje povinnosti zo zmluvy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Okrem toho pokuta v sume 320 eur je neprimerane vysoká sankcia oproti výške samotného úveru.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takáto zmluvná pokuta poškodzuje spotrebiteľa tým, že vôbec nezohľadňuje dĺžku obdobia, po ktorú spotrebiteľ riadne plnil svoje povinnosti zo zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Okrem toho pokuta v sume 320 eur je neprimerane vysoká sankcia oproti výške samotného úveru.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca nerozlišuje, či spotrebiteľ porušil svoju povinnosť riadne splácať úver krátko pred ukončením zmluvy alebo hneď na začiatku plnenia. V oboch prípadoch je spotrebiteľ viazaný rovnakou výškou zmluvnej pokuty, čo súd považoval za neprijateľné.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca v konaní nepreukázal, že ustanovenie o zmluvnej pokute vyhotovené drobným, takmer nečitateľným spôsobom, bolo dojednané individuálne, preto sa v súlade s ustanovením § 53 ods. 2 Občianskeho zákonníka za individuálne dojednanú nepovažuje.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_12Co_49_2017_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "12Co/49/2017",
+      "decision_date": "22.02.2018",
+      "ecli": "ECLI:SK:KSNR:2018:4215216947.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13690,
+    "completion_tokens": 1042,
+    "cost_usd": 0.0446,
+    "latency_seconds": 31.13,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca VERUM, spol. s r.o. Košice uplatnil nárok na zaplatenie 4.401,75 eur titulom zmluvnej pokuty za omeškanie s úhradou nájomného a úhrad za energie a služby podľa Zmluvy o nájme nebytových priestorov uzavretej so žalovaným TV KOŠICE:DNES PRODUCTION. Žalovaný namietal premlčanie časti zmluvnej pokuty a nesprávne vyčíslenie pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 4.396,25 eur a zamietol žalobu v prevyšujúcej časti.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Pre prípad porušenia tejto povinnosti nájomcu (aj iných uvedených v Zmluve o nájme) sa strany dohodli na sankcii - zmluvnej pokute vo výške 0,1 % z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnej pokute vo výške 0,1 % z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4401.75,
+            "evidence": {
+              "quote": "nárok na zaplatenie 4.401,75 eur, titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 4396.25,
+            "evidence": {
+              "quote": "žalobcovi vznikol nárok na dohodnutú zmluvnú pokutu vo výške 4.396,25 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "žalobcovi vznikol nárok na dohodnutú zmluvnú pokutu vo výške 4.396,25 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že žalobca správne uplatnil nárok na zmluvnú pokutu za omeškanie s úhradou nájomného a úhrad za energie a služby podľa Zmluvy o nájme. Žalobca zohľadnil premlčanie pri faktúrach VS 00551704 a VS 00551705 a uplatnil pokutu za obdobie od 27.4.2017 do úhrady. Súd zamietol časť žaloby o 5,50 eur, pretože sa týkala administratívnych poplatkov, na ktoré sa dohoda o zmluvnej pokute nevzťahuje.",
+          "key_quotes": [
+            {
+              "quote": "žalobcovi vznikol nárok na dohodnutú zmluvnú pokutu vo výške 4.396,25 eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_35_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/35/2023",
+      "decision_date": "08.08.2023",
+      "ecli": "ECLI:SK:KSKE:2023:6121310260.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

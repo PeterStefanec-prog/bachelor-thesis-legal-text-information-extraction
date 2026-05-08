@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13358,
+    "completion_tokens": 2132,
+    "cost_usd": 0.0102,
+    "latency_seconds": 27.22,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 10.627,15 eur za dodávku elektriny, pričom súčasťou tejto sumy bola aj položka 5.339,66 eur, ktorú žalovaný označoval za neprimeranú zmluvnú pokutu za prekročenie rezervovanej kapacity. Žalovaný namietal, že ide o jednostrannú zmenu tarify a požiadal o zníženie tejto pokuty podľa § 301 Obchodného zákonníka.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobe vyhovel v celom rozsahu. Súd konštatoval, že sporná suma nie je zmluvnou pokutou, ale refakturáciou sankčného poplatku za nedodržanie technických podmienok distribúcie, preto nie je miesto na jej súdne zníženie.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 3021060538, položka nedodržanie technických podmienok distribúcie",
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "nedodržanie technických podmienok distribúcie - prekročenie maximálnej rezervovanej kapacity",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "jednotková cena 118,659000 za 30 dní prekročenia maximálnej rezervovanej kapacity v množstve 45 kW",
+          "evidence": {
+            "quote": "za 30 dní prekročenia maximálnej rezervovanej kapacity v množstve 45 kW s jednotkovou cenou 118,659000",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5339.66,
+            "evidence": {
+              "quote": "Žalovaný nesúhlasil ani s uplatneným nárokom žalobcu na zmluvnú pokutu vo výške 5.339,66 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5339.66,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto žalobe vyhovel v celom rozsahu.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "Žalovaný je povinný zaplatiť žalobcovi 10.627,15 eur s 9 % úrokom z omeškania ročne zo sumy 10.627,15 eur od 27.7.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "táto suma nepredstavuje zmluvnú pokutu, ktorú by mohol súd v rámci svojho moderačného práva zmluvnej pokuty znížiť. Súd z vykonaného dokazovania mal preukázané, že medzi stranami sporu nedošlo k dojednaniu zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že namietaná suma 5.339,66 eur nie je zmluvnou pokutou v zmysle § 301 Obchodného zákonníka, ale predstavuje refakturáciu sankčného poplatku za prekročenie maximálnej rezervovanej kapacity, ktorý vyúčtovala distribučná spoločnosť. Keďže medzi stranami nedošlo k dojednaniu zmluvnej pokuty, súd nemôže využiť svoje moderačné právo na zníženie tejto sumy. Nárok bol preukázaný podkladmi od nezávislej tretej strany (Stredoslovenská distribučná a.s.) a žalovaný mal povinnosť uhradiť náklady súvisiace s nedodržaním technických podmienok distribúcie.",
+          "key_quotes": [
+            {
+              "quote": "Predmetný nárok žalobcu 5.339,66 eur uplatnený v tomto konaní nie je zmluvnou pokutou, ale refakturáciou sankčného poplatku za prekročenie maximálnej rezervovanej kapacity od distribučnej spoločnosti Stredoslovenská distribučná a.s.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Vyfakturovaná položka vo výške 5.339,66 eur nemá v žiadnom prípade charakter zmluvnej pokuty, ale ide o sumu za nedodržanie technických podmienok distribúcie",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca uviedol, že všetky záväzky za distribučné služby Stredoslovenskej distribučnej a.s. vrátane platieb za nedodržanie technických podmienok distribúcie a to prekročenie maximálnej rezervovanej kapacity u žalovaného, uhradil pre Stredoslovenskú distribučnú a.s.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný mal podľa rozhodnutia Úrad regulácie sieťových odvetví z 2.12.2019 povinnosť zaslať do 15.12. predchádzajúceho kalendárneho roka žiadosť o pridelenie režimu fakturácie rezervovanej kapacity, čo žalovaný nevyužil, čím sám zmaril možnosť navýšenia rezervovanej kapacity",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca žiadnym spôsobom sa nepodieľal na určení výšky uplatnenej pohľadávky ani nameraných hodnôt spotreby elektrickej energie, ale toto vykonala tretia strana - Stredoslovenská distribučná a.s. ako nestranný a nezávislý subjekt",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Penalty reclassified as contractual fee/sanction by court, not subject to §301 moderation",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_148_2022_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/148/2022",
+      "decision_date": "25.01.2023",
+      "ecli": "ECLI:SK:KSKE:2023:7621204916.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

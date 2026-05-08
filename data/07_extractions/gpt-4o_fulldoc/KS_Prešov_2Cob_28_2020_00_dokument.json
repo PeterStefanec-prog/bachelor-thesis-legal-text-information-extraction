@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9652,
+    "completion_tokens": 1063,
+    "cost_usd": 0.0348,
+    "latency_seconds": 22.61,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Arcus International, s.r.o. žiadal zaplatenie zmluvnej pokuty vo výške 25,- eur za každý deň omeškania po márnom uplynutí doby splatnosti daňového dokladu za zhotovené dielo. Žalovaný RetroTatry, spol. s r.o. namietal neprimeranosť pokuty a nesplnenie podmienok zmluvy.",
+      "verdict_summary": "Krajský súd v Prešove potvrdil rozsudok Okresného súdu Poprad, ktorý zaviazal žalovaného zaplatiť zmluvnú pokutu vo výške 82.775,- eur.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "25,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "vo výške 25,- eur za každý deň omeškania po márnom uplynutí doby splatnosti príslušného daňového dokladu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 7891.02,
+            "evidence": {
+              "quote": "Keďže faktúra na sumu 7.891,02 eur bola splatná 15.12.2009",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 87775,
+            "evidence": {
+              "quote": "pričom žalobca si uplatnil iba sumu 87.775,eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 82775,
+            "evidence": {
+              "quote": "zaviazal žalovaného na zaplatenie zmluvnej pokuty vo výške 82.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 7.891,02 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zabezpečovanej povinnosti, pričom dospel k záveru, že dohodnutá zmluvná pokuta je primeraná. Súd prvej inštancie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil primeranosť zmluvnej pokuty s ohľadom na hodnotu a význam zabezpečovanej povinnosti. Zmluvná pokuta bola dohodnutá vo VOP žalobcu a súd ju považoval za primeranú vzhľadom na dĺžku omeškania a výšku neuhradenej ceny za dielo. Súd tiež zohľadnil, že žalobca vykonal všetko pre rýchle ukončenie sporu, ale konanie žalovaného spor predlžovalo.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta je primeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvnou pokutou bola zabezpečená hlavná povinnosť zmluvnej strany, a to zaplatenie ceny diela objednávateľom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom samotná výška neuhradenej ceny za dielo bola značná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konaním žalovaného bol spor predlžovaný",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca má právo popri nároku na úrok z omeškania aj právo na zaplatenie dohodnutej zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca vykonal všetko pre to, aby čím skôr bol predmetný spor ukončený",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_2Cob_28_2020_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "2Cob/28/2020",
+      "decision_date": "25.03.2021",
+      "ecli": "ECLI:SK:KSPO:2021:8719204171.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

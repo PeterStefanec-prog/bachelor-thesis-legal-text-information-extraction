@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21308,
+    "completion_tokens": 1340,
+    "cost_usd": 0.0667,
+    "latency_seconds": 54.26,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca WReality, s.r.o. požadoval od žalovaného EL-Moto s.r.o. zaplatenie sumy 8.942,10 eur vrátane zmluvnej pokuty za omeškanie s platením nájomného a úhrad spojených s nájmom nehnuteľností. Žalovaný namietal započítanie pohľadávky na náhradu škody.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý zaviazal žalovaného zaplatiť žalobcovi sumu 8.942,10 eur vrátane zmluvnej pokuty.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný bol v omeškaní s platením nájomného splatného 08.12.2018 (nájomné a úhrady za december 2018) a v omeškaní s platením nájomného a úhrad splatných 08.01.2019 (nájomné a úhrady za január 2019)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "trojnásobok mesačného nájomného",
+          "evidence": {
+            "quote": "Dohodli sa tiež na povinnosti nájomcu v tomto prípadne zaplatiť žalobcovi zmluvnú pokutu vo výške zodpovedajúcej trojnásobku mesačného nájomného (čl. X.2).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 6639.48,
+            "evidence": {
+              "quote": "Faktúrou č. 19551003 vyúčtoval žalobca žalovanému zmluvnú pokutu za nevyplatenie nájmu v mesiaci december 2018 vo výške 6.639,48 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3839.48,
+            "evidence": {
+              "quote": "pohľadávky žalobcu voči žalovanému v celkovej výške 11.742,10 Eur (faktúra č. 18551068, 18551071, 19551003, 19551012) započítava voči pohľadávke žalovaného z titulu zábezpeky vo výške 2.800,- Eur. Rozdiel vo výške 8.942,10 Eur následne zahŕňa faktúry č. 18551068 na sumu 2.603,16 Eur, č. 18551071 na sumu 1.460,88 Eur, č. 19551012 na sumu 1.038,58 Eur, a časť faktúry č. 19551003 za zmluvnú pokutu vo výške 3.839,48 Eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5 % ročne",
+          "evidence": {
+            "quote": "Žalobca si uplatnil úrok z omeškania vo výške 5 % ročne, teda v sadzbe nižšej ako je minimálna sadzba (8 %).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie sa ďalej zaoberal uplatneným nárokom na zmluvnú pokutu, vyúčtovanú faktúrou č. 19551003 vo výške 6.639,48 Eur. Zmluvná pokuta bola v Nájomnej zmluve dojednaná v čl. X bod 2.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že žalovaný bol v omeškaní s platením nájomného a úhrad, čo zakladalo nárok na zmluvnú pokutu. Zmluvná pokuta bola dohodnutá ako trojnásobok mesačného nájomného. Súd však znížil výšku zmluvnej pokuty na 3.839,48 eur, čo predstavuje časť pôvodne uplatnenej sumy. Súd posúdil platnosť dohody o zmluvnej pokute a konštatoval, že žalobca preukázal porušenie povinnosti žalovaným.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvná pokuta bola v Nájomnej zmluve dojednaná v čl. X bod 2.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje zabezpečovací inštitút záväzkového práva",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_11_2022_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/11/2022",
+      "decision_date": "12.10.2022",
+      "ecli": "ECLI:SK:KSTN:2022:6119237962.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10137,
+    "completion_tokens": 3116,
+    "cost_usd": 0.0112,
+    "latency_seconds": 32.27,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia nedoplatku z leasingovej zmluvy po jej predčasnom ukončení, vrátane zmluvných pokút a náhrady škody. Súd prvého stupňa čiastočne vyhovel nároku na istinu, znížil zmluvnú pokutu na 100 EUR a zamietol nárok na náhradu škody pre nepreukázanie jej vzniku a výšky.",
+      "verdict_summary": "Odvolací súd zrušil napadnutý rozsudok a vrátil vec súdu prvého stupňa na ďalšie konanie, keďže nesprávne aplikoval Obchodný zákonník namiesto priaznivejších ustanovení Občianskeho zákonníka o spotrebiteľských zmluvách.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 0610183551",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "suma vyúčtovaná faktúrou č. 0610183551 vo výške 603,16 € predstavuje zmluvnú pokutu podľa bodu 5.1. a/ VZP za hrubé porušenie dohodnutých zmluvných podmienok, v dôsledku čoho došlo k predčasnému ukončeniu leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "603,16 €",
+          "evidence": {
+            "quote": "suma vyúčtovaná faktúrou č. 0610183551 vo výške 603,16 € predstavuje zmluvnú pokutu podľa bodu 5.1. a/ VZP",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 603.16,
+            "evidence": {
+              "quote": "suma vyúčtovaná faktúrou č. 0610183551 vo výške 603,16 € predstavuje zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 100,
+            "evidence": {
+              "quote": "súd prvého stupňa v odôvodnení uviedol, že znížil požadovanú zmluvnú pokutu podľa § 301 Obchodného zákonníka na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "V tejto sume súd prvého stupňa považoval za zaplatenú aj zmluvnú pokutu 100,- eur s úrokmi z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "č.k. 12C/172/2012-56 takto rozhodol: Odvolací súd napadnutý rozsudok súdu prvého stupňa zrušujea vec mu vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu na 100 EUR podľa § 301 Obchodného zákonníka, keďže odporca dodatočne uhradil dlžné splátky aj s príslušenstvom. Odvolací súd však rozhodnutie zrušil, pretože konštatoval, že ide o spotrebiteľskú zmluvu, na ktorú sa majú aplikovať ustanovenia Občianskeho zákonníka, nie Obchodného zákonníka, ak je to pre spotrebiteľa priaznivejšie. Keďže došlo k nesprávnemu právnemu posúdeniu povahy zmluvy a použitého zákona, vec bola vrátená na nové konanie bez meritórneho rozhodnutia o výške pokuty.",
+          "key_quotes": [
+            {
+              "quote": "súd prvého stupňa v odôvodnení uviedol, že znížil požadovanú zmluvnú pokutu podľa § 301 Obchodného zákonníka na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "lebo napr. pokiaľ ide o plynutie premlčacej doby zhoršenie postavenia spotrebiteľa, vzhľadom na úpravu, ktorý pozná Občiansky zákonník",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "finančné vyúčtovanie zo dňa 9.3.2009",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvná pokuta a úroky z omeškania z dlžného nájomného 104,79 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% denne z dlžnej čiastky",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 104,79 € bola vyúčtovaná v súlade s bodom 2.5.3 Všeobecných zmluvných podmienok (VZP) vo výške 0,1% denne z dlžnej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 104.79,
+            "evidence": {
+              "quote": "zmluvná pokuta a úroky z omeškania z dlžného nájomného 104,79 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "č.k. 12C/172/2012-56 takto rozhodol: Odvolací súd napadnutý rozsudok súdu prvého stupňa zrušujea vec mu vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": "zmluvná pokuta a úroky z omeškania z dlžného nájomného 104,79 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "č.k. 12C/172/2012-56 takto rozhodol: Odvolací súd napadnutý rozsudok súdu prvého stupňa zrušujea vec mu vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Táto zmluvná pokuta bola vyčíslená ako 0,1 % denne z omeškanej sumy. Súd prvého stupňa ju zahrnul do celkového vyúčtovania, ktoré čiastočne uznal za zaplatené. Odvolací súd však celé konanie zrušil pre nesprávne právne posúdenie povahy zmluvy (spotrebiteľská vs. obchodná), preto nebolo o tejto konkrétnej položke meritórne rozhodnuté v zmysle jej primeranosti.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 104,79 € bola vyúčtovaná v súlade s bodom 2.5.3 Všeobecných zmluvných podmienok (VZP) vo výške 0,1% denne z dlžnej čiastky",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_returned_for_retrial",
+        "consumer_contract_misclassified_as_commercial",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[1].amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_4Co_346_2015_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "4Co/346/2015",
+      "decision_date": "19.05.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3112200219.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

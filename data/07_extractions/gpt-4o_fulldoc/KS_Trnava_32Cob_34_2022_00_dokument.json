@@ -1,0 +1,309 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 22794,
+    "completion_tokens": 1987,
+    "cost_usd": 0.0769,
+    "latency_seconds": 46.18,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, PROFI CREDIT Slovakia, s.r.o., sa domáhal zaplatenia sumy 4.147,20 eur spolu so zmluvnou pokutou vo výške 0,1 % denne z jednotlivých splátok úveru, ktorý poskytol žalovanej na základe zmluvy o úvere. Žalovaná nesplácala úver v dohodnutých splátkach.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a priznal žalobcovi nárok na ďalšiu zmluvnú pokutu vo výške 7.784,48 eur.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnej pokuty za porušenie povinnosti žalovanej splácať úver v dohodnutých splátkach",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne z dlžnej sumy",
+          "evidence": {
+            "quote": "v prípade omeškania dlžníka s úhradou splátky, je veriteľ oprávnený požadovať úhradu zmluvnej pokuty vo výške 0,1 % denne z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2800,
+            "evidence": {
+              "quote": "úver vo výške 2.800 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 8484.48,
+            "evidence": {
+              "quote": "maximálnu výšku 8.485 eur dosiahla zmluvná pokuta dňa 5.11.2020.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 7784.48,
+            "evidence": {
+              "quote": "priznal nárok na zaplatenie ďalšej zmluvnej pokuty vo výške 7.784,48 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania zo sumy 4.147,20 eur vo výške 9 % ročne od 06.11.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd pristúpil k zníženiu zmluvnej pokuty uplatnenej žalobcom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu na 700 eur, pretože považoval pôvodnú výšku za neprimerane vysokú vzhľadom na hodnotu a význam zabezpečovanej povinnosti. Odvolací súd však zmenil toto rozhodnutie a priznal žalobcovi ďalšiu zmluvnú pokutu vo výške 7.784,48 eur. Súd zohľadnil, že zmluvná pokuta bola dohodnutá vo výške 0,1 % denne z dlžnej sumy a že žalovaná nesplácala úver v dohodnutých splátkach.",
+          "key_quotes": [
+            {
+              "quote": "súd pristúpil k zníženiu zmluvnej pokuty uplatnenej žalobcom",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní okrem zabezpečovacej funkcie aj funkciu paušalizovanej náhrady škody",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "vznik škody na strane žalobcu nebol v tomto konaní zistený ani preukázaný",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pokiaľ by sa mala žalobcovi priznať zmluvná pokuta vyplývajúca zo zmluvy o úvere, tak by došlo k neadekvátnym majetkovým dôsledkom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaná splátky úveru riadne neuhrádzala",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca má popri zmluvnej pokute aj nárok na úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnej pokuty za porušenie povinnosti žalovanej splácať úver v dohodnutých splátkach",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne z dlžnej sumy",
+          "evidence": {
+            "quote": "v prípade omeškania dlžníka s úhradou splátky, je veriteľ oprávnený požadovať úhradu zmluvnej pokuty vo výške 0,1 % denne z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2800,
+            "evidence": {
+              "quote": "úver vo výške 2.800 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 700,
+            "evidence": {
+              "quote": "zmluvnú pokutu v sume 700 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 700,
+            "evidence": {
+              "quote": "súd žalobcovi priznal zmluvnú pokutu vo výške 700 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania zo sumy 4.147,20 eur vo výške 9 % ročne od 06.11.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd žalobcovi priznal zmluvnú pokutu vo výške 700 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal žalobcovi zmluvnú pokutu vo výške 700 eur, ktorú považoval za primeranú s prihliadnutím na hodnotu zabezpečovanej povinnosti a jej význam. Zmluvná pokuta mala zabezpečiť riadne plnenie splátok úveru zo strany žalovanej.",
+          "key_quotes": [
+            {
+              "quote": "súd žalobcovi priznal zmluvnú pokutu vo výške 700 eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní okrem zabezpečovacej funkcie aj funkciu paušalizovanej náhrady škody",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "vznik škody na strane žalobcu nebol v tomto konaní zistený ani preukázaný",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvná pokuta vo výške 700 eur je primeraná s prihliadnutím na hodnotu zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaná splátky úveru riadne neuhrádzala",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca má popri zmluvnej pokute aj nárok na úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.pomer_k_istine"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_34_2022_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/34/2022",
+      "decision_date": "20.12.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2121200908.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

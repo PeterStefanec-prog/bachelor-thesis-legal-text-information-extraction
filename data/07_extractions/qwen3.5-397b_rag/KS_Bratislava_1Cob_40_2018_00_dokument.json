@@ -1,0 +1,190 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 10033,
+      "completion_tokens": 781,
+      "cost_usd": 0.0057,
+      "latency_seconds": 21.12,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 7824,
+      "completion_tokens": 1404,
+      "cost_usd": 0.0063,
+      "latency_seconds": 23.24,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za oneskorenú úhradu pohľadávky z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Žalovaný namietal neplatnosť dohody o zmluvnej pokute pre jej neurčitosť a tvrdil, že odstúpením od zmluvy zanikli všetky práva a povinnosti.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi zmluvnú pokutu vo výške 0,2 % za každý deň omeškania z rôznych súm v určených obdobiach.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nájomca povinný zaplatiť zmluvnú pokutu za oneskorenú platbu vo výške 0,2% z dlžnej sumy za každý deň omeškania",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2% za každý deň omeškania",
+          "evidence": {
+            "quote": "žalovaného zaviazal zaplatiť žalobcovi zmluvnú pokutu vo výške 0,2% za každý deň omeškania",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 9% ročne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_1"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8",
+              "quote": "Súd nedospel k záveru, že by uplatnenú zmluvnú pokutu bolo potrebné znížiť v zmysle § 301 Obchodného zákonníka, nakoľko žalovaný bol v čase podpisu zmluvy podnikateľským subjektom, používal predmet zmluvy na podnikanie a pri podpise zmluvy si bol, resp. musel byť vedomý jednotlivých ustanovení zmluvy, vrátane tých, ktoré sa týkali dohodnutej zmluvnej pokuty."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8",
+                "quote": "Z rovnakých dôvodov súd nedospel k presvedčeniu, že by zmluvné ustanovenia týkajúce sa zmluvnej pokuty boli v rozpore so zásadami poctivého obchodného styku."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8",
+                "quote": "žalovaný bol v čase podpisu zmluvy podnikateľským subjektom, používal predmet zmluvy na podnikanie a pri podpise zmluvy si bol, resp. musel byť vedomý jednotlivých ustanovení zmluvy, vrátane tých, ktoré sa týkali dohodnutej zmluvnej pokuty. Ak s výškou zmluvnej pokuty nesúhlasil, mal možnosť predmetnú zmluvu v predloženej podobe neuzavrieť."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_11",
+                "quote": "žalovaný by okrem úroku z omeškania mal platiť aj zmluvnú pokutu vo výške 73% ročne z dlžnej sumy."
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8",
+              "quote": "Súd nedospel k záveru, že by uplatnenú zmluvnú pokutu bolo potrebné znížiť v zmysle § 301 Obchodného zákonníka, nakoľko žalovaný bol v čase podpisu zmluvy podnikateľským subjektom, používal predmet zmluvy na podnikanie a pri podpise zmluvy si bol, resp. musel byť vedomý jednotlivých ustanovení zmluvy, vrátane tých, ktoré sa týkali dohodnutej zmluvnej pokuty."
+            },
+            {
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8",
+              "quote": "Z rovnakých dôvodov súd nedospel k presvedčeniu, že by zmluvné ustanovenia týkajúce sa zmluvnej pokuty boli v rozpore so zásadami poctivého obchodného styku."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že nie sú dôvody na zníženie zmluvnej pokuty podľa § 301 Obchodného zákonníka, keďže žalovaný bol podnikateľom konajúcim v rámci svojej podnikateľskej činnosti a pri uzatváraní zmluvy si bol vedomý jej podmienok vrátane výšky pokuty. Súd zdôraznil, že ak žalovaný s výškou pokuty nesúhlasil, mal možnosť zmluvu neuzavrieť. Odvolací súd sa stotožnil s týmto právnym posúdením a potvrdil rozsudok, ktorým bol nárok na zaplatenie pokuty priznaný v plnom rozsahu."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_40_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/40/2018",
+      "decision_date": "13.06.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1211204153.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

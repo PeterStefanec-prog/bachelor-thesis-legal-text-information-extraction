@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12059,
+    "completion_tokens": 2097,
+    "cost_usd": 0.0096,
+    "latency_seconds": 20.73,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 25 % z nevyplatenej sumy za každý kvartál omeškania, ktorú vyčíslil na sumu 1 520,98 eur po čiastočnej úhrade istiny žalovaným. Žalovaný namietal výšku pokuty a jej zmluvný základ, keďže podľa jeho názoru mala ísť o jednorazovú sankciu 25 %, nie opakujúcu sa za každý kvartál.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý vyhovel žalobe v celom uplatnenom rozsahu a priznal žalobcovi zmluvnú pokutu vo výške 760,49 eur (zvyšok po čiastočnom plnení a späťvzatí časti žaloby). Súd nepoužil moderačné právo na zníženie pokuty, keďže ju považoval za primeranú vzhľadom na dlhodobé omeškanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Faktúry č. XXXX/XXX a č. XXXX/XXX (istina 356,00 eur)",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný fakturovanú sumu neuhradil v lehote splatnosti, ani po jej uplynutí, neučinil tak ani po ukončení záväzkového vzťahu 31.3.2007.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "25 % z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 25% z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 356.0,
+            "evidence": {
+              "quote": "žalobca sa podanou žalobou domáhal zaplatenie 356,00 eur s prísl.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1520.98,
+            "evidence": {
+              "quote": "trval na zaplatení zmluvnej pokuty vo výške 1.520,98 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 760.49,
+            "evidence": {
+              "quote": "V časti zmluvnej pokuty žalobe vyhovel v rozsahu 50 % uplatneného nároku na zaplatenie zmluvnej pokuty, t.j. vo výške 760,49 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14,25 % ročne a 14,50 % ročne",
+          "evidence": {
+            "quote": "vrátane úroku z omeškania vo výške 14,25 % ročne zo sumy 159,33 eur od 20.10.2006 do zaplatenia a vo výške 14,50 % ročne zo sumy 189,60 eur od 20.1.2007 do zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na uvedené dospel k záveru, že uplatnená zmluvná pokuta aj v zostávajúcej sume 760,49 eur je dôvodná, a preto žalobe v uplatnenom rozsahu vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa pôvodne znížil nárok na 50 %, no po doplnenom dokazovaní a zrušení rozsudku odvolacným súdom dospel k záveru, že pokuta je primeraná. Dôvodom bolo dlhodobé omeškanie žalovaného (od roku 2007 do 2011), pričom zníženie by zvýhodňovalo dlžníka a spochybňovalo funkciu zmluvnej pokuty. Súd zdôraznil, že ide o obchodný vzťah a dlžník si plnenie nesporne oneskoril o viac ako 4 roky.",
+          "key_quotes": [
+            {
+              "quote": "Zjavne nie je v tomto prípade možné poukázať na neprimeranosť zmluvnej pokuty, pretože v takom prípade by záver súdu zrejme zvýhodnil dlžníka - žalovaného oproti veriteľovi žalobcovi a znamenal by spochybnenie funkcie, ktorú má zmluvná pokuta plniť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "uplatnená zmluvná pokuta aj v zostávajúcej sume 760,49 eur je dôvodná, a preto žalobe v uplatnenom rozsahu vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "znamenal by spochybnenie funkcie, ktorú má zmluvná pokuta plniť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Doplneným dokazovaním súdu nebola zistená žiadna iná ujma, ktorá by bola žalobcovi včasným neuhradením sumy 356,00 eur vznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "s ohľadom na výšku ceny zabezpečovanej povinnosti 356,00 eur, ako aj čas, ktorý trvalo omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dôsledkom dlhodobého omeškania žalovaného so zaplatením dlžnej sumy (od roku 2007 do roku 2011, kedy bola vykonaná úhrada).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca žalovaného však nevyzval na dobrovoľnú úhradu ani pred podaním žaloby.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_224_2014_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/224/2014",
+      "decision_date": "31.08.2015",
+      "ecli": "ECLI:SK:KSKE:2015:7710213676.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -14,7 +14,7 @@ Extract the following information and return it as JSON.
 
 === WHAT TO EXTRACT ===
 
-Return a JSON object with this exact structure (do NOT extract meta fields like court name, case number, date — those are already extracted separately by regex):
+Return a JSON object with this exact structure (do NOT extract meta fields like court name, case number, date - those are already extracted separately by regex):
 
 {{
   "case_context": {{

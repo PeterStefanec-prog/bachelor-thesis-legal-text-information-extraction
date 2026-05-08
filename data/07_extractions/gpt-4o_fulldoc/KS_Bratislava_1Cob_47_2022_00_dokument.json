@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 37843,
+    "completion_tokens": 1234,
+    "cost_usd": 0.1069,
+    "latency_seconds": 74.95,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca LiNi s.r.o. sa domáhal zaplatenia sumy 8.897,05 eur s príslušenstvom od žalovaného EURO-ŠTUKONZ a.s. na základe dohody o urovnaní. Žalovaný poprel pohľadávky a namietal ich nesplatnosť.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý žalobu žalobcu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ktorú mal nadobudnúť od spoločnosti EURO-BUILDING, a.s. zmluvou o postúpení pohľadávok č. 1/2014. Spolu si tak žalovaný uplatňoval 26.219,15 eur. Aj pri akceptácii všetkých pohľadávok uplatnených žalovaným voči žalobcovi a zohľadnení zádržného neexistoval žiaden právny dôvod pre nevyplatenie sumy 115.658,37 eur, pričom ani sám žalovaný v priebehu konania neuhradenie svojich záväzkov v uvedenej výške nijako nezdôvodnil.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur za nedodržanie termínu dodávky",
+          "evidence": {
+            "quote": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur za nedodržanie termínu dodávky, ktorá bola žalovaným fakturovaná faktúrou č. 200400091.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 6502.65,
+            "evidence": {
+              "quote": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur za nedodržanie termínu dodávky",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu žalobcu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Za dôvodné žalovaný nepovažoval ani uplatnenie úrokov z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvej inštancie žalobu žalobcu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu žalobcu, pretože nebolo preukázané, že by žalovaný bol v omeškaní s plnením svojich záväzkov. Žalobca nepreukázal, že by došlo k odstráneniu vád diela, čo bolo podmienkou pre splatnosť zádržného. Súd tiež konštatoval, že dohoda o urovnaní bola platná a účinná, a preto žalobca nemal nárok na uplatnenie zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie žalobu žalobcu ako nedôvodnú zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie v pôvodnom rozhodnutí uzavrel, že vykonaným dokazovaním bolo preukázané, že dohoda o urovnaní bola uzatvorená v rozpore so zákonom, morálkou, resp. s pravidlami slušnosti, pričom žalobca bol do tohto úkonu nútený.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "tohto rozsudku.\" 6. Žalobca v ďalších svojich vyjadreniach uviedol, že nikdy nepripomienkoval a slobodne nesúhlasil s uzatvorením dohody o urovnaní, pričom dohodu žalobcovi nanútil žalovaný, ktorý finančne vydieral",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_47_2022_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/47/2022",
+      "decision_date": "30.03.2023",
+      "ecli": "ECLI:SK:KSBA:2023:1215211088.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

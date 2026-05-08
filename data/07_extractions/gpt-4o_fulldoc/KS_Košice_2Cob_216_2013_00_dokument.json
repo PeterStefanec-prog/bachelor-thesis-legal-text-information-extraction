@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10458,
+    "completion_tokens": 1007,
+    "cost_usd": 0.0362,
+    "latency_seconds": 54.91,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca U. D. s.r.o. žiadal zaplatenie 96.846,02 eur za neuhradenú zmluvnú pokutu podľa Zmluvy o dielo č. XX/XX. Tvrdil, že žalovaný H., s.r.o. nedodržal dohodnuté termíny odovzdania diela, čo malo za následok omeškanie a vznik nároku na zmluvnú pokutu.",
+      "verdict_summary": "Krajský súd v Košiciach potvrdil rozsudok prvého stupňa, ktorým bola žaloba zamietnutá.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "pri nedodržaní postupu prác podľa vzájomne odsúhlaseného harmonogramu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "0,5% z odplaty za vykonanie časti diela za každý deň omeškania",
+          "evidence": {
+            "quote": "má objednávateľ nárok na uplatnenie zmluvnej pokuty vo výške 0,5% z odplaty za vykonanie časti diela za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 96846.02,
+            "evidence": {
+              "quote": "žalobca žalobou doručenou súdu dňa 10.6.2010 žiadal, aby súd zaviazal žalovaného zaplatiť mu 96.846,02 eur titulom neuhradenia vyúčtovanej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa rozsudkom žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvého stupňa dospel teda k záveru, že žalobcom uplatnený nárok na zaplatenie zmluvnej pokuty nie je v súlade s ustanovením čl. XI bodu 8. zmluvy o dielo",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že žalobca nepreukázal správnosť výpočtu zmluvnej pokuty podľa čl. XI bodu 8 zmluvy. Žalobca neupresnil výpočet pokuty ani po výzve súdu. Súd dospel k záveru, že výpočet pokuty bol v rozpore s dohodnutým spôsobom určenia pokuty v zmluve, preto žalobu zamietol.",
+          "key_quotes": [
+            {
+              "quote": "Žalobca ani po výzve súdu neupresnil výpočet zmluvnej pokuty a nepreukázal súdu jej uplatnenie a vyčíslenie v zmysle čl. XI bodu 8. zmluvy.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_216_2013_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/216/2013",
+      "decision_date": "20.06.2014",
+      "ecli": "ECLI:SK:KSKE:2014:7110215450.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

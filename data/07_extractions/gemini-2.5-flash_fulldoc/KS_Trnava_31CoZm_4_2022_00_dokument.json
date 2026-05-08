@@ -1,0 +1,314 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19423,
+    "completion_tokens": 3505,
+    "cost_usd": 0.0593,
+    "latency_seconds": 13.8,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil nárok na zaplatenie zmenkovej sumy 49 800,96 eura s príslušenstvom voči žalovanému, ktorý bol avalistom na blankozmenke. Zmenka mala zabezpečovať splatenie úveru poskytnutého vystaviteľovi zmenky, spoločnosti SGW AGENCY & LOGISTIC s.r.o.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi zmenkovú sumu 49 800,96 eura spolu s úrokom z omeškania a náhradu trov konania. Odvolanie žalovaného proti výroku o zamietnutí návrhu na prerušenie konania bolo odmietnuté.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade nesplnenia akejkoľvek povinnosti klienta vyplývajúce z úverovej zmluvy požadovať zaplatenie zmluvnej pokuty vo výške 200 eur za každú nesplnenú povinnosť riadne a včas",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "200 eur za každú nesplnenú povinnosť riadne a včas",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 200 eur za každú nesplnenú povinnosť riadne a včas",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 400.0,
+            "evidence": {
+              "quote": "ostatné zmluvné pokuty vo výške 400 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 400.0,
+            "evidence": {
+              "quote": "V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročne zo sumy 49.635,51 eura",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi zmenkovú sumu 49.800,96 eura spolu s úrokom z omeškania 6 % ročne zo sumy 49.635,51 eura od 30.8.2019 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zmluvnej pokuty. V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a preto nepoužil svoje moderačné právo na zníženie uplatnenej",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie nepovažoval zmluvnú pokutu za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Konštatoval, že zmluvná pokuta zabezpečovala plnenie povinnosti dlžníka platiť splátky úveru vo výške 104 574,40 eura. Súd dospel k záveru, že priznaná zmluvná pokuta nevedie k neprimeranému zisku žalobcu ani k neprimeranému hospodárskemu poškodeniu žalovaného, a je primeraná a dostatočnou sankciou.",
+          "key_quotes": [
+            {
+              "quote": "V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a preto nepoužil svoje moderačné právo na zníženie uplatnenej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Uvedená zmluvná pokuta je primeraná s prihliadnutím na hodnotu zabezpečovanej povinnosti, ako aj jej význam a zároveň je dostatočnou sankciou žalovaného za to, že z jeho strany nedošlo k riadnemu plneniu povinností.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dohodnutá zmluvná pokuta zabezpečovala plnenie povinnosti dlžníka platiť splátky úveru, ktorý bol dlžníkovi poskytnutý vo výške 104.574,40 eura",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Vznik škody teda nie je podmienkou na uplatnenie moderačného práva, ale je okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie mal za to, že takto priznaná zmluvná pokuta vyplývajúca zo zmluvy o úvere, nevedie k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu a zároveň k neprimeranému hospodárskemu poškodeniu žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Uvedená zmluvná pokuta je primeraná s prihliadnutím na hodnotu zabezpečovanej povinnosti, ako aj jej význam a zároveň je dostatočnou sankciou žalovaného za to, že z jeho strany nedošlo k riadnemu plneniu povinností.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca pri predaji predmetného vozidla postupoval v súlade do zmluvnými podmienkami.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu podľa bodu 5.1. písm. c) podmienok vo výške 14.235,23 eura, pričom ako vyplýva z predmetného bodu, táto zmluvná pokuta predstavuje výšku zodpovedajúcu súčtu všetkých nesplatených splátok podľa splátkového kalendára po odpočítaní zostatku istiny a prefakturovaného poistného.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "výšku zodpovedajúcu súčtu všetkých nesplatených splátok podľa splátkového kalendára po odpočítaní zostatku istiny a prefakturovaného poistného",
+          "evidence": {
+            "quote": "táto zmluvná pokuta predstavuje výšku zodpovedajúcu súčtu všetkých nesplatených splátok podľa splátkového kalendára po odpočítaní zostatku istiny a prefakturovaného poistného.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 104574.4,
+            "evidence": {
+              "quote": "úveru, ktorý bol dlžníkovi poskytnutý vo výške 104.574,40 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 14235.23,
+            "evidence": {
+              "quote": "zmluvnú pokutu podľa bodu 5.1. písm. c) podmienok vo výške 14.235,23 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 14235.23,
+            "evidence": {
+              "quote": "V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročne zo sumy 49.635,51 eura",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi zmenkovú sumu 49.800,96 eura spolu s úrokom z omeškania 6 % ročne zo sumy 49.635,51 eura od 30.8.2019 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zmluvnej pokuty. V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a preto nepoužil svoje moderačné právo na zníženie uplatnenej",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie nepovažoval zmluvnú pokutu za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Konštatoval, že zmluvná pokuta zabezpečovala plnenie povinnosti dlžníka platiť splátky úveru vo výške 104 574,40 eura. Súd dospel k záveru, že priznaná zmluvná pokuta nevedie k neprimeranému zisku žalobcu ani k neprimeranému hospodárskemu poškodeniu žalovaného, a je primeraná a dostatočnou sankciou.",
+          "key_quotes": [
+            {
+              "quote": "V prejednávanej veci si žalobca uplatnil zmluvnú pokutu vo výške 14.235,23 eura a 400 eur, pričom takúto zmluvnú pokutu súd nepovažoval za neprimerane vysokú s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a preto nepoužil svoje moderačné právo na zníženie uplatnenej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Uvedená zmluvná pokuta je primeraná s prihliadnutím na hodnotu zabezpečovanej povinnosti, ako aj jej význam a zároveň je dostatočnou sankciou žalovaného za to, že z jeho strany nedošlo k riadnemu plneniu povinností.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dohodnutá zmluvná pokuta zabezpečovala plnenie povinnosti dlžníka platiť splátky úveru, ktorý bol dlžníkovi poskytnutý vo výške 104.574,40 eura",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Vznik škody teda nie je podmienkou na uplatnenie moderačného práva, ale je okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie mal za to, že takto priznaná zmluvná pokuta vyplývajúca zo zmluvy o úvere, nevedie k neprimeranému zisku vo vzťahu k majetkovej ujme na strane žalobcu a zároveň k neprimeranému hospodárskemu poškodeniu žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Uvedená zmluvná pokuta je primeraná s prihliadnutím na hodnotu zabezpečovanej povinnosti, ako aj jej význam a zároveň je dostatočnou sankciou žalovaného za to, že z jeho strany nedošlo k riadnemu plneniu povinností.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca pri predaji predmetného vozidla postupoval v súlade do zmluvnými podmienkami.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_NOT_FOUND:pokuta_1.associated_interest:verdict",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_NOT_FOUND:pokuta_2.associated_interest:verdict",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31CoZm_4_2022_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31CoZm/4/2022",
+      "decision_date": "18.04.2023",
+      "ecli": "ECLI:SK:KSTT:2023:2120207962.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

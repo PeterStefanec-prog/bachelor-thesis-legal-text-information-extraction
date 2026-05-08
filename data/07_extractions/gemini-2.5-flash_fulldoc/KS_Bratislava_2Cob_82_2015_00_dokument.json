@@ -1,0 +1,322 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9945,
+    "completion_tokens": 3846,
+    "cost_usd": 0.0509,
+    "latency_seconds": 16.33,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil nárok na vrátenie poskytnutej zľavy vo výške 67.580,16 EUR a nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR, spolu 135.160,32 EUR, z dôvodu nesplnenia záväzku žalovaného kúpiť minimálne 20 kusov motorových vozidiel LAND ROVER podľa rámcovej kúpnej zmluvy.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok prvostupňového súdu, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 135.160,32 EUR s príslušenstvom a trovy konania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný si svoj záväzok zo zmluvy, ku ktorému sa zaviazal, t. j. že od žalobcu kúpi a prevezie nové osobné motorové vozidlá LAND ROVER v počte minimálne 20 ks a zaplatiť žalobcovi ich kúpnu cenu dohodnutú v Rámcovej zmluve podľa článku VI. Rámcovej zmluvy, nesplnil, nebola medzi účastníkmi sporná.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "vo výške poskytnutej zľavy",
+          "evidence": {
+            "quote": "Zároveň žalobcovi v súlade s článkom VI. bod 8 Rámcovej zmluvy vznikol nárok na zaplatenie zmluvnej pokuty vo výške poskytnutej zľavy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "Súd prvého stupňa mal za to, že podľa zásady \"pacta sunt servanda\" - dohody sa majú plniť, nie sú dané také okolnosti, ktoré by umožnili súdu využiť moderačné oprávnenie a dohodnutú sankciu zmluvnú pokutu znížiť.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "výške 135.160,32 € spolu s úrokom z omeškania vo výške 8,75 % ročne - zo sumy 67.580,16 € od 11.11.2012 do",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa mal za to, že podľa zásady \"pacta sunt servanda\" - dohody sa majú plniť, nie sú dané také okolnosti, ktoré by umožnili súdu využiť moderačné oprávnenie a dohodnutú sankciu zmluvnú pokutu znížiť.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa aj odvolací súd dospeli k záveru, že neboli dané okolnosti pre využitie moderačného oprávnenia na zníženie zmluvnej pokuty. Zmluvná pokuta bola platne dojednaná a plní prevenčnú, reparačnú a sankčnú funkciu. Súd zohľadnil, že žalovaný je podnikateľ, ktorý mal zvážiť riziká. Zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, ako je vplyv na plnenie plánu predaja, sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena.",
+          "key_quotes": [
+            {
+              "quote": "Základnou úlohou v tomto konaní bolo zistiť, či v tomto konkrétnom prípade prichádza do úvahy využitie práva súdu, a to moderačného oprávnenia na zníženie zmluvnej pokuty, ktorú si žalobca ako jeden zo sankčných nárokov v žalobe uplatnil, a to vo výške 67.580,16 EUR.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvého stupňa mal za to, že podľa zásady \"pacta sunt servanda\" - dohody sa majú plniť, nie sú dané také okolnosti, ktoré by umožnili súdu využiť moderačné oprávnenie a dohodnutú sankciu zmluvnú pokutu znížiť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta plní prevenčnú povinnosť, reparačnú a aj sankčnú, keďže predstavuje sankciu pre toho, kto porušil povinnosť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V prejednávanej veci zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, keďže nerealizovaná kúpa dohodnutého minimálneho počtu vozidiel má vplyv na plnenie plánu predaja žalobcu, prípadné sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena voči výrobcovi.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný v odvolaní žiadal o pripustenie možnosti napadnúť rozhodnutie odvolacieho súdu dovolaním vzhľadom na zásadný význam otázky, či konanie navrhovateľa je v rozpore s poctivým obchodným stykom, resp. či je uplatnená zmluvná pokuta neprimeraná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Vzhľadom na charakter sporu má dohodnutá zabezpečovacia sankcia funkciu paušalizovanej náhrady škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "V prejednávanej veci zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, keďže nerealizovaná kúpa dohodnutého minimálneho počtu vozidiel má vplyv na plnenie plánu predaja žalobcu, prípadné sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena voči výrobcovi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Výška zmluvnej pokuty je defacto na úrovni hodnoty 100 % zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný ako podnikateľ podniká vo vlastnom mene a na vlastnú zodpovednosť za účelom dosiahnutia zisku. Keďže podniká o. i. v oblasti kúpa, predaj, prenájom motorových vozidiel bolo na ňom, aby zvážil a minimalizoval riziká pre vzniknutú krízu v oblasti predaja motorových vozidiel a zhodnotil prevzatie záväzku, ku ktorému sa vo vzťahu k žalobcovi zaviazal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "popri dohodnutých sankciách priznal žalobcovi aj úrok z omeškania v zákonom stanovenej výške v súlade s § 365, 369 Obchodného zákonníka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Keďže žalovaný svoj záväzok nesplnil, žalobca oprávnene požadoval od žalovaného vrátenie poskytnutej zľavy pri nákupe 6 ks motorových vozdiel, v celkovej výške 67.580,16 EUR.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "67.580,16 EUR",
+          "evidence": {
+            "quote": "nárok na vrátenie poskytnutej zľavy Žalobca poskytol žalovanému v zmysle dohodnutých podmienok v Rámcovej zmluve zľavu z kúpnej ceny pri nákupe 6 ks motorových vozidiel, celkom vo výške 67.580,16 EUR.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "nárok na vrátenie poskytnutej zľavy Žalobca poskytol žalovanému v zmysle dohodnutých podmienok v Rámcovej zmluve zľavu z kúpnej ceny pri nákupe 6 ks motorových vozidiel, celkom vo výške 67.580,16 EUR.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "Okresný súd Bratislava II napadnutým rozsudkom uložil žalovanému povinnosť zaplatiť žalobcovi sumu vo výške 135.160,32 € spolu s úrokom z omeškania vo výške 8,75 % ročne - zo sumy 67.580,16 € od 11.11.2012 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 8,75 % ročne - zo sumy 67.580,16 € od 11.11.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Keďže žalovaný svoj záväzok nesplnil, žalobca oprávnene požadoval od žalovaného vrátenie poskytnutej zľavy pri nákupe 6 ks motorových vozdiel, v celkovej výške 67.580,16 EUR.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa správne uviedol, že zľava bola poskytnutá za dohodnutých podmienok a podmienená dodržaním záväzku žalovaného kúpiť minimálne 20 ks vozidiel. Žalovaný si bol vedomý, že poskytnutie zľavy je viazané na splnenie konkrétnych podmienok. Súd odmietol tvrdenie žalovaného, že ide o domnelú zľavu alebo štandardnú obchodnú zvyklosť, keďže zmluvné dojednanie má prednosť pred zvyklosťami. Dohodnutie kúpnej ceny so zľavou za určitých podmienok nie je v rozpore s poctivým obchodným stykom.",
+          "key_quotes": [
+            {
+              "quote": "Zľava však bola poskytnutá za dohodnutých podmienok a podmienená dodržaním povinností a záväzku žalovaného, ku ktorému sa dobrovoľne zaviazal, že od žalobcu kúpi minimálne 20 ks nových motorových vozidiel značky LAND ROVER podľa tabuľky uvedenej v zmluve a v dohodnutej lehote",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný v článku V. bod 4 Rámcovej zmluvy písomne vyhlásil, že si je vedomý skutočnosti, že podmienkou priznania zľavy z kúpnej ceny je splnenie záväzku, ku ktorému sa zaviazal.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Dojednanie kúpnej ceny s poskytnutím zľavy za určitých konkrétnych podmienok nie je možné podľa odvolacieho súdu považovať za takéto zmluvné dojednanie.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Odvolací súd nesúhlasí s názorom žalovaného, že nárok žalobcu na vrátenie zľavy nemôže požívať v zmysle § 265 Obch. zák. právnu ochranu. Za rozpor s poctivým obchodným stykom a kritériom, na základe ktorého účastníci navrhujú neposkytnutie právnej ochrany, je podľa súdnej judikatúry porušenie rovnováhy účastníkov prostredníctvom zmluvných dojednaní zakladajúcich nerovnosť zmluvných strán.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný si teda bol vedomý skutočnosti, že poskytnutie zľavy je viazané na splnenie konkrétnych podmienok a nemôže teraz tvrdiť, že ide o domnelú zľavu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "popri dohodnutých sankciách priznal žalobcovi aj úrok z omeškania v zákonom stanovenej výške v súlade s § 365, 369 Obchodného zákonníka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_82_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/82/2015",
+      "decision_date": "08.03.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1213200497.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

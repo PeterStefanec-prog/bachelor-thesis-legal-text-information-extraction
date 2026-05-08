@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10754,
+    "completion_tokens": 1686,
+    "cost_usd": 0.0303,
+    "latency_seconds": 6.79,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal úhrady zmluvnej pokuty vo výške 10 000 EUR za omeškanie žalovaného s úhradou fakturovanej ceny diela. Žalovaný sa bránil tým, že k omeškaniu nedošlo, pretože dielo bolo odovzdané neskôr a faktúry boli uhradené v dohodnutej lehote splatnosti od odovzdania diela.",
+      "verdict_summary": "Krajský súd v Košiciach potvrdil rozsudok súdu prvého stupňa, ktorý žalobu o zaplatenie zmluvnej pokuty zamietol. Účastníkom nebola priznaná náhrada trov odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "za omeškanie žalovaného s úhradou fakturovanej ceny diela a to podľa bodu X.X. tejto zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % z fakturovanej čiastky ceny diela za každý deň omeškania s úhradou ceny diela",
+          "evidence": {
+            "quote": "platne dohodli zmluvnú pokutu vo výške X,XX % z fakturovanej čiastky ceny diela za každý deň omeškania s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000.0,
+            "evidence": {
+              "quote": "žalobca sa v tomto konaní domáhal úhrady zmluvnej pokuty vo výške XX.XXX,XX eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa preto žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o zaplatenie X.XXX,XX eur s príslušenstvom",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd prvého stupňa preto žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože žalobca nepreukázal, že žalovanému vzniklo právo fakturovať cenu diela skôr ako po dokončení diela a jeho protokolárnom odovzdaní. Žalovaný uhradil cenu diela v dohodnutej lehote splatnosti 20 dní od odovzdania diela, a preto nebol v omeškaní. Odvolací súd potvrdil toto rozhodnutie, pričom zdôraznil, že zmluva nešpecifikovala ucelené časti diela pre čiastočné fakturácie a žalobca nepreukázal kontrolu prác stavebným dozorom predtým, ako bolo dielo odovzdané ako celok.",
+          "key_quotes": [
+            {
+              "quote": "Žalobcovi preto nevzniklo právo na zmluvnú pokutu za omeškanie žalovaného s úhradou ceny diela, pretože žalovaný s úhradou ceny diela nebol v omeškaní.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd preto dospel k záveru, že súd prvého stupňa rozhodol správne, ak žalobu o zaplatenie vyúčtovanej zmluvnej pokuty v zostávajúcej časti X.XXX,XX eur zamietol, pretože žalobca nepreukázal, že žalovaný sa dostal do omeškania s úhradou ceny diela",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný žalobcovi predmetnú fakturovanú cenu diela uhradil XX.X.XXXX, preto sa nedostal do omeškania s ich úhradou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca nepreukázal, že predmetné faktúry túto dohodu spĺňali.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_144_2015_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/144/2015",
+      "decision_date": "18.03.2016",
+      "ecli": "ECLI:SK:KSKE:2016:7613204557.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

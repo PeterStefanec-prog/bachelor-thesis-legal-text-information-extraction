@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 37393,
+    "completion_tokens": 2247,
+    "cost_usd": 0.0692,
+    "latency_seconds": 22.14,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny vo výške 8.897,05 eur s príslušenstvom titulom zádržného na základe Dohody o urovnaní. Žalovaný nárok popieral a vzniesol kompenzačnú pohľadávku, pričom namietal neplatnosť Dohody o urovnaní z dôvodu nátlaku a absencie slobodnej vôle.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorý zamietol žalobu žalobcu a priznal žalovanému nárok na náhradu trov odvolacieho konania v plnom rozsahu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 200400091",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur za nedodržanie termínu dodávky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "6.502,65 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur za nedodržanie termínu dodávky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 6502.65,
+            "evidence": {
+              "quote": "zmluvnú pokutu v zmysle objednávky MM/53/2013 v sume 6.502,65 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V čl. IV sa navyše žalobca zriekol akýchkoľvek práv, ktoré by mu mohli vyplývať zo zmlúv o dielo uzatvorených na základe objednávok uvedených v tabuľke v čl. I dohody, teda aj práv, ktoré mu v čase uzatvorenia dohody neboli známe.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Žalovaný i ďalej voči žalobcom uplatňoval nárok na zaplatenie pohľadávky v sume 19.716,50 eur, ktorú mal nadobudnúť od spoločnosti EURO-BUILDING, a.s. zmluvou o postúpení pohľadávok č. 1/2014.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Súd prvej inštancie v pôvodnom rozhodnutí uzavrel, že vykonaným dokazovaním bolo preukázané, že dohoda o urovnaní bola uzatvorená v rozpore so zákonom, morálkou, resp. s pravidlami slušnosti, pričom žalobca bol do tohto úkonu nútený.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne považoval dohodu o urovnaní za absolútne neplatnú pre rozpor so zákonom, morálkou a dobrými mravmi, ako aj pre nedostatok slobody vôle žalobcu a rozpor s § 585 ods. 1 Občianskeho zákonníka. Následne však odvolací súd zrušil pôvodný rozsudok a súd prvej inštancie po opätovnom dokazovaní konštatoval platnosť dohody o urovnaní, pričom žalobca sa v rámci dohody vzdal nároku na zmluvnú pokutu.",
+          "key_quotes": [
+            {
+              "quote": "Žalovaný v rámci svojej obrany v rámci kompenzačnej námietky uviedol, že je vlastníkom pohľadávky v sume 19.716,50 eur, ktorá vyplýva zo znenia pokonávky, konkrétne z čl. I bod I.3.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie v pôvodnom rozhodnutí uzavrel, že vykonaným dokazovaním bolo preukázané, že dohoda o urovnaní bola uzatvorená v rozpore so zákonom, morálkou, resp. s pravidlami slušnosti, pričom žalobca bol do tohto úkonu nútený.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalobca zmluvnú pokutu uplatnenú pôvodne spoločnosťou EURO-BUILDING, a.s. neuznával. Napriek tomu spoločnosť EURO-BUILDING, a.s. uzatvorila so žalovaným zmluvu o postúpení pohľadávky, ktorou na žalovaného mala prejsť táto pohľadávka v sume 19.716,50 eur, teda vo výške zodpovedajúcej faktúre č. 140020 na sumu 19.716,50 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie v pôvodnom rozhodnutí uzavrel, že vykonaným dokazovaním bolo preukázané, že dohoda o urovnaní bola uzatvorená v rozpore so zákonom, morálkou, resp. s pravidlami slušnosti, pričom žalobca bol do tohto úkonu nútený.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Vôľa žalobcu (resp. jeho konateľov) uzatvoriť túto dohodu tak bola motivovaná výlučne protiprávnym konaním žalovaného, keďže žalovaný svoje záväzky voči žalobcovi riadne neuhrádzal, žalobca (resp. jeho konatelia) boli nútený rozličným spôsobom (úvermi, zmenkami) zaobstarávať peňažné prostriedky na svoju podnikateľskú činnosť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalobca sa tak sám, po zvážaní reálnych možností zmluvných strán, slobodne rozhodol pristúpiť ku kompromisnému riešeniu a vysporiadať si vzájomné sporné práva a záväzky.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_2"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_47_2022_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/47/2022",
+      "decision_date": "30.03.2023",
+      "ecli": "ECLI:SK:KSBA:2023:1215211088.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

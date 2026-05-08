@@ -1,0 +1,310 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 20668,
+    "completion_tokens": 2526,
+    "cost_usd": 0.0769,
+    "latency_seconds": 61.38,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca FOOD FACTORING s.r.o. sa domáhal zaplatenia sumy 15.211,32 Eur s príslušenstvom od žalovanej Márie Gašpárkovej na základe nájomných zmlúv, kde bola dohodnutá zmluvná pokuta za omeškanie s úhradou nájomného a energií.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie prvoinštančného súdu, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 13.839,76 Eur.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zmluvné strany si pre prípad omeškania s úhradou nájomného dohodli zmluvnú pokutu vo výške 5 % denne z hodnoty dlžnej čiastky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "5 % denne",
+          "evidence": {
+            "quote": "Zmluvné strany si pre prípad omeškania s úhradou nájomného dohodli zmluvnú pokutu vo výške 5 % denne z hodnoty dlžnej čiastky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 9553.13,
+            "evidence": {
+              "quote": "žalobca 29.6.2021 žalovanej zmluvnú pokutu za oneskorené platby nájomného a energií vo výške 9 553,13 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 9553.13,
+            "evidence": {
+              "quote": "žalobca 29.6.2021 žalovanej zmluvnú pokutu za oneskorené platby nájomného a energií vo výške 9 553,13 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "potvrdil na pojednávaní a uviedol, že neuplatňoval ani svoje právo na úroky z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie v odôvodnení napadnutého rozhodnutia uviedol, ako vyhodnotil návrh žalovanej na moderáciu zmluvnej pokuty, pričom dospel k záveru, že zmluvná pokuta v dohodnutej výške 0,5% denne z dlžnej čiastky nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta vo výške 0,5% denne nie je neprimeraná, pretože aj pri pokute 1% denne môže dlžník zabrániť rastu celkovej sumy splnením svojej povinnosti. Súd tiež uviedol, že žalovaná nespochybnila výšku pokút ani počet dní omeškania. Odvolací súd potvrdil rozhodnutie prvoinštančného súdu, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 13.839,76 Eur.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie v odôvodnení napadnutého rozhodnutia uviedol, ako vyhodnotil návrh žalovanej na moderáciu zmluvnej pokuty, pričom dospel k záveru, že zmluvná pokuta v dohodnutej výške 0,5% denne z dlžnej čiastky nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nezistil rozpor týchto dohôd o zmluvných pokutách s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní aj funkciu dostatočne motivovať a odrádzať dlžníka od porušovania zabezpečenej zmluvnej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "je irelevantné, či žalobcovi vznikla škoda alebo nie, pretože zmluvná pokuta plní aj funkciu dostatočne motivovať a odrádzať dlžníka",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pokiaľ žalobca o.i. žiada sumu 6,48 Eur v súvislosti z oneskoreným zaplatením sumy 216 Eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "aj na správanie žalovanej, ktorá bola pravidelne v omeškaní s úhradou záväzkov zabezpečených zmluvnou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "potvrdil na pojednávaní a uviedol, že neuplatňoval ani svoje právo na úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvnou pokutou. 19. Žalobca ďalej uviedol, že je irelevantné, či žalobcovi vznikla škoda alebo",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zmluvné strany si pre prípad omeškania s úhradou nájomného dohodli zmluvnú pokutu vo výške 0,5 % denne z hodnoty dlžnej čiastky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "Zmluvné strany si pre prípad omeškania s úhradou nájomného dohodli zmluvnú pokutu vo výške 0,5 % denne z hodnoty dlžnej čiastky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5658.19,
+            "evidence": {
+              "quote": "žalobca dňa 29.6.2021 žalovanej vyfakturoval zmluvnú pokutu za oneskorené platby nájomného a energií vo výške 5 658,19 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5658.19,
+            "evidence": {
+              "quote": "žalobca dňa 29.6.2021 žalovanej vyfakturoval zmluvnú pokutu za oneskorené platby nájomného a energií vo výške 5 658,19 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "potvrdil na pojednávaní a uviedol, že neuplatňoval ani svoje právo na úroky z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie v odôvodnení napadnutého rozhodnutia uviedol, ako vyhodnotil návrh žalovanej na moderáciu zmluvnej pokuty, pričom dospel k záveru, že zmluvná pokuta v dohodnutej výške 0,5% denne z dlžnej čiastky nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta vo výške 0,5% denne nie je neprimeraná, pretože aj pri pokute 1% denne môže dlžník zabrániť rastu celkovej sumy splnením svojej povinnosti. Súd tiež uviedol, že žalovaná nespochybnila výšku pokút ani počet dní omeškania. Odvolací súd potvrdil rozhodnutie prvoinštančného súdu, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 13.839,76 Eur.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie v odôvodnení napadnutého rozhodnutia uviedol, ako vyhodnotil návrh žalovanej na moderáciu zmluvnej pokuty, pričom dospel k záveru, že zmluvná pokuta v dohodnutej výške 0,5% denne z dlžnej čiastky nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nezistil rozpor týchto dohôd o zmluvných pokutách s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní aj funkciu dostatočne motivovať a odrádzať dlžníka od porušovania zabezpečenej zmluvnej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "je irelevantné, či žalobcovi vznikla škoda alebo nie, pretože zmluvná pokuta plní aj funkciu dostatočne motivovať a odrádzať dlžníka",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pokiaľ žalobca o.i. žiada sumu 6,48 Eur v súvislosti z oneskoreným zaplatením sumy 216 Eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "aj na správanie žalovanej, ktorá bola pravidelne v omeškaní s úhradou záväzkov zabezpečených zmluvnou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "potvrdil na pojednávaní a uviedol, že neuplatňoval ani svoje právo na úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvnou pokutou. 19. Žalobca ďalej uviedol, že je irelevantné, či žalobcovi vznikla škoda alebo",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_dlznika",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.kumulacia_s_urokom",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.spravanie_dlznika",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.kumulacia_s_urokom",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "contractual_penalties.amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_42Cob_18_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "42Cob/18/2023",
+      "decision_date": "24.01.2024",
+      "ecli": "ECLI:SK:KSBB:2024:6121455133.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

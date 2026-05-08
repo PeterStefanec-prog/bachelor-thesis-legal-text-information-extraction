@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 20924,
+    "completion_tokens": 2080,
+    "cost_usd": 0.013,
+    "latency_seconds": 20.98,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia dlžného nájomného za dopravné prostriedky (ťahače a návesy) a zmluvnej pokuty za predčasné skončení nájomného vzťahu zo strany žalovaného. Žalovaný namietal neprimeranú výšku zmluvnej pokuty a nesprávne vyčíslenie nájomného vzhľadom na technickú nespôsobilosť vozidiel.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý žalovanému uložil povinnosť zaplatiť žalobcovi sumu 10.245,97 eur ako nájomné s príslušenstvom a zmluvnú pokutu vo výške 20.440 eur.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Zmluvná pokuta bola stranami dojednaná pre prípad, že dôjde k predčasnému skončeniu nájomného vzťahu z dôvodov, ktoré sú na strane nájomcu (napríklad z dôvodu, že nájomca nesplnil svoje zmluvné povinnosti)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "6x základného nájomného",
+          "evidence": {
+            "quote": "Žalobca sa podanou žalobou domáhal zaplatenia nájomného z vyššie uvedených nájomných zmlúv a zmluvnej pokuty podľa bodu 7.6 Všeobecných zmluvných podmienok v sume 6x základného nájomného.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20440,
+            "evidence": {
+              "quote": "Súd prvej inštancie toto rozhodnutie odôvodnil tým, že žalobca sa podanou žalobou domáhal, aby súd uložil žalovanému povinnosť zaplatiť mu sumu 10.367,-",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20440,
+            "evidence": {
+              "quote": "Súd prvej inštancie napadnutým rozsudkom rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi sumu 10.245,97 eur s príslušenstvom (výrok I) a zmluvnú pokutu vo výške 20.440,- eur (výrok II)",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,00 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania 9,00 % ročne zo sumy 20,79 eur od 18.3.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie po zohľadnení správnej výšky dobropisov uzavrel, že žaloba žalobcu je dôvodná v časti o zaplatenie 10.245,97 eur titulom nájomného s príslušenstvom a v časti o zaplatenie 20.440,- eur titulom zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd posúdil zmluvnú pokutu ako primeranú, pretože slúžila na zabezpečenie zotrvania nájomcu v zmluvnom vzťahu po celú dohodnutú dobu (36 mesiacov). Celková hodnota kontraktu bola 170.640 eur, pričom pokuta predstavovala šesťnásobok mesačného nájomného. Súd prihliadal na fakt, že v čase zániku zmluvy mala trvať ešte viac ako 24 mesiacov, a označil takto dohodnutú výšku za bežnú v obchodnom styku, nie neprimeranú.",
+          "key_quotes": [
+            {
+              "quote": "Na celkovú sumu zmluvnej pokuty je potrebné prihliadnuť z pohľadu, že celková hodnota kontraktu zabezpečeného zmluvnou pokutou pre žalobcu bola v sume 170.640,- eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Nakoľko v čase zániku zmluvy mala zmluva trvať ešte viac ako 24 mesiacov, nie je možné takto dohodnutú výšku zmluvnej pokuty považovať za neprimeranú, v obchodnom styku je bežné dojednanie zmluvnej pokuty aj vo výške 100 % hodnoty kontraktu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "sporovými stranami dojednaná zmluvná pokuta slúžila na zabezpečenie toho, že žalovaný zotrvá v nájomnom vzťahu po celú dohodnutú dobu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Preukázanie vzniku škody zo strany žalobcu nie je predpokladom na úspešné uplatnenie zmluvnej pokuty, ktorá je inštitútom paušalizovanej náhrady škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Celková výška zmluvnej pokuty, ktorú je dlžník povinný zaplatiť, nie je jediným kritérium, pre ktoré môže súd postupom podľa § 301 Obchodného zákonníka zmluvnú pokutu znížiť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Medzi stranami nebolo sporné, že k zániku nájomných vzťahov došlo pre neplatenie nájomného zo strany žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.pomer_k_istine"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_116_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/116/2023",
+      "decision_date": "26.03.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6120341555.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

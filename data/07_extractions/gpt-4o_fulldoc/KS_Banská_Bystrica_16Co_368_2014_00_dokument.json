@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11747,
+    "completion_tokens": 1126,
+    "cost_usd": 0.0406,
+    "latency_seconds": 40.76,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ Europa SC ZV a. s. žiadal zaplatenie sumy 11.515,40 € s príslušenstvom ako zmluvnú pokutu za porušenie zmluvných povinností vyplývajúcich zo zmluvy o budúcej zmluve o nájme nebytových priestorov. Odporca RPL, spol. s r. o. neuzavrel riadnu nájomnú zmluvu podľa dohodnutých podmienok.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý uložil odporcovi povinnosť zaplatiť navrhovateľovi sumu 11.515,40 € s príslušenstvom.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "odporca nesplnil svoju povinnosť vyplývajúcu zo zmluvy tým, že neuzavrel podľa podmienok dohodnutých v zmluve riadnu nájomnú zmluvu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvná pokuta sa rovná výške súčtu budúceho jednomesačného základného nájomného, jednomesačného poplatku za prevádzkové náklady a jednomesačného poplatku za marketing + DPH",
+          "evidence": {
+            "quote": "zmluvná pokuta sa rovná výške súčtu budúceho jednomesačného základného nájomného, jednomesačného poplatku za prevádzkové náklady a jednomesačného poplatku za marketing + DPH",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 11515.4,
+            "evidence": {
+              "quote": "o zaplatenie 11.515,40 € s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 11515.4,
+            "evidence": {
+              "quote": "Krajský súd potvrdil rozsudok okresného súdu, ktorý uložil odporcovi povinnosť zaplatiť navrhovateľovi sumu 11.515,40 € s príslušenstvom.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 8,75% ročne z dlžnej čiastky od 09. 10. 2012 až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "návrhu navrhovateľa v celom rozsahu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že návrh navrhovateľa na zaplatenie zmluvnej pokuty je dôvodný, pretože odporca nesplnil svoju povinnosť uzavrieť riadnu nájomnú zmluvu. Okresný súd uviedol, že zmluvná pokuta nie je neprimerane vysoká, keďže pre obidve strany sú zakotvené rovnaké sankcie. Odvolací súd potvrdil rozhodnutie okresného súdu ako vecne správne.",
+          "key_quotes": [
+            {
+              "quote": "návrhu navrhovateľa v celom rozsahu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliadal aj na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta sa rovná výške súčtu budúceho jednomesačného základného nájomného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca nesplnil svoju povinnosť vyplývajúcu zo zmluvy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.final_awarded:full_doc"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_16Co_368_2014_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "16Co/368/2014",
+      "decision_date": "20.11.2014",
+      "ecli": "ECLI:SK:KSBB:2014:6713202477.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

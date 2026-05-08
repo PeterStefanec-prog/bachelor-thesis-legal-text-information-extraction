@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 25950,
+    "completion_tokens": 2195,
+    "cost_usd": 0.0544,
+    "latency_seconds": 12.66,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, samostatný finančný agent, sa domáhal od žalovaného zaplatenia sumy 2 867,60 eur s príslušenstvom. Pohľadávka vznikla z titulu stornovaných provízií, neuhradených faktúr za mobil a tablet a zmluvnej pokuty za porušenie konkurenčnej doložky po ukončení Zmluvy o spolupráci.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Galanta, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 2 867,60 eur s príslušenstvom a náhradu trov konania.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "pre prípad porušenia článku 6 bod 6.5 Zmluvy. Súd prvej inštancie vyhodnotil ako nedôvodnú procesnú obranu žalovaného voči uplatnenému nároku na zmluvnú pokutu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 2.000 eur",
+          "evidence": {
+            "quote": "Žalobca si podľa čl. IV bodu 4.8 zmluvy uplatnil voči žalovanému listom zo dňa 26.8.2020 s lehotou na úhradu do 30 dní zmluvnú pokutu vo výške 2.000 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "z titulu zmluvnej pokuty 2.000 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "Rovnako za preukázaný čo do právneho dôvodu vzniku aj výšky mal aj uplatnený nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.000 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania 9 % ročne zo sumy 2.867,60 eur od 20.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Rovnako za preukázaný čo do právneho dôvodu vzniku aj výšky mal aj uplatnený nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.000 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie považoval nárok na zmluvnú pokutu za preukázaný, keďže žalovaný porušil konkurenčnú doložku tým, že začal pôsobiť pre konkurenčnú spoločnosť. Konkurenčná doložka bola vyhodnotená ako platná a primeraná, zodpovedajúca poctivému obchodnému styku a dobrým mravom. Súd zamietol námietky žalovaného o neplatnosti dodatku, neurčitosti doložky a neprimeranosti výšky pokuty, pričom zdôraznil, že žalovaný získal rozsiahle vedomosti a zručnosti u žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie dojednanie zmluvnej pokuty posúdil ako platné, zodpovedajúce požiadavkám § 544 OZ. Zabezpečovaná povinnosť je určená zrozumiteľne a dostatočne určito, keď v čl. 4.8 Dodatku sa uvádza priamy odkaz na porušenie čl. 6 bod 6.5 Zmluvy o spolupráci.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Výšku dohodnutej a uplatnenej zmluvnej pokuty preto vzhľadom na význam zabezpečovaného záväzku a skutkové okolnosti daného prípadu súd prvej inštancie mal za primeranú a zodpovedajúcu princípu spravodlivého usporiadania vzťahov.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd zdôrazňuje, že v prípade moderácie zmluvnej pokuty je nutné mať na zreteli, že moderačné právo súdu je zásahom do zmluvnej voľnosti obchodných záväzkových vzťahov a hoci ho zákon predpokladá a upravuje, malo by ísť o zásah výlučne výnimočný.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dojednaná doložka v ničom neodporuje poctivému obchodnému styku ani dobrým mravom, neodopiera žalovanému právo slobodne podnikať.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie posúdil ako odôvodnené, že žalobca si u vedúcich spolupracovníkov, ktorí nadobudli u žalobcu široké vedomosti a zručnosti dôležité pre výkon finančného sprostredkovania a zaviazali sa rozvíjať štruktúru spolupracovníkov (čl. 2.1 dodatku), vymienil pre prípad porušenia konkurenčnej doložky zmluvnú pokutu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Majetkovú ujmu, ktorá žalobcovi konaním žalovanému vznikla, nemožno vzhľadom na vyššie vedené skutočnosti a charakter porušeného záväzku presne vyčísliť, preto je podľa súdu prvej inštancie namieste aplikovať posúdenie škody na základe spravodlivosti (ekvity) s prihliadnutím na okolnosti daného prípadu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie poukázal na to, že žalovaný bol po skončení spolupráce so žalobcom už 2.7.2020 zaregistrovaný u konkurenčného subjektu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_140_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/140/2023",
+      "decision_date": "15.04.2025",
+      "ecli": "ECLI:SK:KSBA:2025:6120446490.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

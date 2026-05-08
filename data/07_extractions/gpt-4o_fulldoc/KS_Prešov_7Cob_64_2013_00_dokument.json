@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11528,
+    "completion_tokens": 1271,
+    "cost_usd": 0.0415,
+    "latency_seconds": 18.01,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Orange Slovensko, a.s., sa domáhal zaplatenia 681,93 eur spolu s úrokom z omeškania vo výške 0,05 % denne od žalovanej, N. D. - XALIX, za nezaplatené telekomunikačné služby. Žalobca tvrdil, že žalovaná porušila zmluvné povinnosti tým, že nezaplatila faktúru za obdobie 22.3.2010 - 22.4.2010 vo výške 18,05 eur, a preto je povinná zaplatiť zmluvnú pokutu vo výške 663,88 eur.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvého stupňa a priznal žalobcovi nárok na zmluvnú pokutu vo výške 663,88 eur s úrokom z omeškania 0,05 % denne.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "že žalovaná riadne a včas nezaplatila cenu poskytnutých služieb vyfakturovaných v období 22.3.2010 - 22.4.2010",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "663,88 eur",
+          "evidence": {
+            "quote": "je povinná zaplatiť žalobcovi zmluvnú pokutu vo výške 663,88 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 18.05,
+            "evidence": {
+              "quote": "nezaplatila na cene služieb 18,05 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 663.88,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 663,88 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 663.88,
+            "evidence": {
+              "quote": "priznal žalobcovi uplatnený nárok tak, ako je uvedené vo výroku",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 0,05 % denne od 16.7.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd zmenil rozhodnutie súdu prvého stupňa v odvolaním napadnutej časti tak, že zaviaže žalovanú na zaplatenie zmluvnej pokuty 663,88 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zmenil rozhodnutie súdu prvého stupňa, ktorý považoval dohodu o zmluvnej pokute za neplatnú pre nejasnosť a neurčitosť. Odvolací súd však dospel k záveru, že žalobca má nárok na zmluvnú pokutu, pretože žalovaná nesplnila povinnosť platiť cenu za poskytnuté služby. Súd prvého stupňa správne zistil, že žalovaná nezaplatila cenu služieb, a preto bola uzavretá dohoda o zmluvnej pokute. Odvolací súd priznal žalobcovi aj úroky z omeškania, ktoré boli dohodnuté vo výške 0,05 % denne.",
+          "key_quotes": [
+            {
+              "quote": "Dohoda o zmluvnej pokute pre jej nejasnosť a neurčitosť, najmä v časti opisu povinností, ktorých splnenie malo byť zmluvnou pokutou zabezpečené, resp. pri porušení ktorých mala byť žalovaná sankcionovaná v zmysle citovaného § 37 Občianskeho zákonníka je absolútne neplatná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dojednanie zmluvných pokút ako zabezpečovacieho inštitútu v zmluvných vzťahoch, je plne v súlade s platným právnym poriadkom SR.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaná bola v konaní pasívna. Nepredukovala také skutočnosti a dôkazy, ktoré by viedli k pochybnostiam o dostatočnej presnosti, či určitosti identifikácie povinnosti, ktorej splnenie by zmluvná pokuta zabezpečovala.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_7Cob_64_2013_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "7Cob/64/2013",
+      "decision_date": "26.02.2014",
+      "ecli": "ECLI:SK:KSPO:2014:8212204382.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

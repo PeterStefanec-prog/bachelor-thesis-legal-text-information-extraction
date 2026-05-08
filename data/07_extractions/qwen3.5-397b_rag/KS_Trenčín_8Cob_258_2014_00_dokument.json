@@ -1,0 +1,192 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 10549,
+      "completion_tokens": 1068,
+      "cost_usd": 0.0066,
+      "latency_seconds": 20.44,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 10726,
+      "completion_tokens": 1418,
+      "cost_usd": 0.0075,
+      "latency_seconds": 30.76,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úroku z omeškania z ceny za dielo podľa Zmluvy o dielo, ktorú žalovaný neuhradil v lehote splatnosti. Žalovaný namietal odklad splatnosti do času získania prostriedkov z EÚ fondov a neprimeranosť výšky zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi úrok z omeškania a zmluvnú pokutu vo výške 1.000 EUR, pričom pôvodne požadovanú vyššiu sumu primerane znížil.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "objednávateľ zaplatí zhotoviteľovi za omeškanie s úhradou faktúry zmluvnú pokutu vo výške 0,05% z fakturovanej ceny za každý deň omeškania.",
+            "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% z fakturovanej ceny za každý deň omeškania",
+          "evidence": {
+            "quote": "objednávateľ zaplatí zhotoviteľovi za omeškanie s úhradou faktúry zmluvnú pokutu vo výške 0,05% z fakturovanej ceny za každý deň omeškania.",
+            "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 350734.12,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,05 % denne zo sumy 350.734,12 Eur od 22.02.2012 do zaplatenia",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_0"
+            }
+          },
+          "original_claimed": {
+            "value": 17010.6,
+            "evidence": {
+              "quote": "by žalobca získal neprimerane vysokú sankciu (majetkovú výhodu) za omeškanie žalovaného (17.010,60 Eur)",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 1000.0,
+            "evidence": {
+              "quote": "Preto znížil zmluvnú pokutu na sumu 1.000,-Eur, ktorá v prípade žalovaného je sumou, ktorá ho núti k zaplateniu dlžnej sumy riadne a včas",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "žalobcovi preto patrí úrok z omeškania vo výške 9 % ročne zo sumy 350.734,12 Eur od 25.02.2012 do 31.05.2012",
+            "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie preto považoval nárok žalobcu na zaplatenie zmluvnej pokuty opodstatnený, avšak bol toho názoru, že je možné využiť moderačné oprávnenie súdu a zmluvnú pokutu primerane znížiť.",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_0"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal nárok na zmluvnú pokutu, ale využil moderačné právo podľa § 301 Obch. zák. na jej zníženie z pôvodne požadovaných 17.010,60 EUR na 1.000 EUR. Hlavným dôvodom bolo konštatovanie, že priznanie plnej sumy by predstavovalo neprimeranú majetkovú výhodu pre žalobcu, keďže mu už patril úrok z omeškania a reálna škoda mu nevznikla. Súd tiež prihliadol na skutočnosť, že omeškanie nebolo dlhé a žalovaný sa nesnažil úmyselne vyhýbať platbe, ale nemal dostupné prostriedky z EÚ fondov.",
+          "key_quotes": [
+            {
+              "quote": "V prípade priznania zmluvnej pokuty tak, ako to požaduje žalobca, teda zo sumy 350.734,12 Eur za dobu od 25.02.2012 do 01.06.2012 (resp. do 30.05.2012), by žalobca získal neprimerane vysokú sankciu (majetkovú výhodu) za omeškanie žalovaného (17.010,60 Eur) vo vzťahu k pohľadávke, ale i",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "Preto znížil zmluvnú pokutu na sumu 1.000,-Eur, ktorá v prípade žalovaného je sumou, ktorá ho núti k zaplateniu dlžnej sumy riadne a včas a zároveň zohľadňuje i celkovú situáciu, za ktorej sa žalovaný do omeškania dostal (nedbanlivosťou a nie úmyselne).",
+              "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Znížil zmluvnú pokutu na sumu 1.000,-Eur, ktorá v prípade žalovaného je sumou, ktorá ho núti k zaplateniu dlžnej sumy riadne a včas",
+                "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše, žalobcovi včasným nezaplatením ani reálna škoda nevznikla, keďže svojmu subdodávateľovi uhrádzal cenu za dielo až v čase, kedy mal uhradenú cenu za dielo od žalovaného",
+                "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalovaný mal záujem zaplatiť dlžnú sumu čo najskôr, ale reálne prostriedky na to nemal, keďže platby mal mať realizované z európskych fondov. Vybavil si úver, aby mohlo dôjsť k zaplateniu, nejde teda o subjekt, ktorý by sa úmyselne splneniu povinnosti vyhýbal.",
+                "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Patrí mu už za dobu omeškania úrok z omeškania, ktorý nie je zanedbateľný a patrila by mu i zmluvná pokuta.",
+                "chunk_id": "KS_Trenčín_8Cob_258_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.secured_principal",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_258_2014_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/258/2014",
+      "decision_date": "26.10.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3512202820.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

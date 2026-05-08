@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 22372,
+    "completion_tokens": 2079,
+    "cost_usd": 0.0136,
+    "latency_seconds": 56.8,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "uver",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zostávajúcej časti úveru vo výške 4.147,20 EUR s príslušenstvom a zmluvnej pokuty vo výške 0,1 % denne z dlžnej sumy, ktorá dosiahla maximálnu dohodnutú hranicu. Žalovaná namietala neprimeranosť výšky zmluvnej pokuty a navrhovala jej moderovanie súdom.",
+      "relationship_type": "B2C",
+      "verdict_summary": "Odvolací súd zmenil rozsudok prvej inštancie tak, že priznal žalobcovi nárok na zaplatenie ďalšej zmluvnej pokuty vo výške 7.784,48 EUR, keďže denná sadzba 0,1 % nebola neprimeraná a podmienky pre moderovanie neboli splnené."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "verdict",
+              "quote": "žalovaná je povinná zaplatiť žalobcovi ďalšiu zmluvnú pokutu vo výške 7.784,48 eur"
+            },
+            "value": 8484.48
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobca si vzhľadom na dĺžku omeškania žalovanej so splácaním úveru uplatnil nárok na zaplatenie zmluvnej pokuty v celkovej výške 8.484,64 eur"
+            },
+            "value": 8484.64
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "hodnota zabezpečovanej pohľadávky veriteľa predstavovala sumu 8.484,64 eur"
+            },
+            "value": 8484.64
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "súd žalobcovi okrem istiny a časti zmluvnej pokuty priznal aj úrok z omeškania zo sumy 4.147,20 eur vo výške 9 % ročne od 06.11.2020 do zaplatenia"
+          },
+          "rate_value": "9 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvná pokuta za porušenie povinnosti žalovanej splácať úver v dohodnutých splátkach"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozsudok súdu prvej inštancie vo výroku III. v zamietajúcej časti žaloby žalobcu týkajúcej sa jeho nároku na zaplatenie zmluvnej pokuty postupom podľa § 388 CSP zmenil, a to tak, že žalobcovi priznal nárok na zaplatenie ďalšej zmluvnej pokuty vo výške 7.784,48 eur"
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Pomer pôvodnej povinnosti ku následnej povinnosti spolu so sankčnou povinnosťou bol 1:1,001."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta plní nielen reparačnú, ale aj sankčnú funkciu, t.j. je sankciou za nesplnenie zmluvnou pokutou zabezpečenej povinnosti."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalobca však v konaní neprodukoval žiadne dôkazy o vzniknutej škode a ani z dokladov ním predložených žiadna škoda nevyplývala"
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Pomer pôvodnej povinnosti ku následnej povinnosti spolu so sankčnou povinnosťou bol 1:1,001."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalovaná bola v konaní pasívna."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "neopomenul ani to, že žalobca má popri zmluvnej pokute aj nárok na úroky z omeškania"
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Takto dohodnutú výšku zmluvnej pokuty nebolo možné vzhľadom na vyššie uvedenú judikatúru najvyšších súdnych autorít, ale ani podľa názoru odvolacieho súdu považovať, aj vzhľadom na postoj žalovanej k plneniu si povinností z úverovej zmluvy splácať tento úver v dohodnutých splátkach, za neprimeranú"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Vzhľadom na uvedené potom v konaní neboli splnené podmienky pre moderáciu zmluvnej pokuty súdom."
+            }
+          ],
+          "legal_reasoning_summary": "Odvolací súd dospel k záveru, že zmluvná pokuta dohodnutá vo výške 0,1 % denne z dlžnej sumy nie je neprimerane vysoká, keďže predstavuje len nepatrný nárast oproti pôvodnej povinnosti (pomer 1:1,001). Súd zdôraznil, že celková výška pokuty je dôsledkom dlhodobého omeškania dlžníka (viac ako 4 roky) a nie neprimeranej dennej sadzby. Keďže žalovaná nepreukázala okolnosti odôvodňujúce neprimeranosť a bola v konaní pasívna, neboli splnené podmienky pre aplikáciu moderačného práva podľa § 301 OBZ, a preto súd priznal nárok v plnej výške."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "v prípade omeškania dlžníka s úhradou splátky, je veriteľ oprávnený požadovať úhradu zmluvnej pokuty vo výške 0,1 % denne z dlžnej sumy, a to za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne z dlžnej sumy"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_34_2022_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/34/2022",
+      "decision_date": "20.12.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2121200908.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

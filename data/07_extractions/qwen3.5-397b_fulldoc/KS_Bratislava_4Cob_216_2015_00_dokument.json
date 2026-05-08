@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11537,
+    "completion_tokens": 1917,
+    "cost_usd": 0.009,
+    "latency_seconds": 21.85,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia doplatku ceny za dielo (výstavba futbalového ihriska) vo výške 21.554,37 EUR spolu so zmluvnou pokutou za omeškanie s úhradou ceny diela. Žalovaný namietal neoprávnenosť nároku na doplatok ceny a neprimeranosť výšky zmluvnej pokuty, keďže ju požadoval vypočítať z celej ceny diela namiesto z nezaplatenej časti.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi istinu spolu so zmluvnou pokutou vo výške 0,05 % denne z celkovej ceny diela a s úrokom z omeškania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "bola dojednaná za konkrétne porušenie zmluvnej povinnosti, ktorým je nezaplatenie ceny diela alebo jej časti v lehote splatnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % z celkovej ceny diela za každý deň omeškania",
+          "evidence": {
+            "quote": "výška zmluvnej pokuty bola dohodnutá určite a zrozumiteľne 0,05 % z celkovej ceny diela za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 79107.11,
+            "evidence": {
+              "quote": "zo sumy 79.107,11 eur od 20.12.2011 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 39.553,56 eur od 20.12.2011 do 26.03.2012, zo sumy 21.554,37 eur od 27.03.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd na zdôraznenie správnosti rozhodnutia súdu prvej inštancie dodáva, že pri skúmaní platnosti zmluvnej pokuty je nutné uvážiť funkciu zmluvnej pokuty (preventívnu, uhradzovaciu a sankčnú).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd považoval zmluvnú pokutu za primeranú, keďže jej ročný prepočet (18,25 %) predstavuje približne dvojnásobok sadzby úroku z omeškania, čo nie je neprimerané účelu zabezpečenia včasného plnenia. Súd rozlíšil medzi pevne stanovenou pokutou a pokutou závislou od času omeškania, pričom v tomto prípade výška závisí od doby trvania omeškania. Odvolací súd potvrdil, že výška pokuty je dôsledkom dlhodobého omeškania dlžníka a nie je neprimeraná vzhľadom na hodnotu zabezpečovanej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd považoval zmluvnú pokutu za primeranú zabezpečovanej povinnosti, ktorou je cena diela, táto predstavuje v ročnom prepočte 18,25 % ročne, teda približne dvojnásobok sadzby úroku z omeškania",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Dojednanú výšku zmluvnej pokuty preto považoval aj odvolací súd za primeranú s ohľadom na význam a hodnotu zabezpečovacích povinností.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pri skúmaní platnosti zmluvnej pokuty je nutné uvážiť funkciu zmluvnej pokuty (preventívnu, uhradzovaciu a sankčnú)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dojednanú výšku zmluvnej pokuty preto považoval aj odvolací súd za primeranú s ohľadom na význam a hodnotu zabezpečovacích povinností.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Výsledná výška zmluvnej pokuty je dôsledkom doby, ktorá uplynula odo dňa splatnosti zabezpečenej pohľadávky do jej zaplatenia.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "táto predstavuje v ročnom prepočte 18,25 % ročne, teda približne dvojnásobok sadzby úroku z omeškania, čo nie je neprimerané účelu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_216_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/216/2015",
+      "decision_date": "03.11.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1612203556.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

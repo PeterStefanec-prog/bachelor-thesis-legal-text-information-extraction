@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18187,
+    "completion_tokens": 1976,
+    "cost_usd": 0.0425,
+    "latency_seconds": 8.27,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ (ČSOB Leasing, a.s.) žiadal zaplatenie zmenkovej sumy 15.642,59 eur s príslušenstvom a odmenou 52,14 eur zo zmenky. Odporcovia namietali nedostatok kauzy zmenky, neexistenciu kauzálneho vzťahu zmenky k súčasnosti, neplatnosť vyplňovacieho zmenkového prehlásenia a neprimeranosť zmenkovej sumy, ktorá podľa nich zahŕňala zmluvné pokuty.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý ponechal zmenkový platobný rozkaz v platnosti vo zvyšnej časti 15.142,59 eur, po zrušení v sume 500 eur z dôvodu čiastočnej úhrady. Navrhovateľovi nebola priznaná náhrada trov odvolacieho konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "LZM/09/60668 a LZM/10/62040",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "navrhovateľ pravdepodobne prostredníctvom zmenky uplatnil nárok na zaplatenie zmluvných pokút za predčasné ukončenie leasingových zmlúv",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "neuviedli výšku zmluvných pokút",
+          "evidence": {
+            "quote": "neuviedli výšku zmluvných pokút, ani dôvody, pre ktoré by bolo možné usúdiť, že sú zmluvné pokuty neprimerané",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": "navrhovateľ pravdepodobne prostredníctvom zmenky uplatnil nárok na zaplatenie zmluvných pokút za predčasné ukončenie leasingových zmlúv",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6% ročne",
+          "evidence": {
+            "quote": "zmenkovú sumu 15.642,59 eur s úrokom 6% ročne z nej od 13.5.2014 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa konštatoval, že odporcovia nekonkretizovali výšku zmluvných pokút ani dôvody ich neprimeranosti. Nešpecifikovali ani sumu, ktorú považujú za primeranú s prihliadnutím na výšku škody. Z tohto dôvodu súd nemohol využiť moderačné právo podľa § 301 Obchodného zákonníka, keďže predmetom konania bolo zaplatenie zmenky, nie zmluvných pokút.",
+          "key_quotes": [
+            {
+              "quote": "Tvrdenie, že navrhovateľ pravdepodobne prostredníctvom zmenky uplatnil nárok na zaplatenie zmluvných pokút za predčasné ukončenie leasingových zmlúv, odporcovia nekonkretizovali, neuviedli výšku zmluvných pokút, ani dôvody, pre ktoré by bolo možné usúdiť, že sú zmluvné pokuty neprimerané vzhľadom na hodnotu a význam zabezpečovanej povinnosti, nešpecifikovali ani sumu, ktorú považujú za primeranú s prihliadnutím na výšku škody, ktorá navrhovateľovi porušením zmluvnej povinnosti vznikla.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nešpecifikovali ani sumu, ktorú považujú za primeranú s prihliadnutím na výšku škody, ktorá navrhovateľovi porušením zmluvnej povinnosti vznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neuviedli výšku zmluvných pokút, ani dôvody, pre ktoré by bolo možné usúdiť, že sú zmluvné pokuty neprimerané vzhľadom na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1CoZm_36_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1CoZm/36/2016",
+      "decision_date": "24.11.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1514221567.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,818 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26095,
+    "completion_tokens": 7661,
+    "cost_usd": 0.1418,
+    "latency_seconds": 88.94,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ, Železničná spoločnosť Cargo Slovakia, a.s., sa domáhal zaplatenia sumy 385.716,43 eur od odporcu, INVESTEX GROUP, s.r.o., na základe zmluvnej pokuty za nedodržanie deklarovaného objemu prepravy podľa uzatvorených dohôd o cene.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok okresného súdu a zaviazal odporcu zaplatiť navrhovateľovi 356.434,96 eur, pričom v časti o zaplatenie 29.281,47 eur žalobu zamietol.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Dohoda o cene č. 1002210",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "210,-Sk/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 100 % z netto ceny prepravy za 1 tonu",
+          "evidence": {
+            "quote": "V Dohode o cene č. 1002210 zo dňa 4. 5 2004 si strany dojednali objem prepravy 13.000 ton pre reláciu z Haniska p. Koš do Nová Baňa v netto cene 210,-Sk/tona, ďalej zmluvnú pokutu 210,-Sk/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 100 % z netto ceny prepravy za 1 tonu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2730000,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. 1002210 zo dňa 4. 5. 2004 odporca neprepravil ani tonu tovaru, dohodnutý objem bol 13000 ton, čo pri dohodnutej zmluvnej pokute 210,-Sk/tona neprepraveného objemu tovaru predstavuje zmluvnú pokutu 2.730.000,-Sk.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 90610.4,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.730.000,-Sk, súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 90.610,40 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.730.000,-Sk, súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 90.610,40 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal navrhovateľovi zmluvnú pokutu na základe Dohody o cene č. 1002210, kde odporca neprepravil dohodnutý objem 13.000 ton. Zmluvná pokuta bola dohodnutá vo výške 210,-Sk/tona, čo predstavuje 100 % z netto ceny prepravy za 1 tonu. Súd uznal nárok navrhovateľa na zmluvnú pokutu vo výške 2.730.000,-Sk, čo po prepočte konverzným kurzom predstavuje 90.610,40 eur.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.730.000,-Sk, súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 90.610,40 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "Dohoda o cene č. D104136",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "0,5 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 7,5 % z netto ceny prepravy za 1 tonu",
+          "evidence": {
+            "quote": "V Dohode o cene č. D104136 zo dňa 18. 12. 2003 si strany dojednali objem prepravy 130.000 ton pre reláciu Lúky pod Makytou, štátna hranica do Martina, v netto cene 6,78 eur/tona, ďalej zmluvnú pokutu 0,5 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 7,5 % z netto ceny prepravy za 1 tonu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 65000,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. D104136 zo dňa 18. 12. 2003 odporca nepreviezol ani tonu tovaru, dohodnutý objem bol 130000 ton, čo pri dohodnutej zmluvnej pokute 0,5 eur/tona neprepraveného objemu tovaru predstavuje zmluvnú pokutu 65.000,-eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 81337.38,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.450.370,-Sk (65.000,-eur x 37,698 Sk, kurz EUR/SKK = 37,698) keď súd navrhovateľovi takýto návrh voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK 30,1260 predstavuje zmluvnú pokutu vo výške 81.337,38 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.450.370,-Sk (65.000,-eur x 37,698 Sk, kurz EUR/SKK = 37,698) keď súd navrhovateľovi takýto návrh voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK 30,1260 predstavuje zmluvnú pokutu vo výške 81.337,38 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal navrhovateľovi zmluvnú pokutu na základe Dohody o cene č. D104136, kde odporca neprepravil dohodnutý objem 130.000 ton. Zmluvná pokuta bola dohodnutá vo výške 0,5 eur/tona, čo predstavuje 7,5 % z netto ceny prepravy za 1 tonu. Súd uznal nárok navrhovateľa na zmluvnú pokutu vo výške 65.000 eur, čo po prepočte konverzným kurzom predstavuje 81.337,38 eur.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 2.450.370,-Sk (65.000,-eur x 37,698 Sk, kurz EUR/SKK = 37,698) keď súd navrhovateľovi takýto návrh voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK 30,1260 predstavuje zmluvnú pokutu vo výške 81.337,38 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "Dohoda o cene č. D104850",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "2,1 eur/tona neprepraveného deklarovaného objemu prepravy",
+          "evidence": {
+            "quote": "ďalej zmluvnú pokutu 0,5 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 7,5 % z netto ceny prepravy za 1 tonu. V Dohode o cene č. D104850 z 27. 4. 2004 si strany dojednali",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 87990,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. D104850 z 27. 2. 2004 odporca neprepravil ani tonu tovaru, dohodnutý objem bol 41.900 ton, čo pri dohodnutej zmluvnej pokute 2,1 eur/tona neprevezeného objemu tovaru predstavuje zmluvnú pokutu 87.990,-eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 110105.78,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 3.317.047,-Sk (87.990,-eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi nárok na zmluvnú pokutu voči odporcovi v uplatnenej výške priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 110,105,78 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 3.317.047,-Sk (87.990,-eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi nárok na zmluvnú pokutu voči odporcovi v uplatnenej výške priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 110,105,78 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal navrhovateľovi zmluvnú pokutu na základe Dohody o cene č. D104850, kde odporca neprepravil dohodnutý objem 41.900 ton. Zmluvná pokuta bola dohodnutá vo výške 2,1 eur/tona. Súd uznal nárok navrhovateľa na zmluvnú pokutu vo výške 87.990 eur, čo po prepočte konverzným kurzom predstavuje 110.105,78 eur.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 3.317.047,-Sk (87.990,-eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi nárok na zmluvnú pokutu voči odporcovi v uplatnenej výške priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 110,105,78 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_4",
+        "related_claim_ref": "Dohoda o cene č. D104918",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "1,8 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 25 % z netto ceny prepravy za 1 tonu (súkromný vozeň)",
+          "evidence": {
+            "quote": "V Dohode o cene č. D104918 zo dňa 6. 4. 2004 si strany dojednali objem prepravy 10.000 ton pre reláciu z Plaveč štátna hranica do Turňa nad Bodvou v netto cene pre železničný vozeň 8,67 eur/tona v netto cene pre súkromný vozeň 7,11 eur /tona, ďalej zmluvnú pokutu vo výške 1,8 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 25 % z netto ceny prepravy za 1 tonu (súkromný vozeň).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 11790,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. D104918 zo dňa 6. 4. 2004 odporca prepravil 3.450 ton tovaru, dohodnutý objem bol 10000 ton, čo pri dohodnutej zmluvnej pokute 1,8 eur/tona neprepraveného deklarovaného objemu prepravy predstavuje zmluvnú pokutu 11.790 eur (6.550 ton x 1,8 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 14753.35,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 444.459,42 Sk (11.700,-eur x 37,698, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 14,753,35 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 444.459,42 Sk (11.700,-eur x 37,698, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 14,753,35 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal navrhovateľovi zmluvnú pokutu na základe Dohody o cene č. D104918, kde odporca prepravil len 3.450 ton z dohodnutého objemu 10.000 ton. Zmluvná pokuta bola dohodnutá vo výške 1,8 eur/tona, čo predstavuje 25 % z netto ceny prepravy za 1 tonu. Súd uznal nárok navrhovateľa na zmluvnú pokutu vo výške 11.790 eur, čo po prepočte konverzným kurzom predstavuje 14.753,35 eur.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ z tejto dohody o cene uplatnil nárok na zmluvnú pokutu vo výške 444.459,42 Sk (11.700,-eur x 37,698, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 14,753,35 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_5",
+        "related_claim_ref": "Dohoda o cene č. D104847",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "1,8 eur/tona neprepraveného deklarovaného objemu prepravy",
+          "evidence": {
+            "quote": "ton), v netto cene pre železničný vozeň 8,11 eur/ tona, resp. 11,34 eur/tona, v netto cene pre súkromný vozeň 6,65 eur/tona, resp. 9,77 eur/tona, zmluvnú pokutu vo výške 2,0 eur/tona neprapraveného deklarovaného objemu prepravy, ktorá bola ponížená Dodatkom č. 01 zo dňa 22. 3. 2004 k dohode o cene č. D104847 na výšku 1,8 eur/tona neprepraveného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 29700,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. D104847 zo dňa 26. 2. 2004 v znení dodatku č. 01 zo dňa 22. 3. 2004, v znení dodatku č. 02 zo dňa 17. 10. 2004 odporca neprepravil ani tonu tovaru, dohodnutý objem bol spolu 16500 ton, čo pri dohodnutej zmluvnej pokute 1,8 eur/tona neprepraveného objemu tovaru predstavuje zmluvnú pokutu vo výške 29,700,-eur (16500 ton x 1,8 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 7883.46,
+            "evidence": {
+              "quote": "Z uvedeného dôvodu odvolací súd v tejto časti zmenil rozsudok okresného súdu a priznal navrhovateľovi zmluvnú pokutu len za neprepravený objem 3500 ton, čo v prepočte konverzným kurzom EUR/SKK = 30,126 predstavuje zmluvnú pokutu vo výške 7.883,46 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Z uvedeného dôvodu odvolací súd v tejto časti zmenil rozsudok okresného súdu a priznal navrhovateľovi zmluvnú pokutu len za neprepravený objem 3500 ton, čo v prepočte konverzným kurzom EUR/SKK = 30,126 predstavuje zmluvnú pokutu vo výške 7.883,46 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že dodatky k Dohode o cene č. D104847 nemenili objem prepravy stanovený na 3.500 ton. Preto súd priznal zmluvnú pokutu len za tento objem, čo predstavuje 7.883,46 eur po prepočte konverzným kurzom. Pôvodne bola zmluvná pokuta uplatnená za 16.500 ton, čo súd zamietol.",
+          "key_quotes": [
+            {
+              "quote": "Z uvedeného dôvodu odvolací súd v tejto časti zmenil rozsudok okresného súdu a priznal navrhovateľovi zmluvnú pokutu len za neprepravený objem 3500 ton, čo v prepočte konverzným kurzom EUR/SKK = 30,126 predstavuje zmluvnú pokutu vo výške 7.883,46 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_6",
+        "related_claim_ref": "Dohoda o cene č. D104686",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V danom prípade sa jedná o vyúčtovanie zmluvnej pokuty z dôvodu nedodržania deklarovaného objemu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "2,0 eur/tona za neprepravený deklarovaný objem prepravy, t.j. vo výške 20 % netto ceny prepravy za 1 tonu",
+          "evidence": {
+            "quote": "V Dohode o cene č. D104686 zo dňa 20. 1. 2004 si strany dojednali objem prepravy 60000 ton pre reláciu Kúty štátna hranica do Zemianske Kostoľany v netto cene pre železničný vozeň 9,89 eur/tona, ďalej zmluvnú pokutu vo výške 2,0 eur/tona za neprepravený deklarovaný objem prepravy, t.j. vo výške 20 % netto ceny prepravy za 1 tonu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 41344,
+            "evidence": {
+              "quote": "Na základe Dohody o cene č. D104686 zo dňa 20. 1. 2004 odporca previezol 39.328 ton zazmluvného objemu tovaru, dohodnutý objem bol 60000 ton, nepreviezol 20672 ton, čo pri dohodnutej zmluvnej pokute 2,-Eurá /tona neprevezeného objemu tovaru predstavuje zmluvnú pokutu 41.344,-eur (20672 ton x 2,-eurá).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 51735.58,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 1.558.586,12 Sk (41.344 eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 51.735,58 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 1.558.586,12 Sk (41.344 eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 51.735,58 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal navrhovateľovi zmluvnú pokutu na základe Dohody o cene č. D104686, kde odporca neprepravil 20.672 ton z dohodnutého objemu 60.000 ton. Zmluvná pokuta bola dohodnutá vo výške 2,0 eur/tona, čo predstavuje 20 % z netto ceny prepravy za 1 tonu. Súd uznal nárok navrhovateľa na zmluvnú pokutu vo výške 41.344 eur, čo po prepočte konverzným kurzom predstavuje 51.735,58 eur.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ z tejto dohody uplatnil nárok na zmluvnú pokutu vo výške 1.558.586,12 Sk (41.344 eur x 37,698 Sk, kurz EUR/SKK = 37,698), keď súd navrhovateľovi takýto nárok voči odporcovi na zaplatenie zmluvnej pokuty priznal, čo v prepočte konverzným kurzom EUR/SKK = 30,1260 predstavuje zmluvnú pokutu vo výške 51.735,58 eur.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvnú pokutu možno dohodnúť pre prípad nesplnenia záväzku vôbec alebo pre prípad porušenia akejkoľvek inej zmluvnej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "MATH_ERROR_AWARDED_EXCEEDS_CLAIMED_pokuta_2",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2",
+        "MATH_ERROR_AWARDED_EXCEEDS_CLAIMED_pokuta_3",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_3",
+        "MATH_ERROR_AWARDED_EXCEEDS_CLAIMED_pokuta_4",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_4",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_5",
+        "MATH_ERROR_AWARDED_EXCEEDS_CLAIMED_pokuta_6",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_6",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_5.rate_definition"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_42_2010_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/42/2010",
+      "decision_date": "21.12.2011",
+      "ecli": "ECLI:SK:KSBB:2011:6706209604.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

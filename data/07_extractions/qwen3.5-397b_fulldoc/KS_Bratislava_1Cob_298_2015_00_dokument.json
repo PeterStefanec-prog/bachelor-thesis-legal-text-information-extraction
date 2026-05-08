@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7357,
+    "completion_tokens": 1719,
+    "cost_usd": 0.0069,
+    "latency_seconds": 14.98,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 0,2 % denne z omeškanej sumy za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Súd prvej inštancie nárok na zmluvnú pokutu zamietol pre rozpor s dobrými mravmi a neprijateľnú podmienku v spotrebiteľskej zmluve, keďže išlo o duplicitný postih popri úrokoch z omeškania.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok súdu prvej inštancie v zamietajúcej časti týkajúcej sa zmluvnej pokuty a vec vrátil na ďalšie konanie pre nedostatok odôvodnenia a nesprávne právne posúdenie.",
+      "contract_type": "najom",
+      "relationship_type": "unknown"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalobca rozšíril žalobný návrh o zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2 % denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zo sumy 2.429,91 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Prvoinštančný súd žalobný návrh zamietol v časti zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 9 % ročne zo sumy 2.429,91 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "dňa 8.6.2015 takto rozhodol: Krajský súd v Bratislave rozsudok Okresného súdu Bratislava II č.k. 22Cb 100/2011-225 zo dňa 8.6.2015 v napadnutej zamietajúcej časti zrušujea vec vracia na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd nezaujal konečné stanovisko k výške pokuty, keďže prvoinštančný súd nárok úplne zamietol namiesto moderovania. Dôvodom zrušenia bolo chýbajúce odôvodnenie postavenia žalovaného ako spotrebiteľa a nesprávny právny záver o duplicitnosti nárokov na úrok z omeškania a zmluvnú pokutu. Odvolací súd zdôraznil, že súbežné uplatnenie týchto inštitútov nie je zákonom vylúčené a súd nemôže založiť zrušenie pokuty len na existencii úroku z omeškania.",
+          "key_quotes": [
+            {
+              "quote": "žiaden právny predpis, vrátane zákonných ustanovení upravujúcich spotrebiteľské zmluvy, duplicitné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku omeškaním splnenia peňažného záväzku nevylučuje",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "súd nemôže použitie moderačného oprávnenia podľa § 301 Obchodného zákonníka založiť len na zistení, že okrem práva na zmluvnú pokutu vznikli oprávnenému ďalšie majetkové práva",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_298_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/298/2015",
+      "decision_date": "02.02.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1211204153.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

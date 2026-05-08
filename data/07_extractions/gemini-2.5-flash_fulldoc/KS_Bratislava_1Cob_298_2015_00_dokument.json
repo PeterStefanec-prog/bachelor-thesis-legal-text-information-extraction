@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7283,
+    "completion_tokens": 2296,
+    "cost_usd": 0.0321,
+    "latency_seconds": 8.86,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 2.429,91 eur s príslušenstvom a zmluvnou pokutou 0,2 % denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia, titulom finančného vyrovnania predčasne ukončenej leasingovej zmluvy. Žalovaný bol ručiteľom za záväzky spoločnosti SexiSoda Slovakia s.r.o. voči žalobcovi z leasingovej zmluvy.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava II v napadnutej zamietajúcej časti týkajúcej sa zmluvnej pokuty a vec vrátil na ďalšie konanie, pretože prvoinštančný súd nedostatočne odôvodnil svoje rozhodnutie o zamietnutí zmluvnej pokuty a posúdení žalovaného ako spotrebiteľa.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2 % denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,2 % denne zo sumy 2.429,91 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Vo zvyšnej časti zmluvnej pokuty žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s 9 % ročným úrokom z omeškania zo sumy 2.429,91 eur od 10.12.2009 do 19.1.2012",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd prejednal vec podľa § 379 - 380 CSP a dospel k záveru, že napadnutý rozsudok je potrebné v napadnutej zamietajúcej časti zrušiť a vec v zrušenom rozsahu vrátiť prvoinštančnému súdu na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Prvoinštančný súd zamietol nárok na zmluvnú pokutu z dôvodu, že ju považoval za duplicitný postih dlžníka, keďže už platí úroky z omeškania, a tiež za neprijateľnú podmienku v spotrebiteľskej zmluve vzhľadom na neprimerane vysokú sadzbu (73 % ročne). Odvolací súd sa nestotožnil so záverom o duplicite nárokov a uviedol, že súbeh úroku z omeškania a zmluvnej pokuty nie je vylúčený. Odvolací súd tiež vytkol prvoinštančnému súdu nedostatočné odôvodnenie posúdenia žalovaného ako spotrebiteľa a zrušil rozsudok v zamietajúcej časti, vracajúc vec na ďalšie konanie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie preto podľa § 265 Obchodného zákonníka posúdil takto dojednanú zmluvnú pokutu za dohodu, ktorá je v rozpore so zásadami poctivého obchodného styku, pretože neprimerane zasahuje do práv a právom chránených záujmov účastníka konania na strane žalovaného, keď za omeškanie s platením dlhu by mal okrem priznaného úroku z omeškania 9 % ročne platiť neprimerane vysokú zmluvnú pokutu 0,2 % denne (t.j. 73 % ročne).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa nestotožňuje so záverom súdu prvej inštancie, v zmysle ktorého je dojednaná zmluvná pokuta v rozpore so zásadami poctivého obchodného styku, pretože v danom prípade ide podľa názoru prvoinštančného súdu o duplicitný postih dlžníka, keď okrem zmluvnej pokuty má platiť za omeškanie so splnením peňažného záväzku aj úroky z omeškania v zákonnej výške.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie zamietol nárok žalobcu na zaplatenie zmluvnej pokuty aj z dôvodu, že na žalovaného sa ako na spotrebiteľa vzťahuje ochrana v zmysle § 53 ods. 4 písm. k) Občianskeho zákonníka. Odvolací súd konštatuje, že z odôvodnenia napadnutého rozhodnutia nie je zrejmé, na základe akých skutočností posúdil prvoinštančný súd postavenie žalovaného ako spotrebiteľa",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie preto podľa § 265 Obchodného zákonníka posúdil takto dojednanú zmluvnú pokutu za dohodu, ktorá je v rozpore so zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvnej pokuty, ktorá je právnym inštitútom slúžiacim na zabezpečenie záväzkov (teda na ich plnenie)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "platiť neprimerane vysokú zmluvnú pokutu 0,2 % denne (t.j. 73 % ročne)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "za duplicitný postih dlžníka, prihliadajúc predovšetkým na skutočnosť, že sa týka peňažného záväzku, za nesplnenie ktorého je tento povinný platiť úroky z omeškania uplatnené v zákonnej výške.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_298_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/298/2015",
+      "decision_date": "02.02.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1211204153.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

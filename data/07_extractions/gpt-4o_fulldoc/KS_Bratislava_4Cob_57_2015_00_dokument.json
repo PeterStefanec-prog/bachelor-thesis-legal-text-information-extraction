@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10405,
+    "completion_tokens": 1082,
+    "cost_usd": 0.0368,
+    "latency_seconds": 23.61,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca RadioLAN, spol. s r.o. sa domáhal zaplatenia ceny za poskytnuté telekomunikačné služby a zmluvnej pokuty voči žalovanému Novatrix SK s.r.o. Žalobca tvrdil, že žalovaný neuhradil faktúry za poskytnuté služby a porušil zmluvné povinnosti tým, že vypovedal zmluvu počas dohodnutej doby viazanosti.",
+      "verdict_summary": "Odvolací súd zmenil rozhodnutie súdu prvej inštancie a priznal žalobcovi nárok na zaplatenie zmluvnej pokuty vo výške 199 eur.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 20110574",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "199 eur",
+          "evidence": {
+            "quote": "zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná vo výške 199 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 199,
+            "evidence": {
+              "quote": "nárok na zaplatenie zmluvnej pokuty vo výške 199 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 199,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,25 % ročne",
+          "evidence": {
+            "quote": "úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že žalovaný porušil dohodnutú dobu viazanosti 24 mesiacov, počas ktorej sa zaviazal zotrvať v zmluvnom vzťahu so žalobcom. Žalovaný využil akciové ceny a úľavy, ale vypovedal zmluvu predčasne. Súd uznal, že podmienky na uplatnenie zmluvnej pokuty vo výške 199 eur boli splnené, a preto priznal žalobcovi nárok na túto pokutu. Úroky z omeškania boli priznané vo výške 9,25 % ročne od 17.06.2011 do zaplatenia.",
+          "key_quotes": [
+            {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta ako zabezpečovací inštitút bola dojednaná platne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_57_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/57/2015",
+      "decision_date": "13.04.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1613203938.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

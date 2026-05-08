@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7354,
+    "completion_tokens": 1659,
+    "cost_usd": 0.0068,
+    "latency_seconds": 20.43,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 1.800 EUR (10-násobok ceny prepravy) za zrušenie prepravy žalovaným po pristavení vozidla na nakládku. Súd prvej inštancie priznal nárok len v časti 180 EUR, zvyšok zamietol pre neprimeranosť výšky pokuty.",
+      "verdict_summary": "Krajský súd zrušil rozsudok súdu prvej inštancie a vrátil vec na ďalšie konanie, pretože prvostupňový súd nedostatočne zistil skutkový stav a nezaoberal sa platnosťou dojednania zmluvnej pokuty.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak bola preprava zrušená po pristavení vozidla na nakládku, vzniká dopravcovi nárok na zaplatenie zmluvnej pokuty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "10 násobku ceny prepravy",
+          "evidence": {
+            "quote": "Prepravný poriadok žalobcu je dostupný na internetovej stránke <K.:/..L..M.;%..B.>, ktorý ustanovuje zmluvnú pokutu vo výške 10 násobku ceny prepravy v prípade, ak preprava bola zrušená po pristavení vozidla na nakládku.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 180,
+            "evidence": {
+              "quote": "objednal prepravu z nemeckého mesta Bützow do Senca v cene 180,- EUR bez DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1800,
+            "evidence": {
+              "quote": "Žalobca požadoval zaplatenie 1.800,- EUR (100%).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 180,
+            "evidence": {
+              "quote": "Súd žalobcovi priznal 180,- EUR (10%).",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 26Cb/9/2017-81 zo dňa 8.1.2018 zrušujea vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie, pretože súd prvej inštancie využil moderačné právo na zníženie pokuty bez toho, aby skúmal, či bola zmluvná pokuta platne dojednaná v písomnej forme podľa § 544 ods. 2 Obč. zák. Súd tiež nedostatočne zistil skutkový stav a nezaoberal sa určením výšky škody, na základe ktorej by mohol pokutu primerane znížiť.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie využil v zmysle § 301 Obch. zák. svoje moderačné oprávnenie na zníženie zmluvnej pokuty, pričom sa však nezaoberal či zmluvná pokuta bola i platne dojednaná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podmienkou platného uzavretia dohody o zmluvnej pokute je jej písomná forma - § 544 ods. 2 Obč. zák.. Touto podmienkou sa však súd prvej inštancie dôsledne nezaoberal.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.decision:full_doc"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_94_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/94/2018",
+      "decision_date": "22.05.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1317200425.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

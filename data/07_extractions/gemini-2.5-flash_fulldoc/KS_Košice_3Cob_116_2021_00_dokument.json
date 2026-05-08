@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10887,
+    "completion_tokens": 1918,
+    "cost_usd": 0.0328,
+    "latency_seconds": 7.89,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil nárok na zaplatenie 1 000 eur s príslušenstvom ako odplatu za vykonanú medzinárodnú prepravu. Žalovaný namietal, že pohľadávka zanikla započítaním vzájomných pohľadávok titulom zmluvných pokút, ktoré si uplatnil voči žalobcovi za porušenie Všeobecných obchodných podmienok (VOP).",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu Michalovce, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi 1 000 eur s príslušenstvom a náhradu trov konania, pretože dohoda o zmluvnej pokute nebola platne uzavretá.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Dôvodil, že žalobca si nesplnil svoju povinnosť písomne ho informovať o zrealizovaných nákladkach a výkladkach, preto si voči nemu uplatnil v súlade s článkom III. ods. 6 Všeobecných obchodných podmienok (ďalej len \"VOP\"), ktoré sú dostupné na www.prometheussro.sk, a na ktoré odkazovala objednávka prepravy, zmluvné pokuty.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500 eur za každé jednotlivé porušenie",
+          "evidence": {
+            "quote": "Pre prípad nesplnenia si tejto povinnosti je dopravca povinný uhradiť zmluvnú pokutu vo výške 500 eur za každé jednotlivé porušenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1000.0,
+            "evidence": {
+              "quote": "V súlade s článkom III. ods. 6 VOP má preto voči žalobcovi nárok na zmluvnú pokutu vo výške 1.000 eur (2 x 500 eur).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "S poukazom na uvedené dospel k záveru, že nárok žalovaného na zmluvnú pokutu je neopodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8 % ročným",
+          "evidence": {
+            "quote": "plnením dostal do omeškania, uložil mu zaplatiť žalobcovi aj úrok z omeškania podľa §§ 365, 369 ods. 1 Obchodného zákonníka vo výške podľa § 1 ods. 2 nariadenia vlády Slovenskej republiky č. 21/2013",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "S poukazom na uvedené dospel k záveru, že nárok žalovaného na zmluvnú pokutu je neopodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že dohoda o zmluvnej pokute nebola platne uzavretá, pretože nebola dodržaná písomná forma. Hoci objednávka odkazovala na VOP, ktoré obsahovali dohodu o zmluvnej pokute, VOP neboli osobitne podpísané žalobcom. Podľa súdu, ak zákon vyžaduje písomnú formu pre dojednanie (ako v prípade zmluvnej pokuty), musia byť aj VOP, ktoré ju obsahujú, podpísané. Pretože nebola dodržaná písomná forma, dohoda o zmluvnej pokute je neplatná a nárok na ňu nevznikol, čím nemohlo dôjsť ani k započítaniu pohľadávok.",
+          "key_quotes": [
+            {
+              "quote": "Pokiaľ zmluvná pokuta nie je dojednaná v písomnej forme, je neplatná a veriteľ si ju tak proti dlžníkovi nemôže s úspechom uplatniť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ak je dohoda o zmluvnej pokute súčasťou VOP žalovaného, pre jej platnosť sa vyžaduje, aby aj VOP boli osobitne opatrené podpisom konajúcej osoby (§ 40 ods. 3 Občianskeho zákonníka).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "S poukazom na to, že žalovaný v konaní nepreukázal, že jeho obchodné podmienky, ktorých súčasťou bolo aj dojednanie o zmluvnej pokute, žalobca osobitne podpísal, je správny záver súdu prvej inštancie, že nedošlo medzi stranami k platnému uzavretiu dohody o zmluvnej pokute",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_116_2021_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/116/2021",
+      "decision_date": "28.12.2021",
+      "ecli": "ECLI:SK:KSKE:2021:6120297329.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

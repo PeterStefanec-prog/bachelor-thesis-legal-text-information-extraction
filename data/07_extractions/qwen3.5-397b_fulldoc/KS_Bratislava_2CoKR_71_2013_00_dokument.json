@@ -1,0 +1,186 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17358,
+    "completion_tokens": 2144,
+    "cost_usd": 0.0118,
+    "latency_seconds": 44.67,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Navrhovateľ sa domáhal určenia pohľadávok prihlásených do konkurzu úpadcu, ktoré pozostávali zo zmluvnej pokuty za oneskorené platby faktúr a úrokov z omeškania. Správca konkurznej podstaty pohľadávky poprel s odôvodnením, že dohodnutá výška zmluvnej pokuty (0,5 % denne) je v rozpore s dobrými mravmi a zásadami poctivého obchodného styku, čo spôsobuje absolútnu neplatnosť dohody.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Krajský súd zrušil rozsudok súdu prvého stupňa a vrátil vec na ďalšie konanie, keďže prvostupňový súd neposkytol dostatočné odôvodnenie svojho záveru o neprimeranosti zmluvnej pokuty a nevykonal potrebné skutkové zistenia."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava I č.k. 1Cbi/53/2008-242 zo dňa 14.05.2013 zrušujea vec mu vracia na ďalšie konanie."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "prihláškou č. 122 pohľadávku v celkovej výške 3.297.639,49 Sk, z toho istinu - zmluvnú pokutu vo výške 2.559.585,5 Sk a úroky z omeškania vo výške 738.053,99 Sk, - prihláškou č. 124 pohľadávku v celkovej výške 1.477.467,2 Sk, z toho istinu - zmluvnú pokutu vo výške 1.151.417,11 Sk a úroky z omeškania vo výške 326.050,09 Sk, - prihláškou č. 126 pohľadávku v celkovej výške 231.164,03 Sk, z toho istinu - zmluvnú pokutu vo výške 180.913,44 Sk a úroky z omeškania vo výške 50.250,59 Sk."
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne za každý deň omeškania."
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Právnym dôvodom prihlásených pohľadávok je úrok z omeškania, zmluvná pokuta a úrok z omeškania zo zmluvnej pokuty v dôsledku nezaplatenia faktúr"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "v prípade, ak objednávateľ nedodrží dohodnutú lehotu splatnosti, zaplatí zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd sa nestotožnil s názorom súdu prvého stupňa, že navrhovateľ sám nemôže jednostranne znížiť výšku pokuty z 0,5 % na 0,25 %. Veriteľ totiž nemusí od dlžníka vymáhať celú výšku pokuty."
+            },
+            "value": "returned"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd považuje za dôležité uviesť, že zmluvná pokuta je jedným z osobitných inštitútov záväzkového práva na zabezpečenie záväzkov."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvého stupňa preto musí ustáliť, či dojednaná výška zmluvnej pokuty je platne uzatvorená a následne jej primeranosť posúdiť s pohľadom na význam a hodnotu zabezpečovaných povinností."
+            }
+          ],
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie prvostupňového súdu pre nedostatok odôvodnenia, keďže súd prvého stupňa nevysvetlil, akými úvahami sa riadil pri konštatovaní neprimeranosti zmluvnej pokuty a nemal k dispozícii zmluvu ani faktúry na porovnanie. Odvolací súd zdôraznil, že výška zmluvnej pokuty musí byť posudzovaná individuálne v každom prípade s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Súd tiež konštatoval, že veriteľ môže jednostranne znížiť nárok na zmluvnú pokutu a nie je viazaný pôvodne dohodnutou vyššou sadzbou, ak sa jej domáha v nižšej výške."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu za každý deň omeškania úhrady faktúry po lehote splatnosti vo výške 0,5 % denne za každý deň omeškania."
+          },
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne"
+        },
+        "related_claim_ref": "prihlášky č. 122, 124, 126"
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_returned_for_retrial",
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.final_awarded:full_doc"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "associated_interest.rate_value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2CoKR_71_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2CoKR/71/2013",
+      "decision_date": "28.08.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1108234551.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

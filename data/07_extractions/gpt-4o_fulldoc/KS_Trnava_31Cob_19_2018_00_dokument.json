@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17599,
+    "completion_tokens": 1480,
+    "cost_usd": 0.0588,
+    "latency_seconds": 32.82,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca HALO reality s. r. o. sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000 Eur od žalovanej Danice Bittarovej za podstatné porušenie zmluvy o poskytovaní služieb. Žalovaná mala uzatvárať realitné obchody bez vedomia žalobcu a neoprávnene vyberať peniaze od klientov.",
+      "verdict_summary": "Súd znížil zmluvnú pokutu na 5.000 eur a žalovanej uložil povinnosť túto sumu zaplatiť žalobcovi.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalobou sa žalobca domáhal zaplatenia zmluvnej pokuty vo výške 10.000 Eur dojednanej v článku VII. bod 7./A zmluvy, pre podstatné porušenie zásadných ustanovení zmluvy žalovanou.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000 Eur",
+          "evidence": {
+            "quote": "V článku VII. Zmluvná pokuta bod 7./A zmluvy si zmluvné strany pre prípad podstatného porušenia zásadných ustanovení zmluvy poskytovateľom (žalovanou) dojednali zmluvnú pokutu vo výške 10.000 Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "Žalobou sa žalobca domáhal zaplatenia zmluvnej pokuty vo výške 10.000 Eur dojednanej v článku VII. bod 7./A zmluvy, pre podstatné porušenie zásadných ustanovení zmluvy žalovanou.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5000,
+            "evidence": {
+              "quote": "zabezpečovacej funkcie zmluvnej pokuty. Súd použil moderačné oprávnenie podľa § 301 Obchodného zákonníka a uplatnenú zmluvnú pokutu znížil o polovicu na sumu 5.000",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5,25 % ročne",
+          "evidence": {
+            "quote": "zvyšnej časti súd žalobu zamietol. Súd žalobcovi priznal úrok z omeškania tak, ako žiadal, t.j. vo výške 5,25 % ročne odo dňa 12.02.2014",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "zabezpečovacej funkcie zmluvnej pokuty. Súd použil moderačné oprávnenie podľa § 301 Obchodného zákonníka a uplatnenú zmluvnú pokutu znížil o polovicu na sumu 5.000",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil zmluvnú pokutu z 10.000 eur na 5.000 eur, pričom zohľadnil hodnotu a význam zabezpečovanej povinnosti, hospodársku pozíciu zmluvných strán a výšku vzniknutej škody, ktorá bola 300 eur. Súd tiež prihliadol na to, že zmluvná pokuta bola dojednaná jednostranne v prospech žalobcu a že žalovaná ručí za svoje záväzky celým svojím majetkom.",
+          "key_quotes": [
+            {
+              "quote": "zabezpečovacej funkcie zmluvnej pokuty. Súd použil moderačné oprávnenie podľa § 301 Obchodného zákonníka a uplatnenú zmluvnú pokutu znížil o polovicu na sumu 5.000",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvnej povinnosti existuje súvislosť. Priznanie zmluvnej pokuty mnohonásobne prevyšujúcej právo, ktoré zabezpečuje, by viedlo k celkom neodôvodnenému majetkovému prospechu oprávneného a znamenalo by neúmerne prísnu a bezdôvodnú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zabezpečovacej funkcie zmluvnej pokuty. Súd použil moderačné oprávnenie podľa § 301 Obchodného zákonníka a uplatnenú zmluvnú pokutu znížil o polovicu na sumu 5.000 eur s tým, že ju možno považovať za dostatočne účinnú náhradu odrádzajúcu od neplnenia si zmluvných",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "prihliadol súd aj na výšku vzniknutej škody, ktorá v prejednávanom spore bola vo výške 300 eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvnej povinnosti existuje súvislosť. Priznanie zmluvnej pokuty mnohonásobne prevyšujúcej právo, ktoré zabezpečuje, by viedlo k celkom neodôvodnenému majetkovému prospechu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaná nerozporovala, že klienta O. D., vyzvala na úhradu provízie, pričom mu uviedla svoje súkromné číslo účtu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "až k jeho likvidácii. Súd pri posudzovaní primeranosti výšky zmluvnej pokuty vzal do úvahy mieru rizika, ktorú na seba vzal žalobca uzavretím zmluvy o poskytovaní",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_19_2018_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/19/2018",
+      "decision_date": "26.03.2019",
+      "ecli": "ECLI:SK:KSTT:2019:2514201620.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 15839,
+    "completion_tokens": 1620,
+    "cost_usd": 0.01,
+    "latency_seconds": 17.59,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 4.832 EUR, ktorá bola dohodnutá v zmluve o dielo pre prípad porušenia konkurenčnej doložky. Žalovaný namietal neplatnosť konkurenčnej doložky a tým pádom aj na nej závislej zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý žalobu zamietol, keďže konkurenčná doložka bola neplatná a zmluvná pokuta ako akcesorický záväzok nemohla vzniknúť.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Doložka upravovala záväzok žalovaného, že neuzavrie tri roky od podpísania zmluvy žiadnu zmluvu s obchodnými partnermi žalobcu a investora",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000 Eur",
+          "evidence": {
+            "quote": "Pre prípad porušenia tohto záväzku žalovaným bola zmluvne upravená sankcia vo forme zmluvnej pokuty vo výške 20.000 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4832,
+            "evidence": {
+              "quote": "z ktorej si žalobca v predmetnom konaním uplatnil časť vo výške 4.832 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Preto okresný súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Žalobcovi preto podľa názoru okresného súdu nemohol vzniknúť nárok na zaplatenie zmluvnej pokuty, keďže bola viazaná na nesplnenie záväzku žalovaným, ktorý bol posúdený ako neplatný (upravený neplatnou konkurenčnou doložkou).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že dojednaná konkurenčná doložka je neplatná pre absenciu územného vymedzenia a neprimerane dlhý časový rozsah presahujúci zákonný limit. Keďže zmluvná pokuta je akcesorickým záväzkom viazaným na platnosť hlavného záväzku (konkurenčnej doložky), neplatnosťou doložky zaniká aj nárok na pokutu. Súd preto nemohol pristúpiť k moderácii výšky pokuty, keďže samotný základný záväzok bol neplatný.",
+          "key_quotes": [
+            {
+              "quote": "Ak hlavný záväzok nie je platným spôsobom dohodnutý, nemôžu nastať ani účinky akcesorického záväzku, ktorý mal zabezpečovať plnenie zmluvnej povinnosti",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta preto nebola dohodnutá na platný záväzok, ak vyplýval tento záväzok z neplatnej konkurenčnej doložky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Účelom zmluvnej pokuty bola ochrana oprávnených záujmov žalobcu a preventívne zabránenie vzniku ujmy z konania druhého zmluvného partnera.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_196_2015_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/196/2015",
+      "decision_date": "18.11.2015",
+      "ecli": "ECLI:SK:KSZA:2015:5414200612.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

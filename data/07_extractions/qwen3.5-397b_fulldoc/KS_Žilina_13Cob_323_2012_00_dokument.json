@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19073,
+    "completion_tokens": 2132,
+    "cost_usd": 0.0124,
+    "latency_seconds": 27.47,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 12.788,80 EUR s príslušenstvom, ktorá mu bola postúpená zmluvou o postúpení pohľadávky z titulu dohody o ukončení nájmu nebytových priestorov. Žalovaný sa bránil započítaním svojej protipohľadávky voči pôvodnému veriteľovi (právny predchodca žalobcu) predstavujúcej zmluvné pokuty a úroky z omeškania za oneskorené platby nájomného.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bola žaloba zamietnutá ako nedôvodná, keďže došlo k zániku žalobcovej pohľadávky započítaním proti pohľadávke žalovaného na zmluvné pokuty.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa dostane nájomca do omeškania so splnením svojho záväzku zaplatiť prenajímateľovi faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% z dlžnej sumy za každý deň omeškania",
+          "evidence": {
+            "quote": "je prenajímateľ oprávnený účtovať nájomcovi zmluvnú pokutu vo výške 0,5% z dlžnej sumy za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 14691.01,
+            "evidence": {
+              "quote": "žalovaný listom zo dňa 29.7.2011 vyzval právneho predchodcu žalobcu na zaplatenie ním vyčíslenej zmluvnej pokuty a úrokov z omeškania vo výške 14.691,01 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 13615.03,
+            "evidence": {
+              "quote": "preto bola okresným súdom priznaná výška zmluvnej pokuty 13.615,03 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "výška vyčíslených úrokov z omeškania predstavuje 679,72 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd skonštatoval, že žalobca výšku zmluvnej pokuty nenamietal, kedy by súd mohol na návrh neprimerane vysokú zmluvnú pokutu, podľa ust. § 301 Obchodného zákonníka, znížiť",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa uznal platnosť dojednania o zmluvnej pokute a vypočítal jej výšku na 13.615,03 EUR, čo bolo menej ako žalovaný nárokoval, ale viac ako si žalovaný uplatnil v započítaní. Odvolací súd potvrdil tento postup a zdôraznil, že moderácia zmluvnej pokuty podľa § 301 Obchodného zákonníka je dispozičným oprávnením súdu, ktoré sa realizuje len na návrh účastníka. Keďže žalobca v konaní pred súdom prvého stupňa nenamietal neprimeranosť výšky pokuty ani nepodal návrh na jej zníženie, súd nemal povinnosť ani oprávnenie konať ex offo.",
+          "key_quotes": [
+            {
+              "quote": "Z ust. § 301 Obchodného zákonníka nevyplýva povinnosť súdu takúto neprimerane vysokú zmluvnú pokutu znižovať, ide výlučne o jeho dispozičné oprávnenie, ktoré sa realizuje v zmysle podaného návrhu účastníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ návrh na moderovanie zmluvnej pokuty uplatnil žalobca až v rámci podaného odvolania ako novo tvrdenú skutočnosť, na ktorú nebolo možné prihliadať... bolo správne, pokiaľ okresný súd na túto protipohľadávku žalovaného v rovine zmluvnej pokuty... prihliadol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "K námietke žalobcu o neprimeranosti zmluvnej pokuty vo výške 0,5% denne však žalovaný poukázal, že v zmysle právnej doktríny a judikatúry by okresný súd postupoval nesprávne, ak by rozhodol o neplatnosti dojednania o zmluvnej pokute",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta musí byť dohodnutá v takej intenzite, aby splnenie prevzatej zmluvnej povinnosti zmluvnou stranou v skutočnosti aj zabezpečila.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca opomenul spomenúť, že do omeškania sa dostal pri takmer každom plnení nájmu za jednotlivé kvartály, teda nedošlo k porušeniu povinnosti zo strany žalobcu iba jediný krát, resp. príležitostne, ale prakticky išlo o permanentný stav.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Predmetom obrany žalovaného bola pohľadávka 14.961,01 Eur, ktorá predstavovala vyčíslenú zmluvnú pokutu a úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_TRUNCATED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote",
+        "moderation_analysis.factors.vyska_skody.evidence.quote",
+        "moderation_analysis.factors.pomer_k_istine.evidence.quote",
+        "moderation_analysis.factors.spravanie_veritela.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_323_2012_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/323/2012",
+      "decision_date": "13.03.2013",
+      "ecli": "ECLI:SK:KSZA:2013:5611211404.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10853,
+    "completion_tokens": 2057,
+    "cost_usd": 0.009,
+    "latency_seconds": 29.3,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (Orange Slovensko, a.s.) sa domáhal od žalovanej zaplatenia ceny telekomunikačných služieb vo výške 18,05 eur a zmluvnej pokuty vo výške 663,88 eur za nezaplatenie faktúr v období marec-apríl 2010. Prvostupňový súd priznal len istinu a zamietol nárok na zmluvnú pokutu pre neurčitosť dohody, proti čomu sa žalobca odvolal.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok prvého stupňa a priznal žalobcovi nárok na zaplatenie zmluvnej pokuty v plnej výške 663,88 eur spolu s úrokom z omeškania, keďže dospel k záveru, že dohoda o zmluvnej pokute je platná a povinnosť bola dostatočne identifikovaná.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalobca tvrdí, že žalovaná v období 22.3.2010 - 22.4.2010 porušila svoj záväzok riadne a včas platiť cenu poskytovaných služieb, keď za uvedené obdobie nezaplatila na cene služieb 18,05 eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnú pokutu vo výške po 331,94 eur, spolu 663,88 eur",
+          "evidence": {
+            "quote": "Podľa žalobcu žalovaná tým, že riadne a včas nezaplatila cenu poskytnutých služieb vyfakturovaných v období 22.3.2010 - 22.4.2010, porušila zmluvné povinnosti a v zmysle uvedených dodatkov z dôvodu neplnenia zmluvných povinností, je povinná zaplatiť žalobcovi zmluvnú pokutu vo výške po 331,94 eur, spolu 663,88 eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 18.05,
+            "evidence": {
+              "quote": "keď za uvedené obdobie nezaplatila na cene služieb 18,05 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 663.88,
+            "evidence": {
+              "quote": "je povinná zaplatiť žalobcovi zmluvnú pokutu vo výške 663,88 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 663.88,
+            "evidence": {
+              "quote": "Žalovaná je povinná zaplatiť žalobcovi 663,88 eur s úrokom z omeškania vo výške 0,05 % denne od 16.7.2010 do zaplatenia",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 0,05 % denne od 16.7.2010 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd je toho názoru, že žalobca má nárok na zaplatenie zmluvných pokút vyplývajúcich z uzavretých zmlúv, pretože žalovaná povinnosť platiť cenu za vykonané služby, nesplnila a pre toto porušenie bola uzavretá dohoda o zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd dospel k záveru, že hoci prvostupňový súd považoval dohodu o zmluvnej pokute za neplatnú pre neurčitosť, v obchodno-záväzkových vzťahoch platia iné interpretačné pravidlá (§ 266 Obchodného zákonníka), ktoré uprednostňujú vôľu strán pred doslovným znením. Keďže žalovaná ako podnikateľka nepoprela úmysel uzavrieť takúto dohodu a povinnosť platiť bola z kontextu zmlúv zrejmá, odvolací súd zmluvnú pokutu priznal v plnej výške bez moderácie podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Obchodný zákonník v § 266 ods. 1 ako rozhodujúce akcentuje iné kritérium, ako Občiansky zákonník a to význam vôle, ktorú uprednostňuje pred jazykovým prejavom.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V konaní nebolo vyvrátené tvrdenie žalobcu o tom, že zmluvné pokuty si uplatňujú práve pre porušenie povinnosti platiť mesačne poplatky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pre toto porušenie bola uzavretá dohoda o zmluvnej pokute",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaná uviedla, že neplatila cenu služieb z dôvodu, že jej bol zrušený nájom na prevádzku. Tento dôvod nie je opodstatneným dôvodom pre nepriznanie zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca si uplatňuje aj úrok z omeškania z celkovej dlžnej sumy v súlade so všeobecnými podmienkami",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_7Cob_64_2013_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "7Cob/64/2013",
+      "decision_date": "26.02.2014",
+      "ecli": "ECLI:SK:KSPO:2014:8212204382.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

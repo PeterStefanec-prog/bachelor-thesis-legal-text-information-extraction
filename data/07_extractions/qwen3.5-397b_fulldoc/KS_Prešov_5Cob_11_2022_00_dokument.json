@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10672,
+    "completion_tokens": 2113,
+    "cost_usd": 0.0091,
+    "latency_seconds": 64.01,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dodavka_sluzieb",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 10.000 eur od žalovaného za porušenie konkurenčnej doložky, keď žalovaný po ukončení zmluvného vzťahu nadviazal spoluprácu s obchodným partnerom žalobcu. Súd prvej inštancie priznal nárok len čiastočne vo výške 5.000 eur, keďže pôvodnú sumu považoval za neprimerane vysokú.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške 5.000 eur."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie z vyššie uvedených dôvodov priznal žalobcovi sumu 5.000,- eur titulom zmluvnej pokuty a v prevyšujúcej časti žalobu zamietol."
+            },
+            "value": 5000
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca návrh na vydanie platobného rozkazu odôvodnil tým, že žalovaný porušil svoje povinnosti vyplývajúce mu zo zmluvy o poskytovaní služieb, keďže po ukončení zmluvného vzťahu v rozpore so zmluvou o poskytovaní služieb nadviazal spoluprácu s jeho obchodným partnerom, v dôsledku čoho mu vznikla povinnosť zaplatiť mu zmluvnú pokutu vo výške 10.000,- eur."
+            },
+            "value": 10000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": null
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "po ukončení zmluvného vzťahu v rozpore so zmluvou o poskytovaní služieb nadviazal spoluprácu s jeho obchodným partnerom"
+          },
+          "value": "other"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur"
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd tiež zdôraznil, že zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd pri uplatňovaní moderačného práva nemusí zmluvnú pokutu znížiť vždy na úroveň výšky vzniknutej škody."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "napriek tomu bez písomného súhlasu žalobcu nadviazal spoluprácu s obchodnou spoločnosťou C. W., teda žalovaný v rozpore so zmluvou vykonával činnosť, ktorá má súťažnú povahu voči podnikaniu žalobcu"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd dospel k záveru, že zmluvná pokuta žiadaná žalobcom je neprimerane vysoká, nakoľko predstavuje viac ako 50 % úhrad poskytnutých žalovanému, a preto s prihliadnutím na stanovisko právneho zástupcu žalobcu postupom podľa § 301 Obchodného zákonníka znížil sumu zmluvnej pokuty na sumu 5.000,- eur"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Súd tiež zdôraznil, že zmluvná pokuta plní zabezpečovaciu funkciu a postup žalovaného bol spôsobilý ohroziť výkon podnikateľskej činnosti žalobcu"
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie aplikoval moderačné právo podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že požadovaná zmluvná pokuta vo výške 10.000 eur je neprimerane vysoká. Ako hlavný dôvod uviedol, že táto suma predstavuje viac ako 50 % všetkých úhrad, ktoré žalobca poskytol žalovanému počas trvania zmluvy (17.044,40 eur). Súd znížil pokutu na 5.000 eur, čo považoval za sumu, ktorá nie je neúmerne prísna a nevedie k neodôvodnenému prospechu žalobcu, pričom zároveň rešpektoval zabezpečovaciu funkciu pokuty vzhľadom na súťažnú povahu konania žalovaného."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "V prípade porušenia tohto ustanovenia bol žalobca oprávnený požadovať od žalovaného náhradu vzniknutej škody a vznikol mu nárok na zmluvnú pokutu vo výške 10.000,- eur."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,- eur"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_11_2022_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/11/2022",
+      "decision_date": "21.06.2022",
+      "ecli": "ECLI:SK:KSPO:2022:6120294715.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

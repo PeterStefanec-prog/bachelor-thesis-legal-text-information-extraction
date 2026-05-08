@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9018,
+    "completion_tokens": 1811,
+    "cost_usd": 0.0078,
+    "latency_seconds": 29.26,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 69.798,80 EUR spolu s úrokom z omeškania z titulu zmluvnej pokuty za omeškanie žalovaného s dodaním, inštaláciou a uvedením zariadenia do prevádzky. Spor vznikol okolo existencie Dodatku č. 1, ktorý menil cenu a platobné podmienky, a okolo momentu riadneho dodania zariadenia.",
+      "verdict_summary": "Krajský súd zrušil rozsudok súdu prvého stupňa, ktorý žalobu zamietol, a vec vrátil súdu prvého stupňa na ďalšie konanie, pretože súd nedostatočne zistil skutkový stav regarding existencie dodatku a momentu dodania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Porušením zmluvnej povinnosti, a to nevykonaním inštalácie zariadenia okamžite po jeho dodaní a neuvedením zariadenia do prevádzky vznikla žalobcovi škoda, ktorá bola zabezpečená zmluvnou pokutou",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,3% za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 0,3% za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 69798.8,
+            "evidence": {
+              "quote": "domáhal zaplatenia istiny vo výške 2.102.758,50 Sk (69.798,80 eura) spolu s 13%-ným úrokom z omeškania ročne z tejto sumy od 14.07.2005 do zaplatenia z titulu zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 69798.8,
+            "evidence": {
+              "quote": "o zaplatenie 69.798,80 eura s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 27Cb/129-2006-241 zo dňa 26.04.2011 zrušuje a vec vracia súdu prvého stupňa na ďalšie konanie",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": "13% ročne",
+          "evidence": {
+            "quote": "domáhal zaplatenia istiny vo výške 2.102.758,50 Sk (69.798,80 eura) spolu s 13%-ným úrokom z omeškania ročne z tejto sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 27Cb/129-2006-241 zo dňa 26.04.2011 zrušuje a vec vracia súdu prvého stupňa na ďalšie konanie",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože považoval Dodatok č. 1 za neuzatvorený a tvrdil, že žalovaný sa nemohol dostať do omeškania. Odvolací súd však zistil, že súd prvého stupňa neodôvodnil svoje rozhodnutie regarding svedka a nedostatočne zistil skutkový stav ohľadom existencie dodatku a momentu dodania zariadenia. Keďže vec bola vrátená na ďalšie konanie, súd ešte nerozhodol o merits zmluvnej pokuty ani neaplikoval moderačné právo.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa predčasne usúdil, že Dodatok č. 1 nebol uzavretý",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Správne (tak skutkovo ako aj právne) uzavretie otázky existencie Dodatku č. 1 ako aj okamihu riadneho dodania zariadenia je v predmetnej veci rozhodujúce pre posúdenie dôvodnosti žaloby",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_294_2011_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/294/2011",
+      "decision_date": "19.02.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1305219662.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

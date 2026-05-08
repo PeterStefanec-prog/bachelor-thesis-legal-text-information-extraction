@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 23605,
+    "completion_tokens": 1931,
+    "cost_usd": 0.0137,
+    "latency_seconds": 35.21,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "uver",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zostávajúcej časti úveru vo výške 5.472,43 EUR spolu so zmluvnou pokutou vo výške 0,1 % denne z nezaplatených splátok a následne úrokom z omeškania. Žalovaný namietal absolútnu neplatnosť zmluvy o úvere pre rozpor s dobrými mravmi kvôli výške dojednanej odmeny.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvej inštancie v napadnutom rozsahu a vrátil vec na ďalšie konanie, pretože prvoinštančný súd nepostupoval správne pri posudzovaní námietky absolútnej neplatnosti zmluvy."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutom rozsahu vo vyhovujúcom výroku II. spolu so závislým výrokom III. o náhrade trov prvoinštančného konania, s použitím ust. § 389 ods. 1 písm. b) CSP zrušil"
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca sa podanou žalobou domáha zaplatenia zvyšných splatných splátok úveru, t. j. sumy 8.972,43 eur ... ako i záväzkov vyplývajúcich zo zmluvy o úvere, teda zmluvnej pokuty vo výške 0,1% denne"
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "zmluvnej pokuty vo výške 0,1 % denne -zo sumy 252,52 eur od 21.6.2016 do 25.1.2017, -zo sumy 252,52 eur od 21.7.2016 do 25.1.2017"
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "od dňa nasledujúceho po dni, v ktorom súčet zmluvných pokút dosiahne čiastku 12.120,96 eur sú žalovaní povinní uhradiť žalobcovi úrok z omeškania zo sumy 8.972,43 eur vo výške 9 % ročne až do zaplatenia"
+          },
+          "rate_value": "9 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "V prípade omeškania dlžníka s úhradou splátky, je veriteľ oprávnený požadovať úhradu zmluvnej pokuty"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "bolo nevyhnutným, aby odvolací súd rozsudok súdu prvej inštancie v napadnutom rozsahu vo vyhovujúcom výroku II. spolu so závislým výrokom III. o náhrade trov prvoinštančného konania, s použitím ust. § 389 ods. 1 písm. b) CSP zrušil"
+            },
+            "value": "returned"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutom rozsahu vo vyhovujúcom výroku II. spolu so závislým výrokom III. o náhrade trov prvoinštančného konania, s použitím ust. § 389 ods. 1 písm. b) CSP zrušil"
+            }
+          ],
+          "legal_reasoning_summary": "Odvolací súd zrušil rozhodnutie prvoinštančného súdu a vrátil vec na ďalšie konanie, pretože súd prvej inštancie nesprávne neprihliadol na včas uplatnenú námietku žalovaného týkajúcu sa absolútnej neplatnosti zmluvy o úvere. Prvoinštančný súd sa nezaoberal posúdením výšky úrokov z hľadiska rozporu s dobrými mravmi podľa § 39 Občianskeho zákonníka ani aplikáciou § 265 Obchodného zákonníka. Keďže odvolací súd vec vrátil na nové rozhodnutie, k meritórному posúdeniu výšky zmluvnej pokuty a jej prípadnej moderácii ešte nedošlo."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "je veriteľ oprávnený požadovať úhradu zmluvnej pokuty vo výške 0,1% denne z dlžnej sumy a za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,1% denne z dlžnej sumy"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_returned_for_retrial",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.secured_principal",
+        "EVIDENCE_TRUNCATED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_24CoCsp_26_2023_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "24CoCsp/26/2023",
+      "decision_date": "13.06.2023",
+      "ecli": "ECLI:SK:KSTT:2023:2121204911.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

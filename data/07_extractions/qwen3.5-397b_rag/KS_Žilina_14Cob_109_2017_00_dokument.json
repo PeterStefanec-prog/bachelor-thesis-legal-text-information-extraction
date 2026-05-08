@@ -1,0 +1,192 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 20275,
+      "completion_tokens": 1234,
+      "cost_usd": 0.0108,
+      "latency_seconds": 19.9,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 16390,
+      "completion_tokens": 1404,
+      "cost_usd": 0.0097,
+      "latency_seconds": 29.83,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "uver",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia peňažnej pohľadávky z úverových zmlúv vrátane úrokov z omeškania a zmluvnej pokuty. Spor sa týkal výšky priznanej pohľadávky, poradia započítania čiastočnej úhrady a primeranosti dojednanej zmluvnej pokuty, ktorú súd prvého stupňa znížil podľa § 301 Obchodného zákonníka.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa vo výrokoch o hlavnej veci, ktorým bola priznaná istina a úroky z omeškania a zmluvná pokuta bola moderovaná na 0,05 % denne. Vec bola vrátená súdu prvého stupňa len na nové rozhodnutie o trovách konania."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_9",
+              "quote": "Zmluvná pokuta vo výške 0,05 % denne vyčíslená za obdobie odo dňa nasledujúceho po splatnosti úveru, teda od 14.10.2004, do 28.02.2006, dokedy žalobca túto zmluvnú pokutu požadoval, predstavuje 146.162,99 Sk."
+            },
+            "value": 146162.99
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_8",
+              "quote": "Pokiaľ ide o nárok na zmluvnú pokutu, podľa Zmluvy o úvere č. 3002 žalobcovi patrí za každý deň omeškania zmluvná pokuta vo výške 0,2 % z dlžnej sumy. Žalobca vo svojich jednotlivých predložených vyúčtovaniach požadoval zmluvnú pokutu celkove za obdobie do 28.02.2006."
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_8",
+              "quote": "Okresný súd preto dospel k záveru, že počnúc dňom 14.10.2004 vzniklo žalobcovi právo požadovať od žalovaných zaplatenie zmluvnej pokuty vypočítanej zo sumy 581.165,Sk."
+            },
+            "value": 581165
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_9",
+            "quote": "Okrem istiny žalobca požadoval zaplatenie úroku z omeškania vo výške 15 % ročne, pričom tento úrok požadoval výlučne z istiny odo dňa nasledujúceho po jej splatnosti podľa zmlúv až do dňa zaplatenia."
+          },
+          "rate_value": "15 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_8",
+            "quote": "Pokiaľ ide o nárok na zmluvnú pokutu, podľa Zmluvy o úvere č. 3002 žalobcovi patrí za každý deň omeškania zmluvná pokuta vo výške 0,2 % z dlžnej sumy."
+          },
+          "value": "late_payment"
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_5",
+            "quote": "Zmluvná pokuta bola v tomto prípade medzi účastníkmi dojednaná vo výške 0,2 % denne, čo po prepočítaní predstavuje 73 % ročne."
+          },
+          "type": "percent_denne",
+          "value_raw": "0,2 % denne"
+        },
+        "related_claim_ref": null,
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "dospel k záveru, že v tomto prípade je primeranou zmluvnou pokutou zmluvná pokuta vo výške 0,05 % denne, teda 18,25 % ročne.",
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_6"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil zmluvnú pokutu z pôvodných 0,2 % denne (73 % ročne) na 0,05 % denne (18,25 % ročne) podľa § 301 Obchodného zákonníka, keďže pôvodná výška bola neprimerane vysoká. Kľúčovým argumentom bola kumulácia vysokej zmluvnej pokuty so zákonným úrokom z omeškania (15 % ročne), čo by spolu predstavovalo 88 % ročne a viedlo k bezdôvodnému obohateniu veriteľa. Súd tiež prihliadal na to, že riziko neuhradenia dlhu bolo už kompenzované vysokým úrokom z úveru (39 % a 60 % ročne), takže ďalšia vysoká sankcia nebola opodstatnená významom zabezpečovanej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia žalovaných, ktorý môže viesť k bezdôvodnému obohateniu žalobcu na účet a na úkor žalovaných.",
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_6"
+            },
+            {
+              "quote": "Časť rizika žalobcu spočívajúceho vo vyššie uvedených okolností prípadu a síce, že žalobca nie je bankovou inštitúciou a počíta s tým, že jeho dlžníci svoje dlhy budú platiť riadne a včas, tak žalobca kompenzoval už vysokou úrokovou mierou požadovanou od žalovaných.",
+              "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_5"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Okresný súd konštatoval, že úroková miera požadovaná žalobcom za poskytnuté úvery vo výške 60 % a 39 % ročne nie je v rozpore so zásadami poctivého obchodného styku.",
+                "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Hodnota a význam zabezpečovanej povinnosti v tomto prípade neodôvodňuje takúto vysokú zmluvnú pokutu.",
+                "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "vznik škody nie je v zmysle úpravy podľa § 301 Obchodného zákonníka podmienkou uplatnenia moderačného práva, ale len okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty.",
+                "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Výška úroku z omeškania spolu s požadovanou zmluvnou pokutou tak predstavuje 88 % ročne, čo je podľa okresného súdu neprimerane vysoký zásah do postavenia žalovaných, ktorý môže viesť k bezdôvodnému obohateniu žalobcu na účet a na úkor žalovaných.",
+                "chunk_id": "KS_Žilina_14Cob_109_2017_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_109_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/109/2017",
+      "decision_date": "11.10.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5108224890.7",
+      "document_type": "Rozsudok"
+    }
+  }
+}

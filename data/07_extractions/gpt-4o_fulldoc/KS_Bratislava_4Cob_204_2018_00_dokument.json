@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 25393,
+    "completion_tokens": 1262,
+    "cost_usd": 0.0761,
+    "latency_seconds": 45.6,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca TRANS VAT SK s.r.o. sa domáhal zaplatenia zmluvnej pokuty vo výške 20.000,- eur od žalovaného LEMOND s.r.o. za porušenie povinnosti informovať o existencii prevádzkarne v Rakúsku, čo viedlo k zamietnutiu žiadosti o vrátenie DPH.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorým bola žalovanému uložená povinnosť zaplatiť zmluvnú pokutu 20.000,- eur.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný porušil informačnú povinnosť, konkrétne informovať žalobcu o zriadenej prevádzke v Rakúsku, čo bolo aj dôvodom na zamietnutie žiadosti o vrátenie dane.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000,- eur",
+          "evidence": {
+            "quote": "v prípade porušenia ktorejkoľvek povinnosti sa klient (žalovaný) zaväzuje bez zbytočného odkladu po doručení výzvy \"zástupcu\" (žalobcu) zaplatiť zástupcovi za každé také porušenie zmluvnú pokutu vo výške 20.000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000,
+            "evidence": {
+              "quote": "Žalobca sa podanou žalobou domáha od žalovaného zaplatenia zmluvnej pokuty v zmysle článku 4 zmluvy o spätnom získavaní DPH vo výške 20.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000,
+            "evidence": {
+              "quote": "Preto súd žalobe žalobcu vyhovel a žalovaného zaviazal na zaplatenie istiny vo výške 20.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,05 % ročne",
+          "evidence": {
+            "quote": "zaviazal žalovaného zaplatiť žalobcovi sumu 20.000,- eur spolu s úrokom z omeškania vo výške 9,05 % ročne zo sumy 20.000,- eur od 9.3.2016 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Podľa názoru súdu je dojednanie o zmluvnej pokute jasné určité a zrozumiteľné a taktiež je v dojednaní o zmluvnej pokute jasne vymedzená povinnosť, ktorú zmluvná pokuta zabezpečuje.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že žalovaný porušil informačnú povinnosť tým, že neinformoval žalobcu o zriadení prevádzkarne v Rakúsku, čo viedlo k zamietnutiu žiadosti o vrátenie DPH. Zmluvná pokuta bola dohodnutá v zmluve a súd ju považoval za primeranú vzhľadom na význam zabezpečovanej povinnosti. Súd nevyužil moderačné právo na zníženie pokuty, keďže ju považoval za primeranú.",
+          "key_quotes": [
+            {
+              "quote": "Podľa názoru súdu je dojednanie o zmluvnej pokute jasné určité a zrozumiteľné a taktiež je v dojednaní o zmluvnej pokute jasne vymedzená povinnosť, ktorú zmluvná pokuta zabezpečuje.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Podľa názoru súdu je dojednanie o zmluvnej pokute jasné určité a zrozumiteľné a taktiež je v dojednaní o zmluvnej pokute jasne vymedzená povinnosť, ktorú zmluvná pokuta zabezpečuje.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_204_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/204/2018",
+      "decision_date": "21.03.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1216205419.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

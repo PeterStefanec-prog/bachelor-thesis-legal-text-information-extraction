@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9404,
+    "completion_tokens": 1254,
+    "cost_usd": 0.036,
+    "latency_seconds": 12.34,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia 1.185,02 eur ako ceny diela realizovaného na základe zmluvy o dielo a zmluvnej pokuty. Žalovaný namietal neplatnosť zmluvy a žiadal zamietnutie návrhu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa o priznaní zmluvnej pokuty, ale znížil jej výšku na 0,05 % denne.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "dohodli si ju vo výške 0,1 % z dlžnej sumy za každý deň omeškania so zaplatením čo i len časti ktorejkoľvek platby odmeny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej sumy denne",
+          "evidence": {
+            "quote": "pokutu dojednanú v bode 6.1. zmluvy vo výške 0,1 % z dlžnej sumy denne od 7.2.2008.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1185.02,
+            "evidence": {
+              "quote": "0,1 % z dlžnej sumy denne od 7.2.2008.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 432.53,
+            "evidence": {
+              "quote": "0,1 % denný úrok zo sumy 1.185,02 eur predstavuje ročne 432,53 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd priznal žalobcovi zmluvnú pokutu len vo výške 0,05 % na miesto požadovanej 0,1 % denne a preto i vo zvyšku návrh zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14,25 % ročne",
+          "evidence": {
+            "quote": "úroky z omeškania vo výške 14,25 % ročne od 17.2.2008 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "za obdobie roka 2008. Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil zmluvnú pokutu z dôvodu neprimerane vysokých majetkových dôsledkov, ktoré by mohli viesť k neprimeranému zisku žalobcu. Zmluvná pokuta bola znížená na 0,05 % denne, čo predstavuje polovicu pôvodne dohodnutej výšky. Súd posudzoval primeranosť zmluvnej pokuty vzhľadom na hodnotu zabezpečenej povinnosti a význam zabezpečenej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "za obdobie roka 2008. Súd na návrh žalovaného v zmysle § 301 Obchodného zákonníka využil moderačné právo, ktorého účelom bolo znížiť zmluvnú",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "platobnej agentúre najneskôr 30.4.2008. Má za to, že správanie sa žalobcu je v rozpore so zásadami poctivého obchodného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "mal ďalej preukázané, že zmluvné strany si v zmluve o dielo platne dohodli zmluvnú pokutu, lebo jednoznačne určili povinnosť, ktorá mala byť zmluvnou pokutou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "formu paušalizovanej náhrady škody, pričom plnenie žalovaného bolo zabezpečené aj úrokmi z omeškania a ku žiadnej škode na strane žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neadekvátnym majetkovým dôsledkom, lebo neprimerane vysoká zmluvná pokuta (po prepočítaní na konkrétnu sumu: 432,53 eur) by mohla viesť k neprimeranému zisku vo vzťahu k majetkovej ujme na strane",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd bral pritom do úvahy i tú skutočnosť, že žalovaný dielo neodovzdal príslušnej organizácii.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pričom plnenie žalovaného bolo zabezpečené aj úrokmi z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "platobnej agentúre najneskôr 30.4.2008. Má za to, že správanie sa žalobcu je v rozpore so zásadami poctivého obchodného",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_41_2011_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/41/2011",
+      "decision_date": "25.10.2011",
+      "ecli": "ECLI:SK:KSTT:2011:2508210924.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

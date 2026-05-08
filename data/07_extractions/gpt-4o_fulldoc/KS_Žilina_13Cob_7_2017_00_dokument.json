@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6685,
+    "completion_tokens": 1142,
+    "cost_usd": 0.0281,
+    "latency_seconds": 20.67,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Orange Slovensko, a.s. sa domáhal zaplatenia sumy 1.819,93 Eur spolu s príslušenstvom od žalovaného JT COMPANY INVEST s. r. o. na základe zmlúv o poskytovaní verejných elektronických komunikačných služieb a predaji mobilných telefónov, pričom žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Žilina, ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi sumu 1.718,93 Eur spolu s úrokom z omeškania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný neplnil riadne a včas povinnosť platiť cenu poskytnutých služieb vyfakturovaných v období marec až máj 2012, čím porušil zmluvné povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnú pokutu v celkovej výške 1.423 Eur",
+          "evidence": {
+            "quote": "v zmysle Dodatkov ku Zmluvám č. A5761158, A6208913 a A6209667 vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1423,
+            "evidence": {
+              "quote": "v zmysle Dodatkov ku Zmluvám č. A5761158, A6208913 a A6209667 vznikla mu povinnosť zaplatiť žalobcovi zmluvnú pokutu v celkovej výške 1.423 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1423,
+            "evidence": {
+              "quote": "Okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "zaplatiť žalobcovi sumu 1.718,93 Eur spolu s 0,05 % úrokom z omeškania denne zo sumy 1.718,93 Eur od 10.8.2012 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa uznal žalobu za dôvodnú na základe vykonaného dokazovania, pričom žalobca preukázal existenciu zmluvných pokút a úrokov z omeškania podľa zmluvných podmienok. Žalovaný nepreukázal opodstatnenosť svojich námietok týkajúcich sa podpisov na zmluvách. Súd potvrdil, že žalobca má nárok na zmluvnú pokutu v plnej výške 1.423 Eur.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd dospel k záveru o dôvodnosti žaloby, čo do základu a výšky v rozsahu vyplývajúcom z výroku rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_7_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/7/2017",
+      "decision_date": "28.06.2017",
+      "ecli": "ECLI:SK:KSZA:2017:5113242552.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

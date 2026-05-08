@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10044,
+    "completion_tokens": 978,
+    "cost_usd": 0.0349,
+    "latency_seconds": 7.41,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Arcus International, s.r.o. sa domáhal zaplatenia sumy 251,30 eur s príslušenstvom od žalovaného Zeus Slovakia s.r.o. na základe zmluvy o dielo na dodanie automatických dverí. Žalobca tvrdil, že žalovaný sa dostal do omeškania s úhradou faktúry, čím vznikol nárok na úroky z omeškania a zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý zamietol nárok na zmluvnú pokutu vo výške 240 eur.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "žalovaný sa dostal s úhradou uvedenej faktúry do omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "10,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 10,- eur za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1966.16,
+            "evidence": {
+              "quote": "zaplatením sumy 1.996,16 eur za obdobie od 15.12.2012 do 7.1.2013",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 240,
+            "evidence": {
+              "quote": "výška zmluvnej pokuty za obdobie od 15.12.2012 do zaplatenia vo výške 240,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "prvoinštančný súd žalobný návrh na zaplatenie zmluvnej pokuty vo výške 240,- eur zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "výška úrokov z omeškania ku dňu podania žaloby bola vyčíslená pevnou sumou vo výške 11,30 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "prvoinštančný súd žalobný návrh na zaplatenie zmluvnej pokuty vo výške 240,- eur zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že dohoda o zmluvnej pokute nebola uzavretá písomne, pretože nebolo preukázané, že všeobecné obchodné podmienky obsahujúce zmluvnú pokutu boli doručené žalovanému. Odvolací súd potvrdil tento záver, keďže žalobca nepreukázal, že obchodné podmienky boli súčasťou zmluvy o dielo.",
+          "key_quotes": [
+            {
+              "quote": "prvoinštančný súd žalobný návrh na zaplatenie zmluvnej pokuty vo výške 240,- eur zamietol",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_93_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/93/2016",
+      "decision_date": "26.10.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1713214705.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

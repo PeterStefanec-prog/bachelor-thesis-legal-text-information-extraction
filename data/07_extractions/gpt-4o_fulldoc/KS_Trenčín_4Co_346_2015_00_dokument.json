@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10601,
+    "completion_tokens": 1102,
+    "cost_usd": 0.0375,
+    "latency_seconds": 8.49,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ U. F., a.s. sa domáhal zaplatenia sumy 343,98 Eur od odporcu O. S. na základe leasingovej zmluvy, ktorú odporca porušil nezaplatením splátok. Navrhovateľ tiež požadoval úroky z omeškania a zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa a vrátil vec na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 104,79 € bola vyúčtovaná v súlade s bodom 2.5.3 Všeobecných zmluvných podmienok (VZP) vo výške 0,1% denne z dlžnej čiastky, a to za omeškanie s úhradou leasingových splátok",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% denne z dlžnej čiastky",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 104,79 € bola vyúčtovaná v súlade s bodom 2.5.3 Všeobecných zmluvných podmienok (VZP) vo výške 0,1% denne z dlžnej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 104.79,
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 104,79 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 100.0,
+            "evidence": {
+              "quote": "súd prvého stupňa v odôvodnení uviedol, že znížil požadovanú zmluvnú pokutu podľa § 301 Obchodného zákonníka na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Odporca doplatil dlžné 4. splátky i s úrokom s omeškania a zmluvnou pokutou.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvého stupňa v odôvodnení uviedol, že znížil požadovanú zmluvnú pokutu podľa § 301 Obchodného zákonníka na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu na 100 eur podľa § 301 Obchodného zákonníka, pretože odporca zaplatil dlžné splátky vrátane úrokov z omeškania a zmluvnej pokuty. Súd tiež zohľadnil, že navrhovateľ nepreukázal vznik skutočnej škody.",
+          "key_quotes": [
+            {
+              "quote": "súd prvého stupňa v odôvodnení uviedol, že znížil požadovanú zmluvnú pokutu podľa § 301 Obchodného zákonníka na sumu 100,- eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Z dôvodu nepreukázania vzniku skutočnej škody a ani ušlého zisku ako zákonného predpokladu vzniku nároku na náhradu škody podľa § 373 Obchodného zákonníka súd nepriznal navrhovateľovi uplatnený nárok na náhradu škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_4Co_346_2015_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "4Co/346/2015",
+      "decision_date": "19.05.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3112200219.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

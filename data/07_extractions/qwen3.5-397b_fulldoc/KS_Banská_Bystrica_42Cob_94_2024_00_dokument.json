@@ -1,0 +1,450 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26469,
+    "completion_tokens": 4657,
+    "cost_usd": 0.0212,
+    "latency_seconds": 51.45,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 22.790,40 EUR za neposkytnuté reklamné služby spolu s úrokmi z omeškania a dvoma typami zmluvných pokut (fixná suma 10.000 EUR a percentuálna pokuta 0,05 % denne). Žalovaný spochybňoval platnosť zmluvy, neprimeranosť zmluvných pokut a tvrdil, že súbeh zmluvnej pokuty a úroku z omeškania je v rozpore s dobrými mravmi.",
+      "verdict_summary": "Krajský súd potvrdil rozhodnutie okresného súdu, ktorý žalobcovi priznal nárok na zaplatenie dlžnej sumy, úrokov z omeškania aj oboch dojednaných zmluvných pokut v plnej výške, keďže súd považoval zmluvné pokuty za primerané a platné.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "zmluvnú pokutu pre prípad predčasného ukončenia spolupráce, a to vo výške poskytnutej zľavy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,- Eur",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 10.000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 10.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10000,
+            "evidence": {
+              "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu vo výške 22.790,40 Eur spolu s úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm, zmluvnou pokutou vo výške 10.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "namietať jej neprimeranosť. 26. Záverom preto okresný súd konštatoval, že nie je dôvod na moderáciu zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta vo výške 10.000 EUR reflektuje výšku zľavy poskytnutej žalovanému pri uzavretí zmluvy na dobu určitú, čo vyplýva z cenových ponúk, ktoré žalovaný podpísal. Súd považuje túto sumu za primeranú vzhľadom na cenu služieb a hodnotu zabezpečovanej povinnosti. Žalovaný nepreukázal, že by pokuta bola neprimeraná, a súd nezistil dôvod na jej zníženie.",
+          "key_quotes": [
+            {
+              "quote": "Pri zmluvnej pokute vo výške 5.000,- Eur poukázal na to, že žalovanému bola poskytnutá zľava zo začiatočných úkonov, z ktorého dôvodu bola dohodnutá zmluvná pokuta vo výške poskytnutej zľavy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Na základe uvedených skutočností okresný súd konštatoval, že dojednaná zmluvná pokuta vo výške 5.000,- Eur, vzhľadom na cenu služieb ako aj na uvedené skutočnosti, je primeraná.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "predmetnú zmluvnú pokutu nemožno považovať za rozpor s dobrými mravmi a zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Z uvedeného vyplýva hodnota zabezpečovaných povinností.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dojednaná zmluvná pokuta vo výške 5.000,- Eur, vzhľadom na cenu služieb ako aj na uvedené skutočnosti, je primeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s úhradou faktúr a neposkytoval súčinnosť žalobcovi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, že žalovaný bude meškať s úhradou akéhokoľvek peňažného záväzku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Uvedenú zmluvnú pokutu okresný súd považoval za primeranú",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta 0,05 % denne je určená podľa počtu dní omeškania a považuje ju za primeranú. Súd zdôraznil, že súbeh úroku z omeškania a zmluvnej pokuty je v slovenskom právnom systéme prípustný, pretože každý má samostatný právny dôvod. Žalovaný nepreukázal neprimeranosť tejto pokuty.",
+          "key_quotes": [
+            {
+              "quote": "daná výška zmluvnej pokuty je určená podľa počtu dní omeškania",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Právo na zaplatenie úrokov z omeškania a zmluvnej pokuty má samostatné právne dôvody.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "predmetnú zmluvnú pokutu nemožno považovať za rozpor s dobrými mravmi a zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "účelom zmluvnej pokuty je donútiť dlžníka pod hrozbou majetkovej sankcie k riadnemu splneniu záväzku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Uvedenú zmluvnú pokutu okresný súd považoval za primeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný sa dostal do omeškania s úhradou faktúr",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "neposkytnutie súčinnosti poskytovateľovi",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "5.000,- Eur z každej zmluvy",
+          "evidence": {
+            "quote": "zmluvnú pokutu aj v zmysle bodu 6.9 Zmluvy, a to z každej zmluvy pre neposkytovanie súčinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "uvedené porušenie si žalobca uplatnil z každej zmluvy zmluvnú pokutu 5.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10000,
+            "evidence": {
+              "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu vo výške 22.790,40 Eur spolu s úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm, zmluvnou pokutou vo výške 10.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12 % ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z o omeškania vo výške 12 % ročne z jednotlivých omeškaných súm",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "nie je dôvod na moderáciu zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že žalovaný neposkytoval súčinnosť (predkladanie podkladov, dobíjanie kariet), čo bolo dohodnuté v zmluve. Zmluvná pokuta 5.000 EUR z každej zmluvy (spolu 10.000 EUR) reflektuje poskytnutú zľavu a súd ju považuje za primeranú. Žalovaný nepreukázal neprimeranosť pokuty ani neposkytnutie súčinnosti nespochybnil.",
+          "key_quotes": [
+            {
+              "quote": "je nesporné a žalovaným nerozporované, že mu žalovaný neposkytol túto súčinnosť do októbra 2023",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "dojednaná zmluvná pokuta vo výške 5.000,- Eur, vzhľadom na cenu služieb ako aj na uvedené skutočnosti, je primeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nemožno považovať za rozpor s dobrými mravmi a zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Z uvedeného vyplýva hodnota zabezpečovaných povinností.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vzhľadom na cenu služieb ako aj na uvedené skutočnosti, je primeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nepochybné, že žalovaný túto súčinnosť žalobcovi neposkytoval",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku nevylučuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal.evidence.quote",
+        "contractual_penalties[1].amounts.secured_principal.evidence.quote",
+        "contractual_penalties[2].amounts.secured_principal.evidence.quote",
+        "contractual_penalties[1].amounts.original_claimed.evidence.quote",
+        "contractual_penalties[1].amounts.final_awarded.evidence.quote",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_42Cob_94_2024_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "42Cob/94/2024",
+      "decision_date": "09.09.2025",
+      "ecli": "ECLI:SK:KSBB:2025:6123462118.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

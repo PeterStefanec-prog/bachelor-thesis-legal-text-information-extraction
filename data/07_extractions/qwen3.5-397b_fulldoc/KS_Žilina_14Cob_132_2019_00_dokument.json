@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17316,
+    "completion_tokens": 2193,
+    "cost_usd": 0.0119,
+    "latency_seconds": 15.56,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa sa domáhala zaplatenia zmluvnej pokuty vo výške 1,66 % denne z dlžnej sumy za omeškanie s platením kúpnej ceny za dodaný tovar na základe rámcovej kúpnej zmluvy. Žalovaná namietala neprimeranú výšku zmluvnej pokuty a požadovala jej zníženie podľa § 301 Obchodného zákonníka.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý priznal žalobkyni nárok na zmluvnú pokutu v celej dohodnutej výške a neznižoval ju, keďže ju neposúdil ako neprimeranú.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "kupujúci v prípade omeškania s plnením záväzku povinný zaplatiť predávajúcemu zmluvnú pokutu vo výške 1,66 % z dlžnej sumy za každý deň omeškania s platením kúpnej ceny",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "1,66 % z dlžnej sumy za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 1,66 % z dlžnej sumy za každý deň omeškania s platením kúpnej ceny",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2862.79,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 1,66 % denne zo sumy 2.862,79 Eur od 25.06.2017 do 02.07.2017 a vo výške 1,66 % denne zo sumy 1.662,79 Eur od 03.07.2017 do 24.08.2017",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2211.67,
+            "evidence": {
+              "quote": "predmetom konania tak zostala suma 2.2011,67 Eur (poznámka krajského súdu: správne malo byť zrejme uvedené 2.211,67 Eur) ako zmluvná pokuta vrátane DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1843.06,
+            "evidence": {
+              "quote": " Výška zmluvnej pokuty vyjadrená sumou 1.843,06 Eur za omeškanie 8 dní so sumou 2.862,79 Eur (380,17 Eur) a za 53 dní so sumou 1.662,79 Eur (1.462,89 Eur)",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8 % ročne",
+          "evidence": {
+            "quote": "úroku z omeškania vo výške 8 % ročne zo sumy 2.862,79 Eur od 25.06.2017 do 02.07.2017 a zo sumy 1.662,79 Eur od 04.07.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd preto dospel k záveru o dôvodnosti žaloby a priznal žalobkyni aj zvyšok žalovaného nároku (zmluvná pokuta), ktorý zostal predmetom konania po rozhodnutí odvolacieho súdu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd posúdil zmluvnú pokutu ako primeranú, keďže jej výška závisela výlučne od doby omeškania dlžníka a od jeho rozhodnutia uhradiť záväzok. Súd zdôraznil, že neprimeranosť nie je možné odvodiť z celkovej výšky pokuty, ak je dôsledkom dlhodobého omeškania, pretože opačný záver by zvýhodňoval dlžníka. Výška pokuty v pomere k zabezpečovanej pohľadávke (kúpnej cene) nepredstavuje neúmerné obohatenie veriteľa. Súd tiež konštatoval, že vznik škody nie je podmienkou pre zaplatenie zmluvnej pokuty a žalobkyňa nemusela škodu preukazovať.",
+          "key_quotes": [
+            {
+              "quote": "vyššia aj zmluvná pokuta. Neprimeranosť zmluvnej pokuty nie je možné odvodiť z jej celkovej výšky, ak je dôsledkom dlhodobého omeškania, keďže opačný záver by zvýhodňoval",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "pri výške zabezpečovanej pohľadávky 2.862,79 Eur sa okresnému súdu nejaví ako neprimeraná sankcia práve s prihliadnutím na účel a zabezpečenie povinnosti splniť dohodnutý záväzok. O neprimeranosti zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta má zabezpečovací význam, ktorý spočíva v tom, že núti toho, kto sa zaviazal splniť zabezpečenú povinnosť, aby sa správal tak, aby sa na plnenie tejto povinnosti nielen pripravil, ale aby ju aj splnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvnú pokutu je pritom potrebné zaplatiť nielen vtedy, keď škoda vznikne, ale aj vtedy, ak žiadna škoda nevznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nemôže byť vyhodnotená ako neprimerane vysoká sankcia v pomere k pôvodne dlžnej sume rovnajúcej sa kúpnej cene vo výške 2.862,79 Eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška tejto zmluvnej pokuty výlučne od dlžníka a od okamihu, kedy dlžník pristúpil k úhrade svojho záväzku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Obe zmluvné strany mali rovnocenné postavenie a zmluvnú voľnosť pri vstupe do zmluvného vzťahu.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_132_2019_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/132/2019",
+      "decision_date": "24.10.2019",
+      "ecli": "ECLI:SK:KSZA:2019:5617206084.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

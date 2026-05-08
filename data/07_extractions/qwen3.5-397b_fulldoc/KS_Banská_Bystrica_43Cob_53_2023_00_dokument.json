@@ -1,0 +1,308 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17969,
+    "completion_tokens": 3748,
+    "cost_usd": 0.0158,
+    "latency_seconds": 60.9,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal od žalovaného zaplatenia neuhradeného nájomného za náves a nákladné vozidlo, úrokov z omeškania, nákladov spojených s uplatnením pohľadávky a zmluvných pokút za predčasné ukončenie nájomného vzťahu. Žalovaný namietal neprimeranosť výšky zmluvných pokút a ich rozpor so zásadami poctivého obchodného styku.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd odmietol odvolanie žalovaného proti výrokom o nájomnom a nákladoch pre nedostatok odvolacích dôvodov a potvrdil rozhodnutie súdu prvej inštancie, ktorým priznal žalobcovi nárok na zmluvnú pokutu vo výške 7.600 EUR a zamietol nárok na druhú zmluvnú pokutu vo výške 2.160 EUR."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd prvej inštancie vyhodnotiť, že si žalobca dôvodne od žalovaného uplatnil zvyšnú časť zmluvnej pokuty vo výške 7.600,- Eur (výrok III.)"
+            },
+            "value": 7600
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur (z toho neuhradená časť 2.160,- Eur) splatná 15.07.2022 a č. 22PI0552"
+            },
+            "value": 11400
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Celková hodnota kontraktu zabezpečeného zmluvnou pokutou pre žalobcu tak bola v sume 68.400,- Eur (36 x mesačné nájomné bez DPH 1.900,Eur), toľko by získal žalobca, ak by žalovaný riadne a včas splnil svoje záväzky zo zmluvy."
+            },
+            "value": 68400
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Vo výroku III. uložil žalovanému povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške 7.600,- Eur, do 3 dní od právoplatnosti rozhodnutia."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Zmluvné pokuty boli dohodnuté vo výške zodpovedajúcej 6-im nájomným pre prípad, že z dôvodov na strane žalovaného dôjde k ukončeniu nájomného vzťahu skôr, ako bolo dohodnuté"
+          },
+          "value": "early_termination"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie sa stotožnil s argumentáciou žalobcu, že si zmluvnou pokutou nezabezpečil prípadný nedoplatok na nájomnom, ale dodržanie zmluvy, čo znamená, že úhrada 36 mesačných nájmov je zabezpečená zmluvnou pokutou vo výške šesťmesačného nájomného, a teda zmluvná pokuta predstavovala 16,67 % z celkovej výšky nájomného, čo nie je v žiadnom prípade možné považovať za neprimerané"
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "zmluvná pokuta predstavovala 16,67 % z celkovej výšky nájomného, čo nie je v žiadnom prípade možné považovať za neprimerané a podľa názoru súdu prvej inštancie ani v rozpore so zásadami poctivého obchodného styku"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalobca si zmluvnou pokutou zabezpečil dodržanie zmluvy, čo znamená, že úhrada 36, resp. 48 mesačných nájom je zabezpečená zmluvnou pokutou vo výške 6-mesačného nájomného"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "aplikácia § 301 Obchodného zákonníka nedáva ani zmysel, nakoľko škoda, ktorú žalobca utrpel v dôsledku porušenia povinnosti žalovaného je vyššia, než požadovaná zmluvná pokuta"
+              },
+              "label": "vyska_skody",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "zmluvná pokuta predstavovala 16,67 % z celkovej výšky nájomného, čo nie je v žiadnom prípade možné považovať za neprimerané"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "zmluvná pokuta predstavovala 16,67 % z celkovej výšky nájomného, čo nie je v žiadnom prípade možné považovať za neprimerané"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "škoda, ktorú žalobca utrpel v dôsledku porušenia povinnosti žalovaného je vyššia, než požadovaná zmluvná pokuta"
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta vo výške šesťnásobku mesačného nájomného nie je neprimeraná, keďže predstavovala len 16,67 % z celkovej hodnoty zabezpečeného záväzku (nájomného za 36 mesiacov). Súd zdôraznil, že pokuta slúžila na zabezpečenie dodržania zmluvy po celú dohodnutú dobu, nie len na úhradu nedoplatkov. Aplikácia § 301 Obchodného zákonníka bola odmietnutá aj preto, že škoda spôsobená predčasným ukončením nájmu (ušlý zisk) prevyšuje výšku požadovanej zmluvnej pokuty."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Žalobca si uplatnil zmluvnú pokutu vo výške šesťnásobku mesačného nájomného v zmysle bodu 7.6 písm. (iv) Všeobecných zmluvných podmienok"
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "šesťnásobok mesačného nájomného"
+        },
+        "related_claim_ref": "faktúra č. 22PI0552"
+      },
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "vo výroku VI. žalobcu v časti o zaplatenie zmluvnej pokuty vo výške 2.160,- Eur zamietol."
+            },
+            "value": 0
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur (z toho neuhradená časť 2.160,- Eur) splatná 15.07.2022"
+            },
+            "value": 3240
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd prvej inštancie napokon dospel k záveru, že žalobca nepredložil listinný dôkaz, z ktorého by vyplývalo dojednanie žalobcu a žalovaného na zmluvnej pokute pre prípad omeškania žalovaného s platením nájomného za náves"
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "vo výroku VI. žalobcu v časti o zaplatenie zmluvnej pokuty vo výške 2.160,- Eur zamietol."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žalobca nepredložil listinný dôkaz, z ktorého by vyplývalo dojednanie žalobcu a žalovaného na zmluvnej pokute pre prípad omeškania žalovaného s platením nájomného za náves"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "pretože k platnej dohode na zmluvnej pokute nedošlo, žalobcom uplatnený nárok na zmluvnú pokutu v sume 2.160,- Eur nebol dôvodný"
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "žalobca nepredložil listinný dôkaz, z ktorého by vyplývalo dojednanie žalobcu a žalovaného na zmluvnej pokute pre prípad omeškania žalovaného s platením nájomného za náves"
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol nárok na zmluvnú pokutu vo výške 2.160 EUR, pretože žalobca nepredložil písomný dôkaz o dohode na tejto pokute pre prípad omeškania s platením nájomného za náves. Keďže § 544 Občianskeho zákonníka vyžaduje písomnú formu dohody o zmluvnej pokute pod sankciou neplatnosti a táto podmienka nebola splnená, súd dospel k záveru, že k platnej dohode nedošlo a nárok nie je dôvodný."
+        },
+        "penalty_id": "pokuta_2",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Žalobca tiež vystavil žalovanému z titulu zmluvných pokút podľa bodu 7.6 Všeobecných zmluvných podmienok faktúru č. 22PI0551 na sumu 3.240,- Eur"
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "suma 3.240,- Eur"
+        },
+        "related_claim_ref": "faktúra č. 22PI0551"
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_53_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/53/2023",
+      "decision_date": "07.08.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6122386080.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

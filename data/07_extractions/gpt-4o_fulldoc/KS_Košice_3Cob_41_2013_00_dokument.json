@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10877,
+    "completion_tokens": 1403,
+    "cost_usd": 0.0412,
+    "latency_seconds": 24.84,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca F. N., a.s. požadoval od žalovaných zaplatenie sumy 5.953,69 eur s príslušenstvom na základe leasingovej zmluvy, ktorej predmetom bol prenájom a následná kúpa ojazdeného motorového vozidla. Žalovaní namietali svoju pasívnu legitimáciu a tvrdili, že dlh prevzal iný subjekt.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý zaviazal žalovaných zaplatiť žalobcovi požadovanú sumu.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "žalobca vyzval žalovaného 2/ ako ručiteľa na úhradu dlžnej sumy a ani on ju neuhradil. Žalobca prípisom zo dňa 25.11.2002, ktorý žalovaná 1/ prevzala dňa 29.11.2002 odstúpil od zmluvy pre podstatné porušenie povinnosti, a to omeškanie so zaplatením splátky po dobu dlhšiu ako 6 týždňov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5",
+          "evidence": {
+            "quote": "zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 13277.56,
+            "evidence": {
+              "quote": "prenájom a kúpa ojazdeného motorového vozidla S. F. XXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 5953.69,
+            "evidence": {
+              "quote": "zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5953.69,
+            "evidence": {
+              "quote": "zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "12,5% ročným úrokom z omeškania",
+          "evidence": {
+            "quote": "zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur s 12,5% ročným úrokom z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa uviedol, že mal za preukázané, že žalobca si oprávnene uplatnil tento nárok, pretože žalovaná 1/ porušila zmluvné podmienky",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že žalovaná 1/ porušila zmluvné podmienky tým, že neplatila splátky a previedla vozidlo bez súhlasu žalobcu. Žalobca si uplatnil nárok na zmluvnú pokutu a úroky z omeškania, ktoré boli dohodnuté v zmluve. Súd potvrdil, že žalobca má nárok na celú požadovanú sumu, pretože žalovaní nepreukázali, že by došlo k zmene zmluvy alebo úhrade dlhu.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa uviedol, že mal za preukázané, že žalobca si oprávnene uplatnil tento nárok, pretože žalovaná 1/ porušila zmluvné podmienky",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_secured_principal_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw",
+        "contractual_penalties[0].moderation_analysis.factors[0].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[1].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[2].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[3].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[4].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[5].evidence.quote",
+        "contractual_penalties[0].moderation_analysis.factors[6].evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_41_2013_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/41/2013",
+      "decision_date": "27.08.2013",
+      "ecli": "ECLI:SK:KSKE:2013:7605215910.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

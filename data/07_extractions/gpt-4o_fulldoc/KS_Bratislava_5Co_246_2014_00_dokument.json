@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12182,
+    "completion_tokens": 1469,
+    "cost_usd": 0.0451,
+    "latency_seconds": 28.31,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ, Mesto Čadca, sa domáhal zaplatenia zmluvnej pokuty vo výške 8.298,47 eura od odporcu, EURO HOME EAST, a.s., na základe Zmluvy o nájme z 01.11.2008. Odporca mal začať s výstavbou bytových domov do dvoch rokov od podpisu zmluvy, čo nesplnil.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý uložil odporcovi povinnosť zaplatiť zmluvnú pokutu vo výške 8.298,47 eura.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Odporca záväzok splniť nemohol, nakoľko sa odo dňa podpisu zmluvy výrazne zmenili hospodárske podmienky; nie je tak možné od odporcu spravodlivo žiadať splnenie tejto povinnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "250.000,- Sk (8.298,47 eura)",
+          "evidence": {
+            "quote": "Zmluvnú pokutu mali účastníci dohodnutú v článku V. Zmluvy vo výške 250.000,- Sk (8.298,47 eura).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 8298.47,
+            "evidence": {
+              "quote": "o zaplatenie zmluvnej pokuty vo výške 8.298,47 eura s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 8298.47,
+            "evidence": {
+              "quote": "Odvolací súd napadnutý rozsudok súdu prvého stupňa, č.k.: 15C/39/2012-45 zo dňa 28.05.2013 potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "uložil odporcovi povinnosť zaplatiť navrhovateľovi 8.298,47 eura s 9% úrokom z omeškania ročne od 10.12.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odporca tak napadnutým odvolaním nespochybnil dôvodnosť odstúpenia od zmluvy ako ani vznik povinnosti zaplatiť zmluvnú pokutu, pričom nezaložil dôvody na aplikáciu § 301 Obch. zákonníka a zníženie zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa rozhodol, že zmluvná pokuta vo výške 8.298,47 eura je primeraná a nie je neetická. Odvolací súd potvrdil, že odporca nepreukázal dôvody na zníženie pokuty podľa § 301 Obch. zákonníka. Súd zohľadnil hodnotu a význam zabezpečovanej povinnosti a dospel k záveru, že pokuta je primeraná vzhľadom na celkové plnenie zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "nároku na zmluvnú pokutu. Súd podľa § 301 Obch. zákonníka môže neprimerane vysokú zmluvnú pokutu znížiť, pričom prihliada na hodnotu a význam zabezpečovanej",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pri jej výške súd hodnotil súlad dohody o zmluvnej pokute so všeobecnými požiadavkami zákona, predovšetkým § 39 Obč. zákonníka, požadujúceho pre občianskoprávne a obchodnoprávne vzťahy súlad právneho úkonu s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Prihliadol na hodnotu a význam zabezpečovanej povinnosti (realizácia a dokončenie výstavby bytových domov od stavebného povolenia, realizáciu a kolaudačného rozhodnutia včas pre zabezpečenie plánu obyvateľov mesta Čadca, za účelom čoho bola nájomná zmluva uzavretá)",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "8 % zmluvná pokuta z výšky dohodnutého nájmu za obdobie piatich rokov je primeraná, nie je neetická; vo vzťahu k odporcovi, ktorý nepredložil žiadne dôkazy ani likvidačná, z ktorého dôvodu moderačné právo na zníženie zmluvnej pokuty neaplikoval.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Odporca záväzok splniť nemohol, nakoľko sa odo dňa podpisu zmluvy výrazne zmenili hospodárske podmienky; nie je tak možné od odporcu spravodlivo žiadať splnenie tejto povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Navrhovateľ vo vyjadrení k odvolaniu žiadal, aby odvolací súd rozsudok súdu prvého stupňa ako vecne správny potvrdil.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Co_246_2014_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Co/246/2014",
+      "decision_date": "31.03.2015",
+      "ecli": "ECLI:SK:KSBA:2015:1111227329.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

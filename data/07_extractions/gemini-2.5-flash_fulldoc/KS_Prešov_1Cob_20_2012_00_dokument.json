@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12529,
+    "completion_tokens": 2145,
+    "cost_usd": 0.0371,
+    "latency_seconds": 9.0,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 115,30 eur s príslušenstvom, ktorá pozostávala z nesplateného revolvingového úveru, úrokov z omeškania a zmluvnej pokuty za porušenie zmluvných povinností. Prvostupňový súd zamietol časť žaloby týkajúcu sa zmluvnej pokuty a úrokov z omeškania, pričom priznal len časť úrokov z omeškania.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvého stupňa v napadnutej časti vo veci samej, ako aj vo výroku o náhrade trov konania, čím zamietol odvolanie žalobcu.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "titulom zmluvnej pokuty za porušenie zmluvných povinností zo strany žalovanej",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "20 % z dlžnej čiastky",
+          "evidence": {
+            "quote": "Zmluvná pokuta vo výške 26,56 eur (800,- Sk) predstavuje v zmysle Sadzobníka poplatkov 20 % z dlžnej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 26.56,
+            "evidence": {
+              "quote": "Zmluvná pokuta vo výške 26,56 eur (800,- Sk)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd zamietol žalobu v časti týkajúcej sa zaplatenia zmluvnej pokuty 82,77 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "za také isté porušenie zmluvnej povinnosti, t. j. za omeškanie so splnením toho istého záväzku, si zmluvné strany dojednali aj úrok z omeškania vo výške 0,1 % denne, t. j. 36,5 % ročne.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Dospel k záveru, že dojednaná zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až 1/5 dlžnej sumy. Keďže nekalá (neprijateľná) zmluvná podmienka je neplatná, súd nepriznal žalobcovi nárok na jej plnenie. Vzhľadom na tieto skutočnosti súd zamietol žalobu v časti týkajúcej sa zaplatenia zmluvnej pokuty 82,77 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že dojednaná zmluvná pokuta vo výške 20 % je neprimerane vysoká, pretože predstavuje až 1/5 dlžnej sumy. Súd ju považoval za nekalú (neprijateľnú) zmluvnú podmienku, a preto ju vyhlásil za neplatnú a nárok na jej plnenie zamietol. Odvolací súd potvrdil zamietnutie žaloby na zaplatenie zmluvnej pokuty, pričom poukázal na neplatnosť časti zmluvy o úveroch z omeškania a zmluvnej pokute z dôvodu kumulácie sankcií a rozporu s dobrými mravmi.",
+          "key_quotes": [
+            {
+              "quote": "Dospel k záveru, že dojednaná zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až 1/5 dlžnej sumy. Keďže nekalá (neprijateľná) zmluvná podmienka je neplatná, súd nepriznal žalobcovi nárok na jej plnenie.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súhrn týchto zmluvných sankcií za to isté porušenie zmluvnej povinností dohodnutých v zmluve zo dňa 30.8.2003 má za dôsledok neplatnosť nielen časti zmluvy o úrokoch z omeškania, ale aj časti zmluvy o zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohoda o zmluvnej pokute vo výške 20 % z dlžnej sumy, mohla byť sama o sebe neplatná pre rozpor s dobrými mravmi. Podobne nie je v rozpore s dobrými mravmi, pokiaľ si účastníci úverovej zmluvy dohodnú ako sankciu za omeškanie so splnením záväzku, a teda za porušenie zmluvnej povinnosti, súčasne úrok z omeškania, aj zmluvnú pokutu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta plní predovšetkým zabezpečovaciu funkciu, predmetom ktorej je zabezpečenie plnenia záväzku druhej zmluvnej strany, ktorá je povinná zaplatiť zmluvnú pokutu bez ohľadu na to, či porušením povinnosti vyplývajúcej zo zmluvy bola spôsobená škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dospel k záveru, že dojednaná zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až 1/5 dlžnej sumy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súhrn týchto zmluvných sankcií za to isté porušenie zmluvnej povinností dohodnutých v zmluve zo dňa 30.8.2003 má za dôsledok neplatnosť nielen časti zmluvy o úrokoch z omeškania, ale aj časti zmluvy o zmluvnej pokute.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_1Cob_20_2012_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "1Cob/20/2012",
+      "decision_date": "30.01.2013",
+      "ecli": "ECLI:SK:KSPO:2013:8111219670.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

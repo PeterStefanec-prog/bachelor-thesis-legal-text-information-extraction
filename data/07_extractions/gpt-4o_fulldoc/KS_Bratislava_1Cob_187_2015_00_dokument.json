@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9351,
+    "completion_tokens": 1147,
+    "cost_usd": 0.0348,
+    "latency_seconds": 27.2,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca CRIF - Slovak Credit Bureau, s. r. o. sa domáhal zaplatenia sumy 648,94 eur s príslušenstvom od žalovaného K. J. na základe zmluvy o pripojení a zmluvnej pokuty. Žalobca tvrdil, že nadobudol pohľadávku zmluvou o postúpení pohľadávky od spoločnosti Telefonica Slovakia, s.r.o.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobu zamietol ako nedôvodnú.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 1036257393",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "už skôr splatné faktúry, odstúpil právny predchodca žalobcu od Zmluvy o pripojení písomným podaním zo dňa",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "Q =330€ + (2 x (DxMx0,235))",
+          "evidence": {
+            "quote": "Q =330€ + (2 x (DxMx0,235)) Pričom D znamená zostávajúca doba platnosti Zmluvy v zmysle čl. 4.1a/alebo čl. 4.2 M znamená Minimálny obrat; Q znamená zmluvná pokuta v EURO.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 408.3,
+            "evidence": {
+              "quote": "faktúrou č. 1036257393 vo výške 408,30 eur vyčíslil zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie žalobu ako nedôvodnú zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "240,64 eur spolu s úrokmi z omeškania, vo zvyšku žalobcu zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "dohoda o zmluvnej pokute musí spĺňať náležitosti vyžadované u každého právneho úkonu, teda musí byť určitá, zrozumiteľná, inak je neplatná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že dohoda o zmluvnej pokute bola neplatná pre neurčitosť a nezrozumiteľnosť. Zmluva obsahovala niekoľko desiatok povinností, pričom nebolo jasné, ktoré porušenie je sankcionované pokutou. Odvolací súd potvrdil tento záver, keďže formulácia zmluvnej pokuty bola nejasná a neumožňovala posúdiť primeranosť výšky pokuty vo vzťahu k zabezpečenej povinnosti. Zmluvná pokuta bola formulovaná tak, že spôsobovala ťažkosti pri výklade a nebola prehľadná.",
+          "key_quotes": [
+            {
+              "quote": "dohoda o zmluvnej pokute musí spĺňať náležitosti vyžadované u každého právneho úkonu, teda musí byť určitá, zrozumiteľná, inak je neplatná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neumožňuje posúdiť aj primeranosť výšky zmluvnej pokuty vo vzťahu zabezpečenej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neumožňuje posúdenie primeranosti výšky zmluvnej pokuty vo vzťahu k zabezpečenej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_187_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/187/2015",
+      "decision_date": "06.10.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1314214384.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

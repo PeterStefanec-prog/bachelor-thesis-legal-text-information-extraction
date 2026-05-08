@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13242,
+    "completion_tokens": 1212,
+    "cost_usd": 0.0452,
+    "latency_seconds": 29.48,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ThyssenKrupp Ferostav, spol. s r.o. žiadal od žalovaného TECHNOIMES, s.r.o. zaplatenie zmluvnej pokuty vo výške 7 000,- Eur za omeškanie s úhradou faktúr. Žalovaný namietal neplatnosť dohody o zmluvnej pokute a žiadal jej zníženie.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý znížil zmluvnú pokutu na 2 000,- Eur.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "so zaplatením faktúr sa žalovaný dostal do omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10 000,- Eur",
+          "evidence": {
+            "quote": "V prípade nezaplatenia pohľadávok do 12.03.2010 sa zaväzujem zaplatiť zmluvnú pokutu 10 000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 80298.15,
+            "evidence": {
+              "quote": "uznania záväzku vo výške 80 298,15 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 7000,
+            "evidence": {
+              "quote": "nezaplatený zostatok zmluvnej pokuty predstavoval žalobcom žalovanú pohľadávku vo výške 7 000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2000,
+            "evidence": {
+              "quote": "sa zaviazal celý záväzok zaplatiť do 03.03.2010. Z vyššie uvedených dôvodov sa súdu prvého stupňa javila zmluvná pokuta vo výške 5 000,- Eur ako",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Okrem dojednaného práva na zaplatenie zmluvnej pokuty vzniklo žalobcovi zákonné právo na úroky z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvého stupňa pristúpil k zníženiu dohodnutej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že zmluvná pokuta bola dohodnutá vo výške 10 000,- Eur, čo predstavovalo cca 1/8 zabezpečovaného záväzku. Súd považoval túto výšku za neprimerane vysokú vzhľadom na výšku zabezpečovanej pohľadávky a skutočnosť, že žalovaný zaplatil záväzok po dohodnutej lehote. Súd znížil zmluvnú pokutu na 5 000,- Eur, pričom žalovaný už zaplatil 3 000,- Eur, a preto zaviazal žalovaného na zaplatenie zvyšných 2 000,- Eur.",
+          "key_quotes": [
+            {
+              "quote": "súdu prvého stupňa javila zmluvná pokuta vo výške 5 000,- Eur ako primeraná",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta zabezpečuje hlavný záväzok a jej existencia závisí od tohto hlavného záväzku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca nepreukázal, že konaním žalovaného, zaplatením faktúr po dátume 03.03.2010 mu vznikla škoda presahujúca sumu 5 000,- Eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta, predstavujúca cca 1/8 zabezpečovaného záväzku, javila súdu prvého stupňa ako neprimerane vysoká",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný zaplatil záväzok síce po dohodnutej lehote dňa 16.04.2010, ale toto omeškanie nepovažoval súd prvého stupňa za veľmi významné omeškanie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Okrem dojednaného práva na zaplatenie zmluvnej pokuty vzniklo žalobcovi zákonné právo na úroky z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded"
+      ],
+      "missing_fields": [
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_112_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/112/2013",
+      "decision_date": "21.08.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3512200457.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

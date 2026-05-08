@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14824,
+    "completion_tokens": 913,
+    "cost_usd": 0.0462,
+    "latency_seconds": 17.24,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Arcus International, s.r.o. požadoval od žalovaného RetroTatry, spol. s r.o. zaplatenie sumy 9 616,52 eur s príslušenstvom a zmluvnou pokutou za omeškanie s úhradou ceny diela, ktorým bolo dodanie a montáž automatických dverí TORMAX.",
+      "verdict_summary": "Najvyšší súd zrušil rozhodnutia nižších súdov a vrátil vec na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvná pokuta predstavuje zabezpečovací inštitút, ktorým sa zabezpečuje splnenie zmluvnej povinnosti niektorou zmluvnou stranou",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne",
+          "evidence": {
+            "quote": "bola zmluvná pokuta dohodnutá vo výške 36 % ročne alebo 0,1 % denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 24856.42,
+            "evidence": {
+              "quote": "zmluvná pokuta zabezpečovala zaplatenie ceny diela vo výške 24.856,42 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 60000,
+            "evidence": {
+              "quote": "zmluvná pokuta predstavovala sumu približne 60.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5000,
+            "evidence": {
+              "quote": "znížil žalobcom uplatnenú zmluvnú pokutu na sumu 5.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 7.891,02 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Najvyšší súd Slovenskej republiky zrušuje - rozsudok Krajského súdu v Prešove",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd znížil zmluvnú pokutu z dôvodu jej neprimeranej výšky, pričom zohľadnil, že žalobcovi nevznikla škoda. Najvyšší súd však konštatoval, že súdy nižšej inštancie nesprávne aplikovali moderačné právo, keďže nezohľadnili okolnosti v čase porušenia povinnosti a dĺžku súdneho sporu.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu dohodnutú medzi stranami nepovažuje za neprimeranú alebo za rozpornú so zásadami poctivého obchodného styku",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_3Obdo_11_2019_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "3Obdo/11/2019",
+      "decision_date": "17.07.2019",
+      "ecli": "ECLI:SK:NSSR:2019:8710206608.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

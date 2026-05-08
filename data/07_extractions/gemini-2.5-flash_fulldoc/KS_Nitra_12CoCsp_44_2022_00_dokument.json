@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9374,
+    "completion_tokens": 2022,
+    "cost_usd": 0.0319,
+    "latency_seconds": 8.38,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca PROFI CREDIT Slovakia, s.r.o. žaloval žalovaného Y. J. o zaplatenie sumy 11 615,92 eura s príslušenstvom, vrátane zmluvnej pokuty a úroku z omeškania. Súd prvej inštancie žalobe vyhovel v časti zaplatenia istiny, zmluvnej pokuty a úroku z omeškania.",
+      "verdict_summary": "Odvolací súd odmietol odvolanie žalovaného z dôvodu neodstrániteľných vád podania a žalobcovi nepriznal nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "nezname",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 11.615,92 eura spolu so zmluvnou pokutou vo výške 0,1 % denne zo sumy 11.615,92 eura od 18.03.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,1 % denne zo sumy 11.615,92 eura od 18.03.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 11615.92,
+            "evidence": {
+              "quote": "zo sumy 11.615,92 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd odvolanie odmieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "odo dňa nasledujúceho po dni, v ktorom súčet zmluvných pokút dosiahne sumu 12.120,96 eura, je žalovaný povinný zaplatiť žalobcovi úrok z omeškania vo výške 9 % ročne zo sumy 4.000 eur až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "písm. d) CSP odvolací súd odmietne odvolanie, ak nemá náležitosti podľa § 363, ak pre vady odvolania nemožno v odvolacom konaní pokračovať.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd odmietol odvolanie žalovaného, pretože elektronické podanie odvolania nebolo riadne autorizované kvalifikovaným elektronickým podpisom (KEP) advokáta. Formulárové podanie bolo podpísané, ale odôvodnenie a odvolací návrh boli v nepodpísanej prílohe. Súd to považoval za neodstrániteľnú vadu, ktorá bráni pokračovaniu v odvolacom konaní, a to aj s odkazom na nález Ústavného súdu SR, ktorý zdôrazňuje povinnosť podávajúceho odstrániť nedostatky autorizácie bez výzvy súdu.",
+          "key_quotes": [
+            {
+              "quote": "Advokát konajúci za splnomocnenú advokátsku kanceláriu žalovaného totiž podpísal len formulárové elektronické podanie bez zákonných náležitostí odvolania s odkazom na to, že odôvodnenie podania a návrh rozhodnutia je len súčasťou prílohy tohto formulára, ktorá zostala elektronicky nepodpísaná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Vzhľadom na osobitnú úpravu následkov elektronického podania bez KEP v ustanovení § 125 ods. 2 CSP, i s prihliadnutím na to, že určité procesné úkony sú koncentrované do uplynutia zákonom určenej lehoty, ide podľa názoru odvolacieho súdu o neodstrániteľnú vadu odvolania žalovaného, v dôsledku čoho neprichádzal do úvahy postup smerujúci k odstraňovaniu tohto nedostatku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "S ohľadom na uvedené odvolaciemu súdu neprihliadajúc na odvolanie v pdf formáte bez autorizácie podpisu konajúceho advokáta nezostalo iné, než pre vady odvolania podľa § 386 písm. d) CSP odmietnuť odvolanie žalobcu podané elektronickým formulárom síce s autorizovaným podpisom právneho zástupcu ale bez jeho zdôvodnenia a bez odvolacieho návrhu, t. j. bez zákonných náležitostí, so súčasným jeho doplnením podaným v nepodpísanej prílohe, keď navyše zákon o e-Governmente vylučuje obsahovú náležitosť podania abstrahovať do prílohy k tomuto podaniu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "contractual_penalties.0.amounts.original_claimed",
+        "contractual_penalties.0.amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_12CoCsp_44_2022_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "12CoCsp/44/2022",
+      "decision_date": "15.11.2022",
+      "ecli": "ECLI:SK:KSNR:2022:4321201075.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

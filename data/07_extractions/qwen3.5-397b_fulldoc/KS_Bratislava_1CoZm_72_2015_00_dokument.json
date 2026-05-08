@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9504,
+    "completion_tokens": 2209,
+    "cost_usd": 0.0089,
+    "latency_seconds": 27.07,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ ČSOB Leasing, a.s. uplatnil proti odporcom nárok na zaplatenie zmenkovej sumy 24.307,46 eur s príslušenstvom, ktorá bola vyplnená na blankozmenku zabezpečujúcej úverovú zmluvu. Odporca v 2. rade namietal vyplnenie blankozmenky, tvrdil zánik leasingovej zmluvy vrátením vozidla a rozporoval výšku zahrnutých nákladov a zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvého stupňa, ktorý ponechal zmenkový platobný rozkaz v celom rozsahu v platnosti a zaviazal odporcu k platbe zmenkovej sumy a trov konania.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Zmenkou boli okrem iného zabezpečené aj pohľadávky navrhovateľa s príslušenstvom, ktoré vznikli v dôsledku alebo v súvislosti s predčasným ukončením leasingovej zmluvy obsiahnuté vo finančnom vysporiadaní úverovej zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "3.092,88 eur",
+          "evidence": {
+            "quote": "Odporca rozporoval výšku zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur ako neprimeranú zabezpečovanej povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3092.88,
+            "evidence": {
+              "quote": "Odporca rozporoval výšku zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok vyčíslenú na 3.092,88 eur ako neprimeranú zabezpečovanej povinnosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3092.88,
+            "evidence": {
+              "quote": "Súd prvého stupňa dospel k záveru, že námietky odporcu sú nedôvodné, a preto ponechal zmenkový platobný rozkaz v celom rozsahu v platnosti.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6% ročne",
+          "evidence": {
+            "quote": "prvostupňový súd zmenkovým platobným rozkazom č.k. 1Zm/235/2012-20 zo dňa 05.05.2014 uložil odporcovi v 1. rade ako priamemu zmenkovému dlžníkovi a odporcom v 2. a 3. rade ako zmenkovým ručiteľom povinnosť zaplatiť navrhovateľovi ako prvému majiteľovi zmenky zmenkovú sumu 24.307,46 eur, 6% úrok od 30.12.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa dospel k záveru, že námietky odporcu sú nedôvodné, a preto ponechal zmenkový platobný rozkaz v celom rozsahu v platnosti.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd neprijal námietku odporcu o neprimeranosti zmluvnej pokuty, keďže navrhovateľ argumentoval, že dohodnutá výška pokrýva ušlý zisk z obchodného prípadu a náklady na správu zosplatneného úveru. Odvolací súd sa stotožnil s rozhodnutím súdu prvého stupňa a konštatoval, že odporca nepreukázal existenciu reálnej možnosti predaja vozidla za vyššiu cenu ani zánik záväzku. Súd považoval výšku pokuty za porovnateľnú s obdobnými prípady v obchodných vzťahoch a neodporujúcu zásade poctivého obchodného styku.",
+          "key_quotes": [
+            {
+              "quote": "Dohodnutá výška zmluvnej pokuty podľa bodu 6.6 písm. b) všeobecných úverových podmienok nemôže byť podľa navrhovateľa považovaná za neprimerane vysokú s ohľadom na hodnotu a význam zabezpečovanej povinnosti, keď táto pokrýva ušlý zisk navrhovateľa z obchodného prípadu",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Navrhovateľ tvrdil, že v obchodných vzťahoch je dojednaná výška zmluvnej pokuty porovnateľná s obdobne zabezpečenými povinnosťami v iných prípadoch a nemôže byť považovaná za odporujúcu zásade poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nemôže byť považovaná za odporujúcu zásade poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "s ohľadom na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "táto pokrýva ušlý zisk navrhovateľa z obchodného prípadu, keď navrhovateľ predpokladal realizáciu úrokov vo výške 2.685,54 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Odporca nepreukázal existenciu reálnej možnosti navrhovateľa predať predmet financovania za vyššiu cenu, teda neuniesol dôkazné bremeno v tomto smere.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Navrhovateľ poukázal na skutočnosť, že žiaden právny predpis súbežné uplatnenie nároku na úrok z omeškania a zmluvnej pokuty z porušenie zmluvného záväzku nevylučuje.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "navrhovateľom predaný za 27.000,- eur bez DPH, teda za kúpnu cenu výrazne vyššiu ako bola stanovená znaleckým posudkom",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1CoZm_72_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1CoZm/72/2015",
+      "decision_date": "25.08.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1512206237.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

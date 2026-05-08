@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10941,
+    "completion_tokens": 2114,
+    "cost_usd": 0.0348,
+    "latency_seconds": 9.31,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobcovia sa domáhali určenia, že ich nehnuteľnosti nie sú zaťažené záložným právom a určenia všeobecnej hodnoty nehnuteľností. Záložné právo bolo zriadené na základe zmluvy o zriadení záložného práva v prospech žalovaného 1, ktorá zabezpečovala pohľadávku zo zmluvy o mimoriadnom medziúvere a stavebnom úvere.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie vo výroku o určení, že nehnuteľnosti nie sú zaťažené záložným právom a vo výroku o náhrade trov konania. Žalobcovia 1 a 2 majú nárok na náhradu trov odvolacieho konania proti žalovanému 1 v rozsahu 100 %.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "za každý prípad nesplnenia ktoréhokoľvek zo záväzkov záložcu vyplývajúceho z tejto zmluvy má záložný veriteľ právo vyúčtovať záložcovi podľa § 300 a nasl. Obchodného zákonníka zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "10% zo sumy poskytnutého úveru",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10% zo sumy poskytnutého úveru.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 70000,
+            "evidence": {
+              "quote": "mimoriadny medziúver vo výške 70.000 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Keďže napadnutá zmluva o zriadení záložného práva bola súdom vyhodnotená ako absolútne neplatný právny úkon, nebolo platne zriadené záložné právo k nehnuteľnostiam, ktoré sú uvedené v tejto zmluve ako záloh, a preto súd žalobe v tejto časti vyhovel a určil, že predmetné nehnuteľnosti nie sú zaťažené záložným právom.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Súd prvej inštancie v súlade so znením čl. II bod 1 písm. a) až e) posudzovanej záložnej zmluvy dospel k správnemu právnemu posúdeniu, ak konštatoval jej neplatnosť pre absenciu určenia najvyššej hodnoty istiny zaistenej pohľadávky.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluva o zriadení záložného práva je absolútne neplatná, pretože neurčuje hodnotu zabezpečenej pohľadávky ani najvyššiu hodnotu istiny, do ktorej sa pohľadávka zabezpečuje. Záložné právo sa malo vzťahovať nielen na istinu úveru, ale aj na príslušenstvo, poplatky, náklady a budúce pohľadávky, ktorých hodnota nebola v zmluve určená ani ohraničená najvyššou sumou. Odvolací súd sa s týmto záverom stotožnil, pričom zdôraznil, že neplatnosť bola spôsobená nielen neurčením príslušenstva, ale aj iných položiek, ako sú poplatky a náklady, či pohľadávky z bezdôvodného obohatenia.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie v súlade so znením čl. II bod 1 písm. a) až e) posudzovanej záložnej zmluvy dospel k správnemu právnemu posúdeniu, ak konštatoval jej neplatnosť pre absenciu určenia najvyššej hodnoty istiny zaistenej pohľadávky.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Práve z tohto dôvodu zmluva mala obsahovať aj najvyššiu hodnotu istiny, do ktorej sa pohľadávka zabezpečuje, čo však v zmluve o zriadení záložného práva absentuje.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Keďže napadnutá zmluva o zriadení záložného práva bola súdom vyhodnotená ako absolútne neplatný právny úkon, nebolo platne zriadené záložné právo k nehnuteľnostiam, ktoré sú uvedené v tejto zmluve ako záloh, a preto súd žalobe v tejto časti vyhovel a určil, že predmetné nehnuteľnosti nie sú zaťažené záložným právom.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "záložné právo sa (podľa rozumne predpokladanej vôle zmluvných strán jestvujúcej tu v čase jej uzatvárania teda pred samotným čerpaním úveru) malo zriadiť na zabezpečenie splatenia nielen istiny úveru (ktorý mal byť poskytnutý vo výške 70.000 eur), ale aj jeho príslušenstva, ktoré takúto istinu jednoznačne (minimálne v čase reálneho čerpania úveru) presahovalo.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties.0.amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_15Co_37_2019_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "15Co/37/2019",
+      "decision_date": "17.03.2020",
+      "ecli": "ECLI:SK:KSPO:2020:8118207061.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

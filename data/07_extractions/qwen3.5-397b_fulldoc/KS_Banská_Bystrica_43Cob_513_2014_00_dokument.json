@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10971,
+    "completion_tokens": 2143,
+    "cost_usd": 0.0093,
+    "latency_seconds": 17.96,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ (predávajúci) uplatňoval proti žalovaným (kupujúcemu a ručiteľovi) nárok na zaplatenie kúpnej ceny za dodaný tovar spolu so zmluvnou pokutou a úrokom z omeškania na základe Kúpnej zmluvy a všeobecných obchodných podmienok. Žalovaný 1/ odvolanie podal s tvrdením, že VOP neboli súčasťou zmluvy, pohľadávka zanikla započítaním a kombinácia pokuty s úrokom je v rozpore s dobrými mravmi.",
+      "verdict_summary": "Krajský súd ako súd odvolací potvrdil rozhodnutie okresného súdu, ktorý zaviazal žalovaných na zaplatenie dlžnej sumy s úrokom z omeškania, pričom odvolací súd považoval dohodnutú zmluvnú pokutu za primeranú a neuplatnil moderačné právo.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade omeškania kupujúceho so zaplatením kúpnej ceny za dodaný tovar vzniká kupujúcemu povinnosť zaplatiť predávajúcemu fakturovanú zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% denne z nezaplatenej kúpnej ceny",
+          "evidence": {
+            "quote": "v prípade omeškania kupujúceho so zaplatením kúpnej ceny za dodaný tovar vzniká kupujúcemu povinnosť zaplatiť predávajúcemu fakturovanú zmluvnú pokutu vo výške 0,05% denne z nezaplatenej kúpnej ceny.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 4231.92,
+            "evidence": {
+              "quote": "Napadnutým rozhodnutím zaviazal okresný súd žalovaného 1/ a žalovaného 2/, aby žalobcovi zaplatili 4.231,92 Eur s úrokom 0,1% z omeškania denne zo sumy 4.231,92 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1% denne",
+          "evidence": {
+            "quote": "Preto súd žalovaných zaviazal aj na zaplatenie 0,1% úroku z omeškania denne podľa § 369 ods.1 Obch. zák. a čl. V ods.9 uzavretej Kúpnej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na charakter zabezpečovaných podnikateľských vzťahov a výšky miery rizika, ktoré predávajúci znáša, je dojednanie zmluvnej pokuty vo výške 0,05% denne (18,25% ročne) aj podľa názoru odvolacieho súdu primerané a nie je dôvod, aby súd uplatnil moderačné právo podľa § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd konštatoval, že dohoda o zmluvnej pokute bola písomná a stala sa súčasťou kúpnej zmluvy odkazom na VOP, ktoré strany podpísali. Súd považoval výšku pokuty 0,05% denne (18,25% ročne) za primeranú vzhľadom na podnikateľský charakter vzťahu a riziko predávajúceho, keďže pokuta má motivovať dlžníka k platnosti. Súd neznižoval pokutu podľa § 301 Obchodného zákonníka, pretože jej výška nie je likvidačná ani zjavne neprimeraná, hoci dlžník nezaplatil ani po päťmesačnej lehote splatnosti.",
+          "key_quotes": [
+            {
+              "quote": "Vzhľadom na charakter zabezpečovaných podnikateľských vzťahov a výšky miery rizika, ktoré predávajúci znáša, je dojednanie zmluvnej pokuty vo výške 0,05% denne (18,25% ročne) aj podľa názoru odvolacieho súdu primerané a nie je dôvod, aby súd uplatnil moderačné právo podľa § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta patrí medzi zabezpečovacie inštitúty obchodného práva a jej výška má byť primeraná funkcii, ktorou je vyvinúť tlak na dlžníka, aby splnil svoj záväzok.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný 1/ uviedol, že úrok z omeškania v spojení so zmluvnou pokutou je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta patrí medzi zabezpečovacie inštitúty obchodného práva a jej výška má byť primeraná funkcii, ktorou je vyvinúť tlak na dlžníka, aby splnil svoj záväzok.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Ako je zrejmé zo skutočnosti, že žalovaný 1/ kúpnu cenu za prevzatý tovar nezaplatil napriek päťmesačnej lehote splatnosti, svoj účel nesplnila ani zmluvná pokuta dohodnutá vo výške 0,05% denne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný 1/ uviedol, že úrok z omeškania v spojení so zmluvnou pokutou je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_513_2014_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/513/2014",
+      "decision_date": "29.01.2015",
+      "ecli": "ECLI:SK:KSBB:2015:6713210427.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

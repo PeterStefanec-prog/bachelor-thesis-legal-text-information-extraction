@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 13720,
+      "completion_tokens": 1073,
+      "cost_usd": 0.0079,
+      "latency_seconds": 22.02,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 11073,
+      "completion_tokens": 1318,
+      "cost_usd": 0.0074,
+      "latency_seconds": 13.03,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy predstavujúcej protihodnotu zvýšenia hodnoty nebytových priestorov (podzemného WC) v dôsledku rekonštrukcie vykonanej počas nájmu. Žalovaný uplatnil voči tomuto nároku započítaciu námietku titulu zmluvnej pokuty za nesplnenie povinnosti zrekonštruovať priestory a preinvestovať do nich dohodnutú sumu v lehote.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvého stupňa, ktorý priznal žalobcovi nárok na zaplatenie rozdielu medzi hodnotou zhodnotenia a zníženou zmluvnou pokutou, pričom súd prvej inštancie znížil pôvodne uplatnenú pokutu z 5.000 EUR na 2.500 EUR ako neprimerane vysokú.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný zároveň uplatnil voči žalobcovi na započítanie nárok na zaplatenie zmluvnej pokuty vo výške 5.000,- Eur podľa čl. 3. bod 2 Zmluvy z dôvodu porušenia čl. 7. bod 1 Zmluvy.",
+            "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_2"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "5.000,- Eur",
+          "evidence": {
+            "quote": "V čl. 3. bod 2. Zmluvy bola medzi stranami dojednaná zmluvná pokuta v sume 5.000,- Eur pre prípad porušenia čl. 7., bodu 1., 2. Zmluvy žalobcom.",
+            "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_11"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 16000,
+            "evidence": {
+              "quote": "Súčasne sa zaviazal v rámci rekonštrukcie objektu preinvestovať do predmetu nájmu finančné prostriedky minimálne v sume 16.000,- Eur",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_11"
+            }
+          },
+          "original_claimed": {
+            "value": 5000,
+            "evidence": {
+              "quote": "Žalovaný zároveň uplatnil voči žalobcovi na započítanie nárok na zaplatenie zmluvnej pokuty vo výške 5.000,- Eur podľa čl. 3. bod 2 Zmluvy",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_2"
+            }
+          },
+          "final_awarded": {
+            "value": 2500,
+            "evidence": {
+              "quote": "Okresný súd preto považoval za primeranú výšku zmluvnej pokuty s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti sumu 2.500,- Eur, t.j. zníženú o jednu polovicu.",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd preto považoval za primeranú výšku zmluvnej pokuty s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti sumu 2.500,- Eur, t.j. zníženú o jednu polovicu.",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu z 5.000 EUR na 2.500 EUR podľa § 301 Obchodného zákonníka, pretože ju považoval za neprimerane vysokú v pomere k hodnote zabezpečovaného záväzku (16.000 EUR), keď predstavovala takmer jednu tretinu tejto sumy. Ako ďalší dôvod na zníženie súd uviedol pasivitu žalovaného, ktorý si nárok na pokutu uplatnil až s odstupom viac ako 5 rokov od porušenia povinnosti. Odvolací súd tieto závery potvrdil, keďže žalovaný v odvolaní vecne nenamietal nesprávnosť posúdenia pomeru výšky pokuty k hodnote záväzku ani zohľadnenie dlhodobého neuplatnenia nároku.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd však výšku zmluvnej pokuty v sume 5.000,- Eur považoval za neprimerane vysokú k hodnote záväzku, ktorý zabezpečoval.",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+            },
+            {
+              "quote": "v sume 16.000,- Eur. Okresný súd ako ďalší dôvod na zníženie pokuty považoval aj postoj žalovaného, resp. jeho nekonanie, ktorý si nárok na jej zaplatenie voči žalobcovi uplatnil až s odstupom viac ako 5 rokov od porušenia povinnosti",
+              "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podľa okresného súdu zmluvná pokuta dosahuje takmer 1/5 z hodnoty tej časti zabezpečovaného záväzku, ktorá bola vyjadrená finančným plnením v sume 16.000,- Eur.",
+                "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 5.000,- Eur vo vzťahu k hodnote zabezpečovaného záväzku, t.j. vykonania rekonštručných prác v sume 16.000,- Eur je neprimerane vysoká, t.j. je takmer v 1/5",
+                "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_30"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "v sume 16.000,- Eur. Okresný súd ako ďalší dôvod na zníženie pokuty považoval aj postoj žalovaného, resp. jeho nekonanie, ktorý si nárok na jej zaplatenie voči žalobcovi uplatnil až s odstupom viac ako 5 rokov od porušenia povinnosti",
+                "chunk_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument.pdf_chunk_17"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_42Cob_51_2024_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "42Cob/51/2024",
+      "decision_date": "15.08.2024",
+      "ecli": "ECLI:SK:KSBB:2024:3816203986.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

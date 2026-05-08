@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 5770,
+      "completion_tokens": 926,
+      "cost_usd": 0.0165,
+      "latency_seconds": 4.43,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 5358,
+      "completion_tokens": 1272,
+      "cost_usd": 0.0194,
+      "latency_seconds": 5.69,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 427,63 eur s príslušenstvom, ktorá pozostávala z neuhradenej odplaty za užívanie nebytových priestorov a poskytnuté služby, zmluvnej pokuty a úrokov z omeškania. Súd prvého stupňa žalobe vyhovel v časti odplaty a úrokov z omeškania, ale zamietol ju v časti zmluvnej pokuty a úrokov z omeškania z nej.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby vo zvyšnej časti (t.j. zmluvnej pokuty a úrokov z omeškania z nej) a v časti výroku o náhrade trov konania a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním o viac ako 20 dní",
+            "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_10"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "3-násobok mesačnej odplaty",
+          "evidence": {
+            "quote": "bola dohodnutá výška zmluvnej pokuty ako 3-násobok mesačnej odplaty",
+            "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_5"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 180.0,
+            "evidence": {
+              "quote": "V časti uplatnenej zmluvnej pokuty vo výške 180,- eur",
+              "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_4"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v časti výroku, ktorým zamietol žalobu vo zvyšnej časti a v časti výroku o náhrade trov konania zrušujea vec vracia tomuto súdu na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": "0,1% úrokom z omeškania",
+          "evidence": {
+            "quote": "s 0,1% úrokom z omeškania od 13.11.2009 do zaplatenia",
+            "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_8"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v časti výroku, ktorým zamietol žalobu vo zvyšnej časti a v časti výroku o náhrade trov konania zrušujea vec vracia tomuto súdu na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu v časti zmluvnej pokuty, pretože ju považoval za dohodnutú v rozpore s dobrými mravmi a neplatnú, najmä kvôli kumulácii s úrokmi z omeškania a neprimeranej výške. Odvolací súd sa s týmto právnym názorom nestotožnil, konštatoval platnosť dojednania o zmluvnej pokute a vrátil vec súdu prvého stupňa na ďalšie konanie, aby posúdil možnosť moderácie podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa nestotožňuje s právnym názorom súdu prvého stupňa, že výška zmluvnej pokuty, ktorú si účastníci dojednali, je v rozpore s dobrými mravmi a preto je toto dojednanie neplatné.",
+              "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_11"
+            },
+            {
+              "quote": "Súd prvého stupňa pri rozhodovaní o zmluvnej pokute vychádzal z nesprávneho právneho posúdenia veci, preto odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie (§ 221 ods. 1 písm. h/ a § 221 ods. 2 O.s.p.).",
+              "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_17"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dojednaná zmluvná pokuta je v rozpore s princípmi dobrých mravov, preto ustálil, že dojednanie v čl. IV. bod 4.8 dohody o užívaní je neplatné podľa § 3 a § 39 Obč. zák.",
+                "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta je samostatným nárokom a strany si ju musia dohodnúť, úrok z omeškania ako príslušenstvo pohľadávky (§ 121 ods. 3 O.z.), je majetkovou sankciou ustanovenou zákonom (§ 369 Ob.z.).",
+                "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_11"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Ust. § 301 Ob.z. stanovuje, že súd môže zmluvnú pokutu znížiť až do výšky, ktorá bola spôsobená veriteľovi porušením zabezpečenej povinnosti.",
+                "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_15"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V danej veci však zmluvná pokuta niekoľkonásobne prevyšuje výšku dojednanej odplaty za užívanie priestorov za súčasného použitia ďalšej sankcie v podobe úrokov z omeškania (dohodnutých vo výške, ktorá presahuje zákonom stanovenú výšku), čím žalovanú neprimerane zaťažuje.",
+                "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta dohodnutá v čl. IV. bod 4.8 dohody o užívaní, je vzhľadom na povahu zabezpečovacej povinnosti, t.j. splatenie odplaty za užívanie a za poskytnuté služby, ktoré sú už zabezpečené úrokom z omeškania vo výške 0,1% z dlžnej sumy za každý deň omeškania, dojednaná v rozpore s dobrými mravmi.",
+                "chunk_id": "KS_Trenčín_8Cob_64_2011_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_64_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/64/2011",
+      "decision_date": "26.01.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3210200754.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

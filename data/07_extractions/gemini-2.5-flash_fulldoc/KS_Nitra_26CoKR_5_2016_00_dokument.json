@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5077,
+    "completion_tokens": 1820,
+    "cost_usd": 0.0245,
+    "latency_seconds": 7.26,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal určenia pravosti pohľadávky v konkurznom konaní, ktorá pozostávala z trov exekúcie a zmluvnej pokuty s úrokom z omeškania titulom ručenia úpadcu za záväzky inej spoločnosti zo zmluvy o finančnom lízingu. Súd prvého stupňa určil pravosť pohľadávky v časti a vo zvyšku žalobu zamietol, pričom zmluvnú pokutu moderoval.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu v napadnutej časti týkajúcej sa trov konania a žalobcovi náhradu trov odvolacieho konania nepriznal.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "titulom ručenia úpadcu za záväzky spoločnosti ROMUS spol. s r.o., IČO: 34 096 256, so sídlom: Hlavné námestie 7, 940 01 Nové Zámky, zo zmluvy o finančnom lízingu č. 0977/28",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnej pokuty vo výške 10.251,08 eura",
+          "evidence": {
+            "quote": "pozostávajúcej zo zmluvnej pokuty vo výške 10.251,08 eura",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 27671.85,
+            "evidence": {
+              "quote": "zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10251.08,
+            "evidence": {
+              "quote": "súd prvého stupňa určil, že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura výrokom II. napadnutého rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "úroku z omeškania vo výške 23,75 eura",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa moderoval výšku zmluvnej pokuty podľa § 301 Obchodného zákonníka, pretože ju považoval za neprimerane vysokú vzhľadom na význam zabezpečovanej povinnosti. Pôvodne uplatnená pohľadávka vo výške 27 671,85 eura bola znížená na 10 251,08 eura. Odvolací súd sa zaoberal len otázkou trov konania a potvrdil rozhodnutie prvostupňového súdu, že žiadny z účastníkov nemá právo na náhradu trov, keďže išlo o incidenčnú žalobu a nie o rozhodnutie zaväzujúce na plnenie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "zamietnutie žaloby vo zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85 eura, keďže súd prvého stupňa určil, že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26CoKR_5_2016_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26CoKR/5/2016",
+      "decision_date": "29.06.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4115201281.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17447,
+    "completion_tokens": 1230,
+    "cost_usd": 0.0559,
+    "latency_seconds": 15.31,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ABC - Kýčerka, v.o.s. sa domáhal voči žalovanej A. B. zaplatenia sumy 6.036,88 Eur, ktorá zahŕňala istinu a vyčíslenú zmluvnú pokutu, na základe Zmluvy o nájme č. 1/1/2013. Predmetom nájmu boli priestory na zriadenie predajne mäsa a hydiny, pričom žalovaná mala platiť nájomné a náklady na energie, vodné a stočné.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý priznal žalobcovi nárok na zmluvnú pokutu a úroky z omeškania. Čiastočné späťvzatie žaloby bolo pripustené.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade neuhradenia nájmu zaplatí nájomca zmluvnú pokutu vo výške 0,5 % denne z neuhradenej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,5 % denne zo sumy 8,50 Eur od 02.02.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 8.5,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,5 % denne zo sumy 8,50 Eur od 02.02.2021 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 10910.57,
+            "evidence": {
+              "quote": "istina v danom prípade predstavuje celkovú sumu 2.133,18 Eur a zmluvná pokuta pri vyčíslení od roku 2021 predstavuje celkovú sumu 10.910,57 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 10910.57,
+            "evidence": {
+              "quote": "súd prvej inštancie ho považoval za nesporný a zmluvnú pokutu priznal v rozsahu uplatnenom žalobcom",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania 9 % ročne zo sumy 8,50 Eur od 02.02.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie ho považoval za nesporný a zmluvnú pokutu priznal v rozsahu uplatnenom žalobcom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil nárok na zmluvnú pokutu podľa Obchodného zákonníka, pričom konštatoval, že dohoda o zmluvnej pokute bola písomná a určitá. Zmluvná pokuta bola viazaná na nesplnenie povinnosti žalovanej a jej výška nebola považovaná za neprimeranú. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, keďže žalovaná nepreukázala dôvody na zníženie pokuty.",
+          "key_quotes": [
+            {
+              "quote": "súd prvej inštancie ho považoval za nesporný a zmluvnú pokutu priznal v rozsahu uplatnenom žalobcom",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta bola určitá, zabezpečovala povinnosť platiť žalovanou riadne a včas nájomné",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta absolútne neprimeraná, šikanózna, nakoľko niekoľkonásobne prevyšuje istinu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaná sa dlhodobo cielene snažila vyhnúť splneniu si viacerých záväzkov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_3_2025_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/3/2025",
+      "decision_date": "10.09.2025",
+      "ecli": "ECLI:SK:KSBB:2025:6122355709.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

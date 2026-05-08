@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8607,
+    "completion_tokens": 2097,
+    "cost_usd": 0.0317,
+    "latency_seconds": 9.61,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 27.515,18 EUR s príslušenstvom za poskytnuté služby na základe Zmluvy o obchodnom zastúpení. Žalovaný si uplatnil pohľadávku z titulu zmluvnej pokuty vo výške 8.000 EUR a vzniesol kompenzačnú námietku započítania vzájomných pohľadávok.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi 8.000 EUR s úrokmi z omeškania a náhradu trov konania.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Ide o povinnosť dodržiavať model odmeňovania, pričom žalobca túto skutočnosť zrejme prehliadol.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 8.000 EUR",
+          "evidence": {
+            "quote": "pohľadávku z titulu nároku na zaplatenie zmluvnej pokuty zakotvenej v Zmluve vo výške 8.000 EUR",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 8000,
+            "evidence": {
+              "quote": "pohľadávku z titulu nároku na zaplatenie zmluvnej pokuty zakotvenej v Zmluvy vo výške 8.000 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd v kontexte uvedeného vyhodnotil tento jednostranný započítací prejav žalovaného ako neplatný právny úkon.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Súd v kontexte uvedeného vyhodnotil tento jednostranný započítací prejav žalovaného ako neplatný právny úkon.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "dospel k záveru, že dojednania o zmluvnej pokute vyplývajúce z čl. 6 bod 12 a čl. 23 bod. 3 písm. k) Zmluvy uzatvorenej medzi účastníkmi konania sú absolútne neplatné.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že dojednania o zmluvnej pokute sú absolútne neplatné, pretože povinnosť, ktorej plnenie má zmluvná pokuta zabezpečiť, nie je dostatočne určito vymedzená. Vymedzenie odkazom na dodržiavanie pracovnoprávnych predpisov a dbanie o spravodlivé odmeňovanie v zmysle odporúčaní žalovaného je neurčité a nejednoznačné. Z tohto dôvodu súd nevyužil moderačné právo a započítací prejav žalovaného vyhodnotil ako neplatný.",
+          "key_quotes": [
+            {
+              "quote": "dospel k záveru, že dojednania o zmluvnej pokute vyplývajúce z čl. 6 bod 12 a čl. 23 bod. 3 písm. k) Zmluvy uzatvorenej medzi účastníkmi konania sú absolútne neplatné.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "vymedzenie porušenia povinnosti odkazom na povinnosť riadne dodržiavať všetky pracovnoprávne predpisy spolu s povinnosťou dbať o spravodlivé odmeňovanie v zmysle odporúčaní žalovaného, resp. dodržiavať model odmeňovania stanovený žalovaným je zjavne neurčité a nejednoznačné a táto neurčitosť a nejednoznačnosť robí takéto dojednanie neplatným.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ ide o návrh žalobcu, aby súd pre prípad jeho neúspechu v spore zvážil využitie inštitútu moderačného práva, ktoré mu vyplýva z ustanovenia § 301 Obchodného zákonníka a v zmysle ktorého má súd právo posúdiť výšku zmluvnej pokuty s ohľadom na jej primeranosť, súd v danom prípade toto moderačné právo nevyužil nakoľko dospel k záveru, že dojednania týkajúce sa zmluvnej pokuty sú dojednaniami absolútne neplatnými.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Ak má byť teda záväzok na zaplatenie zmluvnej pokuty dojednaný platne, z takéhoto dojednania o zmluvnej pokute musí jednoznačne vyplývať splnenie akej konkrétnej povinnosti je týmto inštitútom zabezpečené, pričom absencia určenia tejto povinnosti bude mať za následok absolútnu neplatnosť takéhoto dojednania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "je neprípustné, aby žalovaný z pozície jednej zo zmluvných strán zmluvného vzťahu uzatvoreného výlučne so žalobcom určoval žalobcovi, akým spôsobom má žalobca postupovať pri tvorbe modelu odmeňovania v rámci pracovnoprávnych vzťahov ktoré uzatvorí so svojimi zamestnancami.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_183_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/183/2016",
+      "decision_date": "21.03.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1214203205.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

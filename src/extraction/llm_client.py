@@ -87,7 +87,7 @@ MODEL_CONFIGS = {
     # === OPEN-SOURCE MODEL: Qwen 3.5 397B via OpenRouter ===
     # I want to compare commercial models (GPT-4o, Gemini) with  open-source one.
     # Qwen 3.5 397B-A17B is currently  best open-weight model (Apache 2.0 license).
-    # Its a MoE (Mixture of Experts) — 397B total params but only 17B active per
+    # Its a MoE (Mixture of Experts) - 397B total params but only 17B active per
     # token, so its efficient despite being huge - also has 262k token context.
     #
     # I use OpenRouter (openrouter.ai) to access it via API because:
@@ -114,10 +114,10 @@ MODEL_CONFIGS = {
     # argument ("data never leaves MY machine"). I chose Qwen3-14B-sk which
     # is fine-tuned for Slovak by SAV and TU Košice. It fits on my m2 mac just with Q6_K quantization (12.1 GB).
     #
-    # RESULT: total failure. 0/20 documents — the model cant do structured JSON
+    # RESULT: total failure. 0/20 documents - the model cant do structured JSON
     # extraction at all. It was fine-tuned on Slovak text but NOT on instruction following or structured output
     # It just repeats itself in loop and never produces valid JSON.
-    # The base Qwen3-14B might workbetter but i switched to Qwen 3.5 397B via OpenRouter instead — much more capable and still open-source.
+    # The base Qwen3-14B might workbetter but i switched to Qwen 3.5 397B via OpenRouter instead - much more capable and still open-source.
     #
     # I keep this config here for documentation. If someone wants to try it:
     #   1. Install Ollama: brew install ollama
@@ -147,7 +147,7 @@ MAX_TOKENS_PER_CALL = {
     "call2": 8192,    # moderation analysis (multi-penalty 7-factor analysis can be 5k+ tokens)
     # FIX: bumped fulldoc from 8192 to 16384 for multi-penalty cases (e.g. 2Cob/69/2020
     # with 3 penalties produced 6400+ tokens of formatted JSON).
-    "fulldoc": 16384, # everything at once — needs headroom for multi-penalty cases
+    "fulldoc": 16384, # everything at once - needs headroom for multi-penalty cases
 }
 
 
@@ -201,9 +201,9 @@ def _get_google_client():
 def _get_openrouter_client(): # same library, different endpoint, different API key
     """Again just for openrouter - get or create the OpenRouter client (singleton ).
 
-    OpenRouter has OpenAI-compatible API so i justr reuse the OpenAI SDK — just change
+    OpenRouter has OpenAI-compatible API so i justr reuse the OpenAI SDK - just change
     base_url to openrouter.ai. This way i dont need a separate library.
-    The API key is different tho — its OPENROUTER_API_KEY, not OPENAI_API_KEY.
+    The API key is different tho - its OPENROUTER_API_KEY, not OPENAI_API_KEY.
     """
     if "openrouter" not in _clients:
         from openai import OpenAI
@@ -227,7 +227,7 @@ def _strip_additional_properties(obj):
     FIX: OpenAI strict mode REQUIRES additionalProperties:false on every object.
     But Gemini doesnt support this field at all and returns 400 INVALID_ARGUMENT if it sees it, and bcs of that i remove it
     So i strip it before sending to Gemini (resurcisvely because it needs to be in each level of json)
-    Schema still work because Gemini enforces  structure through response_schema without needing this flag — it just doesnt allow extra fields by default.
+    Schema still work because Gemini enforces  structure through response_schema without needing this flag - it just doesnt allow extra fields by default.
     """
     if isinstance(obj, dict):   # if obj is dict, create new dict
         new_obj = {}
@@ -363,7 +363,7 @@ def _call_openai(config, system_prompt, user_prompt, max_tokens, output_schema):
 # ##########################################
 # OPENROUTER (Qwen 3.5 397B)
 # ##########################################
-# OpenRouter (openrouter.ai) is API aggregator — it gives one endpoint to access 300+ models from different providers (DeepInfra, Together, Fireworks)
+# OpenRouter (openrouter.ai) is API aggregator - it gives one endpoint to access 300+ models from different providers (DeepInfra, Together, Fireworks)
 # The API is OpenAI-compatible so i just reuse the OpenAI SDK with different base_url.
 # The code looks almost identical to _call_openai().
 #
@@ -371,7 +371,7 @@ def _call_openai(config, system_prompt, user_prompt, max_tokens, output_schema):
 # Its a MoE model (397B total params, 17B active) so its fast despite being huge.
 # OpenRouter supports structured outputs (json_schema) for this model, same as OpenAi
 #
-# Pricing: 0.39/1M input + 2.34/1M output — about 6x cheaper than GPT-4o.
+# Pricing: 0.39/1M input + 2.34/1M output - about 6x cheaper than GPT-4o.
 # For my 176 documents the total cost should be around 1-3 dollars
 
 #   export OPENROUTER_API_KEY="sk-or-v1-..."
@@ -383,7 +383,7 @@ _OPENROUTER_QWEN_OUTPUT_COST_PER_M = 2.34
 def _call_openrouter(config, system_prompt, user_prompt, max_tokens, output_schema):
     client = _get_openrouter_client()
 
-    # retry logic — same as OpenAI. OpenRouter can return 429 when the underlying
+    # retry logic - same as OpenAI. OpenRouter can return 429 when the underlying
     # provider is overloaded, or 502/503 for temporary failures
     import time as _time
     max_retries = 5
@@ -397,15 +397,15 @@ def _call_openrouter(config, system_prompt, user_prompt, max_tokens, output_sche
                 ],
                 temperature=config["temperature"],
                 max_tokens=max_tokens,
-                # structured outputs — OpenRouter passes this to the provider
+                # structured outputs - OpenRouter passes this to the provider
                 # same format as OpenAI because the API is compatible
                 response_format={
                     "type": "json_schema",
                     "json_schema": output_schema,
                 },
-                # FIX: Qwen 3.5 is a "thinking" model — it spends tokens on internal reasoning before outputting JSON
+                # FIX: Qwen 3.5 is a "thinking" model - it spends tokens on internal reasoning before outputting JSON
                 # Without this, simple 20-token JSON response costs 1200+ tokens because the model thinks first
-                # For extraction i dont need thinking — just fill the JSON schema
+                # For extraction i dont need thinking - just fill the JSON schema
                 # OpenRouter has unified "reasoning" parameter that works across all thinking models (Qwen, DeepSeek, etc). effort="none" disables it.
                 extra_body={"reasoning": {"effort": "none"}},
             )
@@ -461,7 +461,7 @@ def _call_google(config, system_prompt, user_prompt, max_tokens, output_schema):
 
     client = _get_google_client()
 
-    # FIX: strip additionalProperties — Gemini doesnt support it and returns (implemented helper function for this)
+    # FIX: strip additionalProperties - Gemini doesnt support it and returns (implemented helper function for this)
     # 400 INVALID_ARGUMENT if its there - OpenAI needs it, Gemini doesnt.
     gemini_schema = _strip_additional_properties(output_schema.get("schema", {}))
 
@@ -483,12 +483,12 @@ def _call_google(config, system_prompt, user_prompt, max_tokens, output_schema):
                     max_output_tokens=max_tokens,
                     response_mime_type="application/json",  # response has to be json (little bit different than openai)
                     response_schema=gemini_schema,
-                    # disable thinking — it wastes tokens on internal reasoning
+                    # disable thinking - it wastes tokens on internal reasoning
                     # and often returns empty JSON as a result
                     thinking_config=types.ThinkingConfig(thinking_budget=0),
                 ),
             )
-            # check for empty response — gemini sometimes returns None
+            # check for empty response - gemini sometimes returns None
             if response.text and response.text.strip():
                 break
             elif attempt < max_retries - 1:
@@ -499,7 +499,7 @@ def _call_google(config, system_prompt, user_prompt, max_tokens, output_schema):
         except Exception as e:
             err_str = str(e)
             # FIX: 503 UNAVAILABLE happens when the model is overloaded ("experiencing high demand").
-            # These are transient — the server tells us to try again later.
+            # These are transient - the server tells us to try again later.
             # Also retry 500, 502, 504 (server-side errors) + network errors.
             is_rate_limit = "429" in err_str or "RESOURCE_EXHAUSTED" in err_str or "quota" in err_str.lower()
             is_server_error = "503" in err_str or "UNAVAILABLE" in err_str or "500" in err_str or "502" in err_str or "504" in err_str or "INTERNAL" in err_str
@@ -540,14 +540,14 @@ def _call_google(config, system_prompt, user_prompt, max_tokens, output_schema):
 
 
 # ==========================================
-# OLLAMA (Qwen3-14B-sk — local Slovak model)
+# OLLAMA (Qwen3-14B-sk - local Slovak model)
 # ==========================================
 # I ran Qwen3-14B-sk LOCALLY on my MacBook Air M2 24GB via Ollama
-# This is  open-source / privacy option for my thesis — no data leaves my machine
+# This is  open-source / privacy option for my thesis - no data leaves my machine
 #
 # The model is a Slovak fine-tune of Qwen3-14B by SAV and TU Košice.
 # I use Q6_K quantization (12.1 GB) which leaves about 6GB for the OS and inference context
-# I keep num_ctx=4096 to be safe on RAM — our RAG chunks are well under 4k tokens so this works for RAG mode
+# I keep num_ctx=4096 to be safe on RAM - our RAG chunks are well under 4k tokens so this works for RAG mode
 
 # For fulldoc some very long documents (120k chars = 30k tokens) wont fit in 4k context, so fulldoc results may be incomplete for those
 # (never mind because model did not work as expected)
@@ -555,7 +555,7 @@ def _call_google(config, system_prompt, user_prompt, max_tokens, output_schema):
 # If OLLAMA_API_KEY is set, the code falls back to Ollama Cloud
 # (for the Qwen 3.5 397B cloud model etc). Without it, goes to localhost.
 #
-# Since Ollama v0.5  supports structured output through the "format" parameter — grammar-based constrained decoding guarantees  output
+# Since Ollama v0.5  supports structured output through the "format" parameter - grammar-based constrained decoding guarantees  output
 # matches the JSON schema.
 # schema is also in the prompt text as recommended by Ollama docs (belt and suspenders approach)
 
@@ -600,7 +600,7 @@ def _call_ollama(config, system_prompt, user_prompt, max_tokens, output_schema):
                     # structured output - ollama uses grammar-based constrained decoding
                     "format": output_schema.get("schema", {}),
                 },
-                timeout=1800,  # 30 min timeout — local 14B model on M2 is SLOW
+                timeout=1800,  # 30 min timeout - local 14B model on M2 is SLOW
             )
             response.raise_for_status()
             break

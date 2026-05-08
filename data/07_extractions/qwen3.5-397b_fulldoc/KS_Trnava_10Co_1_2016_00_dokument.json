@@ -1,0 +1,303 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18263,
+    "completion_tokens": 3964,
+    "cost_usd": 0.0164,
+    "latency_seconds": 55.27,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia nesplatenej časti pôžičky vo výške 12.075 EUR spolu so zmluvnými pokutami a úrokmi z omeškania proti žalovaným, ktorí boli dlžníkom a ručiteľmi. Žalovaný 2 namietal výšku pôžičky, existenciu dohody o odklade splatnosti a neprimeranosť zmluvných pokút a úrokov z omeškania.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým uložil žalovaným povinnosť zaplatiť žalobcovi istinu, zmluvné pokuty a úroky z omeškania. Nárok žalobcu bol uznaný v plnom rozsahu.",
+      "contract_type": "pozicka",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, ak sa dlžník dostane do omeškania so splatením pôžičky alebo jej časti o viac ako 60 dní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "5.060,- Eur",
+          "evidence": {
+            "quote": "V Zmluve o pôžičke bola dohodnutá aj zmluvná pokuta vo výške 5.060,- Eur v prípade, ak sa dlžník dostane do omeškania so splatením pôžičky alebo jej časti o viac ako 60 dní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5060.0,
+            "evidence": {
+              "quote": "návrhu žalobcu vyhovel, a uložil žalovaným povinnosť spoločne a nerozdielne zaplatiť žalobcovi sumu 17.595,Eur (žalovaná suma pozostáva z nesplatenej pôžičky 12.075,- Eur + zmluvná pokuta 5.060,- Eur + 2 x zmluvná pokuta 230,- Eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5060.0,
+            "evidence": {
+              "quote": "Súd pri preukázaní existencie pohľadávky žalobcu vo výške 12.075,- Eur z titulu nesplatenej časti pôžičky, a pri preukázaní dôvodnosti nároku žalobcu aj na zmluvnú pokutu vo výške 5.060,-Eur za nesplatenie pôžičky včas",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,15% za každý deň omeškania",
+          "evidence": {
+            "quote": "Pre tento prípad bol v Zmluve o pôžičke dojednaný úrok z omeškania vo výške 0,15% za každý deň omeškania z dlžnej sumy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd pri preukázaní existencie pohľadávky žalobcu vo výške 12.075,- Eur z titulu nesplatenej časti pôžičky, a pri preukázaní dôvodnosti nároku žalobcu aj na zmluvnú pokutu vo výške 5.060,-Eur za nesplatenie pôžičky včas, ako aj zmluvnej pokuty vo výške 230,- Eur za každú z dvoch omeškaných mesačných splátok pôžičky vo výške 575,- Eur a 11.500,- Eur, návrhu žalobcu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta nie je neprimerane vysoká ani v rozpore s dobrými mravmi, keď zohľadnil výšku pôžičky a dobu omeškania. Celková výška pokuty predstavovala približne 43,6 % z poskytnutej pôžičky, čo súd považoval za primerané. Súd tiež zdôraznil, že denná výška zmluvnej pokuty sa s narastajúcim počtom dní omeškania znižuje a že súbeh úrokov z omeškania a zmluvnej pokuty nie je zákonom vylúčený.",
+          "key_quotes": [
+            {
+              "quote": "V danom prípadne však bol súd toho názoru, že zmluvná pokuta v takej výške ako bola dohodnutá v Zmluve o pôžičke nie je neprimerane vysoká, a teda nie je v rozpore s dobrými mravmi",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V danom prípade bola zmluvná pokuta dohodnutá v pevnej sume (nie percentuálne za každý deň omeškania), spolu dosiahla výšku 5.520,- Eur, čo pri výške poskytnutej pôžičky 12.650,- Eur predstavuje 43,6%, a preto aj z tohto hľadiska je potrebné považovať dojednanú zmluvnú pokutu za primeranú.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta v takej výške ako bola dohodnutá v Zmluve o pôžičke nie je neprimerane vysoká, a teda nie je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje zabezpečovací prostriedok záväzkového práva",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "keď súd zohľadnil výšku pôžičky ktorá bola takouto zmluvnou pokutou zabezpečená",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Tvrdenie žalovaného 2 o odložení splatnosti pôžičky súd teda považoval za ničím nepreukázané, keď žalovaný 2 neuniesol dôkazné bremeno svojich tvrdení, ako aj za účelové v snahe vyhnúť sa povinnosti zaplatiť žalobcovi zmluvnú pokutu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žiaden právny predpis nevylučuje súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku omeškaním splnenia peňažného záväzku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, že sa dlžník dostane do omeškania o viac ako 30 dní so splatením mesačnej splátky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_mesacne",
+          "value_raw": "230,- Eur za každú omeškanú mesačnú splátku",
+          "evidence": {
+            "quote": "a vo výške 230,- Eur za každú omeškanú mesačnú splátku v prípade, že sa dlžník dostane do omeškania o viac ako 30 dní so splatením mesačnej splátky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 460.0,
+            "evidence": {
+              "quote": "uložil žalovaným povinnosť spoločne a nerozdielne zaplatiť žalobcovi sumu 17.595,Eur (žalovaná suma pozostáva z nesplatenej pôžičky 12.075,- Eur + zmluvná pokuta 5.060,- Eur + 2 x zmluvná pokuta 230,- Eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 460.0,
+            "evidence": {
+              "quote": "ako aj zmluvnej pokuty vo výške 230,- Eur za každú z dvoch omeškaných mesačných splátok pôžičky vo výške 575,- Eur a 11.500,- Eur, návrhu žalobcu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,15% za každý deň omeškania",
+          "evidence": {
+            "quote": "Pre tento prípad bol v Zmluve o pôžičke dojednaný úrok z omeškania vo výške 0,15% za každý deň omeškania z dlžnej sumy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd pri preukázaní existencie pohľadávky žalobcu vo výške 12.075,- Eur z titulu nesplatenej časti pôžičky, a pri preukázaní dôvodnosti nároku žalobcu aj na zmluvnú pokutu vo výške 5.060,-Eur za nesplatenie pôžičky včas, ako aj zmluvnej pokuty vo výške 230,- Eur za každú z dvoch omeškaných mesačných splátok pôžičky vo výške 575,- Eur a 11.500,- Eur, návrhu žalobcu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal túto pokutu za dve omeškané mesačné splátky, keďže dlžník sa dostal do omeškania o viac ako 30 dní so splatením každej z nich. Celková suma tejto pokuty bola 460 EUR (2 x 230 EUR). Súd považoval túto pokutu za primeranú v kontexte celého záväzku a nepoužil moderačné právo na jej zníženie.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnej pokuty vo výške 230,- Eur za každú z dvoch omeškaných mesačných splátok pôžičky vo výške 575,- Eur a 11.500,- Eur, návrhu žalobcu vyhovel",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta v takej výške ako bola dohodnutá v Zmluve o pôžičke nie je neprimerane vysoká, a teda nie je v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje zabezpečovací prostriedok záväzkového práva",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "keď súd zohľadnil výšku pôžičky ktorá bola takouto zmluvnou pokutou zabezpečená",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Tvrdenie žalovaného 2 o odložení splatnosti pôžičky súd teda považoval za ničím nepreukázané, keď žalovaný 2 neuniesol dôkazné bremeno svojich tvrdení, ako aj za účelové v snahe vyhnúť sa povinnosti zaplatiť žalobcovi zmluvnú pokutu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žiaden právny predpis nevylučuje súbežné uplatnenie nároku na úrok z omeškania a zmluvnú pokutu za porušenie zmluvného záväzku omeškaním splnenia peňažného záväzku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_10Co_1_2016_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "10Co/1/2016",
+      "decision_date": "21.12.2016",
+      "ecli": "ECLI:SK:KSTT:2016:2110227406.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

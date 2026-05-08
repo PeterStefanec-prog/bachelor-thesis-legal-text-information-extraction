@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11322,
+    "completion_tokens": 2281,
+    "cost_usd": 0.037,
+    "latency_seconds": 9.48,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a náhrady škody z dôvodu vadného plnenia zmluvy o dielo žalovaným, ktorý nevykonal opravu striech v súlade so zmluvou a technickými normami, čo viedlo k zatekaniu. Žalovaný namietal, že vady boli spôsobené nevhodnými pokynmi žalobcu a že výška zmluvnej pokuty je neprimeraná.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie v časti zmluvnej pokuty, znížil ju z 21.443,27 eura na 8.220,86 eura a vo zvyšnej časti žalobu zamietol. V časti náhrady škody vo výške 7.831,08 eura odvolací súd rozsudok zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "pre prípad omeškania zhotoviteľa so splnením povinnosti odstrániť vady diela dohodli zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "1.000,-- Sk za každý deň omeškania",
+          "evidence": {
+            "quote": "V článku VIII. bod 8.2. zmluvy si účastníci pre prípad omeškania zhotoviteľa so splnením povinnosti odstrániť vady diela dohodli zmluvnú pokutu vo výške 1.000,-- Sk za každý deň omeškania až do odstránenia poslednej vady diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 4110.43,
+            "evidence": {
+              "quote": "bola cena za dielo (rekonštrukcia strechy na OO PZ Kolárovo) dohodnutá vo výške 4.110,43 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 21443.27,
+            "evidence": {
+              "quote": "Žalobca si podanou žalobu uplatnil zaplatenie zmluvnej pokuty vo výške 646.000,-- Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 8220.86,
+            "evidence": {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura, teda vo výške rovnajúcej sa dvojnásobku ceny diela (4.110,43 eur), ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal zmluvnú pokutu v plnej výške, avšak odvolací súd ju moderoval podľa § 301 Obchodného zákonníka. Odvolací súd konštatoval, že pôvodne uplatnená výška zmluvnej pokuty (viac ako päťnásobok ceny diela) by viedla k neúmernému obohateniu žalobcu a bezdôvodnému poškodeniu žalovaného, najmä keď si žalobca uplatňuje aj náhradu škody. Súd znížil zmluvnú pokutu na dvojnásobok ceny diela, čo považoval za dostatočné na zabezpečenie povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Žalobca sa v podanej žalobe domáhal zaplatenia zmluvnej pokuty vo výške 21.443,27 eura, čo predstavuje viac ako päťnásobok ceny diela.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Je zrejmé, že priznaním takto uplatnenej výšky zmluvnej pokuty by došlo na strane žalobcu k neúmernému obohateniu a na strane druhej k bezdôvodnému poškodeniu žalovaného, a to obzvlášť za situácie, že žalobca si voči žalovanému uplatňuje aj celú úhradu nákladov, ktoré uhradil tretiemu subjektu za opravu predmetného strešného plášťa.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd preto pristúpil k moderovaniu výšky zmluvnej pokuty, ktorú žalobcovi priznal vo výške 8.220,86 eura, teda vo výške rovnajúcej sa dvojnásobku ceny diela (4.110,43 eur), ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "ktorá suma podľa súdu dostatočne zohľadňuje hodnotu a význam zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "a to obzvlášť za situácie, že žalobca si voči žalovanému uplatňuje aj celú úhradu nákladov, ktoré uhradil tretiemu subjektu za opravu predmetného strešného plášťa.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca sa v podanej žalobe domáhal zaplatenia zmluvnej pokuty vo výške 21.443,27 eura, čo predstavuje viac ako päťnásobok ceny diela.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný nevhodnosť pokynov nezistil, teda ich neoznámil žalobcovi a dielo vykonal na základe nevhodných pokynov.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Čo sa týka zabezpečenia projektovej dokumentácie, ktorú žalobca žalovanému nepredložil napriek jeho požiadavkám pred vykonaním diela a ani v priebehu ich vykonávania, tak ako uviedol odvolací súd, žalovaný si mohol projektovú dokumentáciu zabezpečiť rovnakým spôsobom pred vykonaním diela ako si ju zabezpečil po uplatnení vád žalobcom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_52_2016_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/52/2016",
+      "decision_date": "01.12.2016",
+      "ecli": "ECLI:SK:KSNR:2016:4105220661.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

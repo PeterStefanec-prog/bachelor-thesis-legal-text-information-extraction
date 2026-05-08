@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10753,
+    "completion_tokens": 2111,
+    "cost_usd": 0.0346,
+    "latency_seconds": 7.88,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia 1.266,14 eura s príslušenstvom, ktoré pozostávalo z nedoplatkov za tovar a služby, zmluvnej pokuty vo výške 170 eur a náhrady škody vo výške 1.023,78 eura. Odporca namietal výšku náhrady škody a zmluvnej pokuty, tvrdiac, že zmluva bola uzatvorená len na skúšobnú dobu a škoda navrhovateľovi nevznikla.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu v časti, kde odporcovi uložil zaplatiť 170 eur a kde návrh zamietol. V časti výroku o trovách konania odvolací súd rozsudok zrušil a vec vrátil súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa odberateľ dostane do omeškania s úhradou niektorej splatnej faktúry viac ako 30 dní, zaväzuje sa odberateľ zaplatiť ILLE náhradu škody vo výške 50 % z ceny služby nájomného servisu za obdobie, ktoré by inak zostávalo do skončenia zmluvy uplynutím času a zmluvnú pokutu vo výške 170,-- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "170,-- eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 170,-- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 170.0,
+            "evidence": {
+              "quote": "Navrhovateľ ďalej odporcovi podľa § 6 ods. 3 všeobecných obchodných podmienok vyúčtoval zmluvnú pokutu vo výške 170,-- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 170.0,
+            "evidence": {
+              "quote": "Odvolací súd sa v plnom rozsahu stotožňuje s dôvodmi prvostupňového súdu, ktoré ho viedli by vyhoveniu žalobe v tejto časti.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročným",
+          "evidence": {
+            "quote": "zaplatiť žalobcovi 1.266,14 eura s 9 % ročným úrokom z omeškania zo sumy 6,31 eura od 15.07.2010 do zaplatenia a zo sumy 66,05 eura od 10.08.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa zmluvnú pokutu nepovažoval za neprimerane vysokú, keďže za celkovú dobu spolupráce by bol odporca na odplate zaplatil navrhovateľovi 2.377,44 eura. Vo vzťahu k uvedenej skutočnosti sa súdu zmluvná pokuta dojednaná vo výške 170,-- eur nejavila ako neprimerane vysoká a moderačné právo upravené v § 301 Obchodného zákonníka preto nepoužil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že zmluvná pokuta vo výške 170 eur nie je neprimerane vysoká vzhľadom na celkovú sumu, ktorú by odporca zaplatil za služby počas trvania zmluvy (2.377,44 eura). Odvolací súd sa s týmto záverom stotožnil a moderačné právo podľa § 301 Obchodného zákonníka nebolo použité. Odporca namietal, že všeobecné obchodné podmienky sa nestali súčasťou zmluvy a že zmluva bola len na skúšobnú dobu, avšak súd tieto námietky zamietol.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa zmluvnú pokutu nepovažoval za neprimerane vysokú, keďže za celkovú dobu spolupráce by bol odporca na odplate zaplatil navrhovateľovi 2.377,44 eura. Vo vzťahu k uvedenej skutočnosti sa súdu zmluvná pokuta dojednaná vo výške 170,-- eur nejavila ako neprimerane vysoká a moderačné právo upravené v § 301 Obchodného zákonníka preto nepoužil.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa v plnom rozsahu stotožňuje s dôvodmi prvostupňového súdu, ktoré ho viedli by vyhoveniu žalobe v tejto časti.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvého stupňa zmluvnú pokutu nepovažoval za neprimerane vysokú, keďže za celkovú dobu spolupráce by bol odporca na odplate zaplatil navrhovateľovi 2.377,44 eura.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvého stupňa zmluvnú pokutu nepovažoval za neprimerane vysokú, keďže za celkovú dobu spolupráce by bol odporca na odplate zaplatil navrhovateľovi 2.377,44 eura. Vo vzťahu k uvedenej skutočnosti sa súdu zmluvná pokuta dojednaná vo výške 170,-- eur nejavila ako neprimerane vysoká",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_87_2013_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/87/2013",
+      "decision_date": "24.04.2014",
+      "ecli": "ECLI:SK:KSNR:2014:4211204531.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

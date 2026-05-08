@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 34080,
+    "completion_tokens": 1036,
+    "cost_usd": 0.0956,
+    "latency_seconds": 39.56,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca HK Púchov, s.r.o. sa domáhal zaplatenia sumy 149.878,86 Eur s príslušenstvom od žalovaného MŠK Púchov s.r.o. na základe zmluvy o podnájme zimného štadióna. Tvrdil, že zmluva je neplatná a žiadal vrátenie podnájomného.",
+      "verdict_summary": "Krajský súd v Banskej Bystrici potvrdil rozsudok Okresného súdu Považská Bystrica, ktorý žalobu zamietol z dôvodu premlčania nároku.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "v prípade, že ak dôjde k ukončeniu podnájmu v príčinnej súvislosti s akýmkoľvek jeho konaním.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nevyčerpané nájomné zmluvnou pokutou v prospech prenajímateľa",
+          "evidence": {
+            "quote": "v zmluve bolo dojednané, že v prípade skončenia zmluvy, kde dôvodom môže byť aj výpoveď zmluvy zo strany prenajímateľa, sa stáva nevyčerpané nájomné zmluvnou pokutou v prospech prenajímateľa.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 9339888,
+            "evidence": {
+              "quote": "Podnájomné bolo dohodnuté v sume 1.167.486,-Sk bez DPH ročne, čo za 8 rokov predstavuje sumu 9.339.888,-Sk bez DPH.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 123080.63,
+            "evidence": {
+              "quote": "žalovaný započítal svoju pohľadávku titulom zmluvnej pokuty vo výške 123.080,63 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V dôsledku uvedeného žalovaný nemá nárok na zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "zmluvné dojednanie, týkajúce sa zmluvnej pokuty je neplatné pre rozpor so zákonom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že zmluvná pokuta bola viazaná na prípad ukončenia podnájmu v príčinnej súvislosti s konaním podnájomníka, čo neznamená porušenie zmluvnej povinnosti. Preto je zmluvná pokuta neplatná pre rozpor so zákonom. Žalovaný nemá nárok na zmluvnú pokutu a nemohla byť započítaná s pohľadávkou žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "zmluvné dojednanie, týkajúce sa zmluvnej pokuty je neplatné pre rozpor so zákonom",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohoda o zmluvnej pokute je v rozpore so zásadami poctivého obchodného styku a dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_73_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/73/2023",
+      "decision_date": "24.04.2024",
+      "ecli": "ECLI:SK:KSBB:2024:1215205075.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

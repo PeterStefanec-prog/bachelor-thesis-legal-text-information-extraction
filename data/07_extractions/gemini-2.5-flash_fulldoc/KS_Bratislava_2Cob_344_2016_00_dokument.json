@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6434,
+    "completion_tokens": 2126,
+    "cost_usd": 0.0293,
+    "latency_seconds": 8.83,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úrokov z omeškania z titulu nezaplatenej faktúry za vykonané práce na základe zmluvy o dielo. Žalovaný namietal, že nárok na zmluvnú pokutu a úroky z omeškania nevznikol, keďže zmluva o dielo zanikla pred splatnosťou faktúry.",
+      "verdict_summary": "Krajský súd v Bratislave pripustil späťvzatie žaloby žalobcom, zrušil rozsudok súdu prvej inštancie a konanie zastavil. Žiaden z účastníkov nemá právo na náhradu trov konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 200200703",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,05% z ceny faktúry za každý začatý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% denne zo sumy 72.697,70 €",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05% denne zo sumy 72.697,70 € od 28.03.2013 do 02.04.2014",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 72697.7,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,05% denne zo sumy 72.697,70 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 13449.07,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,05% denne zo sumy 72.697,70 € od 28.03.2013 do 02.04.2014, predstavujúci sumu 13.449,07 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Podaním doručeným súdu dňa 22.2.2017 zobral žalobca žalobu v celom rozsahu späť a žiadal aby odvolací súd s poukazom na ust. § 144 v spojení s ust. § 370 ods. 1 CSP pripustil späťvzatie žaloby, rozhodnutie súdu prvej inštancie zrušil a konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8,75 % ročne zo sumy 72.697,70 € od 28.03.2013 do 02.04.2014, predstavujúci sumu 6.448,19 €",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "odvolací súd postupoval podľa ust. § 370 ods. 2 CSP pripustil späťvzatie žaloby zrušil rozhodnutie súdu prvej inštancie a konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne priznal zmluvnú pokutu, argumentujúc, že povinnosť zaplatiť zmluvnú pokutu, ktorá vznikla pred odstúpením od zmluvy, zostáva zachovaná. Odvolací súd však konanie zastavil z dôvodu späťvzatia žaloby žalobcom, s ktorým žalovaný súhlasil (nevyjadril nesúhlas).",
+          "key_quotes": [
+            {
+              "quote": "Povinnosť zaplatiť zmluvnú pokutu, ktorá vznikla pred odstúpením od zmluvy zostáva zachovaná a oprávnená osoba môže svoj nárok uplatniť aj po zániku zmluvy v dôsledku odstúpenia.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,05% z ceny faktúry za každý začatý deň omeškania.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podaním doručeným súdu dňa 22.2.2017 zobral žalobca žalobu v celom rozsahu späť a žiadal aby odvolací súd s poukazom na ust. § 144 v spojení s ust. § 370 ods. 1 CSP pripustil späťvzatie žaloby, rozhodnutie súdu prvej inštancie zrušil a konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta plní funkciu odškodňovaciu, teda ide o tzv. paušalizovanú náhradu škody zmluvnou pokutou zaistenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "k odstúpeniu od zmluvy došlo z dôvodu finančnej nedisciplinovanosti žalovaného, preto súd má zato že nárok žalobcu na zmluvnú pokutu je opodstatnený a preto súd žalovaného zaviazal na jej zaplatenie.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie konštatoval, že je možný súbeh zmluvnej pokuty a úroku z omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_344_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/344/2016",
+      "decision_date": "25.05.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1113217050.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

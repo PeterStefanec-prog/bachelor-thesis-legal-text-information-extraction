@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9426,
+    "completion_tokens": 1639,
+    "cost_usd": 0.0075,
+    "latency_seconds": 23.63,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 11.615,92 eura spolu so zmluvnou pokutou a úrokom z omeškania proti žalovanému. Spor sa týkal nezaplatenia dlžnej sumy a následného uplatnenia zmluvných sankcií.",
+      "verdict_summary": "Odvolací súd odvolanie žalovaného odmietol pre procesné vady (chýbajúca autorizácia elektronického podania a absencia odvolacích dôvodov). Rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na istinu, zmluvnú pokutu a úrok, tým zostal v platnosti.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 11.615,92 eura spolu so zmluvnou pokutou vo výške 0,1 % denne zo sumy 11.615,92 eura od 18.03.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,1 % denne zo sumy 11.615,92 eura od 18.03.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 11615.92,
+            "evidence": {
+              "quote": "zo sumy 11.615,92 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "je žalovaný povinný zaplatiť žalobcovi úrok z omeškania vo výške 9 % ročne zo sumy 4.000 eur až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie urobil záver, že boli splnené zákonné predpoklady pre vyhovenie žalobe I. napadnutým výrokom v prospech žalobcu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie vyhovel žalobe v plnom rozsahu, keď konštatoval splnenie zákonných predpokladov pre priznanie nároku. Odvolací súd sa k vecnej stránke sporu a výške pokuty nevyjadroval, keďže odvolanie odmietol pre procesné nedostatky (neautorizované elektronické podanie). Zmluvná pokuta bola priznaná vo výške 0,1 % denne z istiny až do dosiahnutia stropu, následne prechádzajúca na úrok z omeškania.",
+          "key_quotes": [
+            {
+              "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 11.615,92 eura spolu so zmluvnou pokutou vo výške 0,1 % denne",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "boli splnené zákonné predpoklady pre vyhovenie žalobe I. napadnutým výrokom v prospech žalobcu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "tak, že odo dňa nasledujúceho po dni, v ktorom súčet zmluvných pokút dosiahne sumu 12.120,96 eura, je žalovaný povinný zaplatiť žalobcovi úrok z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_12CoCsp_44_2022_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "12CoCsp/44/2022",
+      "decision_date": "15.11.2022",
+      "ecli": "ECLI:SK:KSNR:2022:4321201075.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

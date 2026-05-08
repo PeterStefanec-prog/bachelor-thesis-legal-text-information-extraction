@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7760,
+    "completion_tokens": 983,
+    "cost_usd": 0.0292,
+    "latency_seconds": 7.72,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia 87,84 Eur, čo predstavuje úrok z omeškania, na základe zmluvnej pokuty za nedodržanie lehoty splatnosti faktúr podľa tarify spoločnosti D. P. Odporkyňa sa dostala do omeškania so zaplatením viacerých faktúr za telekomunikačné služby.",
+      "verdict_summary": "Súd zamietol žalobný návrh navrhovateľa ako nedôvodný v celom rozsahu z dôvodu premlčania práva.",
+      "contract_type": "telekom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za nedodržanie lehoty splatnosti faktúr podľa tarify spoločnosti D. P.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne z dlžnej čiastky",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 0,05 % denne z dlžnej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 87.84,
+            "evidence": {
+              "quote": "navrhovateľa, ktorým sa domáhal zaplatenia 87,84 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "čo predstavuje úrok z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol žalobu z dôvodu premlčania práva, keďže navrhovateľ uplatnil právo po uplynutí trojročnej premlčacej doby. Súd konštatoval, že uznanie dlhu odporkyňou nebolo platné, pretože nebolo dostatočne určité. Súd sa stotožnil s námietkou vedľajšieho účastníka o premlčaní.",
+          "key_quotes": [
+            {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_6Co_65_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "6Co/65/2013",
+      "decision_date": "26.02.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3111225477.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

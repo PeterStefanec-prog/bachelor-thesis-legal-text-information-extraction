@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12579,
+    "completion_tokens": 2000,
+    "cost_usd": 0.0357,
+    "latency_seconds": 8.04,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 1.185,02 Eur spolu s úrokom z omeškania a zmluvnou pokutou denne, ktorá vznikla z nezaplatenia ceny diela podľa zmluvy o dielo. Žalovaný namietal neplatnosť zmluvy, postup žalobcu v rozpore s dobrými mravmi a žiadal o zníženie zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu, ktorý zaviazal žalovaného zaplatiť žalobcovi sumu 1.185,02 Eur s príslušenstvom a trovy konania. Žalovaný je tiež povinný nahradiť žalobcovi trovy odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "omeškanie objednávateľa so zaplatením čo i len časti ktorejkoľvek platby odmeny sa považuje za podstatné porušenie zmluvnej povinnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1% zmluvnou pokutou denne zo sumy 1.185,02 Eur",
+          "evidence": {
+            "quote": "s 0,1% zmluvnou pokutou denne zo sumy 1.185,02 Eur od 07. 07. 2008 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1185.02,
+            "evidence": {
+              "quote": "s 0,1% zmluvnou pokutou denne zo sumy 1.185,02 Eur od 07. 07. 2008 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "s 0,1% zmluvnou pokutou denne zo sumy 1.185,02 Eur od 07. 07. 2008 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14,25% ročným úrokom z omeškania",
+          "evidence": {
+            "quote": "spolu so 14,25% ročným úrokom z omeškania zo sumy 1.185,02 Eur od 07. 07. 2008 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Podľa názoru súdu prvého stupňa nie sú v tomto prípade splnené podmienky na zníženie zmluvnej pokuty využitím moderačného práva súdu podľa § 301 Obchodného zákonníka",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa rozhodol, že nie sú splnené podmienky na zníženie zmluvnej pokuty, pretože zabezpečovala základnú zmluvnú povinnosť žalovaného ako podnikateľa. Žalovaný ako podnikateľ je schopný zhodnotiť následky zmluvných dojednaní a súhlasil so zmluvnou pokutou. Súd tiež poukázal na laxný postoj žalovaného k plneniu povinností. Odvolací súd s týmto záverom súhlasil a potvrdil, že zmluvná pokuta je primeraná a jej zníženie by zhoršilo zabezpečenie pohľadávky.",
+          "key_quotes": [
+            {
+              "quote": "Podľa názoru súdu prvého stupňa nie sú v tomto prípade splnené podmienky na zníženie zmluvnej pokuty využitím moderačného práva súdu podľa § 301 Obchodného zákonníka, pričom poukázal na to, že zmluvnou povinnosťou bola zabezpečená základná zmluvná povinnosť žalovaného, a to povinnosť zaplatiť časť ceny diela.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Rovnako odvolací súd súhlasí aj so záverom súdu prvého stupňa o tom, že zmluvná pokuta dohodnutá v zmluve vo výške 0,1% z dlžnej sumy za každý deň omeškania so zaplatením bezžnej sumy je v tomto prípade primeraná, slúžila na zabezpečenie základnej zmluvnej povinnosti žalovaného, ktorý ako podnikateľ zmluvu podpísal.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pokiaľ sa napriek tomu uskutočnili rokovania žalobcu (svedok N.) so žalovaným, súd ich považuje len za pokus žalobcu dosiahnuť naplnenie predmetu zmluvy, pričom v tejto súvislosti išlo zo strany žalobcu o konanie nad rámec zmluvy, súčasne však v prospech žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pričom poukázal na to, že zmluvnou povinnosťou bola zabezpečená základná zmluvná povinnosť žalovaného, a to povinnosť zaplatiť časť ceny diela.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvého stupňa tiež poukázal na laxný postoj žalovaného k plneniu povinností z uzavretej zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_130_2013_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/130/2013",
+      "decision_date": "19.12.2013",
+      "ecli": "ECLI:SK:KSBB:2013:6912208394.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8633,
+    "completion_tokens": 1097,
+    "cost_usd": 0.0326,
+    "latency_seconds": 7.22,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zníženia zmluvnej pokuty 0,1 % za každý deň omeškania, ktorá bola dohodnutá v zmluve o nájme s právom kúpy prenajatej veci. Tvrdil, že pokuta je neprimerane vysoká vzhľadom na hodnotu zabezpečovanej povinnosti.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok Okresného súdu Nitra, ktorý žalobu zamietol.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "že ak je nájomca v omeškaní s úhradou splátky je prenajímateľ oprávnený vyúčtovať nájomcovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvná pokuta 0,1 % za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 5722935.4,
+            "evidence": {
+              "quote": "pohľadávka 5.722.935,40 Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože odporca zmluvnú pokutu nevyúčtoval ani nepožadoval. Podľa § 301 Obchodného zákonníka môže súd znížiť zmluvnú pokutu len v prípade, že už vzniklo právo na zmluvnú pokutu. Odvolací súd potvrdil tento rozsudok, pretože žaloba nebola podaná v konaní, kde by bola výška zmluvnej pokuty definitívne známa.",
+          "key_quotes": [
+            {
+              "quote": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta 0,1 % za každý deň omeškania je neprimerane vysoká, a to najmä s poukazom na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "v súčasnosti predstavuje zmluvná pokuta za omeškané plnenie až 800 % oproti zabezpečovanej pohľadávke",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].associated_interest.rate_value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_135_2012_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/135/2012",
+      "decision_date": "28.02.2013",
+      "ecli": "ECLI:SK:KSNR:2013:4111204662.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

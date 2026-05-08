@@ -119,7 +119,7 @@ def build_call2_prompt(retrieval_data, call1_result):
     # I send the full Call 1 output to Call 2 so it has all the context about contract and penalty.
     # But i STRIP the evidence objects (quote + chunk_id)mbefore sending. This did quite lot problems.
 
-    # FIX: "cross-call contamination" — when i sent the full Call 1 JSON including evidence,  LLM in Call 2 saw chunk_ids like "docname_chunk_8" from Call 1
+    # FIX: "cross-call contamination" - when i sent the full Call 1 JSON including evidence,  LLM in Call 2 saw chunk_ids like "docname_chunk_8" from Call 1
     # and REUSED them for Call 2 evidence, even though those chunks were not inm Call 2 context.
     # The LLM was basically copying chunk_ids from  prefilled data instead of looking at the actual Call 2 chunks.
     # This caused 5 WRONG_CHUNK flags in the 2Cob/69/2020 document (3 penalties, most complex case).

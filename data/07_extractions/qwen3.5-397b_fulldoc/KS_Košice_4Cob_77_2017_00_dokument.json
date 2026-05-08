@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7401,
+    "completion_tokens": 1647,
+    "cost_usd": 0.0067,
+    "latency_seconds": 21.84,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za dielo vo výške 108.045,26 EUR s príslušenstvom. Žalovaný sa bránil námietkou započítania pohľadávky titulom zmluvnej pokuty za vady diela a nedodržanie zmluvy, ktorú však súd neprijal pre nedostatok riadneho započítacieho prejavu.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvého stupňa, ktorým bola žaloba o zaplatenie ceny diela vyhovená. Odvolanie žalovaného proti zamietnutiu žaloby v prevyšujúcej časti bolo odmietnuté ako neprípustné."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "jeho obsahu. Súd prvej inštancie preto v konaní neprihliadal na započítací prejav žalovaného."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalovaný si uplatnil v tomto konaní od žalobcu zmluvnú pokutu ako sankciu z titulu nedodržania zmluvy v celkovej výške 29.567,31 eur."
+            },
+            "value": 29567.31
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": null,
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Súd prvej inštancie vyhovel žalobe aj v rozsahu uplatneného zákonného úroku z omeškania 9,05% ročne od splatnosti jednotlivých fakturovaných cien diela do zaplatenia"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Žalovaný si uplatnil v tomto konaní od žalobcu zmluvnú pokutu ako sankciu z titulu nedodržania zmluvy v celkovej výške 29.567,31 eur."
+          },
+          "value": "other"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalovaný nepredložil súdu prvej inštancie započítací prejav, ktorý doručil žalobcovi a z ktorého by bolo zrejmé započítanie akej pohľadávky sa presne domáha a z akého titulu."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Žalovaný nepredložil súdu prvej inštancie započítací prejav, ktorý doručil žalobcovi a z ktorého by bolo zrejmé započítanie akej pohľadávky sa presne domáha a z akého titulu."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie neprihliadal na započítaciu námietku žalovaného, pretože započítací prejav nebol riadne doručený ani špecifikovaný. Žalovaný nepredložil dôkaz o doručení započítacieho prejavu žalobcovi, z ktorého by vyplývalo, akej pohľadávky sa domáha. Inventarizácia pohľadávok nebola považovaná za započítací prejav, keďže nebola podpísaná a nebolo preukázané jej doručenie."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "titulom sankcie za vady predmetného diela spolu vo výške 73.671,92 eur. Žalovaný si uplatnil v tomto konaní od žalobcu zmluvnú pokutu ako sankciu z titulu nedodržania zmluvy v celkovej výške 29.567,31 eur."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "celková výška 29.567,31 eur"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_77_2017_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/77/2017",
+      "decision_date": "09.08.2017",
+      "ecli": "ECLI:SK:KSKE:2017:5115214486.3",
+      "document_type": "Uznesenie"
+    }
+  }
+}

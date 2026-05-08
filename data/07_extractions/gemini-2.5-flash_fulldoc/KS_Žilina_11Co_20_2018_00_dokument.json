@@ -1,0 +1,310 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12052,
+    "completion_tokens": 3765,
+    "cost_usd": 0.0527,
+    "latency_seconds": 14.82,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia dvoch zmluvných pokút vo výške 1 000,- eur a 3 000,- eur od žalovaného, modela, za porušenie zmluvy o exkluzívnom zastúpení, konkrétne za nedodržanie všeobecných pravidiel modelingu, podmienok agentúry, nepredloženie vierohodného potvrdenia od lekára a odmietanie práce.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok súdu prvej inštancie, ktorý žalobu žalobcu zamietol v celom rozsahu, a priznal žalovanému nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "nedodržal všeobecné pravidlá modelingu a podmienky agentúry, ktoré boli dohodnuté v zmluve o exkluzívnom zastúpení.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 1 000,- eur",
+          "evidence": {
+            "quote": "domáhal voči žalovanému zaplatenia zmluvnej pokuty vo výške 1 000,- eur, pretože nedodržal všeobecné pravidlá modelingu a podmienky agentúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1000,
+            "evidence": {
+              "quote": "domáhal voči žalovanému zaplatenia zmluvnej pokuty vo výške 1 000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd návrh na jej zaplatenie zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "súd návrh na jej zaplatenie zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu 1 000,- eur, pretože žalobca nešpecifikoval konkrétne porušenie všeobecných pravidiel modelingu a nepreukázal, že žalovaný bol s týmito pravidlami riadne oboznámený. Navyše, súd konštatoval, že udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na príjem žalovaného neprimerane vysoké a nemorálne, a dočasné prerušenie komunikácie nemalo vplyv na činnosť modela ani nevznikla škoda.",
+          "key_quotes": [
+            {
+              "quote": "Pretože žalobca porušenie všeobecných pravidiel modelingu vo vyúčtovaní zmluvnej pokuty vo výške 1 000,- eur nijakým spôsobom nešpecifikoval a nekonkretizoval a nebolo preukázané ani to, čo konkrétne sú to všeobecné pravidlá modelingu, a to, že žalovaný bol s nimi riadne oboznámený, nemôže žalovaný zodpovedať za porušenie týchto povinností, ktoré nie sú špecifikované a o ktorých nebol poriadne informovaný.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Navyše udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na jeho príjem, neprimerane vysoké, a teda nemorálne. Aj z tohto dôvodu súd žalobu v časti o zaplatenie zmluvnej pokuty vo výške 1 000,- eur zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na jeho príjem, neprimerane vysoké, a teda nemorálne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pretože hodnota a význam zabezpečovanej povinnosti, a to činnosti Modela pre prijímacie agentúry narušená nebola, súd by túto pokutu ako neprimeranú výrazne znížil, alebo by ju odpustil (zmluvná pokuta 1 000,- eur).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Vykonaným dokazovaním nebolo preukázané, že dočasným porušením komunikácie medzi sporovými stranami počas pobytu žalovaného v Číne bol narušený výkon jeho činnosti Modela na základe zmluvy o exkluzívnom zastúpení a žalobcovi žiadna škoda nevznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvy vykonával žalovaný. Navyše udelenie pokuty vo výške 1 000,- eur by bolo vzhľadom na jeho príjem, neprimerane vysoké, a teda nemorálne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný pritom uviedol, že jeho emailová adresa bola počas predmetnej zahraničnej cesty po 04.06.2015 nefunkčná. Z uvedeného dôvodu preto nebola doručená odpoveď na žiadosť žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pokiaľ žalobca neobdržal potvrdenie o doručení emailu, mohol konať s náležitou starostlivosťou a kontaktovať žalovaného akýmkoľvek iným spôsobom, minimálne spôsobom zaužívaným.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "nepredložil vierohodné potvrdenie od lekára a odmietal bez odôvodnenia práce pre žalobcu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 3 000,- eur",
+          "evidence": {
+            "quote": "Zároveň sa domáhal zaplatenia zmluvnej pokuty vo výške 3 000,- eur, pretože nepredložil vierohodné potvrdenie od lekára a odmietal bez odôvodnenia práce pre žalobcu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3000,
+            "evidence": {
+              "quote": "Zároveň sa domáhal zaplatenia zmluvnej pokuty vo výške 3 000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd návrh na jej zaplatenie zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Z týchto dôvodov súd prvej inštancie považoval uloženie zmluvnej pokuty vo výške 3 000,- eur za neodôvodnené a žalobu v časti o zaplatenie sumy 3 000,- eur zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol nárok na zmluvnú pokutu 3 000,- eur, pretože žalovaný dostatočne a včas ospravedlnil svoju neúčasť na módnej prehliadke z dôvodu zlého zdravotného stavu, ktorý preukázal vierohodnými lekárskymi potvrdeniami. Súd tiež uviedol, že uloženie takej vysokej pokuty vo vzťahu k príjmom žalovaného a k zabezpečovanej povinnosti bolo neprimerane vysoké.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie považoval tieto doklady, ktorými žalobca preukázal svoj zlý zdravotný stav, za vierohodné a dostatočné. Vzhľadom na zlý zdravotný stav sa žalovaný módnej prehliadky dňa 18.09.2015 nemohol zúčastniť. Z týchto dôvodov súd prvej inštancie považoval uloženie zmluvnej pokuty vo výške 3 000,- eur za neodôvodnené a žalobu v časti o zaplatenie sumy 3 000,- eur zamietol",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Navyše uloženie takej vysokej pokuty vo vzťahu k príjmom žalobcu a k zabezpečovanej povinnosti bolo neprimerane vysoké.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše uloženie takej vysokej pokuty vo vzťahu k príjmom žalobcu a k zabezpečovanej povinnosti bolo neprimerane vysoké.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše uloženie takej vysokej pokuty vo vzťahu k príjmom žalobcu a k zabezpečovanej povinnosti bolo neprimerane vysoké.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše uloženie takej vysokej pokuty vo vzťahu k príjmom žalobcu a k zabezpečovanej povinnosti bolo neprimerane vysoké.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dňa 18.09.2015. Žalovaný však svoju neúčasť v práci riadnym spôsobom ospravedlnil už dňa 31.08.2015, teda v dostatočnom predstihu a žalobcovi predložil potvrdenie svojho praktického lekára MUDr. V. A. zo dňa 14.09.2015 o tom, že pre chorobu je doporučená liečba v trvaní 3 - 5 dní, a zároveň aj potvrdenie praktickej lekárky o tom, že liečba menovaného vyžaduje kľud na lôžku, a to v období od 14.09.2015 do 01.10.2015.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Vyzval zároveň žalovaného na zaslanie lekárskej správy, nakoľko potvrdenie o práceneschopnosti nepovažoval za vierohodné a mal podozrenie, že žalovaný sa práci vyhýba a snaží sa poškodiť dobré meno agentúry.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_11Co_20_2018_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "11Co/20/2018",
+      "decision_date": "28.08.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5716201789.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

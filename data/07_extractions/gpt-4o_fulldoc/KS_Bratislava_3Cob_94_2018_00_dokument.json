@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8131,
+    "completion_tokens": 1088,
+    "cost_usd": 0.0312,
+    "latency_seconds": 18.14,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca RED ARROW, s.r.o. sa domáhal zaplatenia zmluvnej pokuty vo výške 1.800 EUR od žalovaného DSV Slovakia, s.r.o. za zrušenie prepravy po pristavení vozidla na nakládku. Žalobca tvrdil, že prepravný poriadok ustanovuje zmluvnú pokutu vo výške 10-násobku ceny prepravy.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava III a vrátil vec na ďalšie konanie.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak preprava bola zrušená po pristavení vozidla na nakládku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "10 násobku ceny prepravy",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 10 násobku ceny prepravy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 180,
+            "evidence": {
+              "quote": "prepravu z nemeckého mesta Bützow do Senca v cene 180,- EUR bez DPH",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1800,
+            "evidence": {
+              "quote": "žalobca požadoval zaplatenie 1.800,- EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 26Cb/9/2017-81 zo dňa 8.1.2018 zrušujea vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava III č.k. 26Cb/9/2017-81 zo dňa 8.1.2018 zrušujea vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu z 1.800 EUR na 180 EUR, považujúc pôvodnú výšku za neprimeranú. Súd uviedol, že zmluvná pokuta mala sankčný charakter bez zrejmého zabezpečenia záväzku. Odvolací súd zrušil rozhodnutie pre nedostatočné zistenie skutkového stavu a nesprávne právne posúdenie, pričom súd prvej inštancie nepreveril platnosť dojednania zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie zmluvnú pokutu, ktorá prestavuje 10 násobok dohodnutej ceny považoval za neprimeranú.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takto dojednaná zmluvná pokuta mala sankčný charakter bez toho, aby bolo zrejmé aké zabezpečenie záväzku chcel dopravca dosiahnuť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Priznaním takejto zmluvnej pokuty by vznikol hrubý nepomer medzi vzájomnými povinnosťami strán, ktoré medzi sebou vedú spor.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_94_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/94/2018",
+      "decision_date": "22.05.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1317200425.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

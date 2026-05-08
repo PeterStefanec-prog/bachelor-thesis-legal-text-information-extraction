@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8144,
+    "completion_tokens": 2454,
+    "cost_usd": 0.0347,
+    "latency_seconds": 9.42,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 3.300,- eur spolu s úrokom z omeškania a paušálnej náhrady 40,- eur titulom porušenia konkurenčnej doložky v zmluve o obchodnom zastúpení. Žalovaná mala po ukončení zmluvy pracovať pre konkurenčnú spoločnosť, čím porušila zmluvnú povinnosť.",
+      "verdict_summary": "Krajský súd odmietol odvolanie žalobcu proti výroku o povinnosti žalovanej zaplatiť 300,- eur s príslušenstvom a 40,- eur nákladov, a potvrdil rozsudok súdu prvej inštancie, ktorý znížil pôvodne uplatnenú zmluvnú pokutu z 3.300,- eur na 300,- eur.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "S porušením tejto povinnosti bola spojená pokuta 3.300,-eur splatná do 10. kalendárneho dňa odo dňa doručenia písomnej výzvy žalobcu na jej uhradenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.300,-eur",
+          "evidence": {
+            "quote": "S porušením tejto povinnosti bola spojená pokuta 3.300,-eur splatná do 10. kalendárneho dňa odo dňa doručenia písomnej výzvy žalobcu na jej uhradenie.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3300.0,
+            "evidence": {
+              "quote": "žalobca podal žalobu na zaplatenie sumy 3.300,- eur spolu s úrokom z omeškania 8,25 % ročne, ako aj paušálnej náhrady 40,- eur titulom uzavretia zmluvy o obchodnom zastúpení.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 300.0,
+            "evidence": {
+              "quote": "Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-. Vo zvyšku nárok žalobcu na zaplatenie 3.000,- zmluvnej pokuty zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,25 % ročne",
+          "evidence": {
+            "quote": "Okresný súd Humenné rozsudkom č. k. 11Cb/64/2014-253 rozhodol o povinnosti žalovanej zaplatiť žalobcovi sumu 300,- eur spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 300,- eur od 08.04.2014 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-. Vo zvyšku nárok žalobcu na zaplatenie 3.000,- zmluvnej pokuty zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie, viazaný právnym názorom odvolacieho súdu, posudzoval primeranosť výšky zmluvnej pokuty. Zistil, že žalovaná porušila konkurenčnú doložku, keď po ukončení zmluvy začala pracovať pre konkurenčnú spoločnosť. Avšak, provízia, ktorú žalovaná získala z tejto činnosti v rozhodnom období, bola len 74,- eur. Súd preto usúdil, že pôvodná výška pokuty 3.300,- eur je neprimerane vysoká vzhľadom na hodnotu a význam zabezpečenej povinnosti a profit žalovanej. Využil moderačné právo podľa § 545a Občianskeho zákonníka a § 301 Obchodného zákonníka a znížil zmluvnú pokutu na 300,- eur.",
+          "key_quotes": [
+            {
+              "quote": "Súd mal brať v úvahu prípadné moderovanie výšky zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Neprimerane vysokú zmluvnú pokutu môže súd znížiť s prihliadnutím na hodnotu a význam zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V danom stave, by snaha žalovanej si privyrobiť premietnutá do zisku 140,50 eur by znamenalo jej postih v rozsahu 3.300,-, čo nie je primerané.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Preto ani odvolací súd nevidí dôvod na to, aby menil pôvodný výrok rozsudku o povinnosti žalovanej zaplatiť zmluvnú pokutu len v rozsahu 300,- eur. Zmluvná pokuta 300,- eur znamená dosť výrazné upozornenie žalovanej na porušenie zmluvnej povinnosti, pričom prihliada aj na okolnosti sociálnej situácie žalovanej, ktorá si zmluvou o obchodnom zastúpení chcela len privyrobiť a nemala priamy úmysel poškodiť žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Konkurenčné doložky poskytujú určitú mieru ochrany a zachovávajú čistotu obchodného prostredia, ale je vždy potrebné zvážiť primeranosť a vyváženosť zmluvnej pokuty k porušenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V období 6 mesiacov, počas ktorých bola žalovaná viazaná konkurenčnou doložkou, získala žalovaná od spoločnosti Telervis províziu v rozsahu 74,- eur za 5 uzavretých zmlúv.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Preto odvolací súd nepovažoval konkurenčnú doložku za v rozpore s dobrými mravmi a poctivým obchodným stykom, ale je potrebné posúdiť primeranosť výšky zmluvnej pokuty 3.300,- eur oproti profitu, ktorý získala žalovaná ako províziu z dojednávaných zmlúv pre spoločnosť Telervis Plus, ktorá dosiahla výšku len 140,50 eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta 300,- eur znamená dosť výrazné upozornenie žalovanej na porušenie zmluvnej povinnosti, pričom prihliada aj na okolnosti sociálnej situácie žalovanej, ktorá si zmluvou o obchodnom zastúpení chcela len privyrobiť a nemala priamy úmysel poškodiť žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_2"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_2_2017_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/2/2017",
+      "decision_date": "14.11.2017",
+      "ecli": "ECLI:SK:KSPO:2017:8314205357.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

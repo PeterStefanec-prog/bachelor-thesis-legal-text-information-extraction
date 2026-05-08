@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8452,
+    "completion_tokens": 2292,
+    "cost_usd": 0.0335,
+    "latency_seconds": 9.95,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia istiny vo výške 648,94 eur s príslušenstvom titulom nárokov zo zmluvy o pripojení a zmluvnej pokuty, ktorú nadobudol postúpením pohľadávky od spoločnosti Telefonica Slovakia, s.r.o. Žalovaný mal porušiť Rámcovú zmluvu o poskytnutí osobitných podmienok pri poskytovaní elektronických komunikačných služieb tým, že neuhrádzal riadne a včas faktúry, čo viedlo k odstúpeniu od zmluvy a vyúčtovaniu zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorý žalobcu vo zvyšku zamietol, a priznal žalovanému nárok na náhradu trov odvolacieho konania vo výške 100%.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 1036257393",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "V prípade odstúpenia od Zmluvy podľa čl. 5.1. alebo v prípade jednostranného ukončenia tejto Zmluvy zo strany Účastníka s výnimkou odstúpenia Účastníka od Zmluvy podľa čl. 5.3. je Účastník povinný uhradiť Poskytovateľovi zmluvnú pokutu vo výške vypočítanej podľa nasledovného vzorca",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "Q =330€ + (2 x (DxMx0,235)) Pričom D znamená zostávajúca doba platnosti Zmluvy v zmysle čl. 4.1a/alebo čl. 4.2 M znamená Minimálny obrat; Q znamená zmluvná pokuta v EURO.",
+          "evidence": {
+            "quote": "Q =330€ + (2 x (DxMx0,235)) Pričom D znamená zostávajúca doba platnosti Zmluvy v zmysle čl. 4.1a/alebo čl. 4.2 M znamená Minimálny obrat; Q znamená zmluvná pokuta v EURO.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 402.3,
+            "evidence": {
+              "quote": "Navrhovateľ faktúrou č. 1036257393 vo výške 408,30 eur vyčíslil zmluvnú pokutu 402,30 eur a 6,- eur upomienka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "odvolací súd zhodne so súdom prvej inštancie za to, že žalobca nepreukázal dôvodnosť uplatneného nároku v časti zmluvnej pokuty, keď podľa § 37 Občianskeho zákonníka v spojení s ust. § 544 Občianskeho zákonníka táto nebola dojednaná platne, práve pre nedostatok určitosti a zrozumiteľnosti.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi 240,64 eur spolu s úrokmi z omeškania, vo zvyšku žalobcu zamietol.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "odvolací súd zhodne so súdom prvej inštancie za to, že žalobca nepreukázal dôvodnosť uplatneného nároku v časti zmluvnej pokuty, keď podľa § 37 Občianskeho zákonníka v spojení s ust. § 544 Občianskeho zákonníka táto nebola dojednaná platne, práve pre nedostatok určitosti a zrozumiteľnosti.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie, a následne aj odvolací súd, zamietol nárok na zmluvnú pokutu z dôvodu jej neurčitosti a nezrozumiteľnosti. Uviedol, že dohoda o zmluvnej pokute musí byť určitá a zrozumiteľná, inak je neplatná. Formulácia zmluvnej pokuty v zmluve o pripojení, ktorá odkazovala na desiatky povinností rôznej závažnosti a neumožňovala posúdiť, ktorá povinnosť je sankcionovaná, bola považovaná za neurčitú. Taktiež nebola zrejmá ani výška zmluvnej pokuty a spôsob jej výpočtu, čo znemožňovalo posúdenie primeranosti vo vzťahu k zabezpečenej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie má za to, že dojednanie zmluvnej pokuty v prípade porušenia zmluvných povinností s demonštratívnym výpočtom určitých povinností (najmä, nie však výlučne) je účastník povinný uhradiť zmluvnú pokutu v stanovenej výške, podmienku určitosti právneho úkonu nespĺňa.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zároveň pre svoju neurčitosť neumožňuje posúdenie primeranosti výšky zmluvnej pokuty vo vzťahu k zabezpečenej povinnosti.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "odvolací súd zhodne so súdom prvej inštancie za to, že žalobca nepreukázal dôvodnosť uplatneného nároku v časti zmluvnej pokuty, keď podľa § 37 Občianskeho zákonníka v spojení s ust. § 544 Občianskeho zákonníka táto nebola dojednaná platne, práve pre nedostatok určitosti a zrozumiteľnosti.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie v tejto súvislosti tiež správne vyhodnotil, že takéto neurčité formulácie neumožňujú posúdiť aj primeranosť výšky zmluvnej pokuty vo vzťahu zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie v tejto súvislosti tiež správne vyhodnotil, že takéto neurčité formulácie neumožňujú posúdiť aj primeranosť výšky zmluvnej pokuty vo vzťahu zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_2"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_187_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/187/2015",
+      "decision_date": "06.10.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1314214384.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26449,
+    "completion_tokens": 3161,
+    "cost_usd": 0.0977,
+    "latency_seconds": 71.33,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Prima banka Slovensko, a.s., sa domáhal zaplatenia sumy 25.018,98 EUR s príslušenstvom od žalovaného, Ingka Centres Slovensko s.r.o., z titulu nároku na vrátenie depozitu po zániku nájmu nebytových priestorov. Žalovaný si započítal pohľadávky voči depozitu, vrátane zmluvných pokút.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý žalobu žalobcu čiastočne zamietol a priznal žalovanému nárok na započítanie pohľadávok.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % x 12 mesiacov (dojednaná výška zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 72 dní trvania porušenia povinnosti",
+          "evidence": {
+            "quote": "0,05 % x 12 mesiacov (dojednaná výška zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 72 dní trvania porušenia povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 4469.77,
+            "evidence": {
+              "quote": "nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "zo dňa 20.06.2019. Žalovaný si uplatnil nárok na zaplatenie úrokov z omeškania s úhradou faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "K návrhu žalobcu, aby súd využil moderačné právo v zmysle ustanovenia § 301 Obchodného zákonníka a neprimeranú zmluvnú pokutu znížil súd uviedol, že v tomto prípade výška uplatnenej zmluvnej pokuty nie je neprimeraná.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zistil, že žalobca uzavrel nebytové priestory bez súhlasu prenajímateľa, čo bolo v rozpore so zmluvou. Zmluvná pokuta bola dojednaná vo výške 0,05 % denne z nájomného za m2 a bola vypočítaná za 72 dní porušenia. Súd uznal pokutu vo výške 4.469,77 EUR, pričom odmietol návrh na jej zníženie podľa § 301 Obchodného zákonníka, keďže ju nepovažoval za neprimeranú.",
+          "key_quotes": [
+            {
+              "quote": "nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "uplatnenie zmluvnej pokuty by bolo výkonom práva v rozpore so zásadou poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Predmetná zmluvná pokuta bola dojednaná za účelom zabezpečenia povinnosti žalobcu neuzatvoriť nebytové priestory bez súhlasu žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaným uplatnená zmluvná pokuta v danom prípade síce nie je v zanedbateľnej výške, avšak jej celková výška je dôsledkom dlhodobého porušovania zmluvnej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd vzhľadom na vyššie uvedené skutočnosti dospel k záveru, že nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "nedoplnenie depozitu po zvýšení minimálneho nájomného, platby za služby a marketingového poplatku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% (dojednaná sadzba zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 12 mesiacov x 90 dní trvania porušenia povinnosti",
+          "evidence": {
+            "quote": "0,05% (dojednaná sadzba zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 12 mesiacov x 90 dní trvania porušenia povinnosti",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 5587.2,
+            "evidence": {
+              "quote": "nájme nebytových priestorov vznikol žalovanému nárok na zaplatenie zmluvnej pokuty vo výške 5.587,20",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "zo dňa 20.06.2019. Žalovaný si uplatnil nárok na zaplatenie úrokov z omeškania s úhradou faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "nájme nebytových priestorov vznikol žalovanému nárok na zaplatenie zmluvnej pokuty vo výške 5.587,20",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd uznal nárok žalovaného na zmluvnú pokutu za nedoplnenie depozitu, ktorý bol dohodnutý na 0,05% denne z nájomného za m2. Pokuta bola vypočítaná za 90 dní porušenia povinnosti. Súd považoval pokutu za oprávnenú a neprimeranú výšku nenašiel.",
+          "key_quotes": [
+            {
+              "quote": "nájme nebytových priestorov vznikol žalovanému nárok na zaplatenie zmluvnej pokuty vo výške 5.587,20",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zo strany žalovaného sa jednalo výlučne o šikanózny výkon práva",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "depozit ako taký slúžil na zaistenie plnenia povinností právneho predchodcu žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "depozit ako taký slúžil na zaistenie plnenia povinností právneho predchodcu žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nedoplnenie depozitu po zvýšení minimálneho nájomného, platby za služby a marketingového poplatku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "depozit ako taký slúžil na zaistenie plnenia povinností právneho predchodcu žalobcu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 1362.53,
+            "evidence": {
+              "quote": "ktorý bližšie špecifikoval v podaní zo dňa 20.06.2019. Žalovaný si uplatnil nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry č. 540171150, faktúrou č. 540171349, faktúrou č. 540171523, faktúrou č. 540171722 a",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 8% ročne zo sumy 7.909,61 EUR od 01.09.2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "ktorý bližšie špecifikoval v podaní zo dňa 20.06.2019. Žalovaný si uplatnil nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry č. 540171150, faktúrou č. 540171349, faktúrou č. 540171523, faktúrou č. 540171722 a",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd uznal nárok žalovaného na zmluvnú pokutu za omeškanie s úhradou faktúr, pričom pokuta bola vypočítaná na základe omeškania s úhradou konkrétnych faktúr. Súd považoval pokutu za oprávnenú a priznal ju v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "ktorý bližšie špecifikoval v podaní zo dňa 20.06.2019. Žalovaný si uplatnil nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry č. 540171150, faktúrou č. 540171349, faktúrou č. 540171523, faktúrou č. 540171722 a",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_3.key_quote_0"
+      ],
+      "missing_fields": [
+        "contractual_penalties[2].rate_definition.value_raw",
+        "contractual_penalties[2].rate_definition.evidence.quote",
+        "contractual_penalties[2].amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed",
+        "pokuta_3.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_69_2020_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/69/2020",
+      "decision_date": "14.02.2023",
+      "ecli": "ECLI:SK:KSBA:2023:6117232511.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12700,
+    "completion_tokens": 1546,
+    "cost_usd": 0.0472,
+    "latency_seconds": 28.57,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca CSM - STAV s.r.o. sa domáhal zaplatenia sumy 1.975.000,- Sk so 14,25 % ročným úrokom z omeškania od 27. 10. 2010 do zaplatenia titulom zmluvnej pokuty. Žalobca tvrdil, že žalovaný Vojenské lesy a majetky SR neplnil zmluvné povinnosti podľa zmluvy o dielo č. 25/2003.",
+      "verdict_summary": "Krajský súd potvrdil rozhodnutie súdu prvého stupňa, ktorý žalobu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v bode 9.2 v treťom odstavci sa objednávateľ, t.j. žalovaný, zaviazal pri porušení záväzných povinností upravených v čl. 3.2 zmluvy o dielo zaplatiť za každé porušenie zmluvnej povinnosti 1.000,- Sk až do odstránenia závadného stavu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "1.000,- Sk až do odstránenia závadného stavu",
+          "evidence": {
+            "quote": "v bode 9.2 v treťom odstavci sa objednávateľ, t.j. žalovaný, zaviazal pri porušení záväzných povinností upravených v čl. 3.2 zmluvy o dielo zaplatiť za každé porušenie zmluvnej povinnosti 1.000,- Sk až do odstránenia závadného stavu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1975000,
+            "evidence": {
+              "quote": "Ide o 395 dní x 5 nesplnených zmluvných povinností po 1.000,- Sk, čo predstavuje 1.975.000,- Sk.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Krajský súd potvrdil rozhodnutie súdu prvého stupňa ako vecne správne, pokiaľ nárok žalobcu na zaplatenie zmluvnej pokuty zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": "14,25 % ročne",
+          "evidence": {
+            "quote": "žalobca žiada zaplatenie úroku z omeškania 14,25 % ročne od 27. 10. 2007.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Dojednanie platenia zmluvnej pokuty za porušenie povinností, o ktorých povinnostiach účastníci vedeli, že nemôžu byť splnené v stanovených lehotách, je dojednaním neplatným.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože zmluvné pokuty boli dojednané za povinnosti, ktoré žalovaný nemohol splniť v stanovených lehotách. Súd konštatoval, že tieto dojednania boli v rozpore s dobrými mravmi a poctivým obchodným stykom. Krajský súd potvrdil rozhodnutie súdu prvého stupňa, pričom sa stotožnil s jeho právnym názorom, že dojednania o zmluvnej pokute boli neplatné, pretože povinnosti nemohli byť splnené.",
+          "key_quotes": [
+            {
+              "quote": "Dojednanie platenia zmluvnej pokuty za porušenie povinností, o ktorých povinnostiach účastníci vedeli, že nemôžu byť splnené v stanovených lehotách, je dojednaním neplatným.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podľa názoru súdu prvého stupňa sankcionované povinnosti žalovaný nemohol plniť, ak tomu bránili aj predchádzajúce búracie stavebné práce v dohodnutých lehotách. Dojednanie platenia zmluvných pokút bolo v rozpore s dobrými mravmi a pravidlami poctivého obchodného styku, ktoré veľmi zvýhodňujú postavenie žalobcu, kde aj výška pokuty nie je primeraná významu a hodnote zabezpečovaných povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dojednanie platenia zmluvných pokút bolo v rozpore s dobrými mravmi a pravidlami poctivého obchodného styku, ktoré veľmi zvýhodňujú postavenie žalobcu, kde aj výška pokuty nie je primeraná významu a hodnote zabezpečovaných povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dojednanie platenia zmluvných pokút bolo v rozpore s dobrými mravmi a pravidlami poctivého obchodného styku, ktoré veľmi zvýhodňujú postavenie žalobcu, kde aj výška pokuty nie je primeraná významu a hodnote zabezpečovaných povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takéto dojednania platenia zmluvných pokút bolo dojednaním v rozpore s poctivým obchodným stykom, ak žalobca požaduje platenie zmluvnej pokuty pri vedomosti toho, že tieto zmluvné povinnosti nebudú nikdy splnené zo strany objednávateľa a žalobca tak bude mať vždy právo na platenie zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_83_2011_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/83/2011",
+      "decision_date": "17.01.2012",
+      "ecli": "ECLI:SK:KSPO:2012:8307211242.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

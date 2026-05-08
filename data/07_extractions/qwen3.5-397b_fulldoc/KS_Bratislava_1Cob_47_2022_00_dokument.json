@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 38209,
+    "completion_tokens": 2003,
+    "cost_usd": 0.0196,
+    "latency_seconds": 20.61,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 8.897,50 eur titulom zádržného na podklade Dohody o urovnaní, ktorú následne napadol pre neplatnosť z dôvodu nátlaku a absencie slobodnej vôle. Žalovaný namietal splatnosť pohľadávky a uplatnil kompenzačnú pohľadávku vo výške 19.716,50 eur, ktorá mala vzniknúť na základe zmluvnej pokuty za omeškanie s dodávkou diela.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorým bola žaloba zamietnutá, keďže súd dospel k záveru, že Dohoda o urovnaní je platná a nárok na zádržné nie je splatný kvôli neodstráneným vadám diela.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "kompenzačná pohľadávka vo výške 19.716,50 eur",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "nárok na zmluvnú pokutu vzniknutý omeškaním žalobcu s dodávkou a montážou elektroinštalácie na stavbe \"Detský domov Skalica Rekonštrukcia a nadstavba\"",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "19.716,50 eur",
+          "evidence": {
+            "quote": "je vlastníkom pohľadávky v sume 19.716,50 eur, ktorá vyplýva zo znenia pokonávky, konkrétne z čl. I bod I.3.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 19716.5,
+            "evidence": {
+              "quote": "Žalovaný ďalej vzniesol kompenzačnú pohľadávku voči žalobcovi, ktorá vyplýva zo znenia pokonávky, konkrétne z čl. I bod I.3.. Odstúpením od pokonávky sa pohľadávka v sume 19.716,50 eur, ktorá vznikla na základe zmluvy o postúpení pohľadávky stala znovu splatnou.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie žalobu žalobcu ako nedôvodnú zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "touto pohľadávkou mala byť pohľadávka, ktorej právnym základom mal byť nárok na zmluvnú pokutu vzniknutý omeškaním žalobcu s dodávkou a montážou elektroinštalácie na stavbe \"Detský domov Skalica Rekonštrukcia a nadstavba\", pričom existenciu tejto pokuty žalobca v priebehu konania opakovane poprel a to čo do dôvodu, ako aj čo do jej výšky.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že kompenzačná pohľadávka žalovaného vo výške 19.716,50 eur, ktorá mala predstavovať zmluvnú pokutu, je účelová a nemá oporu v zákone. Žalobca existenciu tejto pokuty a omeškania poprel s tým, že omeškanie nebolo spôsobené jeho konaním, ale nedostatkom súčinnosti zo strany žalovaného. Keďže súd zamietol žalobu žalobcu ako celok a potvrdil platnosť Dohody o urovnaní, nárok na túto konkrétnu sumu ako kompenzáciu nebol uspokojený v prospech žalovaného v rámci tohto konania, resp. súd vyhodnotil tvrdenia o nej ako nepreukázané.",
+          "key_quotes": [
+            {
+              "quote": "Súd tak dospel k záveru, že žaloba žalobcu je dôvodná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "touto pohľadávkou mala byť pohľadávka, ktorej právnym základom mal byť nárok na zmluvnú pokutu vzniknutý omeškaním žalobcu s dodávkou a montážou elektroinštalácie na stavbe \"Detský domov Skalica Rekonštrukcia a nadstavba\", pričom existenciu tejto pokuty žalobca v priebehu konania opakovane poprel",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "omeškanie žalobcu s plnením diela nebolo spôsobené žalobcom, ale práve nedostatkom súčinnosti zo strany žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Považoval ich za umelo vykonštruované, ktorých cieľom bolo zníženie dohodnutej ceny diela",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Penalty mentioned only as part of compensation objection, not as primary claim adjudicated separately with specific amount awarded.",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[0].associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_47_2022_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/47/2022",
+      "decision_date": "30.03.2023",
+      "ecli": "ECLI:SK:KSBA:2023:1215211088.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8762,
+    "completion_tokens": 2166,
+    "cost_usd": 0.0326,
+    "latency_seconds": 8.39,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 16 874,85 EUR s príslušenstvom od žalovaného, ktorá pozostávala z nájomného a zmluvných pokút za nevrátenie oceľových fliaš. Žalobca tvrdil, že žalovaný nevrátil individuálne určené fľaše s konkrétnymi čiarovými kódmi, zatiaľ čo žalovaný namietal, že vrátil rovnaký počet fliaš, len s inými čiarovými kódmi, čo bolo v súlade s ich dlhodobou obchodnou zvyklosťou.",
+      "verdict_summary": "Krajský súd v Prešove potvrdil rozsudok Okresného súdu Stará Ľubovňa, ktorý zamietol žalobu žalobcu o zaplatenie 16 874,85 EUR s príslušenstvom. Žalovaný má nárok na náhradu trov odvolacieho konania v rozsahu 100%.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Po odstúpení od zmluvy si žalobca uplatnil zmluvnú pokutu za nevrátenie predmetu nájmu, ktorú vyčíslil podľa článku 3.3 VOP.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "vo výške podľa cenníka MT platného v čase udelenia súhlasu nájomcu s VOP (podpis osobitnej zmluvy alebo dod. listu) - v cenníku uvedenú ako \"poplatok - vrátenie neoprávnenou osobou\".",
+          "evidence": {
+            "quote": "povinný uhradiť MT zmluvnú pokutu vo výške podľa cenníka MT platného v čase udelenia súhlasu nájomcu s VOP (podpis osobitnej zmluvy alebo dod. listu) - v cenníku uvedenú ako \"poplatok - vrátenie neoprávnenou osobou\".",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 16874.85,
+            "evidence": {
+              "quote": "žalobca domáhal voči žalovanému zaplatenia 16 874,85 EUR s prísl.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "napadnutým rozsudkom zamietol žalobu, ktorou sa žalobca domáhal voči žalovanému zaplatenia 16 874,85 EUR s prísl.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Predmetom sporu je nárok žalobcu na zaplatenie nájomného ZP po odstúpení od zmlúv a úroky z omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Keďže porušenie akejkoľvek povinnosti zo strany žalovaného nebolo preukázané, správne považoval nárok žalobcu na zaplatenie zmluvnej pokuty za nedôvodný.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie a odvolací súd zamietli žalobu, pretože žalobca nepreukázal porušenie zmluvných povinností zo strany žalovaného. Súdy dospeli k záveru, že oceľové fľaše boli druhovo určené veci, nie individuálne určené čiarovým kódom, a žalovaný vrátil rovnaký počet fliaš. Postup žalobcu pri uplatnení nároku bol považovaný za šikanózny, najmä vzhľadom na dlhodobý obchodný vzťah a zvyklosti medzi stranami.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie mal za to, že žalobca v konaní nepreukázal, ktorú konkrétnu povinnosť žalovaný porušil, čo je zákonným predpokladom pre priznanie zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Keďže porušenie akejkoľvek povinnosti zo strany žalovaného nebolo preukázané, správne považoval nárok žalobcu na zaplatenie zmluvnej pokuty za nedôvodný.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone práva za šikanózny a žalovaný nárok za nedôvodný, v dôsledku čoho žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvej inštancie citujúc ust. § 265 Obchodného zákonníka považoval postup žalobcu pri výkone práva za šikanózny a žalovaný nárok za nedôvodný, v dôsledku čoho žalobu zamietol.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zdôraznil, že žalobca si uplatňuje zaplatenie tak vysokej sumy bez toho, aby mu vznikla čo i len minimálna ujma.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Keďže žalovaný vrátil žalobcovi 30 kusov oceľových fliaš, v ktorých nakúpil od neho tovar, tak neporušil povinnosť obaly vrátiť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobcovi, v záujme ochrany svojich práv nič nebránilo vyšpecifikovať predmet nájmu aj v týchto zmluvách podrobnejšie, jasnejšie a zrozumiteľnejšie napríklad slovným spojením \"nájom oceľových fliaš označených konkrétnym čiarovým kódom\". Ak tak neučinil, musel si byť vedomý konania žalovaného, ktoré bolo ním praktizované v predchádzajúcom období trvania obchodnoprávneho vzťahu.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_5Cob_93_2016_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "5Cob/93/2016",
+      "decision_date": "26.04.2018",
+      "ecli": "ECLI:SK:KSPO:2018:8515204257.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

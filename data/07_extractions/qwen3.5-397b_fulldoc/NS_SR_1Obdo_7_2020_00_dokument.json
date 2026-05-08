@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7545,
+    "completion_tokens": 1907,
+    "cost_usd": 0.0074,
+    "latency_seconds": 26.71,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (Allianz - Slovenská poisťovňa, a.s.) sa domáhal zaplatenia sumy 5.113,19 € s príslušenstvom od žalovaného (obchodného zástupcu) na základe zmluvnej pokuty dojednanej v smernici pre reprezentantov, ktorá bola podľa názoru žalobcu súčasťou zmluvy o obchodnom zastúpení. Žalovaný namietal neplatnosť dojednania zmluvnej pokuty, keďže smernica nebola podpísaná oboma stranami.",
+      "verdict_summary": "Najvyšší súd dovolanie žalobcu odmietol a potvrdil rozhodnutia nižších súdov, ktoré žalobu zamietli pre neplatnosť dojednania zmluvnej pokuty z dôvodu nedodržania písomnej formy.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Zmluvná povinnosť žalovaného, pre porušenie ktorej sa žalobca domáha zaplatenia zmluvnej pokuty, je stanovená v bode 4.7 smernice pre reprezentantov v univerzálnej sieti 1/R/US/05 z 1.08.2005.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nešpecifikované v dostupnom texte",
+          "evidence": {
+            "quote": "pokiaľ v rámci zmluvy o obchodnom zastúpení dojednanie o zmluvnej pokute nie je obsiahnuté priamo v podpísanej zmluve, ale iba v smernici, hoci vyhlásenej za jej súčasť, zmluvnú pokutu nemožno považovať za platne písomne dojednanú",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 5113.19,
+            "evidence": {
+              "quote": "o zaplatenie 5.113,19 € s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Okresný súd Piešťany (ďalej aj \"súd prvej inštancie\") rozsudkom č. k. 6Cb/83/2008-448 z 1. apríla 2016 zamietol žalobu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Okresný súd Piešťany (ďalej aj \"súd prvej inštancie\") rozsudkom č. k. 6Cb/83/2008-448 z 1. apríla 2016 zamietol žalobu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "quote": "odvolací súd konštatoval, že pokiaľ v rámci zmluvy o obchodnom zastúpení dojednanie o zmluvnej pokute nie je obsiahnuté priamo v podpísanej zmluve, ale iba v smernici, hoci vyhlásenej za jej súčasť, zmluvnú pokutu nemožno považovať za platne písomne dojednanú",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že dojednanie o zmluvnej pokute nie je platné, pretože nebolo uzavreté v zákonom požadovanej písomnej forme. Hoci zmluva odkazovala na smernicu, samotná smernica nebola podpísaná oboma zmluvnými stranami, čo je nevyhnutné pre platnosť takéhoto dvojstranného právneho úkonu podľa § 544 ods. 2 Občianskeho zákonníka. Keďže dojednanie o zmluvnej pokute nebolo platne dojednané, nemohlo vzniknúť oprávnenie na jej zaplatenie, a preto bola žaloba zamietnutá ako nedôvodná.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu nemožno považovať za platne písomne dojednanú (§ 544 ods. 2 Občianskeho zákonníka, ktorý sa s poukazom na § 1 ods. 2 v spojení s § 300 až § 302 Obchodného zákonníka vzťahuje aj na obchodnoprávne vzťahy).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z neplatného zmluvného dojednania potom nemôže vzniknúť oprávnenie a ani povinnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "NS_SR_1Obdo_7_2020_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "1Obdo/7/2020",
+      "decision_date": "24.08.2020",
+      "ecli": "ECLI:SK:NSSR:2020:2106224053.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

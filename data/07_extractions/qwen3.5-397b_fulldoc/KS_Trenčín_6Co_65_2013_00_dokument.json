@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6946,
+    "completion_tokens": 1677,
+    "cost_usd": 0.0066,
+    "latency_seconds": 23.89,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia sumy 87,84 Eur, ktorú označil ako úrok z omeškania vzniknutý na základe zmluvnej pokuty dohodnutej za nedodržanie lehoty splatnosti faktúr za telekomunikačné služby. Odporkyňa a vedľajší účastník vzniesli námietku premlčania pohľadávky, keďže splatnosť faktúr bola v roku 2005 a návrh bol podaný až v roku 2011.",
+      "verdict_summary": "Súd zamietol návrh navrhovateľa ako nedôvodný v celom rozsahu z dôvodu premlčania práva. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie aj vo výroku o náhrade trov vedľajšieho účastníka.",
+      "contract_type": "telekom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "navrhovateľ a odporkyňa si v súlade s § 300 a nasl. Obchodného zákonníka dohodli zmluvnú pokutu za nedodržanie lehoty splatnosti faktúr",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne z dlžnej čiastky",
+          "evidence": {
+            "quote": "Zmluvné strany si ďalej dohodli úrok z omeškania vo výške 0,05 % denne z dlžnej čiastky pre prípad omeškania s úhradou splatnej dlžnej čiastky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 87.84,
+            "evidence": {
+              "quote": "domáhal zaplatenia 87,84 Eur, čo predstavuje úrok z omeškania",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "žalobný návrh ako nedôvodný v celom rozsahu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd nezskúmal vecnú stránku nároku ani výšku zmluvnej pokuty, pretože konštatoval premlčanie práva. Premlčacia doba bola trojročná a plynula od splatnosti faktúr v roku 2005, zatiaľ čo navrhovateľ uplatnil právo na súde až v roku 2011. Súd tiež odmietol argumentáciu navrhovateľa o uznaní dlhu, keďže listina nespĺňala zákonné náležitosti určitosti.",
+          "key_quotes": [
+            {
+              "quote": "Navrhovateľ uplatnil tvrdené právo na súde až dňa 24.10.2011, teda po uplynutí všeobecnej trojročnej premlčacej doby.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súdu teda nezostávalo iné ako konštatovať, že právo navrhovateľa je premlčané a nemožno ho - s prihliadnutím k námietke vedľajšieho účastníka na strane odporkyne - priznať",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Text explicitly labels the claimed amount as 'úrok z omeškania' despite referencing a 'zmluvná pokuta' agreement, creating ambiguity between interest and penalty."
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "associated_interest.rate_value",
+        "moderation_analysis.factors[*].evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_6Co_65_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "6Co/65/2013",
+      "decision_date": "26.02.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3111225477.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

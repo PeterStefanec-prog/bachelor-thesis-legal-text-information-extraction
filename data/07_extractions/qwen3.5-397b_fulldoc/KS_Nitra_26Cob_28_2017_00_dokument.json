@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7031,
+    "completion_tokens": 1670,
+    "cost_usd": 0.0066,
+    "latency_seconds": 24.11,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia neuhradených faktúr za vykonané montážne práce v Nemecku. Žalovaný namietal započítanie svojej pohľadávky vo výške 10.000 EUR titulom zmluvnej pokuty za porušenie zmluvnej povinnosti vykonávať práce výlučne prostredníctvom objednávateľa.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvostupňového súdu, ktorý žalobe vyhovel v plnom rozsahu a nezohľadnil námietku započítania zmluvnej pokuty, keďže žalovaný nepreukázal vznik nároku na túto pokutu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "v prípade, ak poskytovateľ poruší jeho povinnosti vyplývajúce z tejto zmluvy najmä tým, že začne vykonávať práce pre zmluvného partnera objednávateľa vo vlastnom mene a nie prostredníctvom objednávateľa, ktorý ho na výkon práce vyslal",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10.000,-- eur",
+          "evidence": {
+            "quote": "objednávateľ ho môže sankcionovať čiastkou 10.000,-- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "žalovaný reagujúc na výzvu žalobcu zo dňa 09.04.2015 započítal pohľadávku v celkovej výške 10.000,-- eur titulom porušenia povinnosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "žalovaný nepreukázal existenciu nároku na zaplatenie predmetnej zmluvnej pokuty a nespochybnil tak ani časť nároku na zaplatenie žalovanej pohľadávky",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "žalovaný neuniesol dôkazné bremeno ohľadne svojho skutkového tvrdenia, že žalobca porušil zmluvnú povinnosť, na porušenie ktorej malo byť právo na zaplatenie zmluvnej pokuty 10.000,-- eur podľa príslušnej zmluvy naviazané",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd zamietol uplatnenie zmluvnej pokuty pretože žalovaný nepreukázal, že došlo k porušeniu zmluvnej povinnosti zo strany žalobcu. Žalovaný tvrdil, že žalobca vykonával práce priamo pre nemeckú spoločnosť, čo malo byť v rozpore so zmluvou, avšak nepredložil žiadny dôkaz na podporu tohto tvrdenia. Keďže skutkový stav o porušení povinnosti nebol preukázaný, súd dospel k záveru, že nárok na zmluvnú pokutu nevznikol a námietku započítania nezohľadnil.",
+          "key_quotes": [
+            {
+              "quote": "žalovaný na preukázanie pravdivosti svojho skutkového tvrdenia neoznačil vôbec žiadny dôkaz",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "ide zo strany žalovaného o nepreukázanú obranu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný neuniesol dôkazné bremeno ohľadom svojej obrany",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded.value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_28_2017_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/28/2017",
+      "decision_date": "25.01.2018",
+      "ecli": "ECLI:SK:KSNR:2018:4315212254.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

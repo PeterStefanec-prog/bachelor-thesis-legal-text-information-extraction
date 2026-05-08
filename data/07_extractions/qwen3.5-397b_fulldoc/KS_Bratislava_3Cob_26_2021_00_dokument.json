@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14403,
+    "completion_tokens": 2340,
+    "cost_usd": 0.0111,
+    "latency_seconds": 33.36,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 15 % z celkovej ceny diela (22 802,26 EUR) z dôvodu omeškania žalovaného s úhradou zálohovej faktúry. Žalovaný namietal neprimeranosť výšky pokuty a žiadal jej moderáciu.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý znížil (moderoval) priznanú zmluvnú pokutu na sumu 1 508,18 EUR a vo zvyšku žalobu zamietol."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "S prihliadnutím na uvedené znížil žalobcom uplatnenú zmluvnú pokutu na sumu 1.508,18 EUR, ktorú považoval za primeranú a vo zvyšku nárok žalobcu zamietol"
+            },
+            "value": 1508.18
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca si žalobou uplatnil voči žalovanému zmluvnú pokutu podľa bodu 11.4 zmluvy vo výške 15% z ceny diela, čo predstavuje sumu 580.500 Kč/ 22.802,26 EUR/"
+            },
+            "value": 22802.26
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "výška zmluvnej pokuty 22.802,26 EUR uplatnenej z dôvodu omeškania so zaplatením sumy 10.054,55 EUR je neprimeraná"
+            },
+            "value": 10054.55
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "súd uložil žalovanému povinnosť zaplatiť žalobcovi úrok z omeškania vo výške 8 % ročne, a to zo sumy 10.017,72 EUR počnúc 16.9.2017 do úhrady dňa 29.9.2017"
+          },
+          "rate_value": "8 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "pre prípad omeškania objednávateľa s úhradou faktúry alebo iného peňažného záväzku"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd po posúdení všetkých okolností prejednávanej veci dospel k záveru, že výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije."
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Priznanie zmluvnej pokuty podstatne prevyšujúcej právo, ktoré zabezpečuje, čo by viedlo k celkom neodôvodnenému majetkovému prospechu žalobcu a vo vzťahu k povinnému by bolo neúmerne prísnou a bezdôvodnou sankciou"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "úhrada zálohovej faktúry nebola nevyhnutnou podmienkou pre plnenie zmluvy (začatie vykonávania diela) žalobcom"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "nebolo preukázané ani tvrdené, že žalobcovi neuhradením časti zálohovej platby vo výške 10.054,55 EUR v lehote viac ako 30 dní odo dňa splatnosti vznikla škoda"
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "výška zmluvnej pokuty 22.802,26 EUR uplatnenej z dôvodu omeškania so zaplatením sumy 10.054,55 EUR je neprimeraná"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "doba omeškania vzhľadom k čiastočným úhradám realizovaným do úplného zaplatenia pohľadávky, ktoré omeškanie nemohlo mať pre žalobcu výrazne nepriaznivé ekonomické dôsledky"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "nebolo preukázané ani tvrdené, že žalobcovi neuhradením časti zálohovej platby vo výške 10.054,55 EUR v lehote viac ako 30 dní odo dňa splatnosti vznikla škoda"
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "súd sa nestotožnil s tvrdeniami žalobcu, že k faktickému ukončeniu zmluvy prišlo z dôvodu tvrdeného nezáujmu žalovaného o ďalšie plnenie zmluvy, napokon ako prvý vypracoval a doručil návrh dohody o ukončení zmluvy žalobca žalovanému"
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "negative"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "výška zmluvnej pokuty 22.802,26 EUR uplatnenej z dôvodu omeškania so zaplatením sumy 10.054,55 EUR je neprimeraná, nezodpovedá žiadnej z funkcií zmluvnej pokuty"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "súd sa javilo ako primerané znížiť jej výšku až do sumy vyčíslenej v dohodnutej výške zo sumy, ktorej nezaplatenie riadne a včas a zároveň v omeškaní viac ako 30 dní je dôvodom jej uplatnenia, t.j vo výške 15% z omeškanej sumy 10.054,53 EUR"
+            }
+          ],
+          "legal_reasoning_summary": "Súd aplikoval § 301 Obchodného zákonníka a dospel k záveru, že pôvodne uplatnená pokuta vo výške 15 % z celkovej ceny diela je neprimeraná vzhľadom na skutočnú výšku omeškania (cca 10 054 EUR) a absenciu preukázanej škody. Súd zohľadnil, že išlo o zálohovú platbu, ktorá nebola nevyhnutnou podmienkou začatia prác, a že zmluva bola fakticky ukončená dohodou strán pre nemožnosť pokračovať v projekte. Výška pokuty bola znížená na 15 % z neuhradenej časti zálohy, ktorá meškala viac ako 30 dní, čo predstavuje sumu 1 508,18 EUR."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Žalobca si žalobou uplatnil voči žalovanému zmluvnú pokutu podľa bodu 11.4 zmluvy vo výške 15% z ceny diela"
+          },
+          "type": "percent_jednorazovo",
+          "value_raw": "15% z ceny diela"
+        },
+        "related_claim_ref": "faktúra č. 20170001"
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_26_2021_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/26/2021",
+      "decision_date": "28.09.2022",
+      "ecli": "ECLI:SK:KSBA:2022:6119337417.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

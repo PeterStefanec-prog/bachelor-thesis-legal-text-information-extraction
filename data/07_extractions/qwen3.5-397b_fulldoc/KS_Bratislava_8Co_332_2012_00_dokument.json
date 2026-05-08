@@ -1,0 +1,186 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6912,
+    "completion_tokens": 1491,
+    "cost_usd": 0.0062,
+    "latency_seconds": 15.39,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovatelia sa domáhali zaplatenia zmluvnej pokuty za omeškanie s dokončením výstavby rodinného domu podľa zmluvy o dielo. Súd prvého stupňa čiastočne vyhovel návrhu a priznal pokutu za 115 dní omeškania, odporca sa odvolal s námietkou neprimeranosti výšky pokuty.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v napadnutej časti a vrátil vec na ďalšie konanie pre nepreskúmateľnosť rozhodnutia a nevykonateľnosť výroku týkajúceho sa viacero navrhovateľov.",
+      "contract_type": "dielo",
+      "relationship_type": "unknown"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "odporca sa dostal s termínom dokončenia diela do omeškania 115 dní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% z ceny diela",
+          "evidence": {
+            "quote": "priznal zmluvnú pokutu 0,05% z ceny diela vo výške XXXXX,XX I.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9% ročne zo sumy X.XXX,- I.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvého stupňa v napadnutej časti zrušujea vec mu v tejto časti vracia na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd nezaujal stanovisko k vecnej správnosti priznania zmluvnej pokuty ani k jej primeranosti, keďže rozhodnutie súdu prvého stupňa zrušil pre procesnú vadu. Súd prvého stupňa síce vypočítal pokutu ako súčin počtu dní omeškania a denného percenta z ceny diela, no odvolací súd tento výpočet neskúmal. Vec bola vrátená na doplnenie konania kvôli nejasnostiam vo výroku týkajúcich sa viacero navrhovateľov.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta tak predstavuje 115 x 42,60 = XXXX,- I.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "výrok rozsudku súdu prvého stupňa, ktorým navrhovateľovi priznal žalovanú istinu spolu s úrokom z omeškania, je nevykonateľný",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "amounts_redacted_in_source_text",
+        "case_returned_for_retrial_no_merits_decision",
+        "EVIDENCE_TRUNCATED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_8Co_332_2012_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "8Co/332/2012",
+      "decision_date": "29.11.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1111201797.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

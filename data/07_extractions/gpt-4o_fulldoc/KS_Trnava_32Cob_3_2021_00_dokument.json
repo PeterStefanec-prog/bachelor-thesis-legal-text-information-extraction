@@ -1,0 +1,310 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 15347,
+    "completion_tokens": 2562,
+    "cost_usd": 0.064,
+    "latency_seconds": 39.92,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca CWS-boco Slovensko, s.r.o. požadoval od žalovaného Denisa Lopoura zaplatenie zmluvných pokút za porušenie zmluvných povinností vyplývajúcich z abonentnej zmluvy a zmluvy o servisnej službe. Žalobca tvrdil, že žalovaný neuhradil faktúry za poskytnuté služby, čím došlo k porušeniu zmluvy.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý znížil výšku zmluvných pokút a priznal žalobcovi len časť požadovanej sumy.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "191117259",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 429.44,
+            "evidence": {
+              "quote": "Výška zmluvnej pokuty za \"odmietnutie poskytovania služby\" podľa abonentnej zmluvy by tak predstavovala (32 x 26,84 €) x 50 % = 858,88 € x 50 % = 429,44 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 26.84,
+            "evidence": {
+              "quote": "výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac. Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške 26,84 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "základe toho súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi dohodnutý úrok z omeškania vo výške 0,1 % denne z jednotlivých fakturovaných",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie priznal žalobcovi nárok na zmluvné pokuty vo výške 72,91 € a vo zvyšnej časti zmluvnej pokuty žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že žalovaný neuhradil dve faktúry, čím došlo k porušeniu zmluvy. Zmluvné pokuty boli dohodnuté ako 50 % zo súčtu cien mesačného paušálu za každý mesiac. Súd však zistil, že výška pokút je neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti, a preto ich znížil. Súd priznal žalobcovi pokuty len za obdobie od porušenia povinnosti do účinkov odstúpenia od zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "a význam zabezpečovanej povinnosti. Účel zmluvnej pokuty spočíva najmä vo vyhrážke citeľnou majetkovou sankciou voči dlžníkovi v prípade nesplnenia jeho povinnosti zo záväzkového",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "však premrštenú stimulačnú výšku. Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvné pokuty, uplatňované žalobcom vo výške 544,64 € (429,44 € + 115,20 €), ktoré vznikli v dôsledku omeškania žalovaného so zaplatením sumy 81,70 €",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný svoje záväzky nesplnil, takže \"odmietol poskytovanie služby\"",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca dokonca v dobrej viere voči svojim obchodným partnerom znížil výšku predmetných zmluvných pokút na úroveň 50 % potenciálnych škôd",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "191117260",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 115.2,
+            "evidence": {
+              "quote": "podľa zmluvy o servisnej službe (32 x 3,60 € x 1 rohož x 2 výmeny) x 50 % = 230,40 € x 50 % = 115,20 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 3.6,
+            "evidence": {
+              "quote": "(apríl a máj 2019), pričom výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac. Mesačný paušál podľa abonentnej zmluvy bol dohodnutý vo výške",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "základe toho súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi dohodnutý úrok z omeškania vo výške 0,1 % denne z jednotlivých fakturovaných",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie priznal žalobcovi nárok na zmluvné pokuty vo výške 72,91 € a vo zvyšnej časti zmluvnej pokuty žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že žalovaný neuhradil dve faktúry, čím došlo k porušeniu zmluvy. Zmluvné pokuty boli dohodnuté ako 50 % zo súčtu cien mesačného paušálu za každý mesiac. Súd však zistil, že výška pokút je neprimeraná vzhľadom na hodnotu a význam zabezpečovanej povinnosti, a preto ich znížil. Súd priznal žalobcovi pokuty len za obdobie od porušenia povinnosti do účinkov odstúpenia od zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "nárok na obe zmluvné pokuty vznikal vtedy, keď sa žalovaný dostal do omeškania so zaplatením dvoch faktúr.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "a význam zabezpečovanej povinnosti. Účel zmluvnej pokuty spočíva najmä vo vyhrážke citeľnou majetkovou sankciou voči dlžníkovi v prípade nesplnenia jeho povinnosti zo záväzkového",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "však premrštenú stimulačnú výšku. Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvné pokuty, uplatňované žalobcom vo výške 544,64 € (429,44 € + 115,20 €), ktoré vznikli v dôsledku omeškania žalovaného so zaplatením sumy 81,70 €",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný svoje záväzky nesplnil, takže \"odmietol poskytovanie služby\"",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca dokonca v dobrej viere voči svojim obchodným partnerom znížil výšku predmetných zmluvných pokút na úroveň 50 % potenciálnych škôd",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.vyska_skody",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.vyska_skody"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[1].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_3_2021_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/3/2021",
+      "decision_date": "28.06.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

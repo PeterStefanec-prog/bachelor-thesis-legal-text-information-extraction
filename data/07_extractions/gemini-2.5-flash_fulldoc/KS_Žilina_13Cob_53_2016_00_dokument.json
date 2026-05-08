@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12921,
+    "completion_tokens": 2344,
+    "cost_usd": 0.0396,
+    "latency_seconds": 9.2,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úroku z omeškania z nezaplatenej kúpnej ceny za dodávky rafinérskych výrobkov. Žalovaný kúpnu cenu zaplatil po začatí konania, ale žalobca trval na zaplatení zmluvnej pokuty a úrokov z omeškania.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý zaviazal žalovaného zaplatiť zmluvnú pokutu vo výške 113.142,61 Kč a úroky z omeškania v rôznych sadzbách a sumách, ako aj trovy prvostupňového konania.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 540031",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade omeškania kupujúceho so zaplatením kúpnej ceny tovaru je predávajúci oprávnený požadovať od kupujúceho zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne z dlžnej čiastky",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05% dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "CZK",
+          "secured_principal": {
+            "value": 204968.5,
+            "evidence": {
+              "quote": "zaplatiť dlžnú kúpnu cenu 204.968,50 Kč",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "zaplatiť žalobcovi zmluvnú pokutu vo výške 0,05 % denne zo sumy 204.968,50 Kč od 1.2.2010 do 8.2.2013 vo výške 113.142,61 Kč",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 113142.61,
+            "evidence": {
+              "quote": "zaplatiť žalobcovi zmluvnú pokutu vo výške 0,05 % denne zo sumy 204.968,50 Kč od 1.2.2010 do 8.2.2013 vo výške 113.142,61 Kč",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne, 8,5 % ročne, 8,05 % ročne",
+          "evidence": {
+            "quote": "priznal žalobcovi tiež úrok z omeškania v sadzbách vyplývajúcich z úpravy § 369 ods. 1 Obchodního zákonníka, v spojení s § 517 ods. 2 Občanského zákonníka a § 1 Nariadenia vlády ČR č. 163/2005 Zb.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalovaný vo vzťahu k uplatnenej zmluvnej pokute nenavrhol použitie moderačného oprávnenia podľa § 301 Obchodného zákonníka a za absencie takejto dispozície zo strany žalovaného okresný súd nevidel priestor pre aplikáciu svojho moderačného oprávnenia. Napriek tomu okresný súd uviedol, že zmluvnú pokutu nepovažuje za neprimeranú",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd priznal zmluvnú pokutu v plnej výške, pretože žalovaný nenavrhol použitie moderačného oprávnenia a súd ju nepovažoval za neprimeranú. Krajský súd potvrdil rozhodnutie okresného súdu, pričom sa stotožnil s ustálením okamihu vzniku omeškania a odmietol námietky žalovaného týkajúce sa neprimeranosti pokuty a duplicity s úrokom z omeškania.",
+          "key_quotes": [
+            {
+              "quote": "Žalovaný vo vzťahu k uplatnenej zmluvnej pokute nenavrhol použitie moderačného oprávnenia podľa § 301 Obchodného zákonníka a za absencie takejto dispozície zo strany žalovaného okresný súd nevidel priestor pre aplikáciu svojho moderačného oprávnenia.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Názor okresného súdu o primeranosti zmluvnej pokuty považoval žalovaný za formalistický a zmluvnú pokutu za neprimeranú. Okresný súd svoj názor o jej primeranosti nepodložil žiadnym konkrétnym argumentom a ani poukázaním na zákonné ustanovenie a jeho všeobecné konštatovanie je nepreskúmateľné.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalobca je tak názoru, že dojednaná zmluvná pokuta 0,05% denne z dlžnej sumy je primeraná. Využitie moderačného práva súdom je zásahom do zmluvnej voľnosti účastníkov a jeho použitie je namieste len v odôvodnených prípadoch, ak sa výška pokuty javí ako neprimerane vysoká.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "podľa ktorého je zmluvná pokuta vo výške 0,5% denne posudzovaná ako platné dojednanie, ktoré je v súlade s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvnú pokutu nepovažuje za neprimeranú predovšetkým vzhľadom na význam zabezpečovanej povinnosti, riadne a včasné splnenie ktorej bolo zmluvnou pokutou zabezpečené",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Účelom zmluvnej pokuty ako paušalizovanej náhrady škody je donútiť druhú stranu k riadnemu plneniu povinností pod hrozbou majetkovej sankcie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta má byť primeraná povinnosti, ktorú zabezpečuje.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný po začatí konania dňa 8.2.2013 dlžnú kúpnu cenu zaplatil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Okresný súd tak žalobcovi priznal jednak nárok na zmluvnú pokutu vo výške 18,25 % ročne a za to isté porušenie priznal úrok z omeškania vo výške 8,75 %, resp. 8,5% a 8,05% ročne. Okresný súd mal posudzovať výšku zmluvnej pokuty v kontexte paralelného nároku na úrok z omeškania",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_53_2016_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/53/2016",
+      "decision_date": "29.06.2016",
+      "ecli": "ECLI:SK:KSZA:2016:5113203768.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

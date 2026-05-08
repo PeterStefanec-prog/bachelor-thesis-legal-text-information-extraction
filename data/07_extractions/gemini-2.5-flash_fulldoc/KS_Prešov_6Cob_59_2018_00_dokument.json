@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8217,
+    "completion_tokens": 2274,
+    "cost_usd": 0.033,
+    "latency_seconds": 9.58,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 1.215,- eur s príslušenstvom od žalovaného na základe zmluvy o dielo, ktorú žalovaný porušil nedodržaním termínu dodania internetovej stránky. Žalovaný navrhoval zníženie zmluvnej pokuty na 1% z ceny diela za každý deň omeškania.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie v časti uloženia povinnosti žalovanému zaplatiť žalobcovi sumu 600,- eur s úrokom z omeškania a v prevyšujúcej časti zmenil rozsudok tak, že žalobu čo do sumy 300,- eur spolu s úrokom z omeškania zamietol. Žiadna zo sporových strán nemá právo na náhradu trov konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade nedodržania termínu poskytnutia predmetu tejto zmluvy sa zhotoviteľ zaviazal zaplatiť objednávateľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "5 % za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 5 % za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 300.0,
+            "evidence": {
+              "quote": "je potrebné vychádzať zo spodnej hranice dojednanej ceny diela (300,- až 400,- eur za dané dielo), t. j. zo sumy 300,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1215.0,
+            "evidence": {
+              "quote": "v prevyšujúcej časti uplatneného nároku na zaplatenie zmluvnej pokuty vo výške 1.215,- eur s príslušenstvom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 600.0,
+            "evidence": {
+              "quote": "zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške 600,- eur spolu s úrokom z omeškania z tejto sumy od 26.5.2015 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,05 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 8,05 % ročne zo sumy 600,- eur od 26.5.2015 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "v zmysle § 301 Obchodného zákonníka neprimerane vysokú zmluvnú pokutu znížil a v prevyšujúcej časti žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie znížil zmluvnú pokutu podľa § 301 Obchodného zákonníka, pretože ju považoval za neprimerane vysokú a v rozpore so zásadou poctivého obchodného styku. Odvolací súd potvrdil moderáciu, pričom za primeranú výšku považoval dvojnásobok spodnej hranice ceny diela (2 x 300 EUR = 600 EUR). Zohľadnil aj správanie žalovaného, ktorý opakovane ubezpečoval o vykonaní diela, ako aj skutočnosť, že zmluvná pokuta bola dojednaná recipročne a na jej koncipovaní sa podieľal aj žalovaný.",
+          "key_quotes": [
+            {
+              "quote": "v prevyšujúcej časti uplatneného nároku na zaplatenie zmluvnej pokuty vo výške 1.215,- eur s príslušenstvom je žaloba v rozpore so zásadou poctivého obchodného styku, a teda v zmysle § 301 Obchodného zákonníka neprimerane vysokú zmluvnú pokutu znížil a v prevyšujúcej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "za primeranú odvolací súd považoval zmluvnú pokutu vo výške dvojnásobku spodnej hranice ceny diela, ktorú zabezpečovala, t. j. sumu 600,- eur.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zároveň odvolací súd nepovažoval za opodstatnené znížiť zmluvnú pokutu na sumu rovnajúcu sa celkovej hodnote diela, resp. na sumu, ktorú po spresnení požadoval žalovaný (243,- eur), keď okrem hodnoty zabezpečovanej povinnosti súd zohľadnil aj správanie žalovaného, ktorý opakovane ubezpečoval žalobcu, že toto dielo vykoná požadujúc odklad termínu jeho dodania bez toho, aby tak ani v dodatočne poskytnutej lehote, resp. ani po takto poskytnutej lehote toto urobil, ako aj tú skutočnosť, že táto zmluvná pokuta bola dojednaná recipročne, t. j. zmluvnú pokutu by musel zaplatiť v prípade porušenia povinnosti aj žalobca ako objednávateľ diela. Zároveň odvolací súd zohľadnil, že na koncipovaní, resp. zapracovaní zmluvnej pokuty do zmluvy spolu pôsobil aj žalovaný, tak ako to nepochybne vyplýva z jeho účastníckej výpovede na pojednávaní",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "v rozpore so zásadou poctivého obchodného styku, a teda v zmysle § 301 Obchodného zákonníka neprimerane vysokú zmluvnú pokutu znížil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "neprimeranej výške zmluvnej pokuty v pomere k hodnote zabezpečovanej povinnosti z toho vyplývajúci rozpor s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "súd zohľadnil aj správanie žalovaného, ktorý opakovane ubezpečoval žalobcu, že toto dielo vykoná požadujúc odklad termínu jeho dodania bez toho, aby tak ani v dodatočne poskytnutej lehote, resp. ani po takto poskytnutej lehote toto urobil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_6Cob_59_2018_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "6Cob/59/2018",
+      "decision_date": "16.07.2019",
+      "ecli": "ECLI:SK:KSPO:2019:8115221115.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

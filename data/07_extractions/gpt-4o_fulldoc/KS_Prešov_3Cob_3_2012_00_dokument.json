@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9184,
+    "completion_tokens": 1062,
+    "cost_usd": 0.0336,
+    "latency_seconds": 7.82,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca EOS KSI Slovensko, s.r.o. sa domáhal zaplatenia sumy 978,28 eur vrátane zmluvnej pokuty za porušenie zmluvných povinností zo strany žalovaného. Žalobca tvrdil, že žalovaný nesplácal úver podľa zmluvy o revolvingovom úvere č. 1126873485.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý zamietol návrh na zaplatenie zmluvnej pokuty vo výške 26,56 eur.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "20 % z dlžnej sumy",
+          "evidence": {
+            "quote": "zmluvnú pokutu za omeškanie so splácaním úveru vo výške 20 % z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 641.96,
+            "evidence": {
+              "quote": "Dlžná suma vo výške 849,88 eur pozostávala z istiny vo výške 641,96 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 128.39,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 128,39 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd nepriznal žalobcovi nárok na jej plnenie",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6,5% ročne",
+          "evidence": {
+            "quote": "zaviazal zaplatiť úroky z omeškania vo výške 7,05 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až jednu pätinu dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol nárok na zmluvnú pokutu, pretože ju považoval za neprimerane vysokú, predstavujúcu jednu pätinu dlžnej sumy. Odvolací súd potvrdil toto rozhodnutie, pričom zdôraznil, že zmluvná pokuta musí byť dohodnutá písomne, čo v tomto prípade nebolo dodržané. Zmluvná pokuta bola uvedená len v Obchodných podmienkach, ktoré neboli podpísané účastníkmi zmluvného vzťahu.",
+          "key_quotes": [
+            {
+              "quote": "dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až jednu pätinu dlžnej sumy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvná pokuta predstavuje zabezpečovací prostriedok",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 20 % je neprimerane vysoká, lebo predstavuje až jednu pätinu dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca na realizáciu prístupu k spravodlivosti využil takzvane neprimeraný prostriedok",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.zabezpecovacia_funkcia",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_3Cob_3_2012_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "3Cob/3/2012",
+      "decision_date": "10.04.2012",
+      "ecli": "ECLI:SK:KSPO:2012:8110220146.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

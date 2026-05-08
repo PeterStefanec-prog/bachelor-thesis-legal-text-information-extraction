@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6495,
+    "completion_tokens": 1904,
+    "cost_usd": 0.007,
+    "latency_seconds": 18.94,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úrokov z omeškania z titulu nezaplatenej faktúry za práce na rekonštrukcii hasičskej stanice. Žalovaný namietal vznik nároku na zmluvnú pokutu a úroky po zániku zmluvy odstúpením.",
+      "verdict_summary": "Odvolací súd pripustil späťvzatie žaloby žalobcom, zrušil rozsudok súdu prvej inštancie a konanie zastavil. Žiaden z účastníkov nemá právo na náhradu trov konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 200200703",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% z ceny faktúry za každý začatý deň omeškania",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,05% z ceny faktúry za každý začatý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 72697.7,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,05% denne zo sumy 72.697,70 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 13449.07,
+            "evidence": {
+              "quote": "súd prvej inštancie zaviazal žalovaného zaplatiť žalobcovi zmluvnú pokutu vo výške 0,05% denne zo sumy 72.697,70 € od 28.03.2013 do 02.04.2014, predstavujúci sumu 13.449,07 €",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8,75 % ročne zo sumy 72.697,70 € od 28.03.2013 do 02.04.2014, predstavujúci sumu 6.448,19 €",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave pripúšťa späťvzatie žaloby, zrušuje rozsudok Okresného súdu Bratislava I č.k. 31Cb/166/2013-120 zo dňa 7.3.2016 a konanie zastavuje.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie pôvodne priznal nárok na zmluvnú pokutu aj napriek zániku zmluvy odstúpením, keďže povinnosť zaplatiť pokutu vznikla pred odstúpením. Odvolací súd však vec neprejednal meritórne, keďže žalobca vzal žalobu späť a súd konanie zastavil, čím sa pôvodné rozhodnutie o priznaní pokuty zrušuje.",
+          "key_quotes": [
+            {
+              "quote": "Povinnosť zaplatiť zmluvnú pokutu, ktorá vznikla pred odstúpením od zmluvy zostáva zachovaná a oprávnená osoba môže svoj nárok uplatniť aj po zániku zmluvy v dôsledku odstúpenia.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "žalobca zobral žalobu v celom rozsahu späť a žalovaný sa negatívne nevyjadril k späťvzatiu žaloby, mal za to, že žalovaný so späťvzatím žaloby súhlasí",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta plní funkciu odškodňovaciu, teda ide o tzv. paušalizovanú náhradu škody zmluvnou pokutou zaistenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "k odstúpeniu od zmluvy došlo z dôvodu finančnej nedisciplinovanosti žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvej inštancie konštatoval, že je možný súbeh zmluvnej pokuty a úroku z omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca zobral žalobu v celom rozsahu späť",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "case_terminated_by_withdrawal",
+        "original_claimed_amount_not_explicit"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_344_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/344/2016",
+      "decision_date": "25.05.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1113217050.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

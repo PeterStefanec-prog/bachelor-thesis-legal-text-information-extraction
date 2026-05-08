@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 11098,
+      "completion_tokens": 528,
+      "cost_usd": 0.033,
+      "latency_seconds": 17.23,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 9571,
+      "completion_tokens": 853,
+      "cost_usd": 0.0325,
+      "latency_seconds": 24.72,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca METALFIN, s. r. o. požadoval zaplatenie zmluvnej pokuty vo výške 500 000 Eur za nedodanie tovaru podľa kúpnej zmluvy č. 2001-04-01. Tvrdil, že žalovaný Carmeuse Slovakia, s.r.o. porušil zmluvné povinnosti tým, že prestal dodávať tovar a dodával ho iným subjektom na územie Maďarska.",
+      "verdict_summary": "Najvyšší súd zamietol dovolanie žalobcu a potvrdil rozhodnutie odvolacieho súdu, ktorý zamietol žalobu v celom rozsahu pre neplatnosť dohody o zmluvnej pokute.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný prestal plniť záväzky, čím porušil jej ustanovenia",
+            "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_2"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500 000 eur",
+          "evidence": {
+            "quote": "zaviazal v prípade dodania tovaru na územie Maďarskej republiky inej osobe než žalobcovi zaplatiť rovnakú zmluvnú pokutu vo výške 500 000 eur",
+            "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_2"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 500000,
+            "evidence": {
+              "quote": "o zaplatenie 500 000 Eur s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Dovolanie žalobcu zamieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "nepatrnej časti úrokov z omeškania",
+            "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_58"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Odvolací súd uzavrel oproti súdu prvej inštancie, že dohoda o zmluvnej pokute je absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka, pretože výška zmluvnej pokuty je neprimerane vysoká",
+              "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_58"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd rozhodol, že dohoda o zmluvnej pokute je absolútne neplatná podľa § 39 Občianskeho zákonníka z dôvodu neprimeranej výšky pokuty. Súd konštatoval, že hodnota pohľadávky zabezpečovaná pokutou bola v príkrom rozpore s výškou dohodnutej pokuty. Najvyššia hodnota objednávky bola len 4 677,57 Eur, čo je výrazne menej ako 500 000 Eur pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd uzavrel oproti súdu prvej inštancie, že dohoda o zmluvnej pokute je absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka, pretože výška zmluvnej pokuty je neprimerane vysoká",
+              "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_58"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odvolací súd konštatoval, že jej dojednanie je v rozpore s dobrými mravmi, zásadami poctivého obchodného styku a že táto bola neprimerane vysoká",
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_19"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Priznanie zmluvnej pokuty mnohonásobne prevyšujúcej právo, ktoré zabezpečuje, by viedlo k celkom neodôvodnenému majetkovému prospechu oprávneného",
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_53"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "odvolací súd sa nezaoberal závermi znaleckého posudku Ing. C., ktorý konštatoval odhad ušlého zisku u žalobcu vo výške 941 805,91 Eur",
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_19"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "hodnota pohľadávky žalobcu zabezpečovaná dohodnutou zmluvnou pokutou (jednotlivé samostatné dodávky tovaru vo vopred neurčenej výške), je v príkrom rozpore s výškou dohodnutej zmluvnej pokuty",
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_5Obdo_14_2023_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "5Obdo/14/2023",
+      "decision_date": "25.04.2024",
+      "ecli": "ECLI:SK:NSSR:2024:7811201291.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

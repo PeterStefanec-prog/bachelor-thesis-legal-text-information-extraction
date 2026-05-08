@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7970,
+    "completion_tokens": 2322,
+    "cost_usd": 0.0332,
+    "latency_seconds": 8.8,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Mesto Pezinok žaloval žalovaného Development in Slovak Investments, s.r.o. o zaplatenie sumy 165.969,59 EUR, ktorá predstavovala zmluvnú pokutu za oneskorené dodanie diela. Žalovaný namietal, že neboli splnené zákonné podmienky pre vznik práva na zmluvnú pokutu a že zmluvná pokuta je neprimerane vysoká.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Pezinok, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 165.969,59 EUR. Žalobcovi nebola priznaná náhrada trov odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "priznaná suma predstavuje zmluvnú pokutu dohodnutú účastníkmi v dohode o zmluvnej pokute zo dňa 29.9.2005 za oneskorené dodanie diela až dňa 30. júla 2007",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "v konštantnej výške",
+          "evidence": {
+            "quote": "dohoda o zmluvnej pokute zo dňa 29.9.2005 obsahovala dojednanie o povinnosti zaplatiť zmluvnú pokutu v konštantnej výške pre prípad porušenia povinnosti žalovaného vybudovať a dokončiť dielo včas",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 165969.59,
+            "evidence": {
+              "quote": "o 165.969,59 EUR",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 165969.59,
+            "evidence": {
+              "quote": "súd prvého stupňa uložil žalovanému povinnosť zaplatiť žalobcovi sumu 165.969,59 EUR do 30 dní od právoplatnosti rozsudku.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "považoval súd prvého stupňa výšku dohodnutej zmluvnej pokuty za primeranú, a preto nevyhovel návrhu žalovaného na zníženie zmluvnej pokuty a nevyužil moderačné oprávnenie podľa § 301 Obch. zák.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa konštatoval, že zmluvná pokuta bola dohodnutá v zákonom vyžadovanej forme a povinnosť zaplatiť zmluvnú pokutu v obchodnoprávnych vzťahoch je objektívna. Pri posudzovaní primeranosti výšky zmluvnej pokuty a jej súladu s dobrými mravmi súd zohľadnil komplex záväzkových vzťahov, vrátane predaja pozemkov za výrazne neprimeranú trhovú hodnotu. Súd nepovažoval zmluvnú pokutu za odporujúcu dobrým mravom a poctivému obchodnému styku, keďže jej účelom bolo motivovať žalovaného k rýchlemu zhotoveniu prepojenia pre zlepšenie kvality života obyvateľov mesta. Odvolací súd sa stotožnil so závermi súdu prvého stupňa a potvrdil rozsudok.",
+          "key_quotes": [
+            {
+              "quote": "považoval súd prvého stupňa výšku dohodnutej zmluvnej pokuty za primeranú, a preto nevyhovel návrhu žalovaného na zníženie zmluvnej pokuty a nevyužil moderačné oprávnenie podľa § 301 Obch. zák.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "účelom hrozby sankciou zmluvnej pokuty bolo motivovať žalovaného zhotoviť čo najskôr prepojenie vzhľadom na potrebu funkčného prepojenia časti mesta s hlavnou komunikáciou a z toho vyplývajúcich podmienok kvality života obyvateľov mesta s hlavnou komunikáciou, zníženie hlučnosti a smogu ako dôsledku funkčného dopravného spojenia, ako aj zníženia rizika dopravných kolízií v dôsledku obmedzenej plynulosti cestnej premávky.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pri posudzovaní zmluvnej pokuty prihliadal na skutočnosť, že žalobca predal žalovanému pozemky v cene po 150,- Sk/m2, pričom z rozhodovacej činnosti je súdu známe, že táto suma je výrazne neprimeraná trhovej hodnote pozemkov",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "ani odvolací súd nepovažoval zmluvnú pokutu za odporujúcu dobrým mravom a poctivému obchodnému styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "účelom hrozby sankciou zmluvnej pokuty bolo motivovať žalovaného zhotoviť čo najskôr prepojenie vzhľadom na potrebu funkčného prepojenia časti mesta s hlavnou komunikáciou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvná pokuta je neprimerane vysoká k hodnote zabezpečovanej povinnosti, ktorá je vyčíslená sumou 386.572,- Sk, vychádzajúc z faktúry č. 0801070014 od spoločnosti Cesty Nitra a.s., takže ide o zabezpečenie 1300 % zabezpečovacej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný s nimi nemusel súhlasiť. Poukázal na to, že žalobca zmenil termín plnenia žalovaného, čím vyhovel jeho návrhu na predĺženie termínu zhotovenia diela, pričom následné prejavenie sa nedostatočnej lehoty či už v dôsledku objektívnych skutočností alebo v dôsledku subjektívnych dôvodov na strane žalovaného ako osoby odborne zdatnej, nemôže byť na ťarchu žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný nepreukázal, že by žalobca svoje postavenie zneužíval a vynucoval zavedenie zmluvnej pokuty do príslušných zmluvných dokumentov pod hrozbou neudelenia kolaudačného rozhodnutia na zrealizovanie diela prípadne iným spôsobom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_464_2012_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/464/2012",
+      "decision_date": "29.01.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1709203574.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

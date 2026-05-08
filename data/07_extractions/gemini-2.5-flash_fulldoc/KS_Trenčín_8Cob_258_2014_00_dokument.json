@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11424,
+    "completion_tokens": 2225,
+    "cost_usd": 0.0365,
+    "latency_seconds": 8.79,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty a úroku z omeškania z fakturovanej ceny za dielo, ktoré zhotovil pre žalovaného. Žalovaný sa dostal do omeškania s platbou faktúry za dielo, pričom argumentoval, že čakal na prostriedky z fondov EÚ.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalovaného zaviazal zaplatiť úrok z omeškania a zmluvnú pokutu vo výške 1 000 Eur, pričom zvyšnú časť žaloby zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 200100539",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "objednávateľ zaplatí zhotoviteľovi za omeškanie s úhradou faktúry zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne z fakturovanej ceny za každý deň omeškania",
+          "evidence": {
+            "quote": "objednávateľ zaplatí zhotoviteľovi za omeškanie s úhradou faktúry zmluvnú pokutu vo výške 0,05% z fakturovanej ceny za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 350734.12,
+            "evidence": {
+              "quote": "zo sumy 350.734,12 Eur za dobu od 25.02.2012 do 01.06.2012",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 17536.71,
+            "evidence": {
+              "quote": "v pomere k uplatnenej zmluvnej pokute v sume 17.536,71 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1000.0,
+            "evidence": {
+              "quote": "Preto znížil zmluvnú pokutu na sumu 1.000,-Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "žalobcovi preto patrí úrok z omeškania vo výške 9 % ročne zo sumy 350.734,12 Eur od 25.02.2012 do 31.05.2012 (97 dní), t.j. 8.365,87 Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto znížil zmluvnú pokutu na sumu 1.000,-Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie využil moderačné oprávnenie podľa § 301 Obchodného zákonníka, pretože pôvodne požadovaná zmluvná pokuta by bola neprimerane vysoká vzhľadom na pohľadávku a prípadnú škodu. Zohľadnil, že žalobcovi už patrí úrok z omeškania, omeškanie nebolo príliš dlhé (97 dní) a žalobcovi nevznikla reálna škoda, keďže jeho subdodávateľ bol chránený zmluvnými dojednaniami. Súd znížil zmluvnú pokutu na 1 000 Eur, aby zohľadnil význam sankcie a zároveň situáciu žalovaného, ktorý sa omeškal nedbanlivosťou a mal záujem zaplatiť.",
+          "key_quotes": [
+            {
+              "quote": "V prípade priznania zmluvnej pokuty tak, ako to požaduje žalobca, teda zo sumy 350.734,12 Eur za dobu od 25.02.2012 do 01.06.2012 (resp. do 30.05.2012), by žalobca získal neprimerane vysokú sankciu (majetkovú výhodu) za omeškanie žalovaného (17.010,60 Eur) vo vzťahu k pohľadávke, ale i vo vzťahu k prípadnej škode, ktorá mu mohla oneskorenou úhradou vzniknúť.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Preto znížil zmluvnú pokutu na sumu 1.000,-Eur, ktorá v prípade žalovaného je sumou, ktorá ho núti k zaplateniu dlžnej sumy riadne a včas a zároveň zohľadňuje i celkovú situáciu, za ktorej sa žalovaný do omeškania dostal (nedbanlivosťou a nie úmyselne).",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nepochybný je účel tohto dojednania- nútiť žalovaného k včasnému a riadnemu zaplateniu ceny za dielo.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše, žalobcovi včasným nezaplatením ani reálna škoda nevznikla, keďže svojmu subdodávateľovi uhrádzal cenu za dielo až v čase, kedy mal uhradenú cenu za dielo od žalovaného (v tomto prípade mal v zmluve s N., a.s., zmluvné dojednania, ktoré ho chránili).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "by žalobca získal neprimerane vysokú sankciu (majetkovú výhodu) za omeškanie žalovaného (17.010,60 Eur) vo vzťahu k pohľadávke",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zároveň zohľadňuje i celkovú situáciu, za ktorej sa žalovaný do omeškania dostal (nedbanlivosťou a nie úmyselne). Žalovaný mal záujem zaplatiť dlžnú sumu čo najskôr, ale reálne prostriedky na to nemal, keďže platby mal mať realizované z európskych fondov. Vybavil si úver, aby mohlo dôjsť k zaplateniu, nejde teda o subjekt, ktorý by sa úmyselne splneniu povinnosti vyhýbal.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Patrí mu už za dobu omeškania úrok z omeškania, ktorý nie je zanedbateľný a patrila by mu i zmluvná pokuta.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_258_2014_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/258/2014",
+      "decision_date": "26.10.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3512202820.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

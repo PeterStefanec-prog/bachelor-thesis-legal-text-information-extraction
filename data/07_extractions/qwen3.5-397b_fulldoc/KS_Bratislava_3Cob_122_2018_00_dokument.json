@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11448,
+    "completion_tokens": 2098,
+    "cost_usd": 0.0094,
+    "latency_seconds": 25.52,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 31.075,80 EUR od žalovaného za porušenie nájomnej zmluvy, konkrétne za uzatvorenie nájomnej zmluvy s konkurenčným subjektom (predajňa VEKRA) v tom istom obchodnom centre, hoci sa žalovaný zaviazal tak neurobiť. Žalovaný namietal neprimeranosť pokuty a žiadal jej zníženie podľa § 301 Obchodného zákonníka.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovanému uložený záväzok zaplatiť žalobcovi zmluvnú pokutu v plnej výške spolu s príslušenstvom. Súd odmietol návrh na zníženie pokuty ako nedôvodný.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Žalobca svoj nárok odôvodnil tým, že ako nájomca uzatvoril so žalovaným ako prenajímateľom dňa 23.6.2014 zmluvu o nájme nebytových priestorov... Napriek ustanoveniu čl. II bod 2 zmluvy došlo v apríli 2016 k otvoreniu predajne VEKRA v bezprostrednej blízkosti žalobcu v objekte SPK",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške šesťmesačného nájomného",
+          "evidence": {
+            "quote": "ak prenajímateľ poruší svoju povinnosť uvedenú v tomto bode zmluvy, vzniká nájomcovi právo uplatniť si voči prenajímateľovi nárok na zmluvnú pokutu vo výške šesťmesačného nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 31075.8,
+            "evidence": {
+              "quote": "žalobca vyzval žalovaného prípisom zo dňa 12.5.2016 na zaplatenie zmluvnej pokuty v celkovej výške 31.075,80 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 31075.8,
+            "evidence": {
+              "quote": "Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi istinu 31.075,80 EUR spolu s 9 % ročným úrokom z omeškania",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "preto je povinný zaplatiť aj zákonný úrok z omeškania vo výške 9% ročne zo sumy 31.075,80 EUR",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie však za daných skutkových okolností nepovažoval uplatnenú zmluvnú pokutu za neprimerane vysokú, nakoľko ide o vážne porušenie zmluvy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že došlo k vážnemu porušeniu zmluvy, keďže prenajímateľ umožnil vznik konkurenčnej predajne v tom istom objekte, čomu malo zabrániť zmluvné ustanovenie. Súd zdôraznil, že nie je rozhodujúce, či predaj konkurenčného tovaru tvoril len malé percento z obratu tretieho subjektu, dôležitý bol fakt, že k nemu dochádzalo. Úmyslom strán bolo predchádzať takejto situácii a žalovaný si bol vedomý právnych následkov pri podpise zmluvy. Návrh na zníženie pokuty podľa § 301 Obchodného zákonníka bol zamietnutý, keďže pokuta nebola považovaná za neprimerane vysokú vzhľadom na povahu porušenia.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie však za daných skutkových okolností nepovažoval uplatnenú zmluvnú pokutu za neprimerane vysokú, nakoľko ide o vážne porušenie zmluvy, ktoré mohlo mať za následok zníženie predaja interiérových dverí a zárubní na strane žalobcu v dôsledku vzniku konkurenčnej predajne v tom istom objekte SPK",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd má za to, že návrh žalovaného na zníženie pokuty je nedôvodný.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "logicky úmyslom zmluvných strán bolo uvedenej situácii predchádzať, inak by sa na článku II bod 2 zmluvy v citovanom znení pri podpise zmluvy nedohodli",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný požadoval uplatniť moderačné právo súdu znížiť jej výšku v zmysle § 301 Obchodného zákonníka, keďže mal za to, že uplatnená zmluvná pokuta je neprimerane vysoká vzhľadom k výške obratu spoločnosti Window holding SK a.s.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Keďže tak neurobil, musí znášať následky svojho konania, ktoré v konečnom dôsledku viedlo k porušeniu zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_TRUNCATED:pokuta_1.breach_type"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_122_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/122/2018",
+      "decision_date": "24.10.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1216210972.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 4721,
+      "completion_tokens": 957,
+      "cost_usd": 0.0155,
+      "latency_seconds": 7.14,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 5242,
+      "completion_tokens": 921,
+      "cost_usd": 0.0158,
+      "latency_seconds": 23.86,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia istiny 638,16 eura, ktorá pozostávala zo sumy za poskytnutie služieb, sankčného poplatku za upomienku a zmluvnej pokuty vo výške 500 eur. Súd prvého stupňa čiastočne zamietol žalobu v časti zmluvnej pokuty, ktorú považoval za neprimerane vysokú a znížil ju.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa v napadnutej časti týkajúcej sa rozhodnutia o trovách konania, pričom odporcovi nepriznal náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "zo sumy 500,- eur vo forme zmluvnej pokuty.",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500,- eur vo forme zmluvnej pokuty",
+          "evidence": {
+            "quote": "zo sumy 500,- eur vo forme zmluvnej pokuty.",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 500.0,
+            "evidence": {
+              "quote": "zo sumy 500,- eur vo forme zmluvnej pokuty.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_0"
+            }
+          },
+          "final_awarded": {
+            "value": 128.16,
+            "evidence": {
+              "quote": "k čiastočnému zamietnutiu žaloby výrokom II. rozsudku došlo v časti žalovanej zmluvnej pokuty v prevyšujúcej sumu 128,16 eura.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "uložil odporcovi povinnosť zaplatiť navrhovateľovi 266,32 eura s úrokom z omeškania vo výške 8,75 % ročne zo sumy 128,16 eura od 17.01.2013 do zaplatenia, zo sumy 10,- eur od 22.03.2013 do zaplatenia a zo sumy 128,16 eura od 23.04.2013 do zaplatenia",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z pôvodných 500 eur na 128,16 eura, pretože ju považoval za neprimerane vysokú. Odvolací súd potvrdil rozhodnutie súdu prvého stupňa, ale len v časti trov konania. Odvolací súd sa nestotožnil s názorom navrhovateľa, že rozhodnutie o výške plnenia záviselo od úvahy súdu podľa § 142 ods. 3 O.s.p., keďže výška zmluvnej pokuty bola známa z dohody účastníkov. Súd prvého stupňa uplatnil moderačné oprávnenie podľa § 301 ods. 2 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "Súd prvého stupňa sa v danom prípade nevysporiadaval s nezistiteľnosťou výškou uplatneného nároku (prípadne z jej zistiteľnosťou len s nepomernými ťažkosťami), naopak uplatňoval iba svoje moderačné oprávnenie vyplývajúce z § 301 ods. 2 Obchodného zákonníka voči výške zmluvnej pokuty, ktorej výška jasne vyplývala z dohody účastníkov konania.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_8"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+                "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_69_2014_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/69/2014",
+      "decision_date": "30.06.2014",
+      "ecli": "ECLI:SK:KSNR:2014:4110230531.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

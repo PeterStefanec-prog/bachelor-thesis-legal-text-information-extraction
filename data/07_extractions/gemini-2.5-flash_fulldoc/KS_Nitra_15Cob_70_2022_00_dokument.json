@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14492,
+    "completion_tokens": 2493,
+    "cost_usd": 0.043,
+    "latency_seconds": 9.75,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 33 360 eur s úrokom z omeškania, pričom tvrdil, že žalovaný nevrátil poskytnuté plnenie po odstúpení od zmluvy o investičnej spolupráci a budúcej spoločenskej zmluve. Žalobca považoval ustanovenie o zmluvnej pokute za neprimerané a v rozpore so zásadami poctivého obchodného styku.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 33 360 eur s 9 % úrokmi z omeškania ročne a priznal žalobcovi nárok na náhradu trov odvolacieho konania v rozsahu 100 %.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade ak investor poruší svoj záväzok dobudovať betonárske centrum v lehote vymedzenej v bode 3.3 tohto článku, nie je oprávnený nárokovať si ním vložené investície do betonárskeho centra a ani jednorazový majetkový vklad vymedzený v článku 3.1 zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nie je oprávnený nárokovať si ním vložené investície do betonárskeho centra a ani jednorazový majetkový vklad vymedzený v článku 3.1 zmluvy",
+          "evidence": {
+            "quote": "v prípade ak investor poruší svoj záväzok dobudovať betonárske centrum v lehote vymedzenej v bode 3.3 tohto článku, nie je oprávnený nárokovať si ním vložené investície do betonárskeho centra a ani jednorazový majetkový vklad vymedzený v článku 3.1 zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 33360,
+            "evidence": {
+              "quote": "žalobca domáhal voči žalovanému zaplatenia sumy 33 360 eur s úrokom z omeškania vo výške 9 % ročne od 29. 08. 2017 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 33360,
+            "evidence": {
+              "quote": "súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 33 360 eur s 9 % úrokmi z omeškania ročne od 29. 08. 2017 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 33 360 eur s 9 % úrokmi z omeškania ročne od 29. 08. 2017 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie bol toho názoru, že ponechanie vložených investícií možno považovať za dostatočnú a primeranú zmluvnú pokutu, na ktorú právnemu predchodcovi žalovaného vznikol nárok, a preto žalobcovi priznal uplatnenú sumu 33 360 eur titulom vrátenia neprimerane vysokej zmluvnej pokuty zodpovedajúcej časti majetkového vkladu žalobcu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie po zistení výšky investícií žalobcu do betonárky v sume 23 959 eur konštatoval dôvodnosť použitia moderačného práva. Ponechanie si majetkového vkladu vo výške 33 360 eur a vložených investícií v ustálenej výške 23 959 eur by predstavovalo neprimerane vysokú zmluvnú pokutu, ktorá by viedla k neodôvodnenému majetkovému prospechu žalovaného. Súd preto priznal žalobcovi sumu 33 360 eur ako vrátenie neprimerane vysokej zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Podľa žalobcu ustanovenie článku III. bod 3.8 zmluvy je podľa obsahu ustanovením o zmluvnej pokute podľa § 544 OZ, ktorá je s ohľadom na význam a hodnotu zabezpečovanej povinnosti neprimeraná a uplatňovanie práva na takúto zmluvnú pokutu by bolo výkonom práva v rozpore so zásadami poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Po ustálení výšky investícií žalobcom sumou 23 959 eur súd prvej inštancie bol toho názoru, že ponechanie vložených investícií možno považovať za dostatočnú a primeranú zmluvnú pokutu, na ktorú právnemu predchodcovi žalovaného vznikol nárok, a preto žalobcovi priznal uplatnenú sumu 33 360 eur titulom vrátenia neprimerane vysokej zmluvnej pokuty zodpovedajúcej časti majetkového vkladu žalobcu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Ponechanie si majetkového vkladu vo výške 33 360 eur a vložených investícii v súdom prvej inštancie ustálenej výške 23 959 eur podľa názoru odvolacieho súdu predstavuje neprimerane vysokú zmluvnú pokutu, ktorá by viedla k celkom neodôvodnenému majetkovému prospechu žalovaného a vo vzťahu k žalobcovi by bolo neúmerne prísnou a bezdôvodnou sankciou, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "uplatňovanie práva na takúto zmluvnú pokutu by bolo výkonom práva v rozpore so zásadami poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "vo vzťahu k žalobcovi by bolo neúmerne prísnou a bezdôvodnou sankciou, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaného majetková sféra odstúpením od zmluvy neutrpela žiadnu ujmu, keďže bol oprávnený ponechať si majetkový vklad aj investície žalobcu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Ponechanie si majetkového vkladu vo výške 33 360 eur a vložených investícii v súdom prvej inštancie ustálenej výške 23 959 eur podľa názoru odvolacieho súdu predstavuje neprimerane vysokú zmluvnú pokutu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_70_2022_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/70/2022",
+      "decision_date": "25.07.2023",
+      "ecli": "ECLI:SK:KSNR:2023:4117226891.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

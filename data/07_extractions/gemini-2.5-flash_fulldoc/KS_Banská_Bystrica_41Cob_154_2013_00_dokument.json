@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10371,
+    "completion_tokens": 1991,
+    "cost_usd": 0.0329,
+    "latency_seconds": 7.56,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil právo na zaplatenie zmluvnej pokuty za omeškanie žalovaného s dodaním tovaru podľa kúpnej zmluvy. Žalovaný namietal neplatnosť zmluvy, splnenie svojich povinností a zánik pohľadávky v dôsledku reštrukturalizácie.",
+      "verdict_summary": "Krajský súd zrušil rozsudok okresného súdu v časti, ktorou bola žaloba o zaplatenie 24.860,66 Eur s príslušenstvom zamietnutá, a vrátil vec okresnému súdu na ďalšie konanie.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvnou pokutou, ktorá bola dojednaná pre prípad omeškania žalovaného s dodaním tovaru podľa čl. X. kúpnej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "1 % z ceny tovaru za každý deň omeškania s dodávkou tovaru",
+          "evidence": {
+            "quote": "kupujúci má právo účtovať predávajúcemu zmluvnú pokutu vo výške 1 % z ceny tovaru za každý deň omeškania s dodávkou tovaru.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 725,
+            "evidence": {
+              "quote": "dohodnutú kúpnu cenu vo výške 725 Eur/ 1 m3",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 34634.12,
+            "evidence": {
+              "quote": "Žalobca si pôvodne uplatnil právo na zaplatenie zmluvnej pokuty za obdobie od 4.10.2008 do 3.10.2011, teda za 1460 dní omeškania, čo predstavuje sumu 34.634,12 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Z uvedených dôvodov odvolací súd napadnutý rozsudok zrušil a vec vrátil okresnému súdu na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Žalobca v súlade s platne uzavretou zmluvou a dispozitívnymi ustanoveniami Obchodného zákonníka by bol povinný platiť v prípade omeškania s úhradou kúpnej ceny úrok z omeškania vo výške stanovenej v § 369 Obchodného zákonníka.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Z uvedených dôvodov odvolací súd napadnutý rozsudok zrušil a vec vrátil okresnému súdu na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd zamietol žalobu o zaplatenie zmluvnej pokuty s odôvodnením, že dojednanie zmluvnej pokuty odporuje pravidlám poctivého obchodného styku, pretože bola jednostranne dohodnutá a žalobca sa nedomáhal plnenia dlhú dobu. Odvolací súd však s týmto názorom nesúhlasil, konštatoval, že žalobca nenesie zodpovednosť za porušenie zmluvných povinností žalovaným a že mu zo zákona ani zmluvy nevyplývajú povinnosti, ktoré mu okresný súd vytýkal. Odvolací súd zrušil rozsudok a vrátil vec na ďalšie konanie pre nedostatočné vysporiadanie sa s uplatneným právom.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvnú pokutu tak ako bola dohodnutá považoval za takú, ktorá odporuje pravidlám poctivého obchodného styku, pretože bola dohodnutá jednostranne, sankcionuje konanie len jednej zmluvnej strany a to žalovaného, pričom žalobcovi za jeho eventuálne porušenie povinnosti, žiadna sankcia nehrozí.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Výkon práva žalobcu, ktorý si uplatnil za časové obdobie 4 rokov dozadu zmluvnú pokutu ako sankciu nesplnenia povinností, napriek tomu, že a priori sa splnenia povinnosti a z neho vyplývajúcich práv žiadnym spôsobom nedomáhal, na doplatenie chýbajúceho plnenia žalovaného nevyzval a ani žalobu na plnenie nepodal, je podľa názoru okresného súdu výkonom práva, ktorý je v rozpore s pravidlami poctivého obchodného styku",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Skutočnosť, že žalobca na splnenie zmluvných povinností žalovaného nevyzval a nedomáhal sa plnenia, nemôže žalovaný využívať vo svoj prospech s cieľom zbaviť sa zmluvnej pokuty s poukazom na to, že ide o výkon práva v rozpore so zásadami poctivého obchodného styku.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_154_2013_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/154/2013",
+      "decision_date": "30.12.2013",
+      "ecli": "ECLI:SK:KSBB:2013:6612216782.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8868,
+    "completion_tokens": 1958,
+    "cost_usd": 0.0307,
+    "latency_seconds": 8.29,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil nárok na zaplatenie zmluvnej pokuty vo výške 25,- eur za každý deň omeškania pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela. Žalovaný namietal neprimeranosť zmluvnej pokuty, nesprávny procesný postup súdu a nedodanie diela bez vád.",
+      "verdict_summary": "Krajský súd v Prešove potvrdil rozsudok Okresného súdu Poprad, ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške 82.775,- eur. Žalobca má nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "25,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 25,- eur za každý deň omeškania po márnom uplynutí doby splatnosti príslušného daňového dokladu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 9616.52,
+            "evidence": {
+              "quote": "predmetom žaloby bolo iba zaplatenie 9.616,52 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 87775,
+            "evidence": {
+              "quote": "žalobca si uplatnil iba sumu 87.775,eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 82775,
+            "evidence": {
+              "quote": "zaviazal žalovaného na zaplatenie zmluvnej pokuty vo výške 82.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 9.616,52 eur s úrokom z omeškania vo výške 9 % ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie právne uzavrel, že zmluvná pokuta medzi stranami sporu dohodnutá a uvedená vo VOP žalobcu nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta vo výške 25,- eur denne je primeraná, vychádzajúc z právneho záveru Najvyššieho súdu SR, že primeranosť sa posudzuje v čase porušenia povinnosti. Súd zohľadnil značnú výšku neuhradenej ceny za dielo a správanie žalovaného, ktoré predlžovalo súdne konanie. Konštatoval, že konečná výška zmluvnej pokuty závisela od dĺžky omeškania žalovaného a že ide o vzťah medzi podnikateľmi, u ktorých sa predpokladá odbornosť a zodpovednosť.",
+          "key_quotes": [
+            {
+              "quote": "dohodnutá zmluvná pokuta je primeraná. Súd prvej inštancie vychádzal z toho, že zmluvnou pokutou bola zabezpečená hlavná povinnosť zmluvnej strany, a to zaplatenie ceny diela objednávateľom, pričom samotná výška neuhradenej ceny za dielo bola značná",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "samotné dojednanie výšky zmluvnej pokuty je potrebné posudzovať ku dňu porušenia zmluvnej povinnosti, ktorá je zabezpečená zmluvnou pokutou a nie s ohľadom na celkovú výšku zmluvnej pokuty, ktorej konečná výška závisela od doby, po ktorú bol žalovaný ako dlžník v omeškaní so zaplatením ceny za dielo.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvnou pokutou bola zabezpečená hlavná povinnosť zmluvnej strany, a to zaplatenie ceny diela objednávateľom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "samotná výška neuhradenej ceny za dielo bola značná s ohľadom na aktuálnu hospodársku krízu v rokoch 2009 - 2011.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "hodnotil s poukazom na hodnotu a význam zabezpečovanej povinnosti, pričom dospel k záveru, že dohodnutá zmluvná pokuta je primeraná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konaním žalovaného bol spor predlžovaný. Konaním žalovaného nastal stav, kedy bol povinný zaplatiť žalobcovi tak vysokú zmluvnú pokutu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca má právo popri nároku na úrok z omeškania aj právo na zaplatenie dohodnutej zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca vykonal všetko pre to, aby čím skôr bol predmetný spor ukončený",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_2Cob_28_2020_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "2Cob/28/2020",
+      "decision_date": "25.03.2021",
+      "ecli": "ECLI:SK:KSPO:2021:8719204171.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

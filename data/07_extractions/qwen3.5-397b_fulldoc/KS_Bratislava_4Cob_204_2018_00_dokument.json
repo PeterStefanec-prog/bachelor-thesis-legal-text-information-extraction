@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 24886,
+    "completion_tokens": 2066,
+    "cost_usd": 0.0145,
+    "latency_seconds": 24.13,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 20.000 eur od žalovaného z dôvodu porušenia informačnej povinnosti podľa zmluvy o spätnom získavaní DPH. Žalovaný neinformoval žalobcu o existencii svojej prevádzkarne v Rakúsku, čo viedlo k zamietnutiu žiadostí o vrátenie DPH a následnému nároku na vrátenie vopred financovaných súm.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi zmluvnú pokutu vo výške 20.000 eur spolu s príslušenstvom. Súd považoval dojednanú zmluvnú pokutu za platnú a primeranú významu zabezpečovanej povinnosti.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný porušil informačnú povinnosť, konkrétne informovať žalobcu o zriadenej prevádzke v Rakúsku, čo bolo aj dôvodom na zamietnutie žiadosti o vrátenie dane.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000,- eur",
+          "evidence": {
+            "quote": "v prípade porušenia ktorejkoľvek povinnosti sa klient (žalovaný) zaväzuje bez zbytočného odkladu po doručení výzvy \"zástupcu\" (žalobcu) zaplatiť zástupcovi za každé také porušenie zmluvnú pokutu vo výške 20.000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000,
+            "evidence": {
+              "quote": "žalobca sa žalobou zo dňa 4.4.2016 domáhal vydania súdneho rozhodnutia, ktorým by súd zaviazal žalovaného na zaplatenie istiny 20.000,- eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000,
+            "evidence": {
+              "quote": "súd žalobe žalobcu vyhovel a žalovaného zaviazal na zaplatenie istiny vo výške 20.000,- eur spolu s úrokom z omeškania",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,05 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9,05 % ročne zo sumy 20.000,- eur od 9.3.2016 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Podľa názoru súdu takto dojednaná zmluvná pokuta vzhľadom na hodnotu, ale najmä význam zabezpečovanej povinnosti je primeraná, a preto nie je potrebné použiť moderačné (zmierňovacie) právo súdu na zníženie takto dojednanej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že dojednanie o zmluvnej pokute je jasné, určité a zrozumiteľné, pričom jasne vymedzuje zabezpečovanú povinnosť (informačná povinnosť). Pri posudzovaní primeranosti súd prihliadal na hodnotu a najmä na význam zabezpečovanej povinnosti, keďže neoznámenie existencie prevádzkarne viedlo k zamietnutiu vrátenia DPH a nutnosti vymáhania vopred vyplatených súm. Súd zdôraznil, že zmluvná pokuta má v tomto prípade predovšetkým funkciu preventívnu a sankčnú, nie reparačnú, a vzniká aj bez preukázania škody.",
+          "key_quotes": [
+            {
+              "quote": "Dojednaná zmluvná pokuta je primeraná a sporové strany si ju platne dojednali pre prípad porušenia ktorejkoľvek zmluvnej povinnosti zo strany žalovaného.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podľa ust. § 544 ods. 1 OZ povinnosť zaplatiť zmluvnú pokutu vzniká aj vtedy, keď oprávnenému účastníkovi porušením povinnosti zabezpečenej zmluvnou pokutou nevznikne škoda.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "V tomto konkrétnom prípade mala zmluvná pokuta plniť predovšetkým funkciu preventívnu a sankčnú, nie reparačnú.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Preto nebolo povinnosťou žalobcu preukazovať, či mu porušením povinnosti zo strany žalovaného škoda vznikla alebo nie.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Podľa názoru súdu takto dojednaná zmluvná pokuta vzhľadom na hodnotu, ale najmä význam zabezpečovanej povinnosti je primeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný porušil informačnú povinnosť, konkrétne informovať žalobcu o zriadenej prevádzke v Rakúsku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "moderation_analysis.factors.dobre_mravy.evidence.quote",
+        "moderation_analysis.factors.kumulacia_s_urokom.evidence.quote",
+        "moderation_analysis.factors.spravanie_veritela.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_204_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/204/2018",
+      "decision_date": "21.03.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1216205419.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

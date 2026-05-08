@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26665,
+    "completion_tokens": 2050,
+    "cost_usd": 0.0152,
+    "latency_seconds": 19.61,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 2.867,60 EUR, ktorá vznikla započítaním vzájomných pohľadávok, pričom hlavnou zložkou bola zmluvná pokuta vo výške 2.000 EUR za porušenie konkurenčnej doložky žalovaným, ktorý po skončení spolupráce začal pôsobiť u konkurenčnej spoločnosti. Žalovaný namietal neplatnosť konkurenčnej doložky, neprimeranosť výšky zmluvnej pokuty a spochybňoval výpočet stornoprovízií.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný na úhradu celej sumy 2.867,60 EUR s príslušenstvom, keďže súd považoval konkurenčnú doložku aj zmluvnú pokutu za platné a primerané.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "žalovaný mesiac po ukončení spolupráce so žalobcom začal poskytovať služby finančného sprostredkovania pre konkurenčnú spoločnosť Finportal a.s., čím porušil čl. 6 bod 6.5 zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "2.000 eur",
+          "evidence": {
+            "quote": "Žalobca si podľa čl. IV bodu 4.8 zmluvy uplatnil voči žalovanému listom zo dňa 26.8.2020 s lehotou na úhradu do 30 dní zmluvnú pokutu vo výške 2.000 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "zmluvnej pokuty 2.000 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2000.0,
+            "evidence": {
+              "quote": "Rovnako za preukázaný čo do právneho dôvodu vzniku aj výšky mal aj uplatnený nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.000 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania 9 % ročne zo sumy 2.867,60 eur od 20.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Výšku dohodnutej a uplatnenej zmluvnej pokuty preto vzhľadom na význam zabezpečovaného záväzku a skutkové okolnosti daného prípadu súd prvej inštancie mal za primeranú a zodpovedajúcu princípu spravodlivého usporiadania vzťahov.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že výška zmluvnej pokuty zodpovedá spôsobu výpočtu dohodnutému v Dodatku GST, ktorý sa odvíja od postavenia žalovaného na pozícii GST a dĺžky trvania jeho pôsobenia. Majetkovú ujmu vzniknutú konaním žalovaného nebolo možné presne vyčísliť, preto súd aplikoval posúdenie spravodlivosti (ekvity). Súd zdôraznil, že žalovaný získal vedomosti a zručnosti u žalobcu a konkurenčná doložka bola dojednaná štandardne, pričom odplata za ňu bola zahrnutá v províziách.",
+          "key_quotes": [
+            {
+              "quote": "Výška uplatnenej zmluvnej pokuty zodpovedá spôsobu výpočtu dohodnutému v Dodatku, ktorý sa vzhľadom na povahu a charakter práva zabezpečeného zmluvnou pokutou odvíja od postavenia žalovaného na pozícii GST a dĺžky trvania jeho pôsobenia na tejto pozícii.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Majetkovú ujmu, ktorá žalobcovi konaním žalovanému vznikla, nemožno vzhľadom na vyššie vedené skutočnosti a charakter porušeného záväzku presne vyčísliť, preto je podľa súdu prvej inštancie namieste aplikovať posúdenie škody na základe spravodlivosti (ekvity) s prihliadnutím na okolnosti daného prípadu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dojednaná doložka v ničom neodporuje poctivému obchodnému styku ani dobrým mravom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vymienil pre prípad porušenia konkurenčnej doložky zmluvnú pokutu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Majetkovú ujmu, ktorá žalobcovi konaním žalovanému vznikla, nemožno vzhľadom na vyššie vedené skutočnosti a charakter porušeného záväzku presne vyčísliť",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný mesiac po ukončení spolupráce so žalobcom začal poskytovať služby finančného sprostredkovania pre konkurenčnú spoločnosť Finportal a.s.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_140_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/140/2023",
+      "decision_date": "15.04.2025",
+      "ecli": "ECLI:SK:KSBA:2025:6120446490.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

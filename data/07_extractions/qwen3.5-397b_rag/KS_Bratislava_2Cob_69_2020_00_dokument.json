@@ -1,0 +1,448 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 17942,
+      "completion_tokens": 2166,
+      "cost_usd": 0.0121,
+      "latency_seconds": 42.98,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 19224,
+      "completion_tokens": 4219,
+      "cost_usd": 0.0174,
+      "latency_seconds": 85.87,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal vrátenia zvyšnej časti depozitu vo výške 25.018,98 EUR po zániku nájomnej zmluvy v dôsledku zlúčenia spoločností. Žalovaný namietal započítanie svojich pohľadávok voči žalobcovi z titulu viacerých zmluvných pokút za porušenie povinností vyplývajúcich z nájomnej zmluvy.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý čiastočne vyhovel žalobe priznaním sumy 7.909,61 EUR a zamietol zvyšnú časť žaloby, keďže súd uznal dôvodnosť niektorých nárokov žalovaného na zmluvné pokuty a vykonal ich započítanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "uzavretie priestorov (bod 16.1)",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "0,05 % x 12 mesiacov x 41,92 EUR x 246,82 m2",
+          "evidence": {
+            "quote": "0,05 % x 12 mesiacov (dojednaná výška zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 72 dní trvania porušenia povinnosti",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 6208.0,
+            "evidence": {
+              "quote": "nárokom žalovaného na zaplatenie zmluvnej pokuty za uzavretie priestorov viac ako 2 po sebe idúce dni vo výške 6.208,- EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          },
+          "final_awarded": {
+            "value": 4469.77,
+            "evidence": {
+              "quote": "tento je čiastočne dôvodný, a to vo výške 4.469,77 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd vyhodnotil dohodu o zmluvnej pokute za porušenie povinnosti neuzavrieť nebytové priestory na viac ako dva (2) za sebou nasledujúce kalendárne dni jedenkrát za kalendárny polrok za platnú, nakoľko v danom prípade bola dodržaná písomná forma, bola dostatočne určito vymedzená zmluvná povinnosť, ktorá má byť zmluvnou pokutou zabezpečená a tiež je jednoznačná dohoda o výške zmluvnej pokuty, resp. o spôsobe jej určenia.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal nárok na zmluvnú pokutu čiastočne, keďže zistil, že priestory boli uzavreté bez súhlasu prenajímateľa v období od 02.05.2017 do 12.07.2017, čo predstavuje 72 dní. Výška pokuty bola vypočítaná podľa zmluvného vzorca (0,05 % x 12 mesiacov x sadzba nájomného x výmera x počet dní), čím sa pôvodne nárokovaná suma znížila na 4.469,77 EUR. Súd odmietol námietku žalobcu o neprimeranosti pokuty s odôvodnením, že celková výška je dôsledkom dlhodobého porušovania zmluvnej povinnosti, pričom denná sadzba sama o sebe nie je neprimeraná.",
+          "key_quotes": [
+            {
+              "quote": "Súd vyhodnotil dohodu o zmluvnej pokute za porušenie povinnosti neuzavrieť nebytové priestory na viac ako dva (2) za sebou nasledujúce kalendárne dni jedenkrát za kalendárny polrok za platnú, nakoľko v danom prípade bola dodržaná písomná forma, bola dostatočne určito vymedzená zmluvná povinnosť, ktorá má byť zmluvnou pokutou zabezpečená a tiež je jednoznačná dohoda o výške zmluvnej pokuty, resp. o spôsobe jej určenia.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            },
+            {
+              "quote": "Predmetná zmluvná pokuta bola dojednaná za účelom zabezpečenia povinnosti žalobcu neuzatvoriť nebytové priestory bez súhlasu žalovaného, a to vo výške 62,08 EUR denne.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "K návrhu žalobcu, aby súd využil moderačné právo v zmysle ustanovenia § 301 Obchodného zákonníka a neprimeranú zmluvnú pokutu znížil súd uviedol, že v tomto prípade výška uplatnenej zmluvnej pokuty nie je neprimeraná.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Predmetná zmluvná pokuta bola dojednaná za účelom zabezpečenia povinnosti žalobcu neuzatvoriť nebytové priestory bez súhlasu žalovaného, a to vo výške 62,08 EUR denne.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaným uplatnená zmluvná pokuta v danom prípade síce nie je v zanedbateľnej výške, avšak jej celková výška je dôsledkom dlhodobého porušovania zmluvnej povinnosti zo strany právneho predchodcu žalobcu a s tým spojeného navyšovania o inak primeranú dennú výšku zmluvnej pokuty.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca má za to, že povinnosť uviesť nebytové priestory do pôvodného stavu je výnimočná situácia v zmysle bodu 16.1 Zmluvy, kedy je prenajímateľ povinný strpieť uzatvorenie nebytových priestorov na dosiahnutie tohto cieľa.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_15"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "nedoplnenie depozitu (bod 10.2, 10.3)",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Nakoľko zo strany právneho predchodcu žalobcu nedošlo k doplneniu depozitu",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_mesacne",
+          "value_raw": "0,05% x 12 mesiacov",
+          "evidence": {
+            "quote": "0,05% (dojednaná sadzba zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 12 mesiacov",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5587.2,
+            "evidence": {
+              "quote": "nároku žalobcu na zaplatenie zmluvnej pokuty za nedoplnenie depozitu po zvýšení minimálneho nájomného, platby za služby a marketingového poplatku vo výške 5.587,20 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+            }
+          },
+          "final_awarded": {
+            "value": 5587.2,
+            "evidence": {
+              "quote": "vznikol žalovanému nárok na zaplatenie zmluvnej pokuty vo výške 5.587,20 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Ohľadom nároku žalobcu na zaplatenie zmluvnej pokuty za nedoplnenie depozitu po zvýšení minimálneho nájomného, platby za služby a marketingového poplatku vo výške 5.587,20 EUR mal prvostupňový súd za to, že tento je dôvodný.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+            }
+          },
+          "legal_reasoning_summary": "Súd uznal nárok na zmluvnú pokutu za nedoplnenie depozitu v plnej výške 5.587,20 EUR, keďže žalovaný riadne vyzval žalobcu na doplnenie depozitu listom zo dňa 02.05.2017 a žalobca túto povinnosť nesplnil. Výška pokuty bola vypočítaná ako 0,05 % z nájomného za 12 mesiacov za 90 dní trvania porušenia. Súd odmietol námietku žalobcu o šikanóznom výkone práva s tým, že nevyzývanie na doplnenie depozitu počas trvania nájmu nezakladá dôvod na odopretie právnej ochrany.",
+          "key_quotes": [
+            {
+              "quote": "Nakoľko zo strany právneho predchodcu žalobcu nedošlo k doplneniu depozitu, čo nebolo medzi sporovými stranami sporné, s poukazom na dojednanie v Časti I bod 10.3 v spojení s bodom 12.6 Zmluvy o nájme nebytových priestorov vznikol žalovanému nárok na zaplatenie zmluvnej pokuty vo výške 5.587,20 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+            },
+            {
+              "quote": "Samotné nevyzývanie na doplnenie depozitu po dobu trvania nájomného vzťahu nie je skutočnosťou, ktorá by zakladala možnosť súdu odoprieť právnu ochranu výkonu práva na zaplatenie zmluvnej pokuty.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_27"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "K námietke žalobcu, že navýšenie depozitu v krátkom čase pred ukončením nájmu nemalo žiadne logické opodstatnenie, zo strany žalovaného sa jednalo výlučne o šikanózny výkon práva a jediným dôvodom navýšenia depozitu bolo následné uplatnenie zmluvnej pokuty, odvolací súd mal zhodne s prvostupňovým súdom za to, že depozit ako taký slúžil na zaistenie plnenia povinností právneho predchodcu žalobcu zo Zmluvy o nájme nebytových priestorov",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_27"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "depozit ako taký slúžil na zaistenie plnenia povinností právneho predchodcu žalobcu zo Zmluvy o nájme nebytových priestorov, pričom žalovaný bol oprávnený v súlade so Zmluvou kedykoľvek vyzvať nájomcu na doplnenie depozitu.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_27"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Nakoľko zo strany právneho predchodcu žalobcu nedošlo k doplneniu depozitu, čo nebolo medzi sporovými stranami sporné",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Samotné nevyzývanie na doplnenie depozitu po dobu trvania nájomného vzťahu nie je skutočnosťou, ktorá by zakladala možnosť súdu odoprieť právnu ochranu výkonu práva na zaplatenie zmluvnej pokuty.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_27"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": "omeškanie s úhradou faktúr (bod 4.8)",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nároku žalovaného na zaplatenie zmluvnej pokuty za omeškanie s úhradou minimálneho nájomného, platby za služby, marketingového poplatku a za energie",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_9"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "podľa Časti II bod 4.8 Zmluvy",
+          "evidence": {
+            "quote": "tento je dôvodný s poukazom na Časť II bod 4.8 a čl 4.1 Časti II",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_9"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1362.53,
+            "evidence": {
+              "quote": "vo výške 1.362,53 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_9"
+            }
+          },
+          "final_awarded": {
+            "value": 1362.53,
+            "evidence": {
+              "quote": "tento je dôvodný",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_9"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Žalovaný si uplatnil nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry č. 540171150, faktúry č. 540171349, faktúry č. 540171523, faktúry č. 540171722 a faktúry č. 540171892, za obdobie odo dňa nasledujúceho po dni splatnosti každej jednej faktúry až do 31.7.2017.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_28"
+            }
+          },
+          "legal_reasoning_summary": "Súd uznal nárok na zmluvnú pokutu za omeškanie s úhradou faktúr v plnej výške 1.362,53 EUR, keďže z predložených faktúr bolo zrejmé, kedy boli splatné a kedy sa žalobca dostal do omeškania. Žalobca nenamietal, že by predmetné faktúry uhradil v lehote splatnosti. Odvolací súd potvrdil, že žalovaný si nárok riadne špecifikoval a preukázal spôsob výpočtu pokuty za jednotlivé faktúry.",
+          "key_quotes": [
+            {
+              "quote": "Z jednotlivých faktúr je zrejmé, kedy boli splatné a kedy sa mal žalobca dostať s ich úhradou do omeškania, pričom žalobca nenamietal, že by predmetné faktúry uhradil v lehote splatnosti resp. v čase, za ktorý si žalovaný uplatnil nárok na úroky z omeškania.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_28"
+            },
+            {
+              "quote": "Z faktúr predložených súdu je zrejmé, čo bolo jednotlivými faktúrami vyfakturované, kedy boli jednotlivé faktúry splatné ako aj akým spôsobom dospel žalovaný k výške uplatneného nároku na zaplatenie zmluvnej pokuty za omeškanie s úhradou týchto faktúr.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_28"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca nenamietal, že by predmetné faktúry uhradil v lehote splatnosti resp. v čase, za ktorý si žalovaný uplatnil nárok na úroky z omeškania.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_28"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_69_2020_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/69/2020",
+      "decision_date": "14.02.2023",
+      "ecli": "ECLI:SK:KSBA:2023:6117232511.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

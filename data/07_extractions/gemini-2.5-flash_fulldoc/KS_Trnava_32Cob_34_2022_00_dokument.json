@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21784,
+    "completion_tokens": 2339,
+    "cost_usd": 0.0506,
+    "latency_seconds": 9.48,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 4.147,20 eur s príslušenstvom a zmluvnej pokuty vo výške 0,1 % denne z jednotlivých splátok, titulom vrátenia úveru s príslušenstvom a zmluvnej pokuty za porušenie povinnosti splácať úver. Žalovaná navrhla moderovať zmluvnú pokutu z dôvodu jej neprimeranosti.",
+      "verdict_summary": "Krajský súd zmenil rozsudok súdu prvej inštancie vo výroku III. v zamietajúcej časti žaloby na zaplatenie zmluvnej pokuty tak, že žalovaná je povinná zaplatiť žalobcovi ďalšiu zmluvnú pokutu vo výške 7.784,48 eur v mesačných splátkach. V ostatnej zamietajúcej časti týkajúcej sa náhrady nákladov spojených s mimosúdnym uplatňovaním pohľadávky bol rozsudok potvrdený.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nároku na zaplatenie v úverovej zmluve dohodnutej zmluvnej pokuty za porušenie povinnosti žalovanej splácať úver v dohodnutých splátkach.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne z dlžnej sumy, a to za každý deň omeškania",
+          "evidence": {
+            "quote": "V čl. 10 bod 10.1. zmluvy je uvedené, že v prípade omeškania dlžníka s úhradou splátky, je veriteľ oprávnený požadovať úhradu zmluvnej pokuty vo výške 0,1 % denne z dlžnej sumy, a to za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2800.0,
+            "evidence": {
+              "quote": "úver, ktorý jej bol poskytnutý vo výške 2.800 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 8484.48,
+            "evidence": {
+              "quote": "súčet zmluvných pokút dosiahne čiastku 8.484,48 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 7784.48,
+            "evidence": {
+              "quote": "žalovaná je povinná zaplatiť žalobcovi ďalšiu zmluvnú pokutu vo výške 7.784,48 eur",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "žalovaná povinná uhradiť žalobcovi úrok z omeškania zo sumy 4.147,20 eur vo výške 9 % ročne až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto odvolací súd rozsudok súdu prvej inštancie vo výroku III. v zamietajúcej časti žaloby žalobcu týkajúcej sa jeho nároku na zaplatenie zmluvnej pokuty postupom podľa § 388 CSP zmenil, a to tak, že žalobcovi priznal nárok na zaplatenie ďalšej zmluvnej pokuty vo výške 7.784,48 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie moderoval zmluvnú pokutu na 700 eur, považujúc ju za neprimerane vysokú vzhľadom na hodnotu a význam zabezpečovanej povinnosti a možný neprimeraný zisk žalobcu. Odvolací súd však s touto interpretáciou nesúhlasil, odvolávajúc sa na ustálenú súdnu prax, ktorá nepovažuje celkovú výšku zmluvnej pokuty, ktorá je dôsledkom dlhodobého omeškania, za neprimeranú. Odvolací súd tiež zdôraznil, že žalovaná neuviedla žiadne skutkové tvrdenia preukazujúce neprimeranosť zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Ako neprimerane vysokú nemožno posúdiť zmluvnú pokutu dohodnutú vo forme určitej sadzby za určené časové obdobie, ktorej celková výška je dôsledkom dlhodobého porušovania zabezpečenej povinnosti dlžníkom a s tým spojeným navyšovaním o inak primeranú sadzbu zmluvnej pokuty za určené časové obdobie",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ ide o samotnú výšku zmluvnej pokuty v čase porušenia povinnosti žalovanej táto predstavovala podľa dohody strán zmluvy sumu rovnajúcu sa 0,1 % z dlžnej sumy, čo pri nezaplatenej splátke 176.76 eur predstavuje sumu 0.176 eur, ktorou pokutou bolo zabezpečované včasné splatenie splátky úveru vo výške 176,76 eur.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Vzhľadom na uvedené potom v konaní neboli splnené podmienky pre moderáciu zmluvnej pokuty súdom.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta plní nielen reparačnú, ale aj sankčnú funkciu, t.j. je sankciou za nesplnenie zmluvnou pokutou zabezpečenej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Vznik škody nie je podmienkou uplatnenia moderačného práva, ale je okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Pomer pôvodnej povinnosti ku následnej povinnosti spolu so sankčnou povinnosťou bol 1:1,001.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "aj vzhľadom na postoj žalovanej k plneniu si povinností z úverovej zmluvy splácať tento úver v dohodnutých splátkach, za neprimeranú, mnohonásobne prevyšujúcu právo, ktoré zabezpečuje",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Okrem toho zmluvná pokuta má aj funkciu reparačnú (uhradzovaciu), lebo jej zmyslom je tiež reparovať na strane veriteľa ujmu, ktorá mu vznikla v dôsledku porušenia povinnosti zo strany dlžníka. Zároveň však zmluvná pokuta môže zahŕňať aj ďalšie sumy, ktoré predstavujú trest (sankciu) pre toho, kto povinnosť porušil, pričom zmluvná pokuta je nezávislou od vzniku škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_34_2022_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/34/2022",
+      "decision_date": "20.12.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2121200908.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

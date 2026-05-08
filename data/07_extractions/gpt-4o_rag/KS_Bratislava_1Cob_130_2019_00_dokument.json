@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 9720,
+      "completion_tokens": 654,
+      "cost_usd": 0.0308,
+      "latency_seconds": 20.65,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 10117,
+      "completion_tokens": 1274,
+      "cost_usd": 0.038,
+      "latency_seconds": 26.21,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Záchranná služba Bratislava, s.r.o., sa domáhal zaplatenia sumy 2.000 eur titulom zmluvnej pokuty od žalovaného, ktorý prestal plniť zmluvné povinnosti vyplývajúce zo Zmluvy o spolupráci a partnerstve. Žalovaný počas výpovednej doby neposkytoval žalobcovi zmluvné plnenie, čo žalobca označil ako podstatné porušenie zmluvy.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Malacky, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 2.000 eur a náhradu trov konania.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný počas výpovednej doby neposkytoval žalobcovi zmluvné plnenie",
+            "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "2.000 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 2.000 eur",
+            "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_4"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2000,
+            "evidence": {
+              "quote": "žalobca sa žalobou doručenou súdu dňa 19.10.2016 domáhal, aby súd uložil žalovanému povinnosť zaplatiť žalobcovi sumu 2.000 eur",
+              "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_0"
+            }
+          },
+          "final_awarded": {
+            "value": 2000,
+            "evidence": {
+              "quote": "súd prvej inštancie napadnutým rozsudkom vyhovel žalobe žalobcu a žalovaného zaviazal na zaplatenie sumy 2.000 eur",
+              "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_12"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 2.000 eur od 11.10.2016 do zaplatenia",
+            "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd po oboznámení sa s obsahom spisu a dôvodmi odvolania dospel k záveru, že rozsudok súdu prvej inštancie je potrebné ako vecne správny podľa § 387 ods. 1, 2 CSP potvrdiť.",
+              "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_9"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta vo výške 2.000 eur je platná a primeraná, pretože bola dojednaná v písomnej forme a zabezpečovala plnenie zmluvných povinností. Odvolací súd potvrdil rozsudok súdu prvej inštancie, keďže skutkový stav bol zistený dostatočne a správne. Súd tiež zohľadnil význam a hodnotu zabezpečenej pohľadávky a výšku prípadnej škody.",
+          "key_quotes": [
+            {
+              "quote": "V prejednávanej veci bola zmluvná pokuta dojednaná medzi podnikateľmi, pričom funkciou zmluvnej pokuty bolo zabezpečiť plnenie zmluvných povinností žalovaným vykonávať individuálnu prepravu klientov žalobcu počas výpovednej doby.",
+              "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_4"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "V súlade s čl. III. bod 1 Zmluvy mal žalovaný poskytovať pre žalobcu služby vedenia vozidla taxislužby na základe a v rozsahu písomných objednávok, avšak žalobca nepreukázal vystavenie akejkoľvek objednávky pre žalovaného počas plynutia výpovednej doby, žalobca si tak v priebehu výpovednej doby neobjednal žiadne služby, a preto žalovaný nemohol porušiť svoju povinnosť poskytovať pre žalobcu služby počas plynutia výpovednej doby.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_7"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "V prejednávanej veci bola zmluvná pokuta dojednaná medzi podnikateľmi, pričom funkciou zmluvnej pokuty bolo zabezpečiť plnenie zmluvných povinností žalovaným vykonávať individuálnu prepravu klientov žalobcu počas výpovednej doby.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pri posúdení primeranosti výšky zmluvnej pokuty nie je totiž možné zohľadniť len zabezpečovaný nárok, ale aj výšku prípadnej škody, ktorú je porušenie povinnosti spôsobilé vyvolať.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_4"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "pričom žalovaného námietku, že zo zmluvy nie je zrejmé, kedy a ako mal žalovaný pre žalobcu jazdiť, súd prvej inštancie považoval za neopodstatnenú",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_12"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalovaný si tak nesplnil obe svoje povinnosti, a to povinnosť po doručení výpovede kontaktovať žalovaného resp. dispečerku a dohodnúť sa na poskytovaní služieb počas plynutia výpovednej doby a tiež sledovať informačnú tabuľu.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_8"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvej inštancie priznal žalobcovi aj nároky z omeškania, pričom okamih vzniku omeškania s plnením peňažného dlhu je márne uplynutie lehoty na plnenie určenej výzvou žalobcu na zaplatenie zmluvnej pokuty.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca vyzval žalovaného na zaplatenie zmluvnej pokuty výzvou zo dňa 28.9.2016 s poskytnutím lehoty na plnenie do 10.10.2016, žalovaný sa dostal do omeškania dňom nasledujúcom po márnom uplynutí lehoty určenej žalobcom, t.j dňom 11.10.2016.",
+                "chunk_id": "KS_Bratislava_1Cob_130_2019_00_dokument.pdf_chunk_6"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.kumulacia_s_urokom"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_130_2019_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/130/2019",
+      "decision_date": "18.06.2020",
+      "ecli": "ECLI:SK:KSBA:2020:1616208811.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

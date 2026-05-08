@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 16131,
+      "completion_tokens": 581,
+      "cost_usd": 0.0461,
+      "latency_seconds": 46.45,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 16759,
+      "completion_tokens": 750,
+      "cost_usd": 0.0494,
+      "latency_seconds": 37.1,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Slevomat.cz, s.r.o. uplatnil voči žalovanému Petrovi Hlaváčovi nárok na zaplatenie zmluvnej pokuty vo výške 20.000 EUR z dôvodu porušenia zmluvy o obchodnom zastúpení, konkrétne porušenia mlčanlivosti a konkurenčnej činnosti.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Žilina, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 20.000 EUR.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "žalovaný týmto konaním sa dopustil porušenia záväzku mlčanlivosti, ako aj mimoriadne hrubého porušenia záväzku zákazu konkurencie",
+            "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_4"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_jednorazovo",
+          "value_raw": "20.000,- Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 20.000,- Eur splatnú na výzvu zastúpeného",
+            "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_22"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000,
+            "evidence": {
+              "quote": "24. Žalobca v žalobe jednoznačne špecifikoval, že si uplatňuje zmluvnú pokutu vo výške 20.000,Eur",
+              "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_17"
+            }
+          },
+          "final_awarded": {
+            "value": 20000,
+            "evidence": {
+              "quote": "Okresný súd žalobe vyhovel",
+              "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_8"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokmi z omeškania vo výške 9% ročne zo sumy 20.000,- Eur",
+            "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd mal za to, že výška zmluvnej pokuty dojednaná v zmluve je primeraná s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+              "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_19"
+            }
+          },
+          "legal_reasoning_summary": "Súd rozhodol, že zmluvná pokuta vo výške 20.000 EUR je primeraná a nebolo dôvodu na jej zníženie. Žalovaný nepreukázal neplatnosť zmluvy ani jednotlivých ustanovení. Súd konštatoval, že pokuta je v súlade s hodnotou a významom zabezpečovanej povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd mal za to, že výška zmluvnej pokuty dojednaná v zmluve je primeraná s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+              "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_19"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "ak žalobca vo svojej žalobe uviedol, že dané konanie žalovaného možno kvalifikovať aj ako nielen konanie v rozpore so zásadami poctivého obchodného styku a dobrými mravmi",
+                "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty dojednaná v zmluve je primeraná s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_19"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "porušenie takej povinnosti ako je konkurenčná doložka, má dostatočný význam aj bez ohľadu na prípadnú výšku škody",
+                "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_19"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalovaný skutočne porušil svoje povinnosti v zmysle čl. 5. bod 5.7 Zmluvy, keďže sprístupnil údaje získané od žalobcu iným osobám bez súhlasu a bez vedomia žalobcu",
+                "chunk_id": "KS_Žilina_14Cob_202_2019_00_dokument.pdf_chunk_18"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_202_2019_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/202/2019",
+      "decision_date": "25.06.2020",
+      "ecli": "ECLI:SK:KSZA:2020:5117214894.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

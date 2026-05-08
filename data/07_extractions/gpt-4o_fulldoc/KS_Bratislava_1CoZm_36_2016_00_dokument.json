@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19064,
+    "completion_tokens": 1366,
+    "cost_usd": 0.0613,
+    "latency_seconds": 13.83,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ ČSOB Leasing, a.s. žiadal zaplatenie sumy 15.642,59 eur s príslušenstvom na základe zmenkového platobného rozkazu. Odporcovia namietali neplatnosť zmenky a tvrdili, že záväzok z leasingovej zmluvy zanikol dohodou o započítaní pohľadávok.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý ponechal zmenkový platobný rozkaz v platnosti s výnimkou sumy 500 eur.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "pravdepodobne prostredníctvom zmenky uplatnil nárok na zaplatenie zmluvných pokút za predčasné ukončenie leasingových zmlúv",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": "pravdepodobne prostredníctvom zmenky uplatnil nárok na zaplatenie zmluvných pokút za predčasné ukončenie leasingových zmlúv",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6% ročne",
+          "evidence": {
+            "quote": "zmenkovým platobným rozkazom, č.k. 1Zm 645/2014-20, ktorý vydal dňa 17.6.2015 boli odporcovia zaviazaní, aby navrhovateľovi spoločne a nerozdielne zaplatili zmenkovú sumu 15.642,59 eur s úrokom 6% ročne z nej od 13.5.2014 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa dospel k záveru, že zmenkový platobný rozkaz bol vydaný správne, pretože pohľadávka z leasingovej zmluvy nebola úplne zaniknutá dohodou o započítaní. Odporcovia nepreukázali, že zmenka bola vyplnená nesprávne alebo že zmluvné pokuty boli neprimerané. Súd tiež uviedol, že moderačné právo by nemohol využiť, pretože predmetom konania nebolo zaplatenie zmluvných pokút.",
+          "key_quotes": [
+            {
+              "quote": "Súd by preto moderačné právo podľa § 301 zákona č. 513/1991 Zb., Obchodný zákonník, nemohol využiť ani v prípade, ak by predmetom konania bolo zaplatenie zmluvných pokút a nie zmenky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "dohoda o započítaní obsahuje nevyvážené zmluvné podmienky, ktoré sú navzájom v hrubom nepomere, odporuje dobrým mravom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmenka, z ktorej si navrhovateľ práva uplatňuje, nie je platobná, odporca v 1. rade zmenkou nemá platiť leasingové splátky, vystavená bola ako zabezpečenie pre prípad, ak by ako dlžník svoje zmluvné záväzky nesplnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca v 1. rade nemal skutočnú vôľu dohodu uzavrieť a konal pod nepriamym nátlakom navrhovateľa",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Navrhovateľ pristúpil k finančnému vyúčtovaniu na základe predčasného ukončenia leasingovej zmluvy a to na základe ustanovení všeobecných zmluvných podmienok ČSOB Leasing, a.s.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw",
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[0].amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1CoZm_36_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1CoZm/36/2016",
+      "decision_date": "24.11.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1514221567.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

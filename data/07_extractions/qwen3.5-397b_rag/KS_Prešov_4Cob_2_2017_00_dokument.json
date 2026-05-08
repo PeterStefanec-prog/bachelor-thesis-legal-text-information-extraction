@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 8028,
+      "completion_tokens": 1017,
+      "cost_usd": 0.0055,
+      "latency_seconds": 10.02,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 8511,
+      "completion_tokens": 1244,
+      "cost_usd": 0.0062,
+      "latency_seconds": 21.47,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 3.300,- eur za porušenie konkurenčnej doložky zo strany žalovanej, ktorá po skončení zmluvy o obchodnom zastúpení začala pracovať pre konkurenčnú spoločnosť. Žalovaná namietala neplatnosť zmluvy a neprimeranosť výšky pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý znížil pôvodne uplatnenú zmluvnú pokutu z 3.300,- eur na 300,- eur s prihliadnutím na neprimeranosť výšky vzhľadom na získaný profit žalovanej.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "žalovaná okrem iného sa zaviazala, že počas trvania zmluvy až do uplynutia šiestich mesiacov odo dňa zániku zmluvy nebude vo svojom mene alebo v mene inej osoby ako žalobcu vykonávať činnosť, ktorá bola predmetom obchodného zastúpenia",
+            "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_0"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "pokuta 3.300,-eur",
+          "evidence": {
+            "quote": "S porušením tejto povinnosti bola spojená pokuta 3.300,-eur splatná do 10. kalendárneho dňa odo dňa doručenia písomnej výzvy žalobcu na jej uhradenie.",
+            "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3300,
+            "evidence": {
+              "quote": "žalobca podal žalobu na zaplatenie sumy 3.300,- eur spolu s úrokom z omeškania 8,25 % ročne",
+              "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_0"
+            }
+          },
+          "final_awarded": {
+            "value": 300,
+            "evidence": {
+              "quote": "súd potom považoval za primeranú pokutu 300,- eur. Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-.",
+              "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_1"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,25 % ročne",
+          "evidence": {
+            "quote": "rozhodol o povinnosti žalovanej zaplatiť žalobcovi sumu 300,- eur spolu s úrokom z omeškania vo výške 8,25 % ročne zo sumy 300,- eur od 08.04.2014 do zaplatenia",
+            "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd využil svoje moderačné právo a znížil pôvodne uplatnenú zmluvnú pokutu 3.300,-. Vo zvyšku nárok žalobcu na zaplatenie 3.000,- zmluvnej pokuty zamietol.",
+              "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_1"
+            }
+          },
+          "legal_reasoning_summary": "Súd znížil pôvodne dojednanú zmluvnú pokutu z 3.300 eur na 300 eur podľa § 301 Obchodného zákonníka, pretože ju považoval za neprimerane vysokú vzhľadom na hodnotu zabezpečovanej povinnosti. Kľúčovým argumentom bol extrémny nepomer medzi výškou pokuty a finančným prospechom, ktorý žalovaná získala porušením konkurenčnej doložky (provízia 140,50 eur). Súd tiež prihliadol na sociálnu situáciu žalovanej a skutočnosť, že išlo o vedľajšiu činnosť bez úmyslu poškodiť žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Z hľadiska získanej provízie v rozhodnom období, keď žalovaná nesmela pracovať pre spoločnosť s obdobných predmetom podnikania ako žalobca, súd potom považoval za primeranú pokutu 300,- eur.",
+              "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "V danom stave, by snaha žalovanej si privyrobiť premietnutá do zisku 140,50 eur by znamenalo jej postih v rozsahu 3.300,-, čo nie je primerané.",
+              "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_5"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Preto aj dojednanie neprimerane vysokej zmluvnej pokuty znamená rozpor s poctivým obchodným stykom, a takejto zmluvnej pokute nie je možné priznať ochranu v takom rozsahu, ako to uplatnil žalobca.",
+                "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "je potrebné zvážiť primeranosť výšky zmluvnej pokuty 3.300,eur s hodnotou zabezpečovanej povinnosti.",
+                "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaná pre spoločnosť Telervis získala províziu pri 16 obchodných prípadoch len 140,50 eur.",
+                "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliada aj na okolnosti sociálnej situácie žalovanej, ktorá si zmluvou o obchodnom zastúpení chcela len privyrobiť a nemala priamy úmysel poškodiť žalobcu.",
+                "chunk_id": "KS_Prešov_4Cob_2_2017_00_dokument.pdf_chunk_5"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_2_2017_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/2/2017",
+      "decision_date": "14.11.2017",
+      "ecli": "ECLI:SK:KSPO:2017:8314205357.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

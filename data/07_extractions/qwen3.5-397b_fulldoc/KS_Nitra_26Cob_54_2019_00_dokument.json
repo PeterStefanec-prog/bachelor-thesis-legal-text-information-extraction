@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21093,
+    "completion_tokens": 2071,
+    "cost_usd": 0.0131,
+    "latency_seconds": 32.12,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal od žalovaného zaplatenia sumy 14.771,75 eura s príslušenstvom z titulu zmluvnej pokuty za nenastúpenie určených pracovníkov na výkon prác v auguste 2017. Žalovaný namietal, že k výmene pracovníkov došlo na základe ústnej dohody a že mal nárok na dovolenku, pričom spochybňoval aj výšku zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobu zamietol v celom rozsahu, pretože pohľadávka žalobcu zo zmluvnej pokuty bola započítaná proti vyššej pohľadávke žalovaného.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 170137 a zostatok po zápočte",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "ak zhotoviteľ alebo pracovník zhotoviteľa počas doby výkonu prác na diele a počas termínov na zhotovenia diela nemôže nastúpiť v určitý deň k výkonu prác na diele, je povinný o tomto informovať zodpovedného zástupcu objednávateľa a vyžiadať si súhlas tohto zástupcu na nenastúpenie k výkonu prác.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "200,00 eur za každý deň nenastúpenia zhotoviteľa na výkon prác",
+          "evidence": {
+            "quote": "V opačnom prípade si objednávateľ vyhradzuje právo uplatniť voči zhotoviteľovi alebo voči pracovníkom zhotoviteľa zmluvnú pokutu 200,00 eur za každý deň nenastúpenia zhotoviteľa na výkon prác podľa podmienok tejto zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 14771.75,
+            "evidence": {
+              "quote": "V konaní si žalobca preto uplatnil nárok na plnenie v sume 14.771,75 eura, ako súčet zostatku prvej zmluvnej pokuty (po vykonaní zápočtu), ako aj zmluvnej pokuty fakturovanej uvedenou faktúrou.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd preto žalobu zamietol v celom rozsahu.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "other",
+            "evidence": {
+              "quote": "K započítaniu došlo dňa 06.09.2017, teda pred podaním žaloby, ktorá bola podaná na upomínací súd dňa 10.11.2017. V zmysle citovaných zákonných ustanovení došlo k stretu dvoch pohľadávok spôsobilých na započítanie, žalobcova v sume 2.300,00 eur a žalovaného v sume 3.628,25 eura, čoho zákonným následkom je ich zánik v rozsahu započítania, súd preto žalobu zamietol v celom rozsahu.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie uznal nárok na zmluvnú pokutu voči žalovanému za jeho vlastnú absenciu v rozsahu 23 dní, ale považoval dohodnutú sumu 200 eur denne za neprimeranú a znížil ju na 100 eur denne, čo predstavovalo celkovú sumu 2.300 eur. Túto zníženú pohľadávku však súd započítal proti pohľadávke žalovaného vo výške 3.628,25 eura za vykonané dielo. Keďže pohľadávka žalovaného bola vyššia, došlo k zániku oboch pohľadávok v rozsahu započítania a žaloba bola zamietnutá.",
+          "key_quotes": [
+            {
+              "quote": "Preto ustálil, že zmluvnú pokutu považuje za primeranú len v rozsahu 100,00 eur, čo za absenciu za 23 dní predstavovalo sumu 2.300,00 eur.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "došlo k stretu dvoch pohľadávok spôsobilých na započítanie, žalobcova v sume 2.300,00 eur a žalovaného v sume 3.628,25 eura, čoho zákonným následkom je ich zánik v rozsahu započítania",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta bola dohodnutá až na 200,00 eur denne, práve z ktorého dôvodu prvoinštančný súd považoval zmluvnú pokutu za neprimeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný nemal odsúhlasenú dovolenku v mesiaci 8/2017 a ak zmluvný vzťah trval do 31.08.2017, kedy preukázateľne nevykonával práce, súd považoval žalobu vo vzťahu k žalovanému za dôvodnú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_54_2019_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/54/2019",
+      "decision_date": "05.12.2019",
+      "ecli": "ECLI:SK:KSNR:2019:6117247859.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9,
+      "adaptive_top_k_call2": 8
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 10749,
+      "completion_tokens": 902,
+      "cost_usd": 0.0063,
+      "latency_seconds": 13.65,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 9605,
+      "completion_tokens": 1595,
+      "cost_usd": 0.0075,
+      "latency_seconds": 23.21,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "kupna",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 500 000 EUR za nedodanie tovaru a za dodanie tovaru inej osobe na území Maďarska podľa kúpnej zmluvy. Odvolací súd žalobu zamietol pre neplatnosť dohody o pokute a nepreukázanie porušenia povinností.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Najvyšší súd zamietol dovolanie žalobcu a potvrdil rozhodnutie odvolacieho súdu, ktorý žalobu v celom rozsahu zamietol. Žalovaný má nárok na náhradu trov konania."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "verdict",
+              "quote": "rozhodol: Dovolanie žalobcu zamieta."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "verdict",
+              "quote": "v spore žalobcu METALFIN, s. r. o. ... proti žalovanému: Carmeuse Slovakia, s.r.o. ... o zaplatenie 500 000 Eur s príslušenstvom"
+            },
+            "value": 500000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": null,
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "verdict",
+            "quote": "rozhodol: Dovolanie žalobcu zamieta."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_2",
+            "quote": "V bode 8.5 sa žalovaný zaviazal v prípade nedodania objednaného tovaru žalobcovi do 14 dní odo dňa objednávky uhradiť zmluvnú pokutu a taktiež sa zaviazal v prípade dodania tovaru na územie Maďarskej republiky inej osobe než žalobcovi zaplatiť rovnakú zmluvnú pokutu vo výške 500 000 eur."
+          },
+          "value": "non_monetary_performance"
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_2",
+            "quote": "V bode 8.5 sa žalovaný zaviazal v prípade nedodania objednaného tovaru žalobcovi do 14 dní odo dňa objednávky uhradiť zmluvnú pokutu a taktiež sa zaviazal v prípade dodania tovaru na územie Maďarskej republiky inej osobe než žalobcovi zaplatiť rovnakú zmluvnú pokutu vo výške 500 000 eur."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500 000 eur"
+        },
+        "related_claim_ref": null,
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+              "quote": "K samotnému zmluvnému ustanoveniu o povinnosti zaplatiť zmluvnú pokutu vo výške 500 000 Eur podľa bodu 8.5 zmluvy zároveň odvolací súd dodal, že toto ustanovenie je absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka, a to z dôvodu neprimeranosti výšky dohodnutej zmluvnej pokuty."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+                "quote": "Vychádzajúc z obsahu príslušných zmluvných dojednaní by mal vzniknúť nárok na zaplatenie zmluvnej pokuty vo výške 500 000 Eur za omeškanie s akoukoľvek dodávkou tovaru (nielen celého dohodnutého objemu 50 000 t obchodu na 3 roky), a to bez ohľadu na predmet konkrétnej objednávky."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_53",
+                "quote": "Priznanie zmluvnej pokuty mnohonásobne prevyšujúcej právo, ktoré zabezpečuje, by viedlo k celkom neodôvodnenému majetkovému prospechu oprávneného a znamenalo by neúmerne prísnu a bezdôvodnú sankciu, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+                "quote": "Odvolací súd poznamenal, že najvyššia hodnota objednávky žalobcu v priebehu roka 2001 predstavovala len sumu 4 677,57 Eur a aj v prípade omeškania s dodávkou tohto tovaru by zmluvná pokuta 500 000 Eur bola jednoznačne neprimerane vysoká."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+                "quote": "Z uvedeného je zrejmé, že hodnota pohľadávky žalobcu zabezpečovaná dohodnutou zmluvnou pokutou (jednotlivé samostatné dodávky tovaru vo vopred neurčenej výške), je v príkrom rozpore s výškou dohodnutej zmluvnej pokuty."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+              "quote": "K samotnému zmluvnému ustanoveniu o povinnosti zaplatiť zmluvnú pokutu vo výške 500 000 Eur podľa bodu 8.5 zmluvy zároveň odvolací súd dodal, že toto ustanovenie je absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka, a to z dôvodu neprimeranosti výšky dohodnutej zmluvnej pokuty."
+            },
+            {
+              "chunk_id": "NS_SR_5Obdo_14_2023_00_dokument.pdf_chunk_13",
+              "quote": "Odvolací súd poznamenal, že najvyššia hodnota objednávky žalobcu v priebehu roka 2001 predstavovala len sumu 4 677,57 Eur a aj v prípade omeškania s dodávkou tohto tovaru by zmluvná pokuta 500 000 Eur bola jednoznačne neprimerane vysoká."
+            }
+          ],
+          "legal_reasoning_summary": "Odvolací súd konštatoval, že dohoda o zmluvnej pokute je absolútne neplatným právnym úkonom podľa § 39 Občianskeho zákonníka z dôvodu neprimeranosti výšky pokuty v pomere k hodnote zabezpečovanej pohľadávky. Súd zdôraznil, že pokuta vo výške 500 000 EUR mala byť splatná aj za omeškanie s jednotlivou objednávkou, pričom najvyššia hodnota objednávky v roku 2001 bola len 4 677,57 EUR, čo predstavuje zjavný nepomer. Takáto dohoda bola považovaná za rozpor s dobrými mravmi, keďže by viedla k neodôvodnenému majetkovému prospechu veriteľa a predstavovala by neprimerane prísnu sankciu."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.original_claimed:verdict"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_5Obdo_14_2023_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "5Obdo/14/2023",
+      "decision_date": "25.04.2024",
+      "ecli": "ECLI:SK:NSSR:2024:7811201291.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 33826,
+    "completion_tokens": 1442,
+    "cost_usd": 0.0567,
+    "latency_seconds": 6.15,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 149.878,86 Eur s príslušenstvom od žalovaného, pričom tvrdil, že zmluva o podnájme zimného štadióna bola neplatná a vznikol mu nárok na vrátenie bezdôvodného obohatenia. Žalovaný namietal premlčanie nároku a tvrdil, že zmluvná pokuta bola platne dohodnutá a započítaná.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvoinštančného súdu, ktorý žalobu zamietol z dôvodu premlčania nároku žalobcu na vydanie bezdôvodného obohatenia, ktoré vzniklo z neplatných zmlúv o nájme a podnájme.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "V článku VIII. 1 zmluvy sa strany dohodli na zmluvnej pokute, ktorú je povinný podnájomník zaplatiť v prípade, že ak dôjde k ukončeniu podnájmu v príčinnej súvislosti s akýmkoľvek jeho konaním.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nevyčerpané nájomné",
+          "evidence": {
+            "quote": "v zmluve bolo dojednané, že v prípade skončenia zmluvy, kde dôvodom môže byť aj výpoveď zmluvy zo strany prenajímateľa, sa stáva nevyčerpané nájomné zmluvnou pokutou v prospech prenajímateľa.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 123080.63,
+            "evidence": {
+              "quote": "žalovaný započítal svoju pohľadávku titulom zmluvnej pokuty vo výške 123.080,63 Eur voči pohľadávke žalobcu titulom vrátenia podnájomného vo výške 123.080,63 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V dôsledku uvedeného žalovaný nemá nárok na zmluvnú pokutu (rozsudok KS Trenčín, č.k. 16Cob/8/2021), a teda žalovanému žiadnu pohľadávku titulom zmluvnej pokuty nebolo možné započítať s pohľadávkou žalobu.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Žalobca sa domáhal proti žalovanému zaplatenia sumy 149.878,86 Eur, úrokov z omeškania a trov konania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Vzhľadom na uvedené súd dospel k záveru, že zmluvné dojednanie, týkajúce sa zmluvnej pokuty je neplatné pre rozpor so zákonom.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že dojednanie o zmluvnej pokute je neplatné pre rozpor so zákonom, pretože bola viazaná na výkon práva (ukončenie podnájmu), nie na porušenie zmluvnej povinnosti. Preto žalovaný nemal nárok na zmluvnú pokutu a nemohol ju započítať. Súd sa odvolal na súdnu prax, ktorá považuje takéto dojednania za neplatné.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd tiež k zmluvnej pokute konštatoval, že ak nie je zmluvná pokuta dohodnutá pre prípad porušenia povinnosti, ale pre prípad výkonu práva, ktoré patrilo dlžníkovi podľa zmluvy (prípadne podľa zákona), ide o neplatné dojednanie pre rozpor s účelom zákona podľa § 39 Občianskeho zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Vzhľadom na uvedené súd dospel k záveru, že zmluvné dojednanie, týkajúce sa zmluvnej pokuty je neplatné pre rozpor so zákonom.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_73_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/73/2023",
+      "decision_date": "24.04.2024",
+      "ecli": "ECLI:SK:KSBB:2024:1215205075.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

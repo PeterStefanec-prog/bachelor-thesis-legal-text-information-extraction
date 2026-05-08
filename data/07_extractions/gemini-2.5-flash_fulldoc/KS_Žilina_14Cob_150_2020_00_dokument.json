@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16617,
+    "completion_tokens": 2411,
+    "cost_usd": 0.0449,
+    "latency_seconds": 9.18,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 30 000 EUR od žalovaného za porušenie Zmluvy o odbornej spolupráci, konkrétne za porušenie mlčanlivosti a sprístupňovanie obchodného tajomstva prostredníctvom tretej osoby. Žalovaný namietal neplatnosť dojednania o zmluvnej pokute a popieral porušenie povinností.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý žalobu zamietol z dôvodu neplatnosti dojednania o zmluvnej pokute. Žalovaný má nárok na plnú náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "Za porušenie môže byť spracovateľovi udelená zmluvná pokuta maximálne do výšky 30.000,- Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "maximálne do výšky 30.000,- Eur",
+          "evidence": {
+            "quote": "Za porušenie môže byť spracovateľovi udelená zmluvná pokuta maximálne do výšky 30.000,- Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 30000.0,
+            "evidence": {
+              "quote": "Preto zotrval na zmluvnej pokute vo výške 30.000,- Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Na základe vyššie uvedených skutočností okresný súd žalobu zamietol, nakoľko posúdil zmluvné dojednanie o zmluvnej pokute ako neplatné, preto nárok žalobcu titulom zmluvnej pokuty je neopodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Na základe vyššie uvedených skutočností okresný súd žalobu zamietol, nakoľko posúdil zmluvné dojednanie o zmluvnej pokute ako neplatné, preto nárok žalobcu titulom zmluvnej pokuty je neopodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu, pretože dojednanie o zmluvnej pokute bolo neurčité a tým neplatné. Ustanovenie § 544 ods. 2 Občianskeho zákonníka vyžaduje, aby bola výška pokuty alebo spôsob jej určenia dohodnutá jednoznačne. Formulácia „maximálne do výšky 30.000,- Eur“ nespĺňa túto požiadavku, pretože neuvádza konkrétnu sumu ani spôsob výpočtu, ani kto je oprávnený určiť jej výšku. Odvolací súd sa s týmto záverom stotožnil a potvrdil rozsudok okresného súdu.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvné strany si v Zmluve o odbornej spolupráci dohodli pre prípad porušenia zmluvnej povinnosti aj zmluvnú pokutu, a to \"maximálne do výšky 30.000,- Eur.\" Z daného zmluvného dojednania nevyplýva konkrétna pevná jednorazová suma - výška zmluvnej pokuty, ako ani spôsob výpočtu určenia výšky zmluvnej pokuty. Teda nie je zrejmá výška zmluvnej pokuty, ale ani kto je oprávnený určiť jej výšku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd zároveň poukazuje na to, že vzhľadom na posúdenie neplatnosti dojednania o zmluvnej pokute, súd sa už nezaoberal porušením zmluvnej povinnosti žalovaným, nakoľko by to bolo nadbytočné, keďže prípadným porušením povinnosti nemožno priznať nárok na zmluvnú pokutu z dôvodu vyslovenia neplatnosti takej dohody.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd mal za to, že Článok VII. Zmluvy o obchodnej spolupráci bod 2/ nespĺňa kritériá platnosti ani v rovine jeho určitosti, a to vzhľadom na skutočnosť neurčitosti konkretizácie skutku - povinnosti, keďže nevyplýva samotná jasná, nezameniteľná kvalifikácia povinnosti, ktorej porušenie má byť sankcionované zmluvnou pokutou. Z predmetného dojednania Článku VII. bod (2) predmetnej zmluvy nevyplýva ani to, komu má byť zmluvná pokuta zaplatená.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Odvolací súd v rovine vecnej správnosti záverov okresného súdu pre úplnosť pripomína, že pri komplexnom skúmaní platnosti dojednania o zmluvnej pokute z hľadiska dobrých mravov je nutné uvážiť funkcie zmluvnej pokuty (funkciu preventívnu, uhradzovaciu a sankčnú), ktorú pri zmluvnom dojednaní \"maximálne do výšky 30.000 Eur\", keď rozhodnutie o samotnej výške zmluvnej pokuty je ponechané na uvážení subjektu, ktorý nie je v zmluve a ani v Článku VII. Zmluvy o obchodnej spolupráci bod 2 uvedený, potom rozhodne nespĺňa kritériá určitosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "účelom zmluvnej pokuty zakotvenej v ustanovení § 544 a § 545 Občianskeho zákonníka je donútiť dlžníka hrozbou majetkovej sankcie k riadnemu splneniu záväzku. Zmluvná pokuta teda predovšetkým predstavuje hrozbu dlžníkovi, že pokiaľ nesplní svoju (najmä) zmluvnú povinnosť, vznikne mu povinnosť poskytnúť pre tento prípad dojednané plnenie, t.j. pokutu. Dojednaná zmluvná pokuta má teda v prvom rade čeliť porušeniu povinnosti (funkcia prevenčná), lebo ak bude zabezpečená povinnosť plnená, bola hlavná funkcia zmluvnej pokuty vyčerpaná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zmluvou určená peňažná suma, ktorú je dlžník povinný zaplatiť veriteľovi, alebo veriteľ dlžníkovi, ak dôjde k porušeniu povinností, ktoré na seba zmluvou prevzali, a to aj vtedy, keď porušením povinností veriteľovi a dlžníkovi nevznikla škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_14Cob_150_2020_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "14Cob/150/2020",
+      "decision_date": "27.05.2021",
+      "ecli": "ECLI:SK:KSZA:2021:6119391603.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

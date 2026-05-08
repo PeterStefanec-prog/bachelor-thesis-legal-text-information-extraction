@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8954,
+    "completion_tokens": 2831,
+    "cost_usd": 0.0395,
+    "latency_seconds": 11.26,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 0,5% z dlžnej čiastky za každý deň omeškania z titulu nezaplateného nájomného za mesiac august 2012. Súd prvej inštancie priznal zmluvnú pokutu len za obdobie do zániku nájomnej zmluvy a vo zvyšnej časti žalobu zamietol.",
+      "verdict_summary": "Krajský súd zmenil rozsudok súdu prvej inštancie v zamietajúcej časti a uložil žalovanému povinnosť zaplatiť žalobcovi sumu 533 eur, čím žalobca dosiahol celkový úspech v konaní vo výške 44,46%.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 16/2012",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade omeškania nájomcu so zaplatením mesačného nájomného o viac ako 14 dní sa nájomca zaväzuje zaplatiť prenajímateľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,5% z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 650.0,
+            "evidence": {
+              "quote": "0,5% mesačného nájomného 650 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 891.0,
+            "evidence": {
+              "quote": "o zaplatenie 891 eur",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 643.5,
+            "evidence": {
+              "quote": "žalovaný je povinný zaplatiť žalobcovi sumu 533 eur",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "žalovaný sa zaviazal zaplatiť žalobcovi 89,14 eur s príslušenstvom",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd je preto toho názoru, že žalobca má nárok na zaplatenie zmluvnej pokuty aj za nasledujúce obdobie od skončenia nájomnej zmluvy až do zaplatenia dlžného nájomného, teda aj za obdobie od 01.09.2012 do 11.02.2013, vo výške 0,5% zo sumy 650 eur za 164 dní omeškania v celkovej sume 533 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie priznal zmluvnú pokutu len za obdobie do zániku nájomnej zmluvy (31.08.2012), čo predstavovalo 110,50 eur. Odvolací súd však tento záver zmenil a konštatoval, že nárok na zmluvnú pokutu nie je viazaný na skončenie nájomného vzťahu, ale na porušenie zmluvnej povinnosti zaplatiť nájomné. Preto priznal zmluvnú pokutu aj za obdobie od 01.09.2012 do 11.02.2013 vo výške 533 eur, keďže k zaplateniu dlžnej čiastky došlo až 12.02.2013. Celkovo tak žalobca získal 110,50 EUR + 533 EUR = 643,50 EUR.",
+          "key_quotes": [
+            {
+              "quote": "Avšak už vzniknutý nárok na zmluvnú pokutu odo dňa porušenia povinnosti dňa 29.07.2013 do zániku nájomnej zmluvy dňa 31.08.2012 vo výške 110,50 eur je žalobca oprávnený od žalovaného požadovať.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd je preto toho názoru, že žalobca má nárok na zaplatenie zmluvnej pokuty aj za nasledujúce obdobie od skončenia nájomnej zmluvy až do zaplatenia dlžného nájomného, teda aj za obdobie od 01.09.2012 do 11.02.2013, vo výške 0,5% zo sumy 650 eur za 164 dní omeškania v celkovej sume 533 eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ je teda pri zmluvnej pokute dohodnutej percentom za každý deň omeškania splnená základná podmienka, že k omeškaniu, ako porušeniu povinnosti zakladajúcemu právo na zmluvnú pokutu došlo ešte za trvania hlavného záväzku, čo v posudzovanom prípade nie je sporné, má zmluvná strana právo na zmluvnú pokutu vo výške zodpovedajúcej celému obdobiu omeškania, i keď v jeho priebehu došlo k zániku hlavného záväzku a tým i k zániku akcesorickej dohody o zmluvnej pokute.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pokiaľ žalovaný žiadal žalobu zamietnuť aj preto, že domáhanie sa zmluvnej pokuty zo strany žalobcu považoval za rozporné s dobrými mravmi, súd uviedol, že podľa čl. IV. bod 4.9 nájomnej zmluvy počas trvania nájomného vzťahu mohol prenajímateľ použiť zloženú kauciu na náhradu škody spôsobenej žalovaným ako nájomcom alebo na úhradu nedoplatkov podľa nájomnej zmluvy. Bolo teda na ňom, na aký účel ju použije. Po skončení nájmu a vyúčtovaní zálohových platieb bol prenajímateľ povinný nájomcovi vrátiť kauciu zníženú o sumy, ktoré si podľa tohto zmluvného ustanovenia započítal. Žalobca v konečnom dôsledku tento postup aj dodržal, čo je zrejmé z faktúry č. 01/2013 a z konania vedeného na súde pod sp. zn. 16C/212/2012. Nárok na zmluvnú pokutu bol ustanovený v nájomnej zmluve a žalovaný ako zmluvná strana obsah zmluvy poznal, mal si byť vedomý aj možnosti uplatnenia takejto zmluvnej sankcie zo strany žalobcu. Z týchto dôvodov súd nedospel k názoru, že postup žalobcu bol v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pokiaľ nárok na zaplatenie zmluvnej pokuty nevznikol, so zánikom zabezpečeného záväzku zaniká aj zabezpečovací záväzok. Ak však zabezpečená povinnosť bola porušená a nárok na zaplatenie zmluvnej pokuty vznikol, zánik hlavného záväzku už existenciu tohto nároku žiadnym spôsobom neovplyvňuje. Nestotožňuje sa teda so záverom súdu prvej inštancie v napadnutej časti rozhodnutia, že je oprávnený od žalovaného požadovať iba zmluvnú pokutu od porušenia povinnosti do zániku nájomnej zmluvy. Za takéhoto stavu výkladu úpravy zmluvnej pokuty by táto neplnila svoju preventívnu ani reparačnú a ani represívnu funkciu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd však dohodnutú zmluvnú pokutu nepovažoval za neprimeranú hodnote a významu zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podstatnou okolnosťou bolo, že suma zmluvnej pokuty narastala postupne, každým dňom omeškania. Teda jej výška závisela od doby, počas ktorej si žalovaný neplnil svoju zmluvnú povinnosť. Ak by súd takto naakumulovanú sumu znížil, zvýhodnil by dlžníka. Čím dlhšie by totiž neplatil, tým viac by bol zvýhodnený oproti veriteľovi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca v konečnom dôsledku tento postup aj dodržal, čo je zrejmé z faktúry č. 01/2013 a z konania vedeného na súde pod sp. zn. 16C/212/2012.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_17Co_349_2015_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "17Co/349/2015",
+      "decision_date": "17.08.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3814202672.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14143,
+    "completion_tokens": 2639,
+    "cost_usd": 0.0441,
+    "latency_seconds": 10.44,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 22.802,26 EUR titulom zmluvnej pokuty a zákonného úroku z omeškania za omeškanie s úhradou zálohovej faktúry za zhotovenie projektovej dokumentácie. Žalovaný namietal neprimeranosť výšky zmluvnej pokuty a žiadal súd o jej moderáciu.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorý žalovanému uložil zaplatiť sumu 1.508,18 EUR ako zmluvnú pokutu a úroky z omeškania, pričom vo zvyšku žalobu zamietol a priznal žalovanému nárok na náhradu trov konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 20170001",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania objednávateľa s úhradou faktúry alebo iného peňažného záväzku",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "15% z ceny diela",
+          "evidence": {
+            "quote": "jednorazovej zmluvnej pokuty vo výške 15% dohodnutej ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 152015.08,
+            "evidence": {
+              "quote": "za dojednanú cenu diela 3.870.000 Kč bez DPH (152 015,08 EUR)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 22802.26,
+            "evidence": {
+              "quote": "Žalobca si žalobou uplatnil voči žalovanému zmluvnú pokutu podľa bodu 11.4 zmluvy vo výške 15% z ceny diela, čo predstavuje sumu 580.500 Kč/ 22.802,26 EUR/",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1508.18,
+            "evidence": {
+              "quote": "S prihliadnutím na uvedené znížil žalobcom uplatnenú zmluvnú pokutu na sumu 1.508,18 EUR, ktorú považoval za primeranú a vo zvyšku nárok žalobcu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8% ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8% ročne zo sumy 10.017,72 EUR od 16.9.2017 do 29.9.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "S prihliadnutím na uvedené znížil žalobcom uplatnenú zmluvnú pokutu na sumu 1.508,18 EUR, ktorú považoval za primeranú a vo zvyšku nárok žalobcu zamietol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že výška uplatnenej zmluvnej pokuty je neprimeraná a využil moderačné právo podľa § 301 Obchodného zákonníka. Zohľadnil, že úhrada zálohovej faktúry nebola nevyhnutnou podmienkou pre plnenie zmluvy žalobcom a že zmluvná pokuta bola dojednaná pevnou sumou, nezávislou od trvania porušenia. Súd znížil zmluvnú pokutu na 15% z omeškanej sumy 10.054,53 EUR, čo predstavuje 1.508,18 EUR, a to aj s prihliadnutím na to, že žalobca netvrdil ani nepreukázal vznik škody.",
+          "key_quotes": [
+            {
+              "quote": "Súd po posúdení všetkých okolností prejednávanej veci dospel k záveru, že výška žalobcom uplatnenej zmluvnej pokuty je neprimeraná a moderačné právo využije.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "V súdenej veci bola zmluvná pokuta síce dojednaná na zabezpečenie zmluvnej povinnosti žalovaného zaplatiť faktúru alebo iný peňažný záväzok v lehote splatnosti, avšak výška zmluvnej pokuty 22.802,26 EUR uplatnenej z dôvodu omeškania so zaplatením sumy 10.054,55 EUR je neprimeraná, nezodpovedá žiadnej z funkcií zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Priznanie zmluvnej pokuty podstatne prevyšujúcej právo, ktoré zabezpečuje, čo by viedlo k celkom neodôvodnenému majetkovému prospechu žalobcu a vo vzťahu k povinnému by bolo neúmerne prísnou a bezdôvodnou sankciou, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ teda má zmluvná pokuta zjavne plniť v súdenej veci predovšetkým funkciu sankčnú, súd sa javilo ako primerané znížiť jej výšku až do sumy vyčíslenej v dohodnutej výške zo sumy, ktorej nezaplatenie riadne a včas a zároveň v omeškaní viac ako 30 dní je dôvodom jej uplatnenia, t.j vo výške 15% z omeškanej sumy 10.054,53 EUR",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Nebolo podľa názoru súdu primerané a súladné so zásadou poctivého obchodného styku v obchodno-záväzkových vzťahoch požadovať zaplatenie zmluvnej pokuty z celkovej dojednanej ceny diela za skutkového stavu, že toto dielo nebude realizované bez zavinenia žalovaného v celom rozsahu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Priznanie zmluvnej pokuty podstatne prevyšujúcej právo, ktoré zabezpečuje, čo by viedlo k celkom neodôvodnenému majetkovému prospechu žalobcu a vo vzťahu k povinnému by bolo neúmerne prísnou a bezdôvodnou sankciou, ktorá nie je nevyhnutná pre naplnenie zabezpečovacej funkcie zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "nebolo preukázané ani tvrdené, že žalobcovi neuhradením časti zálohovej platby vo výške 10.054,55 EUR v lehote viac ako 30 dní odo dňa splatnosti vznikla škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 22.802,26 EUR uplatnenej z dôvodu omeškania so zaplatením sumy 10.054,55 EUR je neprimeraná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "súd sa nestotožnil s tvrdeniami žalobcu, že k faktickému ukončeniu zmluvy prišlo z dôvodu tvrdeného nezáujmu žalovaného o ďalšie plnenie zmluvy, napokon ako prvý vypracoval a doručil návrh dohody o ukončení zmluvy žalobca žalovanému.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "súd sa nestotožnil s tvrdeniami žalobcu, že k faktickému ukončeniu zmluvy prišlo z dôvodu tvrdeného nezáujmu žalovaného o ďalšie plnenie zmluvy, napokon ako prvý vypracoval a doručil návrh dohody o ukončení zmluvy žalobca žalovanému.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_26_2021_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/26/2021",
+      "decision_date": "28.09.2022",
+      "ecli": "ECLI:SK:KSBA:2022:6119337417.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

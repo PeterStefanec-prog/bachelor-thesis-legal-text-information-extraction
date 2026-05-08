@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10577,
+    "completion_tokens": 1177,
+    "cost_usd": 0.0382,
+    "latency_seconds": 29.27,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Bariak, s.r.o. požadoval zaplatenie sumy 4 560 eur s príslušenstvom od žalovaného Bc. Soňa Zacharová za medzinárodnú nákladnú prepravu tovaru. Žalovaný si započítal pohľadávku vo výške 4 000 eur ako zmluvnú pokutu za porušenie povinností žalobcu.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, že zmluvná pokuta nebola platne dohodnutá a žalovanému nevznikla pohľadávka spôsobilá na započítanie.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Jednalo sa o porušenie povinností žalobcu dodať tovar v čas podľa objednávky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "200 eur za každé porušenie povinností",
+          "evidence": {
+            "quote": "si jednostranne započítal svoju pohľadávku titulom vyčíslenia dohodnutej zmluvnej pokuty za každé porušenie povinností po 200 eur v celkovej sume 4 000 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4000,
+            "evidence": {
+              "quote": "si jednostranne započítal svoju pohľadávku titulom vyčíslenia dohodnutej zmluvnej pokuty za každé porušenie povinností po 200 eur v celkovej sume 4 000 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Nakoľko právnym základom započítacieho prejavu žalovaného proti splatnej pohľadávke žalobcu je neplatný právny úkon, žalovanému nevznikla pohľadávka spôsobilá na započítanie, preto súd na započítací prejav žalovaného neprihliadal.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Súd žalobcovi súčasne priznal i zákonné úroky z omeškania od splatnosti jednotlivých istín až do jeho skutočného zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Na platnosť dohody o zmluvnej pokute je potrebné ju vykonať v písomnej forme, inak je v rozpore s § 40 ods. 1 Občianskeho zákonníka a ide o absolútnu neplatnosť právneho úkonu, z ktorého nenastanú právne účinky.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že zmluvná pokuta nebola dohodnutá písomne, čo je v rozpore s § 40 ods. 1 Občianskeho zákonníka, a preto je neplatná. Žalovaný nepredložil dôkaz o písomnej dohode o zmluvnej pokute. Súd preto na započítací prejav žalovaného neprihliadal a žalobcovi priznal zákonné úroky z omeškania.",
+          "key_quotes": [
+            {
+              "quote": "Na platnosť dohody o zmluvnej pokute je potrebné ju vykonať v písomnej forme, inak je v rozpore s § 40 ods. 1 Občianskeho zákonníka a ide o absolútnu neplatnosť právneho úkonu, z ktorého nenastanú právne účinky.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_15Cob_25_2021_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "15Cob/25/2021",
+      "decision_date": "22.06.2021",
+      "ecli": "ECLI:SK:KSNR:2021:6119371230.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

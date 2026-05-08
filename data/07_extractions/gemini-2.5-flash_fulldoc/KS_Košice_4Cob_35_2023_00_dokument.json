@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13348,
+    "completion_tokens": 2067,
+    "cost_usd": 0.0374,
+    "latency_seconds": 8.59,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca uplatnil nárok na zaplatenie zmluvnej pokuty vo výške 4.401,75 eur a paušálnu náhradu nákladov spojených s uplatnením pohľadávky 40,- eur, titulom omeškania žalovaného s úhradou nájomného a úhrad za energie a služby podľa Zmluvy o nájme nebytových priestorov. Žalovaný nárok neuznal, vzniesol námietku premlčania, duplicity uplatnenia nároku a nesprávneho výpočtu zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok Okresného súdu Košice I, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi 4.396,25 eur a paušálnu náhradu nákladov 40,- eur, a zamietol žalobu v prevyšujúcej časti 5,50 eur. Žalobcovi bol priznaný nárok na náhradu trov odvolacieho konania v plnom rozsahu.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Pre prípad porušenia tejto povinnosti nájomcu (aj iných uvedených v Zmluve o nájme) sa strany dohodli na sankcii - zmluvnej pokute",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnej pokute vo výške 0,1 % z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4401.75,
+            "evidence": {
+              "quote": "uplatnil proti žalovanému nárok na zaplatenie 4.401,75 eur, titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 4396.25,
+            "evidence": {
+              "quote": "žalobcovi vznikol nárok na dohodnutú zmluvnú pokutu vo výške 4.396,25 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Zmluvná pokuta predstavuje samostatné majetkové právo a na rozdiel od úrokov z omeškania nie je príslušenstvom pohľadávky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie vo veci dostatočne zistil skutkový stav, vec správne právne posúdil a vo veci rozhodol správne, ak zaviazal žalovaného na zaplatenie zmluvnej pokuty 4.396,25 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že nárok na zmluvnú pokutu je dôvodný pre omeškanie s úhradou nájomného a energií, pričom zohľadnil premlčanie a vylúčil duplicitné uplatnenie nároku. Časť nároku vo výške 5,50 eur bola zamietnutá, pretože sa týkala administratívnych poplatkov, na ktoré sa dohoda o zmluvnej pokute nevzťahovala. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, pričom sa stotožnil s jeho právnym posúdením a skutkovými zisteniami.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie tak dospel k záveru, že žalobcovi vznikol nárok na dohodnutú zmluvnú pokutu vo výške 4.396,25 eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Nárok žalobcu na zmluvnú pokutu z faktúry č. S2017039, č. S2017052, č. S2017064, č. S2018028 a č. S2019064 a to v uplatnenej výške 5,50 eur nepovažoval za dôvodný, pretože patrí pod peňažné plnenia (administratívne poplatky a poplatky súvisiace s nákladmi na doručovanie), na ktoré sa dohoda o zmluvnej pokute neviaže",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa plne stotožňuje s názorom súdu prvej inštancie, že za omeškanie s úhradou faktúry č. S2017028, č. S2018043, č. S2019022 a č. S2020062, ktorými žalobca fakturoval žalovanému vyúčtovanie energií vznikol žalobcovi nárok na zmluvnú pokutu v zmysle článku V ods. 10 Zmluvy o nájme",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Taktiež nebolo sporné, že žalovaný bol s platbami podľa Zmluvy o nájme v omeškaní, jeho doba ako aj dátum úhrady dlhu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta predstavuje samostatné majetkové právo a na rozdiel od úrokov z omeškania nie je príslušenstvom pohľadávky.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_35_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/35/2023",
+      "decision_date": "08.08.2023",
+      "ecli": "ECLI:SK:KSKE:2023:6121310260.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

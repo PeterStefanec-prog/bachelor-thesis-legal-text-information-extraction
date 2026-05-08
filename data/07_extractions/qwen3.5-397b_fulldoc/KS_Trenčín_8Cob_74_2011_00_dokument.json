@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 6104,
+    "completion_tokens": 1713,
+    "cost_usd": 0.0064,
+    "latency_seconds": 20.63,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 3.000 EUR (následne uplatnenej vo výške 180 EUR v odvolacom konaní) za omeškanie s platbou nájomného, ktorú súd prvého stupňa zamietol pre rozpor s dobrými mravmi. Žalobca namietal neplatnosť tohto záveru a žiadal priznanie pokuty alebo jej primerané zníženie.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby o zmluvnú pokutu a vrátil vec na ďalšie konanie, keďže dospel k záveru, že dojednanie pokuty je platné, ale je potrebné preskúmať jej primeranosť."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie"
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "V časti uplatnenej zmluvnej pokuty vo výške 3000,- eur, vyúčtovanej faktúrou č. 40902191"
+            },
+            "value": 3000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním"
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Predmetom odvolania je žalobcom uplatnená zmluvná pokuta vo výške 180,- eur s 0,1% úrokom z omeškania od 13.11.2009 do zaplatenia"
+          },
+          "rate_value": "0,1% denne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním o viac ako 20 dní"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie"
+            },
+            "value": "returned"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd považuje dojednanie o zmluvnej pokute v čl. IV. bod 4.8 za platné."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie"
+            }
+          ],
+          "legal_reasoning_summary": "Odvolací súd nesúhlasil so súdom prvého stupňa, že zmluvná pokuta je v rozpore s dobrými mravmi, a konštatoval, že kumulácia úrokov z omeškania a zmluvnej pokuty je prípustná. Keďže však súd prvého stupňa vychádzal z nesprávneho právneho posúdenia a nepreskúmal otázku primeranosti výšky pokuty podľa § 301 Ob.z., odvolací súd rozhodnutie zrušil. Vec bola vrátená na ďalšie konanie, aby súd prvého stupňa posúdil, či je výška pokuty neprimerane vysoká a prípadne využil svoje moderačné právo."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "bola dohodnutá výška zmluvnej pokuty ako 3-násobok mesačnej odplaty"
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3-násobok mesačnej odplaty"
+        },
+        "related_claim_ref": "faktúra č. 40902191"
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_74_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/74/2011",
+      "decision_date": "26.01.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3210200755.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

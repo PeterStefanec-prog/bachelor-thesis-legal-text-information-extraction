@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10,
+      "adaptive_top_k_call2": 9
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 17142,
+      "completion_tokens": 1078,
+      "cost_usd": 0.0092,
+      "latency_seconds": 22.25,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 12006,
+      "completion_tokens": 2081,
+      "cost_usd": 0.0096,
+      "latency_seconds": 39.31,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za stavebné práce podľa Zmluvy o dielo, pričom žalovaný uplatnil kompenzačnú námietku voči nároku na zmluvnú pokutu za oneskorené odovzdanie diela. Spor sa týkal oprávnenosti fakturácie naviac prác v čiastkových faktúrach a výšky zmluvnej pokuty za omeškanie zhotoviteľa.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý priznal žalobcovi nárok na časť istiny predstavujúcu cenu naviac prác a znížil uplatnenú zmluvnú pokutu na sumu 69.935,40 EUR, ktorú považoval za primeranú.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca bol od 01.07.2019 do 15.11.2019 v omeškaní s povinnosťou včas protokolárne odovzdať dielo podľa zmluvy",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_10"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "2,5% denne z ceny diela",
+          "evidence": {
+            "quote": "dohodnutá výška zmluvnej pokuty v prospech objednávateľa diela za každý aj začatý deň omeškania (2,5%)",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_10"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 218548.11,
+            "evidence": {
+              "quote": "hodnotu si strany stanovili v čl. IV. v sume 218.548,11 Eur bez DPH, z ktorej vychádzala i dohodnutá výška zmluvnej pokuty",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_10"
+            }
+          },
+          "original_claimed": {
+            "value": 139870.8,
+            "evidence": {
+              "quote": "spolu predstavuje uplatnený nárok na zmluvnú pokutu vo výške 139.870,80 Eur",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_10"
+            }
+          },
+          "final_awarded": {
+            "value": 69935.4,
+            "evidence": {
+              "quote": "Súd prvej inštancie považoval vzhľadom na uvedené za primeranú výšku nároku žalovaného na zmluvnú pokutu len vo výške 69.935,40 Eur",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "žalobcovi vznikol nárok na 9 % úrok z omeškania ročne len z istiny 31.235,70 Eur od 16.12.2019 až do zaplatenia",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_13"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+              "quote": "Súd prvej inštancie preto zobral do úvahy namietanú neprimeranosť dohodnutej výšky zmluvnej pokuty v zmysle čl. VI. bod 1 Zmluvy žalobcom, takto neprimerane vysokú pokutu znížil len na žalovaným stanovenú zmluvnú pokutu vo výške 69.935,40 Eur, ktorú považoval za postačujúcu za porušenie povinnosti žalobcom včas odovzdať predmet diela žalovanému a jej duplicitné uplatňovanie súd považoval v rozpore s dobrými mravmi a zásadou poctivého obchodného styku."
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Jej duplicitné uplatňovanie žalovaným za rovnaké obdobie omeškania s odovzdaním diela pri uplatňovaní nároku žalobcu i z inej faktúry považoval súd prvej inštancie za rozporné s dobrými mravmi a poctivým obchodným stykom."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Dohodnutou zmluvnou sankciou v čl. VI. bod 1 Zmluvy si žalobca mienil zabezpečiť včasné protokolárne odovzdanie diela, ktorého hodnotu si strany stanovili v čl. IV. v sume 218.548,11 Eur bez DPH, z ktorej vychádzala i dohodnutá výška zmluvnej pokuty v prospech objednávateľa diela za každý aj začatý deň omeškania (2,5%)."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Žalovaný výšku škody, ktorá mu v dôsledku oneskoreného odovzdania predmetu diela vznikla, nešpecifikoval a poukazoval len na uplatňovanie zmluvných sankcií od investora, ktoré však žiadnym spôsobom nezdokladoval."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Žalovaný by v prípade úplného uplatnenia svojho nároku na zmluvnú pokutu podľa čl. VI bod 1 zmluvy za obdobie od 01.07.2019 do 15.11.2019 mohol požadovať uhradiť žalobcom až sumu 748.527,26 Eur, avšak žalovaný v konaní si uplatnil len nárok na sumu 139.870,80 Eur, čo predstavuje 64% z dohodnutej sumy podľa čl. IV. Zmluvy o dielo."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Žalobca pritom poukazoval na to, že dokončenie a odovzdanie prác včas v zmysle Zmluvy o dielo ovplyvňovali žalovaným požadované naviac práce podľa objednávok a ich dokončenie bolo tiež ovplyvnené i prácami tretích subjektov, s ktorými mal žalovaný zmluvný vzťah na rovnakom diele."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+                "quote": "Hoci bol žalobca v omeškaní s odovzdaním diela už od 01.07.2019, žalovaný ani žiadnym spôsobom žalobcovi neavizoval možné uplatnenie si tohto nároku voči nemu v zmysle zmluvy až do odovzdania diela, vedomý si objednávania naviac prác u žalobcu po dohodnutom termíne odovzdania diela."
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "negative"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+              "quote": "Súd prvej inštancie preto zobral do úvahy namietanú neprimeranosť dohodnutej výšky zmluvnej pokuty v zmysle čl. VI. bod 1 Zmluvy žalobcom, takto neprimerane vysokú pokutu znížil len na žalovaným stanovenú zmluvnú pokutu vo výške 69.935,40 Eur, ktorú považoval za postačujúcu za porušenie povinnosti žalobcom včas odovzdať predmet diela žalovanému a jej duplicitné uplatňovanie súd považoval v rozpore s dobrými mravmi a zásadou poctivého obchodného styku."
+            },
+            {
+              "chunk_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+              "quote": "Žalovaný výšku škody, ktorá mu v dôsledku oneskoreného odovzdania predmetu diela vznikla, nešpecifikoval a poukazoval len na uplatňovanie zmluvných sankcií od investora, ktoré však žiadnym spôsobom nezdokladoval."
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie aplikoval moderačné právo podľa § 301 Obchodného zákonníka, keďže považoval pôvodne uplatnenú sumu 139.870,80 EUR za neprimerane vysokú vzhľadom na to, že žalovaný nepreukázal vzniknutú škodu a duplicitne uplatňoval tú istú pokutu vo viacerých konaniach, čo bolo v rozpore s dobrými mravmi. Súd znížil pokutu na sumu 69.935,40 EUR, ktorú považoval za postačujúcu, pričom zohľadnil aj skutočnosť, že žalovaný objednával naviac práce po lehote splatnosti a oneskoril vybavenie stavebného povolenia, čo ovplyvnilo termín odovzdania diela. Odvolací súd toto rozhodnutie potvrdil, keďže žalovaný vo svojom odvolaní nenapadol dôvody moderácie, ale iba trval na pôvodnej vyššej sume."
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.factor.zabezpecovacia_funkcia:KS_Banská_Bystrica_43Cob_30_2023_00_dokument.pdf_chunk_11",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_30_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/30/2023",
+      "decision_date": "27.07.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6119440157.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "case_context": {
+    "dispute_summary": "string (2-3 vety - o com bol spor a co zalobca pozadoval)",
+    "verdict_summary": "string (1-2 vety - celkovy vysledok konania)",
+    "contract_type": "uver|pozicka|najom|dielo|kupna|dodavka_sluzieb|sprostredkovatelska|telekom|preprava|mandatna|ine|nezname",
+    "relationship_type": "B2B|B2C|C2C|unknown"
+  },
+
+  "contractual_penalties": [
+    {
+      "penalty_id": "pokuta_1",
+      "related_claim_ref": "string|null (napr. 'Faktura c. 10/2020' - na rozlisenie pokut ak ich je viac, inak null)",
+
+      "breach_type": {
+        "value": "late_payment|non_monetary_performance|early_termination|breach_of_confidentiality|other",
+        "evidence": {
+          "quote": "string",
+          "chunk_id": "string"
+        }
+      },
+
+      "rate_definition": {
+        "type": "percent_denne|percent_mesacne|percent_rocne|percent_jednorazovo|percent_z_ceny|percent_z_dlznej_sumy|fixna_suma_denne|fixna_suma_mesacne|fixna_suma_jednorazovo|ine",
+        "value_raw": "string|null (napr. '0,05 % denne z dlznej sumy' alebo '500 EUR za kazdy den omeskania')",
+        "evidence": {
+          "quote": "string",
+          "chunk_id": "string"
+        }
+      },
+
+      "amounts": {
+        "currency": "EUR|SKK|CZK|unknown",
+
+        "secured_principal": {
+          "value": "number|null",
+          "evidence": {
+            "quote": "string|null",
+            "chunk_id": "string|null"
+          }
+        },
+
+        "original_claimed": {
+          "value": "number|null",
+          "evidence": {
+            "quote": "string|null",
+            "chunk_id": "string|null"
+          }
+        },
+
+        "final_awarded": {
+          "value": "number|null",
+          "evidence": {
+            "quote": "string|null",
+            "chunk_id": "string|null"
+          }
+        }
+      },
+
+      "associated_interest": {
+        "awarded": "yes|no|unclear",
+        "rate_value": "string|null (napr. '9,0 % rocne' alebo 'zakonny urok z omeskania')",
+        "evidence": {
+          "quote": "string|null",
+          "chunk_id": "string|null"
+        }
+      }
+    }
+  ]
+}

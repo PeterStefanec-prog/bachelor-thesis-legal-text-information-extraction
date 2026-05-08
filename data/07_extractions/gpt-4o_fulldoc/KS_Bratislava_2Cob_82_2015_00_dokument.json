@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10805,
+    "completion_tokens": 1190,
+    "cost_usd": 0.0389,
+    "latency_seconds": 21.83,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca T.O.P. AUTO Bratislava, a. s. požadoval od žalovaného B2B CLEAN s.r.o. zaplatenie sumy 135.160,32 EUR, ktorá zahŕňala vrátenie poskytnutej zľavy a zmluvnú pokutu. Žalovaný nesplnil záväzok kúpiť minimálne 20 vozidiel LAND ROVER, čím porušil rámcovú kúpnu zmluvu.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi požadovanú sumu.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný svoje záväzky zo zmluvy nesplnil, sankcie, ktoré si žalobca v zmysle dohody uplatnil dobrovoľne nesplnil a s ich riadnym splnením je v omeškaní",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "vo výške 67.580,16 EUR",
+          "evidence": {
+            "quote": "nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 67580.16,
+            "evidence": {
+              "quote": "Krajský súd v Bratislave rozsudok Okresného súdu Bratislava II č. k. 26Cb/60/2013-174 zo dňa 09.09.2014 potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 8,75 % ročne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa mal za to, že podľa zásady \"pacta sunt servanda\" - dohody sa majú plniť, nie sú dané také okolnosti, ktoré by umožnili súdu využiť moderačné oprávnenie a dohodnutú sankciu zmluvnú pokutu znížiť.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa rozhodol, že zmluvná pokuta je primeraná vzhľadom na hodnotu a význam zabezpečenej povinnosti. Odvolací súd sa stotožnil s týmto posúdením a potvrdil, že žalovaný nesplnil svoje záväzky podľa zmluvy. Zmluvná pokuta bola dohodnutá ako paušalizovaná náhrada škody a súd nenašiel dôvody na jej zníženie.",
+          "key_quotes": [
+            {
+              "quote": "Zmluvná pokuta plní prevenčnú povinnosť, reparačnú a aj sankčnú, keďže predstavuje sankciu pre toho, kto porušil povinnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Vzhľadom na charakter sporu má dohodnutá zabezpečovacia sankcia funkciu paušalizovanej náhrady škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, môže byť hodnotená ako neprimeraná.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Výška zmluvnej pokuty je defacto na úrovni hodnoty 100 % zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný svoje záväzky zo zmluvy nesplnil, sankcie, ktoré si žalobca v zmysle dohody uplatnil dobrovoľne nesplnil a s ich riadnym splnením je v omeškaní",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_82_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/82/2015",
+      "decision_date": "08.03.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1213200497.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

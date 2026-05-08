@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17018,
+    "completion_tokens": 1962,
+    "cost_usd": 0.0112,
+    "latency_seconds": 23.77,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 82 775 eur za omeškanie žalovaného s úhradou ceny diela (dodávka a montáž automatických dverí), ktorá bola dohodnutá vo výške 25 eur za každý deň omeškania. Žalovaný namietal neprimeranosť výšky pokuty a vadné plnenie diela, pričom súdy nižších inštancií už v predchádzajúcom konaní právoplatne rozhodli o povinnosti zaplatiť cenu diela.",
+      "verdict_summary": "Najvyšší súd dovolanie žalovaného odmietol, čím potvrdil rozhodnutie odvolacieho súdu, ktorý priznal žalobcovi nárok na zaplatenie zmluvnej pokuty v požadovanej sume 82 775 eur.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "dohoda o zmluvnej pokute, ktorá bola dojednaná v prospech žalobcu pre prípad omeškania žalovaného ako objednávateľa s úhradou ceny diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "25,- eur za každý deň omeškania",
+          "evidence": {
+            "quote": "vo výške 25,- eur za každý deň omeškania, po márnom uplynutí doby splatnosti príslušného daňového dokladu vystaveného žalobcom po zhotovení diela",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 24650.42,
+            "evidence": {
+              "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 87775,
+            "evidence": {
+              "quote": "žalobca si uplatnil iba sumu 87.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 82775,
+            "evidence": {
+              "quote": "zaviazal žalovaného na zaplatenie zmluvnej pokuty vo výške 82.775,- eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 7.891,02 eur od 16.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie právne uzavrel, že zmluvná pokuta medzi stranami sporu dohodnutá a uvedená vo VOP žalobcu nebola neprimeraná",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že zmluvná pokuta je primeraná, pretože zabezpečovala hlavnú povinnosť zaplatenia ceny diela, ktorá bola značná. Vysoká celková suma pokuty vyplynula z dlhodobého omeškania žalovaného (takmer 9 rokov) a dĺžky súdneho konania, čo bolo spôsobené konaním žalovaného, nie neprimeranosťou sadzby. Súd zdôraznil, že primeranosť sa posudzuje v čase porušenia povinnosti a nie ex post podľa výslednej sumy.",
+          "key_quotes": [
+            {
+              "quote": "ako neprimerane vysokú nemožno posúdiť zmluvnú pokutu dohodnutú vo forme určitej sadzby za určené časové obdobie, ktorej celková výška je dôsledkom dlhodobého porušovania zabezpečenej povinnosti dlžníkom",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "celková výška zmluvnej pokuty bola spôsobená zavinením žalovaného, ktorý nesplnil svoju zmluvnú povinnosť zabezpečenú zmluvnou pokutou po dobu takmer 9 rokov",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "námietka žalovaného týkajúca sa dobrých mravov je nedôvodná, nakoľko tvrdenia žalovaného neboli v konaní preukázané",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zabezpečovala hlavnú povinnosť zmluvného vzťahu (zaplatiť cenu za dodanie diela vo výške 24.650,42 eur), ktorej hodnota nebola zanedbateľná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "samotná výška neuhradenej ceny za dielo bola značná s ohľadom na aktuálnu hospodársku krízu v rokoch 2009 - 2011",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "celková výška zmluvnej pokuty bola spôsobená zavinením žalovaného, ktorý nesplnil svoju zmluvnú povinnosť zabezpečenú zmluvnou pokutou po dobu takmer 9 rokov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca vykonal všetko pre to, aby čím skôr bol predmetný spor ukončený, avšak konaním žalovaného bol spor predlžovaný",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_4Obdo_96_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "4Obdo/96/2021",
+      "decision_date": "30.09.2022",
+      "ecli": "ECLI:SK:NSSR:2022:8719204171.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

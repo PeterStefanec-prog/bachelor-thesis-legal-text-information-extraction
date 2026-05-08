@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13939,
+    "completion_tokens": 1166,
+    "cost_usd": 0.0465,
+    "latency_seconds": 9.52,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca BUKÓZA ENERGO, a.s. požadoval od žalovaného MM CLASS s.r.o. zaplatenie sumy 11.022,26 eur za dodávku elektriny, vrátane zmluvnej pokuty. Žalovaný nesúhlasil s uplatnenou zmluvnou pokutou a tvrdil, že je neprimeraná a nevyplýva zo zmluvy.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobe vyhovel v celom rozsahu.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný tým, že riadne a včas neuhradil platbu za združenú dodávku elektrickej energie podľa predmetnej faktúry z 11.8.2021 za mesiac júl 2021 vo výške 11.022,26 eur, porušil zmluvné podmienky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": "súdu prvej inštancie uviedol, že s predmetným posúdením tejto uplatnenej pohľadávky 4.959,25 eur nesúhlasí, pretože táto suma nepredstavuje zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4959.25,
+            "evidence": {
+              "quote": "nesúhlasí so zaplatením uplatnenej zmluvnej pokuty vo výške 4.959,25 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie uviedol, že s predmetným posúdením tejto uplatnenej pohľadávky 4.959,25 eur nesúhlasí, pretože táto suma nepredstavuje zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s 9 % úrokom z omeškania ročne 11.022,26 eur od 27.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "súd prvej inštancie uviedol, že s predmetným posúdením tejto uplatnenej pohľadávky 4.959,25 eur nesúhlasí, pretože táto suma nepredstavuje zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že suma 4.959,25 eur nie je zmluvnou pokutou, ale refakturáciou sankčného poplatku za prekročenie maximálnej rezervovanej kapacity. Preto súd nemohol uplatniť moderačné právo na zníženie zmluvnej pokuty, keďže nešlo o zmluvnú pokutu. Žalobca preukázal, že žalovaný mal vedomosť o výške rezervovanej kapacity a následkoch jej prekročenia.",
+          "key_quotes": [
+            {
+              "quote": "súd prvej inštancie uviedol, že s predmetným posúdením tejto uplatnenej pohľadávky 4.959,25 eur nesúhlasí, pretože táto suma nepredstavuje zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobca konal v rozpore s dobrými mravmi a poctivým obchodným stykom",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný svojou spotrebou zapríčinil prekročenie maximálne rezervovanej kapacity",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw",
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_149_2022_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/149/2022",
+      "decision_date": "25.01.2023",
+      "ecli": "ECLI:SK:KSKE:2023:7621204915.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

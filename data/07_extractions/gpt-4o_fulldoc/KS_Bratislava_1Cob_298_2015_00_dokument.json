@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7976,
+    "completion_tokens": 1116,
+    "cost_usd": 0.0311,
+    "latency_seconds": 9.6,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca BPT LEASING, a.s. sa domáhal zaplatenia sumy 2.429,91 eur s príslušenstvom od žalovaného M. B. na základe predčasne ukončenej leasingovej zmluvy. Žalobca tiež požadoval zmluvnú pokutu za oneskorenú úhradu záväzku vo výške 0,2 % denne zo sumy 2.429,91 eur.",
+      "verdict_summary": "Krajský súd v Bratislave zrušil rozsudok Okresného súdu Bratislava II v zamietajúcej časti a vec vrátil na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2 % denne zo sumy 2.429,91 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2 % denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,2 % denne zo sumy 2.429,91 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Prvoinštančný súd žalobný návrh zamietol v časti zmluvnej pokuty 0,2 % denne",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9 % ročne zo sumy 2.429,91 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "napadnutý rozsudok je potrebné v napadnutej zamietajúcej časti zrušiť a vec v zrušenom rozsahu vrátiť prvoinštančnému súdu na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol nárok na zmluvnú pokutu, pretože považoval dojednanie za duplicitný postih dlžníka, keďže už platí úroky z omeškania. Odvolací súd však konštatoval, že súbežné uplatnenie zmluvnej pokuty a úrokov z omeškania nie je vylúčené. Prvoinštančný súd tiež považoval zmluvnú pokutu za neprijateľnú podmienku v spotrebiteľskej zmluve, čo odvolací súd spochybnil, keďže žalovaný konal ako podnikateľ. Odvolací súd zrušil rozhodnutie pre nedostatočné odôvodnenie a vrátil vec na ďalšie konanie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie zamietol nárok žalobcu na zaplatenie zmluvnej pokuty aj z dôvodu, že na žalovaného sa ako na spotrebiteľa vzťahuje ochrana v zmysle § 53 ods. 4 písm. k) Občianskeho zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_298_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/298/2015",
+      "decision_date": "02.02.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1211204153.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

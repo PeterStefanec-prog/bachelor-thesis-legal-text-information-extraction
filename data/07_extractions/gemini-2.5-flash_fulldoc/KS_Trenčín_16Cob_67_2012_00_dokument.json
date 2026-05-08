@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10400,
+    "completion_tokens": 2429,
+    "cost_usd": 0.0373,
+    "latency_seconds": 10.12,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (zhotoviteľ) žaloval žalovaného (objednávateľa) o zaplatenie zmluvnej pokuty vo výške 8.985,94 eur za omeškanie s úhradou ceny diela podľa zmluvy o dielo. Súd prvého stupňa čiastočne vyhovel žalobe, ale zamietol ju vo výške 7.073,23 eur, pričom zohľadnil úroky z omeškania ako paušalizovanú náhradu škody.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby o zaplatenie sumy 7.073,23 eur a vo výroku o náhrade trov konania a vrátil vec súdu prvého stupňa na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 660569 zo dňa 08.06.2006",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, že objednávateľ neuhradil faktúru v lehote splatnosti, má zhotoviteľ nárok na zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% z dlžnej čiastky za každý deň omeškania",
+          "evidence": {
+            "quote": "nárok na zmluvnú pokutu vo výške 0,05% z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 28835.56,
+            "evidence": {
+              "quote": "vo výške 0,05% denne zo sumy 28.835,56 eur od 09.07.2006 do 16.07.2006",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 8985.94,
+            "evidence": {
+              "quote": "zmluvnej pokuty v sume 8.985,94 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v napadnutej časti výroku, v ktorom súd prvého stupňa žalobu o zaplatenie sumy 7.073,23 eur zamietol a výroku o náhrade trov konania zrušujea vec vracia súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14% ročným úrokom z omeškania",
+          "evidence": {
+            "quote": "zaviazal žalovaného zaplatiť žalobcovi sumu 11.282,61 eur so 14% ročným úrokom z omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa v napadnutej časti výroku, v ktorom súd prvého stupňa žalobu o zaplatenie sumy 7.073,23 eur zamietol a výroku o náhrade trov konania zrušujea vec vracia súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol časť žaloby na zmluvnú pokutu vo výške 7.073,23 eur, pretože túto sumu považoval za krytú úrokmi z omeškania, ktoré boli tiež paušalizovanou náhradou škody, a zmluvné strany si obmedzili náhradu škody do výšky zmluvnej pokuty. Odvolací súd s týmto právnym posúdením nesúhlasil, keďže súbeh úrokov z omeškania a zmluvnej pokuty nie je vylúčený a predmetom sporu nebola náhrada škody, ale zmluvná pokuta. Preto odvolací súd rozsudok zrušil a vrátil vec na ďalšie konanie, aby sa súd prvého stupňa zaoberal výškou zmluvnej pokuty a prípadným uplatnením moderačného oprávnenia.",
+          "key_quotes": [
+            {
+              "quote": "V časti o zaplatenie zmluvnej pokuty v sume 7.073,23 eur súd žalobu zamietol, nakoľko zohľadnil zmluvné obmedzenie výšky náhrady škody a úhradu úrokov z omeškania, ktoré tiež možno považovať za paušalizovanú náhradu škody.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd je názoru, že je možné uplatňovať v konaní dohodnuté, resp. zákonné úroky z omeškania a aj dohodnutú zmluvnú pokutu, ak si ju účastníci písomne dohodnú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvého stupňa pochybil, keď bez ďalšieho žalobu o zaplatenie 7.073,23 eur zamietol z dôvodu, že ide zrejme o škodu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvého stupňa nezistil pri uplatnení zmluvnej pokuty žalobcom rozpor medzi jeho konaním a zásadami poctivého obchodného styku, ani s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zabezpečovací inštitút záväzkového práva, ktorú nemožno charakterizovať tak, že ide o dohodou určené plnenie pre prípad porušenia zabezpečenej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "škoda, spôsobená žalobcovi omeškaním žalovaného s úhradou faktúry č. 660569 je do sumy 7.073,23 eur krytá úrokmi z omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "S prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, teda povinnosti zaplatiť dohodnutú cenu diela v sume 868.700,- Sk v lehote splatnosti predmetnej faktúry (08.07.2006) a dobu plnenia tohto záväzku zo strany žalovaného (posledná splátka uhradená 30.01.2010) nepovažoval súd prvého stupňa žalobou uplatnenú zmluvnú pokutu za neprimerane vysokú, a preto nevyužil moderačné oprávnenie a túto zmluvnú pokutu neznížil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "predovšetkým povinnosťou žalovaného bolo plniť si svoje záväzky riadne a v čas a nie až po tom, keď rozhodol súd prvého stupňa o zaplatení istiny.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Odvolací súd je názoru, že je možné uplatňovať v konaní dohodnuté, resp. zákonné úroky z omeškania a aj dohodnutú zmluvnú pokutu, ak si ju účastníci písomne dohodnú.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_67_2012_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/67/2012",
+      "decision_date": "31.07.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3110218335.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

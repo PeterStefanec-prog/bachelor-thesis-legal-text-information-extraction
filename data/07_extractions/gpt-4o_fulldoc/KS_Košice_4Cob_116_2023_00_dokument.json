@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21057,
+    "completion_tokens": 1283,
+    "cost_usd": 0.0655,
+    "latency_seconds": 41.84,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca DELTA - TRUCK s.r.o. sa domáhal zaplatenia dlžného nájomného a zmluvnej pokuty od žalovaného ROCK FOOD s.r.o. za porušenie zmluvných povinností vyplývajúcich z nájomných zmlúv na dopravné prostriedky. Žalovaný namietal neprimeranosť zmluvnej pokuty a tvrdil, že dopravné prostriedky neboli spôsobilé na užívanie.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na zmluvnú pokutu a náhradu trov konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "3 roky. Zmluvná pokuta bola stranami dojednaná pre prípad, že dôjde k predčasnému skončeniu nájomného vzťahu z dôvodov, ktoré sú na strane nájomcu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "6-násobku dohodnutého nájomného",
+          "evidence": {
+            "quote": "zmluvnú pokutu podľa bodu 7.6 Všeobecných zmluvných podmienok v sume 6x základného nájomného",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20440,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 20.440,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20440,
+            "evidence": {
+              "quote": "eur. 10. Súd prvej inštancie po zohľadnení správnej výšky dobropisov uzavrel, že žaloba žalobcu je dôvodná v časti o zaplatenie 10.245,97 eur titulom nájomného s príslušenstvom a v časti o zaplatenie 20.440,-",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "úrok z omeškania 9,00 % ročne zo sumy 20,79 eur od 18.3.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd preto podľa § 387 ods. 1 CSP potvrdil rozsudok súdu prvej inštancie v napdnutom rozsahu ako vecne správny.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie uznal zmluvnú pokutu ako primeranú vzhľadom na hodnotu zabezpečenej povinnosti a význam zmluvného vzťahu. Zmluvná pokuta bola dojednaná ako 6-násobok základného nájomného, čo súd považoval za primerané, keďže zmluvný vzťah mal trvať ešte viac ako 24 mesiacov. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, pričom zdôraznil, že zmluvná pokuta plní funkciu paušalizovanej náhrady škody a nie je potrebné preukazovať vznik škody.",
+          "key_quotes": [
+            {
+              "quote": "sporovými stranami dojednaná zmluvná pokuta slúžila na zabezpečenie toho, že žalovaný zotrvá v nájomnom vzťahu po celú dohodnutú dobu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "sporovými stranami dojednaná zmluvná pokuta slúžila na zabezpečenie toho, že žalovaný zotrvá v nájomnom vzťahu po celú dohodnutú dobu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zmluvnú pokutu žalovaný označil za zjavne neprimeranú vo vzťahu k hodnote zabezpečenej povinnosti, ako aj vo vzťahu k významu zabezpečovanej povinnosti, nakoľko táto predstavuje 197,16 % dlžného nájomného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný opakovane označil zmluvnú pokutu za neprimerane vysokú, z dôvodu že predstavuje viac ako 197 % istiny uplatňovanej žalobcom a s poukazom na opakované kvalifikované porušenie povinnosti žalobcu poškodzujúce podnikateľskú činnosť žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.pomer_k_istine"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_116_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/116/2023",
+      "decision_date": "26.03.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6120341555.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

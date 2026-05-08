@@ -1,0 +1,193 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 10943,
+      "completion_tokens": 745,
+      "cost_usd": 0.0348,
+      "latency_seconds": 21.5,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 10599,
+      "completion_tokens": 781,
+      "cost_usd": 0.0343,
+      "latency_seconds": 20.95,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovatelia 1/ a 2/ žiadali zaplatenie zmluvnej pokuty za omeškanie s dokončením výstavby rodinného domu podľa Zmluvy o dielo. Odporca nedodržal termín dokončenia výstavby, čo viedlo k nároku na zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý priznal navrhovateľom zmluvnú pokutu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "že v článku IV. ods. 4 Zmluvy o dielo sa účastníci dohodli na zmluvnej pokute pre prípad nedodržania termínu dokončenia výstavby domu odporcom",
+            "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "0,05% za každý deň omeškania z ceny diela",
+          "evidence": {
+            "quote": "zmluvnú pokutu za obdobie od 20.02.2009 do 31.03.2009, t.j. za 40 dní vo výške 0,05% za každý deň omeškania z ceny diela",
+            "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 4323809,
+            "evidence": {
+              "quote": "z ceny diela, t.j. zo sumy 4.323.809,- Sk",
+              "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+            }
+          },
+          "original_claimed": {
+            "value": 2870.4,
+            "evidence": {
+              "quote": "zmluvná pokuta za omeškanie odporcu od 20.02.2009 do 31.03.2009, t.j. za 40 dní omeškania predstavuje sumu 2.870,40 eur",
+              "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 2870.4,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "že povinnosť odporcu je s povinnosťou navrhovateľov 1/ a 2/ nevyvážená, keď odporca ako zhotoviteľ je povinný v prípade omeškania zaplatiť zmluvnú pokutu vo výške 0,05% za každý deň omeškania z celej ceny diela a navrhovatelia 1/ a 2/, ako objednávatelia sú povinní zaplatiť úroky z omeškania vo výške 0,05% za každý deň omeškania len z omeškanej sumy",
+            "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_2"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa rozhodol, že odporca je povinný zaplatiť zmluvnú pokutu vo výške 0,05% za každý deň omeškania z ceny diela, pretože nedodržal termín dokončenia výstavby. Odvolací súd potvrdil toto rozhodnutie, pričom sa nestotožnil s obranou odporcu, že zmluvná pokuta je neprimeraná alebo že poveternostné podmienky bránili včasnému dokončeniu. Súd tiež zamietol tvrdenie odporcu o potrebe zníženia pokuty z dôvodu nevyváženosti povinností strán.",
+          "key_quotes": [
+            {
+              "quote": "eur x 40 dní). Súd prvého stupňa vo svojom rozhodnutí ďalej uviedol, že sa nestotožnil s obranou odporcu, že sa zaviazal dokončiť výstavbu domu do 16 mesiacov od začiatku výstavby",
+              "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "lehoty na výstavbu domu. Nestotožnil sa ani s názorom odporcu o potrebe zmluvnú pokutu v prípade vyhovenia návrhu navrhovateľov znížiť z dôvodu jej neprimeranej",
+              "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_2"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "lehoty na výstavbu domu. Nestotožnil sa ani s názorom odporcu o potrebe zmluvnú pokutu v prípade vyhovenia návrhu navrhovateľov znížiť z dôvodu jej neprimeranej",
+                "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_2"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "odporca ako zhotoviteľ je povinný v prípade omeškania zaplatiť zmluvnú pokutu vo výške 0,05% za každý deň omeškania z celej ceny diela",
+                "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_2"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "odporca bol v omeškaní s dokončením výstavby domu od 06.06.2008 a medzi účastníkmi nebolo sporné, že odporca výstavbu nedokončil",
+                "chunk_id": "KS_Bratislava_2Co_380_2011_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Co_380_2011_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Co/380/2011",
+      "decision_date": "12.06.2013",
+      "ecli": "ECLI:SK:KSBA:2013:1109215097.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

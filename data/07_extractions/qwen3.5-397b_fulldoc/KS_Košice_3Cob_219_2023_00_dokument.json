@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13641,
+    "completion_tokens": 1778,
+    "cost_usd": 0.0095,
+    "latency_seconds": 18.45,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia pohľadávok zo zmluvy o dielo vo výške 439 EUR a 2.137 EUR spolu s príslušenstvom a zmluvnou pokutou za oneskorené platby faktúr. Žalovaný namietal neplatnosť zmluvy, nedoručenie faktúr a neprimeranosť dohodnutej zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný povinný zaplatiť istinu, úroky z omeškania aj zmluvnú pokutu v plnom rozsahu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúry č. 20210005 a č. 20210006",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "keď sa dostal do omeškania so zaplatením faktúr",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "2 % denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu 2 % denne zo sumy 439,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2576,
+            "evidence": {
+              "quote": "Hodnota zabezpečovanej povinnosti 2.576,- EUR v súhrne",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania 9 % ročne zo sumy 439,- eur od 21.8.2021 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie neaplikoval moderačné právo podľa § 301 Obchodného zákonníka, nakoľko výška zmluvnej pokuty v predmetnej veci je výsledkom dlhodobého porušovania zabezpečenej povinnosti zo strany žalovaného.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta vo výške 2 % denne z dlžnej sumy nie je neprimerane vysoká, keďže v čase porušenia povinnosti predstavovala sumu 51,52 EUR denne. Odvolací súd sa stotožnil so záverom, že nárast celkovej sumy pokuty je dôsledkom dlhodobého porušovania povinnosti zo strany žalovaného, čo nie je dôvodom na uplatnenie moderačného práva podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "predmetnou zmluvnou pokutou bol zabezpečený hlavný záväzok zo zmluvy (zaplatenie dohodnutej odmeny vo výške 2.576,- eur) v čase porušenia povinnosti žalovaným predstavoval zmluvne dohodnutý nárok na zaplatenie 2 % z dlžnej sumy denne sumu vo výške 51,52 eur, čo s určitosťou nie je možné vyhodnotiť ako neprimerane vysokú zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Pokiaľ sa nárok na zmluvnú pokutu dlhodobým porušením povinnosti žalovaného podstatne zvýšil a to z dôvodov na jeho strane, tak túto skutočnosť nie je možné vykladať v neprospech veriteľa.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "predmetnou zmluvnou pokutou bol zabezpečený hlavný záväzok zo zmluvy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výslednú sumu za každý deň omeškania. Hodnota zabezpečovanej povinnosti 2.576,- EUR v súhrne je v zjavnom nepomere k dohodnutej zmluvnej pokute. Žalovaný tiež",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty v predmetnej veci je výsledkom dlhodobého porušovania zabezpečenej povinnosti zo strany žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine"
+      ],
+      "missing_fields": [
+        "amounts.original_claimed",
+        "amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_219_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/219/2023",
+      "decision_date": "31.07.2025",
+      "ecli": "ECLI:SK:KSKE:2025:6122327846.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

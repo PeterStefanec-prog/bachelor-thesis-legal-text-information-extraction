@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14890,
+    "completion_tokens": 2447,
+    "cost_usd": 0.0115,
+    "latency_seconds": 36.56,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dodavka_sluzieb",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvných pokút vo výške 429,44 € a 115,20 € za predčasné ukončenie abonentnej zmluvy a zmluvy o servisnej službe zo strany žalovaného. Žalovaný namietal neprimeranosť výšky pokút, ktoré boli vypočítané za celé zostávajúce obdobie trvania zmluvy (36 mesiacov), hoci zmluvný vzťah trval len necelých 5 mesiacov.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorý znížil nárok na zmluvné pokuty na sumu 72,91 € s odôvodnením, že pôvodne dohodnutá výška bola neprimeraná vzhľadom na skutočnú dĺžku trvania záväzkového vzťahu pred odstúpením od zmluvy."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd prvej inštancie priznal žalobcovi nárok na zmluvné pokuty vo výške 72,91 €"
+            },
+            "value": 72.91
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Spornou faktúrou č. 191117259 žalobca fakturoval žalovanému zmluvnú pokutu za nedodržanie podmienok zmluvy podľa bod 4 VPAZ. Spornou faktúrou č. 191117260 žalobca fakturoval žalovanému zmluvnú pokutu za nedodržanie podmienok zmluvy podľa bodu 6 zmluvy o servisnej službe."
+            },
+            "value": 544.64
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "uznal nárok žalobcu na zmluvnú pokutu vo výške 72,91 € ako 50 % zo sumy 145,83 €, fakturovanej faktúrami č. 191103825, č. 191107224, č. 191110713 a č. 191116279. Znamená to, že žalovaný"
+            },
+            "value": 145.83
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Súd prvej inštancie preto priznal žalobcovi nárok na úroky z omeškania 0,1 % denne zo sumy 57,80 € od 11.06.2019 do zaplatenia."
+          },
+          "rate_value": "0,1 % denne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "za odmietnutie poskytovania služieb na strane abonenta sa považuje aj čiastočné neuhradenie aspoň dvoch faktúr za poskytnuté služby"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť"
+            },
+            "value": "moderated_301"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, je neprimeraná a pre rozpor s dobrými mravmi neplatná."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Účel zmluvnej pokuty spočíva najmä vo vyhrážke citeľnou majetkovou sankciou voči dlžníkovi v prípade nesplnenia jeho povinnosti zo záväzkového vzťahu, a tým aj v zabezpečení veriteľa proti prípadnej ujme"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Za týchto okolností mu nemohla reálne vznikať po skončení zmluvného vzťahu so žalovaným žiadna škoda."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "okolnosti prejednávaného prípadu nemôžu ospravedlniť neadekvátny majetkový prospech, ktorý by žalobca získal na úkor žalovaného, ak by bol žalovaný povinný platiť žalobcovi zmluvnú pokutu za dobu 36 mesiacov, hoci zmluvný vzťah trval len necelých 5 mesiacov"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "žalobca odobral žalovanému dňa 22.05.2019 predmety nájmu na základe ukončenia zmluvného vzťahu"
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "neutral"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "súd prvej inštancie preto v konaní posudzoval primeranosť dojednanej výšky zmluvných pokút a dospel k záveru, že posudzovanom prípade treba uplatniť moderačné právo súdu v zmysle § 301 OBZ a neprimerane vysoké zmluvné pokuty znížiť"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Žalobcovi tak vznikol nárok na zaplatenie zmluvných pokút za dva mesiace (apríl a máj 2019), pričom výška zmluvnej pokuty bola v oboch zmluvách dohodnutá obdobným spôsobom, a to ako 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac."
+            }
+          ],
+          "legal_reasoning_summary": "Súd aplikoval moderačné právo podľa § 301 OBZ, pretože dohodnutá výška pokuty (50 % z mesačných paušálov za celé zostávajúce obdobie 36 mesiacov) bola neprimeraná vzhľadom na skutočnosť, že zmluvný vzťah trval len necelých 5 mesiacov a žalobca si prevzal späť všetky prenajaté veci. Nárok na pokutu bol obmedzený len na obdobie od vzniku omeškania (09.04.2019) do dátumu účinného odstúpenia od zmluvy (31.05.2019), čo predstavuje dva mesiace. Súd zdôraznil, že po odstúpení od zmluvy už nemohla žalobcovi vzniknúť žiadna škoda, a preto nárok na pokutu za ďalšie obdobie nebol dôvodný."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "je abonent (t. j. žalovaný) povinný zaplatiť dodávateľovi (t. j. žalobcovi) zmluvnú pokutu vo výške 50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac odo dňa odmietnutia poskytovania služieb až do skončenia účinnosti zmluvy"
+          },
+          "type": "percent_jednorazovo",
+          "value_raw": "50 % zo súčtu cien mesačného paušálu za každý aj začatý mesiac"
+        },
+        "related_claim_ref": "faktúry č. 191117259 a č. 191117260"
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.secured_principal",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_32Cob_3_2021_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "32Cob/3/2021",
+      "decision_date": "28.06.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2119207499.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

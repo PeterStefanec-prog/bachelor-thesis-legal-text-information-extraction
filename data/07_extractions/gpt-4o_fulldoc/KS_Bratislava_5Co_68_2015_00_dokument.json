@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11131,
+    "completion_tokens": 1140,
+    "cost_usd": 0.0392,
+    "latency_seconds": 25.0,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Štátny fond rozvoja bývania, sa domáhal zaplatenia sumy 17.724,56 € s príslušenstvom od žalovaného, W. W., z dôvodu nesplatenia poskytnutého úveru. Žalobca tvrdil, že žalovaný porušil zmluvné povinnosti, vrátane nezabezpečenia úveru poistnou zmluvou.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi istinu, úroky a zmluvnú pokutu.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "že dlžník zrušil ručenie vo forme poistenia úveru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "20% zo zostatku úveru",
+          "evidence": {
+            "quote": "uhradiť zmluvnú pokutu vo výške 20% zo zostatku úveru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 17724.56,
+            "evidence": {
+              "quote": "zostatok nesplatenej istiny sumu 17.724,56 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 5396.66,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 5.396,66 €",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 5396.66,
+            "evidence": {
+              "quote": "Odvolací súd napadnutý rozsudok súdu prvej inštancie vo veci samej potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úroky z omeškania vo výške 8,75 % ročne zo sumy 17.724,56 €",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na hodnotu a význam zabezpečenej povinnosti posúdil súd dohodnutú zmluvnú pokutu za primeranú.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd posúdil zmluvnú pokutu ako primeranú vzhľadom na hodnotu a význam zabezpečenej povinnosti. Žalovaný porušil viaceré zmluvné povinnosti, vrátane nezabezpečenia úveru poistnou zmluvou. Súd prvej inštancie rozhodol, že žalobca má právo na zaplatenie zmluvnej pokuty, čo odvolací súd potvrdil. Odstúpením od zmluvy sa stal úver splatným v celom rozsahu.",
+          "key_quotes": [
+            {
+              "quote": "Vzhľadom na hodnotu a význam zabezpečenej povinnosti posúdil súd dohodnutú zmluvnú pokutu za primeranú.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Vzhľadom na hodnotu a význam zabezpečenej povinnosti posúdil súd dohodnutú zmluvnú pokutu za primeranú.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca bol v tomto smere nečinný a skutočnosť, že pôvodne uzavretá poistná zmluva zanikla už dňa 01.03.2005, bola navrhovateľovi oznámená až zo strany samotnej poisťovne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nehnuteľnosť v prospech navrhovateľa. Navrhovateľ sa snažil o zmierlivé riešenie vzniknutej situácie a neplnenia povinností zo strany odporcu, opakovane v priebehu rokov 2009 - 2012 vyzýval odporcu na preukázanie trvania poistného",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Co_68_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Co/68/2015",
+      "decision_date": "28.02.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1213238714.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

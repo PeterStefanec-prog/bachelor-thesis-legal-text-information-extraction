@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 24757,
+    "completion_tokens": 2090,
+    "cost_usd": 0.0145,
+    "latency_seconds": 37.77,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 24.479,90 Eur, ktorá pozostávala zo zmluvnej pokuty za oneskorené odovzdanie prenajatej haly po skončení nájomného vzťahu a z bezdôvodného obohatenia za obdobie neoprávneného užívania nehnuteľnosti. Žalovaný namietal výšku oboch nárokov a tvrdil, že zmluvná pokuta je neprimerane vysoká a že mu žalobca zmaril odovzdanie nehnuteľnosti.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi celú požadovanú sumu vrátane zmluvnej pokuty vo výške 18.254,90 Eur. Súd konštatoval, že výška zmluvnej pokuty nie je neprimeraná, keďže vznikla dlhodobým omeškaním žalovaného."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Súd preto priznal žalobcovi aj zmluvnú pokutu vo výške 6.225,--Eur."
+            },
+            "value": 18254.9
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca sa žalobou doručenou súdu dňa 14.12.2020 domáhal voči žalovanému zaplatenia sumy 18.254,90 Eur titulom zmluvnej pokuty"
+            },
+            "value": 18254.9
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": null
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Zmluvná pokuta je viazaná na porušenie zmluvnej povinnosti - odovzdať včas nehnuteľnosť po skončení nájmu."
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd dospel k záveru že nárok žalobcu na zaplatenie zmluvnej pokuty aj v takejto výške je dôvodný."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalobca mal právo zabezpečiť si včasnosť vrátenia predmetu nájmu po zániku nájomnej zmluvy zmluvnou pokutou."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Súdu žalovaný predložil logickú a presvedčivú argumentáciu o tom, že žalobcovi neodovzdaním prenajatých priestorov nevznikla žiadna škoda."
+              },
+              "label": "vyska_skody",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Neprimeranosť zmluvnej pokuty nemožno usudzovať z jej celkovej výšky, ak je dôsledkom dlhodobého omeškania a s tým spojeným navyšovaním o inak primeranú \"dennú sadzbu\" zmluvnej pokuty."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "za takúto výšku zmluvnej pokuty si v neposlednom rade môže sám žalovaný, ktorý predmetnú nehnuteľnosť neodovzdal v dohodnutej lehote."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd konštatuje že žalovaný odovzdal predmet nájmu až na základe rozhodnutia Okresného súdu Brezno v spojení s rozhodnutím Krajského súdu v Banskej Bystrici, ktorý potvrdil rozhodnutie Okresného súdu Brezno, že žalovaný je povinný vypratať a odovzdať žalobcovi predmetnú nehnuteľnosť."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Vzhľadom na uvedené dospel odvolací súd k záveru že výška zmluvnej pokuty nie je neprimerane vysoká a za takúto výšku zmluvnej pokuty si v neposlednom rade môže sám žalovaný, ktorý predmetnú nehnuteľnosť neodovzdal v dohodnutej lehote."
+            }
+          ],
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta bola dohodnutá vo výške 1.000 Sk (33,19 EUR) za každý deň omeškania s odovzdaním nehnuteľnosti. Žalovaný bol v omeškaní od 03.04.2019 do 26.10.2020, pričom žalobca si uplatnil pokutu za obdobie od 25.04.2019 do 25.10.2020. Súd odmietol zníženie pokuty podľa § 301 Obchodného zákonníka s odôvodnením, že vysoká celková suma je dôsledkom dlhodobého omeškania spôsobeného žalovaným, nie neprimeranosťou dennej sadzby. Súd zdôraznil, že zásah do zmluvnej voľnosti by mal byť výnimočný a v tomto prípade si vysokú pokutu spôsobil sám žalovaný svojim konaním."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu 1.000,-Sk za každý deň omeškania."
+          },
+          "type": "fixna_suma_denne",
+          "value_raw": "1.000,-Sk za každý deň omeškania"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Text contains a clerical error where the first instance court swapped the amounts for unjust enrichment and contractual penalty in the reasoning, but the appellate court clarified the correct amounts based on the claim.",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_31_2022_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/31/2022",
+      "decision_date": "19.10.2022",
+      "ecli": "ECLI:SK:KSBB:2022:6320202847.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

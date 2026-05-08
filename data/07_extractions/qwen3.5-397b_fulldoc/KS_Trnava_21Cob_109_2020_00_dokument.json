@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 17673,
+    "completion_tokens": 2056,
+    "cost_usd": 0.0117,
+    "latency_seconds": 32.36,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "sprostredkovatelska",
+      "dispute_summary": "Žalobkyňa sa domáhala zaplatenia zmluvnej pokuty vo výške 2.400 EUR od žalovanej za porušenie konkurenčnej doložky, keď žalovaná začala vykonávať činnosť finančného sprostredkovania pre inú poisťovňu pred uplynutím dohodnutej trojmesačnej lehoty po skončení zmluvy. Žalovaná namietala absolútnu neplatnosť konkurenčnej doložky pre absenciu jej územného vymedzenia.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a žalobu zamietol, pretože konkurenčná doložka bola vyhlásená za absolútne neplatnú z dôvodu chýbajúceho územného vymedzenia, čím zanikol aj akcesorický nárok na zmluvnú pokutu."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd napadnutý rozsudok súdu prvej inštancie podľa § 388 CSP zmenil tak, žalobu žalobkyne o zaplatenie 2.400 eur s príslušenstvom (t.j. v časti, ktorá zostala predmetom konania) zamietol."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Predmetom konania po nadobudnutí právoplatnosti výroku I. rozsudku súdu prvej inštancie z 9.1.2019 zostal nárok žalobkyne na zaplatenie sumy 2.400 eur spolu s úrokom z omeškania z uvedenej sumy."
+            },
+            "value": 2400
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "odvolací súd napadnutý rozsudok súdu prvej inštancie podľa § 388 CSP zmenil tak, žalobu žalobkyne o zaplatenie 2.400 eur s príslušenstvom (t.j. v časti, ktorá zostala predmetom konania) zamietol."
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Podľa výpisu z registra finančných agentov žalovaná porušila svoju povinnosť vyplývajúcu zo zmluvy, a to nevykonávať obdobnú činnosť v oblasti finančného sprostredkovania a poradenstva po dobu 3 mesiacov od ukončenia zmluvného vzťahu"
+          },
+          "value": "other"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Zo znenia konkurenčnej doložky (v čl. XI bod 2 zmluvy) vyplýva, že v nej nebol vymedzený jej územný rozsah, čo je jedna z podstatných náležitosti konkurenčnej doložky, ktorej absencia spôsobuje jej neplatnosť."
+            },
+            "value": "dismissed"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Neobmedzeným rozsahom miestnej pôsobnosti konkurenčná doložka v podstate znemožňuje žalovanej vykonávať činnosť, na ktorú má oprávnenie a ktorá je jej zárobkovou činnosťou, čím tiež porušuje jej ústavné právo na slobodný výkon povolania."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Ak podstatné náležitosti konkurenčnej doložky vyžadované ust. § 672a ods. 1 Obchodného zákonníka v nej nie sú uvedené, následkom je absolútna neplatnosť takejto doložky pre rozpor so zákonom (§ 39 Občianskeho zákonníka)."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Keďže záväzok z dohody o zmluvnej pokute je akcesorickým záväzkom, jeho existencia a dôsledky sa viažu na hlavný záväzok. Ak k vzniku hlavného záväzku nedôjde, nemôžu nastať účinky akcesorického záväzku, ktorý mal zabezpečovať plnenie zmluvnej povinnosti"
+            }
+          ],
+          "legal_reasoning_summary": "Súd konštatoval, že konkurenčná doložka neobsahovala územné vymedzenie, čo je podstatnou náležitosťou podľa § 672a ods. 1 Obchodného zákonníka. Absencia tohto vymedzenia spôsobuje absolútnu neplatnosť doložky pre rozpor so zákonom. Keďže nárok na zmluvnú pokutu je akcesorický k hlavnej povinnosti vyplývajúcej z konkurenčnej doložky, neplatnosťou hlavnej povinnosti zaniká aj nárok na pokutu."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Podľa čl. VII bod 1 druhá veta zmluvy ak agent poruší povinnosť uvedenú v čl. XI bod 1 alebo bod 2 zmluvy, má ING právo požadovať od agenta uhradenie zmluvnej pokuty za každé takéto porušenie povinnosti vo výške 5.000 eur."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.000 eur"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_109_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/109/2020",
+      "decision_date": "18.05.2021",
+      "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

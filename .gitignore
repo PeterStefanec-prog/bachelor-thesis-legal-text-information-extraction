@@ -57,6 +57,7 @@ data/*
 !data/02_processed_json/
 !data/02_debug_steps/
 !data/05_retrieval_evaluation/
+!data/07_extractions/
 
 # eval CSV backup - never commit
 data/05_retrieval_evaluation/experiment_results_summary.csv.bak

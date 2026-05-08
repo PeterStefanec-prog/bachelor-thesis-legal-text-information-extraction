@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9012,
+    "completion_tokens": 2214,
+    "cost_usd": 0.0087,
+    "latency_seconds": 29.86,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Oprávnený Démos trade, s.r.o. žiadal vymoženie pohľadávky vo výške 5.398,48 EUR s príslušenstvom, vrátane zmluvnej pokuty vo výške 0,5% denne, na základe rozhodcovského rozsudku. Povinný Domina, s.r.o. navrhol zastavenie exekúcie v časti zmluvnej pokuty, pretože jej výšku považoval za neprimeranú a v rozpore s dobrými mravmi.",
+      "verdict_summary": "Krajský súd zmenil uznesenie okresného súdu a návrh povinného na zastavenie exekúcie zamietol, pretože právne ustanovenie (§ 45 ZRK), na ktoré sa okresný súd pri zastavení exekúcie odkazoval, k dátumu rozhodovania už neplatilo.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 0,5% denne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011 zo sumy 2.151,98 Eur od 02.03.2011 do 04.04.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% denne",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 0,5% denne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 15757.12,
+            "evidence": {
+              "quote": "v celkovej výške 15.757,12 Eur zastavil",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 15757.12,
+            "evidence": {
+              "quote": "odvolací súd podľa § 220 O.s.p. napadnuté uznesenie zmeniť tak, že návrh povinného na zastavenie exekúcie, a to nielen pre neexistenciu § 45 ZRK, ale aj pre neodôvodnenosť návrhu, zamieta",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania 9% ročne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd podľa § 220 O.s.p. napadnuté uznesenie zmeniť tak, že návrh povinného na zastavenie exekúcie, a to nielen pre neexistenciu § 45 ZRK, ale aj pre neodôvodnenosť návrhu, zamieta",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd rozhodol, že okresný súd postupoval nesprávne, keď exekúciu zastavil podľa § 45 zákona o rozhodcovskom konaní, pretože toto ustanovenie stratilo účinnosť k 1.1.2015. Hoci okresný súd považoval pokutu 0,5% denne za neprimeranú a v rozpore s dobrými mravmi kvôli kumulácii s úrokom 9% a absencii preukázanej škody, odvolací súd tieto materiálne otázky neskúmal, keďže procesná cesta zastavenia exekúcie na tomto titule už neexistovala. Výsledkom je plné priznanie pôvodnej sumy pokuty.",
+          "key_quotes": [
+            {
+              "quote": "okresný súd, ktorý vydal napadnuté uznesenie už za účinnosti nového znenia zákona o rozhodcovskom konaní, ktoré možnosť zastavenia exekučného konania vedeného na podklade exekučných titulov, ktorými sú rozhodcovské rozsudky postupom podľa ust. § 45 ZRK už neupravuje, postupoval nesprávne",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Priznanie zmluvnej pokuty mnohonásobne prevyšujúce právo a vedie k neoprávnenému majetkovému prospechu oprávneného, a preto povinnosť uložená v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "povinnosť uložená v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 0,5% denne prekračuje účel zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "oprávnený nenamietal a ani žiadnym spôsobom nepreukázal škodu, resp. výšku škody, ktorá by mu vznikla neplnením povinného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Neprimeranosť výšky zmluvnej pokuty súd posúdil v percentuálnom prepočte, čo predstavuje 182,5 % istiny",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "povinný má v tomto exekučnom konaní na základe rozhodcovského rozsudku uhradiť aj príslušenstvo pohľadávky, a to úroky z omeškania vo výške 9 % z dlžnej istiny ročne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvných strán, oprávnený nepovažoval ingerenciu súdu \"v podobe nepriznania nároku na zaplatenie zmluvnej pokuty\" za náležitú, resp. žiaducu. V",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoE/215/2015",
+      "decision_date": "28.05.2015",
+      "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+      "document_type": "Uznesenie"
+    }
+  }
+}

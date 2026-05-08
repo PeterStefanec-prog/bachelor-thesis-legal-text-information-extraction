@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18376,
+    "completion_tokens": 2177,
+    "cost_usd": 0.0123,
+    "latency_seconds": 22.07,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia troch zmeniek, ktorými boli zabezpečené záväzky žalovaného z leasingových zmlúv, pričom do zmenkovej sumy boli zahrnuté aj položky ako zmluvná pokuta a úroky z omeškania. Žalovaní namietali výšku zmenkovej sumy, neoprávnenosť jednotlivých položiek vrátane zmluvnej pokuty a žiadali jej moderovanie podľa § 301 Obchodného zákonníka.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok súdu prvej inštancie, ktorým bol zmenkový platobný rozkaz ponechaný v platnosti v celom rozsahu. Súd nevyhovel námietkam žalovaných týkajúcim sa moderovania zmluvných pokút, keďže tieto neboli riadne a včas uplatnené v rámci koncentračnej zásady zmenkového konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Všetky tri leasingové zmluvy boli predčasne ukončené a predmety leasingu odňaté v dôsledku neplatenia leasingových splátok, ktorá skutočnosť ho viedla k uplatneniu nárokov formou zabezpečovacích zmeniek.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nešpecifikovaná",
+          "evidence": {
+            "quote": "Ide o položky ako havarijné poistenie (nešpecifikovaná výška poistného), náklady spojené s odobratím predmetu financovania (nepreukázaná ich skutočná výška), odúročený ušlý zisk (nešpecifikovaný), preprava vozidla (nešpecifikované, kedy malo dôjsť k preprave, na aké miesto, akým mandatárom a na základe akého titulu), zmluvná pokuta (nešpecifikovaná)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročne",
+          "evidence": {
+            "quote": "súd uložil žalovaným povinnosť, aby spoločnosti VB LEASING SK, spol. s r.o. ako žalobcovi do troch dní od doručenia spoločne a nerozdielne zaplatili zmenkovú sumu 37.737,14 eur so 6 %-ným ročným úrokom zo sumy 11.545,38 eur od 2.8.2013 do zaplatenia, so 6 %-ným ročným úrokom zo sumy 26.191,76 eur od 30.10.2013 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "procedural",
+            "evidence": {
+              "quote": "Aj požiadavku žalovaných, aby súd moderoval zmluvné pokuty, ktoré boli zahrnuté do zmenkovej sumy, je treba hodnotiť z hľadiska koncentračnej zásady. Základným predpokladom je, aby námietka neprimeranej výšky zmluvnej pokuty bola uvedená vo včasných námietkach. Záväzok zo zmenky je nesporným záväzkom. V konaní nebolo preukázané, že by žalovaní z dôvodov uvedených vo včasných námietkach nemali povinnosť tento",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd odmietol moderovať zmluvné pokuty podľa § 301 Obchodného zákonníka z procesných dôvodov, konkrétne kvôli porušeniu koncentračnej zásady zmenkového konania. Žalovaní síce v priebehu konania namietali neprimeranosť zmluvných pokút, avšak túto námietku neuviedli v pôvodných, včas podaných námietkach proti zmenkovému platobnému rozkazu. Súd konštatoval, že išlo o nové skutkové tvrdenia, ktoré prekročili rozsah včasných námietok, a preto na ne nemohol prihliadať. Keďže záväzok zo zmenky je nesporný a žalovaní nepreukázali dôvody z včasných námietok, súd ponechal zmenkový platobný rozkaz v platnosti v celom rozsahu.",
+          "key_quotes": [
+            {
+              "quote": "Žalovaní v priebehu námietkového konania opakovane uvádzali stále nové a úplne odlišné skutkové tvrdenia, ktorými rozsah včasných námietok prekročili.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Záväzok zo zmenky je nesporným záväzkom. V konaní nebolo preukázané, že by žalovaní z dôvodov uvedených vo včasných námietkach nemali povinnosť tento nesporný záväzok splniť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "strany sa zhodli v tom, že zmenky boli vystavené vedome neúplné, ich účelom bolo zabezpečiť záväzky žalovaného v 1. rade vyplývajúce mu ako leasingovému nájomcovi z leasingových zmlúv",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V ich prípade nie je možné hovoriť o informačnom deficite, skôr o nedôvodnej pasivite",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "Penalty amount not specified in text - only mentioned as part of the disputed bill of exchange sum",
+        "Moderation dismissed on procedural grounds (concentration principle) rather than substantive analysis under § 301",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "contractual_penalties[0].rate_definition.value_raw (specific rate)",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4CoZm_2_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4CoZm/2/2018",
+      "decision_date": "29.11.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1514200852.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13407,
+    "completion_tokens": 1108,
+    "cost_usd": 0.0446,
+    "latency_seconds": 27.76,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Slovenská republika zastúpená Správou štátnych hmotných rezerv, sa domáhal zaplatenia zmluvnej pokuty vo výške 1.424.749,54 Eur od žalovaného, spoločnosti SPECTRUM, a.s., z dôvodu porušenia zmluvnej povinnosti dodania motorovej nafty podľa zmluvy o obmene hmotných rezerv.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorý žalobe vyhovel a priznal žalobcovi zmluvnú pokutu.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný sa zmluvne zaviazal naskladniť najneskôr do 31.12.2006 minimálne 7.723 m3 motorovej nafty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "75% z ceny chýbajúceho tovaru",
+          "evidence": {
+            "quote": "dohodli zmluvnú pokutu vo výške 75% z ceny chýbajúceho tovaru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": 57229339.37,
+            "evidence": {
+              "quote": "Základom pre výpočet zmluvnej pokuty sa stala cena nedodaného množstva 57.229.339,37 Sk",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1424749.54,
+            "evidence": {
+              "quote": "zmluvnej pokuty 42.922.004,53 Sk (1.424.749,54 Eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1424749.54,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvého stupňa potvrdzuje.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14 % ročne",
+          "evidence": {
+            "quote": "14 % ročným úrokom z omeškania od 12.04.2007 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd preskúmal vec v náväznosti na odvolacie dôvody žalovaného a ako je už vyššie uvedené, stotožňuje sa so záverom súdu prvého stupňa",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa rozhodol, že žalovaný porušil zmluvnú povinnosť dodania motorovej nafty a preto je povinný zaplatiť zmluvnú pokutu. Výška pokuty bola stanovená na 75% z ceny nedodaného množstva. Odvolací súd potvrdil rozhodnutie súdu prvého stupňa, keďže zmluvná pokuta bola považovaná za primeranú a v súlade s dobrými mravmi. Žalovaný namietal neplatnosť zmluvy a premlčanie pohľadávky, avšak tieto námietky boli zamietnuté.",
+          "key_quotes": [
+            {
+              "quote": "odôvodnenie: Okresný súd napadnutým rozsudkom rozhodol, že žalovaný je povinný zaplatiť žalobcovi 1.424.749,54 Eur so",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výšku zmluvnej pokuty nepovažoval za neprimeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta zaisťovala povinnosť žalovaného ako jeho hlavný záväzok dodať žalobcovi riadne plnenie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný porušil svoj hlavný záväzok, keď žalobcovi nedodal dohodnuté množstvo motorovej nafty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_78_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/78/2013",
+      "decision_date": "26.02.2014",
+      "ecli": "ECLI:SK:KSTN:2014:3107213599.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

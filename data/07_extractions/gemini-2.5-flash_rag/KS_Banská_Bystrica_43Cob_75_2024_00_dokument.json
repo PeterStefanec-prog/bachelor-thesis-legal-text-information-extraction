@@ -1,0 +1,192 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 10,
+      "adaptive_top_k_call2": 9
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 13185,
+      "completion_tokens": 1048,
+      "cost_usd": 0.027,
+      "latency_seconds": 5.83,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    },
+    "call2": {
+      "prompt_tokens": 9062,
+      "completion_tokens": 1722,
+      "cost_usd": 0.0285,
+      "latency_seconds": 7.98,
+      "model": "gemini-2.5-flash",
+      "provider": "google"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca si uplatnil nárok na zaplatenie dohodnutej ceny za jednorazovú službu predauditu systému manažérstva podľa dvoch zmlúv, zmluvnú pokutu za neuhradenie faktúr v lehote a paušálnu náhradu nákladov. Žalovaný namietal platnosť zmlúv, nepreukázanie poskytnutia služieb a neprimeranosť zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 1.512,- Eur s úrokom z omeškania, zmluvnú pokutu vo výške 600,- Eur a náklady spojené s uplatnením pohľadávky, a priznal žalobcovi nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu dvakrát po 300,- Eur z dôvodu neuhradenia vyúčtovanej odmeny v lehote 30 dní po splatnosti vystavených faktúr",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_33"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "dvakrát po 300,- Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 600,- Eur",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_0"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 756.0,
+            "evidence": {
+              "quote": "zmluvná pokuta 300,- Eur zabezpečujúca hlavný záväzok 630,- Eur bez DPH, predstavuje síce 48 % zo zmluvného plnenia bez DPH a 39,7 % zo zmluvného plnenia s DPH, t.j. zo sumy 756,- Eur",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_79"
+            }
+          },
+          "original_claimed": {
+            "value": 600.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu dvakrát po 300,- Eur",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_33"
+            }
+          },
+          "final_awarded": {
+            "value": 600.0,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 600,- Eur",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_0"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania 9% ročne z tejto sumy od 22.07.2022 do zaplatenia",
+            "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd sa stotožnil so skutkovým a právnym záverom okresného súdu o vzniku právneho vzťahu medzi stranami sporu na základe nepomenovanej zmluvy v zmysle \n\n§ 269 ods. 2 ObZ a o vzniku povinnosti žalovaného zaplatiť žalobcovi dohodnutú odmenu za poskytnutie predauditu 1 a predauditu 2 v celkovej výške dvakrát po 756,- Eur s príslušenstvom, t.j. s úrokmi z omeškania a stotožnil sa aj s jeho záverom o vzniku nároku žalobcu na zmluvnú pokutu dvakrát po 300,- Eur z dôvodu nesplnenia zmluvných povinností žalovaným, ako aj s jeho správnym záverom o neuplatnení moderačného práva podľa § 301 Obchodného zákonníka vo vzťahu k uplatnenej zmluvnej pokute.",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_42"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie ani odvolací súd neaplikovali moderačné právo podľa § 301 ObZ. Okresný súd nepovažoval výšku zmluvnej pokuty 300,- Eur za neprimeranú, najmä s prihliadnutím na to, že právo na jej zaplatenie vzniká až po uplynutí ďalšej 30-dňovej lehoty od dátumu splatnosti faktúr. Odvolací súd sa s týmto záverom stotožnil a zdôraznil, že aplikácia moderačného práva je výnimočným zásahom súdu do zmluvných práv a povinností a nie je možné posudzovať výšku zmluvnej pokuty len z hľadiska percentuálneho vyjadrenia k hodnote peňažného záväzku, ale aj vo vzťahu k nominálnemu určeniu výšky, spôsobu dojednania a predpokladov jej vzniku.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd neaplikoval ani moderačné právo podľa § 301 ObZ. Poukázal na to, že okrem tvrdenia žalovaného o nevyváženosti vzájomných práv a povinností, o úmyselnom čakaní na uplynutie 30 dňovej lehoty na zaplatenie faktúr, o zneužití práva na úkor žalovaného, žalovaný neuviedol žiadne skutkové tvrdenia odôvodňujúce neprimeranosť výšky zmluvnej pokuty vo vzťahu ku kritériám na využitie moderačného práva podľa § 301 ObZ.",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_19"
+            },
+            {
+              "quote": "Podľa odvolacieho súdu, zmluvná pokuta 300,- Eur zabezpečujúca hlavný záväzok 630,- Eur bez DPH, predstavuje síce 48 % zo zmluvného plnenia bez DPH a 39,7 % zo zmluvného plnenia s DPH, t.j. zo sumy 756,- Eur, avšak v nominálnom vyjadrení 300,- Eur, ktorú nominálnu hodnotu tiež nie je možné prehliadať pri posudzovaní primeranosti zmluvnej pokuty, nepredstavuje podľa názoru odvolacieho súdu neprimeranú výšku, a to ani vo vzťahu k zabezpečovanému záväzku vo výške 756,-Eur s DPH.",
+              "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_79"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dojednanie o zmluvnej pokute je podľa žalovaného v rozpore so zásadami poctivého obchodného styku a žiadal súd o aplikáciu moderačného práva podľa § 301 Obchodného zákonníka (ďalej aj \"ObZ\").",
+                "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_2"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Podľa okresného súdu vo vzťahu k hodnote a významu zmluvnou pokutou zabezpečenej povinnosti sa vyjadril len žalobca, ktorý poukázal na to, že zmluvná pokuta slúži na zabezpečenie kľúčového záväzku žalovaného zo Zmluvy 1 a Zmluvy 2 nestrpiaceho omeškanie.",
+                "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_19"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný namietal v odvolaní neprimeranú výšku zmluvnej pokuty (300,- Eur), ktorá predstavuje 48% vo vzťahu k výške zabezpečeného peňažného záväzku 630,- Eur bez DPH.",
+                "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_76"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "V odvolaní žalovaný vytýkal aj jeho dvojitý postih, a to nielen z titulu zmluvnej pokuty, ale aj priznaním úroku z omeškania.",
+                "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_80"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Podľa žalovaného žalobca účelne a tendenčne čakal na uplynutie 30-dňovej lehoty na zaplatenie faktúr tak, aby mu vznikol nárok na zaplatenie zmluvnej pokuty.",
+                "chunk_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument.pdf_chunk_2"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/75/2024",
+      "decision_date": "12.02.2025",
+      "ecli": "ECLI:SK:KSBB:2025:6122423038.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

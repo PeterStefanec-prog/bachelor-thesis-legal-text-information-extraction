@@ -184,7 +184,7 @@ def validate_extraction(result, chunk_lookup=None):
         #   ####FIX: check for anonymized amounts. Some court decisions have redacted numbers like "X XXX,XX eur" or "XXX,XX Sk"   ####
         # where  actual digits are replaced with X.
         #  LLM sees these and INVENTS numbers (e.g. returns  600000 when the text says "XXX XXX").
-        #  I found this when auditing 40 random documents — 4Cob/122/2011 had 81 XXX markers and LLM hallucinated both claimed and awarded amounts that dont exist anywhere.
+        #  I found this when auditing 40 random documents - 4Cob/122/2011 had 81 XXX markers and LLM hallucinated both claimed and awarded amounts that dont exist anywhere.
         #
         # The check: if ANY evidence quote for amounts contains "XX" (2+ X's in a row),
         # amount is probably from anonymized text and should be flagged.
@@ -198,10 +198,10 @@ def validate_extraction(result, chunk_lookup=None):
         #   #### FIX: currency cross-check against chunk text.  #### not IMPORTANT
         # i found that GPT-4o sometimes sets currency="EUR" even when  text says "Sk" or "SKK" (slovak koruna, used before 2009).
         # i think the model just defaults to EUR for any european country. so i check if the chunks
-        # mention "Sk" amounts and the LLM said EUR — if yes, i flag it.
+        # mention "Sk" amounts and the LLM said EUR - if yes, i flag it.
         if chunk_lookup and amounts.get("currency") == "EUR":
             all_chunk_text = " ".join(chunk_lookup.values())    # merge all chunks into one text
-            # look for Sk as currency — pattern: number followed by optional dash/space then "Sk" followed by word boundary
+            # look for Sk as currency - pattern: number followed by optional dash/space then "Sk" followed by word boundary
             # This catches "146.162,99 Sk" and "200.000,- Sk" but not "Slovensko" or "diskusia"
             sk_matches = re.findall(r'\d[\d\s.,-]*\s*Sk\b', all_chunk_text)
             skk_matches = re.findall(r'(?i)\bSKK\b', all_chunk_text)
@@ -269,7 +269,11 @@ def _collect_evidence_fields(result):
             evidence_list.append((f"{pid}.associated_interest", ev["quote"], ev["chunk_id"]))
 
         # moderation fields
-            mod = penalty.get("moderation_analysis", {})
+        # FIX (2026-04-16): mod was indented 4 extra spaces, making it part of the `if`
+        # block above. When associated_interest evidence was missing (common for docs
+        # without interest info, e.g. 5Cob/11/2022), mod would never be assigned and
+        # next line would throw UnboundLocalError.
+        mod = penalty.get("moderation_analysis", {})
 
         # decision evidence
         ev = mod.get("decision", {}).get("evidence", {})
@@ -294,7 +298,7 @@ def _collect_evidence_fields(result):
 def _normalize_whitespace(text):
     """Remove spaces before punctuation marks.
 
-    FIX: PDF extraction sometimes leaves spaces before periods and commaslike "potvrdzuje ." instead of "potvrdzuje." —
+    FIX: PDF extraction sometimes leaves spaces before periods and commaslike "potvrdzuje ." instead of "potvrdzuje." -
     LLM "fixes" this in its quotes which breaks exact match. I normalize both sides before
     comparing so this preprocessing artifact doesnt cause false NOT_FOUND flags.
     """
@@ -321,7 +325,7 @@ def _lemmatize_text(text):
 def _find_best_match_in_chunk(quote, chunk_text, min_overlap=0.65):
     """Try to find the best matching substring in chunk_text for  quote.
 
-    This handles the case where  LLM paraphrases slightly — drops word like "v žalobe" or adds "že" at the beginning.
+    This handles the case where  LLM paraphrases slightly - drops word like "v žalobe" or adds "že" at the beginning.
     The quote is ALMOST in chunk but not an exact substring.
 
     How it works:
@@ -458,7 +462,7 @@ def _repair_quote_in_result(result, field_path, new_quote, chunk_id):
     i need to navigate the result dict to find the right evidence object and update its quote field.
     Result is the whole response
 
-    This is best-effort repair — if the path doesnt match for some reason, i just skip it .
+    This is best-effort repair - if the path doesnt match for some reason, i just skip it .
      But flag is already set so we know it happened.
     """
     parts = field_path.split(".") # just divide path based on .

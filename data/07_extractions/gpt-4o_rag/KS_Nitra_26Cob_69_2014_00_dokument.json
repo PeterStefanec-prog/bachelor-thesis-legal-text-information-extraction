@@ -1,0 +1,188 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 5134,
+      "completion_tokens": 578,
+      "cost_usd": 0.0186,
+      "latency_seconds": 7.38,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 5233,
+      "completion_tokens": 623,
+      "cost_usd": 0.0193,
+      "latency_seconds": 15.04,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ TSS Group a.s. sa domáhal zaplatenia sumy 638,16 eura s príslušenstvom od odporcu HM2 servis, s.r.o. Žalovaná istina pozostávala zo sumy za poskytnutie služieb, sankčného poplatku za upomienku a zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok Okresného súdu Nitra v napadnutej časti. Odporcovi nebola priznaná náhrada trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 500,- eur dohodnutá účastníkmi v článku 8. 1. všeobecných obchodných podmienok",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_8"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500,- eur",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 500,- eur dohodnutá účastníkmi",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_8"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 500,
+            "evidence": {
+              "quote": "zmluvná pokuta v celkovej výške 500,- eur",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 128.16,
+            "evidence": {
+              "quote": "k čiastočnému zamietnutiu žaloby výrokom II. rozsudku došlo v časti žalovanej zmluvnej pokuty v prevyšujúcej sumu 128,16 eura",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75 % ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 8,75 % ročne zo sumy 128,16 eura",
+            "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil zmluvnú pokutu z 500 eur na 128,16 eur, pretože ju považoval za neprimerane vysokú. Toto rozhodnutie bolo založené na moderačnom oprávnení podľa § 301 ods. 2 Obchodného zákonníka. Odvolací súd potvrdil rozhodnutie prvostupňového súdu, keďže výška pokuty bola jasne dohodnutá a nešlo o prípad, kde by výška nároku bola nezistiteľná.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+                "chunk_id": "KS_Nitra_26Cob_69_2014_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_69_2014_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/69/2014",
+      "decision_date": "30.06.2014",
+      "ecli": "ECLI:SK:KSNR:2014:4110230531.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

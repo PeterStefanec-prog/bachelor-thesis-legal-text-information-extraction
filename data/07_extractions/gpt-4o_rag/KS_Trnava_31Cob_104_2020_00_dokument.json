@@ -1,0 +1,190 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 21824,
+      "completion_tokens": 745,
+      "cost_usd": 0.062,
+      "latency_seconds": 41.06,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 13559,
+      "completion_tokens": 1350,
+      "cost_usd": 0.0474,
+      "latency_seconds": 36.45,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca THERMALPARK DS, a. s. požadoval od žalovaného Kántor - K.K.C., s. r. o. zaplatenie zmluvnej pokuty vo výške 69.325,59 eura za omeškanie s odovzdaním diela. Predmetom zmluvy o dielo bola prestavba a prístavba Rotundy, pričom žalobca tvrdil, že dielo malo byť dokončené do 30.6.2009, ale bolo odovzdané až 9.11.2009.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý priznal žalobcovi nárok na zmluvnú pokutu vo výške 57.812,09 eura.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zhotoviteľ sa dostal do omeškania s odovzdaním diela v rozsahu 131 dní, z jeho strany došlo k porušeniu zmluvy",
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_ceny",
+          "value_raw": "0,05% z ceny diela za každý deň omeškania",
+          "evidence": {
+            "quote": "podľa čl. VIII ods. 1 zmluvy má objednávateľ nárok na zmluvnú pokutu vo výške 0,05% z ceny diela za každý deň omeškania",
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 889416.8,
+            "evidence": {
+              "quote": "cena diela 889.416,80 eura",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            }
+          },
+          "original_claimed": {
+            "value": 69325.59,
+            "evidence": {
+              "quote": "zmluvná pokuta za 131 dní činí 69.325,59 eura",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            }
+          },
+          "final_awarded": {
+            "value": 57812.09,
+            "evidence": {
+              "quote": "súd žalobe po jej čiastočnom späťvzatí vyhovel v rozsahu 57.812,09 eura",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Nakoľko úlohou ustanovenia čl. VIII ods. 1 zmluvy o dielo o zmluvnej pokute bolo zabezpečiť včasné plnenie zo strany zhotoviteľa, nie je v predmetnej veci podstatné, či objednávateľovi v súvislosti s oneskoreným odovzdaním diela vznikla reálna škoda a v akej výške.",
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_30"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie teda uzavrel, že k odovzdaniu a prevzatiu diela podľa slobodne, vážne a určite zmluvne dohodnutých hmotnoprávnych podmienok odovzdania a prevzatia medzi účastníkmi zmluvy o dielo došlo až dňa 9.11.2009. V zmysle bodu 12 uznesenia Krajského súdu v Trnave z 28.2.2019 o platnosti dojednania o zmluvnej pokute a o výške zmluvnej pokuty z ceny diela bez DPH, pristúpil žalobca k čiastočnému späťvzatiu žaloby v rozsahu 11.513,11 eura a ku kalkulácii výšky zmluvnej pokuty z ceny diela bez DPH (19%), čím dospel k sume 57.812,09 eura (cena diela 889.416,80 eura, zmluvná pokuta za 1 deň omeškania 444,70 eura x 130 omeškaných dní = 57.812,09 eura).",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zistil, že žalobca nesprávne vypočítal výšku zmluvnej pokuty, pretože použil cenu diela vrátane DPH. Po úprave výpočtu na cenu bez DPH bola pokuta znížená na 57.812,09 eura. Odvolací súd potvrdil toto rozhodnutie, keďže žalovaný nenavrhol zníženie pokuty podľa § 301 OBZ. Súd tiež konštatoval, že zmluvná pokuta má sankčnú funkciu a nie je podmienená vznikom škody.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie teda uzavrel, že k odovzdaniu a prevzatiu diela podľa slobodne, vážne a určite zmluvne dohodnutých hmotnoprávnych podmienok odovzdania a prevzatia medzi účastníkmi zmluvy o dielo došlo až dňa 9.11.2009.",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "hranicu zníženia zmluvnej pokuty. Nárok na zmluvnú pokutu však je aj v prípade, ak v dôsledku porušenia povinnosti zabezpečenej zmluvnou pokutou škoda nevznikla. Zmluvná pokuta totiž plní nielen reparačnú, ale aj sankčnú",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_29"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Sama neprimeraná výška zmluvnej pokuty nekvalifikuje jej dojednanie za také, ktoré je v rozpore s dobrými mravmi v zmysle § 39 OZ, a to preto, že zákon umožňuje moderovať výšku zmluvnej pokuty.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_29"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta v tomto prípade mala nielen reparačnú, ale najmä sankčnú funkciu, t. j. mala predstavovať hrozbu sankcie pre zhotoviteľa, pokiaľ dielo nevykoná včas, nakoľko objednávateľ má logicky záujem na včasnom plnení.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_30"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Nárok na zmluvnú pokutu však je aj v prípade, ak v dôsledku porušenia povinnosti zabezpečenej zmluvnou pokutou škoda nevznikla.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_29"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvej inštancie uviedol, že podľa ustanovenia § 554 ods. 1 vety prvej Obchodného zákonníka zhotoviteľ splní svoju povinnosť vykonať dielo jeho riadnym ukončením a odovzdaním predmetu diela objednávateľovi v dohodnutom mieste, inak v mieste ustanovenom týmto zákonom.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvej inštancie mal použiť, ale nepoužil citované ustanovenia Obchodného zákonníka. Ak objednávateľ nesplnil svoju povinnosť a nezabezpečil včas stavebné povolenie, neposkytol tým súčinnosť potrebnú na to, aby zhotoviteľ mohol splniť svoj záväzok, t. j. dokončiť dielo riadne a včas.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_6"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_104_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/104/2020",
+      "decision_date": "24.02.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2212208449.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 19176,
+    "completion_tokens": 1079,
+    "cost_usd": 0.0587,
+    "latency_seconds": 41.95,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ČSOB Leasing, a.s. sa domáhal zaplatenia zmenkovej sumy 37.737,14 eur so 6 %-ným ročným úrokom a zmenkovou odmenou 125,78 eur od žalovaných, ktorí namietali neplatnosť zmeniek a neprimeranosť zmluvných pokút.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava V, ktorý ponechal zmenkový platobný rozkaz v platnosti.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "Všetky tri leasingové zmluvy boli predčasne ukončené a predmety leasingu odňaté v dôsledku neplatenia leasingových splátok",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "nešpecifikovaná",
+          "evidence": {
+            "quote": "nešpecifikovaná zmluvná pokuta",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 37737.14,
+            "evidence": {
+              "quote": "zmenkovú sumu 37.737,14 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 37737.14,
+            "evidence": {
+              "quote": "súd správne zmenkový platobný rozkaz ponechal v platnosti",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % ročne",
+          "evidence": {
+            "quote": "so 6 %-ným ročným úrokom zo sumy 11.545,38 eur od 2.8.2013 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd správne zmenkový platobný rozkaz ponechal v platnosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmenky obsahujú všetky náležitosti podľa zmenkového zákona a žalobca preukázal svoje právo predložením prvopisov zmeniek. Žalovaní nepreukázali, že by remitent porušil dohodnuté podmienky pri vyplnení zmeniek. Kauzálne námietky žalovaných boli považované za nedôvodné, pretože neboli špecifikované a zdokladované.",
+          "key_quotes": [
+            {
+              "quote": "Žalovaní namietali, že blankozmenky boli doplnené v rozpore s udeleným oprávnením. Námietku skutkovo odôvodnili len tým, že si nie sú záväzku v takejto výške vedomí a žalobca výšku zmenkovej sumy nepreukázal.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "v rozpore s dobrými mravmi, ak prvostupňový súd ponechal zmenkový platobný rozkaz v celom rozsahu v platnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmenky boli vystavené vedome neúplné, ich účelom bolo zabezpečiť záväzky žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaní mali objektívnu možnosť ešte pred splatnosťou zmeniek, resp. pred začatím súdneho konania, získať všetky informácie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pôvodný žalobca zariadenie ponúkal len úzkemu okruhu záujemcov, a preto nedosiahol trhovú cenu",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw",
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4CoZm_2_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4CoZm/2/2018",
+      "decision_date": "29.11.2018",
+      "ecli": "ECLI:SK:KSBA:2018:1514200852.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

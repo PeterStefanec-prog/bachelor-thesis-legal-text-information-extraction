@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 5127,
+    "completion_tokens": 1638,
+    "cost_usd": 0.0058,
+    "latency_seconds": 17.0,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia sumy 638,16 EUR, ktorá pozostávala z istiny za služby, sankčného poplatku za upomienku a zmluvnej pokuty vo výške 500 EUR. Súd prvého stupňa znížil zmluvnú pokutu ako neprimerane vysokú a navrhovateľ sa odvolal výlučne proti rozhodnutiu o trovách konania.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa v napadnutej časti o trovách konania a nepriznal náhradu trov odvolacieho konania.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "zo sumy 500,- eur vo forme zmluvnej pokuty.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "500,- eur",
+          "evidence": {
+            "quote": "išlo o zmluvnú pokutu vo výške 500,- eur dohodnutú účastníkmi v článku 8. 1. všeobecných obchodných podmienok",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 500.0,
+            "evidence": {
+              "quote": "zo sumy 500,- eur vo forme zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 128.16,
+            "evidence": {
+              "quote": "k čiastočnému zamietnutiu žaloby výrokom II. rozsudku došlo v časti žalovanej zmluvnej pokuty v prevyšujúcej sumu 128,16 eura.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa aplikoval moderačné právo podľa § 301 ods. 2 Obchodného zákonníka, keďže považoval dojednanú zmluvnú pokutu vo výške 500 EUR za neprimerane vysokú vzhľadom na istinu. Odvolací súd potvrdil, že výška nároku bola známa a súd len využil svoje zákonné oprávnenie na zníženie pokuty, nie že by išlo o prípad podľa § 136 O.s.p. (nezistiteľnosť výšky). Výsledkom bolo zníženie nároku na sumu 128,16 EUR.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú a preto pristúpil k jej zníženiu podľa § 301 ods. 2 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "uplatňoval iba svoje moderačné oprávnenie vyplývajúce z § 301 ods. 2 Obchodného zákonníka voči výške zmluvnej pokuty, ktorej výška jasne vyplývala z dohody účastníkov konania.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Súd prvého stupňa považoval zmluvnú pokutu v celkovej výške 500,- eur za neprimerane vysokú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_69_2014_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/69/2014",
+      "decision_date": "30.06.2014",
+      "ecli": "ECLI:SK:KSNR:2014:4110230531.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

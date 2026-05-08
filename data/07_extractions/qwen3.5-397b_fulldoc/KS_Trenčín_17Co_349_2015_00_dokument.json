@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9143,
+    "completion_tokens": 1889,
+    "cost_usd": 0.008,
+    "latency_seconds": 34.63,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za omeškanie s platbou nájomného podľa nájomnej zmluvy. Spor vznikol preto, že súd prvej inštancie priznal pokutu len do dátumu zániku nájomnej zmluvy, zatiaľ čo žalobca ju požadoval až do dátumu skutočného zaplatenia dlhu.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a priznal žalobcovi nárok na zmluvnú pokutu aj za obdobie po zániku nájomnej zmluvy až do zaplatenia dlhu, celkovo vo výške 533 eur."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "odvolací súd zmeňujúcim rozsudkom 533 eur"
+            },
+            "value": 533
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobca vzal na pojednávaní žalobu späť v časti o zaplatenie 247,50 eur (pôvodne žaloval sumu 891 eur)"
+            },
+            "value": 891
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "0,5% z dlžnej čiastky"
+            },
+            "value": 650
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Napriek významným odlišnostiam zmluvnej pokuty a úroku z omeškania niet v uvedenej otázke okamžiku vzniku práva žiaden dôvod posudzovať oba inštitúty odlišne"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "v prípade omeškania nájomcu so zaplatením mesačného nájomného o viac ako 14 dní"
+          },
+          "value": "late_payment"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd má za to, že uvedený postup súdu prvej inštancie nie je správny"
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "súd nedospel k názoru, že postup žalobcu bol v rozpore s dobrými mravmi"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta totiž nie je viazaná na skončenie nájomného vzťahu, ale je viazaná na porušenie zmluvnej povinnosti zaplatiť nájomné"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "má zmluvná strana právo na zmluvnú pokutu vo výške zodpovedajúcej celému obdobiu omeškania, i keď v jeho priebehu došlo k zániku hlavného záväzku"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalovaný nezaplatil nájomné za mesiac august 2012"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Žalobca v konečnom dôsledku tento postup aj dodržal"
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "positive"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd je preto toho názoru, že žalobca má nárok na zaplatenie zmluvnej pokuty aj za nasledujúce obdobie od skončenia nájomnej zmluvy až do zaplatenia dlžného nájomného"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Pokiaľ je teda pri zmluvnej pokute dohodnutej percentom za každý deň omeškania splnená základná podmienka, že k omeškaniu, ako porušeniu povinnosti zakladajúcemu právo na zmluvnú pokutu došlo ešte za trvania hlavného záväzku, čo v posudzovanom prípade nie je sporné, má zmluvná strana právo na zmluvnú pokutu vo výške zodpovedajúcej celému obdobiu omeškania"
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvej inštancie priznal zmluvnú pokutu len za obdobie od vzniku omeškania do zániku nájomnej zmluvy, keďže považoval nárok za závislý na trvaní hlavného záväzku. Odvolací súd tento názor odmietol s odôvodnením, že nárok na zmluvnú pokutu vzniká jednorazovo v momente porušenia povinnosti (omeškania) a jeho výška sa určuje podľa dohodnutého percenta za každý deň trvania omeškania. Skutočnosť, že hlavný záväzok (nájomná zmluva) medzičasom zanikol, nemá vplyv na existujúci nárok na pokutu, ktorá pokračuje až do momentu skutočného zaplatenia dlžnej sumy."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "nájomca zaväzuje zaplatiť prenajímateľovi zmluvnú pokutu vo výške 0,5% z dlžnej čiastky za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,5% z dlžnej čiastky za každý deň omeškania"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_17Co_349_2015_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "17Co/349/2015",
+      "decision_date": "17.08.2016",
+      "ecli": "ECLI:SK:KSTN:2016:3814202672.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

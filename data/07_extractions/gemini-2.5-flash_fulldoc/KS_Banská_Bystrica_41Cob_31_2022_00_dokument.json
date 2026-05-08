@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 24146,
+    "completion_tokens": 2226,
+    "cost_usd": 0.0524,
+    "latency_seconds": 8.7,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 24 479,90 Eur, ktorá pozostávala z bezdôvodného obohatenia a zmluvnej pokuty, z dôvodu, že žalovaný po ukončení nájomnej zmluvy neodovzdal predmet nájmu v dohodnutej lehote a naďalej ho užíval bez právneho dôvodu. Žalovaný namietal neposkytnutie súčinnosti zo strany žalobcu pri odovzdaní nehnuteľnosti a neprimeranosť výšky zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd v Banskej Bystrici potvrdil rozsudok Okresného súdu Brezno, ktorým bol žalovaný zaviazaný zaplatiť žalobcovi sumu 24 479,90 Eur a nahradiť trovy konania v rozsahu 100%.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "V prejednávanej veci je zmluvná pokuta viazaná na porušenie zmluvnej povinnosti odovzdať predmet nájmu. Zmluvná pokuta je viazaná na porušenie zmluvnej povinnosti - odovzdať včas nehnuteľnosť po skončení nájmu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "1.000,--Sk za každý deň omeškania (33,19 Eur)",
+          "evidence": {
+            "quote": "Ak si potom strany sporu dohodli v nájomnej zmluve zmluvnú pokutu vo výške 1.000,--Sk za každý deň omeškania (33,19 Eur), ktorá sa vzťahovala na povinnosť odovzdať predmet nájmu do troch dní od skončenia nájmu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 18254.9,
+            "evidence": {
+              "quote": "žalobca sa žalobou doručenou súdu dňa 14.12.2020 domáhal voči žalovanému zaplatenia sumy 18.254,90 Eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 18254.9,
+            "evidence": {
+              "quote": "Odvolací súd dospel k záveru že nárok žalobcu na zaplatenie zmluvnej pokuty aj v takejto výške je dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd dospel k záveru že nárok žalobcu na zaplatenie zmluvnej pokuty aj v takejto výške je dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie aj odvolací súd sa nestotožnili s tvrdením žalovaného, že zmluvná pokuta vo výške 1 000 Sk denne bola neprimerane vysoká. Súd zdôraznil, že určenie výšky zmluvnej pokuty je vecou dohody účastníkov a žalovaný si bol vedomý následkov. Neprimeranosť nemožno usudzovať z celkovej výšky, ak je dôsledkom dlhodobého omeškania, ktoré zapríčinil žalovaný. Súd nepovažoval za potrebné znížiť zmluvnú pokutu podľa § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "S prihliadnutím na predmet zabezpečenia sa súdu výška zmluvnej pokuty 1.000,--Sk denne nejavila ako neprimerane vysoká.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Neprimeranosť zmluvnej pokuty nemožno usudzovať z jej celkovej výšky, ak je dôsledkom dlhodobého omeškania a s tým spojeným navyšovaním o inak primeranú \"dennú sadzbu\" zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd konštatuje že zásah súdu do zmluvných vzťahov aplikáciou § 301 Obchodného zákonníka by mal byť výnimočným postupom len v skutočne odôvodnených prípadoch, ak sa pokuta (jej výška) javí ako neprimerane vysoká.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalobca mal právo zabezpečiť si včasnosť vrátenia predmetu nájmu po zániku nájomnej zmluvy zmluvnou pokutou.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd sa vôbec v odôvodnení rozsudku nevysporiadal s návrhom žalovaného na zníženie zmluvnej pokuty až do výšky spôsobenej škody.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "na prevzatie nikto nedostavil. Namietol tiež nejasný výpočet bezdôvodného obohatenia, keď nie je zrejmé, ako žalobca dospel k sume 6.225,--Eur, ďalej skutočnosť, že predmet nájmu neužíval v celosti, keď po doručení výpovede presúval svoju činnosť do iných prevádzkových priestorov a prenajatú halu z väčšej časti vypratal a uvoľnil.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný halu odovzdal žalobcovi až na základe súdneho rozhodnutia a výzvy žalobcu zo dňa 15.10.2020 dňa 26.10.2020.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalobca potom ako vypovedal žalovanému nájomnú zmluvu nikdy sám nevstúpil do užívania tejto haly aj keď ju následne prevzal, neposkytol ju ani do nájmu inej osobe, naopak tento majetok vyhlásil za nadbytočný, v dôsledku čoho vyhlásil obchodnú verejnú súťaž na odpredaj súboru nehnuteľností, ktorá bola vyhlásená na 20.02.2020.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.pomer_k_istine"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_31_2022_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/31/2022",
+      "decision_date": "19.10.2022",
+      "ecli": "ECLI:SK:KSBB:2022:6320202847.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

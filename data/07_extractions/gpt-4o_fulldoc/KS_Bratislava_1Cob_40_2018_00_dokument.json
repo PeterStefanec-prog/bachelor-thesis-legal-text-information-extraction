@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13487,
+    "completion_tokens": 1091,
+    "cost_usd": 0.0446,
+    "latency_seconds": 9.62,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca BPT LEASING, a.s. sa domáhal zaplatenia zmluvnej pokuty za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Žalovaný M. B. bol povinný uhradiť zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý priznal žalobcovi nárok na zmluvnú pokutu.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2% denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V časti zmluvnej pokuty súd žalobu zamietol a vo zvyšku konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9% ročne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "V časti zmluvnej pokuty súd žalobu zamietol a vo zvyšku konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol nárok na zmluvnú pokutu, pretože posúdil dojednanú zmluvnú pokutu ako neprimeranú a v rozpore so zásadami poctivého obchodného styku. Súd uviedol, že žalovaný by okrem úroku z omeškania mal platiť aj zmluvnú pokutu vo výške 73% ročne, čo považoval za neprimerané. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, pričom sa stotožnil s jeho právnym posúdením.",
+          "key_quotes": [
+            {
+              "quote": "V časti zmluvnej pokuty súd žalobu zamietol a vo zvyšku konanie zastavil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "posúdil predmetnú dojednanú zmluvnú pokutu v rozpore so zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný by okrem úroku z omeškania mal platiť aj zmluvnú pokutu vo výške 73% ročne z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný by okrem úroku z omeškania mal platiť aj zmluvnú pokutu vo výške 73% ročne z dlžnej sumy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[0].amounts.final_awarded",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_40_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/40/2018",
+      "decision_date": "13.06.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1211204153.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

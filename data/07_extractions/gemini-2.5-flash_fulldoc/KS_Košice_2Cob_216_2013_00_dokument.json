@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9772,
+    "completion_tokens": 1766,
+    "cost_usd": 0.0299,
+    "latency_seconds": 9.99,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca žiadal zaplatiť 96.846,02 eur titulom neuhradenia vyúčtovanej zmluvnej pokuty za omeškanie s odovzdaním diela podľa Zmluvy o dielo. Žalovaný sa bránil tvrdením, že k omeškaniu došlo z dôvodov na strane žalobcu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvého stupňa, ktorý žalobu zamietol. Žalobca je povinný nahradiť žalovanému trovy odvolacieho konania.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalobca faktúrou č. XXXXXXXX zo dňa 1.2.2010 vyúčtoval žalovanému zmluvnú pokutu podľa čl. XI. bodu 8 a čl. II. bodu 2 Zmluvy o dielo č. XX/XX v súlade s prílohou predmetnej faktúry v celkovej čiastke 96.845,02 eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% odplaty za vykonanie časti diela za každý deň omeškania",
+          "evidence": {
+            "quote": "má objednávateľ nárok na uplatnenie zmluvnej pokuty vo výške 0,5% z odplaty za vykonanie časti diela za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 96845.02,
+            "evidence": {
+              "quote": "Žalobca faktúrou č. XXXXXXXX zo dňa 1.2.2010 vyúčtoval žalovanému zmluvnú pokutu podľa čl. XI. bodu 8 a čl. II. bodu 2 Zmluvy o dielo č. XX/XX v súlade s prílohou predmetnej faktúry v celkovej čiastke 96.845,02 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Na základe uvedeného žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "other",
+            "evidence": {
+              "quote": "Súd prvého stupňa dospel teda k záveru, že žalobcom uplatnený nárok na zaplatenie zmluvnej pokuty nie je v súlade s ustanovením čl. XI bodu 8. zmluvy o dielo, na ktoré sa žalobca odvoláva, pretože jej výpočet uvedený v prílohe faktúry, ktorou bola uplatnená, je v rozpore so spôsobom určenia zmluvnej pokuty uvedenej v predmetnom ustanovení zmluvy.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože žalobca nepreukázal správny výpočet zmluvnej pokuty v súlade s dohodnutým ustanovením zmluvy. Zmluvná pokuta mala byť počítaná z ceny tej-ktorej časti diela, ktorej sa omeškanie týka, nie z celej ceny diela za etapu. Žalobca ani po výzve súdu neupresnil výpočet.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa dospel teda k záveru, že žalobcom uplatnený nárok na zaplatenie zmluvnej pokuty nie je v súlade s ustanovením čl. XI bodu 8. zmluvy o dielo, na ktoré sa žalobca odvoláva, pretože jej výpočet uvedený v prílohe faktúry, ktorou bola uplatnená, je v rozpore so spôsobom určenia zmluvnej pokuty uvedenej v predmetnom ustanovení zmluvy.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z uvedeného zmluvného dojednania je nad všetku pochybnosť jasné, že zmluvná pokuta mala byť počítaná za nedodržanie postupu prác podľa harmonogramu z ceny tej-ktorej časti, ktorej sa omeškanie týka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_original_claimed_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_216_2013_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/216/2013",
+      "decision_date": "20.06.2014",
+      "ecli": "ECLI:SK:KSKE:2014:7110215450.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

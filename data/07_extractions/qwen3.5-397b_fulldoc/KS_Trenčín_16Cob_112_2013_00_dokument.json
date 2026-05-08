@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12667,
+    "completion_tokens": 2203,
+    "cost_usd": 0.0101,
+    "latency_seconds": 22.76,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zvyšnej časti zmluvnej pokuty vo výške 7 000 EUR, ktorú si uplatnil za oneskorené zaplatenie faktúr žalovaným. Žalovaný namietal neplatnosť dohody pre neurčitosť a neprimeranosť výšky pokuty, pričom súd prvého stupňa použil moderačné právo a znížil pokutu na 5 000 EUR.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bola zmluvná pokuta znížená na 5 000 EUR a žalovanému bola uložená povinnosť zaplatiť žalobcovi zvyšných 2 000 EUR.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Dohodou o zmluvnej pokute žalobca jednoznačne sledoval to, aby žalovaný zaplatil svoj dlh do dátumu 12.03.2010, keď ku dňu 03.03.2010 bol žalovaný so zaplatením v omeškaní od 12 do 100 dní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "10 000,- Eur",
+          "evidence": {
+            "quote": "V prípade nezaplatenia pohľadávok do 12.03.2010 sa zaväzujem zaplatiť zmluvnú pokutu 10 000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 80298.15,
+            "evidence": {
+              "quote": "Dňa 03.03.2010 žalovaný svoje peňažné záväzky v celkovej výške 80 298,15 Eur písomne uznal.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 7000,
+            "evidence": {
+              "quote": "Nezaplatený zostatok zmluvnej pokuty predstavoval žalobcom žalovanú pohľadávku vo výške 7 000,- Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2000,
+            "evidence": {
+              "quote": "Vzhľadom na to, že žalovaný zaplatil žalobcovi pred podaním žaloby titulom zmluvnej pokuty sumu 3 000,- Eur, súd zaviazal žalovaného na zaplatenie sumy 2 000,- Eur ako zvyšnej časti nezaplatenej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Okrem dojednaného práva na zaplatenie zmluvnej pokuty vzniklo žalobcovi zákonné právo na úroky z omeškania a právo na náhradu škody ako samostatné nároky vzniknuté z porušenia tej istej povinnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Z vyššie uvedených dôvodov sa súdu prvého stupňa javila zmluvná pokuta vo výške 5 000,- Eur ako primeraná.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa znížil pôvodne dohodnutú zmluvnú pokutu 10 000 EUR na sumu 5 000 EUR podľa § 301 Obchodného zákonníka, keďže ju považoval za neprimerane vysokú vzhľadom na hodnotu zabezpečovanej pohľadávky a skutočnosť, že omeškanie nebolo veľmi významné. Súd zohľadnil, že žalobca netvrdil existenčnú závislosť na tejto pohľadávke a že žalovaný dlh nakoniec uhradil, hoci oneskorene. Odvolací súd tento postup potvrdil s tým, že súd nie je limitovaný spodnou hranicou, ak veriteľ nepreukáže vzniknutú škodu.",
+          "key_quotes": [
+            {
+              "quote": "Za tohto stavu sa dohodnutá zmluvná pokuta, predstavujúca cca 1/8 zabezpečovaného záväzku, javila súdu prvého stupňa ako neprimerane vysoká.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvého stupňa nebol v danej právnej veci limitovaný spodnou zákonnou hranicou pre stanovenie výšky zmluvnej pokuty, ktorú súd prvého stupňa moderoval, znížil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Dohoda zaisťuje splnenie záväzku žalovaného vo výške 80 298,15 Eur, ku ktorému sa žalovaný zaviazal v lehote do 12.03.2010. Z hľadiska určenia zmluvnej povinnosti, ktorej splnenie zmluvná",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca nepreukázal, že konaním žalovaného, zaplatením faktúr po dátume 03.03.2010 mu vznikla škoda presahujúca sumu 5 000,- Eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Pri úvahách o znížení zmluvnej pokuty je potrebné vychádzať z hodnoty a významu zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalovaný zaplatil záväzok síce po dohodnutej lehote dňa 16.04.2010, ale toto omeškanie nepovažoval súd prvého stupňa za veľmi významné omeškanie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Okrem dojednaného práva na zaplatenie zmluvnej pokuty vzniklo žalobcovi zákonné právo na úroky z omeškania a právo na náhradu škody ako samostatné nároky vzniknuté z porušenia tej istej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "súd prvého stupňa uviedol, že z dokazovania nevyplynulo, resp. žalobca ani netvrdil také skutočnosti, že zo strany žalobcu ide o zabezpečenie podstatnej pohľadávky v jeho podnikateľskej činnosti",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_112_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/112/2013",
+      "decision_date": "21.08.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3512200457.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 26373,
+    "completion_tokens": 3108,
+    "cost_usd": 0.0176,
+    "latency_seconds": 27.04,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ (Železničná spoločnosť Cargo Slovakia) sa domáhal zaplatenia zmluvnej pokuty vo výške 385.716,43 EUR od odporcu (INVESTEX GROUP) z dôvodu nedodržania deklarovaného objemu prepravy tovaru podľa uzatvorených dohôd o cene. Odporca namietal absolútnu neplatnosť dojednania o zmluvnej pokute a v podalternatíve žiadal jej zníženie podľa § 301 Obchodného zákonníka.",
+      "verdict_summary": "Odvolací súd čiastočne vyhovel odvolaniu odporcu, znížil priznanú sumu o 29.281,47 EUR (kvôli nesprávnemu započítaniu objemu prepravy z dodatkov k zmluve) a zaviazal odporcu na zaplatenie sumy 356.434,96 EUR.",
+      "contract_type": "preprava",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "predchodca navrhovateľa ako dopravca si vyhradil právo vyúčtovať odporcovi ako zákazníkovi zmluvnú pokutu v prípade, že tento pri netto cenách vo vnútroštátnej alebo medzinárodnej preprave - dovoz, vývoz nedodrží objem deklarovaný v uzatvorenej Dohode o cene, a to tak, že skutočne realizovaný objem bude o viac ako 10 % menší, ako objem deklarovaný v uzatvorenej Dohode o cene.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnú pokutu 210,-Sk/tona neprepraveného deklarovaného objemu prepravy; zmluvnú pokutu 0,5 eur/tona neprepraveného deklarovaného objemu prepravy; zmluvnú pokutu 2,1 eur/tona neprepraveného deklarovaného objemu prepravy; zmluvnú pokutu vo výške 1,8 eur/tona neprepraveného deklarovaného objemu prepravy; zmluvnú pokutu vo výške 2,0 eur/tona za neprepravený deklarovaný objem prepravy",
+          "evidence": {
+            "quote": "primeranosti výšky zmluvnej pokuty. Okresný súd ďalej konkrétne poukázal na dohodnutú výšku zmluvnej pokuty v jednotlivých dohodách o cene a uviedol, že v Dohode o cene č. 1002210 zo dňa 4. 5 2004 si strany dojednali objem prepravy 13.000 ton pre reláciu z Haniska p. Koš do Nová Baňa v netto cene 210,-Sk/tona, ďalej zmluvnú pokutu 210,-Sk/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 100 % z netto ceny prepravy za 1 tonu. V Dohode o cene č. D104136 zo dňa 18. 12. 2003 si strany dojednali objem prepravy 130.000 ton pre reláciu Lúky pod Makytou, štátna hranica do Martina, v netto cene 6,78 eur/tona, ďalej zmluvnú pokutu 0,5 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške 7,5 % z netto ceny prepravy za 1 tonu. V Dohode o cene č. D104850 z 27. 4. 2004 si strany dojednali objem prepravy 41.900 ton pre relácie špecifikované v tejto dohode, teda pre relácie Čadca štátna hranica Lúky pod Makytou štátna hranica Kúty, štátna hranica do rôzne v netto cenách pre železničný vozeň od 3,45 eur/tona po 16,67 eur/tona, v netto cenách pre súkromný vozeň od 2,83 eur/tona do 13,67 eur/tona, ďalej zmluvnú pokutu 2,1 eur/tona neprepraveného deklarovaného objemu prepravy, t. j. vo výške rôznej vzhľadom na rozsah netto cien pri jednotlivých reláciách a rôznych objemoch na rôznych reláciách (od 200 do 10.000 ton), keď relácií je tu uvedených 60, od čoho potom závisela i výška zmluvnej pokuty, keď napr. pri relácii z Čadca štátna hranica do Čadca na objem 10.000 ton bola",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 385716.43,
+            "evidence": {
+              "quote": "navrhovateľ sa žalobou doručenou súdu dňa 26. 9. 2006 domáhal proti odporcovi zaplatenia 385.716,43 eur titulom zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 356434.96,
+            "evidence": {
+              "quote": "odporca je povinný zaplatiť navrhovateľovi 356.434,96 eur.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd v tejto časti zmenil rozsudok okresného súdu a priznal navrhovateľovi zmluvnú pokutu len za neprepravený objem 3500 ton, čo v prepočte konverzným kurzom EUR/SKK = 30,126 predstavuje zmluvnú pokutu vo výške 7.883,46 eur. Vo zvyšku, t. j. vo výške 29.281,47 eur odvolací súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta bola platne dojednaná a jej výška nie je neprimeraná, keďže zodpovedá hodnote a významu zabezpečovanej povinnosti. Odporca nepreukázal, že by bol donútený k podpisu zmluvy alebo že by dojednanie odporovalo dobrým mravom. K zníženiu sumy došlo iba v prípade jednej zmluvy (D104847), kde súd opravil chybu prvostupňového súdu, ktorý nesprávne započítal objem prepravy z dodatkov, hoci základná zmluva stanovovala nižší objem, ktorý nebol dodatkami zmenený.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa stotožnil s názorom okresného súdu, ktorý dospel k záveru, že v danom prípade nie je na mieste použitie moderačného práva, pretože v jednotlivých dohodách o cene nebola zmluvná pokuta dohodnutá ako neúmerne prísna a bezdôvodná sankcia.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Jednotlivými dodatkami k Dohode o cene č. D 104847 zo dňa 26. 2. 2004 sa menili len konkrétne články tejto dohody, avšak nemenil sa článok 5, ktorý stanovoval objem prepravy 3500 ton.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Okresný súd neprijal záver odporcu, že by dojednanie o zmluvnej pokute odporovalo zásadám poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Inštitút zmluvnej pokuty by nemal byť zo strany toho zmluvného partnera, v prospech ktorého je zakotvený využívaný ako prostriedok na dosiahnutie neprimeraného zisku, ale vždy iba ako nástroj zabezpečujúci riadne plnenie zmluvných povinností zo strany druhého zmluvného partnera (preventívna funkcia zmluvnej pokuty - hrozba majetkovej ujmy v prípade neplnenia zmluvných povinností).",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvnú pokutu uhradí zákazník dopravcovi bez ohľadu na to, či a v akej výške vznikla dopravcovi škoda, ktorú je možné vymáhať samostatne.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Uplatnená zmluvná pokuta nie je neprimeraná ani k hodnote zabezpečovanej povinnosti ani k významu zabezpečovanej povinnosti.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Odporca vedel, že má povinnosť prepravovať na základe Dohody o cene č. D104136 zabezpečenej zmluvnou pokutou a napriek tomu prepravoval cez spoločnosť BUDAMAR TRANSPORT SLOVAKIA, a. s., Bratislava síce za nižšiu cenu, ale vedome porušujúc svoju povinnosť zadeklarovaný objem prepraviť podľa Dohody o cene č. D104136 uzatvorenej s navrhovateľom.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "jeho konečných zákazníkov. Navrhovateľ sa správal obchodne, keď každého svojho zákazníka, ktorý splnil ním požadované podmienky zazmluvnil, pričom nebolo jeho povinnosťou sledovať \"obchodné súťaženie\" špeditérov, zákazníkov na prepravnom trhu.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_42_2010_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/42/2010",
+      "decision_date": "21.12.2011",
+      "ecli": "ECLI:SK:KSBB:2011:6706209604.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

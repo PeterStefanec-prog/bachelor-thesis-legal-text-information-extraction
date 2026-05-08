@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9755,
+    "completion_tokens": 1869,
+    "cost_usd": 0.0082,
+    "latency_seconds": 23.04,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia ceny za poskytnuté telekomunikačné služby, ceny nevrátených zariadení a zmluvnej pokuty vo výške 199 eur za predčasné ukončenie zmluvy počas viazanosti. Súd prvej inštancie priznal nárok na služby a zariadenia, ale zamietol nárok na zmluvnú pokutu, keďže zmluva bola ukončená výpoveďou žalovaného a nie žalobcu.",
+      "verdict_summary": "Odvolací súd zmenil rozhodnutie súdu prvej inštancie a priznal žalobcovi aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, keďže žalovaný porušil dohodnutú dobu viazanosti 24 mesiacov.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 20110574",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "199 eur",
+          "evidence": {
+            "quote": "v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 199,
+            "evidence": {
+              "quote": "nárok na zaplatenie zmluvnej pokuty vo výške 199 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 199,
+            "evidence": {
+              "quote": "žalovaný je povinný zaplatiť žalobcovi sumu 199 eur spolu s úrokom z omeškania",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,25 % ročne",
+          "evidence": {
+            "quote": "Žalovanému vznikla povinnosť v zmysle cit. ust. zákona zaplatiť zo sumy 199 eur aj úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd dospel k záveru, že hoci mal žalovaný právo vypovedať zmluvu na dobu neurčitú, existovala tu dohodnutá doba viazanosti 24 mesiacov, počas ktorej sa zaviazal zotrvať v zmluvnom vzťahu výmenou za akciové ceny a úľavy. Keďže žalovaný túto lehotu nedodal a zmluvu vypovedal skôr, naplnil sa zmluvný titul pre uplatnenie zmluvnej pokuty podľa čl. XI bod 10 VZP. Súd sa stotožnil s názorom žalobcu, že odkaz na výšku pokuty v zmluve je dostatočný a nie je potrebné skúmať ďalšie podmienky týkajúce sa spôsobu ukončenia zmluvy poskytovateľom.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa stotožnil s názorom žalobcu, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199 eur",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "došlo k splneniu podmienok dohodnutých stranami v zmluve o pripojení a VZP na uplatnenie zmluvnej pokuty vo výške 199 eur",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalobca poskytol akciové ceny a úľavy vo forme dvojnásobnej rýchlosti internetového pripojenia (a to za základnú cenu programu bez navýšenia) a vo forme poskytnutia wifi routera zdarma v rámci akcie.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_57_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/57/2015",
+      "decision_date": "13.04.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1613203938.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

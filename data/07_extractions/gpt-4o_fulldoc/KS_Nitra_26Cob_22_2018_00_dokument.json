@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18086,
+    "completion_tokens": 1066,
+    "cost_usd": 0.0559,
+    "latency_seconds": 22.22,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca ECONOMY SERVICE s.r.o. sa domáhal zaplatenia 70.117,84 eura s príslušenstvom voči žalovanému F. G. z titulu ručiteľského záväzku obsiahnutého v zmluve o úvere zo dňa 15.06.2007. Pôvodný žalobca Credit Piešťany, s.r.o. postúpil pohľadávku na žalobcu ECONOMY SERVICE s.r.o.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok Okresného súdu Nové Zámky, ktorým bola žaloba v napadnutej časti zamietnutá a žalobcovi bola priznaná náhrada trov konania.",
+      "contract_type": "uver",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "svedkom vnímané, ako zmluvná pokuta za nesplnené záväzky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": null,
+          "evidence": {
+            "quote": "svedkom vnímané, ako zmluvná pokuta za nesplnené záväzky",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 117359.2,
+            "evidence": {
+              "quote": "súčet jednotlivých súm obsiahnutých v zmenkách predstavuje ten istý výsledok, ako suma označená v dohode o uznaní dlhu, to je 117.359,20 eura.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 72428.5,
+            "evidence": {
+              "quote": "pôvodný žalobca Credit Piešťany, s.r.o., Nitrianska 11, Piešťany, sa svojou žalobou domáhal voči žalovanému zaplatenia 72.428,50 eura s príslušenstvom",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V zostávajúcej časti súd žalobu zamietol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1 % denne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 0,1 % denne zo sumy 67.506,13 eura od 13.11.2007 do 30.11.2010",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "v konaní nebola preukázaná spôsobom nevzbudzujúcim žiadne pochybnosti existencia platnej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že nebola preukázaná existencia platnej zmluvnej pokuty medzi Colimpex, s.r.o. a CL TREND s.r.o. Zmenky boli vnímané ako zabezpečenie pohľadávky, nie ako zmluvná pokuta. Súd sa priklonil k argumentácii žalovaného, že zmenky slúžili na zabezpečenie pohľadávky z dohody o uznaní dlhu.",
+          "key_quotes": [
+            {
+              "quote": "v konaní nebola preukázaná spôsobom nevzbudzujúcim žiadne pochybnosti existencia platnej zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "svedkom vnímané, ako zmluvná pokuta za nesplnené záväzky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].rate_definition.value_raw"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_22_2018_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/22/2018",
+      "decision_date": "29.11.2018",
+      "ecli": "ECLI:SK:KSNR:2018:1110227885.8",
+      "document_type": "Rozsudok"
+    }
+  }
+}

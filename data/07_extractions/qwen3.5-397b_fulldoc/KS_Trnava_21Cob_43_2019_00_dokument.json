@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8335,
+    "completion_tokens": 1838,
+    "cost_usd": 0.0076,
+    "latency_seconds": 22.42,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa sa domáhalo zaplatenia zmluvnej pokuty vo výške 3.000 € za porušenie konkurenčnej doložky žalovanou, ktorá po zániku zmluvy o finančnom sprostredkovaní začala vykonávať činnosť finančného agenta pre inú poisťovňu. Súd prvej inštancie priznal len 600 €, keďže doložku považoval za príliš širokú a pokutu za neprimeranú, čo žalobkyňa napadla odvolaním.",
+      "verdict_summary": "Odvolací súd odvolanie žalobkyne proti výroku o priznaní 600 € odmietol pre nedostatok legitimácie a zrušil rozhodnutie o zamietnutí zvyšku žaloby (2.400 €) pre nedostatky v odôvodnení, pričom vec vrátil súdu prvej inštancie na nové konanie.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "žalovaná je od 1. augusta 2017 zapísaná ako viazaný finančný agent pre podregister poistenia alebo zaistenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.000 €",
+          "evidence": {
+            "quote": "Za porušenie tejto povinnosti bola v čl. VII ods. 1 zmluvy dohodnutá zmluvná pokuta 3.000 €.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 3000,
+            "evidence": {
+              "quote": "o 3.000 € s prísl., na odvolanie žalobkyne proti rozsudku Okresného súdu Skalica",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 600,
+            "evidence": {
+              "quote": "súd prvej inštancie I. zaviazal žalovanú zaplatiť žalobcovi 600 € s úrokom z omeškania ako zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "V ďalšom konaní, ktorého predmetom zostáva len suma 2.400 € s 9 % ročným úrokom z omeškania od 29. augusta 2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Napadnutý rozsudok sa zrušuje vo výrokoch II a III a v tomto rozsahu sa vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že súd prvej inštancie nesprávne aplikoval § 672a Obch. zák. na zníženie zmluvnej pokuty, namiesto toho, aby postupoval podľa § 301 Obch. zák., ktorý upravuje moderáciu výšky pokuty. Súd prvej inštancie síce dospel k záveru, že k porušeniu došlo, ale následne neprimerane znížil pokutu bez riadneho odôvodnenia zohľadňujúceho hodnotu zabezpečovanej povinnosti a vzniknutú škodu. Keďže odôvodnenie vykazovalo vnútornú rozporuplnosť a nedostatok racionality, odvolací súd rozhodnutie zrušil a vec vrátil na nové prejednanie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie však v napadnutom rozsudku dospel naopak k záveru, že konkurenčná doložka sa vzťahuje aj na spornú činnosť žalovanej vykonávanú od 1. augusta 2017, takže táto jej činnosť predstavovala porušenie citovaného ustanovenia a žalobkyni vzniklo právo na zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "už pojmovo vôbec nepripúšťalo. Naopak, úpravu následkov (dispozície) právnej normy v podobe moderácie zmluvnej pokuty upravovalo ustanovenie § 301 Obch. zák. Toto ustanovenie však súd prvej inštancie necitoval, ani v napadnutom rozsudku neobjasnil použitie žiadnej z okolností, ktoré sú podľa neho rozhodné pre určenie miery",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_43_2019_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/43/2019",
+      "decision_date": "26.11.2019",
+      "ecli": "ECLI:SK:KSTT:2019:2718200808.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

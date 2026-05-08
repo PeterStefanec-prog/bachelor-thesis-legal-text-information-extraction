@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9389,
+    "completion_tokens": 1995,
+    "cost_usd": 0.0083,
+    "latency_seconds": 25.8,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (ČSOB Leasing) sa domáhal zaplatenia dlžných splátok z operatívneho leasingu, náhrady nákladov na opravu vozidla a zmluvnej pokuty za predčasné ukončenie zmluvy. Žalovaný namietal výšku nárokov, najmä neopodstatnenosť nároku na opravu a neprimeranosť zmluvnej pokuty, pričom žiadal jej moderáciu.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým čiastočne vyhovel žalobe priznaním dlžných splátok a zmluvnej pokuty, zatiaľ čo nárok na náhradu nákladov za opravu zamietol pre nepreukázanie dôvodnosti.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "žalobca má právo na zmluvnú pokutu, ak v dôsledku hrubého porušenia dohodnutých zmluvných podmienok dôjde k predčasnému ukončeniu zmluvy o operatívnom leasingu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "757,28 eur",
+          "evidence": {
+            "quote": "Žalobca si v konaní voči žalovanému uplatnil aj nárok na zaplatenie sumy vo výške 757,28 eur z titulu zmluvnej pokuty podľa čl. 6.1 písm. b) Všeobecných zmluvných podmienok.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 757.28,
+            "evidence": {
+              "quote": "Žalobca si v konaní voči žalovanému uplatnil aj nárok na zaplatenie sumy vo výške 757,28 eur z titulu zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 757.28,
+            "evidence": {
+              "quote": "súd preto nárok žalobcu na zmluvnú pokutu vo výške 757,28 eur vyhodnotil ako dôvodný.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,5 % ročne",
+          "evidence": {
+            "quote": "uložil žalovanému povinnosť zaplatiť žalobcovi sumu 757,28 eur spolu s 9,5 % úrokom z omeškania ročne zo sumy 757,28 eur od 30.09.2011 do zaplatenia",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie na základe vykonaného dokazovania dospel k záveru, že dôvody na moderáciu žalobcom v konaní uplatnenej zmluvnej pokuty dané nie sú.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd odmietol moderáciu zmluvnej pokuty podľa § 301 Obchodného zákonníka, keďže konštatoval, že samotná skutočnosť uplatnenia nároku na úroky z omeškania nie je dôvodom na zníženie pokuty. Súd zdôraznil, že pokuta bola dojednaná písomne pre prípad hrubého porušenia zmluvy vedúceho k predčasnému ukončeniu leasingu, pričom žalobcovi by inak patrili splátky až do konca zmluvného obdobia. Keďže neboli preukázané dôvody na moderáciu a pokuta jasne zabezpečovala plnenie povinností, súd priznal nárok v plnej výške.",
+          "key_quotes": [
+            {
+              "quote": "Samotná skutočnosť, že si žalobca uplatňuje nárok na úroky z omeškania, preto sama osebe nie je dôvodom pre moderáciu uplatnenej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "zmluvná pokuta bola dojednaná písomne, zo zmluvnej pokuty je bez pochybností zrejmé, akú povinnosť zabezpečuje i jej výpočet",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zo zmluvnej pokuty je bez pochybností zrejmé, akú povinnosť zabezpečuje i jej výpočet",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V dôsledku porušenia povinností žalovaným platiť riadne a včas dohodnuté splátky a jeho omeškania s platením splátok bol tento zmluvný vzťah žalobcom ukončený predčasne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Samotná skutočnosť, že si žalobca uplatňuje nárok na úroky z omeškania, preto sama osebe nie je dôvodom pre moderáciu uplatnenej zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "moderation_analysis.factors.vyska_skody.evidence.quote",
+        "moderation_analysis.factors.pomer_k_istine.evidence.quote",
+        "moderation_analysis.factors.dobre_mravy.evidence.quote",
+        "moderation_analysis.factors.spravanie_veritela.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_11Co_272_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "11Co/272/2017",
+      "decision_date": "30.01.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5313212516.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

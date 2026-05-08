@@ -1,0 +1,86 @@
+{
+  "penalties_moderation": [
+    {
+      "penalty_id": "pokuta_1",
+
+      "moderation_analysis": {
+        "decision": {
+          "value": "awarded_full|moderated_301|dismissed|returned|unclear",
+          "dismissal_reason": "contract_invalidity|clause_invalidity|unproven_breach|procedural|other|null",
+          "evidence": {
+            "quote": "string",
+            "chunk_id": "string"
+          }
+        },
+
+        "legal_reasoning_summary": "string (3-5 viet - ako boli vypocitane cisla + preco sud moderoval alebo nemoderoval)",
+
+        "key_quotes": [
+          {
+            "quote": "string (1-2 najdolezitejsie citaty zachytavajuce jadro odovodnenia)",
+            "chunk_id": "string"
+          }
+        ],
+
+        "factors": [
+          {
+            "label": "dobre_mravy",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "zabezpecovacia_funkcia",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "vyska_skody",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "pomer_k_istine",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "spravanie_dlznika",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "kumulacia_s_urokom",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          },
+          {
+            "label": "spravanie_veritela",
+            "sentiment": "positive|negative|neutral|not_mentioned",
+            "evidence": {
+              "quote": "string|null",
+              "chunk_id": "string|null"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

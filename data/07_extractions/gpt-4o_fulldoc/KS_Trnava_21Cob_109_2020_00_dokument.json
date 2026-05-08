@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18038,
+    "completion_tokens": 1169,
+    "cost_usd": 0.0568,
+    "latency_seconds": 10.47,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa NN Životná poisťovňa, a.s. žiadala zaplatenie zmluvnej pokuty vo výške 2.400 eur od žalovanej Renáty Hasákovej za porušenie konkurenčnej doložky v zmluve o vykonávaní finančného sprostredkovania.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a žalobu zamietol.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovanej porušila svoju povinnosť vyplývajúcu zo zmluvy, a to nevykonávať obdobnú činnosť v oblasti finančného sprostredkovania a poradenstva po dobu 3 mesiacov od ukončenia zmluvného vzťahu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "3.000 eur",
+          "evidence": {
+            "quote": "v článku VII bod 1 druhá veta sa text \"5.000 eur\" mení na \"3.000 eur\"",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2400,
+            "evidence": {
+              "quote": "o zaplatenie 2.400 eur s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvej inštancie v časti o zaplatenie 2.400 eur s príslušenstvom mení tak, že žalobu zamieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "odvolací súd napadnutý rozsudok súdu prvej inštancie podľa § 388 CSP zmenil tak, žalobu žalobkyne o zaplatenie 2.400 eur s príslušenstvom (t.j. v časti, ktorá zostala predmetom konania) zamietol.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "základe vyššie uvedeného odvolací súd napadnutý rozsudok súdu prvej inštancie podľa § 388 CSP zmenil tak, žalobu žalobkyne o zaplatenie 2.400 eur s príslušenstvom (t.j. v časti, ktorá zostala predmetom konania) zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že konkurenčná doložka v zmluve neobsahovala teritoriálne obmedzenie, čo je podstatná náležitosť podľa § 672a Obchodného zákonníka. Absencia tejto náležitosti spôsobuje absolútnu neplatnosť doložky. Pretože zmluvná pokuta bola viazaná na neplatnú konkurenčnú doložku, súd zamietol nárok na jej zaplatenie.",
+          "key_quotes": [
+            {
+              "quote": "Zo znenia konkurenčnej doložky (v čl. XI bod 2 zmluvy) vyplýva, že v nej nebol vymedzený jej územný rozsah, čo je jedna z podstatných náležitosti konkurenčnej doložky, ktorej absencia spôsobuje jej neplatnosť.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súčasne zmluvu nepovažoval za neplatnú pre rozpor s dobrými mravmi, a to s odkazom na ustálenú judikatúru súdov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "že žalobkyni nevznikla žiadna škoda.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaná porušila svoju povinnosť vyplývajúcu zo zmluvy",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobkyňa sama nevykonáva všetky činnosti v sektore poistenia a zaistenia",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_109_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/109/2020",
+      "decision_date": "18.05.2021",
+      "ecli": "ECLI:SK:KSTT:2021:2718200808.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

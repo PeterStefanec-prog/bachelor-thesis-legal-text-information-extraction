@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10848,
+    "completion_tokens": 1092,
+    "cost_usd": 0.038,
+    "latency_seconds": 23.65,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca PYROBATYS, a.s. v konkurze požadoval od žalovaného EDILAN spol. s r.o. zaplatenie zmluvnej pokuty vo výške 8.985,94 eur za omeškanie s úhradou faktúry za zhotovenie diela na stavbe Daňového úradu. Žalovaný uhradil faktúru po lehote splatnosti, čo viedlo k uplatneniu zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby o zaplatenie sumy 7.073,23 eur a vec vrátil na ďalšie konanie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "v prípade, že objednávateľ neuhradil faktúru v lehote splatnosti, má zhotoviteľ nárok na zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% denne",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05% z dlžnej čiastky za každý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 28835.56,
+            "evidence": {
+              "quote": "vo výške 0,05% denne zo sumy 28.835,56 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 8985.94,
+            "evidence": {
+              "quote": "zmluvnej pokuty v sume 8.985,94 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1916.71,
+            "evidence": {
+              "quote": "zaviazal súd v zmysle § 544 ods. 1, 2 Obč. zák. a čl. VI bodu 3 zmluvy o dielo žalovaného na zaplatenie zmluvnej pokuty v sume 1.916,71 eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "14% ročne",
+          "evidence": {
+            "quote": "so 14% ročným úrokom z omeškania zo sumy 28.835,56 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "odvolací súd rozsudok súdu prvého stupňa v napadnutej časti zrušil podľa § 221 ods. 1 písm. h/ O.s.p. a vec vrátil súdu prvého stupňa na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol časť žaloby o zaplatenie zmluvnej pokuty vo výške 7.073,23 eur, pretože považoval úroky z omeškania za paušalizovanú náhradu škody. Odvolací súd však zistil, že súbeh úrokov z omeškania a zmluvnej pokuty je možný, ak je dohodnutý v zmluve. Preto zrušil rozhodnutie súdu prvého stupňa a vrátil vec na ďalšie konanie, aby sa súd zaoberal výškou zmluvnej pokuty a možným uplatnením § 301 Obch. zák.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvého stupňa pochybil, keď bez ďalšieho žalobu o zaplatenie 7.073,23 eur zamietol z dôvodu, že ide zrejme o škodu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_67_2012_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/67/2012",
+      "decision_date": "31.07.2013",
+      "ecli": "ECLI:SK:KSTN:2013:3110218335.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

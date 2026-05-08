@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9477,
+    "completion_tokens": 1261,
+    "cost_usd": 0.0363,
+    "latency_seconds": 7.86,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Oprávnený Démos trade, s.r.o. žiadal vymoženie pohľadávky vo výške 5.398,48 Eur s príslušenstvom vrátane zmluvnej pokuty vo výške 0,5% denne. Povinný Domina, s.r.o. namietal neprimeranosť zmluvnej pokuty a žiadal zastavenie exekúcie.",
+      "verdict_summary": "Odvolací súd zmenil rozhodnutie okresného súdu a zamietol návrh povinného na zastavenie exekúcie.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 0,5% denne zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% denne",
+          "evidence": {
+            "quote": "zmluvnej pokuty vo výške 0,5% denne",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 3151.98,
+            "evidence": {
+              "quote": "zo sumy 3.151,98 Eur od 17.02.2011 do 01.03.2011",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 15757.12,
+            "evidence": {
+              "quote": "v celkovej výške 15.757,12 Eur zastavil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "exekúciu v časti vymoženia zmluvnej pokuty vo výške 0,5% denne zastavil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania 9% ročne zo sumy 3.151,98 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd zastavil exekúciu v časti zmluvnej pokuty, pretože ju považoval za neprimerane vysokú a v rozpore s dobrými mravmi. Odvolací súd zmenil toto rozhodnutie, keďže ust. § 45 ZRK už nebolo účinné a plnenie zmluvnej pokuty nebolo považované za nedovolené. Odvolací súd považoval za potrebné preskúmať materiálnu správnosť rozhodcovského rozsudku, ale dospel k záveru, že návrh povinného na zastavenie exekúcie je neodôvodnený.",
+          "key_quotes": [
+            {
+              "quote": "v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "v rozhodcovskom rozsudku uhradiť zmluvnú pokutu vo výške 0,5% denne z dlžnej čiastky je z ohľadom na všetky okolnosti prípadu v zmysle ust. § 39 Občianskeho zákonníka v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 0,5% denne prekračuje účel zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "oprávnený nenamietal a ani žiadnym spôsobom nepreukázal škodu, resp. výšku škody, ktorá by mu vznikla neplnením povinného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Neprimeranosť výšky zmluvnej pokuty súd posúdil v percentuálnom prepočte, čo predstavuje 182,5 % istiny",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "povinný má v tomto exekučnom konaní na základe rozhodcovského rozsudku uhradiť aj príslušenstvo pohľadávky, a to úroky z omeškania vo výške 9 % z dlžnej istiny ročne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].related_claim_ref"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoE_215_2015_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoE/215/2015",
+      "decision_date": "28.05.2015",
+      "ecli": "ECLI:SK:KSBB:2015:6412206796.3",
+      "document_type": "Uznesenie"
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 22004,
+      "completion_tokens": 984,
+      "cost_usd": 0.0109,
+      "latency_seconds": 17.08,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    },
+    "call2": {
+      "prompt_tokens": 13770,
+      "completion_tokens": 1223,
+      "cost_usd": 0.0082,
+      "latency_seconds": 25.7,
+      "model": "qwen/qwen3.5-397b-a17b",
+      "provider": "openrouter"
+    }
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za omeškanie zhotoviteľa s odovzdaním diela (stavebné práce na stavbe Rotunda) podľa zmluvy o dielo a jej dodatkov. Žalovaný namietal neplatnosť dojednania o zmluvnej pokute pre neurčitosť termínu plnenia a základu pre výpočet, ako aj absenciu omeškania.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovanému uložený záväzok zaplatiť žalobcovi zmluvnú pokutu vo výške 57.812,09 eura."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_0",
+              "quote": "výrokom I. uložil žalovanému povinnosť zaplatiť žalobcovi sumu 57.812,09 eura do troch dní od právoplatnosti rozsudku"
+            },
+            "value": 57812.09
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1",
+              "quote": "zmluvná pokuta za 131 dní činí 69.325,59 eura"
+            },
+            "value": 69325.59
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1",
+              "quote": "cena diela 889.416,80 eura"
+            },
+            "value": 889416.8
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_0",
+            "quote": "výrokom I. uložil žalovanému povinnosť zaplatiť žalobcovi sumu 57.812,09 eura do troch dní od právoplatnosti rozsudku"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1",
+            "quote": "Zhotoviteľ sa dostal do omeškania s odovzdaním diela v rozsahu 131 dní, z jeho strany došlo k porušeniu zmluvy"
+          },
+          "value": "non_monetary_performance"
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1",
+            "quote": "podľa čl. VIII ods. 1 zmluvy má objednávateľ nárok na zmluvnú pokutu vo výške 0,05% z ceny diela za každý deň omeškania"
+          },
+          "type": "percent_denne",
+          "value_raw": "0,05% z ceny diela za každý deň omeškania"
+        },
+        "related_claim_ref": null,
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Preto súd žalobe po jej čiastočnom späťvzatí vyhovel v rozsahu 57.812,09 eura.",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            }
+          },
+          "legal_reasoning_summary": "Súd priznal nárok na zmluvnú pokutu v plnej výške po tom, čo žalobca čiastočne vzal späť svoju žalobu a prepočítal pokutu z ceny diela bez DPH. Súd odmietol námietky žalovaného o neplatnosti dojednania pre neurčitosť termínu a základu výpočtu, keďže konštatoval, že dohoda spĺňa zákonné náležitosti. K zníženiu pokuty podľa § 301 ObchZ nedošlo, pretože žalovaný explicitne nepodal návrh na moderovanie výšky pokuty, hoci namietal jej neprimeranosť vo vzťahu k škode. Súd zdôraznil, že zmluvná pokuta má aj sankčnú funkciu a jej priznanie nie je podmienené preukázaním vzniknutej škody.",
+          "key_quotes": [
+            {
+              "quote": "výpočet výšky zmluvnej pokuty. Preto súd žalobe po jej čiastočnom späťvzatí vyhovel v rozsahu 57.812,09 eura.",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_1"
+            },
+            {
+              "quote": "Žalovaný návrh na zníženie zmluvnej pokuty v zmysle ust. § 301 OBZ nedal.",
+              "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_29"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Navyše pri aplikácii ust. § 265 OBZ skutočnosť, že výška zmluvnej pokuty je neprimerane vysoká, sama o sebe nie je rozhodujúca, pretože dôraz sa kladie na okolnosti výkonu práva, t. j. uplatnenia zmluvnej pokuty.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_30"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta v tomto prípade mala nielen reparačnú, ale najmä sankčnú funkciu, t. j. mala predstavovať hrozbu sankcie pre zhotoviteľa, pokiaľ dielo nevykoná včas, nakoľko objednávateľ má logicky záujem na včasnom plnení.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_30"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Vznik škody však v prípade uplatnenia moderačného práva súdom nie je podmienkou uplatnenia moderačného práva, ale je okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty.",
+                "chunk_id": "KS_Trnava_31Cob_104_2020_00_dokument.pdf_chunk_29"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_104_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/104/2020",
+      "decision_date": "24.02.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2212208449.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

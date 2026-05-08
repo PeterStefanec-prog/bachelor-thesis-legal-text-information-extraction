@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21115,
+    "completion_tokens": 2064,
+    "cost_usd": 0.047,
+    "latency_seconds": 8.6,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal vrátenia sumy 91.513,09 Eur, ktorú žalovaný neoprávnene čerpal z bankovej záruky, vrátane zmluvnej pokuty a náhrady škody. Žalovaný tvrdil, že čerpanie bankovej záruky bolo oprávnené na úhradu nákladov spojených s odstraňovaním vád diela a zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie vo výroku I., ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi sumu 16.086,34 Eur s úrokom z omeškania. Vo výroku II., týkajúcom sa zamietnutia žaloby v časti o zaplatenie 36.605,24 Eur (zmluvná pokuta), súd rozsudok zrušil a vrátil vec súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "V čl. V ods. 4 zmluvy o dielo sa zmluvné strany dohodli, že 5% z ceny diela (bez DPH) je zádržné a 5% z ceny diela (bez DPH) je garančná zábezpeka. Zádržné a garančnú zábezpeku podľa tejto zmluvy je objednávateľ oprávnený zadržať za účelom zabezpečenia záväzku zhotoviteľa na riadne a včasné plnenie predmetu tejto zmluvy.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "zmluvná pokuta",
+          "evidence": {
+            "quote": "V zmluve o dielo rovnako nie je žiadne ustanovenie o tom, že pred uspokojením sa žalovanej z bankovej záruky je potrebné žalobkyňu osobitnou výzvou vyzývať na úhradu zmluvnej pokuty, či náhrady škody.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 36605.24,
+            "evidence": {
+              "quote": "Celková oprávnená suma čerpania bankovej záruky je tak 333,51 Eur + 35,- Eur + 36.605,24 Eur (zmluvná pokuta požadovaná žalovanou - uvedená vo výzve banke zo 04.05.2015).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd preto rozsudok v napadnutom rozsahu výroku II. podľa § 389 ods.1 písm. b), c) C.s.p. zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Súd prvej inštancie priznal žalobkyni aj úrok z omeškania vo výške 8,00% ročne (v súlade s bodom 32. a 33. svojho rozsudku) zo sumy 54.539,34 Eur od 14.05.2016 do zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd preto rozsudok v napadnutom rozsahu výroku II. podľa § 389 ods.1 písm. b), c) C.s.p. zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu v časti zmluvnej pokuty s odôvodnením, že moderovať možno len zmluvnú pokutu uplatnenú v konaní, nie už zaplatenú. Odvolací súd s týmto názorom nesúhlasil, poukázal na kogentnosť § 301 Obchodného zákonníka a možnosť moderácie aj pri plnení z bankovej záruky. Vec vrátil súdu prvej inštancie na posúdenie návrhu žalobcu na zníženie zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "Ako právne irelevantné (podanie žalobkyne z 31.05.2017) posúdil súd námietky žalobkyne o neprimeranosti zmluvnej pokuty, pretože moderovať môže súd zmluvnú pokutu uplatnenú v konaní, nie zmluvnú pokutu už zaplatenú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd sa stotožnil s odvolacou námietkou žalobcu, že súd prvej inštancie nesprávne právne posúdil možnosť uplatnenia moderačného práva, resp. že nesprávne aplikáciu tohto ustanovenia vylúčil.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Podľa názoru odvolacieho súdu zo zákona ani zo súdnej praxe nevyplýva, že by súd nemal právomoc znížiť neprimerane vysokú zmluvnú pokutu, ak už bola dlžníkom uhradená.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.breach_type"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_60_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/60/2023",
+      "decision_date": "11.06.2024",
+      "ecli": "ECLI:SK:KSBA:2024:1116213513.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

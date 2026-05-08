@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7149,
+    "completion_tokens": 1129,
+    "cost_usd": 0.0292,
+    "latency_seconds": 12.86,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca REALITY VĚŘITEL CZ, s.r.o. požadoval od žalovanej P. Y. zaplatenie sumy 427,63 eur s príslušenstvom za užívanie nebytových priestorov a poskytnuté služby. Žalovaná nezaplatila faktúry v lehote splatnosti, preto žalobca uplatnil aj zmluvnú pokutu.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvého stupňa v časti zamietnutia žaloby a vec vrátil na ďalšie konanie.",
+      "contract_type": "najom",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním o viac ako 20 dní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "180,- eur",
+          "evidence": {
+            "quote": "V danej veci bola účastníkmi dojednaná zmluvná pokuta (čl. IV. bod 4.8) dohody o užívaní, pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním o viac ako 20 dní.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 180.0,
+            "evidence": {
+              "quote": "V danej veci bola účastníkmi dojednaná zmluvná pokuta (čl. IV. bod 4.8) dohody o užívaní, pre prípad omeškania žalovanej ako užívateľa so zaplatením odplaty za užívanie alebo odplaty za služby spojené s užívaním o viac ako 20 dní.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,1% denne",
+          "evidence": {
+            "quote": "Zároveň žalovanej uložil povinnosť zaplatiť žalobcovi úroky z omeškania v zmluvne dohodnutej výške 0,1% denne odo dňa splatnosti tej, ktorej faktúry.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozhodnutie v napadnutej časti zrušil a vec vrátil tomuto súdu na ďalšie konanie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu na zmluvnú pokutu, pretože ju považoval za neprimeranú a v rozpore s dobrými mravmi. Odvolací súd však nesúhlasil s týmto právnym názorom a považoval dojednanie o zmluvnej pokute za platné. Odvolací súd zrušil rozhodnutie súdu prvého stupňa a vec vrátil na ďalšie konanie, aby sa súd prvého stupňa vysporiadal s výškou zmluvnej pokuty podľa § 301 Ob.z.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd považuje dojednanie o zmluvnej pokute v čl. IV. bod 4.8 za platné.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_64_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/64/2011",
+      "decision_date": "26.01.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3210200754.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

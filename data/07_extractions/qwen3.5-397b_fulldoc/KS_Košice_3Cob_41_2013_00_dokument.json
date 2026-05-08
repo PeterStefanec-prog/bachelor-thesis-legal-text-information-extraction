@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10259,
+    "completion_tokens": 1968,
+    "cost_usd": 0.0086,
+    "latency_seconds": 29.91,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "najom",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 5 953,69 EUR s príslušenstvom z titulu nárokov vyplývajúcich z leasingovej zmluvy po predčasnom ukončení zmluvy z dôvodu nezaplatenia splátok a odcudzenia vozidla. Žalovaní namietali svoju pasívnu legitimáciu s tvrdením, že práva a povinnosti z leasingovej zmluvy prevzala tretia osoba.",
+      "relationship_type": "B2C",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým boli žalovaní zaviazaní zaplatiť žalobcovi sumu 5 953,69 EUR s úrokom z omeškania."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd zaviazal aj žalovaného 2/ ako ručiteľa na zaplatenie dlžnej sumy spoločne a nerozdielne a zároveň priznal žalobcovi úroky z omeškania, ktoré sú v zmysle § 361 ods. 1 Obchodného zákonníka oprávnené a v súlade so zákonom a zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5, a náhradu trov konania tak, ako je uvedené vo výroku tohto rozsudku."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobca navrhol zaviazať žalovaných zaplatiť mu sumu 5.953,69 eur (179.361,00 Sk) a prísl. titulom nárokov z leasingovej zmluvy"
+            },
+            "value": null
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobca si uplatnil nárok voči žalovanej 1/ ako dlžníkovi a voči žalovanému 2/ ako ručiteľovi spoločne a nerozdielne vo výške 5.953,69 eur (179.361,00 Sk) s prísl."
+            },
+            "value": 5953.69
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur s 12,5% ročným úrokom z omeškania od 29.4.2004 do zaplatenia"
+          },
+          "rate_value": "12,5% ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žalobca na základe článku XI, bod 2. Všeobecných zmluvných podmienok predčasne ku dňu 25.11.2002 ukončil leasingovú zmluvu"
+          },
+          "value": "early_termination"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd zaviazal aj žalovaného 2/ ako ručiteľa na zaplatenie dlžnej sumy spoločne a nerozdielne a zároveň priznal žalobcovi úroky z omeškania, ktoré sú v zmysle § 361 ods. 1 Obchodného zákonníka oprávnené a v súlade so zákonom a zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5"
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5"
+            }
+          ],
+          "legal_reasoning_summary": "Súd prvého stupňa zistil, že žalobca si oprávnene uplatnil nárok z dôvodu porušenia zmluvných podmienok zo strany žalovanej, ktorá previedla vozidlo na nového držiteľa bez súhlasu prenajímateľa. Súd konštatoval, že zmluvná pokuta bola dohodnutá medzi rovnocennými zmluvnými stranami v súlade so zákonom. Odvolací súd toto rozhodnutie potvrdil, keďže žalovaní nepreukázali platnú zmenu zmluvy ani úhradu vyšších súm, než evidoval žalobca."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5"
+          },
+          "type": "ine",
+          "value_raw": "dohodnutá v zmysle čl. III., bod 3 a bod 5 Všeobecných zmluvných podmienok"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "penalty_amount_not_specified",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "amounts.final_awarded",
+        "amounts.original_claimed",
+        "rate_definition.value_raw",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_3Cob_41_2013_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "3Cob/41/2013",
+      "decision_date": "27.08.2013",
+      "ecli": "ECLI:SK:KSKE:2013:7605215910.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

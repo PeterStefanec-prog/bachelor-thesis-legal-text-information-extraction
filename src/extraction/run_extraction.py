@@ -1,3 +1,8 @@
+# INPUT data/06_retrieval_results/
+# OUTPUT data/07_extractions/{model}_{mode}/
+
+# run from  root:
+#     .venv/bin/python src/extraction/run_extraction.py
 """
 Main extraction pipeline - runs LLM extraction on precomputed retrieval results (it just orchestrate extraction)
 
@@ -13,8 +18,7 @@ Two modes per model:
 - RAG mode: 2 LLM calls with focused chunks (hybrid_a7_reranked_top7 retrieval)
 - Full-doc mode: 1 LLM call with entire reasoning tex
 
-run from  root:
-    python src/extraction/run_extraction.py
+
 
 I tested  prompts first in:
 - OpenAI Playground (https://platform.openai.com/playground) - paste system + user prompt,
@@ -52,22 +56,29 @@ def count_tokens(text):
     return len(_tokenizer.encode(text))
 
 
-# ==========================================
+# ########################################
 # CONFIG - what model and mode is running
-# ==========================================
+# ########################################
 # change these to run different experiments.
 # each combination creates a separate output folder
 
-MODEL_KEY = "qwen3.5-397b"  # "gpt-4o" | "gemini-2.5-flash" | "qwen3.5-397b"
+MODEL_KEY = "gemini-2.5-flash"  # "gpt-4o" | "gemini-2.5-flash" | "qwen3.5-397b"
 MODE = "rag"                      # "rag" (2 calls with chunks) | "fulldoc" (1 call with full text)
 
 # test on single document first (has to be None for  full run)
 # SINGLE_DOC_TEST = "KS_Trenčín_8Cob_64_2011_00_dokument"
 SINGLE_DOC_TEST = None
 
-# set to True to only process extraction (not golden from retrieval - randomly selected but some of them from golden) dataset documents (20 docs)
-# i use this to test and debug before running on all 176 documents
-GOLDEN_ONLY = True
+# set to True to only process the 20 documents in EXTRACTION_TEST_SET
+# (see src/evaluation_extraction/generate_evaluation_sheets.py).
+#
+# IMPORTANT: this is NOT the same 20 docs as the retrieval dev set (data/05_retrieval_evaluation/golden_dataset_template.csv).
+# Those 2 sets share  13 docs but 7 are different - intentionally, so retrieval pipeline is NOT tuned on the same docs later evaluated by lawyers (generalization test).
+#
+# Old name of this flag was GOLDEN_ONLY, which was ambiguous since we have 2
+# different "golden" sets. Renamed to make it explicit which set we filter by.
+EXTRACTION_TEST_ONLY = True
+GOLDEN_ONLY = EXTRACTION_TEST_ONLY  # backward-compatibility alias
 
 RETRIEVAL_DIR = "data/06_retrieval_results"
 # NOTE: OUTPUT_DIR is recomputed inside main() from the current MODEL_KEY/MODE
@@ -250,15 +261,20 @@ def main():
     if SINGLE_DOC_TEST:
         files = [os.path.join(RETRIEVAL_DIR, f"{SINGLE_DOC_TEST}.json")]    # join path directory with name of doc and creates list
         print(f"TEST MODE: processing only {SINGLE_DOC_TEST}\n")
-    elif GOLDEN_ONLY:
-        # filter to only the 20 golden dataset documents so i dont spend money on all 176 while still debugging extraction pipeline
-        import pandas as pd
-        golden_csv = "data/05_retrieval_evaluation/golden_dataset_template.csv"
-        golden = pd.read_csv(golden_csv, sep=";")
-        golden_names = set(golden["document_name"].str.replace(".json", "").tolist())
+    elif EXTRACTION_TEST_ONLY:
+        # FIX (2026-04-16): filter by EXTRACTION_TEST_SET (20 docs for lawyer evaluation),
+        # NOT by the retrieval dev set's golden_dataset_template.csv.
+        # These are 2 different 20-doc sets after post-hoc legal audit:
+        #   - retrieval golden_dataset_template.csv: used for retrieval tuning (20 docs)
+        #   - EXTRACTION_TEST_SET:                   used for lawyer evaluation (20 docs)
+        # Overlap is 13 docs; 7 are different. Previously this filter used the retrieval
+        # CSV, which meant extraction was done on 13/20 of the evaluated docs + 7 "extra"
+        # docs that wont be shown to lawyers. Now filters by the correct test set.
+        from src.evaluation_extraction.generate_evaluation_sheets import EXTRACTION_TEST_SET
+        test_set_names = set(fname for _, _, fname in EXTRACTION_TEST_SET)
         all_files = sorted(glob.glob(os.path.join(RETRIEVAL_DIR, "*.json")))
-        files = [f for f in all_files if os.path.basename(f).replace(".json", "") in golden_names]
-        print(f"GOLDEN ONLY: {len(files)} documents (out of {len(all_files)} total)\n")
+        files = [f for f in all_files if os.path.basename(f).replace(".json", "") in test_set_names]
+        print(f"EXTRACTION_TEST_SET filter: {len(files)} / {len(test_set_names)} docs (out of {len(all_files)} total precompute files)\n")
     else:
         files = sorted(glob.glob(os.path.join(RETRIEVAL_DIR, "*.json")))    # glob.glob(...) finds files based on pattern
         print(f"Found {len(files)} documents to process.\n")
@@ -294,7 +310,7 @@ def main():
             continue
 
         # FIX: meta fields (court, case_id, date, ecli) come from REGEX extraction in data_cleaner.py,not from the LLM.
-        # Regex is deterministic and  reliable — the LLM sometimes reformats date or gets case number wrong (also saves tokens)
+        # Regex is deterministic and  reliable - the LLM sometimes reformats date or gets case number wrong (also saves tokens)
         # I just copy the metadata from  precomputed retrieval JSON (which already has it from the processed JSON).
         doc_metadata = retrieval_data.get("document_metadata", {})
         result["meta"] = {
@@ -351,7 +367,7 @@ def main():
 
     ####### JUST QUITE NICE LOG INTO TERMINAL #####3
     print(f"\n{'=' * 60}")
-    print(f"EXTRACTION DONE — {len(results_log)} documents")
+    print(f"EXTRACTION DONE - {len(results_log)} documents")
 
     # count how many documents finished successfully / failed
     ok_count = 0

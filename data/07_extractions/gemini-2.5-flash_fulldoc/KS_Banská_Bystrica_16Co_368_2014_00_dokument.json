@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10768,
+    "completion_tokens": 2248,
+    "cost_usd": 0.0359,
+    "latency_seconds": 8.7,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ sa domáhal zaplatenia zmluvnej pokuty vo výške 11 515,40 € s príslušenstvom z dôvodu porušenia zmluvných povinností odporcom, ktoré vyplývali zo zmluvy o budúcej zmluve o nájme nebytových priestorov. Odporca nesplnil svoju povinnosť uzavrieť riadnu nájomnú zmluvu a namietal neprimeranosť výšky zmluvnej pokuty a zánik záväzku z dôvodu zmeny okolností.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý uložil odporcovi povinnosť zaplatiť navrhovateľovi sumu 11 515,40 € spolu s úrokom z omeškania a nahradiť trovy odvolacieho konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "titulom zaplatenia zmluvnej pokuty, na ktoré navrhovateľovi vznikol nárok na základe porušenia zmluvných povinností vyplývajúcich zo zmluvy o budúcej zmluve o nájme nebytových priestorov uzavretej medzi účastníkmi konania dňa 15. 02. 2011",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "výške súčtu budúceho jednomesačného základného nájomného, jednomesačného poplatku za prevádzkové náklady a jednomesačného poplatku za marketing + DPH",
+          "evidence": {
+            "quote": "bolo jednoznačne konštatované, že zmluvná pokuta sa rovná výške súčtu budúceho jednomesačného základného nájomného, jednomesačného poplatku za prevádzkové náklady a jednomesačného poplatku za marketing +",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 11515.4,
+            "evidence": {
+              "quote": "o zaplatenie 11.515,40 € s príslušenstvom",
+              "chunk_id": "verdict"
+            }
+          },
+          "final_awarded": {
+            "value": 11515.4,
+            "evidence": {
+              "quote": "uložil odporcovi povinnosť zaplatiť navrhovateľovi sumu 11.515,40 € spolu s úrokom z omeškania",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,75% ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 8,75% ročne z dlžnej čiastky od 09. 10. 2012 až do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Vzhľadom na vyššie uvedené skutočnosti nemohol preto okresný súd v súdenej veci aplikovať ust. § 301 Obchodného zákonníka a návrhu navrhovateľa v celom rozsahu vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že návrh na zaplatenie zmluvnej pokuty je dôvodný, pretože odporca nesplnil povinnosť uzavrieť nájomnú zmluvu. Odporca neuniesol dôkazné bremeno ohľadom zmeny okolností a neoznámil ich bez zbytočného odkladu. Súd nepovažoval zmluvnú pokutu za neprimerane vysokú, pretože bola stanovená vyvážene pre obe strany a neaplikoval § 301 Obchodného zákonníka.",
+          "key_quotes": [
+            {
+              "quote": "Vzhľadom na vyššie uvedené skutočnosti nemohol preto okresný súd v súdenej veci aplikovať ust. § 301 Obchodného zákonníka a návrhu navrhovateľa v celom rozsahu vyhovel.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Okresný súd jednoznačne poukázal na tú skutočnosť, že už v zmluve bolo jednoznačne konštatované, že zmluvná pokuta sa rovná výške súčtu budúceho jednomesačného základného nájomného, jednomesačného poplatku za prevádzkové náklady a jednomesačného poplatku za marketing + DPH.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Okresný súd teda prihliadal na spôsob stanovenia tejto pokuty a zároveň vyhodnotil, že ide o zmluvnú pokutu vyváženú, keďže pre obidve zmluvné strany boli v zmluve zakotvené rovnaké sankcie, a to jednak pokiaľ ide o výšku zmluvnej pokuty, ako aj pokiaľ ide o dôvody pre jej uplatnenie, teda i pre navrhovateľa v prípade, že by porušil svoju povinnosť uzavrieť nájomnú zmluvu.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prihliadal aj na hodnotu a význam zabezpečovanej povinnosti, teda predpokladané nájomné, na ktoré by v prípade uzavretia nájomnej zmluvy navrhovateľovi vznikol nárok.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Okresný súd teda prihliadal na spôsob stanovenia tejto pokuty a zároveň vyhodnotil, že ide o zmluvnú pokutu vyváženú, keďže pre obidve zmluvné strany boli v zmluve zakotvené rovnaké sankcie, a to jednak pokiaľ ide o výšku zmluvnej pokuty, ako aj pokiaľ ide o dôvody pre jej uplatnenie, teda i pre navrhovateľa v prípade, že by porušil svoju povinnosť uzavrieť nájomnú zmluvu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "odporca ani bez zbytočného odkladu v súlade s ust. § 292 ods. 2 Obchodného zákonníka neoznámil bez zbytočného odkladu ním tvrdené zmenené okolnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Okresný súd vyhovel návrhu navrhovateľa aj v časti nároku, týkajúceho sa príslušenstva pohľadávky v zmysle ust. § 369 Obchodného zákonníka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.rate_definition"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_16Co_368_2014_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "16Co/368/2014",
+      "decision_date": "20.11.2014",
+      "ecli": "ECLI:SK:KSBB:2014:6713202477.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

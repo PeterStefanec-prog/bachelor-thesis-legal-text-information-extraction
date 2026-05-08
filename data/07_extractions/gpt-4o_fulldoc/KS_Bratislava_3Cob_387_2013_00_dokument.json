@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7408,
+    "completion_tokens": 923,
+    "cost_usd": 0.0278,
+    "latency_seconds": 9.15,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Navrhovateľ Orange Slovensko, a.s. žiadal od odporcu VAZOL spol. s.r.o. zaplatenie sumy 48.468,21 EUR s príslušenstvom za poskytnuté elektronické služby. Navrhovateľ tvrdil, že odporca nesplnil svoje zmluvné povinnosti a požadoval zaplatenie zmluvnej pokuty.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Pezinok, ktorý zamietol návrh na zaplatenie zmluvnej pokuty.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "že si riadne a včas nesplní niektorý iný záväzok podľa nich, bude povinný zaplatiť zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "vo výške zľavy",
+          "evidence": {
+            "quote": "bude povinný zaplatiť zmluvnú pokutu vo výške zľavy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 32198.18,
+            "evidence": {
+              "quote": "zmluvné pokuty boli v dodatkoch k zmluvám o pripojení dojednané spolu vo výške 32.198,18 EUR",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "nárok navrhovateľa na zaplatenie zmluvnej pokuty nebol preukázaný",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "návrh v časti zaplatenia zmluvnej pokuty vrátane úroku z omeškania zamietol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "nárok navrhovateľa na zaplatenie zmluvnej pokuty nebol preukázaný",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol návrh na zaplatenie zmluvnej pokuty, pretože pokus o pokonávku bol vyhodnotený ako neurčitý. Nebolo špecifikované, ktoré konkrétne porušenie zmluvnej povinnosti bolo sankcionované. Odvolací súd potvrdil tento záver, keďže navrhovateľ nepreukázal vznik povinnosti odporcu na zaplatenie zmluvnej pokuty.",
+          "key_quotes": [
+            {
+              "quote": "nárok navrhovateľa na zaplatenie zmluvnej pokuty nebol preukázaný",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_3Cob_387_2013_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "3Cob/387/2013",
+      "decision_date": "22.10.2014",
+      "ecli": "ECLI:SK:KSBA:2014:1712220787.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

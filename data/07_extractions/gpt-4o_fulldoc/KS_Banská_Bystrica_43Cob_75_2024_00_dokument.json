@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 32263,
+    "completion_tokens": 1250,
+    "cost_usd": 0.0932,
+    "latency_seconds": 19.75,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca EuroISO, s. r. o. sa domáhal zaplatenia sumy 1.512,- Eur s úrokom z omeškania a zmluvnej pokuty 600,- Eur od žalovaného Geotechnik Sk, s.r.o. na základe dvoch zmlúv o predaudite systému manažérstva podľa noriem EN ISO 9001:2015 a EN ISO 14001:2015.",
+      "verdict_summary": "Krajský súd v Banskej Bystrici potvrdil rozsudok Okresného súdu Žilina, ktorý žalobe vyhovel v celom rozsahu.",
+      "contract_type": "dodavka_sluzieb",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu dvakrát po 300,- Eur z dôvodu trvania omeškania žalovaného s úhradou faktúry 1 a faktúry 2 viac ako 30 dní od dátumu ich splatnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "dvakrát po 300,- Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu dvakrát po 300,- Eur z dôvodu trvania omeškania žalovaného s úhradou faktúry 1 a faktúry 2 viac ako 30 dní od dátumu ich splatnosti.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 600,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 600,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 600,
+            "evidence": {
+              "quote": "14001:2015, a to dvakrát po 756,- Eur, nárok na zaplatenie zmluvnej pokuty dvakrát po 300,- Eur z dôvodu",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania 9% ročne z tejto sumy od 22.07.2022 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Podľa okresného súdu nie je možné konštatovať, že by dohoda o zmluvnej pokute bola rozporná so zásadami poctivého obchodného styku alebo hodnotiť uplatnenie zmluvnej pokuty ako zneužitie práv na úkor žalovaného.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd považoval zmluvnú pokutu za platnú a primeranú, keďže bola dohodnutá pre prípad omeškania s úhradou faktúr. Súd neaplikoval moderačné právo, pretože žalovaný neuviedol žiadne skutkové tvrdenia odôvodňujúce neprimeranosť výšky zmluvnej pokuty. Výška pokuty bola považovaná za primeranú vzhľadom na to, že právo na jej zaplatenie vzniká až po uplynutí 30-dňovej lehoty od splatnosti faktúr.",
+          "key_quotes": [
+            {
+              "quote": "Podľa okresného súdu nie je možné konštatovať, že by dohoda o zmluvnej pokute bola rozporná so zásadami poctivého obchodného styku alebo hodnotiť uplatnenie zmluvnej pokuty ako zneužitie práv na úkor žalovaného.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Podľa okresného súdu nie je možné konštatovať, že by dohoda o zmluvnej pokute bola rozporná so zásadami poctivého obchodného styku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta slúži na zabezpečenie kľúčového záväzku žalovaného zo Zmluvy 1 a Zmluvy 2 nestrpiaceho omeškanie.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 300,- Eur nepovažoval okresný súd za neprimeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "bol to žalovaný, ktorý v lehote splatnosti vystavené faktúry neuhradil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "s úrokmi z omeškania a stotožnil sa aj s jeho záverom o vzniku nároku žalobcu na zmluvnú pokutu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.factor.pomer_k_istine"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43Cob_75_2024_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43Cob/75/2024",
+      "decision_date": "12.02.2025",
+      "ecli": "ECLI:SK:KSBB:2025:6122423038.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

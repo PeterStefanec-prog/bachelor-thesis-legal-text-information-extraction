@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13000,
+    "completion_tokens": 2817,
+    "cost_usd": 0.0117,
+    "latency_seconds": 50.01,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "kupna",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 1.424.749,54 EUR od žalovaného z dôvodu nedodržania harmonogramu dodávok motorovej nafty podľa zmluvy o obmene hmotných rezerv. Žalovaný namietal neplatnosť dohody o zmluvnej pokute pre rozpor s dobrými mravmi a neprimeranosť jej výšky, ako aj premlčanie pohľadávky.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bol žalovaný povinný zaplatiť žalobcovi celú vymáhanú sumu zmluvnej pokuty spolu s úrokmi z omeškania. Súd považoval zmluvnú pokutu za platnú a jej výšku za primeranú."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "EUR",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Žalobe ako dôvodne podanej vyhovel tak do uplatnenej výšky zmluvnej pokuty, ako aj úrokov z omeškania so zaplatením zmluvnej pokuty."
+            },
+            "value": 1424749.54
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Výšku zmluvnej pokuty 42.922.004,53 Sk (1.424.749,54 Eur) žalobca vyúčtoval žalovanému postupne faktúrami č. 2796000017, č. 2796000040, č. 2796000057, so splatnosťou dňa 11.04.2007, ktorý takto vyúčtovanú zmluvnú pokutu nezaplatil."
+            },
+            "value": 1424749.54
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Rozdiel medzi týmto zmluvne dohodnutým množstvom a skutočne dodaným množstvom motorovej nafty bol 7.624.479 m3, čo pri cene 7.506 Sk/m3 predstavuje 57.229.339,37 Sk a táto cena nedodaného množstva motorovej nafty, resp. 75% z uvedenej ceny, bol základom pre výpočet zmluvnej pokuty."
+            },
+            "value": 57229339.37
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Okresný súd napadnutým rozsudkom rozhodol, že žalovaný je povinný zaplatiť žalobcovi 1.424.749,54 Eur so 14 % ročným úrokom z omeškania od 12.04.2007 do zaplatenia, všetko do 3 dní od právoplatnosti rozsudku."
+          },
+          "rate_value": "14 % ročne"
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Zmluvné strany určili za porušenie zmluvy, na ktoré sa vzťahujú zmluvné pokuty, nedodržanie stanoveného harmonogramu."
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "V danej veci sa odvolací súd v posúdení primeranosti dohodnutej zmluvnej pokuty stotožňuje so záverom súdu prvého stupňa a to s ohľadom na úlohy žalobcu v mimoriadnych situáciách plynúcich zo zákona č. 82/1994 Z.z. § 3 ods. 1, ako aj dôležitosti tvorby štátnych hmotných rezerv a vo vzťahu k žalovanému zo skutočnosti, že od 26.09.2005 vedel, že vykazuje deficit v dodávkach motorovej nafty."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Odvolací súd preskúmal dojednania Dodatku č. 3 v odd. C čl. IV. bod 6 a majetkové sankcie v oddieli C čl. III. bod C zmluvy o obmene hmotných rezerv s ohľadom na tvrdenie žalovaného, že sankčné dojednania zmluvy sú v rozpore s dobrými mravmi (§ 3 ods. 1 O.z.) a zásadami poctivého obchodného styku (§ 265 Ob.z.) pre neprimeranosť výšky zmluvnej pokuty a skutočnosti, že postihujú len jednu zmluvnú stranu žalovaného."
+              },
+              "label": "dobre_mravy",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Medzi účastníkmi konania zmluvná pokuta zaisťovala povinnosť žalovaného ako jeho hlavný záväzok dodať žalobcovi riadne plnenie spočívajúce v dodaní dohodnutého množstva motorovej nafty v dohodnutom čase."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Nakoniec sa odvolací súd zaoberal tvrdením žalovaného, že súd prvého stupňa považoval zmluvnú pokutu za primeranú a nepoužil svoje moderačné právo najmä, keď žalobcovi nevznikla žiadna škoda a jemu žalovanému nebolo preukázané porušenie zákona č. 82/1994 Z.z. o štátnych hmotných rezervách."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Základom pre výpočet zmluvnej pokuty sa stala cena nedodaného množstva 57.229.339,37 Sk (7.624.479 x 7.506,- Sk) a keďže výška zmluvnej pokuty predstavuje 75% uvedenej ceny, tak žalobca vyčíslil sumu 42.922.004,53 Sk správne."
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "vo vzťahu k žalovanému zo skutočnosti, že od 26.09.2005 vedel, že vykazuje deficit v dodávkach motorovej nafty."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "V oddieli C čl. III písm. c/ si zmluvné strany dohodli majetkové sankcie tak, že za dodávku menšieho množstva tovaru ako stanovuje zmluva, dohodli zmluvnú pokutu vo výške 75% z ceny chýbajúceho tovaru."
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd preskúmal dojednania Dodatku č. 3 v odd. C čl. IV. bod 6 a majetkové sankcie v oddieli C čl. III. bod C zmluvy o obmene hmotných rezerv s ohľadom na tvrdenie žalovaného, že sankčné dojednania zmluvy sú v rozpore s dobrými mravmi (§ 3 ods. 1 O.z.) a zásadami poctivého obchodného styku (§ 265 Ob.z.) pre neprimeranosť výšky zmluvnej pokuty a skutočnosti, že postihujú len jednu zmluvnú stranu žalovaného."
+            }
+          ],
+          "legal_reasoning_summary": "Súd určil výšku zmluvnej pokuty ako 75 % z ceny chýbajúceho tovaru (nedodanej motorovej nafty), čo predstavovalo sumu 42.922.004,53 Sk (1.424.749,54 EUR). Žalovaný namietal neprimeranosť výšky a rozpor s dobrými mravmi, keďže mu nevznikla škoda a sankcia postihuje len jednu stranu. Súd však dospel k záveru, že výška nie je v rozpore s dobrými mravmi ani zásadami poctivého obchodného styku, keďže zohľadnil dôležitosť tvorby štátnych hmotných rezerv a skutočnosť, že žalovaný vedel o deficite v dodávkach. Súd nepoužil moderačné právo podľa § 301 Ob.z. a priznal pokutu v plnej výške."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "V oddieli C čl. III písm. c/ si zmluvné strany dohodli majetkové sankcie tak, že za dodávku menšieho množstva tovaru ako stanovuje zmluva, dohodli zmluvnú pokutu vo výške 75% z ceny chýbajúceho tovaru."
+          },
+          "type": "percent_z_ceny",
+          "value_raw": "75% z ceny chýbajúceho tovaru"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "moderation_analysis.factors.kumulacia_s_urokom.evidence.quote",
+        "moderation_analysis.factors.spravanie_veritela.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_16Cob_78_2013_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "16Cob/78/2013",
+      "decision_date": "26.02.2014",
+      "ecli": "ECLI:SK:KSTN:2014:3107213599.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

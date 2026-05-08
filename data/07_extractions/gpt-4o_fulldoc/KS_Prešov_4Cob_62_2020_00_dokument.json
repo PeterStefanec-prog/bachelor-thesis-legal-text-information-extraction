@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12430,
+    "completion_tokens": 1207,
+    "cost_usd": 0.0431,
+    "latency_seconds": 26.93,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Stredná odborná škola, požadoval od žalovaného, PKB invest, s.r.o., zaplatenie zmluvnej pokuty vo výške 15.400 EUR za omeškanie s odstránením vád diela podľa zmluvy o dielo. Žalovaný nesplnil povinnosť odstrániť vady v dohodnutej lehote.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalovanému uložil povinnosť zaplatiť žalobcovi zmluvnú pokutu vo výške 15.400 EUR.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaný tak nesplnil svoju povinnosť, ktorá mu vyplývala s Čl. 5. bod 6. zmluvy o dielo, keďže nezačal s odstraňovaním reklamovaných vád predmetu zákazky do 7 dní od prevzatia písomného uplatnenia oprávnenej reklamácie objednávateľa",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "15.400,- eur",
+          "evidence": {
+            "quote": "Zmluvná pokuta v zmysle Čl. 7. bod 3. zmluvy o dielo predstavuje sumu 15.400,- eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 15400,
+            "evidence": {
+              "quote": "Zmluvnú pokutu v oprávnenej výške 15.400 eur žalovaný žalobcovi doposiaľ neuhradil.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 15400,
+            "evidence": {
+              "quote": "Súd preto oprávnenej žalobe žalobcu v časti týkajúcej sa zaplatenia sumy 15.400 eura vyhovel.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s 9 % ročným úrokom z omeškania zo sumy 15.400,eur od 22.07.2016 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd potvrdil rozsudok súdu prvej inštancie v súlade s § 387 ods. 1, 2 CSP, vrátane zodpovedajúceho výroku o trovách konania.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že žalovaný nesplnil povinnosť odstrániť vady v dohodnutej lehote, a preto žalobcovi priznal zmluvnú pokutu vo výške 15.400 EUR. Odvolací súd potvrdil tento rozsudok, keďže zmluvná pokuta bola dohodnutá v primeranej výške a neexistoval dôvod na jej zníženie podľa § 301 Obchodného zákonníka. Súd zdôraznil, že zmluvná pokuta bola primeraná vzhľadom na predmet diela a porušenie povinnosti žalovaného.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd potvrdil rozsudok súdu prvej inštancie v súlade s § 387 ods. 1, 2 CSP, vrátane zodpovedajúceho výroku o trovách konania.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty 200,- eur za deň omeškania s odstránením vád diela bola dohodnutá primerane vzhľadom na predmet diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dohodnutá v primeranej výške vo vzťahu k celkovej cene diela",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný tak nesplnil svoju povinnosť, ktorá mu vyplývala s Čl. 5. bod 6. zmluvy o dielo",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.decision",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_62_2020_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/62/2020",
+      "decision_date": "11.02.2021",
+      "ecli": "ECLI:SK:KSPO:2021:8116225877.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

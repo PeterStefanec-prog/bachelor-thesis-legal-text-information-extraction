@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11002,
+    "completion_tokens": 2005,
+    "cost_usd": 0.009,
+    "latency_seconds": 29.75,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "kupna",
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 20 000 000 Sk (663 878,37 EUR) od žalovaného pre porušenie záväzku nevykonávať činnosť v oblasti prevádzkovania hazardných hier po dobu 5 rokov od prevodu obchodného podielu. Žalovaný namietal, že svoj záväzok neporušil, keďže neprevádzkoval hazardné hry priamo, ale iba konal ako fyzická osoba v súvislosti s ochrannými známkami.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvého stupňa, ktorým bol žalovaný povinný zaplatiť žalobcovi dohodnutú zmluvnú pokutu v plnej výške. Súd zamietol námietky žalovaného o neplatnosti dojednania a neodôvodnenosti aplikácie moderačného práva."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobcovi vznikol nárok na zaplatenie dohodnutej zmluvnej pokuty vo výške 20 000 000,- Sk, teda 663 878,37 eur v platnej mene"
+            },
+            "value": 20000000
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "žalobcovi vznikol nárok na zaplatenie dohodnutej zmluvnej pokuty vo výške 20 000 000,- Sk, teda 663 878,37 eur v platnej mene"
+            },
+            "value": 20000000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": null,
+              "quote": null
+            },
+            "value": null
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": null,
+            "quote": null
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "žalovaný porušil zmluvnú povinnosť dojednanú v čl. VII zmluvy o prevode obchodného podielu tým, že vykonával činnosť v oblasti prevádzkovania hazardných hier"
+          },
+          "value": "other"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd nevzhliadol v tomto štádiu konania ani dôvody pre použitie moderačného práva obsiahnutého v ust. § 301 Obch. zák."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "zmluvná pokuta bola dojednaná nie pre prípad, že by žalovaný osobne alebo prostredníctvom majetkového účastenstva v obchodnej spoločnosti prevádzkoval hazardné hry, ale pre prípad, ak by vykonával činnosť v oblasti prevádzkovania hazardných hier"
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "žalovaný potrebu aplikácie ust. § 301 Obch. zák. nezdôvodnil a z dôkazov vykonaných pred súdom prvého stupňa nevyplynuli žiadne skutočnosti, s prihliadnutím na ktoré by bolo možné súdnym rozhodnutím dohodnutú zmluvnú pokutu znížiť"
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "žalovaný vyššie uvedenou činnosťou bránil žalobcovi (resp. jeho právnemu predchodcovi - spoločnosti BIATEC s.r.o.) vo vykonávaní podnikania v oblasti prevádzkovania hazardných hier, pričom využíval monopol nedobromyseľne získaným zápisom slovnej ochrannej známky BIATEC"
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "žalovaný porušil zmluvnú povinnosť dojednanú v čl. VII zmluvy o prevode obchodného podielu tým, že vykonával činnosť v oblasti prevádzkovania hazardných hier"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "Odvolací súd nevzhliadol v tomto štádiu konania ani dôvody pre použitie moderačného práva obsiahnutého v ust. § 301 Obch. zák."
+            }
+          ],
+          "legal_reasoning_summary": "Súd konštatoval, že žalovaný porušil zmluvný záväzok nevykonávať činnosť v oblasti hazardných hier, keďže registroval ochranné známky a vyzýval žalobcu na uzavretie licenčnej zmluvy, čím obmedzoval jeho podnikanie. Súd odmietol námietku žalovaného, že záväzok sa týkal len priameho prevádzkovania hier, a zdôraznil širší význam pojmu 'činnosť v oblasti'. Moderačné právo podľa § 301 Obch. zák. nebolo aplikované, pretože žalovaný nezdôvodnil potrebu zníženia a z dôkazov nevyplynuli skutočnosti odôvodňujúce neprimeranosť výšky pokuty."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "V prípade porušenia povinností dohodnutých v tomto článku zmluvy je prevodca povinný zaplatiť nadobúdateľovi zmluvnú pokutu vo výške 20.000.000,- Sk."
+          },
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000.000,- Sk"
+        },
+        "related_claim_ref": null
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_200_2011_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/200/2011",
+      "decision_date": "30.10.2012",
+      "ecli": "ECLI:SK:KSTN:2012:3710206478.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

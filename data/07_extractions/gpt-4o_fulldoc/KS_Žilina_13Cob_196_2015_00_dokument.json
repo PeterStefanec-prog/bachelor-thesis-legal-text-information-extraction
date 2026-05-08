@@ -1,0 +1,176 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16468,
+    "completion_tokens": 1051,
+    "cost_usd": 0.0517,
+    "latency_seconds": 40.93,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca EUROTIM GmbH, s.r.o. sa domáhal zaplatenia zmluvnej pokuty vo výške 4.832 Eur, ktorá bola súčasťou konkurenčnej doložky v zmluve o dielo. Žalovaný Milan Zboroň mal porušiť túto doložku tým, že uzavrel zmluvu s obchodnými partnermi žalobcu.",
+      "verdict_summary": "Krajský súd v Žiline potvrdil rozsudok Okresného súdu Dolný Kubín, ktorý žalobu zamietol.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "breach_of_confidentiality",
+          "evidence": {
+            "quote": "Pre prípad porušenia tohto záväzku žalovaným bola zmluvne upravená sankcia vo forme zmluvnej pokuty",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000 Eur",
+          "evidence": {
+            "quote": "Pre prípad porušenia tohto záväzku žalovaným bola zmluvne upravená sankcia vo forme zmluvnej pokuty vo výške 20.000 Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 4832,
+            "evidence": {
+              "quote": "z ktorej si žalobca v predmetnom konaním uplatnil časť vo výške 4.832 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Žalobcovi preto podľa názoru okresného súdu nemohol vzniknúť nárok na zaplatenie zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Žalobcovi preto podľa názoru okresného súdu nemohol vzniknúť nárok na zaplatenie zmluvnej pokuty, keďže bola viazaná na nesplnenie záväzku žalovaným, ktorý bol posúdený ako neplatný",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd posúdil konkurenčnú doložku ako neplatnú, pretože neobsahovala podstatné náležitosti podľa § 672a Obchodného zákonníka, ako je teritoriálne obmedzenie a primeraná doba obmedzenia. Zmluvná pokuta bola viazaná na túto neplatnú doložku, a preto nemohol vzniknúť nárok na jej zaplatenie. Súd tiež uviedol, že zmluvná pokuta je akcesorickým záväzkom, ktorý nemôže existovať bez platného hlavného záväzku.",
+          "key_quotes": [
+            {
+              "quote": "Žalobcovi preto podľa názoru okresného súdu nemohol vzniknúť nárok na zaplatenie zmluvnej pokuty, keďže bola viazaná na nesplnenie záväzku žalovaným, ktorý bol posúdený ako neplatný",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Konkurenčná doložka podľa názoru žalovaného nesmie byť v rozpore s právom, v rozpore s dobrými mravmi, krytá neúmerne vysokou zmluvnou pokutou a musí byť navzájom vyvážená.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_196_2015_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/196/2015",
+      "decision_date": "18.11.2015",
+      "ecli": "ECLI:SK:KSZA:2015:5414200612.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

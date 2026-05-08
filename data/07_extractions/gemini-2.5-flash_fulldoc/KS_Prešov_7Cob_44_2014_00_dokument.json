@@ -1,0 +1,313 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 7476,
+    "completion_tokens": 3071,
+    "cost_usd": 0.0401,
+    "latency_seconds": 11.36,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 1.365,86 eur s úrokom z omeškania titulom neodobratého, ale objednaného tovaru. Žalovaný namietal neprimerane vysokú výšku zmluvnej pokuty a jej neurčitosť, ako aj to, že tovar nikdy neprevzal.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvého stupňa, ktorý žalobu na zaplatenie zmluvnej pokuty zamietol, pretože nebola preukázaná písomná dohoda o uplatňovanej zmluvnej pokute.",
+      "contract_type": "kupna",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 310005",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "pričom žalobca vyzval žalovaného na prevzatie tovaru. Žalovaný odmietal prevziať tovar",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_z_dlznej_sumy",
+          "value_raw": "50 % z objednaného tovaru",
+          "evidence": {
+            "quote": "ak neprevezme tovar, má uhradiť zmluvnú pokutu vo výške 50 % z objednaného tovaru",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2731.73,
+            "evidence": {
+              "quote": "odobratý tovar mal mať hodnotu 2.731,73 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 1365.86,
+            "evidence": {
+              "quote": "žalobca sa domáhal zaplatenia zmluvnej pokuty 1.365,86 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Preto súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "6 % úrokom z omeškania",
+          "evidence": {
+            "quote": "zaplatenia zmluvnej pokuty 1.365,86 eur so 6 % úrokom z omeškania od 21.12.2001",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Preto súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvého stupňa zamietol žalobu, pretože dojednanie zmluvnej pokuty bolo neurčité, nezrozumiteľné a odporovalo dobrým mravom a zásade poctivého obchodného styku. Odvolací súd potvrdil rozhodnutie s tým, že účastníci sa v záväznej objednávke nedohodli na platení zmluvnej pokuty vo výške 50 % celkovej čiastky objednávky, a teda neexistuje písomná dohoda o takejto zmluvnej pokute.",
+          "key_quotes": [
+            {
+              "quote": "Dojednanie zmluvnej pokuty je nezrozumiteľné, neurčité a nejasné.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd prvého stupňa vo veci konštatoval, že nedošlo k riadnemu zabezpečeniu záväzku, a to zmluvnou pokutou, pretože zmluvná pokuta v takejto písomnej forme nie je určená zrozumiteľne a odporuje dobrým mravom.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Keďže neexistuje písomná dohoda o platení zmluvnej pokuty z hodnoty 50 % celkovej čiastky objednávky (tovaru), potom žalobca nemá právo na zaplatenie zmluvnej pokuty uplatnenej v súdnom konaní.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Dojednaná zmluvná pokuta je vysoká a v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zaisťovací inštrument v prípade porušenia povinností žalovaného voči žalobcovi týkajúci sa neprevzatia tovaru.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška zmluvnej pokuty je neprimerane vysoká vo vzťahu k hodnote predmetu kúpy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný odmietal prevziať tovar, pričom tovar bol pripravený na expedíciu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Samotní účastníci si v objednávke dohodovali výšku zmluvnej pokuty 0,05 % za omeškania z fakturovanej čiastky, takže zmluvná pokuta bola viazaná na omeškanie s platbou faktúry.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "platenie zmluvnej pokuty sa dojednáva v nasledujúcej vete, a to len pri omeškaní - prodlení s platením fakturovanej čiastky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % za každý den prodlení, z fakturované částky",
+          "evidence": {
+            "quote": "Prodávající a kupujíci se vzájomně dohodli na výši smluvní pokuty, kterou je oprávněn účtovat prodávající kupujícimu ve výši 0,5 % za každý den prodlení, z fakturované částky.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Preto súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Zmluvná pokuta sa vzťahuje na úhradu faktúry. Iná zmluvná pokuta účastníkmi nebola dohodnuté.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Preto súd žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že táto zmluvná pokuta bola dohodnutá len pre prípad omeškania s platbou fakturovanej čiastky. Keďže žalobca uplatňoval zmluvnú pokutu za neprevzatie tovaru a nie za omeškanie s platbou, súd nárok na túto konkrétnu zmluvnú pokutu neuznal. Žalobca si uplatňoval inú zmluvnú pokutu, než ktorá bola dohodnutá pre omeškanie s platbou.",
+          "key_quotes": [
+            {
+              "quote": "platenie zmluvnej pokuty sa dojednáva v nasledujúcej vete, a to len pri omeškaní - prodlení s platením fakturovanej čiastky.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta sa vzťahuje na úhradu faktúry. Iná zmluvná pokuta účastníkmi nebola dohodnuté.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_7Cob_44_2014_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "7Cob/44/2014",
+      "decision_date": "16.10.2014",
+      "ecli": "ECLI:SK:KSPO:2014:8711202876.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

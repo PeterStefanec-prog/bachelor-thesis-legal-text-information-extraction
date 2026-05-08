@@ -1,0 +1,193 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 10146,
+      "completion_tokens": 596,
+      "cost_usd": 0.0313,
+      "latency_seconds": 10.48,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 7572,
+      "completion_tokens": 804,
+      "cost_usd": 0.027,
+      "latency_seconds": 21.77,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca BPT LEASING, a.s. sa domáhal zaplatenia zmluvnej pokuty za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Žalobca požadoval zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorým bola žalovanému uložená povinnosť zaplatiť zmluvnú pokutu.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_2"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2% denne zo sumy 2.429,91 eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_2"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 0,2% denne zo sumy 2.429,91 eur",
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_2"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "V časti zmluvnej pokuty súd žalobu zamietol",
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_4"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 9% ročne zo sumy 2.429,91 eur",
+            "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_1"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie mal po vykonanom dokazovaní za preukázané, že žaloba je aj v zostávajúcej časti (zaplatenie zmluvnej pokuty) plne dôvodná.",
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že žaloba na zaplatenie zmluvnej pokuty je plne dôvodná, pretože žalovaný bol podnikateľom a bol si vedomý podmienok zmluvy vrátane zmluvnej pokuty. Súd nenašiel dôvod na zníženie pokuty podľa § 301 Obchodného zákonníka, keďže zmluvné ustanovenia neboli v rozpore so zásadami poctivého obchodného styku. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie mal po vykonanom dokazovaní za preukázané, že žaloba je aj v zostávajúcej časti (zaplatenie zmluvnej pokuty) plne dôvodná.",
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+            },
+            {
+              "quote": "nájomcu z leasingovej zmluvy. Súd nedospel k záveru, že by uplatnenú zmluvnú pokutu bolo potrebné znížiť v zmysle § 301 Obchodného",
+              "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "súd nedospel k presvedčeniu, že by zmluvné ustanovenia týkajúce sa zmluvnej pokuty boli v rozpore so zásadami poctivého obchodného styku.",
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nárok, ktorého zaplatenie je zabezpečené zmluvnou pokutou podľa článku XI ods. 6.",
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "301 Obchodného zákonníka, nakoľko žalovaný bol v čase podpisu zmluvy podnikateľským subjektom, používal predmet zmluvy na podnikanie a pri podpise zmluvy si bol, resp. musel byť vedomý jednotlivých ustanovení",
+                "chunk_id": "KS_Bratislava_1Cob_40_2018_00_dokument.pdf_chunk_8"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_40_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/40/2018",
+      "decision_date": "13.06.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1211204153.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

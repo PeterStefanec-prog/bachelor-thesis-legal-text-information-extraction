@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12849,
+    "completion_tokens": 2334,
+    "cost_usd": 0.0105,
+    "latency_seconds": 34.66,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "contract_type": "dielo",
+      "dispute_summary": "Navrhovateľ (správca konkurznej podstaty úpadcu) sa domáhal určenia, že pohľadávka odporcu prihlásená do konkurzu vo výške 341.860,15 Sk je sporná, keďže úpadca vykonal jednostranný zápočet svojej pohľadávky zo zmluvnej pokuty proti pohľadávke odporcu z platobného rozkazu. Odporca namietal neplatnosť zápočtu a neprimeranosť výšky zmluvnej pokuty.",
+      "relationship_type": "B2B",
+      "verdict_summary": "Súd určil, že pohľadávka odporcu uplatnená v konkurznom konaní je vo výške 341.860,15 Sk s príslušenstvom sporná, čím vyhovel návrhu navrhovateľa."
+    },
+    "contractual_penalties": [
+      {
+        "amounts": {
+          "currency": "SKK",
+          "final_awarded": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "súd nevyužil moderačné oprávnenie vyplývajúce mu z ust. § 301 Obch. zákonníka, zmluvnú pokutu dojednanú v Dodatku č. 2 k Zmluve o dielo súd považoval za primeranú a uplatnenú v súlade so zákonom."
+            },
+            "value": null
+          },
+          "original_claimed": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "úpadca vyfakturoval odporcovi v súlade s čl. 9 bodom 9.3 Zmluvy o dielo č. 3020700-42/98-S zo dňa 8.6.1998 v znení Dodatku číslo 2 zmluvnú pokutu za nedodržanie písomne dohodnutého termínu odstránenia vád na predmetnej stavbe."
+            },
+            "value": 300000
+          },
+          "secured_principal": {
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Podľa čl. 4 cena diela bola dohodnutá vo výške 32.975.056,Sk vrátane DPH."
+            },
+            "value": 32975056
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "Dôvody spočívali v neprimerane vysokom úroku z omeškania odporujúcom dobrým mravom a zásadám podstivého obchodného styku a to vo výške 500,- Sk za každú aj začatú hodinu omeškania"
+          },
+          "rate_value": null
+        },
+        "breach_type": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "zmluvnú pokutu za nedodržanie písomne dohodnutého termínu odstránenia vád na predmetnej stavbe"
+          },
+          "value": "non_monetary_performance"
+        },
+        "moderation_analysis": {
+          "decision": {
+            "dismissal_reason": null,
+            "evidence": {
+              "chunk_id": "full_doc",
+              "quote": "Z týchto dôvodov preto súd nevyužil moderačné oprávnenie vyplývajúce mu z ust. § 301 Obch. zákonníka, zmluvnú pokutu dojednanú v Dodatku č. 2 k Zmluve o dielo súd považoval za primeranú a uplatnenú v súlade so zákonom."
+            },
+            "value": "awarded_full"
+          },
+          "factors": [
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Odporca v priebehu dokazovania namietal neprimeranosť výšky zmluvnej pokuty, ktorú považuje za pokutu v rozpore so zásadami poctivého obchodného styku"
+              },
+              "label": "dobre_mravy",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Zmluvná pokuta má charakter paušalizovanej náhrady škody. Povinnosť na jej zaplatenie vzniká pri porušení povinnosti na ktorú sa zmluvná pokuta vzťahuje bez ohľadu na to, či týmto porušením bola spôsobená škoda alebo nie."
+              },
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "je potrebné prihliadať predovšetkým na hodnotu a význam zabezpečovanej povinnosti. Predmetom Zmluvy o dielo bola rekonštrukcia budovy S. S., a.s. M.."
+              },
+              "label": "vyska_skody",
+              "sentiment": "neutral"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "pri takto vysokej zabezpečovanej pohľadávke súd nevzhliadol dojednanú zmluvnú pokutu vo výške 500,- Sk za neprimerane vysokú"
+              },
+              "label": "pomer_k_istine",
+              "sentiment": "positive"
+            },
+            {
+              "evidence": {
+                "chunk_id": "full_doc",
+                "quote": "Z vykonaného dokazovanie ja taktiež nesporné, že právny predchodca odporcu si neplnil svoj záväzok vyplývajúci z uzatvorenej zmluvy o dielo riadne a včas a to odstrániť reklamované vady diela."
+              },
+              "label": "spravanie_dlznika",
+              "sentiment": "negative"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned"
+            },
+            {
+              "evidence": {
+                "chunk_id": null,
+                "quote": null
+              },
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned"
+            }
+          ],
+          "key_quotes": [
+            {
+              "chunk_id": "full_doc",
+              "quote": "Zmluvná pokuta vo výške 500,- Sk za každú aj začatú hodinu omeškania pri porušení zmluvnej povinnosti zo strany zhotoviteľa, ktorý sa zaviazal v zmysle zmluvy riadne a včas odstrániť v dohodnutom čase vady diela, pri takto vysokej zabezpečovanej pohľadávke súd nevzhliadol dojednanú zmluvnú pokutu vo výške 500,- Sk za neprimerane vysokú"
+            },
+            {
+              "chunk_id": "full_doc",
+              "quote": "súd nevyužil moderačné oprávnenie vyplývajúce mu z ust. § 301 Obch. zákonníka, zmluvnú pokutu dojednanú v Dodatku č. 2 k Zmluve o dielo súd považoval za primeranú a uplatnenú v súlade so zákonom."
+            }
+          ],
+          "legal_reasoning_summary": "Súd posudzoval námietku odporcu o neprimeranosti zmluvnej pokuty vo výške 500 Sk za každú hodinu omeškania podľa § 301 Obchodného zákonníka. Pri rozhodovaní prihliadal na hodnotu a význam zabezpečovanej povinnosti, ktorou bola rekonštrukcia budovy v hodnote takmer 33 miliónov Sk. Súd dospel k záveru, že vzhľadom na vysokú finančnú náročnosť diela nie je dojednaná pokuta neprimerane vysoká, hoci bola stanovená za každú začatú hodinu omeškania. Odporca síce namietal rozpor s dobrými mravmi, no súd túto námietku neakceptoval a nepoužil svoje moderačné právo na zníženie pokuty."
+        },
+        "penalty_id": "pokuta_1",
+        "rate_definition": {
+          "evidence": {
+            "chunk_id": "full_doc",
+            "quote": "objednávateľ má možnosť uplatniť si u zhotoviteľa zmluvnú pokutu vo výške 500,- Sk za každú aj začatú hodinu omeškania"
+          },
+          "type": "fixna_suma_denne",
+          "value_raw": "500,- Sk za každú aj začatú hodinu omeškania"
+        },
+        "related_claim_ref": "faktúra č. 34-4-2001"
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.final_awarded.value",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_13Cbi_38_2004_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "13Cbi/38/2004",
+      "decision_date": "12.12.2006",
+      "ecli": null,
+      "document_type": "Rozsudok"
+    }
+  }
+}

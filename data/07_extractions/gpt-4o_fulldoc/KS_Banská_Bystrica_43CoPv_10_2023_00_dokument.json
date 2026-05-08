@@ -1,0 +1,180 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 21991,
+    "completion_tokens": 1041,
+    "cost_usd": 0.0654,
+    "latency_seconds": 10.27,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca Balance Centrum s. r. o. sa domáhal nárokov z titulu porušovania známkových práv a nekalosúťažného konania, keď žalovaný MEDIBALANCE s.r.o. naďalej používal ochrannú známku \"metabolic balance\" po ukončení Zmluvy o spolupráci.",
+      "verdict_summary": "Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, ktorým bol žalovanému uložený nárok na zaplatenie zmluvnej pokuty vo výške 50.000,- Eur.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalovaný dlhodobo a preukázateľne porušoval zmluvne dohodnutý zákaz konkurencie",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "50.000,- Eur",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 50.000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 50000,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 50.000,- Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 50000,
+            "evidence": {
+              "quote": "žalobcovi priznal nárok na zaplatenie sumy 50.000,- Eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9% ročne od 03.10.2020 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "uvedených žalovaným v odvolaní a dospel k záveru, že súd prvej inštancie na základe vykonaných dôkazov dospel k správnym skutkovým zisteniam a vec správne právne posúdil, keď vyhovel žalobe žalobcu v časti o zaplatenie sumy 50.000,- Eur titulom zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že konkurenčná doložka bola dojednaná platne a žalovaný porušil zmluvne dohodnutý zákaz konkurencie. Odvolací súd potvrdil, že konkurenčná doložka je platná a zmluvná pokuta bola dojednaná v súlade so zásadou zmluvnej voľnosti. Žalovaný nepreukázal dôvody na moderáciu pokuty, a preto súd pokutu neznížil.",
+          "key_quotes": [
+            {
+              "quote": "v časti o zaplatenie sumy 50.000,- Eur titulom zmluvnej pokuty dojednanej stranami za porušenie zmluvne dohodnutého zákazu konkurencie žalovaným a v konaní na",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dojednaná v súlade so zásadou zmluvnej voľnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný dlhodobo a preukázateľne porušoval zmluvne dohodnutý zákaz konkurencie",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_NOT_FOUND:pokuta_1.amounts.final_awarded:full_doc",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_NOT_FOUND:pokuta_1.factor.zabezpecovacia_funkcia:full_doc"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_43CoPv_10_2023_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "43CoPv/10/2023",
+      "decision_date": "14.09.2023",
+      "ecli": "ECLI:SK:KSBB:2023:6120386576.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

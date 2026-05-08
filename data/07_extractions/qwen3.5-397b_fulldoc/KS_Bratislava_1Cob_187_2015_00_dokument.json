@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8622,
+    "completion_tokens": 1833,
+    "cost_usd": 0.0077,
+    "latency_seconds": 22.14,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 648,94 eur s príslušenstvom, pričom nárok zahŕňal aj zmluvnú pokutu vo výške 402,30 eur vyčíslenú na základe vzorca za predčasné ukončenie zmluvy. Žalovaný nezaplatil faktúry za telekomunikačné služby, čo viedlo k odstúpeniu od zmluvy a následnému uplatneniu nároku na zmluvnú pokutu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok súdu prvej inštancie, ktorý zamietol nárok na zaplatenie zmluvnej pokuty pre neurčitosť a neplatnosť zmluvného dojednania. Súd dospel k záveru, že formulácia zmluvnej pokuty neumožňuje posúdiť, ktoré porušenie je sankcionované a aká je jej výška.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "faktúra č. 1036257393",
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "v prípade jednostranného ukončenia tejto Zmluvy zo strany Účastníka s výnimkou odstúpenia Účastníka od Zmluvy podľa čl. 5.3. je Účastník povinný uhradiť Poskytovateľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "ine",
+          "value_raw": "Q =330€ + (2 x (DxMx0,235))",
+          "evidence": {
+            "quote": "je Účastník povinný uhradiť Poskytovateľovi zmluvnú pokutu vo výške vypočítanej podľa nasledovného vzorca: Q =330€ + (2 x (DxMx0,235)) Pričom D znamená zostávajúca doba platnosti Zmluvy v zmysle čl. 4.1a/alebo čl. 4.2 M znamená Minimálny obrat; Q znamená zmluvná pokuta v EURO.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 402.3,
+            "evidence": {
+              "quote": "Navrhovateľ faktúrou č. 1036257393 vo výške 408,30 eur vyčíslil zmluvnú pokutu 402,30 eur a 6,- eur upomienka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "odvolací súd rozhodnutie súdu prvej inštancie podľa ust. § 387 ods. 1 a 2 CSP v napadnutej časti ako vecne správne potvrdil.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "Súd prvej inštancie dospel k záveru, že úprava zmluvnej pokuty je formulovaná tak, že pri výklade spôsobí značné ťažkosti a užívateľ sa pri výklade daného ustanovenia podľa názoru súdu prvej inštancie orientuje len veľmi ťažko.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že dojednanie zmluvnej pokuty je neplatné pre nedostatok určitosti a zrozumiteľnosti podľa § 37 a § 544 Občianskeho zákonníka. Zmluva obsahuje niekoľko desiatok povinností rôznej závažnosti a formulácia neumožňuje posúdiť, porušenie ktorej povinnosti je sankcionované zmluvnou pokutou. Zároveň nie je zrejmá výška zmluvnej pokuty a spôsob jej výpočtu je pre bežného užívateľa nezrozumiteľný.",
+          "key_quotes": [
+            {
+              "quote": "Uvedená formulácia neumožňuje posúdenie porušenie, ktorej povinnosti účastníka je sankcionované zmluvnou pokutou.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Dojednanie o zmluvnej pokute je neplatné aj z toho dôvodu, že zmluva o pripojení, ktorej súčasťou je aj Rámcová zmluva obsahuje niekoľko desiatok povinností účastníka.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal",
+        "amounts.final_awarded",
+        "associated_interest.rate_value"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_187_2015_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/187/2015",
+      "decision_date": "06.10.2016",
+      "ecli": "ECLI:SK:KSBA:2016:1314214384.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

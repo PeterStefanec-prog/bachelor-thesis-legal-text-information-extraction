@@ -1,0 +1,566 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 9
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 30481,
+    "completion_tokens": 6275,
+    "cost_usd": 0.1009,
+    "latency_seconds": 25.8,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 322 507,55 Eur s príslušenstvom ako náhrady škody a bezdôvodného obohatenia, ktoré mu vznikli v dôsledku podľa neho nedôvodného a nezákonného odstúpenia žalovaného od Franchisingovej zmluvy a Zmluvy o výkone finančného sprostredkovania. Žalovaný s nárokom nesúhlasil a tvrdil, že odstúpenie bolo oprávnené z dôvodu porušenia zmluvných povinností žalobcom a jeho zamestnancami.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok prvostupňového súdu tak, že žalobu v časti priznanej sumy 2 222,73 Eur zamietol a potvrdil zamietnutie žaloby v časti 320 284,82 Eur. Žalovanému priznal nárok na náhradu trov konania v rozsahu 100 %.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych predpisov, ktoré sa vzťahujú na vykonávanie činnosti finančného sprostredkovania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 20.000,-Eur",
+          "evidence": {
+            "quote": "má banka právo uplatniť si voči viazanému finančnému agentovi nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,-Eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "s uplatnením nároku na zaplatenie zmluvnej pokuty 20.000,- Eur za porušenie povinností pri výkone finančného sprostredkovania.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd teda súhlasí s názorom žalovaného vysloveným v podanom odvolaní, že napadnutý rozsudok v I. výrokovej vete nie je správny, keďže započítanie nebolo správne právne posúdené, pričom započítaním došlo k zníženiu neuhradenej pohľadávky žalovaného zo zmluvnej pokuty, čím nárok žalobcu na zaplatenie súm 1.947,05 Eur na základe faktúry č. FV150001 a 1.587,50 na základe faktúry č. FV150002 zanikol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o náhradu škodu vo výške 322.507,55 Eur s príslušenstvom",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd tiež konštatuje, že oprávnenosť žalovaným vyúčtovanej zmluvnej pokuty vo výške 20.000,-Eur je preukázaná dohodou zmluvných strán, pričom tvrdenia žalobcu o neprimeranosti tejto zmluvnej pokuty považuje odvolací súd za nedôvodné a dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu ohľadne žalovaným vyúčtovanej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie neuznal započítaciu námietku žalovaného ohľadne zmluvnej pokuty vo výške 20 000 Eur, pretože ju nepovažoval za spôsobilú na započítanie, keďže nebola priznaná súdom a jej výška sa javila neadekvátna. Odvolací súd s týmto nesúhlasil, uviedol, že na započítanie sú spôsobilé pohľadávky, ktoré možno uplatniť na súde, a rozhodnutie súdu nie je podmienkou. Odvolací súd považoval zmluvnú pokutu za primeranú vzhľadom na závažnosť konania pracovníkov žalobcu a riziko sankcií pre žalovaného.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie uznal započítaciu námietku žalovaného len vo výške 1.311,82 Eur, avšak započítaciu námietku ohľadne zmluvnej pokuty vo výške 20.000,-Eur neuznal z dôvodu, že podľa okresného súdu nebola zmluvná pokuta spôsobilá k započítaniu, pretože nebola priznaná súdom a výška tejto vyúčtovanej zmluvnej pokuty sa javí byť vo vzťahu ku konaniu žalobcu a spôsobenej škode neadekvátna.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd má za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,-Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Uplatnenie zániku nároku na vrátenie zloženej kaucie v celom rozsahu, ako aj ponechanie si uhradeného poplatku za licenciu za stavu, že je preukázané, že samotný žalovaný porušil svoje povinnosti a všetku zodpovednosť preniesol na žalobcu, je v rozpore s poctivým obchodným stykom i dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Odvolací súd má za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,-Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konanie zamestnancov žalobcu bolo hrubým porušením povinností, za ktoré zodpovedá žalobca ako ich zamestnávateľ.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca tiež tvrdí, že má vedomosť o tom, že časti franchisistov, s ktorými žalovaný predčasne ukončil spoluprácu, žalovaný vyplácal alikvotnú časť vstupného licenčného poplatku, pričom pomer sám žalovaný určil tak, že časť poplatku pripadajúcu na počet mesiacov trvania zmluvy si ponechal a časť poplatku pripadajúcu na počet mesiacov, o ktoré bola zmluva predčasne skončená, žalovaný vrátil franchisistom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "v prípade, ak franchisor odstúpi od zmluvy podľa ustanovení uvedených vyššie, môže franchisor zároveň rozhodnúť aj o zániku nároku franchisistu na vrátenie kaucie v súlade s bodom 9.6.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "vo výške 20.000,-Eur",
+          "evidence": {
+            "quote": "žalobca vydať bezdôvodné obohatenie. Tiež žiadal vydať bezdôvodné obohatenie v sume 20.000,-Eur, a to nevyplatením zábezpeky v tejto sume, keďže nebolo žiadneho právneho relevantného dôvodu na uplatnenie si zániku nároku na vrátenie zloženej kaucie v celom rozsahu, resp. na uplatnenie si akejkoľvek zmluvnej pokuty z akéhokoľvek dôvodu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "Tiež žiadal vydať bezdôvodné obohatenie v sume 20.000,-Eur, a to nevyplatením zábezpeky v tejto sume",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Súd z týchto dôvodov čo do zaplatenia tejto sumy konštatoval, že nemohlo vzniknúť na strane žalovaného bezdôvodné obohatenie, nakoľko žalovaný rozhodol o prepadnutí kaucie.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o náhradu škodu vo výške 322.507,55 Eur s príslušenstvom",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "Súd z týchto dôvodov čo do zaplatenia tejto sumy konštatoval, že nemohlo vzniknúť na strane žalovaného bezdôvodné obohatenie, nakoľko žalovaný rozhodol o prepadnutí kaucie.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Žalobca žiadal vrátenie kaucie vo výške 20 000 Eur ako bezdôvodné obohatenie. Súd prvej inštancie konštatoval, že na strane žalovaného nemohlo vzniknúť bezdôvodné obohatenie, nakoľko žalovaný rozhodol o prepadnutí kaucie v súlade s Franchisingovou zmluvou, ktorá stanovovala, že v prípade odstúpenia franchisora od zmluvy franchisista stráca nárok na vrátenie kaucie. Odvolací súd sa s týmto názorom stotožnil.",
+          "key_quotes": [
+            {
+              "quote": "Súd z týchto dôvodov čo do zaplatenia tejto sumy konštatoval, že nemohlo vzniknúť na strane žalovaného bezdôvodné obohatenie, nakoľko žalovaný rozhodol o prepadnutí kaucie.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z tohto bodu rovnako vyplýva, že ak môže franchisor odstúpiť od tejto zmluvy, franchisista stráca nárok na vrátenie kaucie.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Uplatnenie zániku nároku na vrátenie zloženej kaucie v celom rozsahu, ako aj ponechanie si uhradeného poplatku za licenciu za stavu, že je preukázané, že samotný žalovaný porušil svoje povinnosti a všetku zodpovednosť preniesol na žalobcu, je v rozpore s poctivým obchodným stykom i dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "pričom táto kaucia slúži najmä na pokrytie a úhradu budúcich prípadných škôd vzniknutých na franchisorom franchisistovi zverených veciach, vybavení a zariadení obchodného miesta - pobočky, ako aj na HW a SW, alebo iných strán, resp. škôd spojených s prevádzkou obchodného miesta - pobočky a rovnako môže slúžiť ako odstupné pre franchisora v prípade ukončenia tejto zmluvy v prípadoch uvedených v tejto zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konanie zamestnancov žalobcu bolo hrubým porušením povinností, za ktoré zodpovedá žalobca ako ich zamestnávateľ.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca tiež tvrdí, že má vedomosť o tom, že časti franchisistov, s ktorými žalovaný predčasne ukončil spoluprácu, žalovaný vyplácal alikvotnú časť vstupného licenčného poplatku, pričom pomer sám žalovaný určil tak, že časť poplatku pripadajúcu na počet mesiacov trvania zmluvy si ponechal a časť poplatku pripadajúcu na počet mesiacov, o ktoré bola zmluva predčasne skončená, žalovaný vrátil franchisistom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_3",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "other",
+          "evidence": {
+            "quote": "Žalobca považuje za oprávnený svoj nárok na vydanie bezdôvodného obohatenia na úhradu škody, ktorá mu vznikla zavineným konaním žalovaného, a to nevyplatením sumy 30.000,-Eur, ktorú žalobca uhradil titulom licencie - jednorazového vstupného poplatku za poskytnutie franchisingovej licencie na prvé päťročné obdobie franchisingu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "v sume 30.000k,-Eur vrátane DPH",
+          "evidence": {
+            "quote": "je franchisista povinný uhradiť jednorázový vstupný poplatok za poskytnutie franchisingovej licencie, ako je špecifikovaný v bode 9.4 v sume 30.000k,-Eur vrátane DPH za jedno obchodné miesto - pobočku za obdobie uvedené v Prílohe č. 2 - špecifikácia obchodného miesta - pobočky, a to najneskôr do 28.2.2014.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 30000.0,
+            "evidence": {
+              "quote": "Žalobca považuje za oprávnený svoj nárok na vydanie bezdôvodného obohatenia na úhradu škody, ktorá mu vznikla zavineným konaním žalovaného, a to nevyplatením sumy 30.000,-Eur, ktorú žalobca uhradil titulom licencie",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "na strane žalovaného nemohlo dôjsť k vzniku bezdôvodného obohatenia v sume 30.000,-Eur, a preto považoval žalobu v tejto časti za nedôvodnú.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o náhradu škodu vo výške 322.507,55 Eur s príslušenstvom",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "unproven_breach",
+            "evidence": {
+              "quote": "na strane žalovaného nemohlo dôjsť k vzniku bezdôvodného obohatenia v sume 30.000,-Eur, a preto považoval žalobu v tejto časti za nedôvodnú.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Žalobca žiadal vrátenie jednorazového vstupného poplatku za franchisingovú licenciu vo výške 30 000 Eur ako bezdôvodné obohatenie. Súd prvej inštancie posúdil nárok v súlade s Občianskym zákonníkom a konštatoval, že zo zmluvných dojednaní nevyplýva povinnosť žalovaného vrátiť tento poplatok v prípade odstúpenia od zmluvy. Preto na strane žalovaného nemohlo dôjsť k bezdôvodnému obohateniu a žalobu v tejto časti zamietol. Odvolací súd sa s týmto názorom stotožnil.",
+          "key_quotes": [
+            {
+              "quote": "na strane žalovaného nemohlo dôjsť k vzniku bezdôvodného obohatenia v sume 30.000,-Eur, a preto považoval žalobu v tejto časti za nedôvodnú.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z toho podľa súdu prvej inštancie vyplýva, že na strane žalovaného nemohlo dôjsť k vzniku bezdôvodného obohatenia v sume 30.000,-Eur, a preto považoval žalobu v tejto časti za nedôvodnú.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Uplatnenie zániku nároku na vrátenie zloženej kaucie v celom rozsahu, ako aj ponechanie si uhradeného poplatku za licenciu za stavu, že je preukázané, že samotný žalovaný porušil svoje povinnosti a všetku zodpovednosť preniesol na žalobcu, je v rozpore s poctivým obchodným stykom i dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "konanie zamestnancov žalobcu bolo hrubým porušením povinností, za ktoré zodpovedá žalobca ako ich zamestnávateľ.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca tiež tvrdí, že má vedomosť o tom, že časti franchisistov, s ktorými žalovaný predčasne ukončil spoluprácu, žalovaný vyplácal alikvotnú časť vstupného licenčného poplatku, pričom pomer sám žalovaný určil tak, že časť poplatku pripadajúcu na počet mesiacov trvania zmluvy si ponechal a časť poplatku pripadajúcu na počet mesiacov, o ktoré bola zmluva predčasne skončená, žalovaný vrátil franchisistom.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_4",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "pre omeškanie s úhradou splatných faktúr za podnájom nebytových priestorov",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "1.311,82 Eur",
+          "evidence": {
+            "quote": "bolo možné započítať na tieto faktúry faktúru č. 320019 vo výške 1.311,82 Eur, v ktorej časti nárok žalobcu zanikol",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 1311.82,
+            "evidence": {
+              "quote": "čiastky 1.311,82 Eur, ktorá sa týka faktúry č. 2100329 za obdobie december 2014.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "bolo možné započítať na tieto faktúry faktúru č. 320019 vo výške 1.311,82 Eur, v ktorej časti nárok žalobcu zanikol",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "o náhradu škodu vo výške 322.507,55 Eur s príslušenstvom",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "bolo možné započítať na tieto faktúry faktúru č. 320019 vo výške 1.311,82 Eur, v ktorej časti nárok žalobcu zanikol",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie uznal započítanie pohľadávky žalovaného vo výške 1 311,82 Eur, ktorá sa týkala faktúry za nájomné za december 2014, voči pohľadávkam žalobcu z provízií. Odvolací súd s týmto započítaním súhlasil a potvrdil, že v tejto časti nárok žalobcu zanikol.",
+          "key_quotes": [
+            {
+              "quote": "bolo možné započítať na tieto faktúry faktúru č. 320019 vo výške 1.311,82 Eur, v ktorej časti nárok žalobcu zanikol",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_41Cob_13_2020_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "41Cob/13/2020",
+      "decision_date": "18.11.2020",
+      "ecli": "ECLI:SK:KSBB:2020:6619200251.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

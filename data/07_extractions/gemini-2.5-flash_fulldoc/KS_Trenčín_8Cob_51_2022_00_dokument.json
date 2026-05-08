@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 14726,
+    "completion_tokens": 2969,
+    "cost_usd": 0.0481,
+    "latency_seconds": 11.06,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 9.522,88 Eur s príslušenstvom, ktorá predstavovala neuhradené nájomné a zmluvnú pokutu z titulu omeškania s platbami na základe zmluvy o nájme nebytových priestorov. Žalovaný namietal ukončenie nájomného vzťahu ústnou dohodou a rozpor zmluvnej pokuty s poctivým obchodným stykom.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie vo výroku I., ktorým bola žalovanému uložená povinnosť zaplatiť žalobcovi sumu 7.600,- Eur spolu s úrokmi z omeškania a zmluvnou pokutou. Výrok III. o náhrade trov konania bol zrušený a vec vrátená súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zo strany žalovaného došlo k porušeniu povinností, pre porušenie ktorých bola zmluvná pokuta dohodnutá (článok 6. ods. 5. zmluvy) tým, že žalovaný sa dostal do omeškania s platením nájomného.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % denne",
+          "evidence": {
+            "quote": "zmluvnou pokutou vo výške 0,05 % denne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,Eur od 31.05.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 7600.0,
+            "evidence": {
+              "quote": "Po čiastočnom späťvzatí a zastavení konania zostal predmetom sporu nárok žalobcu na zaplatenie 7.600,- Eur s úrokom z omeškania vo výške 9 % ročne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia, so zmluvnou pokutou vo výške 0,05 % denne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, zmluvnou pokutou vo výške vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,Eur od 01.07.2019 do zaplatenia, zmluvnou pokutou vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd prvej inštancie priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu vo výške 0,05 % denne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia, vo výške 0,05 % denne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia a vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "s úrokom z omeškania vo výške 9 % ročne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia, úrokom z omeškania vo výške 9 % ročne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie priznal žalobcovi v súlade s § 544 Občianskeho zákonníka ním uplatnenú zmluvnú pokutu vo výške 0,05 % denne zo sumy 400,- Eur od 01.05.2019 do zaplatenia, vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.05.2019 do zaplatenia, vo výške 0,05 % denne zo sumy 2.400,- Eur od 01.07.2019 do zaplatenia a vo výške 0,05 % denne zo sumy 2.400,- Eur od 31.07.2019 do zaplatenia.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že dohodnutá zmluvná pokuta vo výške 0,05 % denne (čo predstavuje 18,25 % ročne) nie je v rozpore s poctivým obchodným stykom. Konštatoval, že žalovaný porušil povinnosti platiť nájomné, pre ktoré bola pokuta dohodnutá. Súbežné uplatnenie úroku z omeškania a zmluvnej pokuty v obchodných vzťahoch nie je vylúčené. Odvolací súd sa s týmto záverom stotožnil a nepovažoval výšku pokuty za neprimeranú, ktorá by si vyžadovala moderáciu.",
+          "key_quotes": [
+            {
+              "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "zmluvná pokuta 0,05 % denne (teda 18,25 % ročne) podľa názoru odvolacieho súdu rozhodne nepredstavuje neprimeranú výšku, ktorú by bolo potrebné obmedziť využitím moderačného oprávnenia v zmysle § 301 Obch. zák.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "dohodnutá zmluvná pokuta vo výške 0,05 % denne, čo predstavuje 18,25 % ročne, sa mu nejavila v rozpore s poctivým obchodným stykom.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zo strany žalovaného došlo k porušeniu povinností, pre porušenie ktorých bola zmluvná pokuta dohodnutá (článok 6. ods. 5. zmluvy) tým, že žalovaný sa dostal do omeškania s platením nájomného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Uplatnenie úroku z omeškania a zároveň i primeranej zmluvnej pokuty žalobcom v súdnom konaní sa v obchodno-záväzkových vzťahoch nevylučuje.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_8Cob_51_2022_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "8Cob/51/2022",
+      "decision_date": "26.07.2022",
+      "ecli": "ECLI:SK:KSTN:2022:6119381659.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

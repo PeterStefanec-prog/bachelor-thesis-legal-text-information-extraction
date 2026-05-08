@@ -1,0 +1,309 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 27213,
+    "completion_tokens": 2237,
+    "cost_usd": 0.0904,
+    "latency_seconds": 24.61,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 20.000,- eur a úroku z omeškania vo výške 9 % ročne zo sumy 20.000,- eur od 02.07.2017 do 07.08.2017. Predmetom sporu bola zmluva o pôžičke uzatvorená medzi spoločnosťou Juh Invest, s.r.o. a žalovanými, ktorí sa dostali do omeškania s vrátením časti pôžičky.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovaným povinnosť zaplatiť žalobcovi zmluvnú pokutu 20.000,- eur.",
+      "contract_type": "pozicka",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa dlžníci dostanú do omeškania s vrátením dlhu a celý dlh spolu s úrokom nebude vrátený ani do 15.07.2017, solidárni dlžníci zaplatia veriteľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "80.000,- eur",
+          "evidence": {
+            "quote": "solidárni dlžníci zaplatia veriteľovi zmluvnú pokutu vo výške 80.000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000,
+            "evidence": {
+              "quote": "uplatnil si len jej časť zodpovedajúcu sume pôžičky, s ktorou boli žalovaní v omeškaní (20.000,- eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000,
+            "evidence": {
+              "quote": "súd prvej inštancie zaviazal žalovaných na zaplatenie zmluvnej pokuty a úroku z omeškania z vyššie uvedenej sumy",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 5 % ročne zo sumy 433,97 eur od 02.07.2017 do 07.08.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie zaviazal žalovaných na zaplatenie zmluvnej pokuty a úroku z omeškania z vyššie uvedenej sumy",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie uznal zmluvnú pokutu vo výške 20.000,- eur ako primeranú, keďže žalobca si uplatnil len časť pôvodne dohodnutej pokuty 80.000,- eur. Súd zohľadnil, že pôžička bola poskytnutá bezúročne a zmluvná pokuta bola dohodnutá ako zabezpečovací mechanizmus. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, keďže žalovaní nepredložili nové relevantné skutočnosti.",
+          "key_quotes": [
+            {
+              "quote": "súd prvej inštancie zaviazal žalovaných na zaplatenie zmluvnej pokuty a úroku z omeškania z vyššie uvedenej sumy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá výška zmluvnej pokuty je primeraná okolnostiam, za ktorých bola zmluva o pôžičke uzatvorená",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta je primárne prostriedkom na zabezpečenie záväzkov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "uplatnená výška zmluvnej pokuty predstavuje len 8 % celkovej sumy pôžičky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaní sa dostali do omeškania so zaplatením časti poskytnutej pôžičky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pôžička bola poskytnutá bezúročne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "veriteľ považoval predmetnú pôžičku za rizikovú a bolo preto namieste zabezpečiť jej zaplatenie primeraným spôsobom",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa dlžníci dostanú do omeškania s vrátením dlhu a celý dlh spolu s úrokom nebude vrátený ani do 15.07.2017, solidárni dlžníci zaplatia veriteľovi zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "80.000,- eur",
+          "evidence": {
+            "quote": "solidárni dlžníci zaplatia veriteľovi zmluvnú pokutu vo výške 80.000,- eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 80000,
+            "evidence": {
+              "quote": "solidárni dlžníci zaplatia veriteľovi zmluvnú pokutu vo výške 80.000,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "uplatnil si len jej časť zodpovedajúcu sume pôžičky, s ktorou boli žalovaní v omeškaní (20.000,- eur)",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "5 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 5 % ročne zo sumy 433,97 eur od 02.07.2017 do 07.08.2017",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "uplatnil si len jej časť zodpovedajúcu sume pôžičky, s ktorou boli žalovaní v omeškaní (20.000,- eur)",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie uznal zmluvnú pokutu vo výške 20.000,- eur ako primeranú, keďže žalobca si uplatnil len časť pôvodne dohodnutej pokuty 80.000,- eur. Súd zohľadnil, že pôžička bola poskytnutá bezúročne a zmluvná pokuta bola dohodnutá ako zabezpečovací mechanizmus. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, keďže žalovaní nepredložili nové relevantné skutočnosti.",
+          "key_quotes": [
+            {
+              "quote": "súd prvej inštancie zaviazal žalovaných na zaplatenie zmluvnej pokuty a úroku z omeškania z vyššie uvedenej sumy",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "dohodnutá výška zmluvnej pokuty je primeraná okolnostiam, za ktorých bola zmluva o pôžičke uzatvorená",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta je primárne prostriedkom na zabezpečenie záväzkov",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "uplatnená výška zmluvnej pokuty predstavuje len 8 % celkovej sumy pôžičky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaní sa dostali do omeškania so zaplatením časti poskytnutej pôžičky",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pôžička bola poskytnutá bezúročne",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "veriteľ považoval predmetnú pôžičku za rizikovú a bolo preto namieste zabezpečiť jej zaplatenie primeraným spôsobom",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_2",
+        "EVIDENCE_TRUNCATED:pokuta_1.factor.dobre_mravy",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika",
+        "EVIDENCE_TRUNCATED:pokuta_2.factor.dobre_mravy",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal",
+        "contractual_penalties[1].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Banská_Bystrica_14CoCsp_30_2021_00_dokument",
+      "court_name": "Krajský súd Banská Bystrica",
+      "case_number": "14CoCsp/30/2021",
+      "decision_date": "22.02.2022",
+      "ecli": "ECLI:SK:KSBB:2022:6120283395.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

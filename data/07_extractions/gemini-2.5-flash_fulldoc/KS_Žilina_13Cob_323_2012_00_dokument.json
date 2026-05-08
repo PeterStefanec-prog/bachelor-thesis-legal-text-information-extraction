@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18709,
+    "completion_tokens": 2208,
+    "cost_usd": 0.0455,
+    "latency_seconds": 8.6,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 12 788,80 Eur s príslušenstvom, ktorá predstavovala neuhradenú kompenzáciu za predčasné ukončenie nájmu a nájomné. Žalovaný sa bránil kompenzačnou námietkou, ktorou si uplatnil zmluvné pokuty a úroky z omeškania z dôvodu oneskorenej úhrady nájomného a služieb zo strany nájomcu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý žalobu zamietol, pretože pohľadávka žalobcu zanikla započítaním s pohľadávkou žalovaného na zmluvnú pokutu a úroky z omeškania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "ak sa dostane nájomca do omeškania so splnením svojho záväzku zaplatiť prenajímateľovi faktúry, je prenajímateľ oprávnený účtovať nájomcovi zmluvnú pokutu vo výške 0,5% z dlžnej sumy za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5% z dlžnej sumy za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,5% z dlžnej sumy za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 14691.01,
+            "evidence": {
+              "quote": "Žalovaný listom zo dňa 29.7.2011 vyzval právneho predchodcu žalobcu na zaplatenie ním vyčíslenej zmluvnej pokuty a úrokov z omeškania vo výške 14.691,01 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 13615.03,
+            "evidence": {
+              "quote": "bola okresným súdom priznaná výška zmluvnej pokuty 13.615,03 Eur",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Žalovaným vznesená kompenzačná námietka predstavovala ním vyčíslené zmluvné pokuty a úroky z omeškania v zákonnej výške z dôvodu oneskorenej úhrady nájomného a služieb spojených s nájmom nebytových priestorov zo strany nájomcu.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "bola okresným súdom priznaná výška zmluvnej pokuty 13.615,03 Eur a výška vyčíslených úrokov z omeškania predstavuje 679,72 Eur. Z titulu vznesenej kompenzačnej námietky zo strany žalovaného okresný súd žalobu zamietol ako nedôvodnú, keďže k zániku záväzku došlo započítaním",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Okresný súd dospel k záveru, že dojednanie o zmluvnej pokute je platné a určité, keďže vôľa zmluvných strán bola jasne vyjadrená. Žalobca nenamietal výšku zmluvnej pokuty v prvostupňovom konaní, a preto súd nevyužil moderačné právo. Krajský súd potvrdil rozhodnutie okresného súdu, pričom odvolacie dôvody žalobcu týkajúce sa nesprávneho výpočtu a neprimeranosti zmluvnej pokuty považoval za nové tvrdenia, na ktoré nemohol prihliadať z dôvodu koncentračnej zásady.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd skonštatoval, že žalobca výšku zmluvnej pokuty nenamietal, kedy by súd mohol na návrh neprimerane vysokú zmluvnú pokutu, podľa ust. § 301 Obchodného zákonníka, znížiť s prihliadnutím na hodnotu a význam zabezpečovacej povinnosti (tzv. moderačné právo súdu).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Z ust. § 301 Obchodného zákonníka nevyplýva povinnosť súdu takúto neprimerane vysokú zmluvnú pokutu znižovať, ide výlučne o jeho dispozičné oprávnenie, ktoré sa realizuje v zmysle podaného návrhu účastníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Krajský súd v zhode s názorom okresného súdu konštatuje, že v Zmluvách o nájme zo dňa 01.02.2010 a zo dňa 23.12.2010 bola určitým, zrozumiteľným, jasným spôsobom dohodnutá v čl. IX bodu 1. zmluvná pokuta",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "K neprimeranosti zmluvnej pokuty vo výške 0,5% denne žalobca uviedol, že považuje rozsudok súdu prvého stupňa za nesprávny, pretože zmluvná pokuta je v rozpore s dobrými mravmi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nepochybne zmluvná pokuta je hmotno-právny zabezpečovací inštitút a svojim dojednaním musí dosahovať takú intenzitu, aby účastník zmluvného vzťahu, ktorého táto zmluvná pokuta postihuje, bol (do)nútený splniť si svoju zmluvnú povinnosť zabezpečenú zmluvnou pokutou.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalobca opomenul spomenúť, že do omeškania sa dostal pri takmer každom plnení nájmu za jednotlivé kvartály, teda nedošlo k porušeniu povinnosti zo strany žalobcu iba jediný krát, resp. príležitostne, ale prakticky išlo o permanentný stav.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_323_2012_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/323/2012",
+      "decision_date": "13.03.2013",
+      "ecli": "ECLI:SK:KSZA:2013:5611211404.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

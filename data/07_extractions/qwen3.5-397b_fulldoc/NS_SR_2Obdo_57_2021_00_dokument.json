@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 24988,
+    "completion_tokens": 3424,
+    "cost_usd": 0.0178,
+    "latency_seconds": 29.04,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca (franchisista) sa domáhal vydania bezdôvodného obohatenia vo výške 30.000 EUR za vstupný poplatok a 20.000 EUR za kauciu, náhrady škody a ušlého zisku po odstúpení žalovaného (franchisor) od franchisingovej zmluvy. Žalovaný uplatnil zmluvnú pokutu vo výške 20.000 EUR za porušenie zmluvných povinností žalobcom a započítal ju proti pohľadávkám žalobcu.",
+      "verdict_summary": "Najvyšší súd odmietal dovolanie žalobcu proti rozhodnutiu odvolacieho súdu, ktorý zmenil rozhodnutie súdu prvej inštancie a žalobu v časti zaplatenia sumy 2.222,73 EUR zamietal, pretože súdy uznali oprávnenosť uplatnenia zmluvnej pokuty vo výške 20.000 EUR a jej započítanie.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych predpisov, ktoré sa vzťahujú na vykonávanie činnosti finančného sprostredkovania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "20.000,- Eur",
+          "evidence": {
+            "quote": "má banka právo uplatniť si voči viazanému finančnému agentovi nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,- Eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "Žalovaný v odstúpení špecifikoval jednotlivé porušenia zmluvných vzťahov, ako aj zákonných predpisov. Okresný súd poukázal na čl. VIII 8.2 Zmluvy o viazanom finančnom agentovi, kde si banka vyhradila právo odstúpiť od zmluvy s okamžitou účinnosťou odo dňa doručenia oznámenia o odstúpení v prípade, že dôjde zo strany viazaného finančného agenta k porušeniu podstatnej zmluvnej povinnosti alebo k naplneniu dohodnutých podmienok. Súd špecifikoval všetky dohodnuté podmienky v zmluve, na základe splnenia ktorých je banka oprávnená od zmluvy odstúpiť a dospel k záveru, že odstúpením od Zmluvy o výkone činnosti finančného sprostredkovania viazaným finančným agentom táto zmluva zanikla a zanikla aj Franchisingova zmluva, a to na základe čl. XIII 13 bod.13 Franchisingovej zmluvy. 3.1. Súd ďalej vykonaným dokazovaním zistil, že podľa čl. IX. 9.2 je franchisista povinný uhradiť jednorázový vstupný poplatok za poskytnutie franchisingovej licencie, ako je špecifikovaný v bode 9.4 v sume 30.000,- Eur vrátane DPH za jedno obchodné miesto - pobočku za obdobie uvedené v Prílohe č. 2 - špecifikácia obchodného miesta - pobočky, a to najneskôr do 28.2.2014. Zároveň z článku IX. 9.5 súd zistil, že zmluvné strany sa týmto dohodli, že franchisista je povinný najneskôr v lehote podľa bodu 9.2.1. tejto zmluvy zložiť kauciu vo výške 20.000,- Eur za obchodné miesto - pobočku na bankový účet určený na uloženie kaucie vedený u franchisora, pričom táto kaucia slúži najmä na pokrytie a úhradu budúcich prípadných škôd vzniknutých na franchisorom franchisistovi zverených veciach, vybavení a zariadení obchodného miesta - pobočky, ako aj na HW a SW, alebo iných strát, resp. škôd spojených s prevádzkou obchodného miesta - pobočky a rovnako môže slúžiť ako odstupné pre franchisora v prípade ukončenia tejto zmluvy v prípadoch uvedených v tejto zmluve. Z tohto článku okrem iného ešte vyplýva, že franchisistovi vznikne nárok na vrátenie tejto kaucie v rovnakej nominálnej výške ako ju zložil u franchistora po uplynutí päť ročnej doby tak, ako je uvedené v prílohe č. 2 - Špecifikácia obchodného miesta - pobočky pre dané obchodné miesto - pobočku, ako aj v prípade výpovede trvania Zmluvy zo strany franchisora bez uvedenia dôvodu podľa bodu 13.2. Z článku VII. bod 7.2. okresný súd zistil, že bolo dohodnuté, že v prípade, ak porušením akejkoľvek povinnosti viazaným finančným agentom dôjde k porušeniu jeho povinností podľa zákona, osobitných predpisov alebo iných všeobecne záväzných právnych predpisov, ktoré sa vzťahujú na vykonávanie činnosti finančného sprostredkovania, má banka právo uplatniť si voči viazanému finančnému agentovi nárok na zmluvnú pokutu v zmysle § 300 a nasl. Obchodného zákonníka vo výške 20.000,- Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 20000.0,
+            "evidence": {
+              "quote": "Odvolací súd ďalej uviedol, že o žalovaným vyúčtovanej zmluvnej pokute vo výške 20.000,Eur, ktorú si žalovaný uplatnil v zmysle medzi stranami sporu platne uzatvorenej zmluvy, nič nebránilo, aby žalovaný si zmluvne dohodnutú splatnú zmluvnú pokutu započítal voči splatným pohľadávkam žalobcu. Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách. Odvolací súd tiež konštatuje, že oprávnenosť žalovaným vyúčtovanej zmluvnej pokuty vo výške 20.000,- Eur je preukázaná dohodou zmluvných strán, pričom tvrdenia žalobcu o neprimeranosti tejto zmluvnej pokuty považoval odvolací súd za nedôvodné a dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu ohľadne žalovaným vyúčtovanej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie považoval zmluvnú pokutu za neadekvátnu a neschopnú na započítanie, pretože nebola priznaná súdom. Odvolací súd však tento názor zmenil s poukazom na § 358 Obchodného zákonníka, konštatoval, že pohľadávka zo zmluvnej pokuty bola splatná a uplatnená na základe zmluvnej dohody. Odvolací súd vyhodnotil, že pokuta vo výške 20.000 EUR nie je neprimeraná vzhľadom na závažnosť protiprávného konania žalobca (zamestnancov), ktoré vystavovalo banku riziku sankcií, a preto nie je dôvod na využitie moderačného oprávnenia súdu.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd mal za to, že žalovaným vyúčtovaná zmluvná pokuta vo výške 20.000,- Eur nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností ustanovených zákonom o bankách.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "oprávnenosť žalovaným vyúčtovanej zmluvnej pokuty vo výške 20.000,- Eur je preukázaná dohodou zmluvných strán, pričom tvrdenia žalobcu o neprimeranosti tejto zmluvnej pokuty považoval odvolací súd za nedôvodné a dospel k záveru, že nie je dôvod na využitie moderačného oprávnenia súdu",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vzhľadom na závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií za porušovanie zákonných povinností",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nie je neprimeraná vzhľadom na závažnosť konania pracovníkov žalobcu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "závažnosť konania pracovníkov žalobcu, ktorí svojim protiprávnym konaním preukázaným v rámci trestného konania vystavovali žalovaného riziku sankcií",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal.evidence.quote",
+        "associated_interest.evidence.quote",
+        "moderation_analysis.factors.dobre_mravy.evidence.quote",
+        "moderation_analysis.factors.zabezpecovacia_funkcia.evidence.quote",
+        "moderation_analysis.factors.kumulacia_s_urokom.evidence.quote",
+        "moderation_analysis.factors.spravanie_veritela.evidence.quote"
+      ]
+    },
+    "meta": {
+      "doc_id": "NS_SR_2Obdo_57_2021_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "2Obdo/57/2021",
+      "decision_date": "31.05.2022",
+      "ecli": "ECLI:SK:NSSR:2022:6619200251.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

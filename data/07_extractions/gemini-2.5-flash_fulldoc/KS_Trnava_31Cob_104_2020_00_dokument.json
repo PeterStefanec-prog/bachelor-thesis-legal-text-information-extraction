@@ -1,0 +1,184 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 29102,
+    "completion_tokens": 2861,
+    "cost_usd": 0.065,
+    "latency_seconds": 11.16,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 69.325,59 eura od žalovaného za omeškanie s odovzdaním diela (stavebné práce na stavbe Rotunda - prestavba a prístavba). Žalovaný namietal neplatnosť dohody o zmluvnej pokute, neurčitosť termínu odovzdania diela a základu pre výpočet pokuty, ako aj neposkytnutie súčinnosti žalobcom.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý uložil žalovanému povinnosť zaplatiť žalobcovi sumu 57.812,09 eura a priznal žalobcovi nárok na náhradu trov odvolacieho konania v plnom rozsahu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Zhotoviteľ sa dostal do omeškania s odovzdaním diela v rozsahu 131 dní, z jeho strany došlo k porušeniu zmluvy, preto podľa čl. VIII ods. 1 zmluvy má objednávateľ nárok na zmluvnú pokutu vo výške 0,05% z ceny diela za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05% z ceny diela za každý deň omeškania",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 0,05% z ceny diela za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 889416.8,
+            "evidence": {
+              "quote": "ku kalkulácii výšky zmluvnej pokuty z ceny diela bez DPH (19%), čím dospel k sume 57.812,09 eura (cena diela 889.416,80 eura, zmluvná pokuta za 1 deň omeškania 444,70 eura x 130 omeškaných dní = 57.812,09 eura).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 69325.59,
+            "evidence": {
+              "quote": "zmluvná pokuta za 131 dní činí 69.325,59 eura.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 57812.09,
+            "evidence": {
+              "quote": "Súd mal takto vyčíslenú zmluvnú pokutu za matematicky správne ustálenú. Na základe vykonaného dokazovania a zisteného stavu veci tak súd prvej inštancie vyvodil ten právny záver, že žaloba bola podaná čiastočne dôvodne, keďže žalobca preukázal jednak platné uzatvorenie zmluvy o dielo vrátane jej časti VIII o zmluvnej pokute, jednak dátum skutočného odovzdania predmetu diela 9.11.2009 a teda aj počet 130 omeškaných dní s odovzdaním diela (od 1.7.2009 do 9.11.2009).",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "unclear",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": null
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd mal takto vyčíslenú zmluvnú pokutu za matematicky správne ustálenú. Na základe vykonaného dokazovania a zisteného stavu veci tak súd prvej inštancie vyvodil ten právny záver, že žaloba bola podaná čiastočne dôvodne, keďže žalobca preukázal jednak platné uzatvorenie zmluvy o dielo vrátane jej časti VIII o zmluvnej pokute, jednak dátum skutočného odovzdania predmetu diela 9.11.2009 a teda aj počet 130 omeškaných dní s odovzdaním diela (od 1.7.2009 do 9.11.2009).",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie vyhovel žalobe po čiastočnom späťvzatí, keďže žalobca preukázal platné uzatvorenie zmluvy o dielo vrátane zmluvnej pokuty a dátum skutočného odovzdania diela 9.11.2009, čo viedlo k 130 omeškaným dňom. Odvolací súd potvrdil, že dojednanie o zmluvnej pokute je platné a výška sa stanovuje z ceny diela bez DPH. Súd zamietol námietky žalovaného o neurčitosti termínu odovzdania diela a neposkytnutí súčinnosti. Návrh na moderáciu zmluvnej pokuty nebol podaný, preto súd nemohol konať ex offo.",
+          "key_quotes": [
+            {
+              "quote": "Súd mal takto vyčíslenú zmluvnú pokutu za matematicky správne ustálenú. Na základe vykonaného dokazovania a zisteného stavu veci tak súd prvej inštancie vyvodil ten právny záver, že žaloba bola podaná čiastočne dôvodne, keďže žalobca preukázal jednak platné uzatvorenie zmluvy o dielo vrátane jej časti VIII o zmluvnej pokute, jednak dátum skutočného odovzdania predmetu diela 9.11.2009 a teda aj počet 130 omeškaných dní s odovzdaním diela (od 1.7.2009 do 9.11.2009).",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný návrh na zníženie zmluvnej pokuty v zmysle ust. § 301 OBZ nedal. V zmysle tohto ustanovenia pritom súd môže na návrh rozhodnúť, že zmluvnú pokutu neprizná v celej výške, t. j. vo výške, v akej bola medzi stranami dohodnutá, aj keď veriteľovi na jej zaplatenie vznikol nárok.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta v tomto prípade mala nielen reparačnú, ale najmä sankčnú funkciu, t. j. mala predstavovať hrozbu sankcie pre zhotoviteľa, pokiaľ dielo nevykoná včas, nakoľko objednávateľ má logicky záujem na včasnom plnení.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Sama neprimeraná výška zmluvnej pokuty nekvalifikuje jej dojednanie za také, ktoré je v rozpore s dobrými mravmi v zmysle § 39 OZ, a to preto, že zákon umožňuje moderovať výšku zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Zmluvná pokuta v tomto prípade mala nielen reparačnú, ale najmä sankčnú funkciu, t. j. mala predstavovať hrozbu sankcie pre zhotoviteľa, pokiaľ dielo nevykoná včas, nakoľko objednávateľ má logicky záujem na včasnom plnení.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Vznik škody však v prípade uplatnenia moderačného práva súdom nie je podmienkou uplatnenia moderačného práva, ale je okolnosťou limitujúcou spodnú hranicu zníženia zmluvnej pokuty. Nárok na zmluvnú pokutu však je aj v prípade, ak v dôsledku porušenia povinnosti zabezpečenej zmluvnou pokutou škoda nevznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Žalovaný však nešpecifikoval, ktoré práce, ktoré boli predmetom zmeny stavebného povolenia nemohol vykonávať. Svedok G. O. na pojednávaní dňa 1.6.2015 uviedol, že do vydania nového stavebného povolenia nerobil tie práce, ktoré podliehali zmene. Neuviedol však konkrétne, o aké práce išlo, aby bolo možné preveriť, kedy tieto práce skutočne boli vykonané, či už pred vydaním rozhodnutia o zmene stavby, alebo skutočne až po jeho vydaní. Obrana žalovaného v tomto smere sa preto javí byť účelová, v snahe dôvodiť nemožnosťou svojho plnenia, pre existenciu prekážok na strane objednávateľa.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Naopak žalobca dôvodil, že oneskorené odovzdanie diela, viedlo k tomu, že žalobca počas letnej sezóny nemohol prevádzkovať časť kúpaliska, prečo nedosiahol očakávané zisky.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.rate_definition",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.key_quote_1"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_31Cob_104_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "31Cob/104/2020",
+      "decision_date": "24.02.2022",
+      "ecli": "ECLI:SK:KSTT:2022:2212208449.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

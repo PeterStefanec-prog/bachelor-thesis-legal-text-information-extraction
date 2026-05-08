@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 10230,
+    "completion_tokens": 1922,
+    "cost_usd": 0.0085,
+    "latency_seconds": 18.06,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia úveru spolu so zmluvnými úrokmi, zmluvnou pokutou a úrokom z omeškania. Žalovaní odvolanie podali s tvrdením, že zmluvná pokuta je neprimerane vysoká a v rozporu s dobrými mravmi, a že úrok z omeškania nemôže byť priznaný zo zmluvných úrokov.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok v časti týkajúcej sa zmluvnej pokuty, zmenil rozhodnutie v časti týkajúcej sa hlavného nároku a úrokov z omeškania, keďže priznal úrok z omeškania only zo sumy istiny a nie zo zmluvných úrokov.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "si sporové strany pre prípad omeškania dlžníka s úhradou splátky dohodli zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,1 % denne z dlžnej sumy za každý deň omeškania",
+          "evidence": {
+            "quote": "V zmysle článku 10.1. zmluvy o úvere si sporové strany pre prípad omeškania dlžníka s úhradou splátky dohodli zmluvnú pokutu vo výške 0,1 % denne z dlžnej sumy za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 1400,
+            "evidence": {
+              "quote": "žalobca poskytol žalovaným úver vo výške 1.400,- eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2087.55,
+            "evidence": {
+              "quote": "súd neposúdil dohodnutú výšku zmluvnej pokuty ako neprimerane vysokú, a preto uložil žalovaným povinnosť spoločne a nerozdielne zaplatiť žalobcovi zmluvnú pokutu vo výške 2.087,55 eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2087.55,
+            "evidence": {
+              "quote": "Potvrdzuje rozsudok v časti o povinnosti žalovaných zaplatiť žalobcovi zmluvnú pokutu vo výške 2.087,55 eur.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8 % ročne",
+          "evidence": {
+            "quote": "spolu so zmluvnou pokutou a úrokom z omeškania vo výške 8 % ročne zo sumy 1.400,- eur od 30. júla 2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd v zhode so súdom prvej inštancie posúdil výšku zmluvnej pokuty dohodnutej na 0,1 % denne z dlžnej sumy za každý deň omeškania ako primeranú.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd posúdil zmluvnú pokutu ako primeranú, pretože jej výška závisí od doby omeškania a výšky dlžnej sumy, nie je výsledkom neprimeranej dennej sadzby. Žalovaní namietali neplatnosť dohody pre rozpor s dobrými mravmi, súd však tieto námietky považoval za nepodložené zákonnými ustanoveniami. Súd nevyužil moderačné oprávnenie podľa § 301 Obchodného zákonníka, pretože žalovaní výlučne namietali neplatnosť dohody a neprednesený návrh na zníženie.",
+          "key_quotes": [
+            {
+              "quote": "výška žalobcom uplatnenej zmluvnej pokuty je výsledkom dlhodobého omeškania s plnením záväzku a nie výsledkom neprimeranej \"dennej sadzby\"",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Namietali výlučne neplatnosť dohody o zmluvnej pokute z dôvodu jej rozporu s dobrými mravmi.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalobcom uplatnená zmluvná pokuta je neprimerane vysoká s prihliadnutím na hodnotu zabezpečenej pohľadávky žalobcu (1.400,- eur), v dôsledku čoho je dohoda o zmluvnej pokute neplatná pre jej rozpor s dobrými mravmi",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta je zabezpečovacím inštitútom, ktorý je možné dohodnúť pre prípad nesplnenia povinností",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "výška žalobcom uplatnenej zmluvnej pokuty je výsledkom dlhodobého omeškania s plnením záväzku",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Prešov_4Cob_84_2020_00_dokument",
+      "court_name": "Krajský súd Prešov",
+      "case_number": "4Cob/84/2020",
+      "decision_date": "11.02.2021",
+      "ecli": "ECLI:SK:KSPO:2021:8118209036.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

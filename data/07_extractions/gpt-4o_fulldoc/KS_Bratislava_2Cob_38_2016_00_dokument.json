@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12652,
+    "completion_tokens": 1255,
+    "cost_usd": 0.0442,
+    "latency_seconds": 64.2,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca PR QUERKUS s.r.o. sa domáhal zaplatenia 119.588,60 Eur spolu s úrokom z omeškania od žalovaného Ministerstva vnútra SR za omeškané platby faktúr za vykonané dielo. Žalobca tvrdil, že žalovaný uhradil faktúry s niekoľkomesačným omeškaním, čím vznikol nárok na zmluvnú pokutu vo výške 0,05 % z ceny faktúry za každý deň omeškania.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava I, ktorým bola žaloba žalobcu vyhovená a žalovanému bola uložená povinnosť zaplatiť zmluvnú pokutu.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Odporca predmetné faktúry uhradil s niekoľkomesačným omeškaním.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % z ceny faktúry za každý deň omeškania",
+          "evidence": {
+            "quote": "v článku VIII, bod 8.3. zmluvy o dielo zmluvnú pokutu vo výške 0,05 % z ceny faktúry za každý deň omeškania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 119588.6,
+            "evidence": {
+              "quote": "návrhom doručeným súdu dňa 24.6.2014 sa žalobca domáhal od žalovaného zaplatenia 119.588,60 Eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 119588.6,
+            "evidence": {
+              "quote": "nárok žalobcu na zmluvnú pokutu a úroky z omeškania je v priznanej výške opodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8,15 % ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8,15 % ročne od 10.11.2014 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd na návrh žalovaného nevyužil moderačné právo v zmysle § 301 Obch. zák. a zmluvnú pokutu neznížil, pretože bol názoru, že nie je neprimerane vysoká.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že nárok žalobcu na zmluvnú pokutu je opodstatnený, keďže žalovaný uhradil faktúry s omeškaním. Zmluvná pokuta bola dohodnutá vo výške 0,05 % denne z ceny faktúry za každý deň omeškania. Súd nevyužil moderačné právo, pretože pokuta nebola považovaná za neprimerane vysokú. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie na základe vykonaného dokazovania dospel k správnemu záveru, že nárok žalobcu na zmluvnú pokutu a úroky z omeškania je v priznanej výške opodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "písomne dojednaná zmluvná pokuta neodporuje dobrým mravom, keďže bola dohodnutá v štandardnej výške.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "nesplnenie tej istej povinnosti. Zmluvná pokuta v sadzbe 0,05 % denne z omeškanej sumy je aj podľa odvolacieho súdu sankciou",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný povinnosť úhrady v lehote 60 kalendárnych dní odo dňa doručenia faktúr objednávateľovi nesplnil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žiaden právny predpis súbežné uplatnenie nároku na zmluvnú pokutu a úroky z omeškania za porušenie zmluvného záväzku omeškaním splnenia peňažného záväzku nevylučuje.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.zabezpecovacia_funkcia"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_38_2016_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/38/2016",
+      "decision_date": "23.05.2017",
+      "ecli": "ECLI:SK:KSBA:2017:1114218599.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

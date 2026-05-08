@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16082,
+    "completion_tokens": 2089,
+    "cost_usd": 0.041,
+    "latency_seconds": 8.99,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa, telekomunikačná spoločnosť, sa domáhala zaplatenia sumy 569,89 eura s príslušenstvom od žalovaného, ktorá pozostávala z neuhradenej sumy za poskytnuté telekomunikačné služby a zmluvnej pokuty za nedodržanie viazanosti. Žalovaný namietal nedostatočné pokrytie signálom a neprimeranosť zmluvnej pokuty.",
+      "verdict_summary": "Najvyšší súd Slovenskej republiky odmietol dovolanie žalovaného proti rozsudku Krajského súdu v Košiciach, ktorý potvrdil rozsudok súdu prvej inštancie zaväzujúci žalovaného zaplatiť žalobkyni 569,89 eura s príslušenstvom.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "ukončením zmlúv vznikol žalovanému aj záväzok na zaplatenie zmluvnej pokuty vo výške 461,66 eura za nedodržanie zmluvne dohodnutej podmienky byť viazaný touto zmluvou po dobu 24 mesiacov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "461,66 eura",
+          "evidence": {
+            "quote": "záväzok na zaplatenie zmluvnej pokuty vo výške 461,66 eura za nedodržanie zmluvne dohodnutej podmienky byť viazaný touto zmluvou po dobu 24 mesiacov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 461.66,
+            "evidence": {
+              "quote": "zmluvnou pokutou vo výške 461,66 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 461.66,
+            "evidence": {
+              "quote": "z dohodnutej zmluvnej pokuty 461,66 eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "18% ročne",
+          "evidence": {
+            "quote": "zaplatiť žalobkyni 529,89 eura s 18% úrokom z omeškania ročne zo sumy 529,89 eura od 9. marca 2016 do zaplatenia.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie rozhodol správne, ak zaviazal žalovaného na zaplatenie 569,89 eura, ktorá suma pozostáva z odplaty za poskytované telekomunikačné služby 68,23 eura a z dohodnutej zmluvnej pokuty 461,66 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta vo výške 461,66 eura nebola štandardnou pokutou za porušenie zmluvných povinností, ale predstavovala kompenzáciu za zvýhodnenú kúpnu cenu mobilných zariadení, ktoré žalovaný získal. Súd nepovažoval pokutu za neprimeranú, pretože slúžila na vyrovnanie rozdielu medzi zvýhodnenou a maloobchodnou cenou zariadení. Žalovaný nepreukázal vrátenie zariadení ani nedostatočné pokrytie signálom ako dôvod na odstúpenie od zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta vo výške 461,66 eura nie je zmluvnou pokutou, ktorá je v obchodných vzťahoch štandardne dojednávaná za porušenie jednotlivých zmluvných povinností, ale je to peňažné plnenie, o ktoré mal žalovaný zvýhodnenú kúpnu cenu za jednotlivé mobilné zariadenia oproti štandardným (maloobchodným) cenám za túto spotrebnú elektroniku.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "dohodnutá zmluvná pokuta v danom prípade nemôže vykazovať známky neprimeranosti, nakoľko zmluvná pokuta bola dohodnutá iba na kompenzáciu zvýhodnenej kúpnej ceny oproti maloobchodnej kúpnej cene za mobilné zariadenia.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dohodnutá iba na kompenzáciu zvýhodnenej kúpnej ceny oproti maloobchodnej kúpnej cene za mobilné zariadenia.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dohodnutá iba na kompenzáciu zvýhodnenej kúpnej ceny oproti maloobchodnej kúpnej cene za mobilné zariadenia.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "V konaní bolo preukázané, že žalovaný neodovzdal mobilné zariadenia žalobcovi, ale tieto má stále doma. Žalovaným tvrdené pokusy o vrátenie zariadení žalobkyni, neboli súdu žiadnym spôsobom ani dôkazom preukázané.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobkyňa z dôvodu geografických limitácií na území Slovenskej reubliky negarantuje absolútne pokrytie signálom, a preto v určitých miestach a lokalitách tento signál garantovať nevie. Žalovaný bol podpisom všetkých zmlúv a dodatkov s touto skutočnosťou uzrozumený, ako aj s jeho nemožnosťou odstúpenia z tohto dôvodu od týchto zmlúv.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "NS_SR_2Obdo_25_2023_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "2Obdo/25/2023",
+      "decision_date": "14.12.2023",
+      "ecli": "ECLI:SK:NSSR:2023:7917211444.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

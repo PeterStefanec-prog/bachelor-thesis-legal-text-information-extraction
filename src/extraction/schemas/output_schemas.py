@@ -64,7 +64,7 @@ def _evidence_obj():
 def _factor_obj():
     """One factor in the moderation analysis.
     There are always exactly 7 factors with sentiment and evidence.
-    I added spravanie_veritela (creditor passivity) after reading NS SR decisions — courts sometimes consider whether the creditor
+    I added spravanie_veritela (creditor passivity) after reading NS SR decisions - courts sometimes consider whether the creditor
     just sat and waited for the penalty to grow instead of enforcing performance."""
     return {
         "type": "object",
@@ -291,7 +291,7 @@ def _penalty_fulldoc_obj():
 def get_call1_schema():
     """Schema for Call 1 response - facts about contract and penalty.
     Does NOT include moderation_analysis (thats Call 2).
-    FIX: removed meta from here — meta fields (court, date, case_id, ecli) are
+    FIX: removed meta from here - meta fields (court, date, case_id, ecli) are
     already extracted by regex in data_cleaner.py and are more reliable there.
     No point asking the LLM to re-extract them and risk getting the date wrong."""
     return {
@@ -341,7 +341,7 @@ def get_call2_schema():
 
 def get_fulldoc_schema():
     """Schema for full-doc mode - everything in one shot.
-    FIX: removed meta — same as call1, regex handles it better."""
+    FIX: removed meta - same as call1, regex handles it better."""
     return {
         "name": "extraction_fulldoc",
         "strict": True,

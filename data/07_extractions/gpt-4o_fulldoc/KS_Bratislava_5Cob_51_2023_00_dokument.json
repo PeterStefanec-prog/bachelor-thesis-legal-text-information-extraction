@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18311,
+    "completion_tokens": 1156,
+    "cost_usd": 0.0573,
+    "latency_seconds": 46.15,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca OVB Allfinanz Slovensko, a.s. sa domáhal zaplatenia sumy 9.216,14 eur s príslušenstvom od žalovaného A. R. na základe porušenia Zmluvy o spolupráci. Nároky vznikli z neuhradených faktúr, storno provízií a zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok Okresného súdu Galanta a vrátil vec na ďalšie konanie a nové rozhodnutie.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Podľa čl. IV bodu 4.8 zmluvy vzniklo žalobcovi právo na uplatnenie zmluvnej pokuty vo výške 5200 eur, nakoľko žalovaný zastával pozíciu GST od 01.03.2015.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "5200 eur",
+          "evidence": {
+            "quote": "Podľa čl. IV bodu 4.8 zmluvy vzniklo žalobcovi právo na uplatnenie zmluvnej pokuty vo výške 5200 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 5200,
+            "evidence": {
+              "quote": "na províziu vo výške 2647,59 eur a nárok na zmluvnú pokutu",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok Okresného súdu Galanta č.k. 26C/12/2021 - 285 zo dňa 15.11.2022 zrušuje a vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,00% ročne",
+          "evidence": {
+            "quote": "uplatneného úroku z omeškania z dlžnej istiny 9216,14 eur, a to vzhľadom na percentuálne vyčíslenie úroku v intenciách ust. § 369 ods. 1 Obchodného zákonníka v spojitosti s ust. § 1 ods. 2 Nariadenie Vlády SR č. 21/2013 (9,00% ročne)",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "returned",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok Okresného súdu Galanta č.k. 26C/12/2021 - 285 zo dňa 15.11.2022 zrušuje a vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že rozhodnutie súdu prvej inštancie je nepreskúmateľné, najmä pre nedostatok odôvodnenia a špecifikácie nárokov. Súd prvej inštancie musí v ďalšom konaní riadne špecifikovať nárok žalobcu vrátane konkrétneho výpočtu všetkých jeho položiek a identifikovať zmluvnú povinnosť, z porušenia ktorej si žalobca uplatnil nárok na zmluvnú pokutu.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd rozsudok Okresného súdu Galanta č.k. 26C/12/2021 - 285 zo dňa 15.11.2022 zrušuje a vec vracia súdu prvej inštancie na ďalšie konanie a nové rozhodnutie.",
+              "chunk_id": "verdict"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_5Cob_51_2023_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "5Cob/51/2023",
+      "decision_date": "30.07.2024",
+      "ecli": "ECLI:SK:KSBA:2024:6120446496.2",
+      "document_type": "Uznesenie"
+    }
+  }
+}

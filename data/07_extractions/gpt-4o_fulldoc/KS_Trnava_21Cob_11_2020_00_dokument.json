@@ -1,0 +1,178 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 18213,
+    "completion_tokens": 1100,
+    "cost_usd": 0.0565,
+    "latency_seconds": 33.79,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa ESPA LINE, spol. s r. o. žiadala zaplatenie 164.083,36 eur s príslušenstvom na základe zmluvných pokút za neobsadené izby v hoteli Máj Piešťany podľa zmluvy o spolupráci z 15.3.1997. Žalovaná SLOVENSKÉ LIEČEBNÉ KÚPELE PIEŠŤANY, a.s. namietala platnosť zmlúv a výšku zmluvnej pokuty.",
+      "verdict_summary": "Odvolací súd zmenil rozsudok súdu prvej inštancie a žalobu zamietol, pričom žalovaná má nárok na náhradu trov konania.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Žalovaná bola povinná pri nedodržaní 80 %-nej obsadenosti uhradiť zmluvnú pokutu 75 Sk za každú neobsadenú izbu denne.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_denne",
+          "value_raw": "75 Sk za každú neobsadenú izbu denne",
+          "evidence": {
+            "quote": "Žalovaná bola povinná pri nedodržaní 80 %-nej obsadenosti uhradiť zmluvnú pokutu 75 Sk za každú neobsadenú izbu denne.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "SKK",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 164904.9,
+            "evidence": {
+              "quote": "Zmluvná pokuta za obdobie od 6.4.1997 do 31.12.2002 predstavovala spolu sumu 164.904,90 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "Odvolací súd rozsudok súdu prvej inštancie v napadnutej vyhovujúcej časti mení tak, že žalobu zamieta.",
+              "chunk_id": "verdict"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Odvolací súd rozsudok súdu prvej inštancie v napadnutej vyhovujúcej časti mení tak, že žalobu zamieta.",
+            "chunk_id": "verdict"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "contract_invalidity",
+            "evidence": {
+              "quote": "ani považovať za opakovanie dokazovania) dospel k záveru, že odvolanie žalovanej je dôvodné.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd zistil, že v inom konaní už bolo právoplatne rozhodnuté o neplatnosti zmlúv, na základe ktorých bol uplatnený nárok na zmluvnú pokutu. Preto nemohol byť nárok žalobkyne uznaný. Súd prvej inštancie nevzal do úvahy skutočnosť právoplatného vyriešenia hmotnoprávneho vzťahu medzi stranami sporu v inom konaní.",
+          "key_quotes": [
+            {
+              "quote": "ani považovať za opakovanie dokazovania) dospel k záveru, že odvolanie žalovanej je dôvodné.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Znamená to skôr to, že dochádzalo k bezdôvodnému obohateniu sa žalobkyňou na úkor žalovanej a tým je zmluva v hrubom rozpore s dobrými mravmi a so zásadami poctivého obchodného styku, čo tiež spôsobuje jej absolútnu neplatnosť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.decision",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Trnava_21Cob_11_2020_00_dokument",
+      "court_name": "Krajský súd Trnava",
+      "case_number": "21Cob/11/2020",
+      "decision_date": "30.06.2020",
+      "ecli": "ECLI:SK:KSTT:2020:2508899996.7",
+      "document_type": "Rozsudok"
+    }
+  }
+}

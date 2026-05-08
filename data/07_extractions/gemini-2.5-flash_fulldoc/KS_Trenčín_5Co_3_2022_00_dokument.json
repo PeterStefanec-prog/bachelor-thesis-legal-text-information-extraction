@@ -1,0 +1,183 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 8534,
+    "completion_tokens": 2085,
+    "cost_usd": 0.0315,
+    "latency_seconds": 8.9,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 10 000 eur od žalovanej, modelky, za porušenie zmluvy o výhradnej spolupráci, konkrétne za vykonávanie modelingovej činnosti prostredníctvom inej agentúry bez súhlasu žalobcu.",
+      "verdict_summary": "Odvolací súd zrušil rozsudok súdu prvej inštancie vo výroku o náhrade trov konania a vrátil vec na ďalšie konanie a nové rozhodnutie, pričom výroky o zaplatení zmluvnej pokuty a zamietnutí zvyšnej časti žaloby zostali právoplatné.",
+      "contract_type": "sprostredkovatelska",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "Počas zmluvy došlo zo strany modelky k porušeniu povinností uvedených v čl. IV. bod 2 písm. a), m) zmluvy tým, že modelka bez súhlasu materskej agentúry vykonávala rovnakú činnosť, ako v materskej agentúre, avšak túto činnosť realizovala prostredníctvom inej agentúry.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvnú pokutu vo výške 10.000 eur",
+          "evidence": {
+            "quote": "Pre prípad porušenia uvedených ustanovení sa podľa čl. IV. bod 3 zmluvy modelka zaviazala zaplatiť materskej agentúre zmluvnú pokutu vo výške 10.000 eur.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 10000,
+            "evidence": {
+              "quote": "Žalobca sa podanou žalobou domáhal voči žalovanej zaplatenia 10.000 eur s príslušenstvom.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 1000,
+            "evidence": {
+              "quote": "Na základe uvedených skutočností súd uplatnil moderačné právo a znížil zmluvnú pokutu na sumu 1.000 eur a vo zvyšnej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9 % ročne",
+          "evidence": {
+            "quote": "súd prvej inštancie žalovanej uložil povinnosť zaplatiť žalobcovi sumu 1.000 eur spolu s úrokom z omeškania vo výške 9 % ročne zo sumy 1.000 eur od 16.05.2019 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Na základe uvedených skutočností súd uplatnil moderačné právo a znížil zmluvnú pokutu na sumu 1.000 eur a vo zvyšnej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie posúdil zmluvu ako obchodno-právny vzťah a zistil porušenie povinností žalovanou. Následne uplatnil moderačné právo podľa § 301 Obchodného zákonníka, znížil zmluvnú pokutu z 10 000 eur na 1 000 eur. Dôvodom moderácie bolo postavenie žalovanej ako maloletej pri uzatváraní zmluvy, nízke príjmy žalovanej počas trvania zmluvy (1 000 - 2 000 eur) a neprimeranosť zmluvnej pokuty voči zabezpečovaným povinnostiam a možnej škode žalobcu.",
+          "key_quotes": [
+            {
+              "quote": "Súd sa zaoberal tým, či sú splnené podmienky pre možnosť zníženia zmluvnej pokuty podľa § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Zmluvná pokuta je zjavne neprimeraná z povinností, ktoré zabezpečuje voči príjmom, ktoré žalovaná počas dvoch rokov počas trvania zmluvy dosiahla, zároveň je neprimeraná voči možnej škode, ktorá by žalobcovi vznikla.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Na základe uvedených skutočností súd uplatnil moderačné právo a znížil zmluvnú pokutu na sumu 1.000 eur a vo zvyšnej časti žalobu zamietol.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Zmluvnou pokutou bola zabezpečená produkcia žalovanej ako modelky počas trvania zmluvy so žalobcom, výlučne s jeho vedomím a za takúto produkciu patrí podľa zmluvy odmena žalobcovi.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "zároveň je neprimeraná voči možnej škode, ktorá by žalobcovi vznikla.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Zmluvná pokuta je zjavne neprimeraná z povinností, ktoré zabezpečuje voči príjmom, ktoré žalovaná počas dvoch rokov počas trvania zmluvy dosiahla",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "najmä na postavenie žalovanej, ktorá uzatvárala zmluvu ako maloletá, zastúpená matkou, počas trvania právneho vzťahu žalovaná podľa vyjadrenia konateľa žalobcu Mgr. H. zarobila najviac 2.000 eur a podľa vyjadrenia žalovanej zarobila najviac 1.000 eur.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.original_claimed"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Trenčín_5Co_3_2022_00_dokument",
+      "court_name": "Krajský súd Trenčín",
+      "case_number": "5Co/3/2022",
+      "decision_date": "19.05.2022",
+      "ecli": "ECLI:SK:KSTN:2022:3819205466.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

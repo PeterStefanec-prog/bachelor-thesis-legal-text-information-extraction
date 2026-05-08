@@ -1,0 +1,181 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11617,
+    "completion_tokens": 2148,
+    "cost_usd": 0.0096,
+    "latency_seconds": 27.69,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 339,32 eura s príslušenstvom, čo predstavovalo nedoplatky na službách a zmluvnú pokutu vo výške 305,38 eura za predčasné ukončenie zmluvy o pripojení. Prvostupňový súd znížil zmluvnú pokutu na hodnotu zvýhodneného telefónu (84,46 eura), proti čomu sa žalobca odvolal s tým, že ide o obchodný vzťah a pokuta má kompenzovať aj ušlý zisk.",
+      "verdict_summary": "Odvolací súd zmenil rozhodnutie prvostupňového súdu a priznal žalobcovi plnú výšku dohodnutej zmluvnej pokuty 305,38 eura (rozdiel 202,92 eura oproti prvostupňovému rozhodnutiu), keďže konštatoval, že v obchodnom vzťahu bola pokuta primeraná a súd nemal dôvod ju znižovať.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "záväzok žalovaného zaplatiť zmluvnú pokutu vo výške 9.200,- Sk/305,38 eura v prípade porušenia niektorej povinnosti podľa dodatku.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "9.200,- Sk/305,38 eura",
+          "evidence": {
+            "quote": "Účastníci sa dohodli, že ak žalovaný poruší niektorú zo svojich zmluvných povinností zaväzuje sa zaplatiť zmluvnú pokutu vo výške 9.200,- Sk.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 305.38,
+            "evidence": {
+              "quote": "Žalobca fakturoval zmluvnú pokutu podľa vyššie uvedeného dodatku ku zmluve žalovanému faktúrou č. 5100527567 vystavenou dňa 01.03.2009 na sumu 305,38 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 305.38,
+            "evidence": {
+              "quote": "odvolací súd prvostupňový rozsudok v napadnutej časti podľa § 220 OSP zmenil tak, že odvolaniu žalobcu v plnom rozsahu vyhovel a priznal mu voči žalovanému tiež právo na zaplatenie zvyšku dohodnutej zmluvnej pokuty 202,92 eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05% ročne",
+          "evidence": {
+            "quote": "spolu so zmluvne dohodnutým úrokom z meškania vo výške 0,05% ročne od 09.03.2009",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Pri zohľadnení týchto okolností odvolací súd nepovažuje účastníkmi dohodnutú výšku zmluvnej pokuty 305,38 eura za neprimeranú a uplatnenie moderačného oprávnenia podľa § 301 Obchodného zákonníka za opodstatnené.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Odvolací súd konštatoval, že medzi účastníkmi vznikol obchodný záväzkový vzťah, keďže obaja konali ako podnikatelia, a preto sa aplikuje § 301 Obchodného zákonníka namiesto Občianskeho zákonníka. Súd zdôraznil, že zmluvná pokuta mala kompenzovať nielen rozdiel v cene telefónu, ale aj ušlý zisk z neprebehnuvšej 24-mesačnej viazanosti. Keďže výška pokuty nebola v rozpore s dobrými mravmi a zohľadňovala hospodársky účel zmluvy, súd nepristúpil k jej zníženiu.",
+          "key_quotes": [
+            {
+              "quote": "Odvolací súd sa plne stotožňuje s argumentáciou žalobcu uvedenou už v podanej žalobe, že zmluvná pokuta v danom prípade mala mierniť škodu vzniknutú nielen vyššie uvedeným cenovým zvýhodnením odpredaného mobilného telefónu, ale aj nenaplnením predpokladaného ekonomického výnosu zo zmluvy",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Použitie tohto oprávnenia v obchodných záväzkových vzťahoch by však malo byť výnimočné už aj preto, že sa predpokladá určitá miera profesionálnej zdatnosti podnikateľa",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Odvolací súd nepovažuje účastníkmi dohodnutú výšku zmluvnej pokuty 305,38 eura za neprimeranú",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta plní aj funkciu paušalizovanej náhrady škody a funkciu postihu za porušenie zmluvnej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta v danom prípade mala mierniť škodu vzniknutú nielen vyššie uvedeným cenovým zvýhodnením odpredaného mobilného telefónu, ale aj nenaplnením predpokladaného ekonomického výnosu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Keďže žalobca pre správanie žalovaného spočívajúce v zistenom nesplnení si záväzkov platiť za žalobcom poskytnuté služby od zmluvy s účinnosťou ku dňu 28.02.2009 odstúpil",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.key_quote_0",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_26Cob_39_2012_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "26Cob/39/2012",
+      "decision_date": "14.06.2012",
+      "ecli": "ECLI:SK:KSNR:2012:4111208790.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

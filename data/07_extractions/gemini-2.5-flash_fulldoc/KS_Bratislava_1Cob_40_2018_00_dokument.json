@@ -1,0 +1,187 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12752,
+    "completion_tokens": 2340,
+    "cost_usd": 0.0393,
+    "latency_seconds": 8.87,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Žalovaný namietal neplatnosť a neurčitosť dohody o zmluvnej pokute, ako aj neprimeranosť jej výšky a tvrdil, že nárok na pokutu zanikol odstúpením od zmluvy.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý zaviazal žalovaného zaplatiť zmluvnú pokutu a priznal žalobcovi nárok na náhradu trov odvolacieho konania.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "zmluvnú pokutu za oneskorenú úhradu záväzku z vyúčtovania pri predčasnom ukončení leasingovej zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,2% denne zo sumy 2.429,91 eur od 10.12.2009 do 19.1.2012, zo sumy 2.179,91 eur od 20.1.2012 do 16.2.2012, zo sumy 1.929,91 eur od 17.2.2012 do 5.6.2013, zo sumy 296,25 eur od 6.6.2013 do zaplatenia",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,2% za každý deň omeškania zo sumy 2.429,91 eur od 10.12.2009 do 19.1.2012, zo sumy 2.179,91 eur od 20.1.2012 do 16.2.2012, zo sumy 1.929,91 eur od 17.2.2012 do 5.6.2013, zo sumy 296,25 eur od 6.6.2013 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2429.91,
+            "evidence": {
+              "quote": "zo sumy 2.429,91 eur od 10.12.2009 do zaplatenia",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9% ročne",
+          "evidence": {
+            "quote": "spolu s úrokom z omeškania vo výške 9% ročne zo sumy 2.429,91 eur za obdobie od 10.12.2009 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "súd prvej inštancie rozhodol tak, že žalovaného zaviazal zaplatiť žalobcovi zmluvnú pokutu vo výške 0,2% za každý deň omeškania",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že nárok žalobcu na zaplatenie zmluvnej pokuty je plne dôvodný, vyplýva z VZP a týka sa pohľadávky z vyúčtovania pri predčasnom ukončení leasingovej zmluvy. Súd nepovažoval právny vzťah za spotrebiteľskú zmluvu, keďže žalovaný bol podnikateľom a konal v rámci svojej podnikateľskej činnosti. Súd tiež nedospel k záveru, že by bolo potrebné zmluvnú pokutu znížiť podľa § 301 Obchodného zákonníka, ani že by bola v rozpore so zásadami poctivého obchodného styku, keďže žalovaný bol podnikateľom a mal možnosť zmluvu neuzavrieť. Odvolací súd sa stotožnil s odôvodnením súdu prvej inštancie a potvrdil jeho rozhodnutie.",
+          "key_quotes": [
+            {
+              "quote": "Súd prvej inštancie mal po vykonanom dokazovaní za preukázané, že žaloba je aj v zostávajúcej časti (zaplatenie zmluvnej pokuty) plne dôvodná.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd nedospel k záveru, že by uplatnenú zmluvnú pokutu bolo potrebné znížiť v zmysle § 301 Obchodného zákonníka, nakoľko žalovaný bol v čase podpisu zmluvy podnikateľským subjektom, používal predmet zmluvy na podnikanie a pri podpise zmluvy si bol, resp. musel byť vedomý jednotlivých ustanovení zmluvy, vrátane tých, ktoré sa týkali dohodnutej zmluvnej pokuty.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Odvolací súd po preskúmaní napadnutého rozsudku ako aj celého obsahu spisového materiálu a odvolania žalovaného dospel k záveru, že súd prvej inštancie zistil v potrebnom rozsahu skutkový stav, na základe vykonaných dôkazov dospel k správnym skutkovým zisteniam a vec i správne právne posúdil, svoje rozhodnutie náležite a logicky odôvodnil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Súd nedospel k presvedčeniu, že by zmluvné ustanovenia týkajúce sa zmluvnej pokuty boli v rozpore so zásadami poctivého obchodného styku.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Pokiaľ záväzok včas neuhradil, svojím správaním dal jasne najavo, že zmluvná pokuta pre neho nepredstavuje relevantnú hrozbu a teda svoju donucovaciu funkciu neplnila, ale bola zrejme naopak príliš nízka.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Nakoniec žalovaný dobrovoľne po 4 rokoch skoro celý záväzok uhradil, čím uznal jeho oprávnenosť.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "žalovaný by okrem úroku z omeškania mal platiť aj zmluvnú pokutu vo výške 73% ročne z dlžnej sumy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed.value",
+        "contractual_penalties[0].amounts.final_awarded.value",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_1Cob_40_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "1Cob/40/2018",
+      "decision_date": "13.06.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1211204153.4",
+      "document_type": "Rozsudok"
+    }
+  }
+}

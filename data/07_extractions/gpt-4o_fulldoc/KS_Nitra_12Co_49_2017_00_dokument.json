@@ -1,0 +1,175 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 9738,
+    "completion_tokens": 1157,
+    "cost_usd": 0.0359,
+    "latency_seconds": 21.51,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca POHOTOVOSŤ, s.r.o. sa domáhal zaplatenia zmluvných úrokov, úrokov z omeškania, zmluvnej pokuty a ďalších nákladov od žalovanej W. P. na základe Zmluvy o úvere. Žalovaná mala podľa žalobcu zaplatiť menej, než skutočne uhradila, a preto žalobca požadoval doplatenie zmluvnej pokuty a úrokov.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorý žalobu zamietol. Žalobcovi nebol priznaný nárok na zmluvnú pokutu ani úroky.",
+      "contract_type": "uver",
+      "relationship_type": "B2C"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "upozornil žalovanú na neuhradenie záväzku zo zmluvy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "312 eur",
+          "evidence": {
+            "quote": "zmluvnej pokuty v sume 312 eur",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 312,
+            "evidence": {
+              "quote": "zmluvnej pokuty v sume 312 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "súd zamietol žalobu v časti zmluvnej pokuty",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "Uplatnený úrok z omeškania vo výške 8 % z dlžných splátok za obdobie od 26.05.2012 do 13.05.2015 v sume 128,77 eura súd považoval za neopodstatnený",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "dismissed",
+            "dismissal_reason": "clause_invalidity",
+            "evidence": {
+              "quote": "súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur, pretože žalobca nepreukázal existenciu písomnej dohody zmluvných strán o zmluvnej pokute",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie zamietol žalobu na zmluvnú pokutu, pretože žalobca nepreukázal existenciu písomnej dohody o zmluvnej pokute. Zmluvná pokuta bola súčasťou všeobecných podmienok, ktoré neboli individuálne dojednané so žalovanou. Odvolací súd potvrdil tento záver, pretože zmluvná pokuta bola považovaná za neprijateľnú podmienku, ktorá spôsobuje značnú nerovnováhu v právach a povinnostiach zmluvných strán v neprospech spotrebiteľa.",
+          "key_quotes": [
+            {
+              "quote": "súd zamietol žalobu v časti zmluvnej pokuty v sume 312 eur, pretože žalobca nepreukázal existenciu písomnej dohody zmluvných strán o zmluvnej pokute",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Takáto zmluvná pokuta poškodzuje spotrebiteľa tým, že vôbec nezohľadňuje dĺžku obdobia, po ktorú spotrebiteľ riadne plnil svoje povinnosti zo zmluvy.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Odvolací súd preto zhodne so súdom prvej inštancie konštatoval neprijateľnosť zmluvnej pokuty",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "pokuta v sume 320 eur je neprimerane vysoká sankcia oproti výške samotného úveru",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "ustanovenie o zmluvnej pokute vyhotovené drobným, takmer nečitateľným spôsobom, bolo dojednané individuálne",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Nitra_12Co_49_2017_00_dokument",
+      "court_name": "Krajský súd Nitra",
+      "case_number": "12Co/49/2017",
+      "decision_date": "22.02.2018",
+      "ecli": "ECLI:SK:KSNR:2018:4215216947.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

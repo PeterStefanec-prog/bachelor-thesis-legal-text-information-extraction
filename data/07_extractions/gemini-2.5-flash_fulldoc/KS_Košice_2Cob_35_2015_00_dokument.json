@@ -1,0 +1,182 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 8
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 11816,
+    "completion_tokens": 2102,
+    "cost_usd": 0.0358,
+    "latency_seconds": 8.51,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 34.885,39 EUR s príslušenstvom od žalovaného, ktorá pozostávala z neuhradených leasingových splátok, úrokov z omeškania, zmluvnej pokuty a náhrady škody vyplývajúcej z predčasného ukončenia zmlúv o finančnom prenájme motorových vozidiel. Žalovaný namietal nedôvodnosť uplatneného nároku a spochybňoval výšku škody a predajnej ceny vozidiel.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok prvostupňového súdu, ktorý zaviazal žalovaného zaplatiť žalobcovi 34.885,39 eur s úrokmi z omeškania a zmluvnou pokutou, pričom súd využil moderačné právo a znížil zmluvnú pokutu.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "Žalovaný ako leasingový nájomca povinnosti vyplývajúce zo zmlúv neplnil, t.j. neplatil dohodnuté leasingové splátky riadne a včas v zmysle podpísaného splátkového kalendára.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,025 % denne",
+          "evidence": {
+            "quote": "priznal žalobcovi zmluvnú pokutu v sume 0,025 % denne z istiny, t.j. znížil ju na 1.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 7524.0,
+            "evidence": {
+              "quote": "Nárok žalobcu na úhradu neuhradených leasingových splátok ku dňu odstúpenia od leasingových zmlúv v celkovej výške 7.524,- EUR je opodstatnený.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": null,
+            "evidence": {
+              "quote": "priznal žalobcovi zmluvnú pokutu v sume 0,025 % denne z istiny, t.j. znížil ju na 1.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "0,05 % denne",
+          "evidence": {
+            "quote": "úrokmi z omeškania 0,05 % denne zo sumy 1.516,- eur od 2.7.2010 do zaplatenia, zo sumy 1.506,- eur od 2.6.2010 do zaplatenia, zo sumy 1.506,- eur od 2.7.2010 do zaplatenia, zo sumy 1.498,- eur od 2.6.2010 do zaplatenia, zo sumy 1.498,- eur od 2.7.2010 do zaplatenia zo sumy 26.554,35 eur od 5.10.2010 do zaplatenia zo sumy 628,54 eur od 3.11.2010 do zaplatenia, zo sumy 178,50 eur od 15.7.2010 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "moderated_301",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd v zmysle ustanovenia § 301 Obchodného zákonníka využil moderačné právo a znížil zmluvnú pokutu z dôvodu jej neprimeranosti a časového neobmedzenia by mohla viesť k neprimeranému zisku a vo vzťahu k žalovanému by došlo k neprimeranému hospodárskemu poškodeniu. Súd preto zvážil všetky okolnosti tohto prípadu a priznal žalobcovi zmluvnú pokutu v sume 0,025 % denne z istiny, t.j. znížil ju na 1.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd využil moderačné právo podľa § 301 Obchodného zákonníka, pretože pôvodná výška zmluvnej pokuty bola neprimerane vysoká a časovo neobmedzená, čo by mohlo viesť k neprimeranému zisku žalobcu a hospodárskemu poškodeniu žalovaného. Súd znížil zmluvnú pokutu na 0,025 % denne z istiny, pričom zohľadnil všetky okolnosti prípadu.",
+          "key_quotes": [
+            {
+              "quote": "Súd v zmysle ustanovenia § 301 Obchodného zákonníka využil moderačné právo a znížil zmluvnú pokutu z dôvodu jej neprimeranosti a časového neobmedzenia by mohla viesť k neprimeranému zisku a vo vzťahu k žalovanému by došlo k neprimeranému hospodárskemu poškodeniu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Súd preto zvážil všetky okolnosti tohto prípadu a priznal žalobcovi zmluvnú pokutu v sume 0,025 % denne z istiny, t.j. znížil ju na 1.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "znížil zmluvnú pokutu z dôvodu jej neprimeranosti a časového neobmedzenia by mohla viesť k neprimeranému zisku a vo vzťahu k žalovanému by došlo k neprimeranému hospodárskemu poškodeniu.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "CURRENCY_MISMATCH_POSSIBLE_SKK_pokuta_1"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "pokuta_1.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Košice_2Cob_35_2015_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "2Cob/35/2015",
+      "decision_date": "20.10.2015",
+      "ecli": "ECLI:SK:KSKE:2015:7111220136.3",
+      "document_type": "Rozsudok"
+    }
+  }
+}

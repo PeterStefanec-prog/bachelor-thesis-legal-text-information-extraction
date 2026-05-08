@@ -1,0 +1,316 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "rag",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7,
+      "adaptive_top_k_call2": 7
+    }
+  },
+  "api_metadata": {
+    "call1": {
+      "prompt_tokens": 17652,
+      "completion_tokens": 1093,
+      "cost_usd": 0.0551,
+      "latency_seconds": 42.26,
+      "model": "gpt-4o",
+      "provider": "openai"
+    },
+    "call2": {
+      "prompt_tokens": 18529,
+      "completion_tokens": 2182,
+      "cost_usd": 0.0681,
+      "latency_seconds": 47.32,
+      "model": "gpt-4o",
+      "provider": "openai"
+    }
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca, Prima banka Slovensko, a.s., sa domáhal zaplatenia sumy 25.018,98 EUR s príslušenstvom od žalovaného, Ingka Centres Slovensko s.r.o., z titulu nároku na vrátenie depozitu po zániku nájmu nebytových priestorov. Žalovaný namietal započítanie svojich pohľadávok vrátane zmluvných pokút voči nároku žalobcu.",
+      "verdict_summary": "Krajský súd v Bratislave potvrdil rozsudok Okresného súdu Bratislava II, ktorý žalobu žalobcu čiastočne zamietol a priznal žalovanému nárok na započítanie pohľadávok.",
+      "contract_type": "najom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % x 12 mesiacov x 41,92 EUR x 246,82 m2 x 72 dní",
+          "evidence": {
+            "quote": "0,05 % x 12 mesiacov (dojednaná výška zmluvnej pokuty) x 41,92 EUR (dojednaná výška nájomného za m2) x 246,82 m2 (výmera nebytových priestorov) x 72 dní trvania porušenia povinnosti",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 4469.77,
+            "evidence": {
+              "quote": "nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": "nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "K návrhu žalobcu, aby súd využil moderačné právo v zmysle ustanovenia § 301 Obchodného zákonníka a neprimeranú zmluvnú pokutu znížil súd uviedol, že v tomto prípade výška uplatnenej zmluvnej pokuty nie je neprimeraná.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          },
+          "legal_reasoning_summary": "Súd rozhodol, že zmluvná pokuta vo výške 4.469,77 EUR je oprávnená, pretože žalobca uzavrel nebytové priestory bez súhlasu prenajímateľa. Pokuta bola vypočítaná na základe dohodnutej dennej sadzby a počtu dní porušenia. Súd nevyužil moderačné právo, pretože pokuta nebola považovaná za neprimeranú vzhľadom na dlhodobé porušovanie povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd vyhodnotil dohodu o zmluvnej pokute za porušenie povinnosti neuzavrieť nebytové priestory na viac ako dva (2) za sebou nasledujúce kalendárne dni jedenkrát za kalendárny polrok za platnú, nakoľko v danom prípade bola dodržaná písomná forma, bola dostatočne určito vymedzená zmluvná povinnosť, ktorá má byť zmluvnou pokutou zabezpečená a tiež je jednoznačná dohoda o výške zmluvnej pokuty, resp. o spôsobe jej určenia.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "K návrhu žalobcu, aby súd využil moderačné právo v zmysle ustanovenia § 301 Obchodného zákonníka a neprimeranú zmluvnú pokutu znížil súd uviedol, že v tomto prípade výška uplatnenej zmluvnej pokuty nie je neprimeraná.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Predmetná zmluvná pokuta bola dojednaná za účelom zabezpečenia povinnosti žalobcu neuzatvoriť nebytové priestory bez súhlasu žalovaného, a to vo výške 62,08 EUR denne.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa v čase od 02.05.2017 do 12.07.2017 t.j. počas 72 dní.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd vzhľadom na vyššie uvedené skutočnosti dospel k záveru, že nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR a započítaním vykonaným v rámci procesnej obrany podaním doručeným súdu dňa 21.05.2018 došlo k účinnému započítaniu tejto pohľadávky žalovaného voči pohľadávke žalobcu uplatnenej v tomto konaní.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "nárok na zaplatenie zmluvnej pokuty za omeškanie s úhradou faktúry",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_9"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05%",
+          "evidence": {
+            "quote": "0,05% (dojednaná sadzba zmluvnej pokuty)",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_8"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 1362.53,
+            "evidence": {
+              "quote": "bod 4.8 Zmluvy o nájme nebytových priestorov za omeškanie s úhradou faktúry č. 540171150, faktúry č. 540171349, faktúry č. 540171523, faktúry č. 540171722 a faktúry č. 540171892 vo výške 1.362,53 EUR; d) zaplatenie",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_11"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "8% ročne",
+          "evidence": {
+            "quote": "úrok z omeškania vo výške 8% ročne zo sumy 7.909,61 EUR od 01.09.2017 do zaplatenia",
+            "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_0"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd vzhľadom na vyššie uvedené skutočnosti dospel k záveru, že nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR a započítaním vykonaným v rámci procesnej obrany podaním doručeným súdu dňa 21.05.2018 došlo k účinnému započítaniu tejto pohľadávky žalovaného voči pohľadávke žalobcu uplatnenej v tomto konaní.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          },
+          "legal_reasoning_summary": "Súd potvrdil oprávnenosť zmluvnej pokuty vo výške 1.362,53 EUR za omeškanie s úhradou platieb. Pokuta bola vypočítaná na základe dohodnutej dennej sadzby. Súd nevyužil moderačné právo, pretože pokuta bola považovaná za primeranú vzhľadom na porušenie povinnosti.",
+          "key_quotes": [
+            {
+              "quote": "Súd vzhľadom na vyššie uvedené skutočnosti dospel k záveru, že nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR a započítaním vykonaným v rámci procesnej obrany podaním doručeným súdu dňa 21.05.2018 došlo k účinnému započítaniu tejto pohľadávky žalovaného voči pohľadávke žalobcu uplatnenej v tomto konaní.",
+              "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "K návrhu žalobcu, aby súd využil moderačné právo v zmysle ustanovenia § 301 Obchodného zákonníka a neprimeranú zmluvnú pokutu znížil súd uviedol, že v tomto prípade výška uplatnenej zmluvnej pokuty nie je neprimeraná.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Predmetná zmluvná pokuta bola dojednaná za účelom zabezpečenia povinnosti žalobcu neuzatvoriť nebytové priestory bez súhlasu žalovaného, a to vo výške 62,08 EUR denne.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca resp. právny predchodca žalobcu uzavrel nebytové priestory v rozpore so Zmluvou o nájme nebytových priestorov bez súhlasu prenajímateľa v čase od 02.05.2017 do 12.07.2017 t.j. počas 72 dní.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd vzhľadom na vyššie uvedené skutočnosti dospel k záveru, že nárok žalovaného na zaplatenie zmluvnej pokuty podľa bodu 16.1 Zmluvy o nájme nebytových priestorov je dôvodný vo výške 4.469,77 EUR a započítaním vykonaným v rámci procesnej obrany podaním doručeným súdu dňa 21.05.2018 došlo k účinnému započítaniu tejto pohľadávky žalovaného voči pohľadávke žalobcu uplatnenej v tomto konaní.",
+                "chunk_id": "KS_Bratislava_2Cob_69_2020_00_dokument.pdf_chunk_6"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.associated_interest"
+      ],
+      "missing_fields": [
+        "pokuta_1.amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_2Cob_69_2020_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "2Cob/69/2020",
+      "decision_date": "14.02.2023",
+      "ecli": "ECLI:SK:KSBA:2023:6117232511.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

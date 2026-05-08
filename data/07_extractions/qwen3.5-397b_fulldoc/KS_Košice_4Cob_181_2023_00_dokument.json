@@ -1,0 +1,179 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 13940,
+    "completion_tokens": 2113,
+    "cost_usd": 0.0104,
+    "latency_seconds": 29.82,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 2.689,90 eur za omeškanie žalovaného s úhradou ceny diela podľa zmluvy o dielo. Žalovaný namietal neprimeranosť výšky pokuty a vadné plnenie zo strany žalobcu ako dôvod pre nezaplatenie.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok súdu prvej inštancie, ktorým bol žalovaný povinný zaplatiť žalobcovi zmluvnú pokutu v plnej uplatnenej sume 2.689,90 eur. Súd odmietol aplikovať moderačné právo a uznal platnosť dohody o zmluvnej pokute.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou faktúry v súlade s čl. VI tejto zmluvy má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,5 % za každý začatý deň omeškania z neuhradenej časti ceny diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,5 % za každý začatý deň omeškania z neuhradenej časti ceny diela",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou faktúry v súlade s čl. VI tejto zmluvy má zhotoviteľ nárok na zmluvnú pokutu vo výške 0,5 % za každý začatý deň omeškania z neuhradenej časti ceny diela.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 2077.15,
+            "evidence": {
+              "quote": "Žalovaný cenu diela vo výške 2077,15 eur (zníženú o zľavu z ceny diela vo výške 400,- eur) spolu s príslušenstvom žalobcovi zaplatil",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 2689.9,
+            "evidence": {
+              "quote": "predmetom sporu je v tejto fáze nárok žalobcu na zaplatenie zmluvnej pokuty vo výške 2.689,90 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2689.9,
+            "evidence": {
+              "quote": "Žalovaný je povinný do troch dní od právoplatnosti tohto rozsudku zaplatiť žalobcovi sumu vo výške 2.689,90 eur.",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "no",
+          "rate_value": null,
+          "evidence": {
+            "quote": null,
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Súd prvej inštancie nepoužitie moderačného práva súdu podľa § 301 Obchodného zákonníka odôvodnil tým, že priznanie zmluvnej pokuty v uplatnenej sume nepovažuje za neprimerane tvrdé, ani vedúce k neadekvátnym majetkovým dôsledkom.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd konštatoval, že zmluvná pokuta bola dojednaná recipročne pre obe strany v rovnakej výške (0,5 % denne), čím bola zachovaná rovnováha práv a povinností. Výška pokuty závisela výlučne od postoja dlžníka, ktorý mohol kedykoľvek zabrániť jej rastu splnením povinnosti. Súd tiež prihliadol na to, že žalobca si uplatnil pokutu len za obdobie do podania žaloby, nie za celé obdobie omeškania, čo vylučuje neprimeranosť.",
+          "key_quotes": [
+            {
+              "quote": "zmluvná pokuta bola dojednaná v rovnakej výške pre prípad porušenia základných zmluvných povinností oboch zmluvných strán.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalovaný mohol kedykoľvek zabrániť rastu celkovej výšky zmluvnej pokuty tým, že by svoju zmluvnú povinnosť splnil.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "konštatoval, že dohoda zmluvných strán o zmluvnej pokute je platná, nebola dojednaná v rozpore so zásadami poctivého obchodného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "prvotným účelom dohody zmluvných strán o zmluvnej pokute bolo zabezpečenie riadneho a včasného vykonania a odovzdania diela zo strany žalobcu a zároveň riadne a včasné zaplatenie ceny diela zo strany žalovaného",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súd prvej inštancie pri posudzovaní nároku žalobcu na zaplatenie zmluvnej pokuty preto nezohľadnil kompenzačnú námietku žalovaného a na túto skutočnosť zároveň prihliadol pri úvahách o moderácii dojednanej zmluvnej pokuty.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "pri dojednaní zmluvnej pokuty v článku IX Zmluvy o dielo bola zachovaná rovnováha práv a povinností zmluvných strán a práva zmluvných strán neboli v hrubom ani inom nepomere.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "vznik nároku na zmluvnú pokutu závisel výlučne od postoja dlžníka, ktorý sa rozhodol plniť svoju hlavnú zmluvnú povinnosť započítaním svojej údajnej pohľadávky na náhradu škody, ktorej výšku však v konaní nevedel preukázať.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "žalobca v spore sa nedomáha zmluvnej pokuty za celé obdobie omeškania žalovaného, ale iba za obdobie do podania žaloby vo veci samej.",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_1.factor.dobre_mravy"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Košice_4Cob_181_2023_00_dokument",
+      "court_name": "Krajský súd Košice",
+      "case_number": "4Cob/181/2023",
+      "decision_date": "29.10.2024",
+      "ecli": "ECLI:SK:KSKE:2024:7216206988.2",
+      "document_type": "Rozsudok"
+    }
+  }
+}

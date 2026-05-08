@@ -1,0 +1,177 @@
+{
+  "extraction_config": {
+    "model": "gpt-4o",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 16896,
+    "completion_tokens": 989,
+    "cost_usd": 0.0521,
+    "latency_seconds": 35.32,
+    "model": "gpt-4o",
+    "provider": "openai"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobkyňa Orange Slovensko, a.s. sa domáhala zaplatenia sumy 569,89 eura s príslušenstvom od žalovaného Ing. Mgr. Štefana Čeľovského za neuhradené služby a zmluvnú pokutu.",
+      "verdict_summary": "Najvyšší súd odmietol dovolanie žalovaného a priznal žalobkyni náhradu trov dovolacieho konania.",
+      "contract_type": "telekom",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": null,
+        "breach_type": {
+          "value": "early_termination",
+          "evidence": {
+            "quote": "ukončením zmlúv vznikol žalovanému aj záväzok na zaplatenie zmluvnej pokuty vo výške 461,66 eura za nedodržanie zmluvne dohodnutej podmienky byť viazaný touto zmluvou po dobu 24 mesiacov.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "zmluvná pokuta vo výške 461,66 eura",
+          "evidence": {
+            "quote": "zmluvná pokuta vo výške 461,66 eura",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": 461.66,
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 461,66 eura",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 461.66,
+            "evidence": {
+              "quote": "zmluvná pokuta vo výške 461,66 eura",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "18% ročne",
+          "evidence": {
+            "quote": "úrokom z omeškania vo výške 18% ročne z dlžnej sumy",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "dohodnutá zmluvná pokuta nemôže vykazovať známky neprimeranosti",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie rozhodol, že zmluvná pokuta vo výške 461,66 eura bola dohodnutá na kompenzáciu zvýhodnenej kúpnej ceny za mobilné zariadenia. Súd považoval túto pokutu za primeranú a bežnú prax u mobilných operátorov. Odvolací súd potvrdil rozhodnutie súdu prvej inštancie, pričom žalovaný nepreukázal nedostatočné pokrytie signálom ako dôvod na zrušenie zmluvy.",
+          "key_quotes": [
+            {
+              "quote": "dohodnutá zmluvná pokuta nemôže vykazovať známky neprimeranosti",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "zmluvná pokuta bola dohodnutá iba na kompenzáciu zvýhodnenej kúpnej ceny",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný si od žalobkyne v zmluvách osobitne nevymienil garanciu poskytnutia určitej úrovne signálu",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Žalobkyňa umožnila žalovanému prenos telefónneho čísla k inému operátorovi",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_veritela"
+      ],
+      "missing_fields": [
+        "amounts.secured_principal"
+      ]
+    },
+    "meta": {
+      "doc_id": "NS_SR_2Obdo_25_2023_00_dokument",
+      "court_name": "Najvyšší súd",
+      "case_number": "2Obdo/25/2023",
+      "decision_date": "14.12.2023",
+      "ecli": "ECLI:SK:NSSR:2023:7917211444.1",
+      "document_type": "Uznesenie"
+    }
+  }
+}

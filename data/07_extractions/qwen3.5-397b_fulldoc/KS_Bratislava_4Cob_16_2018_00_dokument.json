@@ -1,0 +1,325 @@
+{
+  "extraction_config": {
+    "model": "qwen3.5-397b",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 12873,
+    "completion_tokens": 3636,
+    "cost_usd": 0.0135,
+    "latency_seconds": 39.69,
+    "model": "qwen/qwen3.5-397b-a17b",
+    "provider": "openrouter"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia sumy 166.763,79 eur s príslušenstvom, ktorú tvorila zmluvná pokuta a úroky z omeškania za oneskorenú úhradu faktúr za vykonané stavebné práce podľa dvoch zmlúv o dielo. Žalovaný namietal existenciu liberačných dôvodov (zásah úradných miest pri čerpaní eurofondov) a nesprávnosť výšky pokuty.",
+      "verdict_summary": "Odvolací súd potvrdil rozsudok prvej inštancie vo výroku o povinnosti zaplatiť zmluvnú pokutu a úroky z omeškania, keďže liberačné dôvody neboli preukázané a výška pokuty bola považovaná za primeranú. Súd zmenil rozhodnutie o náhrade trov konania podľa pomeru úspechu strán.",
+      "contract_type": "dielo",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "Zmluva o dielo č. I.-V.-XXX-XXX/XXXX",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % z ceny faktúry za každý začatý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05 % z ceny faktúry za každý začatý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 469097.93,
+            "evidence": {
+              "quote": "v prípade Zmluvy o dielo č. I.-V.-XXX-XXX/XXXX suma 469.097,93 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 49206.43,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 49.206,43 eur, ktorou bola zabezpečená povinnosť zaplatiť cenu diela pri Zmluve o dielo I.-V.-XXX-XXX/XXXX",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "súd konanie v časti sumy 21.312,25 eur zastavil a žalobcovi priznal plnú náhradu trov konania. V odôvodnení rozhodnutia uviedol, že žalobca sa žalobou doručenou súdu dňa 25.11.2014, pôvodne na Okresný súd Bratislava II, domáhal vydania rozhodnutia, ktorým by súd zaviazal žalovaného na zaplatenie istiny vo výške 166.763,79 eur spolu s príslušenstvom a trovami konania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "považoval súd za primeranú vzhľadom na hodnotu zabezpečovanej povinnosti, a preto nevyužil moderačné právo podľa § 301 OBZ.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že zmluvná pokuta vo výške 0,05 % za každý deň omeškania (čo predstavuje 18 % ročne) je primeraná vzhľadom na hodnotu zabezpečovanej povinnosti. Odvolací súd sa stotožnil s názorom súdu prvej inštancie, že liberačné dôvody podľa čl. VIII. bod 8.4 zmluvy sa nevzťahujú na omeškanie s úhradou faktúr, keďže tieto sa týkajú iných ustanovení zmluvy. Súd tiež zdôraznil, že súbeh zmluvnej pokuty a úrokov z omeškania je možný a zákonný.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu vo výške 0.05 % za každý deň omeškania (18 % ročne), považoval súd za primeranú vzhľadom na hodnotu zabezpečovanej povinnosti",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "úprava liberačných dôvodov v zmysle ustanovenia čl. VIII. bod 8.4 zmlúv o dielo, sa v zmysle uvedeného nevzťahovala na omeškanie žalovaného s úhradou splatných faktúr",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vzhľadom na hodnotu zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "Vzhľadom na výšku zabezpečovanej pohľadávky (v prípade Zmluvy o dielo č. I.-V.-XXX-XXX/XXXX suma 469.097,93 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný dlžné sumy uhrádzal, avšak až po lehote splatnosti faktúr",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "súbeh týchto dvoch inštitútov je možný",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "Zmluva o dielo č. I.-V.-XX-XXX/XXXX",
+        "breach_type": {
+          "value": "late_payment",
+          "evidence": {
+            "quote": "V prípade omeškania objednávateľa s úhradou jednotlivých faktúr nad dohodnutú dobu splatnosti, má zhotoviteľ nárok na zmluvnú pokutu",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "percent_denne",
+          "value_raw": "0,05 % z ceny faktúry za každý začatý deň omeškania",
+          "evidence": {
+            "quote": "zmluvnú pokutu vo výške 0,05 % z ceny faktúry za každý začatý deň omeškania",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": 533119.53,
+            "evidence": {
+              "quote": "v prípade Zmluvy o dielo č. I.-V.-XX-XXX/XXXX suma 533.119,53 eur",
+              "chunk_id": "full_doc"
+            }
+          },
+          "original_claimed": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "final_awarded": {
+            "value": 47163.41,
+            "evidence": {
+              "quote": "zmluvnú pokutu vo výške 47.163,41eur, ktorou bola zabezpečená povinnosť zaplatiť cenu diela pri zmluve I.-V..XX-XXX/XXX",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": null,
+          "evidence": {
+            "quote": "súd konanie v časti sumy 21.312,25 eur zastavil a žalobcovi priznal plnú náhradu trov konania. V odôvodnení rozhodnutia uviedol, že žalobca sa žalobou doručenou súdu dňa 25.11.2014, pôvodne na Okresný súd Bratislava II, domáhal vydania rozhodnutia, ktorým by súd zaviazal žalovaného na zaplatenie istiny vo výške 166.763,79 eur spolu s príslušenstvom a trovami konania.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "považoval súd za primeranú vzhľadom na hodnotu zabezpečovanej povinnosti, a preto nevyužil moderačné právo podľa § 301 OBZ.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd dospel k záveru, že zmluvná pokuta vo výške 0,05 % za každý deň omeškania (čo predstavuje 18 % ročne) je primeraná vzhľadom na hodnotu zabezpečovanej povinnosti. Odvolací súd sa stotožnil s názorom súdu prvej inštancie, že liberačné dôvody podľa čl. VIII. bod 8.4 zmluvy sa nevzťahujú na omeškanie s úhradou faktúr. Súd tiež zdôraznil, že súbeh zmluvnej pokuty a úrokov z omeškania je možný a zákonný.",
+          "key_quotes": [
+            {
+              "quote": "zmluvnú pokutu vo výške 0.05 % za každý deň omeškania (18 % ročne), považoval súd za primeranú vzhľadom na hodnotu zabezpečovanej povinnosti",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "úprava liberačných dôvodov v zmysle ustanovenia čl. VIII. bod 8.4 zmlúv o dielo, sa v zmysle uvedeného nevzťahovala na omeškanie žalovaného s úhradou splatných faktúr",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "vzhľadom na hodnotu zabezpečovanej povinnosti",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "začatý deň omeškania.\" Vzhľadom na výšku zabezpečovanej pohľadávky (v prípade Zmluvy o dielo č. I.-V.-XXX-XXX/XXXX suma 469.097,93 eur",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "žalovaný dlžné sumy uhrádzal, avšak až po lehote splatnosti faktúr",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "positive",
+              "evidence": {
+                "quote": "súbeh týchto dvoch inštitútov je možný",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "ANONYMIZED_AMOUNT_secured_principal_pokuta_1",
+        "ANONYMIZED_AMOUNT_final_awarded_pokuta_1",
+        "ANONYMIZED_AMOUNT_secured_principal_pokuta_2",
+        "ANONYMIZED_AMOUNT_final_awarded_pokuta_2",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.amounts.final_awarded",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.associated_interest",
+        "EVIDENCE_CASE_MISMATCH:pokuta_1.factor.spravanie_dlznika",
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_2.associated_interest",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.factor.pomer_k_istine",
+        "EVIDENCE_CASE_MISMATCH:pokuta_2.factor.spravanie_dlznika"
+      ],
+      "missing_fields": [
+        "contractual_penalties[0].amounts.original_claimed",
+        "contractual_penalties[1].amounts.original_claimed",
+        "contractual_penalties[0].associated_interest.rate_value",
+        "contractual_penalties[1].associated_interest.rate_value",
+        "pokuta_1.amounts.original_claimed",
+        "pokuta_2.amounts.original_claimed"
+      ]
+    },
+    "meta": {
+      "doc_id": "KS_Bratislava_4Cob_16_2018_00_dokument",
+      "court_name": "Krajský súd Bratislava",
+      "case_number": "4Cob/16/2018",
+      "decision_date": "30.05.2019",
+      "ecli": "ECLI:SK:KSBA:2019:1214227801.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}

@@ -1,0 +1,318 @@
+{
+  "extraction_config": {
+    "model": "gemini-2.5-flash",
+    "mode": "fulldoc",
+    "retrieval_config": {
+      "name": "hybrid_a7_reranked_top7",
+      "retrieval_mode": "hybrid",
+      "rrf_alpha": 0.7,
+      "base_top_k": 7,
+      "window_size": 0,
+      "reranker": true,
+      "reranker_alpha": 0.6,
+      "reranker_oversample": 5,
+      "adaptive_top_k_call1": 7
+    }
+  },
+  "api_metadata": {
+    "prompt_tokens": 25135,
+    "completion_tokens": 4418,
+    "cost_usd": 0.0756,
+    "latency_seconds": 16.07,
+    "model": "gemini-2.5-flash",
+    "provider": "google"
+  },
+  "result": {
+    "case_context": {
+      "dispute_summary": "Žalobca sa domáhal zaplatenia zmluvnej pokuty vo výške 9.600 Eur s príslušenstvom za neposkytnutie súčinnosti žalovaným pri vykonávaní kontrol správnosti a úplnosti informácií o množstve elektrozariadení uvádzaných na trh. Žalovaný namietal neoprávnenosť kontrol, neurčitosť zmluvných ustanovení o pokute a žiadal o moderáciu.",
+      "verdict_summary": "Krajský súd potvrdil rozsudok okresného súdu, ktorý zaviazal žalovaného zaplatiť žalobcovi sumu 4.800 Eur spolu s úrokmi z omeškania a paušálnu náhradu nákladov, pričom zvyšnú časť žaloby zamietol.",
+      "contract_type": "ine",
+      "relationship_type": "B2B"
+    },
+    "contractual_penalties": [
+      {
+        "penalty_id": "pokuta_1",
+        "related_claim_ref": "kontrola nariadená listom zo dňa 06.01.2015",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "zmluvná pokuta za neposkytnutie súčinnosti pri kontrole dňa 14.01.2015 v súlade s ust. čl. 8., bod 8.13., bod 8.14. písm. b).",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "400 Eur pre každý jednotlivý prípad porušenia povinnosti a v zmysle bodu 8.14. okrem sankcie podľa bodu 8.13. má žalobca nárok aj na zmluvnú pokutu vo výške 2.000 Eur za každú jednotlivú zmarenú kontrolu alebo za každý prípad neposkytnutia súčinnosti, ktorý zmarí vykonanie kontroly. Teda 2.400 Eur si žalobca uplatnil za nariadenie každej kontroly.",
+          "evidence": {
+            "quote": "v zmysle bodu 8.13. vzniká nárok na zmluvnú pokutu pri porušení akejkoľvek povinnosti v zmysle čl. 4 vo výške 400 Eur pre každý jednotlivý prípad porušenia povinnosti a v zmysle bodu 8.14. okrem sankcie podľa bodu 8.13. má žalobca nárok aj na zmluvnú pokutu vo výške 2.000 Eur za každú jednotlivú zmarenú kontrolu alebo za každý prípad neposkytnutia súčinnosti, ktorý zmarí vykonanie kontroly. Teda 2.400 Eur si žalobca uplatnil za nariadenie každej kontroly.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2400,
+            "evidence": {
+              "quote": "na sumu 2.400 Eur s popisom, že ide o zmluvnú pokutu za neposkytnutie súčinnosti pri kontrole dňa 14.01.2015",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2400,
+            "evidence": {
+              "quote": "nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený pri zmarených dvoch kontrolách nariadených listom zo dňa 06.01.2015 a 12.02.2015",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,05% ročne",
+          "evidence": {
+            "quote": "úrokmi z omeškania vo výške 9,05% ročne zo sumy 2.400 Eur od 09.02.2015 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd nezistil dôvody pre aplikáciu ustanovenia § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta za neposkytnutie súčinnosti pri kontrole nariadenej listom zo dňa 06.01.2015 je opodstatnená, pretože žalovaný neposkytol súčinnosť v 30-dňovej lehote. Súd odmietol námietky žalovaného o neoprávnenosti kontroly a neurčitosti zmluvných ustanovení. Výšku zmluvnej pokuty nepovažoval za neprimerane vysokú a nezistil dôvody na jej moderáciu.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd nezistil dôvody pre aplikáciu ustanovenia § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Výšku zmluvnej pokuty súd prvej inštancie neposúdil ako neprimerane vysokú zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalobcovi, pokiaľ žalovaný nesplnil si povinnosti podľa zmluvy, vznikol nárok na zmluvnú pokutu len za kontrolu nariadenú listom zo dňa 06.01.2015 a 12.02.2015.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný neviedol riadnu evidenciu podľa zmluvy a zmaril vykonanie kontrol, nepredložil podklady, neposkytol súčinnosť, preto nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený pri zmarených dvoch kontrolách nariadených listom zo dňa 06.01.2015 a 12.02.2015 neposkytnutím súčinnosti zo strany žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súčasne podľa § 369c ods. 1 Obchodného zákonníka veriteľovi vzniklo aj právo na paušálnu náhradu nákladov spojených s uplatnením pohľadávky, ktorá podľa § 2 nariadenia vlády MS SR č. 21/2013 Z.z. predstavovala jednorazovo 40 Eur bez ohľadu na dĺžku omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Pokiaľ si žalobca uplatnil úroky z omeškania od splatnosti faktúr, okresný súd neposúdil splatnosť určenú žalobcom za správnu, pretože žalobca nesprávne určil túto splatnosť",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "penalty_id": "pokuta_2",
+        "related_claim_ref": "kontrola nariadená listom zo dňa 12.02.2015",
+        "breach_type": {
+          "value": "non_monetary_performance",
+          "evidence": {
+            "quote": "faktúra zo dňa 02.06.2015 so splatnosťou 16.06.2015 za neposkytnutie súčinnosti pri kontrole dňa 20.02.2015",
+            "chunk_id": "full_doc"
+          }
+        },
+        "rate_definition": {
+          "type": "fixna_suma_jednorazovo",
+          "value_raw": "400 Eur pre každý jednotlivý prípad porušenia povinnosti a v zmysle bodu 8.14. okrem sankcie podľa bodu 8.13. má žalobca nárok aj na zmluvnú pokutu vo výške 2.000 Eur za každú jednotlivú zmarenú kontrolu alebo za každý prípad neposkytnutia súčinnosti, ktorý zmarí vykonanie kontroly. Teda 2.400 Eur si žalobca uplatnil za nariadenie každej kontroly.",
+          "evidence": {
+            "quote": "v zmysle bodu 8.13. vzniká nárok na zmluvnú pokutu pri porušení akejkoľvek povinnosti v zmysle čl. 4 vo výške 400 Eur pre každý jednotlivý prípad porušenia povinnosti a v zmysle bodu 8.14. okrem sankcie podľa bodu 8.13. má žalobca nárok aj na zmluvnú pokutu vo výške 2.000 Eur za každú jednotlivú zmarenú kontrolu alebo za každý prípad neposkytnutia súčinnosti, ktorý zmarí vykonanie kontroly. Teda 2.400 Eur si žalobca uplatnil za nariadenie každej kontroly.",
+            "chunk_id": "full_doc"
+          }
+        },
+        "amounts": {
+          "currency": "EUR",
+          "secured_principal": {
+            "value": null,
+            "evidence": {
+              "quote": null,
+              "chunk_id": null
+            }
+          },
+          "original_claimed": {
+            "value": 2400,
+            "evidence": {
+              "quote": "faktúra zo dňa 02.06.2015 so splatnosťou 16.06.2015 za neposkytnutie súčinnosti pri kontrole dňa 20.02.2015 na sumu 2.400 Eur.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "final_awarded": {
+            "value": 2400,
+            "evidence": {
+              "quote": "nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený pri zmarených dvoch kontrolách nariadených listom zo dňa 06.01.2015 a 12.02.2015",
+              "chunk_id": "full_doc"
+            }
+          }
+        },
+        "associated_interest": {
+          "awarded": "yes",
+          "rate_value": "9,05% ročne",
+          "evidence": {
+            "quote": "4.800 Eur spolu s úrokmi z omeškania vo výške 9,05% ročne zo sumy 2.400 Eur od 09.02.2015 do zaplatenia",
+            "chunk_id": "full_doc"
+          }
+        },
+        "moderation_analysis": {
+          "decision": {
+            "value": "awarded_full",
+            "dismissal_reason": null,
+            "evidence": {
+              "quote": "Okresný súd nezistil dôvody pre aplikáciu ustanovenia § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            }
+          },
+          "legal_reasoning_summary": "Súd prvej inštancie dospel k záveru, že zmluvná pokuta za neposkytnutie súčinnosti pri kontrole nariadenej listom zo dňa 12.02.2015 je opodstatnená, pretože žalovaný neposkytol súčinnosť v 30-dňovej lehote. Súd odmietol námietky žalovaného o neoprávnenosti kontroly a neurčitosti zmluvných ustanovení. Výšku zmluvnej pokuty nepovažoval za neprimerane vysokú a nezistil dôvody na jej moderáciu.",
+          "key_quotes": [
+            {
+              "quote": "Okresný súd nezistil dôvody pre aplikáciu ustanovenia § 301 Obchodného zákonníka.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Výšku zmluvnej pokuty súd prvej inštancie neposúdil ako neprimerane vysokú zmluvnú pokutu.",
+              "chunk_id": "full_doc"
+            },
+            {
+              "quote": "Žalobcovi, pokiaľ žalovaný nesplnil si povinnosti podľa zmluvy, vznikol nárok na zmluvnú pokutu len za kontrolu nariadenú listom zo dňa 06.01.2015 a 12.02.2015.",
+              "chunk_id": "full_doc"
+            }
+          ],
+          "factors": [
+            {
+              "label": "dobre_mravy",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "zabezpecovacia_funkcia",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "vyska_skody",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "pomer_k_istine",
+              "sentiment": "not_mentioned",
+              "evidence": {
+                "quote": null,
+                "chunk_id": null
+              }
+            },
+            {
+              "label": "spravanie_dlznika",
+              "sentiment": "negative",
+              "evidence": {
+                "quote": "Žalovaný neviedol riadnu evidenciu podľa zmluvy a zmaril vykonanie kontrol, nepredložil podklady, neposkytol súčinnosť, preto nárok na zmluvnú pokutu vo výške dvakrát 2.400 Eur, t.j. 4.800 Eur, bol opodstatnený pri zmarených dvoch kontrolách nariadených listom zo dňa 06.01.2015 a 12.02.2015 neposkytnutím súčinnosti zo strany žalovaného.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "kumulacia_s_urokom",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Súčasne podľa § 369c ods. 1 Obchodného zákonníka veriteľovi vzniklo aj právo na paušálnu náhradu nákladov spojených s uplatnením pohľadávky, ktorá podľa § 2 nariadenia vlády MS SR č. 21/2013 Z.z. predstavovala jednorazovo 40 Eur bez ohľadu na dĺžku omeškania.",
+                "chunk_id": "full_doc"
+              }
+            },
+            {
+              "label": "spravanie_veritela",
+              "sentiment": "neutral",
+              "evidence": {
+                "quote": "Pokiaľ si žalobca uplatnil úroky z omeškania od splatnosti faktúr, okresný súd neposúdil splatnosť určenú žalobcom za správnu, pretože žalobca nesprávne určil túto splatnosť",
+                "chunk_id": "full_doc"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "quality_control": {
+      "flags": [
+        "EVIDENCE_INFLECTION_MISMATCH:pokuta_1.breach_type",
+        "EVIDENCE_QUOTE_REPAIRED:pokuta_2.associated_interest"
+      ],
+      "missing_fields": []
+    },
+    "meta": {
+      "doc_id": "KS_Žilina_13Cob_128_2017_00_dokument",
+      "court_name": "Krajský súd Žilina",
+      "case_number": "13Cob/128/2017",
+      "decision_date": "24.01.2018",
+      "ecli": "ECLI:SK:KSZA:2018:5115233752.1",
+      "document_type": "Rozsudok"
+    }
+  }
+}
