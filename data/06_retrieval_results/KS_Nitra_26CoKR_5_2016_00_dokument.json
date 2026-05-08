@@ -1,0 +1,246 @@
+{
+  "source_file": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf",
+  "case_id": "26CoKR/5/2016",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "29.06.2016",
+    "case_id": "26CoKR/5/2016",
+    "ecli": "ECLI:SK:KSNR:2016:4115201281.1",
+    "court": "Krajský súd Nitra",
+    "document_type": "Uznesenie"
+  },
+  "header": "Súd: Krajský súd Nitra\nSpisová značka: 26CoKR/5/2016\nIdentifikačné číslo súdneho spisu: 4115201281\nDátum vydania rozhodnutia: 29. 06. 2016\nMeno a priezvisko sudcu, VSÚ: Mgr. Erik Németh\nECLI: ECLI:SK:KSNR:2016:4115201281.1",
+  "verdict": "Uznesenie Krajský súd v Nitre v právnej veci žalobcu: BPT LEASING, a.s., so sídlom: Drieňová 34, Bratislava, IČO: 31 357 814, zastúpený: Mgr. Vladimír Šárnik, advokát, so sídlom: Rožňavská 2, Bratislava, proti žalovanému: B.F.B. správcovská, v.o.s., so sídlom: Radlinského 50, Piešťany, IČO: 36 832 006, správca konkurznej podstaty úpadcu V. L., nar. XX.XX.XXXX, bytom: O. XXXX/XX, O., o určenie pravosti pohľadávky, o odvolaní žalobcu proti rozsudku Okresného súdu Nitra č. k. 23Cbi/4/2015 - 60 zo dňa 19. februára 2016 v časti rozhodnutia o trovách konania, jednohlasne, takto\n\nrozhodol: Odvolací súd rozsudok Okresného súdu Nitra č. k. 23Cbi/4/2015 - 60 zo dňa 19. februára 2016 v napadnutej časti potvrdzuje.\n\nOdvolací súd žalobcovi náhradu trov odvolacieho konania nepriznáva.",
+  "reasoning_full": "odôvodnenie: Okresný súd Nitra výrokom I. rozsudku č. k. 23Cbi/4/2015 - 60 zo dňa 19. februára 2016 určil, že žalobca je veriteľom pohľadávky vo výške 393,12 eura titulom trov exekúcie vykonávanej súdnym exekútorom Mgr. Miroslavom Pinterom, spis. zn. Ex 355/10, pozostávajúcich z trov právneho zastúpenia navrhovateľa v exekúcii vo výške 284,96 eura, súdneho poplatku vo výške 16,50 eura, vecných nákladov žalobcu v exekučnom konaní vo výške 3,16 eura a náhrady trov exekútora vo výške 88,50 eura, ktorá bola prihlásená žalobcom v konkurze vedenom na Okresnom súde Nitra, spis. zn. 31K/44/2014 pod poradovým číslom 1.\n\nVýrokom II. tohto rozsudku súd určil, že žalobca je veriteľom pohľadávky vo výške 10.251,08 eura titulom ručenia úpadcu za záväzky spoločnosti ROMUS spol. s r.o., IČO: 34 096 256, so sídlom: Hlavné námestie 7, 940 01 Nové Zámky, zo zmluvy o finančnom lízingu č. 0977/28, pozostávajúcej zo zmluvnej pokuty vo výške 10.251,08 eura a úroku z omeškania vo výške 23,75 eura, ktorá bola prihlásená žalobcom v konkurze vedenom na Okresnom súde Nitra spis. zn. 31K/44/2014 pod poradovým číslom 2.\n\nVýrokom III. súd prvého stupňa žalobu vo zvyšku zamietol.\n\nNapokon výrokom IV. súd rozhodol o trovách konania tak, že žiadny z účastníkov nemá právo na ich náhradu.\n\nVýrokmi I. až III. súd prvého stupňa rozhodol o nároku vo veci samej. Z odôvodnenia prvostupňového rozsudku vyplýva, že zamietnutie žaloby vo zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85 eura, keďže súd prvého stupňa určil, že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura výrokom II. napadnutého rozsudku. Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.\n\nO trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 2 O. s. p., a keďže obaja účastníci mali vo veci úspech iba čiastočný, rozhodol že žiadny z účastníkov nemá na náhradu trov právo.\n\nProti tomuto rozsudku výlučne v časti rozhodnutia o trovách konania podal žalobca včasné odvolanie.\n\nDomáhal sa ním, aby odvolací súd prvostupňový rozsudok v napadnutej časti zmenil tak, že mu prizná plnú náhradu trov konania. Argumentoval tým, že jeho čiastočný neúspech bol výlučne dôsledkom využitia moderačného oprávnenia zo strany prvostupňového súdu. Výška priznaného plnenia závisela od úvahy súdu čo znamená, že ide o situáciu predvídanou v ustanovení § 142 ods. 3 O. s. p.. Namietal tiež, že základom pre určenie trov právneho zastúpenia mala byť suma uplatnenej pohľadávky, z čoho je v zmysle § 10 ods. 2 vyhlášky č. 655/2004 Z. z. o odmenách advokátov potrebné vychádzať pri určení trov právneho zastúpenia.\n\nKrajský súd v Nitre, ako súd odvolací prejednal odvolanie žalobcu bez nariadenia pojednávania v súlade s § 214 O. s. p., pričom dospel k záveru, že odvolanie je neopodstatnené z nasledujúcich dôvodov.\n\nZ odvolania žalobcu je zrejmé, že sa domnieva, že v danom prípade v danom prípade z hľadiska výsledku konania nastala situácia predpokladaná v § 142 ods. 3 O. s. p., podľa ktorého aj keď mal účastník vo veci úspech len čiastočný, môže mu súd priznať plnú náhradu trov konania, ak mal neúspech v pomerne nepatrnej časti alebo ak rozhodnutie o výške plnenia záviselo od znaleckého posudku alebo od úvahy súdu; v takom prípade sa základná sadzba tarifnej odmeny advokáta vypočíta z výšky súdom priznaného plnenia. Právny zástupca žalobcu v odvolaní poukazuje na to, že výška priznaného plnenia v predmetnom spore závisela od úvahy súdu, ktorý výšku nároku na zmluvnú pokutu znížil využijúc svoje moderačné oprávnenie podľa § 301 Obchodného zákonníka. Takáto argumentácia žalobcu však vychádzala z mylnej premisy, že predmetné rozhodnutie vo veci samej má charakter rozhodnutia zaväzujúceho na plnenie. V prípade toto rozhodnutia však ide o rozhodnutie o incidenčnej žalobe, čiže žaloby, ktorou veriteľ iniciuje konanie o určenie svojej pohľadávky popretej v konkurze.\n\nSúdy v rozhodnutiach o incidenčných žalobách nikdy nerozhodujú o povinnosti odporcu poskytnúť navrhovateľovi peňažné plnenie, ale o určení právneho dôvodu, vymáhateľnosti, poradia a výšky pohľadávky, ďalej zabezpečenia zabezpečovacím právom alebo poradia zabezpečovacieho práva (viď § 32 ods. 15 zákona o konkurze a reštrukturalizácii).\n\nZ citovaného ustanovenia § 142 ods. 3 O. s. p. je pritom zrejmé, že jeho aplikácia na rozhodnutie o trovách konania prichádza do úvahy výlučne pri rozhodnutiach, ktoré zaväzujú na plnenie, ako to vo svojom rozhodnutí judikoval už aj Najvyšší súd Českej republiky pod sp. zn. 22Cdo 245/2014. Keďže rozsudok v prejednávanej veci nie je rozsudkom zaväzujúcim na plnenie, nie je možné pri rozhodovaní o trovách konania postupovať podľa § 142 ods. 3 O. s. p.. Súd prvého stupňa postupoval správne, ak na rozhodnutie o trovách konania z dôvodu čiastočného úspechu oboch účastníkov aplikoval § 142 ods. 2 O. s. p., v dôsledku čoho vyslovil, že žiadny z účastníkov nemá právo na náhradu trov konania.\n\nOdvolací súd preto podľa § 219 ods. 1 a 2 O. s. p. napadnuté uznesenie ako vecne správne potvrdil.\n\nO trovách odvolacieho konania bolo rozhodnuté podľa § 224 ods. 1 v súvislosti s § 142 ods. 1 O. s. p. tak, že odvolací súd ich náhradu v odvolacom konaní úspešnému žalovanému nepriznal z dôvodu, že mu v súvislosti s odvolacím konaním žiadne trovy nevznikli.\n\nToto rozhodnutie prijal senát Krajského súdu v Nitre pomerom hlasov 3: 0.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Okresný súd Nitra výrokom I. rozsudku č. k. 23Cbi/4/2015 - 60 zo dňa 19. februára 2016 určil, že žalobca je veriteľom pohľadávky vo výške 393,12 eura titulom trov exekúcie vykonávanej súdnym exekútorom Mgr. Miroslavom Pinterom, spis. zn. Ex 355/10, pozostávajúcich z trov právneho zastúpenia navrhovateľa v exekúcii vo výške 284,96 eura, súdneho poplatku vo výške 16,50 eura, vecných nákladov žalobcu v exekučnom konaní vo výške 3,16 eura a náhrady trov exekútora vo výške 88,50 eura, ktorá bola prihlásená žalobcom v konkurze vedenom na Okresnom súde Nitra, spis. zn. 31K/44/2014 pod poradovým číslom 1.",
+      "score": 0.761548,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "Výrokom II. tohto rozsudku súd určil, že žalobca je veriteľom pohľadávky vo výške 10.251,08 eura titulom ručenia úpadcu za záväzky spoločnosti ROMUS spol. s r.o., IČO: 34 096 256, so sídlom: Hlavné námestie 7, 940 01 Nové Zámky, zo zmluvy o finančnom lízingu č. 0977/28, pozostávajúcej zo zmluvnej pokuty vo výške 10.251,08 eura a úroku z omeškania vo výške 23,75 eura, ktorá bola prihlásená žalobcom v konkurze vedenom na Okresnom súde Nitra spis. zn. 31K/44/2014 pod poradovým číslom 2.",
+      "score": 0.942364,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Výrokom III. súd prvého stupňa žalobu vo zvyšku zamietol.",
+      "score": 0.638376,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Výrokmi I. až III. súd prvého stupňa rozhodol o nároku vo veci samej. Z odôvodnenia prvostupňového rozsudku vyplýva, že zamietnutie žaloby vo zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85 eura, keďže súd prvého stupňa určil, že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura výrokom II. napadnutého rozsudku. Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.",
+      "score": 0.935156,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "O trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 2 O. s. p., a keďže obaja účastníci mali vo veci úspech iba čiastočný, rozhodol že žiadny z účastníkov nemá na náhradu trov právo.",
+      "score": 0.58078,
+      "source_queries": [
+        "q_contract",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Proti tomuto rozsudku výlučne v časti rozhodnutia o trovách konania podal žalobca včasné odvolanie.",
+      "score": 0.542534,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Domáhal sa ním, aby odvolací súd prvostupňový rozsudok v napadnutej časti zmenil tak, že mu prizná plnú náhradu trov konania. Argumentoval tým, že jeho čiastočný neúspech bol výlučne dôsledkom využitia moderačného oprávnenia zo strany prvostupňového súdu. Výška priznaného plnenia závisela od úvahy súdu čo znamená, že ide o situáciu predvídanou v ustanovení § 142 ods. 3 O. s. p.. Namietal tiež, že základom pre určenie trov právneho zastúpenia mala byť suma uplatnenej pohľadávky, z čoho je v zmysle § 10 ods. 2 vyhlášky č. 655/2004 Z. z. o odmenách advokátov potrebné vychádzať pri určení trov právneho zastúpenia.",
+      "score": 0.53825,
+      "source_queries": [
+        "q_breach",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Z odvolania žalobcu je zrejmé, že sa domnieva, že v danom prípade v danom prípade z hľadiska výsledku konania nastala situácia predpokladaná v § 142 ods. 3 O. s. p., podľa ktorého aj keď mal účastník vo veci úspech len čiastočný, môže mu súd priznať plnú náhradu trov konania, ak mal neúspech v pomerne nepatrnej časti alebo ak rozhodnutie o výške plnenia záviselo od znaleckého posudku alebo od úvahy súdu; v takom prípade sa základná sadzba tarifnej odmeny advokáta vypočíta z výšky súdom priznaného plnenia. Právny zástupca žalobcu v odvolaní poukazuje na to, že výška priznaného plnenia v predmetnom spore závisela od úvahy súdu, ktorý výšku nároku na zmluvnú pokutu znížil využijúc svoje moderačné oprávnenie podľa § 301 Obchodného zákonníka. Takáto argumentácia žalobcu však vychádzala z mylnej premisy, že predmetné rozhodnutie vo veci samej má charakter rozhodnutia zaväzujúceho na plnenie. V prípade toto rozhodnutia však ide o rozhodnutie o incidenčnej žalobe, čiže žaloby, ktorou veriteľ iniciuje konanie o určenie svojej pohľadávky popretej v konkurze.",
+      "score": 0.6,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Súdy v rozhodnutiach o incidenčných žalobách nikdy nerozhodujú o povinnosti odporcu poskytnúť navrhovateľovi peňažné plnenie, ale o určení právneho dôvodu, vymáhateľnosti, poradia a výšky pohľadávky, ďalej zabezpečenia zabezpečovacím právom alebo poradia zabezpečovacieho práva (viď § 32 ods. 15 zákona o konkurze a reštrukturalizácii).",
+      "score": 0.368436,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_12",
+      "chunk_index": 12,
+      "text": "Odvolací súd preto podľa § 219 ods. 1 a 2 O. s. p. napadnuté uznesenie ako vecne správne potvrdil.",
+      "score": 0.458167,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "O trovách odvolacieho konania bolo rozhodnuté podľa § 224 ods. 1 v súvislosti s § 142 ods. 1 O. s. p. tak, že odvolací súd ich náhradu v odvolacom konaní úspešnému žalovanému nepriznal z dôvodu, že mu v súvislosti s odvolacím konaním žiadne trovy nevznikli.",
+      "score": 0.549329,
+      "source_queries": [
+        "q_contract",
+        "q_rate"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "Výrokom II. tohto rozsudku súd určil, že žalobca je veriteľom pohľadávky vo výške 10.251,08 eura titulom ručenia úpadcu za záväzky spoločnosti ROMUS spol. s r.o., IČO: 34 096 256, so sídlom: Hlavné námestie 7, 940 01 Nové Zámky, zo zmluvy o finančnom lízingu č. 0977/28, pozostávajúcej zo zmluvnej pokuty vo výške 10.251,08 eura a úroku z omeškania vo výške 23,75 eura, ktorá bola prihlásená žalobcom v konkurze vedenom na Okresnom súde Nitra spis. zn. 31K/44/2014 pod poradovým číslom 2.",
+      "score": 0.5344,
+      "source_queries": [
+        "q_outcome",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Výrokom III. súd prvého stupňa žalobu vo zvyšku zamietol.",
+      "score": 0.562258,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Výrokmi I. až III. súd prvého stupňa rozhodol o nároku vo veci samej. Z odôvodnenia prvostupňového rozsudku vyplýva, že zamietnutie žaloby vo zvyšnej časti sa týka zamietnutia určenia, že žalobca je veriteľom pohľadávky vo výške 27.671,85 eura, keďže súd prvého stupňa určil, že žalobca je veriteľom uvedenej pohľadávky iba vo výške 10.251,08 eura výrokom II. napadnutého rozsudku. Súd prvého stupňa moderoval výšku predmetnej pohľadávky (zmluvnej pokuty) postupom podľa § 301 Obchodného zákonníka, keďže dospel k záveru, že predmetná zmluvná pokuta je neprimerane vysoká s prihliadnutím na význam zabezpečovanej povinnosti.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Domáhal sa ním, aby odvolací súd prvostupňový rozsudok v napadnutej časti zmenil tak, že mu prizná plnú náhradu trov konania. Argumentoval tým, že jeho čiastočný neúspech bol výlučne dôsledkom využitia moderačného oprávnenia zo strany prvostupňového súdu. Výška priznaného plnenia závisela od úvahy súdu čo znamená, že ide o situáciu predvídanou v ustanovení § 142 ods. 3 O. s. p.. Namietal tiež, že základom pre určenie trov právneho zastúpenia mala byť suma uplatnenej pohľadávky, z čoho je v zmysle § 10 ods. 2 vyhlášky č. 655/2004 Z. z. o odmenách advokátov potrebné vychádzať pri určení trov právneho zastúpenia.",
+      "score": 0.71695,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Z odvolania žalobcu je zrejmé, že sa domnieva, že v danom prípade v danom prípade z hľadiska výsledku konania nastala situácia predpokladaná v § 142 ods. 3 O. s. p., podľa ktorého aj keď mal účastník vo veci úspech len čiastočný, môže mu súd priznať plnú náhradu trov konania, ak mal neúspech v pomerne nepatrnej časti alebo ak rozhodnutie o výške plnenia záviselo od znaleckého posudku alebo od úvahy súdu; v takom prípade sa základná sadzba tarifnej odmeny advokáta vypočíta z výšky súdom priznaného plnenia. Právny zástupca žalobcu v odvolaní poukazuje na to, že výška priznaného plnenia v predmetnom spore závisela od úvahy súdu, ktorý výšku nároku na zmluvnú pokutu znížil využijúc svoje moderačné oprávnenie podľa § 301 Obchodného zákonníka. Takáto argumentácia žalobcu však vychádzala z mylnej premisy, že predmetné rozhodnutie vo veci samej má charakter rozhodnutia zaväzujúceho na plnenie. V prípade toto rozhodnutia však ide o rozhodnutie o incidenčnej žalobe, čiže žaloby, ktorou veriteľ iniciuje konanie o určenie svojej pohľadávky popretej v konkurze.",
+      "score": 0.92,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Súdy v rozhodnutiach o incidenčných žalobách nikdy nerozhodujú o povinnosti odporcu poskytnúť navrhovateľovi peňažné plnenie, ale o určení právneho dôvodu, vymáhateľnosti, poradia a výšky pohľadávky, ďalej zabezpečenia zabezpečovacím právom alebo poradia zabezpečovacieho práva (viď § 32 ods. 15 zákona o konkurze a reštrukturalizácii).",
+      "score": 0.364555,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "Z citovaného ustanovenia § 142 ods. 3 O. s. p. je pritom zrejmé, že jeho aplikácia na rozhodnutie o trovách konania prichádza do úvahy výlučne pri rozhodnutiach, ktoré zaväzujú na plnenie, ako to vo svojom rozhodnutí judikoval už aj Najvyšší súd Českej republiky pod sp. zn. 22Cdo 245/2014. Keďže rozsudok v prejednávanej veci nie je rozsudkom zaväzujúcim na plnenie, nie je možné pri rozhodovaní o trovách konania postupovať podľa § 142 ods. 3 O. s. p.. Súd prvého stupňa postupoval správne, ak na rozhodnutie o trovách konania z dôvodu čiastočného úspechu oboch účastníkov aplikoval § 142 ods. 2 O. s. p., v dôsledku čoho vyslovil, že žiadny z účastníkov nemá právo na náhradu trov konania.",
+      "score": 0.382553,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_12",
+      "chunk_index": 12,
+      "text": "Odvolací súd preto podľa § 219 ods. 1 a 2 O. s. p. napadnuté uznesenie ako vecne správne potvrdil.",
+      "score": 0.435902,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26CoKR_5_2016_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "O trovách odvolacieho konania bolo rozhodnuté podľa § 224 ods. 1 v súvislosti s § 142 ods. 1 O. s. p. tak, že odvolací súd ich náhradu v odvolacom konaní úspešnému žalovanému nepriznal z dôvodu, že mu v súvislosti s odvolacím konaním žiadne trovy nevznikli.",
+      "score": 0.583121,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 15,
+    "call1_unique_chunks": 11,
+    "call2_unique_chunks": 9,
+    "call1_total_chars": 4436,
+    "call2_total_chars": 4233
+  }
+}

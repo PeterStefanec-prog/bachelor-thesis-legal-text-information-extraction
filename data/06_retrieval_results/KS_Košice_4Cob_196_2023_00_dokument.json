@@ -1,0 +1,278 @@
+{
+  "source_file": "KS_Košice_4Cob_196_2023_00_dokument.pdf",
+  "case_id": "4Cob/196/2023",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "26.03.2025",
+    "case_id": "4Cob/196/2023",
+    "ecli": "ECLI:SK:KSKE:2025:6120323583.1",
+    "court": "Krajský súd Košice",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Košice\nSpisová značka: 4Cob/196/2023\nIdentifikačné číslo súdneho spisu: 6120323583\nDátum vydania rozhodnutia: 26. 03. 2025\nMeno a priezvisko sudcu, VSÚ: JUDr. Július Tóth\nECLI: ECLI:SK:KSKE:2025:6120323583.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajsky´ su´d v Kosˇiciach v sena´te zlozˇenom z predsedu sena´tu JUDr. Júliusa Tótha a sudcov JUDr. Mareka Kotoru a JUDr. Lucie Baňackej PhD. v spore žalobcu: A. B. C. - KON TIKI, s miestom podnikania Slovenskej jednoty 33, 040 01 Košice - Sever, IČO: 14 399 121 proti žalovanému: D. E., E.: XX.X.XXXX, A. XX, XXX XX C. - F., právne zastúpený advokátom: Mgr. Peter Kocák, Rožňavská 8, 045 01 Moldava nad Bodvou v konaní o zaplatenie 3.500,- Eur s prísl., o odvolaní žalovaného proti rozsudku Okresného súdu Košice II č.k. 30Cb/29/2020-287 z 16. marca 2023 takto\n\nrozhodol: I. Potvrdzuje rozsudok Okresného súdu Košice II č.k. 30Cb/29/2020-287 z 16. marca 2023.\n\nII. Žalobcovi priznáva voči žalovanému nárok na náhradu trov odvolacieho konania v plnom rozsahu.",
+  "reasoning_full": "odôvodnenie:\n\n1. Súd prvej inštancie napadnutým rozsudkom rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania vo výške 8 % ročne od 27.04.2017 do zaplatenia (výrok I.) a žalobcovi priznal náhradu trov konania v rozsahu 100 % (výrok II.) 2. Súd prvej inštancie toto rozhodnutie odôvodnil tým, že žalobca sa žalobou podanou dňa 21.06.2020 domáhal, aby súd žalovanému uložil povinnosť zaplatiť mu sumu 3.500 eur s prísl. titulom nároku z ručenia za záväzok hlavného dlžníka zaplatiť žalobcovi zmluvnú pokutu a priznal náhradu trov konania.\n\n3. Žalobca v podanej žalobe uviedol, že ako objednávateľ uzatvoril dňa 26.09.2016 so spoločnosťou Montáže Košice, s.r.o., IČO: 50 409 565 Zmluvu o dielo č. 1/2016, na základe ktorej sa uvedená spoločnosť zaviazala zhotoviť pre žalobcu dohodnuté dielo, a to napojenie odlučovača ropných látok na jestvujúcu kanalizáciu odpadových vôd, výstavbu príjazdovej komunikácie s oporným múrom a schodiskom k novovzniknutej terase a chodníku, vystavanie ORL a vykonanie terénnych úprav. Cena diela bola dohodnutá na sumu 6.372,36 eur s tým, že žalobca sa zaviazal uhradiť zhotoviteľovi zálohu vo výške 3.500,- eur s DPH. Dielo malo byť žalobcovi dodané v rozmedzí od 06.09.2016 do 14.10.2016.\n\nZmluvné strany sa v zmluve dohodli, že ak sa zhotoviteľ dostane s odovzdaním predmetu diela do omeškania, zaplatí objednávateľovi zmluvnú pokutu vo výške 0,05 % z ceny diela za každý deň omeškania. Ak zhotoviteľ neodovzdá dielo riadne ani do 60 kalendárnych dní odo dňa určeného v zmluve ako deň odovzdania, zaplatí objednávateľovi zmluvnú pokutu vo výške 3.500,- eur, pričom nárok na náhradu škody tým nie je dotknutý.\n\nŽalovaný sa v ručiteľskom vyhlásení zaviazal, že zmluvnú pokutu žalobcovi uhradí, ak tak dobrovoľne, riadne a včas neurobí zhotoviteľ.\n\nZo strany spoločnosti Montáže Košice, s.r.o. nedošlo k zhotoveniu a odovzdaniu diela riadne a včas a žalobcovi vznikol nárok na zmluvnú pokutu vo výške 3.500,- eur podľa čl. VIII bodu 1 Zmluvy o dielo.\n\nŽalobca vyzval dňa 09.02.2017 zhotoviteľa na zaplatenie zmluvnej pokuty vo výške 3.500,- eur. Zmluvná pokuta nebola ani čiastočne uhradená. Žalobca dňa 27.03.2017 vyzval na úhradu zmluvnej pokuty žalovaného ako ručiteľa. Ani zo strany žalovaného však nebola zmluvná pokuta ani čiastočne uhradená.\n\n4. Žalovaný v odpore proti vydanému platobnému rozkazu poukázal na akcesorický a subsidiárny charakter ručenia a podmienky pre jeho uplatnenie podľa § 303 a § 306 zákona č. 513/1991 Zb. Obchodného zákonníka (ďalej len OBZ). Žalovaný uviedol, že v konaní nie je preukázané, že sa výzva na úhradu zmluvnej pokuty dostala do dispozičnej sféry dlžníka. Vyhlásil, že ručiteľské vyhlásenie nikdy nepodpísal a podpis na listine nie je jeho. Žalovaný namietal, že zmluvná pokuta vo výške 3.500,- eur je neprimerane vysokou. Uviedol tiež, že spoločnosť Montáže Košice s.r.o. vykonala dielo riadne a včas, chcela dielo odovzdať žalobcovi, avšak tento ho neprevzal.\n\n5. Súd prvej inštancie vykonal dokazovanie a zistil, tento skutkový stav: Medzi žalobcom ako objednávateľom a zhotoviteľom - Montáže Košice s.r.o. bola dňa 29.06.2016 uzavretá Zmluva o dielo č. 1/2016 podľa Obchodného zákonníka.\n\nŽalovaný na seba platne prevzal ručiteľský záväzok, ktorým zabezpečil záväzok spoločnosti Montáže Košice s.r.o. podľa Zmluvy o dielo č. 1/2016 zaplatiť žalobcovi zmluvnú pokutu vo výške 3.500,00 eur v prípade omeškania s odovzdaním diela.\n\nSúd prvej inštancie uzavrel, že zhotoviteľ vykonal pre žalobcu časť diela, v konaní však nebolo preukázané jeho ukončenie a riadne odovzdanie objednávateľovi.\n\nŽalobca vyzval spoločnosť Montáže Košice s.r.o. ako dlžníka na úhradu zmluvnej pokuty výzvou k úhrade dlhu zo dňa 09.02.2017 a následne listom zo dňa 27.03.2017 vyzval na úhradu zmluvnej pokuty žalovaného ako ručiteľa.\n\n6. Súd prvej inštancie spor právne posúdil podľa §§ 301, 303, 306 ods. 1, 536, 544 OBZ a čl. 8, § 153 zákona 160/2015 Z.z. Civilného sporového poriadku.\n\n7. Súd prvej inštancie vo vzťahu k tvrdeniu žalovaného, že podpis na ručiteľskom vyhlásení nie je jeho a nikdy predmetný dokument nepodpísal, poukázal na rozhodnutie Najvyššieho súdu Slovenskej republiky\n\nsp. zn. 4Obdo/54/2019 zo dňa 31.08.2020 a uviedol, že žalobca predložil listinný dôkaz, ktorý žalovaný spochybnil len tvrdením, že podpis na ručiteľskom vyhlásení nie je jeho, ale na preukázanie tohto tvrdenia neuviedol žiadne iné tvrdenia ani nenavrhol vykonanie žiadneho dokazovania (napr. znalecké dokazovanie, ktoré môže súd nariadiť v spore len na návrh strany). Podľa súdu prvej inštancie, pokiaľ žalovaný poprel pravosť jeho podpisu na ručiteľskom vyhlásení, nedošlo tým k presunu dôkazného bremena v tom zmysle, že by žalobcovi vznikla povinnosť preukázať, že listina je pravá. Práve naopak, v dôsledku toho, že svoje tvrdenie žalovaný nepreukázal, bolo vydané pre neho nepriaznivé rozhodnutie.\n\nZ uvedeného dôvodu súd prvej inštancie uzavrel, že ručiteľské vyhlásenie žalovaného je platné.\n\n8. Súd prvej inštancie vo vzťahu k tvrdeniu žalovaného, že nebola dodržaná zásada subsidiarity, keď žalobca nepreukázal, že najprv na úhradu zmluvnej pokuty vyzval dlžníka, uzavrel, že žalobca uniesol dôkazné bremeno doručenia výzvy na úhradu dlhu dlžníkovi, a to predložením podacieho lístka zo dňa 10.2.2017.\n\n9. Súd prvej inštancie vo vzťahu k tvrdeniu žalovaného, že dielo bolo riadne vykonané a k jeho odovzdaniu nedošlo z dôvodov na strane žalobcu, poukázal na listinné dôkazy, vrátane fotodokumentácie, ktoré predložili strany v konaní, výpovede žalobcu a žalovaného, výpoveď svedka G.\n\nH. a uzavrel, že dielo bolo vykonané len čiastočne, bez hydroizolácie, napojenia odlučovača ropných látok na jestvujúcu kanalizáciu odpadových vôd a filtračných častí, preto ani na základe výzvy zhotoviteľa zo dňa 18.11.2016 nemohlo byť dielo riadne odovzdané žalobcovi.\n\n10. Súd prvej inštancie zároveň uzavrel, že nie je dôvod na moderáciu zmluvnej pokuty so zreteľom na hodnotu a význam zabezpečenej povinnosti, keďže výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti, ktorá je v tomto prípade podstatnou zmluvnou náležitosťou zmluvy o dielo.\n\n11. Proti rozsudku súdu prvej inštancie podal v zákonnej lehote odvolanie žalovaný. Navrhol, aby odvolací súd napadnutý rozsudok zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie. Odvolanie odôvodnil tým, že súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam (§ 365 ods. 1 písm. f CSP) a rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci (§ 365 ods. 1 písm. h) CSP).\n\n12. Žalovaný v odvolaní uviedol, že súd prvej inštancie vec nesprávne právne posúdil z dôvodu, že ručiteľské vyhlásenie, od ktorého žalobca odvodzuje svoj nárok voči žalovanému, je súkromnou listinou.\n\nNa rozdiel od verejnej listiny, kde dôkazné bremeno spočíva na tom, kto popiera jej správnosť, u súkromnej listiny postačuje \"formálne\" popretie jej správnosti druhým účastníkom. Dôkazné bremeno týkajúce sa pravosti je na tej strane, ktorá zo skutočností v listine uvedených vyvodzuje pre seba priaznivé právne následky.\n\n13. Žalovaný poprel pravosť a správnosť ručiteľského vyhlásenia, ktoré predložil žalobca ako dôkaz, ako aj pravosť jeho podpisu na tomto ručiteľskom vyhlásení, dôkaznú povinnosť a dôkazné bremeno o tom, že táto listina a podpis na nej je skutočne podpisom žalovaného mal v tomto prípade znášať žalobca, pričom toto dôkazné bremeno žalobca v konaní neuniesol. Z uvedeného dôvodu nemal súd prvej inštancie žalobe vyhovieť, ale žalobu mal v celom rozsahu zamietnuť.\n\n14. Žalovaný pritom poukázal na uznesenie Najvyššieho súdu Slovenskej republiky zo dňa 24.02.2010, sp. zn. 4Cdo/13/2009 a na toto rozhodnutie odkazujúcu právnu spisbu.\n\n15. Žalovaný ďalej tvrdil, že súd prvej inštancie nesprávne zistil skutkový stav, keď uzavrel, že zásada subsidiarity ručenia bola dodržaná. Z vykonaného dokazovania podľa žalovaného nevyplýva, že žalobca najprv vyzval na zaplatenie zmluvnej pokuty dlžníka. Medzi žalobcom a žalovaným prebiehalo viacero poštových komunikácii (uvedené vyplýva aj z konania vedeného Mestským súdom Košice pod sp.zn. 27C/52/2019). Žalobca preto predložením podacieho lístka v konaní pred súdom prvej inštancie nepreukázal, že dlžníkovi zasielal práve výzvu na úhradu zmluvnej pokuty. Poukázal na predloženie rôznych podacích lístkov žalobcom.\n\n16. Žalobca vo vyjadrení k odvolaniu poukázal na to, že žalovaný v odvolaní nespochybňuje záver súdu prvej inštancie o tom, že dielo nebolo riadne ukončené a odovzdané. Uviedol, že v konaní predložil viacero nepriamych listinných dôkazov na preukázanie pravosti podpisu žalovaného na ručiteľskom vyhlásení. Uviedol, že bez podpísania ručiteľského vyhlásenia by bola nevymožiteľná pohľadávka žalobcu na vrátenie zálohy za vykonanie diela. Žalobca tiež poukázal na neaplikovateľnosť rozhodnutia NS SR 4Cdo/13/2009, t.j. rozhodnutia, ktorým v konaní argumentuje žalovaný, ktoré bolo judikované za účinnosti Občianskeho súdneho poriadku za inej skutkovej situácie. V predmetnom rozhodnutí NS SR uplatnil negatívnu dôkaznú teóriu vo vzťahu k spornej otázke nezaplatenia dlhu.\n\nŽalobca poukázal na rozhodnutie NS SR sp. zn. 4 Obdo54/2019, ktoré jasne uzatvára, že v prípade popretia pravosti podpisu súkromnej listiny sa negatívna dôkazná teória neaplikuje. NS SR v tomto rozhodnutí uvádza, že pokiaľ strana v konaní popiera pravosť podpisu na ručiteľskom vyhlásení, nedochádza k presunu dôkazného bremena na druhú procesnú stranu. Žalobca tiež poukázal na rozhodnutie NS ČR sp. zn. 22Cdo 3108/2010, ktoré zdôrazňuje prekonanie negatívnej dôkaznej teórie a argumentuje tým, že aj negatívne skutkové tvrdenia je možné v súdnom konaní preukázať.\n\nŽalobca poukázal na to, že sám žalovaný do konania predložil listiny, podpis na ktorých bol totožný s podpisom žalovaného na ručiteľskom vyhlásení. Suma na ručiteľskom vyhlásení bola totožná s výškou zálohy za dielo a zároveň výškou dojednanej zmluvnej pokuty.\n\nVo vzťahu k zásade subsidiarity žalobca zopakoval svoje skutkové tvrdenie, že výzvu na úhradu zmluvnej pokuty doručoval dlžníkovi opakovane. Zdôraznil, že výzva na úhradu dlhu bola dlžníkovi doručovaná v období, keď medzi stranami neprebiehala žiadna iná písomná komunikácia. Žalobca navyše uviedol, že vzhľadom na všetky okolnosti bolo v rozhodnom období zrejmé, že dlžník svoj dlh nemohol splniť.\n\n17. Krajský súd v Košiciach ako odvolací súd prejednal odvolanie žalovaného, ktoré bolo podané v zákonnej lehote, oprávnenou osobou, proti rozhodnutiu, proti ktorému je odvolanie prípustné, bez nariadenia pojednávania, pretože nejde o také odvolanie proti rozhodnutiu, na prejednanie ktorého je potrebné nariadiť odvolacie pojednávanie podľa § 385 ods. 1 CSP. Odvolanie prejednal podľa § 379 - § 385 CSP a dospel k záveru, že odvolanie žalovaného nie je dôvodné.\n\n18. Rozsudok odvolacieho súdu bol v zmysle § 378 ods. 1 a § 219 ods. 1 CSP odvolacím súdom verejne vyhlásený, čo bolo podľa § 219 ods. 3 CSP oznámené na úradnej tabuli krajského súdu.\n\n19. Žalovaný podanie odvolania odôvodnil dôvodmi podľa § 365 ods. 1 písm. f) CSP a § 365 ods. 1 písm. h) CSP t.j. tým, že súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam a tým, že rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci. Odvolací súd zastáva názor, že tieto odvolacie dôvody nie sú naplnené.\n\n20. Odvolací súd v odvolacom konaní posúdil relevantnosť odvolacích dôvodov, posúdil, či súd prvej inštancie správne zistil skutkový stav a na zistený skutkový stav správne aplikoval príslušné právne predpisy, či riadne svoje rozhodnutie odôvodnil s prihliadnutím na to, že v odôvodnení rozhodnutia nemusí byť daná odpoveď na každú námietku alebo argument v opravnom prostriedku, ale iba na tie, ktoré majú rozhodujúci význam pre rozhodnutie o odvolaní (Ústavný súd Slovenskej republiky II. ÚS 78/05).\n\n21. Po oboznámení sa s odôvodnením napadnutého rozsudku odvolací súd uzavrel, že súd prvej inštancie správne zistil skutkový stav a zo zisteného skutkového stavu vyvodil správny právny záver.\n\nOdvolací súd si osvojil odôvodnenie rozhodnutia súdu prvej inštancie, na ktoré v celom rozsahu odkazuje (§ 387 ods. 2 CSP). Na doplnenie a zdôraznenie správnosti napadnutého rozhodnutia, k odvolaniu žalovaného a k podstatným tvrdeniam strán sporu v tomto odvolacom konaní, odvolací súd udáva:\n\n22. Žalobca sa podanou žalobou domáha zaplatenia sumy 3.500 eur titulom ručenia za zaplatenie zmluvnej pokuty dojednanej v zmluve o dielo. Žalovaný v odvolaní namieta, že súd prvej inštancie nesprávne zistil skutkový stav, keď konštatoval, že bola dodržaná zásada subsidiarity ručenia a že vec nesprávne právne posúdil, keď uzavrel, že nedošlo k presunu dôkazného bremena na žalobcu po tom, čo žalovaný poprel pravosť jeho podpisu na ručiteľskom vyhlásení.\n\n23. Odvolací súd zdôrazňuje, že skutkový stav zistený súdom prvej inštancie skúmal len v rozsahu, v akom bol napadnutý odvolaním žalovaného. Žalobca v konaní tvrdil, že dodržal zásadu subsidiarity a dlžníka, za záväzok ktorého sa žalovaný zaručil, vyzval na plnenie celkom dvakrát. Žalobca v konaní predložil dva podacie lístky, ktorými preukazoval odoslanie výzvy dlžníkovi. Žalovaný svoju procesnú obranu obmedzil na tvrdenie, že predložené podacie lístky nepreukazujú, že predmetom zásielky je výzva na plnenie dlžníka a na námietku žalobcu, že v rozhodnom období medzi stranami neprebiehala žiadna iná písomná komunikácia, nereagoval. Nakoľko žalovaný nedoplnil popretie skutkového tvrdenia žalobcu o vlastné tvrdenia o predmetných skutkových okolnostiach, nekonkretizoval, aké iné listiny mu mohli byť žalobcom vo februári 2017 a februári 2018 doručované, súd považuje skutkový záver súdu prvej inštancie o dodržaní zásady subsidiarity za správny. Tvrdením žalobcu, že výzva dlžníka nebola potrebná z dôvodu, že bolo nepochybné, že dlžník svoj záväzok nesplní, sa vzhľadom na vyššie uvedený záver odvolací súd nezaoberal.\n\n24. Vo vzťahu k odvolaciemu dôvodu podľa § 365 ods. 1 písm. h) CSP, t.j., že súd prvej inštancie vec nesprávne právne posúdil, keď uzavrel, že po popretí pravosti ručiteľského vyhlásenia žalovaným nedošlo k presunu dôkazného bremena na žalobcu, odvolací súd uvádza, že je mu známy vývoj judikatúry najvyšších súdnych autorít aj vývoj názorov právnej vedy. Sám sa prikláňa k neskôr judikovaným záverom, podľa ktorých formálne popretie pravosti súkromnej listiny bez ďalšieho nemôže znamenať presun dôkazného bremena na druhú sporovú stranu.\n\nOdvolací súd zhodne s odvolateľom považuje ručiteľské vyhlásenie za súkromnú listinu, vo vzťahu ku ktorej žiadne ustanovenie hmotného ani procesného práva nezakotvuje právnu domnienku jej pravosti alebo správnosti. Subjekty vyhotovujú súkromnú listinu za účelom zachytenia jednoznačného obsahu ich dojednania práve preto, aby sa v prípadnom spore nedostali do dôkaznej núdze.\n\nFormálne popretie pravosti súkromnej listiny bez relevantných podrobných substancovaných vysvetlení a návrhov na dokazovanie, podľa názoru odvolacieho súdu, nemôže postačovať na to, aby predložená súkromná listina stratila svoju dôkaznú silu. Je to spravidla práve sporová strana popierajúca pravosť súkromnej listiny, ktorá disponuje inými svojimi podpismi z relevantného obdobia, a teda môže tieto predložiť alebo nepredložiť súdu na účely znaleckého dokazovania.\n\nOdvolací súd preto považuje za správny záver súdu prvej inštancie, že formálne popretie pravosti súkromnej listiny neznamená presun dôkazného bremena na druhú procesnú stranu.\n\n25. Podľa § 303 OBZ kto veriteľovi písomne vyhlási, že ho uspokojí, ak dlžník voči nemu nesplnil určitý záväzok, stáva sa dlžníkovým ručiteľom.\n\n26. Podľa § 306 ods. 1 OBZ, veriteľ je oprávnený domáhať sa splnenia záväzku od ručiteľa len v prípade, že dlžník nesplnil svoj záväzok v primeranej dobe po tom, čo ho na to veriteľ písomne vyzval.\n\nToto vyzvanie nie je potrebné, ak ho veriteľ nemôže uskutočniť alebo ak je nepochybné, že dlžník svoj záväzok nesplní, najmä pri vyhlásení konkurzu.\n\n27. Podľa § 536 ods. 1 OBZ zmluvou o dielo sa zaväzuje zhotoviteľ vykonať určité dielo a objednávateľ sa zaväzuje zaplatiť cenu za jeho vykonanie.\n\n28. Podľa § 554 ods. 1 OBZ zhotoviteľ splní svoju povinnosť vykonať dielo jeho riadnym ukončením a odovzdaním predmetu diela objednávateľovi v dohodnutom mieste, inak v mieste ustanovenom týmto zákonom. Ak je miestom odovzdania iné miesto, než je uvedené v odsekoch 2 a 4, vyzve zhotoviteľ objednávateľa, aby prevzal dielo.\n\n29. Podľa čl. 8 CSP strany sporu sú povinné označiť skutkové tvrdenia dôležité pre rozhodnutie vo veci a podoprieť svoje tvrdenia dôkazmi, a to v súlade s princípom hospodárnosti a podľa pokynov súdu.\n\n30. Podľa § 153 CSP strany sú povinné uplatniť prostriedky procesného útoku a prostriedky procesnej obrany včas. Prostriedky procesného útoku a prostriedky procesnej obrany nie sú uplatnené včas, ak ich strana mohla predložiť už skôr, ak by konala starostlivo so zreteľom na rýchlosť a hospodárnosť konania.\n\nNa prostriedky procesného útoku a prostriedky procesnej obrany, ktoré strana nepredložila včas, nemusí súd prihliadnuť, najmä ak by to vyžadovalo nariadenie ďalšieho pojednávania alebo vykonanie ďalších úkonov súdu. Ak súd na prostriedky procesného útoku alebo prostriedky procesnej obrany neprihliadne, uvedie to v odôvodnení rozhodnutia vo veci samej.\n\n31. Odvolací súd preto podľa § 387 ods. 1 CSP potvrdil rozsudok súdu prvej inštancie v celom rozsahu ako vecne správny. Taktiež potvrdil výrok rozsudku súdu prvej inštancie o trovách konania ako vecne správny.\n\n32. O trovách tohto odvolacieho konania odvolací súd rozhodol podľa § 396 ods. 1 CSP v spojení s ustanovením § 255 ods. 1 a § 262 ods. 1 CSP tak, že žalobcovi, ktorý bol v tomto odvolacom konaní úspešný, priznal plnú náhradu trov odvolacieho konania, ktoré je povinný nahradiť neúspešný žalovaný. O výške trov tohto odvolacieho konania podľa § 262 ods. 2 CSP rozhodne súd prvej inštancie samostatným uznesením.\n\n33. Toto rozhodnutie prijal senát Krajského súdu v Košiciach pomerom hlasov 3:0 (§ 393 ods. 2 posledná veta CSP).",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "1. Súd prvej inštancie napadnutým rozsudkom rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania vo výške 8 % ročne od 27.04.2017 do zaplatenia (výrok I.) a žalobcovi priznal náhradu trov konania v rozsahu 100 % (výrok II.) 2. Súd prvej inštancie toto rozhodnutie odôvodnil tým, že žalobca sa žalobou podanou dňa 21.06.2020 domáhal, aby súd žalovanému uložil povinnosť zaplatiť mu sumu 3.500 eur s prísl. titulom nároku z ručenia za záväzok hlavného dlžníka zaplatiť žalobcovi zmluvnú pokutu a priznal náhradu trov konania.",
+      "score": 0.65,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "3. Žalobca v podanej žalobe uviedol, že ako objednávateľ uzatvoril dňa 26.09.2016 so spoločnosťou Montáže Košice, s.r.o., IČO: 50 409 565 Zmluvu o dielo č. 1/2016, na základe ktorej sa uvedená spoločnosť zaviazala zhotoviť pre žalobcu dohodnuté dielo, a to napojenie odlučovača ropných látok na jestvujúcu kanalizáciu odpadových vôd, výstavbu príjazdovej komunikácie s oporným múrom a schodiskom k novovzniknutej terase a chodníku, vystavanie ORL a vykonanie terénnych úprav. Cena diela bola dohodnutá na sumu 6.372,36 eur s tým, že žalobca sa zaviazal uhradiť zhotoviteľovi zálohu vo výške 3.500,- eur s DPH. Dielo malo byť žalobcovi dodané v rozmedzí od 06.09.2016 do 14.10.2016. Zmluvné strany sa v zmluve dohodli, že ak sa zhotoviteľ dostane s odovzdaním predmetu diela do omeškania, zaplatí objednávateľovi zmluvnú pokutu vo výške 0,05 % z ceny diela za každý deň omeškania. Ak zhotoviteľ neodovzdá dielo riadne ani do 60 kalendárnych dní odo dňa určeného v zmluve ako deň odovzdania, zaplatí objednávateľovi zmluvnú pokutu vo výške 3.500,- eur, pričom nárok na náhradu škody tým nie je dotknutý. Žalovaný sa v ručiteľskom vyhlásení zaviazal, že zmluvnú pokutu žalobcovi uhradí, ak tak dobrovoľne, riadne a včas neurobí zhotoviteľ. Zo strany spoločnosti Montáže Košice, s.r.o. nedošlo k zhotoveniu a odovzdaniu diela riadne a včas a žalobcovi vznikol nárok na zmluvnú pokutu vo výške 3.500,- eur podľa čl. VIII bodu 1 Zmluvy o dielo. Žalobca vyzval dňa 09.02.2017 zhotoviteľa na zaplatenie zmluvnej pokuty vo výške 3.500,- eur. Zmluvná pokuta nebola ani čiastočne uhradená. Žalobca dňa 27.03.2017 vyzval na úhradu zmluvnej pokuty žalovaného ako ručiteľa. Ani zo strany žalovaného však nebola zmluvná pokuta ani čiastočne uhradená.",
+      "score": 0.954347,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "4. Žalovaný v odpore proti vydanému platobnému rozkazu poukázal na akcesorický a subsidiárny charakter ručenia a podmienky pre jeho uplatnenie podľa § 303 a § 306 zákona č. 513/1991 Zb. Obchodného zákonníka (ďalej len OBZ). Žalovaný uviedol, že v konaní nie je preukázané, že sa výzva na úhradu zmluvnej pokuty dostala do dispozičnej sféry dlžníka. Vyhlásil, že ručiteľské vyhlásenie nikdy nepodpísal a podpis na listine nie je jeho. Žalovaný namietal, že zmluvná pokuta vo výške 3.500,- eur je neprimerane vysokou. Uviedol tiež, že spoločnosť Montáže Košice s.r.o. vykonala dielo riadne a včas, chcela dielo odovzdať žalobcovi, avšak tento ho neprevzal.",
+      "score": 0.657284,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "5. Súd prvej inštancie vykonal dokazovanie a zistil, tento skutkový stav: Medzi žalobcom ako objednávateľom a zhotoviteľom - Montáže Košice s.r.o. bola dňa 29.06.2016 uzavretá Zmluva o dielo č. 1/2016 podľa Obchodného zákonníka. Žalovaný na seba platne prevzal ručiteľský záväzok, ktorým zabezpečil záväzok spoločnosti Montáže Košice s.r.o. podľa Zmluvy o dielo č. 1/2016 zaplatiť žalobcovi zmluvnú pokutu vo výške 3.500,00 eur v prípade omeškania s odovzdaním diela. Súd prvej inštancie uzavrel, že zhotoviteľ vykonal pre žalobcu časť diela, v konaní však nebolo preukázané jeho ukončenie a riadne odovzdanie objednávateľovi. Žalobca vyzval spoločnosť Montáže Košice s.r.o. ako dlžníka na úhradu zmluvnej pokuty výzvou k úhrade dlhu zo dňa 09.02.2017 a následne listom zo dňa 27.03.2017 vyzval na úhradu zmluvnej pokuty žalovaného ako ručiteľa.",
+      "score": 0.976581,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "7. Súd prvej inštancie vo vzťahu k tvrdeniu žalovaného, že podpis na ručiteľskom vyhlásení nie je jeho a nikdy predmetný dokument nepodpísal, poukázal na rozhodnutie Najvyššieho súdu Slovenskej republiky sp. zn. 4Obdo/54/2019 zo dňa 31.08.2020 a uviedol, že žalobca predložil listinný dôkaz, ktorý žalovaný spochybnil len tvrdením, že podpis na ručiteľskom vyhlásení nie je jeho, ale na preukázanie tohto tvrdenia neuviedol žiadne iné tvrdenia ani nenavrhol vykonanie žiadneho dokazovania (napr. znalecké dokazovanie, ktoré môže súd nariadiť v spore len na návrh strany). Podľa súdu prvej inštancie, pokiaľ žalovaný poprel pravosť jeho podpisu na ručiteľskom vyhlásení, nedošlo tým k presunu dôkazného bremena v tom zmysle, že by žalobcovi vznikla povinnosť preukázať, že listina je pravá. Práve naopak, v dôsledku toho, že svoje tvrdenie žalovaný nepreukázal, bolo vydané pre neho nepriaznivé rozhodnutie. Z uvedeného dôvodu súd prvej inštancie uzavrel, že ručiteľské vyhlásenie žalovaného je platné.",
+      "score": 0.655757,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "10. Súd prvej inštancie zároveň uzavrel, že nie je dôvod na moderáciu zmluvnej pokuty so zreteľom na hodnotu a význam zabezpečenej povinnosti, keďže výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti, ktorá je v tomto prípade podstatnou zmluvnou náležitosťou zmluvy o dielo.",
+      "score": 0.72,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "15. Žalovaný ďalej tvrdil, že súd prvej inštancie nesprávne zistil skutkový stav, keď uzavrel, že zásada subsidiarity ručenia bola dodržaná. Z vykonaného dokazovania podľa žalovaného nevyplýva, že žalobca najprv vyzval na zaplatenie zmluvnej pokuty dlžníka. Medzi žalobcom a žalovaným prebiehalo viacero poštových komunikácii (uvedené vyplýva aj z konania vedeného Mestským súdom Košice pod sp.zn. 27C/52/2019). Žalobca preto predložením podacieho lístka v konaní pred súdom prvej inštancie nepreukázal, že dlžníkovi zasielal práve výzvu na úhradu zmluvnej pokuty. Poukázal na predloženie rôznych podacích lístkov žalobcom.",
+      "score": 0.7,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "16. Žalobca vo vyjadrení k odvolaniu poukázal na to, že žalovaný v odvolaní nespochybňuje záver súdu prvej inštancie o tom, že dielo nebolo riadne ukončené a odovzdané. Uviedol, že v konaní predložil viacero nepriamych listinných dôkazov na preukázanie pravosti podpisu žalovaného na ručiteľskom vyhlásení. Uviedol, že bez podpísania ručiteľského vyhlásenia by bola nevymožiteľná pohľadávka žalobcu na vrátenie zálohy za vykonanie diela. Žalobca tiež poukázal na neaplikovateľnosť rozhodnutia NS SR 4Cdo/13/2009, t.j. rozhodnutia, ktorým v konaní argumentuje žalovaný, ktoré bolo judikované za účinnosti Občianskeho súdneho poriadku za inej skutkovej situácie. V predmetnom rozhodnutí NS SR uplatnil negatívnu dôkaznú teóriu vo vzťahu k spornej otázke nezaplatenia dlhu. Žalobca poukázal na rozhodnutie NS SR sp. zn. 4 Obdo54/2019, ktoré jasne uzatvára, že v prípade popretia pravosti podpisu súkromnej listiny sa negatívna dôkazná teória neaplikuje. NS SR v tomto rozhodnutí uvádza, že pokiaľ strana v konaní popiera pravosť podpisu na ručiteľskom vyhlásení, nedochádza k presunu dôkazného bremena na druhú procesnú stranu. Žalobca tiež poukázal na rozhodnutie NS ČR sp. zn. 22Cdo 3108/2010, ktoré zdôrazňuje prekonanie negatívnej dôkaznej teórie a argumentuje tým, že aj negatívne skutkové tvrdenia je možné v súdnom konaní preukázať. Žalobca poukázal na to, že sám žalovaný do konania predložil listiny, podpis na ktorých bol totožný s podpisom žalovaného na ručiteľskom vyhlásení. Suma na ručiteľskom vyhlásení bola totožná s výškou zálohy za dielo a zároveň výškou dojednanej zmluvnej pokuty. Vo vzťahu k zásade subsidiarity žalobca zopakoval svoje skutkové tvrdenie, že výzvu na úhradu zmluvnej pokuty doručoval dlžníkovi opakovane. Zdôraznil, že výzva na úhradu dlhu bola dlžníkovi doručovaná v období, keď medzi stranami neprebiehala žiadna iná písomná komunikácia. Žalobca navyše uviedol, že vzhľadom na všetky okolnosti bolo v rozhodnom období zrejmé, že dlžník svoj dlh nemohol splniť.",
+      "score": 0.568349,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "22. Žalobca sa podanou žalobou domáha zaplatenia sumy 3.500 eur titulom ručenia za zaplatenie zmluvnej pokuty dojednanej v zmluve o dielo. Žalovaný v odvolaní namieta, že súd prvej inštancie nesprávne zistil skutkový stav, keď konštatoval, že bola dodržaná zásada subsidiarity ručenia a že vec nesprávne právne posúdil, keď uzavrel, že nedošlo k presunu dôkazného bremena na žalobcu po tom, čo žalovaný poprel pravosť jeho podpisu na ručiteľskom vyhlásení.",
+      "score": 0.684946,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "23. Odvolací súd zdôrazňuje, že skutkový stav zistený súdom prvej inštancie skúmal len v rozsahu, v akom bol napadnutý odvolaním žalovaného. Žalobca v konaní tvrdil, že dodržal zásadu subsidiarity a dlžníka, za záväzok ktorého sa žalovaný zaručil, vyzval na plnenie celkom dvakrát. Žalobca v konaní predložil dva podacie lístky, ktorými preukazoval odoslanie výzvy dlžníkovi. Žalovaný svoju procesnú obranu obmedzil na tvrdenie, že predložené podacie lístky nepreukazujú, že predmetom zásielky je výzva na plnenie dlžníka a na námietku žalobcu, že v rozhodnom období medzi stranami neprebiehala žiadna iná písomná komunikácia, nereagoval. Nakoľko žalovaný nedoplnil popretie skutkového tvrdenia žalobcu o vlastné tvrdenia o predmetných skutkových okolnostiach, nekonkretizoval, aké iné listiny mu mohli byť žalobcom vo februári 2017 a februári 2018 doručované, súd považuje skutkový záver súdu prvej inštancie o dodržaní zásady subsidiarity za správny. Tvrdením žalobcu, že výzva dlžníka nebola potrebná z dôvodu, že bolo nepochybné, že dlžník svoj záväzok nesplní, sa vzhľadom na vyššie uvedený záver odvolací súd nezaoberal.",
+      "score": 0.694141,
+      "source_queries": [
+        "q_breach",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_24",
+      "chunk_index": 24,
+      "text": "26. Podľa § 306 ods. 1 OBZ, veriteľ je oprávnený domáhať sa splnenia záväzku od ručiteľa len v prípade, že dlžník nesplnil svoj záväzok v primeranej dobe po tom, čo ho na to veriteľ písomne vyzval. Toto vyzvanie nie je potrebné, ak ho veriteľ nemôže uskutočniť alebo ak je nepochybné, že dlžník svoj záväzok nesplní, najmä pri vyhlásení konkurzu.",
+      "score": 0.682173,
+      "source_queries": [
+        "q_breach",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_25",
+      "chunk_index": 25,
+      "text": "27. Podľa § 536 ods. 1 OBZ zmluvou o dielo sa zaväzuje zhotoviteľ vykonať určité dielo a objednávateľ sa zaväzuje zaplatiť cenu za jeho vykonanie.",
+      "score": 0.696619,
+      "source_queries": [
+        "q_contract"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "1. Súd prvej inštancie napadnutým rozsudkom rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi 3.500 eur s úrokom z omeškania vo výške 8 % ročne od 27.04.2017 do zaplatenia (výrok I.) a žalobcovi priznal náhradu trov konania v rozsahu 100 % (výrok II.) 2. Súd prvej inštancie toto rozhodnutie odôvodnil tým, že žalobca sa žalobou podanou dňa 21.06.2020 domáhal, aby súd žalovanému uložil povinnosť zaplatiť mu sumu 3.500 eur s prísl. titulom nároku z ručenia za záväzok hlavného dlžníka zaplatiť žalobcovi zmluvnú pokutu a priznal náhradu trov konania.",
+      "score": 0.993428,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "3. Žalobca v podanej žalobe uviedol, že ako objednávateľ uzatvoril dňa 26.09.2016 so spoločnosťou Montáže Košice, s.r.o., IČO: 50 409 565 Zmluvu o dielo č. 1/2016, na základe ktorej sa uvedená spoločnosť zaviazala zhotoviť pre žalobcu dohodnuté dielo, a to napojenie odlučovača ropných látok na jestvujúcu kanalizáciu odpadových vôd, výstavbu príjazdovej komunikácie s oporným múrom a schodiskom k novovzniknutej terase a chodníku, vystavanie ORL a vykonanie terénnych úprav. Cena diela bola dohodnutá na sumu 6.372,36 eur s tým, že žalobca sa zaviazal uhradiť zhotoviteľovi zálohu vo výške 3.500,- eur s DPH. Dielo malo byť žalobcovi dodané v rozmedzí od 06.09.2016 do 14.10.2016. Zmluvné strany sa v zmluve dohodli, že ak sa zhotoviteľ dostane s odovzdaním predmetu diela do omeškania, zaplatí objednávateľovi zmluvnú pokutu vo výške 0,05 % z ceny diela za každý deň omeškania. Ak zhotoviteľ neodovzdá dielo riadne ani do 60 kalendárnych dní odo dňa určeného v zmluve ako deň odovzdania, zaplatí objednávateľovi zmluvnú pokutu vo výške 3.500,- eur, pričom nárok na náhradu škody tým nie je dotknutý. Žalovaný sa v ručiteľskom vyhlásení zaviazal, že zmluvnú pokutu žalobcovi uhradí, ak tak dobrovoľne, riadne a včas neurobí zhotoviteľ. Zo strany spoločnosti Montáže Košice, s.r.o. nedošlo k zhotoveniu a odovzdaniu diela riadne a včas a žalobcovi vznikol nárok na zmluvnú pokutu vo výške 3.500,- eur podľa čl. VIII bodu 1 Zmluvy o dielo. Žalobca vyzval dňa 09.02.2017 zhotoviteľa na zaplatenie zmluvnej pokuty vo výške 3.500,- eur. Zmluvná pokuta nebola ani čiastočne uhradená. Žalobca dňa 27.03.2017 vyzval na úhradu zmluvnej pokuty žalovaného ako ručiteľa. Ani zo strany žalovaného však nebola zmluvná pokuta ani čiastočne uhradená.",
+      "score": 0.914232,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "4. Žalovaný v odpore proti vydanému platobnému rozkazu poukázal na akcesorický a subsidiárny charakter ručenia a podmienky pre jeho uplatnenie podľa § 303 a § 306 zákona č. 513/1991 Zb. Obchodného zákonníka (ďalej len OBZ). Žalovaný uviedol, že v konaní nie je preukázané, že sa výzva na úhradu zmluvnej pokuty dostala do dispozičnej sféry dlžníka. Vyhlásil, že ručiteľské vyhlásenie nikdy nepodpísal a podpis na listine nie je jeho. Žalovaný namietal, že zmluvná pokuta vo výške 3.500,- eur je neprimerane vysokou. Uviedol tiež, že spoločnosť Montáže Košice s.r.o. vykonala dielo riadne a včas, chcela dielo odovzdať žalobcovi, avšak tento ho neprevzal.",
+      "score": 0.865331,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "8. Súd prvej inštancie vo vzťahu k tvrdeniu žalovaného, že nebola dodržaná zásada subsidiarity, keď žalobca nepreukázal, že najprv na úhradu zmluvnej pokuty vyzval dlžníka, uzavrel, že žalobca uniesol dôkazné bremeno doručenia výzvy na úhradu dlhu dlžníkovi, a to predložením podacieho lístka zo dňa 10.2.2017.",
+      "score": 0.684332,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "10. Súd prvej inštancie zároveň uzavrel, že nie je dôvod na moderáciu zmluvnej pokuty so zreteľom na hodnotu a význam zabezpečenej povinnosti, keďže výška zmluvnej pokuty 3.500 Eur nie je neprimerane vysoká k výške a významu zabezpečovanej povinnosti, ktorá je v tomto prípade podstatnou zmluvnou náležitosťou zmluvy o dielo.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "11. Proti rozsudku súdu prvej inštancie podal v zákonnej lehote odvolanie žalovaný. Navrhol, aby odvolací súd napadnutý rozsudok zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie. Odvolanie odôvodnil tým, že súd prvej inštancie dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam (§ 365 ods. 1 písm. f CSP) a rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci (§ 365 ods. 1 písm. h) CSP).",
+      "score": 0.685923,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "15. Žalovaný ďalej tvrdil, že súd prvej inštancie nesprávne zistil skutkový stav, keď uzavrel, že zásada subsidiarity ručenia bola dodržaná. Z vykonaného dokazovania podľa žalovaného nevyplýva, že žalobca najprv vyzval na zaplatenie zmluvnej pokuty dlžníka. Medzi žalobcom a žalovaným prebiehalo viacero poštových komunikácii (uvedené vyplýva aj z konania vedeného Mestským súdom Košice pod sp.zn. 27C/52/2019). Žalobca preto predložením podacieho lístka v konaní pred súdom prvej inštancie nepreukázal, že dlžníkovi zasielal práve výzvu na úhradu zmluvnej pokuty. Poukázal na predloženie rôznych podacích lístkov žalobcom.",
+      "score": 0.69533,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_15",
+      "chunk_index": 15,
+      "text": "17. Krajský súd v Košiciach ako odvolací súd prejednal odvolanie žalovaného, ktoré bolo podané v zákonnej lehote, oprávnenou osobou, proti rozhodnutiu, proti ktorému je odvolanie prípustné, bez nariadenia pojednávania, pretože nejde o také odvolanie proti rozhodnutiu, na prejednanie ktorého je potrebné nariadiť odvolacie pojednávanie podľa § 385 ods. 1 CSP. Odvolanie prejednal podľa § 379 - § 385 CSP a dospel k záveru, že odvolanie žalovaného nie je dôvodné.",
+      "score": 0.740787,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_18",
+      "chunk_index": 18,
+      "text": "20. Odvolací súd v odvolacom konaní posúdil relevantnosť odvolacích dôvodov, posúdil, či súd prvej inštancie správne zistil skutkový stav a na zistený skutkový stav správne aplikoval príslušné právne predpisy, či riadne svoje rozhodnutie odôvodnil s prihliadnutím na to, že v odôvodnení rozhodnutia nemusí byť daná odpoveď na každú námietku alebo argument v opravnom prostriedku, ale iba na tie, ktoré majú rozhodujúci význam pre rozhodnutie o odvolaní (Ústavný súd Slovenskej republiky II. ÚS 78/05).",
+      "score": 0.923744,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "22. Žalobca sa podanou žalobou domáha zaplatenia sumy 3.500 eur titulom ručenia za zaplatenie zmluvnej pokuty dojednanej v zmluve o dielo. Žalovaný v odvolaní namieta, že súd prvej inštancie nesprávne zistil skutkový stav, keď konštatoval, že bola dodržaná zásada subsidiarity ručenia a že vec nesprávne právne posúdil, keď uzavrel, že nedošlo k presunu dôkazného bremena na žalobcu po tom, čo žalovaný poprel pravosť jeho podpisu na ručiteľskom vyhlásení.",
+      "score": 0.657846,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "23. Odvolací súd zdôrazňuje, že skutkový stav zistený súdom prvej inštancie skúmal len v rozsahu, v akom bol napadnutý odvolaním žalovaného. Žalobca v konaní tvrdil, že dodržal zásadu subsidiarity a dlžníka, za záväzok ktorého sa žalovaný zaručil, vyzval na plnenie celkom dvakrát. Žalobca v konaní predložil dva podacie lístky, ktorými preukazoval odoslanie výzvy dlžníkovi. Žalovaný svoju procesnú obranu obmedzil na tvrdenie, že predložené podacie lístky nepreukazujú, že predmetom zásielky je výzva na plnenie dlžníka a na námietku žalobcu, že v rozhodnom období medzi stranami neprebiehala žiadna iná písomná komunikácia, nereagoval. Nakoľko žalovaný nedoplnil popretie skutkového tvrdenia žalobcu o vlastné tvrdenia o predmetných skutkových okolnostiach, nekonkretizoval, aké iné listiny mu mohli byť žalobcom vo februári 2017 a februári 2018 doručované, súd považuje skutkový záver súdu prvej inštancie o dodržaní zásady subsidiarity za správny. Tvrdením žalobcu, že výzva dlžníka nebola potrebná z dôvodu, že bolo nepochybné, že dlžník svoj záväzok nesplní, sa vzhľadom na vyššie uvedený záver odvolací súd nezaoberal.",
+      "score": 0.633235,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_4Cob_196_2023_00_dokument.pdf_chunk_29",
+      "chunk_index": 29,
+      "text": "31. Odvolací súd preto podľa § 387 ods. 1 CSP potvrdil rozsudok súdu prvej inštancie v celom rozsahu ako vecne správny. Taktiež potvrdil výrok rozsudku súdu prvej inštancie o trovách konania ako vecne správny.",
+      "score": 0.806923,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 32,
+    "call1_unique_chunks": 12,
+    "call2_unique_chunks": 12,
+    "call1_total_chars": 9818,
+    "call2_total_chars": 7410
+  }
+}

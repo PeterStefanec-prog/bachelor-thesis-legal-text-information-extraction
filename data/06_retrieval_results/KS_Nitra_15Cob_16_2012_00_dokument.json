@@ -1,0 +1,222 @@
+{
+  "source_file": "KS_Nitra_15Cob_16_2012_00_dokument.pdf",
+  "case_id": "15Cob/16/2012",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "21.03.2012",
+    "case_id": "15Cob/16/2012",
+    "ecli": "ECLI:SK:KSNR:2012:4111214044.1",
+    "court": "Krajský súd Nitra",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Nitra\nSpisová značka: 15Cob/16/2012\nIdentifikačné číslo súdneho spisu: 4111214044\nDátum vydania rozhodnutia: 21. 03. 2012\nMeno a priezvisko sudcu, VSÚ: JUDr. Ján Bzdúšek\nECLI: ECLI:SK:KSNR:2012:4111214044.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Nitre, v senáte zloženom z predsedu senátu JUDr. Jána Bzdúška a členov senátu JUDr. Evy Hritzovej a JUDr. Pavla Lukáča, v právnej veci žalobcu: Milan Cabadaj, Pri Šajbách 30, Bratislava, IČO: 33 810 338, zast. advokátkou JUDr. Tatianou Jasperovou, Veternicova 11, Bratislava, proti žalovanému: FERAUT s.r.o., Cabaj-Čápor 3014, IČO: 35 933 887, zast. advokátkou JUDr. Andreou Kelemenovou, Piaristická 1, Nitra, o určenie neprimeranosti zmluvnej pokuty, na odvolanie žalobcu proti rozsudku Okresného súdu Nitra č. k. 27Cb/69/2011-36 zo dňa 29.09.2011, takto\n\nrozhodol: Odvolací súd rozsudok Okresného súdu Nitra č. k. 27Cb/69/2011-36 zo dňa 29.09.2011 potvrdzuje.\n\nŽalobca je povinný zaplatiť žalovanému náhradu trov právneho zastúpenia v sume 128,82 eura za odvolacie konanie do 3 dní od právoplatnosti rozsudku.",
+  "reasoning_full": "odôvodnenie: Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol, súčasne žalobcovi priznal náhradu trov konania v sume 128,82 eura.\n\nV odôvodnení tohto rozhodnutia uviedol, že podľa vykonaného dokazovania a zisteného skutkového stavu mal preukázané, že žalobca ako budúci kupujúci a žalovaný ako budúci predávajúci uzavreli dňa 09.04.2009 zmluvu o budúcej zmluve. K tejto boli uzavreté dva dodatky, pričom súčasťou zmluvy bola aj dohoda o zmluvnej pokute. Žalobca v konaní neuniesol dôkazné bremeno a jednoznačne nad všetku pochybnosť nepreukázal, že existuje naliehavý právny záujem na určení neprimeranosti zmluvnej pokuty. Nie je možné domáhať sa určovacou žalobou toho, čo sa dá vyriešiť ako predbežná otázka v konaní na plnenie a teda v takomto prípade na určení naliehavý právny záujem daný nie je. Žalobcovi nič nebráni v tom, aby sa žalobou na plnenie domáhal od žalovaného vrátenia časti zaplatenej zmluvnej pokuty, pokiaľ má za to, že táto bola uhradená v neprimeranej výške a v spore o plnenie by súd ako predbežnú otázku vyriešil platnosť dohody o zmluvnej pokute s následnou primeranosťou dohodnutej zmluvnej pokuty. Ak teda žalobca neosvedčí svoj naliehavý právny záujem na ním požadovanom určení, ide o samostatný a prvoradý dôvod pre zamietnutie takéhoto návrhu.\n\nS odkazom na ustanovenie § 80c OSP teda dospel k záveru, že pre nedostatok naliehavého právneho záujmu je dôvod na zamietnutie žaloby. Súčasne o trovách konania rozhodol podľa § 142 ods. 1 OSP.\n\nProti tomuto rozsudku podal žalobca v zákonnej lehote odvolanie, ktorým žiadal, aby odvolací súd rozsudok súdu prvého stupňa zrušil, prípadne zmenil tak, že návrhu v celom rozsahu vyhovie a určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur, t. j. vo výške 3.400,-- eur.\n\nV odôvodnení ďalej uviedol, že súd jednoznačne musí konať a rozhodovať podľa ustanovenia § 80 OSP teda určovacou žalobou, nakoľko zákonodarca v danom zmysle aj formuloval text ustanovenia § 301 Obchodného zákonníka. Z ustanovenia § 301 Obchodného zákonníka jednoznačne nevyplýva povinnosť podať žalobu o plnenie, keďže neprimerane vysokú zmluvnú pokutu je oprávnený súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Súd teda vo svojom rozhodnutí musí určiť jej primeranosť a jej výšku. Rozhodnutie súdu prvého stupňa je teda právne neopodstatnené a v danom prípade žalovaný považuje čiastku 1/50 zo zabezpečeného záväzku celej kúpnej ceny za primeranú zmluvnú pokutu. Žalovaný prijal od žalobcu splátky kúpnej ceny v celkovej výške 44.000,-eur, ktoré si ponechal a odmieta ich žalobcovi vrátiť, okrem toho žalobca hradil žalovanému nájom za priestory, ktoré boli predmetom kúpnej zmluvy a žalovanému konaním žalobcu nevznikla žiadna škoda.\n\nŽalovaný v písomnom vyjadrení k podanému odvolaniu uviedol, že pokiaľ žalobca zmluvnú pokutu žalovanému už uhradil, súd v zmysle § 301 Obchodného zákonníka už zmluvnú pokutu nemôže znížiť.\n\nŽalobcom formulovaný petit je za danej situácie nesprávny. Taktiež na určenie neprimerane vysokej zmluvnej pokuty nie je naliehavý právny záujem podľa § 80c OSP. Rozsudok s takýmto výrokom nič nerieši a je nevykonateľný. Vzhľadom na uvedené teda navrhol napadnutý rozsudok ako vecne správny odvolacím súdom potvrdiť.\n\nOdvolací súd prejednal podané odvolanie podľa ustanovenia § 212 ods. 1 OSP na nariadenom pojednávaní podľa ustanovenia § 214 ods. 1 písm. a/ OSP a dospel k záveru, že odvolanie žalobcu nie je dôvodné.\n\nAk sa odvolací súd v celom rozsahu stotožňuje s odôvodnením napadnutého rozhodnutia, môže sa v odôvodnení obmedziť len na skonštatovanie správnosti dôvodov napadnutého rozhodnutia, prípadne doplniť na zdôraznenie správnosti napadnutého rozhodnutia ďalšie dôvody (§ 219 ods. 2 OSP).\n\nOdvolací súd vychádzajúc z odôvodnenia napadnutého rozhodnutia súdu prvého stupňa ním zisteného skutkového stavu ako aj právneho posúdenia veci dospel k záveru, že súd prvého stupňa vo veci vecne správne rozhodol, nakoľko taktiež podľa názoru odvolacieho súdu v danom prípade sa jedná o určovaciu žalobu, ktorej dôvodnosť je podmienená dôkazným bremenom žalobcu spočívajúcom v povinnosti preukázať, že na určení právneho vzťahu alebo práva v čase rozhodovania má naliehavý právny záujem.\n\nTento naliehavý právny záujem je daný v tom prípade, pokiaľ sa žalobca nemôže domáhať priamo plnenia od žalovaného alebo ak by právne postavenie žalobcu bez takéhoto určenia bolo neisté. Žalobca má však nepochybne možnosť podať žalobu na plnenie proti žalovanému z právnych dôvodov podľa vlastnej úvahy. Neistotu právneho postavenia žalobcu bez takéhoto určenia vylučuje vyššie uvedená skutočnosť o možnosti podať žalobu na plnenie. Absencia podmienky možnosti rozhodnutia súdu o takejto určovacej žalobe (nedostatok naliehavého právneho záujmu) preto odôvodňuje zamietnutie takejto žaloby.\n\nS poukazom na vyššie uvedené preto odvolací súd rozhodol tak, ako je uvedené vo výroku tohto rozhodnutia s tým, že o trovách odvolacieho konania rozhodol podľa § 224 ods. 1 a § 142 ods. 1 OSP tak, že trovy právneho zastúpenia v odvolacom konaní priznal žalovanému ako plne úspešnému účastníkovi konania v celkovej sume 128,82 eura, ktoré pozostávajú z 2 úkonov právnej pomoci (písomné vyjadrenie k odvolaniu a účasť na pojednávaní), t. j. 2x 57,-- eur spolu s režijným paušálom 2x 7,41 eura.\n\nRozhodnutie odvolacieho súdu bolo prijaté jednohlasne.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol, súčasne žalobcovi priznal náhradu trov konania v sume 128,82 eura.",
+      "score": 0.666323,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "V odôvodnení tohto rozhodnutia uviedol, že podľa vykonaného dokazovania a zisteného skutkového stavu mal preukázané, že žalobca ako budúci kupujúci a žalovaný ako budúci predávajúci uzavreli dňa 09.04.2009 zmluvu o budúcej zmluve. K tejto boli uzavreté dva dodatky, pričom súčasťou zmluvy bola aj dohoda o zmluvnej pokute. Žalobca v konaní neuniesol dôkazné bremeno a jednoznačne nad všetku pochybnosť nepreukázal, že existuje naliehavý právny záujem na určení neprimeranosti zmluvnej pokuty. Nie je možné domáhať sa určovacou žalobou toho, čo sa dá vyriešiť ako predbežná otázka v konaní na plnenie a teda v takomto prípade na určení naliehavý právny záujem daný nie je. Žalobcovi nič nebráni v tom, aby sa žalobou na plnenie domáhal od žalovaného vrátenia časti zaplatenej zmluvnej pokuty, pokiaľ má za to, že táto bola uhradená v neprimeranej výške a v spore o plnenie by súd ako predbežnú otázku vyriešil platnosť dohody o zmluvnej pokute s následnou primeranosťou dohodnutej zmluvnej pokuty. Ak teda žalobca neosvedčí svoj naliehavý právny záujem na ním požadovanom určení, ide o samostatný a prvoradý dôvod pre zamietnutie takéhoto návrhu.",
+      "score": 0.8,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Proti tomuto rozsudku podal žalobca v zákonnej lehote odvolanie, ktorým žiadal, aby odvolací súd rozsudok súdu prvého stupňa zrušil, prípadne zmenil tak, že návrhu v celom rozsahu vyhovie a určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur, t. j. vo výške 3.400,-- eur.",
+      "score": 1.0,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "V odôvodnení ďalej uviedol, že súd jednoznačne musí konať a rozhodovať podľa ustanovenia § 80 OSP teda určovacou žalobou, nakoľko zákonodarca v danom zmysle aj formuloval text ustanovenia § 301 Obchodného zákonníka. Z ustanovenia § 301 Obchodného zákonníka jednoznačne nevyplýva povinnosť podať žalobu o plnenie, keďže neprimerane vysokú zmluvnú pokutu je oprávnený súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Súd teda vo svojom rozhodnutí musí určiť jej primeranosť a jej výšku. Rozhodnutie súdu prvého stupňa je teda právne neopodstatnené a v danom prípade žalovaný považuje čiastku 1/50 zo zabezpečeného záväzku celej kúpnej ceny za primeranú zmluvnú pokutu. Žalovaný prijal od žalobcu splátky kúpnej ceny v celkovej výške 44.000,-eur, ktoré si ponechal a odmieta ich žalobcovi vrátiť, okrem toho žalobca hradil žalovanému nájom za priestory, ktoré boli predmetom kúpnej zmluvy a žalovanému konaním žalobcu nevznikla žiadna škoda.",
+      "score": 0.85366,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Žalovaný v písomnom vyjadrení k podanému odvolaniu uviedol, že pokiaľ žalobca zmluvnú pokutu žalovanému už uhradil, súd v zmysle § 301 Obchodného zákonníka už zmluvnú pokutu nemôže znížiť.",
+      "score": 0.558947,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Žalobcom formulovaný petit je za danej situácie nesprávny. Taktiež na určenie neprimerane vysokej zmluvnej pokuty nie je naliehavý právny záujem podľa § 80c OSP. Rozsudok s takýmto výrokom nič nerieši a je nevykonateľný. Vzhľadom na uvedené teda navrhol napadnutý rozsudok ako vecne správny odvolacím súdom potvrdiť.",
+      "score": 0.449106,
+      "source_queries": [
+        "q_breach",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Odvolací súd vychádzajúc z odôvodnenia napadnutého rozhodnutia súdu prvého stupňa ním zisteného skutkového stavu ako aj právneho posúdenia veci dospel k záveru, že súd prvého stupňa vo veci vecne správne rozhodol, nakoľko taktiež podľa názoru odvolacieho súdu v danom prípade sa jedná o určovaciu žalobu, ktorej dôvodnosť je podmienená dôkazným bremenom žalobcu spočívajúcom v povinnosti preukázať, že na určení právneho vzťahu alebo práva v čase rozhodovania má naliehavý právny záujem.",
+      "score": 0.545263,
+      "source_queries": [
+        "q_breach",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Tento naliehavý právny záujem je daný v tom prípade, pokiaľ sa žalobca nemôže domáhať priamo plnenia od žalovaného alebo ak by právne postavenie žalobcu bez takéhoto určenia bolo neisté. Žalobca má však nepochybne možnosť podať žalobu na plnenie proti žalovanému z právnych dôvodov podľa vlastnej úvahy. Neistotu právneho postavenia žalobcu bez takéhoto určenia vylučuje vyššie uvedená skutočnosť o možnosti podať žalobu na plnenie. Absencia podmienky možnosti rozhodnutia súdu o takejto určovacej žalobe (nedostatok naliehavého právneho záujmu) preto odôvodňuje zamietnutie takejto žaloby.",
+      "score": 0.451579,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "S poukazom na vyššie uvedené preto odvolací súd rozhodol tak, ako je uvedené vo výroku tohto rozhodnutia s tým, že o trovách odvolacieho konania rozhodol podľa § 224 ods. 1 a § 142 ods. 1 OSP tak, že trovy právneho zastúpenia v odvolacom konaní priznal žalovanému ako plne úspešnému účastníkovi konania v celkovej sume 128,82 eura, ktoré pozostávajú z 2 úkonov právnej pomoci (písomné vyjadrenie k odvolaniu a účasť na pojednávaní), t. j. 2x 57,-- eur spolu s režijným paušálom 2x 7,41 eura.",
+      "score": 0.83306,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Napadnutým rozsudkom súd prvého stupňa rozhodol o podanej žalobe na určenie neprimeranosti zmluvnej pokuty tak, že návrh zamietol, súčasne žalobcovi priznal náhradu trov konania v sume 128,82 eura.",
+      "score": 0.516594,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "V odôvodnení tohto rozhodnutia uviedol, že podľa vykonaného dokazovania a zisteného skutkového stavu mal preukázané, že žalobca ako budúci kupujúci a žalovaný ako budúci predávajúci uzavreli dňa 09.04.2009 zmluvu o budúcej zmluve. K tejto boli uzavreté dva dodatky, pričom súčasťou zmluvy bola aj dohoda o zmluvnej pokute. Žalobca v konaní neuniesol dôkazné bremeno a jednoznačne nad všetku pochybnosť nepreukázal, že existuje naliehavý právny záujem na určení neprimeranosti zmluvnej pokuty. Nie je možné domáhať sa určovacou žalobou toho, čo sa dá vyriešiť ako predbežná otázka v konaní na plnenie a teda v takomto prípade na určení naliehavý právny záujem daný nie je. Žalobcovi nič nebráni v tom, aby sa žalobou na plnenie domáhal od žalovaného vrátenia časti zaplatenej zmluvnej pokuty, pokiaľ má za to, že táto bola uhradená v neprimeranej výške a v spore o plnenie by súd ako predbežnú otázku vyriešil platnosť dohody o zmluvnej pokute s následnou primeranosťou dohodnutej zmluvnej pokuty. Ak teda žalobca neosvedčí svoj naliehavý právny záujem na ním požadovanom určení, ide o samostatný a prvoradý dôvod pre zamietnutie takéhoto návrhu.",
+      "score": 0.507881,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "S odkazom na ustanovenie § 80c OSP teda dospel k záveru, že pre nedostatok naliehavého právneho záujmu je dôvod na zamietnutie žaloby. Súčasne o trovách konania rozhodol podľa § 142 ods. 1 OSP.",
+      "score": 0.369597,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Proti tomuto rozsudku podal žalobca v zákonnej lehote odvolanie, ktorým žiadal, aby odvolací súd rozsudok súdu prvého stupňa zrušil, prípadne zmenil tak, že návrhu v celom rozsahu vyhovie a určí primeranú výšku zmluvnej pokuty 1/50 zo zabezpečeného záväzku zo sumy 170.000,-- eur, t. j. vo výške 3.400,-- eur.",
+      "score": 0.741176,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "V odôvodnení ďalej uviedol, že súd jednoznačne musí konať a rozhodovať podľa ustanovenia § 80 OSP teda určovacou žalobou, nakoľko zákonodarca v danom zmysle aj formuloval text ustanovenia § 301 Obchodného zákonníka. Z ustanovenia § 301 Obchodného zákonníka jednoznačne nevyplýva povinnosť podať žalobu o plnenie, keďže neprimerane vysokú zmluvnú pokutu je oprávnený súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti. Súd teda vo svojom rozhodnutí musí určiť jej primeranosť a jej výšku. Rozhodnutie súdu prvého stupňa je teda právne neopodstatnené a v danom prípade žalovaný považuje čiastku 1/50 zo zabezpečeného záväzku celej kúpnej ceny za primeranú zmluvnú pokutu. Žalovaný prijal od žalobcu splátky kúpnej ceny v celkovej výške 44.000,-eur, ktoré si ponechal a odmieta ich žalobcovi vrátiť, okrem toho žalobca hradil žalovanému nájom za priestory, ktoré boli predmetom kúpnej zmluvy a žalovanému konaním žalobcu nevznikla žiadna škoda.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Žalovaný v písomnom vyjadrení k podanému odvolaniu uviedol, že pokiaľ žalobca zmluvnú pokutu žalovanému už uhradil, súd v zmysle § 301 Obchodného zákonníka už zmluvnú pokutu nemôže znížiť.",
+      "score": 0.694118,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Žalobcom formulovaný petit je za danej situácie nesprávny. Taktiež na určenie neprimerane vysokej zmluvnej pokuty nie je naliehavý právny záujem podľa § 80c OSP. Rozsudok s takýmto výrokom nič nerieši a je nevykonateľný. Vzhľadom na uvedené teda navrhol napadnutý rozsudok ako vecne správny odvolacím súdom potvrdiť.",
+      "score": 0.358011,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_15Cob_16_2012_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "S poukazom na vyššie uvedené preto odvolací súd rozhodol tak, ako je uvedené vo výroku tohto rozhodnutia s tým, že o trovách odvolacieho konania rozhodol podľa § 224 ods. 1 a § 142 ods. 1 OSP tak, že trovy právneho zastúpenia v odvolacom konaní priznal žalovanému ako plne úspešnému účastníkovi konania v celkovej sume 128,82 eura, ktoré pozostávajú z 2 úkonov právnej pomoci (písomné vyjadrenie k odvolaniu a účasť na pojednávaní), t. j. 2x 57,-- eur spolu s režijným paušálom 2x 7,41 eura.",
+      "score": 0.377471,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 13,
+    "call1_unique_chunks": 9,
+    "call2_unique_chunks": 8,
+    "call1_total_chars": 4686,
+    "call2_total_chars": 3802
+  }
+}

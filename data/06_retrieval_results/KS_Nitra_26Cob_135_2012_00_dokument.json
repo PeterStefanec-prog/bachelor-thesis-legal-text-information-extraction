@@ -1,0 +1,302 @@
+{
+  "source_file": "KS_Nitra_26Cob_135_2012_00_dokument.pdf",
+  "case_id": "26Cob/135/2012",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "28.02.2013",
+    "case_id": "26Cob/135/2012",
+    "ecli": "ECLI:SK:KSNR:2013:4111204662.1",
+    "court": "Krajský súd Nitra",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Nitra\nSpisová značka: 26Cob/135/2012\nIdentifikačné číslo súdneho spisu: 4111204662\nDátum vydania rozhodnutia: 28. 02. 2013\nMeno a priezvisko sudcu, VSÚ: JUDr. Pavol Pilek\nECLI: ECLI:SK:KSNR:2013:4111204662.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Nitre v senáte zloženom z predsedu senátu JUDr. Pavla Pileka a členov JUDr. Romana Greguša a Mgr. Erika Németha v právnej veci navrhovateľa: ACER Group, spol. s r.o., so sídlom Machulince 340, IČO: 36 524 395, zast. Mgr. Tomášom Jakubíkom, nar. 31.08.1982, bytom Doležalova 50, Nitra, proti odporcovi: Ing. P. O., nar. XX.XX.XXXX, bytom P. XXX, zast. JUDr. Editou Balážikovou, advokátkou so sídlom Jesenského 231/5, Partizánske, o zníženie zmluvnej pokuty, o odvolaní navrhovateľa proti rozsudku Okresného súdu Nitra č. k. 32Cb/11/2011-84 zo dňa 18.05.2012, jednohlasne, takto\n\nrozhodol: Odvolací súd rozsudok Okresného súdu Nitra č. k. 32Cb/11/2011-84 zo dňa 18.05.2012 potvrdzuje.\n\nNavrhovateľ je povinný zaplatiť odporcovi náhradu trov odvolacieho konania vo výške 79,58 eura do troch dní od právoplatnosti tohto rozsudku na účet právnej zástupkyne odporcu.",
+  "reasoning_full": "odôvodnenie: Navrhovateľ sa návrhom podaným na súde dňa 21.02.2011 domáhal, aby súd rozhodol o znížení zmluvnej pokuty 0,1 % za každý deň omeškania, ktorá bola dohodnutá v zmluve o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 uzatvorenej medzi DRUKOS i.m., spol. s r.o., IČO: 31 637 451 ako prenajímateľom a Jozef Bíreš - DREVEX, IČO: 14 245 981 ako nájomcom a uznanej v Notárskej zápisnici č. N 56/99, NZ 58/99 zo dňa 05.03.1999 a to tak, že zmluvná pokuta je 0,01 % za každý deň omeškania.\n\nNávrh odôvodnil tým, že zmluvná pokuta 0,1 % za každý deň omeškania je neprimerane vysoká, a to najmä s poukazom na hodnotu a význam zabezpečovanej povinnosti, keďže v súčasnosti predstavuje zmluvná pokuta za omeškané plnenie až 800 % oproti zabezpečovanej pohľadávke.\n\nOkresný súd Nitra vo veci rozhodol rozsudkom č. k. 32Cb/11/2011-84 zo dňa 18.05.2012 tak, že žalobu zamietol.\n\nRozsudok tak na základe skutkových zistení, podľa ktorých zo zmluvy o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 zo dňa 04.03.1999 vyplýva, že ju uzavreli prenajímateľ DRUKOS i.m., spol. s r.o. so sídlom Ul. Prof. Sáru, Banská Bystrica, IČO: 31 637 451 a nájomca Jozef Bíreš - DREVEX so sídlom SNP 46, Badín, IČO: 14 245 981, predmetom nájmu bol súbor strojov pre drevársku výrobu v hodnote 4.592.943,- Sk, nájomca mal splácať mesačne predmet leasingu podľa splátkového kalendára.\n\nZ notárskej zápisnice N 56/99, NZ 58/99 spísanej dňa 05.03.1999 na Notárskom úrade JUDr. Tatiany Mensatorisovej, notárky v Banskej Bystrici vyplýva, že Jozef Bíreš vyhlásil, že uznáva svoj dlh voči veriteľovi DRUKOS i.m., spol. s r.o., so sídlom Ul. Prof. Sáru, Banská Bystrica, IČO: 31 637 451, vyplývajúci z leasingovej zmluvy č. LZ 81-17-378/99 zo dňa 04.03.1999 vo výške prvej a ktorejkoľvek splátky, najviac do výšky zostatku istiny a úrokov, zmluvnej pokuty a zaväzuje sa dlh zaplatiť podľa splátkového kalendára.\n\nZ ručenia zo dňa 17.03.1999 vyplýva, že ručiteľ ACER Group, spol. s r.o., Machulince 340, IČO: 36 524 395, prevzal ručiteľský záväzok podľa § 546 a nasl. Občianskeho zákonníka, resp. § 303 a nasl.\n\nObchodného zákonníka za všetky záväzky a porušenia povinností vyplývajúcich pre nájomcu Jozef Bíreš - DREVEX z leasingovej zmluvy č. 81-17-378/99 uzavretej dňa 04.03.1999 s prenajímateľom DRUKOS i.m., spol. s r.o. Ručiteľský záväzok je podpísaný prenajímateľom, nájomcom a ručiteľom, ktorého zastupoval U. O., konateľ, pričom jeho podpis je osvedčený dňa 18.03.1999.\n\nZo spisu tunajšieho súdu sp. zn. 32Cb/39/2009 je súdu známe, že kúpnou zmluvou č. 4/2000 s postúpením práv a záväzkov viažucich sa k predmetu kúpy zo dňa 31.03.2000 predávajúci DRUKOS i.m., spol. s r.o. so sídlom Ul. Prof. Sáru, Banská Bystrica, IČO: 31 637 451, predal kupujúcemu DRUKOS, a.s., so sídlom Ul. Prof. Sáru 5, Banská Bystrica, IČO: 36 039 187, hnuteľné veci, ktoré sú v užívaní nájomcov podľa leasingových zmlúv uvedených v prílohe a zároveň predávajúci postúpil na kupujúceho podľa § 524 a nasl. Občianskeho zákonníka všetky pohľadávky voči nájomcom z leasingových zmlúv uvedených v prílohe. Ďalej je známe, že zmluvou o postúpení pohľadávok zo dňa 06.06.2007 postupca JUDr. Marta Todeková, správca konkurznej podstaty DRUKOS, a.s. \"v konkurze\", so sídlom Ul. Prof. Sáru 5, Banská Bystrica, IČO: 36 039 187, postúpil na postupníka MEDIATION KMCH, s.r.o., so sídlom Farská 12, Nitra, IČO: 35 952 989, pohľadávky, zmluvné pokuty a príslušenstvo voči dlžníkom uvedené v prílohe č. 1 - dlžník Jozef Bíreš - DREVEX. Dlh bol spresnený v dodatku č. 1 k zmluve zo dňa 07.06.2007, pohľadávka 5.722.935,40 Sk, zmluvná pokuta 0,1 % denne od 06.05.1999 do zaplatenia z 5.722.935,40 Sk a 0,1 % denne od 07.02.2000 do vrátenia z 4.592.943,- Sk.\n\nZ uznania záväzku zo dňa 22.08.2007 vyplýva, že dlžník Jozef Bíreš - DREVEX, Badín, SNP 46, IČO: 14 245 981, uznal svoj záväzok voči MEDIATION KMCH, s.r.o., Podlavická cesta 31, Banská Bystrica, IČO: 35 952 989, vyplývajúci zo zmluvy č. LZ 81-17-378/99 zo dňa 04.03.1999 vo výške 5.363.201,50 Sk s príslušenstvom od 05.06.1999 do 15.12.2002, zmluvnú pokutu vo výške uvedenej v článku II.\n\nSúdu je z už uvedeného spisu 32Cb/39/2009 známe, že spoločnosť MEDIATION KMCH, s.r.o. postúpila pohľadávku z ručiteľského záväzku za Jozefa Bíreša - DREVEX vo výške 5.363.201,50 Sk s príslušenstvom postupníkovi Asset Management, s.r.o., Radlinského 1730, Dolný Kubín, IČO: 43 823 378 ( list zo dňa 04.12.2007 adresovaný navrhovateľovi). Táto spoločnosť postúpila uvedenú pohľadávku postupníkovi JUDr. Albín Kostolanský, Jablonové 323, ktorý pohľadávku postúpil postupníkovi Ing. P. O., P. XXX (odporca).\n\nZ dohody o splátkach dlhu a uznaní dlhu zo dňa 07.05.2012 vyplýva, že ju uzatvorili veriteľ Ing. P. O.\n\n(odporca) a dlžník Jozef Bíreš - DREVEX a dlžník v nej okrem iného uznal právo veriteľa na zaplatenie zmluvnej pokuty 0,1 % denne z jednotlivých nezaplatených splátok nájomného podľa zmluvy č. LZ 81-17-378/99 odo dňa ich splatnosti do zaplatenia.\n\nZmluvná pokuta, ktorú žiada navrhovateľ znížiť, vyplýva z článku I. bod 6 Všeobecných podmienok zmluvy o nájme s právom kúpy prenajatej veci, ktoré sú neoddeliteľnou súčasťou zmluvy o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 zo dňa 04.03.1999. Z tohto ustanovenia vyplýva, že ak je nájomca v omeškaní s úhradou splátky je prenajímateľ oprávnený vyúčtovať nájomcovi zmluvnú pokutu vo výške 0,1 % z dlžnej sumy za každý deň omeškania.\n\nVo svojich právnych záveroch súd prvého stupňa poukázal na ustanovenie § 301 Obchodného zákonníka, podľa ktorého neprimerane vysokú zmluvnú pokutu môže súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.\n\nVykonaným dokazovaním súd prvého stupňa považoval za preukázané, že odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval, a to ani od dlžníka Jozefa Bíreša - DREVEX ani od ručiteľa, ktorým je navrhovateľ. Túto skutočnosť potvrdil aj konateľ navrhovateľa U. O..\n\nZ § 301, veta prvá Obchodného zákonníka vyplýva, že znížiť zmluvnú pokutu môže súd len v prípade, že už vzniklo právo na zmluvnú pokutu. Použiť moderačné právo podľa § 301 Obchodného zákonníka môže súd v rámci konania začatého na návrh veriteľa (v danom prípade odporcu v tomto konaní) na zaplatenie, teda v konaní o uložení povinnosti podľa § 80 písm. b) OSP.\n\nKeďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol.\n\nO trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 1 OSP tak, že ich náhradu vo výške 573,28 eura priznal plne úspešnému odporcovi proti neúspešnému navrhovateľovi.\n\nProti tomuto rozsudku podal navrhovateľ včasné odvolanie. Dôvodil tým, že odporca pohľadávky predmetnej leasingovej zmluvy odkúpil s úmyslom uplatniť si ich najmä voči žalobcovi ako ich ručiteľovi.\n\nSúd prvého stupňa žalobu namietol bez toho, aby sa zaoberal meritom veci čiže, aby v zmysle § 301 Obchodného zákonníka skúmal primeranosť výšky zmluvnej pokuty.\n\nSúd v odôvodnení svojho rozhodnutia uviedol, že vzhľadom na vykonané dokazovanie možno konštatovať, že odporca zmluvnú pokutu nevyúčtoval a teda nepožaduje jej zaplatenie.\n\nTáto argumentácia súdu však neobstojí, a to najmä s poukazom na dohodu medzi odporcom a dlžníkom Jozefom Bírešom, v ktorej odporca prehlasuje, že časť pohľadávky vo výške 200.000 eur a viac už z predmetnej pohľadávky obdržal a zvyšok sa zaviazal v mesačných splátkach dlžník splácať.\n\nPredmetná dohoda je v spise, avšak vzhľadom ku skutočnosti, že túto odporca predložil až na poslednom pojednávaní, kde bol aj vynesený rozsudok, nebolo možné sa s ňou oboznámiť dostatočne podrobne, nakoľko oboznámenie sa s touto listinou bolo vykonané len prečítaním na hlavnom pojednávaní. Napriek tomu, že splnomocnený zástupca súdu oznámil, že má záujem o kópiu tejto dohody najmä preto, lebo je obsiahla, súd vykonal dôkaz len tak ako je vyššie uvedené a následne vo veci rozhodol. Splnomocnený zástupca navrhovateľa tiež navrhol vypočuť dlžníka Jozefa Bíreša najmä s poukazom na predmetnú dohodu, avšak súd takýto dôkaz nepripustil.\n\nPodľa navrhovateľa je na základe uvedeného nepochybné, že súd prvého stupňa dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam, čo viedlo k nesprávnemu právnemu posúdeniu veci. Súd prvého stupňa mal okrem toho navrhovateľovi tiež odňať možnosť konať pred súdom, keď mu neumožnil podrobne sa oboznámiť s listinným dôkazom a tiež tým, že odmietol vykonanie dôkazu výsluchom svedka Jozefa Bíreša.\n\nZ týchto dôvodov sa navrhovateľ svojím odvolaním domáhal, aby odvolací súd napadnutý rozsudok zmenil tak, že žalobe vyhovie, prípadne, aby ho zrušil a vec vrátil súdu prvého stupňa na ďalšie konanie.\n\nK odvolaniu navrhovateľa sa odporca prostredníctvom svojej právnej zástupkyne písomne vyjadril.\n\nOdvolateľovi vytýkal, že vo svojom odvolaní nešpecifikoval k akým nesprávnym skutkovým zisteniam súd prvého stupňa dospel a v čom podľa neho spočíva nesprávne právne posúdenie veci.\n\nOdporca sa plne stotožňuje so záverom súdu, že nemôže využiť svoje moderačné právo podľa ustanovenia § 301 Obchodného zákonníka, nakoľko odporca ako veriteľ zmluvnú pokutu doposiaľ nevyúčtoval ani od navrhovateľa nepožadoval. Túto skutočnosť napokon potvrdil aj navrhovateľ. Na podanie žaloby preto neboli splnené hmotnoprávne predpoklady.\n\nOdporca naviac vyslovil domnienku, že navrhovateľ svoje odvolanie podal po uplynutí zákonnej lehoty, a preto by malo byť podľa § 218 ods. 1 písm. a) OSP odmietnuté.\n\nV prípade, ak by sa uvedené nepotvrdilo žiadal, aby odvolací súd napadnutý rozsudok podľa § 219 ods. 1 OSP ako vecne správny potvrdil a odporcovi priznal 79,58 eura náhrady trov odvolacieho konania.\n\nKrajský súd v Nitre ako súd odvolací prejednal odvolanie navrhovateľa bez nariadenia pojednávania v súlade s § 214 OSP, pričom dospel k záveru o jeho neopodstatnenosti.\n\nOdvolací súd sa v celom rozsahu stotožňuje s odôvodnením napadnutého rozhodnutia, a preto v súlade s § 219 ods. 2 OSP iba dopĺňa na zdôraznenie jeho správnosti niekoľko ďalších dôvodov.\n\nOdvolací súd považuje za podstatné zdôrazniť, že v zmysle § 301 ods. 1 Obchodného zákonníka sa oprávnenie súdu moderovať výšku zmluvnej pokuty nepochybne viaže len na výšku zmluvnej pokuty a nie na spôsob jej určenia. Uvedené pravidlo žaloba nerešpektuje, keďže navrhovateľ sa ňou zjavne domáha zásahom práve do spôsobu určenia výšky zmluvnej pokuty. Na takýto zásah však súdu nie je dané zákonné oprávnenie a žalobe, ktorou ho navrhovateľ napriek tomu domáha, nie je možné vyhovieť.\n\nOdvolací súd sa plne stotožňuje so záverom prvostupňového súdu o tom, že použitie moderačného práva súdu vo vzťahu k výške zmluvnej pokuty je možné len v konaní, o ktorom sa oprávnený domáha od osoby povinnej na zmluvnú pokutu jej zaplatenia. Len v takomto konaní je totiž jej uplatnená výška definitívne známa, čo vytvára pre súd nevyhnutný predpoklad toho, aby mohol primeranosť výšky požadovanej zmluvnej pokuty posúdiť z hľadiska jej primeranosti a následne prípadne i uplatniť svoje moderačné oprávnenie voči jej výške, ak sú preto splnené všetky zákonné dôvody podľa § 301 Obchodného zákonníka.\n\nŽaloba, ktorou sa osoba povinná domáha uplatnenia moderačného práva súdu vo vzťahu k výške zmluvnej pokuty preventívne nemôže byť úspešná z vyššie uvedených dôvodov práve preto, lebo v takomto štádiu výška oprávnenou osobou požadovanej zmluvnej pokuty ešte nie je známa.\n\nZ uvedených dôvodov odvolací súd napadnutý rozsudok ako vecne správny podľa § 219 ods. 1, 2 OSP potvrdil.\n\nO trovách odvolacieho konania bolo rozhodnuté podľa § 224 ods. 1 v spojení s § 142 ods. 1 OSP tak, že odvolací súd ich náhradu priznal v odvolacom konaní úspešnému odporcovi proti navrhovateľovi, ktorý úspech nemal. Trovy odporcu sú tvorené výlučne trovami právneho zastúpenia: odmenou za 1 úkon právnej služby (písomné vyjadrenie k odvolaniu) v sume 58,69 eura, paušálnou náhradou 7,63 eura a 20 % DPH v celkovej výške 79,58 eura v súlade s vyhláškou Ministerstva spravodlivosti Slovenskej republiky č. 655/2004 Z. z. Navrhovateľ je tieto trovy povinný zaplatiť v platobnom mieste, ktorým je v zmysle § 149 ods. 1 OSP advokátka odporcu.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Navrhovateľ sa návrhom podaným na súde dňa 21.02.2011 domáhal, aby súd rozhodol o znížení zmluvnej pokuty 0,1 % za každý deň omeškania, ktorá bola dohodnutá v zmluve o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 uzatvorenej medzi DRUKOS i.m., spol. s r.o., IČO: 31 637 451 ako prenajímateľom a Jozef Bíreš - DREVEX, IČO: 14 245 981 ako nájomcom a uznanej v Notárskej zápisnici č. N 56/99, NZ 58/99 zo dňa 05.03.1999 a to tak, že zmluvná pokuta je 0,01 % za každý deň omeškania.",
+      "score": 0.963891,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "Návrh odôvodnil tým, že zmluvná pokuta 0,1 % za každý deň omeškania je neprimerane vysoká, a to najmä s poukazom na hodnotu a význam zabezpečovanej povinnosti, keďže v súčasnosti predstavuje zmluvná pokuta za omeškané plnenie až 800 % oproti zabezpečovanej pohľadávke.",
+      "score": 0.785404,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Rozsudok tak na základe skutkových zistení, podľa ktorých zo zmluvy o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 zo dňa 04.03.1999 vyplýva, že ju uzavreli prenajímateľ DRUKOS i.m., spol. s r.o. so sídlom Ul. Prof. Sáru, Banská Bystrica, IČO: 31 637 451 a nájomca Jozef Bíreš - DREVEX so sídlom SNP 46, Badín, IČO: 14 245 981, predmetom nájmu bol súbor strojov pre drevársku výrobu v hodnote 4.592.943,- Sk, nájomca mal splácať mesačne predmet leasingu podľa splátkového kalendára.",
+      "score": 0.892308,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Obchodného zákonníka za všetky záväzky a porušenia povinností vyplývajúcich pre nájomcu Jozef Bíreš - DREVEX z leasingovej zmluvy č. 81-17-378/99 uzavretej dňa 04.03.1999 s prenajímateľom DRUKOS i.m., spol. s r.o. Ručiteľský záväzok je podpísaný prenajímateľom, nájomcom a ručiteľom, ktorého zastupoval U. O., konateľ, pričom jeho podpis je osvedčený dňa 18.03.1999.",
+      "score": 0.719972,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Zo spisu tunajšieho súdu sp. zn. 32Cb/39/2009 je súdu známe, že kúpnou zmluvou č. 4/2000 s postúpením práv a záväzkov viažucich sa k predmetu kúpy zo dňa 31.03.2000 predávajúci DRUKOS i.m., spol. s r.o. so sídlom Ul. Prof. Sáru, Banská Bystrica, IČO: 31 637 451, predal kupujúcemu DRUKOS, a.s., so sídlom Ul. Prof. Sáru 5, Banská Bystrica, IČO: 36 039 187, hnuteľné veci, ktoré sú v užívaní nájomcov podľa leasingových zmlúv uvedených v prílohe a zároveň predávajúci postúpil na kupujúceho podľa § 524 a nasl. Občianskeho zákonníka všetky pohľadávky voči nájomcom z leasingových zmlúv uvedených v prílohe. Ďalej je známe, že zmluvou o postúpení pohľadávok zo dňa 06.06.2007 postupca JUDr. Marta Todeková, správca konkurznej podstaty DRUKOS, a.s. \"v konkurze\", so sídlom Ul. Prof. Sáru 5, Banská Bystrica, IČO: 36 039 187, postúpil na postupníka MEDIATION KMCH, s.r.o., so sídlom Farská 12, Nitra, IČO: 35 952 989, pohľadávky, zmluvné pokuty a príslušenstvo voči dlžníkom uvedené v prílohe č. 1 - dlžník Jozef Bíreš - DREVEX. Dlh bol spresnený v dodatku č. 1 k zmluve zo dňa 07.06.2007, pohľadávka 5.722.935,40 Sk, zmluvná pokuta 0,1 % denne od 06.05.1999 do zaplatenia z 5.722.935,40 Sk a 0,1 % denne od 07.02.2000 do vrátenia z 4.592.943,- Sk.",
+      "score": 0.882191,
+      "source_queries": [
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "Z uznania záväzku zo dňa 22.08.2007 vyplýva, že dlžník Jozef Bíreš - DREVEX, Badín, SNP 46, IČO: 14 245 981, uznal svoj záväzok voči MEDIATION KMCH, s.r.o., Podlavická cesta 31, Banská Bystrica, IČO: 35 952 989, vyplývajúci zo zmluvy č. LZ 81-17-378/99 zo dňa 04.03.1999 vo výške 5.363.201,50 Sk s príslušenstvom od 05.06.1999 do 15.12.2002, zmluvnú pokutu vo výške uvedenej v článku II.",
+      "score": 0.705221,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Súdu je z už uvedeného spisu 32Cb/39/2009 známe, že spoločnosť MEDIATION KMCH, s.r.o. postúpila pohľadávku z ručiteľského záväzku za Jozefa Bíreša - DREVEX vo výške 5.363.201,50 Sk s príslušenstvom postupníkovi Asset Management, s.r.o., Radlinského 1730, Dolný Kubín, IČO: 43 823 378 ( list zo dňa 04.12.2007 adresovaný navrhovateľovi). Táto spoločnosť postúpila uvedenú pohľadávku postupníkovi JUDr. Albín Kostolanský, Jablonové 323, ktorý pohľadávku postúpil postupníkovi Ing. P. O., P. XXX (odporca).",
+      "score": 0.636105,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "(odporca) a dlžník Jozef Bíreš - DREVEX a dlžník v nej okrem iného uznal právo veriteľa na zaplatenie zmluvnej pokuty 0,1 % denne z jednotlivých nezaplatených splátok nájomného podľa zmluvy č. LZ 81-17-378/99 odo dňa ich splatnosti do zaplatenia.",
+      "score": 0.780596,
+      "source_queries": [
+        "q_breach",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_12",
+      "chunk_index": 12,
+      "text": "Zmluvná pokuta, ktorú žiada navrhovateľ znížiť, vyplýva z článku I. bod 6 Všeobecných podmienok zmluvy o nájme s právom kúpy prenajatej veci, ktoré sú neoddeliteľnou súčasťou zmluvy o nájme s právom kúpy prenajatej veci č. LZ 81-17-378/99 zo dňa 04.03.1999. Z tohto ustanovenia vyplýva, že ak je nájomca v omeškaní s úhradou splátky je prenajímateľ oprávnený vyúčtovať nájomcovi zmluvnú pokutu vo výške 0,1 % z dlžnej sumy za každý deň omeškania.",
+      "score": 0.95787,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "Vykonaným dokazovaním súd prvého stupňa považoval za preukázané, že odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval, a to ani od dlžníka Jozefa Bíreša - DREVEX ani od ručiteľa, ktorým je navrhovateľ. Túto skutočnosť potvrdil aj konateľ navrhovateľa U. O..",
+      "score": 0.677827,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_18",
+      "chunk_index": 18,
+      "text": "Proti tomuto rozsudku podal navrhovateľ včasné odvolanie. Dôvodil tým, že odporca pohľadávky predmetnej leasingovej zmluvy odkúpil s úmyslom uplatniť si ich najmä voči žalobcovi ako ich ručiteľovi.",
+      "score": 0.694048,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "Táto argumentácia súdu však neobstojí, a to najmä s poukazom na dohodu medzi odporcom a dlžníkom Jozefom Bírešom, v ktorej odporca prehlasuje, že časť pohľadávky vo výške 200.000 eur a viac už z predmetnej pohľadávky obdržal a zvyšok sa zaviazal v mesačných splátkach dlžník splácať.",
+      "score": 0.670898,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_22",
+      "chunk_index": 22,
+      "text": "Predmetná dohoda je v spise, avšak vzhľadom ku skutočnosti, že túto odporca predložil až na poslednom pojednávaní, kde bol aj vynesený rozsudok, nebolo možné sa s ňou oboznámiť dostatočne podrobne, nakoľko oboznámenie sa s touto listinou bolo vykonané len prečítaním na hlavnom pojednávaní. Napriek tomu, že splnomocnený zástupca súdu oznámil, že má záujem o kópiu tejto dohody najmä preto, lebo je obsiahla, súd vykonal dôkaz len tak ako je vyššie uvedené a následne vo veci rozhodol. Splnomocnený zástupca navrhovateľa tiež navrhol vypočuť dlžníka Jozefa Bíreša najmä s poukazom na predmetnú dohodu, avšak súd takýto dôkaz nepripustil.",
+      "score": 0.683039,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_27",
+      "chunk_index": 27,
+      "text": "Odporca sa plne stotožňuje so záverom súdu, že nemôže využiť svoje moderačné právo podľa ustanovenia § 301 Obchodného zákonníka, nakoľko odporca ako veriteľ zmluvnú pokutu doposiaľ nevyúčtoval ani od navrhovateľa nepožadoval. Túto skutočnosť napokon potvrdil aj navrhovateľ. Na podanie žaloby preto neboli splnené hmotnoprávne predpoklady.",
+      "score": 0.670963,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_33",
+      "chunk_index": 33,
+      "text": "Odvolací súd sa plne stotožňuje so záverom prvostupňového súdu o tom, že použitie moderačného práva súdu vo vzťahu k výške zmluvnej pokuty je možné len v konaní, o ktorom sa oprávnený domáha od osoby povinnej na zmluvnú pokutu jej zaplatenia. Len v takomto konaní je totiž jej uplatnená výška definitívne známa, čo vytvára pre súd nevyhnutný predpoklad toho, aby mohol primeranosť výšky požadovanej zmluvnej pokuty posúdiť z hľadiska jej primeranosti a následne prípadne i uplatniť svoje moderačné oprávnenie voči jej výške, ak sú preto splnené všetky zákonné dôvody podľa § 301 Obchodného zákonníka.",
+      "score": 0.593185,
+      "source_queries": [
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_36",
+      "chunk_index": 36,
+      "text": "O trovách odvolacieho konania bolo rozhodnuté podľa § 224 ods. 1 v spojení s § 142 ods. 1 OSP tak, že odvolací súd ich náhradu priznal v odvolacom konaní úspešnému odporcovi proti navrhovateľovi, ktorý úspech nemal. Trovy odporcu sú tvorené výlučne trovami právneho zastúpenia: odmenou za 1 úkon právnej služby (písomné vyjadrenie k odvolaniu) v sume 58,69 eura, paušálnou náhradou 7,63 eura a 20 % DPH v celkovej výške 79,58 eura v súlade s vyhláškou Ministerstva spravodlivosti Slovenskej republiky č. 655/2004 Z. z. Navrhovateľ je tieto trovy povinný zaplatiť v platobnom mieste, ktorým je v zmysle § 149 ods. 1 OSP advokátka odporcu.",
+      "score": 0.784182,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "Návrh odôvodnil tým, že zmluvná pokuta 0,1 % za každý deň omeškania je neprimerane vysoká, a to najmä s poukazom na hodnotu a význam zabezpečovanej povinnosti, keďže v súčasnosti predstavuje zmluvná pokuta za omeškané plnenie až 800 % oproti zabezpečovanej pohľadávke.",
+      "score": 0.702427,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "Vo svojich právnych záveroch súd prvého stupňa poukázal na ustanovenie § 301 Obchodného zákonníka, podľa ktorého neprimerane vysokú zmluvnú pokutu môže súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "Vykonaným dokazovaním súd prvého stupňa považoval za preukázané, že odporca doposiaľ dohodnutú zmluvnú pokutu nevyúčtoval a ani nepožadoval, a to ani od dlžníka Jozefa Bíreša - DREVEX ani od ručiteľa, ktorým je navrhovateľ. Túto skutočnosť potvrdil aj konateľ navrhovateľa U. O..",
+      "score": 0.64872,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_15",
+      "chunk_index": 15,
+      "text": "Z § 301, veta prvá Obchodného zákonníka vyplýva, že znížiť zmluvnú pokutu môže súd len v prípade, že už vzniklo právo na zmluvnú pokutu. Použiť moderačné právo podľa § 301 Obchodného zákonníka môže súd v rámci konania začatého na návrh veriteľa (v danom prípade odporcu v tomto konaní) na zaplatenie, teda v konaní o uložení povinnosti podľa § 80 písm. b) OSP.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_16",
+      "chunk_index": 16,
+      "text": "Keďže odporca dosiaľ zmluvnú pokutu nepožadoval a nevyúčtoval, súd prvého stupňa nepovažoval za možné rozhodovať o jej znížení. Žalobu preto zamietol.",
+      "score": 0.640403,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_19",
+      "chunk_index": 19,
+      "text": "Súd prvého stupňa žalobu namietol bez toho, aby sa zaoberal meritom veci čiže, aby v zmysle § 301 Obchodného zákonníka skúmal primeranosť výšky zmluvnej pokuty.",
+      "score": 0.692602,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "Súd v odôvodnení svojho rozhodnutia uviedol, že vzhľadom na vykonané dokazovanie možno konštatovať, že odporca zmluvnú pokutu nevyúčtoval a teda nepožaduje jej zaplatenie.",
+      "score": 0.54985,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_27",
+      "chunk_index": 27,
+      "text": "Odporca sa plne stotožňuje so záverom súdu, že nemôže využiť svoje moderačné právo podľa ustanovenia § 301 Obchodného zákonníka, nakoľko odporca ako veriteľ zmluvnú pokutu doposiaľ nevyúčtoval ani od navrhovateľa nepožadoval. Túto skutočnosť napokon potvrdil aj navrhovateľ. Na podanie žaloby preto neboli splnené hmotnoprávne predpoklady.",
+      "score": 0.852244,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_29",
+      "chunk_index": 29,
+      "text": "V prípade, ak by sa uvedené nepotvrdilo žiadal, aby odvolací súd napadnutý rozsudok podľa § 219 ods. 1 OSP ako vecne správny potvrdil a odporcovi priznal 79,58 eura náhrady trov odvolacieho konania.",
+      "score": 0.736741,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_32",
+      "chunk_index": 32,
+      "text": "Odvolací súd považuje za podstatné zdôrazniť, že v zmysle § 301 ods. 1 Obchodného zákonníka sa oprávnenie súdu moderovať výšku zmluvnej pokuty nepochybne viaže len na výšku zmluvnej pokuty a nie na spôsob jej určenia. Uvedené pravidlo žaloba nerešpektuje, keďže navrhovateľ sa ňou zjavne domáha zásahom práve do spôsobu určenia výšky zmluvnej pokuty. Na takýto zásah však súdu nie je dané zákonné oprávnenie a žalobe, ktorou ho navrhovateľ napriek tomu domáha, nie je možné vyhovieť.",
+      "score": 0.69535,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Nitra_26Cob_135_2012_00_dokument.pdf_chunk_33",
+      "chunk_index": 33,
+      "text": "Odvolací súd sa plne stotožňuje so záverom prvostupňového súdu o tom, že použitie moderačného práva súdu vo vzťahu k výške zmluvnej pokuty je možné len v konaní, o ktorom sa oprávnený domáha od osoby povinnej na zmluvnú pokutu jej zaplatenia. Len v takomto konaní je totiž jej uplatnená výška definitívne známa, čo vytvára pre súd nevyhnutný predpoklad toho, aby mohol primeranosť výšky požadovanej zmluvnej pokuty posúdiť z hľadiska jej primeranosti a následne prípadne i uplatniť svoje moderačné oprávnenie voči jej výške, ak sú preto splnené všetky zákonné dôvody podľa § 301 Obchodného zákonníka.",
+      "score": 0.9,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 37,
+    "call1_unique_chunks": 16,
+    "call2_unique_chunks": 11,
+    "call1_total_chars": 7412,
+    "call2_total_chars": 3362
+  }
+}

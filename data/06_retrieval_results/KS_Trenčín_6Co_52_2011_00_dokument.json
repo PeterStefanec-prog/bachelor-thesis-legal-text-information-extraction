@@ -1,0 +1,270 @@
+{
+  "source_file": "KS_Trenčín_6Co_52_2011_00_dokument.pdf",
+  "case_id": "6Co/52/2011",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "27.11.2012",
+    "case_id": "6Co/52/2011",
+    "ecli": "ECLI:SK:KSTN:2012:3109223626.1",
+    "court": "Krajský súd Trenčín",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Trenčín\nSpisová značka: 6Co/52/2011\nIdentifikačné číslo súdneho spisu: 3109223626\nDátum vydania rozhodnutia: 27. 11. 2012\nMeno a priezvisko sudcu, VSÚ: JUDr. Stanislava Marková\nECLI: ECLI:SK:KSTN:2012:3109223626.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Trenčíne v senáte, zloženom z predsedníčky JUDr. Stanislavy Markovej a členov JUDr. Romana Hargaša a JUDr. Viery Škultétyovej, v právnej veci navrhovateľa E. X., a.s., W., F. X/A, IČO XX XXX XXX, zastúpeného Mgr. Monikou Ignačákovou, advokátkou so sídlom Trenčín, Horný Šianec 3137, proti odporcovi Q. Q., trvale bytom S., toho času bytom A. XXX/X, štátnemu občanovi X. republiky, o zaplatenie XXX,XX eur s príslušenstvom, na odvolanie odporcu proti rozsudku Okresného súdu Trenčín zo dňa 6. decembra 2010, č. k. 12C/250/2009-47, jednohlasne takto\n\nrozhodol: Rozsudok okresného súdu mení nasledovne: Odporca je povinný zaplatiť navrhovateľovi istinu 129,42 eur s 8,5% ročným úrokom z omeškania od 04.10.2007 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku.\n\nVo zvyšnej časti návrh navrhovateľa zamieta.\n\nNavrhovateľovi náhradu trov konania nepriznáva.",
+  "reasoning_full": "odôvodnenie: Rozsudkom Okresného súdu Trenčín zo dňa 6. decembra 2010, č. k. 12C/250/2009-47, bolo rozhodnuté tak, že odporca je povinný zaplatiť navrhovateľovi istinu 331,94 eur s 8,5% ročným úrokom z omeškania od 04.10.2007 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku a odporca je povinný zaplatiť navrhovateľovi náhradu trov konania vo výške 99,87 eur do troch dní od právoplatnosti rozsudku.\n\nV odôvodnení rozsudku okresný súd uviedol, že navrhovateľ sa domáhal, aby súd odporcovi uložil povinnosť zaplatiť 331,94 eur s úrokom z omeškania 8,5% ročne z dlžnej sumy od 04.10.2007 do zaplatenia a nahradiť trovy konania. Návrh odôvodnil tým, že ako operátor mobilnej telefónnej siete poskytoval odporcovi v období 5/07-7/07 na základe zmluvy o pripojení č. A2867759 zo dňa 25.01.2007 telekomunikačné služby, za ktoré odporca nezaplatil riadne a včas. Navrhovateľ dňa 19.09.2007 zaslal odporcovi pokus o pokonávku s rozpisom neuhradených faktúr za jednotlivé mesiace a vyzval ho na zaplatenie dlžnej sumy a zmluvnej pokuty v dodatočnej lehote. Odporca na pokus o pokonávku reagoval úplnou úhradou pohľadávky za neuhradené služby vo výške 26,04 eur, zmluvnú pokutu neuhradil. Vo veci samej bolo rozhodnuté v skrátenom konaní vydaním platobného rozkazu, voči ktorému odporca podal odpor. Odporca namietal premlčanie nároku uplatneného navrhovateľom a podanie navrhovateľa považoval za konanie odporujúce dobrým mravom, keď si dovolil občanov takýmto spôsobom, teda právnou cestou vydierať protiprávnym konaním a požadovať plnenie, ktoré je absurdné, 10.000xnásobne vyššie, ako dodané plnenie v hodnote 0,003 eur. Preto žiadal návrh zamietnuť.\n\nOkresný súd na základe predložených listín účastníkmi zistil, že účastníci dňa 25.01.2007 uzavreli zmluvu o pripojení číslo A2867759, na základe ktorej navrhovateľ poskytoval odporcovi verejné telefónne služby. Odporca zmluvu o pripojení uzatvoril ako fyzická osoba - podnikateľ s obchodným menom Q. Q., miesto podnikania S., K. Q. XXXX/X, G. XX XXX XXX. Ku dňu 30.01.2009 tento podnikateľský subjekt ukončil svoju činnosť. V zmysle čl. 6 bod. 6.2. písm. b) a čl. 11 bod 11.12 všeobecných podmienok bol odporca povinný uhradiť cenu za poskytnuté služby navrhovateľom tak, aby v lehote splatnosti dokladu o vyúčtovaní bola vyúčtovaná suma pripísaná na účet navrhovateľa. Pre prípad porušenia niektorej zo zmluvných povinností odporcom, ktorými sú: mať na SIM karte aktivovaný počas doby viazanosti taký účastnícky program, u ktorého je výška mesačného poplatku (bez DPH) stanovená najmenej na sumu 9 Sk, po dobu viazanosti (24 mesiacov) zotrvať v zmluvnom vzťahu s navrhovateľom, nepožiadať o vypojenie z prevádzky, alebo o dočasnú deaktiváciu SIM karty, nedopustiť sa takého konania alebo nedať svojim konaním žiaden taký podnet a ani neumožniť také konanie, na základe ktorého by navrhovateľovi vzniklo právo odstúpiť od zmluvy alebo právo vypovedať zmluvu alebo na základe ktorého by bol navrhovateľ oprávnený mu v dobe viazanosti dočasne obmedziť alebo prerušiť poskytovanie služieb, si účastníci dojednali zaplatenie zmluvnej pokuty vo výške 10.000 Sk (čl. 2, bod.\n\n2.5. dodatku k zmluve). Navrhovateľ odporcovi vyúčtoval cenu poskytnutých služieb v mesiacoch máj až júl 2007 vyúčtovacou faktúrou č. č. 8770489535, vyhotovenou dňa 14.05.2007 a splatnou v zmysle čl. 11 bodu 11.8. všeobecných podmienok dňa 28.05.2007 v sume 735,- Sk, z ktorej čiastočne uhradil sumu 120,- Sk, faktúrou č. 8770889441, vyhotovenou dňa 12.06.2007 a splatnou dňa 26.06.2007 v zmysle uvedeného ustanovenia všeobecných podmienok v sume 10,50 Sk a faktúrou č. 8771291917, vyhotovenou dňa 12.07.2007 a splatnou v zmysle uvedeného ustanovenia všeobecných podmienok dňa 26.07.2007 v sume 119 Sk. Pokusom o pokonávku zo dňa 19.09.2007 navrhovateľ vyzval odporcu na zaplatenie dlžnej sumy 784 Sk, ako aj na zaplatenie zmluvnej pokuty vo výške 10.000,- Sk do 03.10.2007. Výzvu dňa 21.09.2007 prevzala matka odporcu. Z výpisu uhradených a neuhradených faktúr okresný súd zistil, že odporca vyúčtovacie faktúry uhradil navrhovateľovi dňa 21.05.2008, teda po lehote splatnosti, ktorá bola v zmysle čl. 11 bodu 11.8. všeobecných podmienok 14 dní odo dňa jej vystavenia.\n\nZmluvnú pokutu odporca nezaplatil.\n\nOkresný súd poukázal na znenie § 42 ods. 4 písm. b), 43 ods. 5 písm. b) a c) zákona č. 610/2003 Z.z. o elektronických komunikáciách, § 39 §, 544 ods. 1 Občianskeho zákonníka, § 301, § 393 ods. 1 Obchodného zákonníka a § 369 ods. 1 Obchodného zákonníka účinného k 25.01.2007. Dospel k záveru, že obaja účastníci boli v čase uzatvorenia zmluvy podnikateľmi a preto okresný súd tento zmluvný vzťah posudzoval podľa Obchodného zákonníka v zmysle § 261 ods.5. Zmluvné práva a povinnosti účastníkov tohto záväzkového vzťahu boli okrem zákonných ustanovení vyjadrené v zmluve o pripojení vrátane jej dodatku a všeobecných podmienkach. Súčasťou zmluvy bolo ustanovenie o zmluvnej pokute stanovenej pevnou čiastkou 10.000 Sk pre prípad porušenia zmluvných povinností odporcom. Zmluva bola účastníkmi riadne uzatvorená s právami a povinnosťami jednotlivých zmluvných strán, ktoré odporca akceptoval a teda si bol vedomý aj rizika v prípade dojednanej zmluvnej pokuty. Okolnosti, za ktorých bola zmluvná pokuta dojednaná a ktorej zaplatenie je predmetom tohto konania, sa podľa názoru okresného súdu nepriečia dobrým mravom v zmysle § 39 Občianskeho zákonníka a platnosť tohto dojednania zostáva zachovaná i v prípade neprimerane vysokej zmluvnej pokuty. Neprimeranosť zmluvnej pokuty rieši ustanovenie § 301 Obchodného zákonníka upravujúce moderačné oprávnenie súdu, podľa ktorého súd môže neprimerane vysokú zmluvnú pokutu znížiť. V danom prípade zmluvná pokuta zabezpečovala dobu viazanosti 24 mesiacov s ohľadom na zľavnený mobilný telefón zn. Nokia 2610, poskytnutý navrhovateľom odporcovi, ktorého plná kúpna cena podľa informácií dostupných na internete bola v čase uzatvorenia zmluvy 3.990 Sk. Za takýchto okolností a dôvodov, ktoré viedli k dojednaniu posudzovanej výšky zmluvnej pokuty, okresný súd dospel k záveru, že zjednaná zmluvná pokuta vo výške 10.000 Sk je primeraná.\n\nPri posúdení odporcom uplatnenej námietky premlčania nároku navrhovateľa na zaplatenie zmluvnej pokuty, okresný súd postupoval podľa § 393 Obchodného zákonníka, v zmysle ktorého začala navrhovateľovi plynúť premlčacia doba na uplatnenie práva na zaplatenie zmluvnej pokuty dňom, keď došlo k porušeniu povinnosti odporcom. Odporca riadnym a včasným nezaplatením vyúčtovacej faktúry č. 877048935 v lehote splatnosti 28.05.2007, porušil zmluvné povinnosti, ktoré mohli mať za následok odstúpenie navrhovateľa od zmluvy podľa § 43 ods. 5 písm. b) zákona č. 610/2003 Z. z., ako podmienky pre uplatnenie nároku na zaplatenie zmluvnej pokuty navrhovateľom, nakoľko odporca pohľadávku navrhovateľa, vyplývajúcu z tejto faktúry, zaplatil až dňa 21.05.2008. Deň tohto porušenia povinnosti odporcom, 28.05.2007, je potrebné považovať za začiatok plynutia premlčacej doby, ktorá je podľa § 397 Obchodného zákonníka štvorročná. Návrh bol podaný navrhovateľom na súde dňa 15.10.2009. Z uvedeného okresný súd vyvodil, že navrhovateľ uplatnil svoj nárok na zaplatenie zmluvnej pokuty včas a preto je námietka premlčania vznesená odporcom neopodstatnená.\n\nNa základe uvedeného okresný súd dospel k záveru, že navrhovateľ sa dôvodne domáhal od odporcu zaplatenia zmluvnej pokuty vo výške 10.000 Sk (331,94 eur). Odporca, ktorý zmluvnú pokutu nezaplatil v lehote jej splatnosti dňa 03.10.2007, uvedenej vo výzve navrhovateľa, je odo dňa nasledujúceho po splatnosti, v omeškaní. Sankciou za omeškanie s peňažným plnením je právo navrhovateľa požadovať od odporcu zaplatenie úrokov z omeškania. Okresný súd odporcu zaviazal na zaplatenie uplatnenej istiny vo výške 331,94 eur spolu s úrokom z omeškania vo výške 8,5% ročne v zmysle návrhu od 04.10.2007 do zaplatenia.\n\nO náhrade trov konania okresný súd rozhodol podľa § 142 ods. 1 O.s.p., keď v konaní úspešnému navrhovateľovi priznal náhradu trov konania 99,87 eur, spočívajúcu v náhrade za zaplatený súdny poplatok vo výške 19,50 eur a náhrady trov právneho zastúpenia vo výške 96,18 eur, vypočítaných podľa vyhlášky MS SR č. 655/2004 Z.z. za dva úkony právnej služby (prevzatie a príprava zastúpenia, vyjadrenie k odporu) po 26,56 eur (§ 10 ods. 1) + 2x režijný paušál po 7,21 eur (§ 16 ods. 3) + 19 % DPH zo sumy 67,54 eur (§18 ods. 3) - 12,83 eur.\n\nProti tomuto rozsudku podal včas odvolanie odporca. V dôvodoch dovolania uviedol, že podnikanie ukončil 30.01.2009 a je insolventný. Predmetnú zmluvnú pokutu považuje za okrádanie občanov navrhovateľom pod už známymi zámienkami. Vyjadril nesúhlas s takýmto jednaním navrhovateľa.\n\nPoužitie vymáhania a násilného získavania finančných prostriedkov sa podľa jeho názoru jasne prieči dobrým mravom a je pre neho zarážajúce, ak súd rozhoduje v prospech takýchto firiem. Podľa jeho názoru premlčacia doba v danom prípade nie je štvorročná, ale maximálne dvojročná. Pri tovare v hodnote 0,003 eur považuje priznanie sumy 331,94 eur za absurdné. Preto bol okresný súd povinný návrh navrhovateľa zamietnuť. Podľa názoru odporcu k zamysleniu vedie i skutočnosť, že sa súd nepostavil i proti úroku vo výške 8,5% ročne od začiatku sporu až doposiaľ. Na základe uvedeného podľa názoru odporcu okresný súd vec nesprávne právne posúdil, lebo rozsudok odporuje platným zákonom.\n\nK odvolaniu odporcu sa písomne vyjadril navrhovateľ prostredníctvom svojej právnej zástupkyne. Vo vyjadrení zopakoval skutkové okolnosti v zhode s podaným návrhom a jeho prílohami. Výšku zmluvnej pokuty považuje za primeranú s poukazom na to, že predmetom dodatku k zmluve o pripojení bol i predaj telefónu za sumu 1 Sk, ktorého hodnota bola v čase jeho predaja ďaleko vyššia. Mobilný telefón ostal i po ukončení zmluvy vo vlastníctve odporcu. Podľa názoru navrhovateľa výška úrokov bola vypočítaná a súdom priznaná v súlade s platnými právnymi predpismi. Preto považuje rozsudok okresného súdu za správny a navrhuje tento rozsudok potvrdiť. Navrhovateľ súčasne uplatnil náhradu trov odvolacieho konania, spočívajúci v trovách právneho zastúpenia vo výške 33,97 eur (1 úkon 26,56 eur, paušál 7,41 eur) za jeden úkon právnej služby, spočívajúci vo vypracovaní vyjadrenia.\n\nKrajský súd, ako súd odvolací, vec preskúmal v rozsahu a z dôvodov odvolania podľa § 212 ods. 1 O.s.p. bez nariadenia odvolacieho pojednávania podľa § 214 ods. 2 O.s.p. a dospel k záveru, že rozsudok okresného súdu je potrebné podľa § 220 ods. 1 O.s.p. zmeniť z týchto dôvodov: Na základe preskúmania rozsudku odvolací súd dospel k záveru, že okresný súd dospel k správnym skutkovým záverom, ktoré majú oporu v obsahu spisového materiálu. Odvolací súd sa preto v celom rozsahu stotožňuje s týmito skutkovými závermi v odôvodnení rozsudku a podľa § 219 ods. 2 O.s.p. na ne v plnom rozsahu poukazuje.\n\nPokiaľ ide o právne posúdenie veci okresným, podľa názoru odvolacieho súdu okresný súd správne poukázal na ustanovenia právnych predpisov, podľa ktorých posudzoval správne zistený skutkový stav veci. Aj podľa názoru odvolacieho súdu vzhľadom na skutočnosť, že obaja účastníci v zmluvnom vzťahu, založenom na základe uzavretých viacerých zmlúv viacerých typov, vystupovali ako podnikatelia v zmysle § 261 ods. 1 Obchodného zákonníka. Preto ich vzťahy je potrebné posudzovať podľa ustanovení Obchodného zákonníka. V tejto súvislosti odvolací súd poukazuje na ustanovenie § 261 ods. 5 Obchodného zákonníka, podľa ktorého pri použití tejto (tretej) časti zákona (Obchodného zákonníka) podľa odsekov 1 a 2 je rozhodujúca povaha účastníkov pri vzniku záväzkového vzťahu. Odvolací súd poukazuje aj na ustanovenie § 261 ods. 6 Obchodného zákonníka, v zmysle ktorého zmluvy medzi osobami uvedenými v § 261 ods. 1, 2 Obchodného zákonníka, ktoré nie sú upravené v hlave II tretej časti toho zákona a sú upravené ako zmluvný typ v Občianskom zákonníku, spravujú sa príslušnými ustanoveniami o tomto zmluvnom type v Občianskom zákonníku a Obchodným zákonníkom. Keďže záväzkový vzťah medzi účastníkmi konania vznikol v dobe, keď boli obaja podnikateľmi, nie je v zmysle § 261 ods. 5 Obchodného zákonníka právne významné, že odporca medzičasom ukončil svoju podnikateľskú činnosť.\n\nS poukazom na uvedené odvolací súd považuje za správny záver okresného súdu, podľa ktorého s poukazom na ustanovenie § 393 a § 379 Obchodného zákonníka nepovažoval za opodstatnenú odporcom uplatnenú námietku premlčania., keďže v zmysle uvedených ustanovení je premlčacia doba pre práva, vyplývajúce z dojednania o zmluvnej pokute podľa ustanovení Obchodného zákonníka, štyri roky. Preto sa odvolací súd stotožňuje v plnom rozsahu so závermi okresného súdu ohľadne otázky plynutia premlčacej doby vo vzťahu k navrhovateľom uplatnenému nároku.\n\nOdvolací súd sa však nestotožnil s právnym záverom okresného súdu, podľa ktorého je dojednaná zmluvná vo vzťahu k porušeniu povinnosti odporcu primeraná.\n\nPodľa § 301 prvá veta Obchodného zákonníka neprimerane vysokú zmluvnú pokutu môže súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.\n\nPodľa bodu 2.2 Dodatku k Zmluve o pripojení, uzavretej medzi účastníkmi dňa 25.01.2007 (ďalej len Dodatok k zmluve) účastník sa zaväzuje, že počas doby viazanosti podľa č. l. 2.3 (24 mesiacov) bude mať aktivovaný na SIM karte taký účastnícky program, u ktorého je výška mesačného poplatku (bez DPH) stanovená prinajmenšom na sumu 9 Sk (0,30 eur).\n\nPodľa bodu 2.5. druhá, tretia veta Dodatku k zmluve právo na zmluvnú pokutu podľa tohto bodu vznikne Podniku porušením povinnosti Účastníka, a to v okamihu porušenia povinnosti Účastníkom, pričom toto právo nie je podmienené vykonaním žiadneho úkonu zo strany Podniku. Účastník je zároveň povinný uhradiť Podniku náhradu škody, ktorej výška presahuje výšku dohodnutej zmluvnej pokuty.\n\nPodľa bodu 3.7. Dodatku k zmluve Účastník vyhlasuje, že si je vedomý, že MT (koncové telekomunikačné zariadenie) mu je predávaný za cenu, uvedenú v bode 1.3. Dodatku k zmluve, ktorej výška sa rovná rozdielu medzi spotrebiteľskou (trhovou) cenou MT a v zmysle tohto dodatku poskytnutou zľavou zo spotrebiteľskej ceny, len z toho dôvodu, že sa účastník zaviazal užívať služby poskytnuté mu prostredníctvom SIM karty v zmysle ustanovení tohto dodatku po dobu dohodnutú v tomto dodatku, pričom nedodržanie tohto záväzku vzhľadom na výšku zľavy zo spotrebiteľskej ceny MT by spôsobilo, že Podniku vznikla škoda (minimálne v rozsahu zľavy zo spotrebiteľskej ceny MT).\n\nOdvolací súd sa stotožnil so záverom okresného súdu, podľa ktorého zmluvná pokuta v danom prípade zabezpečovala dobu viazanosti odporcu mať aktivovaný účastnícky program vo výške mesačného poplatku najmenej vo výške 0,30 eur na dobu 24 mesiacov, k čomu ako protihodnota bolo odporcovi poskytnuté telekomunikačné zariadenie Nokia 2610 so zľavou 129,42 eur (3.899 Sk). Z uvedených skutkových zistení vyplýva, že zmluvná pokuta zabezpečovala záväzok odporcu v celkovej hodnote vo výške 7,17 eur (24 mesiacov x 9 Sk/ mesiac), vo vzťahu ku ktorému je podľa názoru odvolacieho súdu na rozdiel od názoru okresného súdu dohodnutá zmluvná pokuta vo výške 331,94 eur zjavne neprimeraná v zmysle 301 Obchodného zákonníka. Preto odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške 129,42 eur (3.899 Sk). Takýto záver odvolacieho súd vychádza z ustanovenia § 261 ods. 6 Obchodného zákonníka v spojení s § 545 ods. 1 prvá veta Občianskeho zákonníka, podľa ktorého veriteľ nie je oprávnený požadovať náhradu škody spôsobenej porušením povinnosti, ak z dojednania účastníkov o zmluvnej pokute nevyplýva niečo iné, pričom podľa Dodatku k zmluve (bod 2.5. tretia veta) bolo účastníkmi podľa § 261 ods. 6 Obchodného zákonníka a § 545 ods. 1 druhá veta Občianskeho zákonníka výslovne dohodnuté len právo domáhať sa náhrady škody presahujúcej zmluvnú pokutu.\n\nPokiaľ navrhovateľ v odvolaní poukazoval na to, že zmluvná pokuta je v rozpore s dobrými mravmi, odvolací súd poukazuje na to, že právom dovolené konanie je v zásade v súlade s dobrými mravmi a preto samotná dohoda o zmluvnej pokute nemôže spôsobovať jej neplatnosť pre rozpor s dobrými mravmi. Keďže ustanovenie § 301 Obchodného zákonníka dovoľuje súdu znížiť neprimerane vysokú zmluvnú pokutu, teda znížiť zmluvnú pokutu, ktorá je v rozpore s dobrými mravmi, nebolo možné zmietnuť uplatnený nárok navrhovateľa na zaplatenie zmluvnej pokuty ako celok len preto, že bola dojednaná v neprimeranej výške.\n\nS poukazom na uvedené preto odvolací súd podľa § 220 O.s.p. zmenil rozsudok okresného súdu tak, ako je to uvedené vo výrokovej časti tohto rozsudku.\n\nV súvislosti s odporcom namietanou výškou úrokov z omeškania odvolací súd rovnako, ako okresný súd, poukazuje na ustanovenie § 269 ods. 1 Obchodného zákonníka, účinného k 03.10.2007, kedy sa odporca dostal do omeškania so zaplatením zmluvnej pokuty. Podľa tohto ustanovenia ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania určené v zmluve, inak o 10 % vyššie, než je základná úroková sadzba Národnej banky Slovenska uplatňovaná pred prvým kalendárnym dňom kalendárneho polroka, v ktorom došlo k omeškaniu, pričom základná úroková sadzba Národnej banky Slovenska platná v prvý kalendárny deň kalendárneho polroka, sa použije počas celého tohto polroka. S poukazom na obsah uvedeného ustanovenia je nepochybné, že navrhovateľom uplatňovaný úrok z omeškania vo výške 8,5% je v úplnom súlade s uvedeným ustanovením. Preto sa odvolací súd nemohol stotožniť s názorom odporcu v odvolaní o nezákonnosti navrhovateľom uplatňovaného úroku z omeškania.\n\nO navrhovateľom uplatnených trovách konania odvolací súd rozhodol v zmysle § 224 ods. 2 O.s.p. a s poukazom na ustanovenie § 142 ods. 2 O.s.p., podľa ktorého ak mal účastník vo veci úspech len čiastočný, súd náhradu trov pomerne rozdelí, prípadne vysloví, že žiadny z účastníkov nemá na náhradu trov právo. Keďže navrhovateľovi bol priznaný uplatnený nárok v rozsahu nižšom, ako 50%, odvolací súd navrhovateľovi nepriznal náhradu trov konania. O trovách konania odporcu odvolací súd nerozhodoval, keďže odporca v priebehu konania nepodal návrh na náhradu trov konania podľa § 151 ods. 1 O.s.p.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Rozsudkom Okresného súdu Trenčín zo dňa 6. decembra 2010, č. k. 12C/250/2009-47, bolo rozhodnuté tak, že odporca je povinný zaplatiť navrhovateľovi istinu 331,94 eur s 8,5% ročným úrokom z omeškania od 04.10.2007 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku a odporca je povinný zaplatiť navrhovateľovi náhradu trov konania vo výške 99,87 eur do troch dní od právoplatnosti rozsudku.",
+      "score": 0.872,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "V odôvodnení rozsudku okresný súd uviedol, že navrhovateľ sa domáhal, aby súd odporcovi uložil povinnosť zaplatiť 331,94 eur s úrokom z omeškania 8,5% ročne z dlžnej sumy od 04.10.2007 do zaplatenia a nahradiť trovy konania. Návrh odôvodnil tým, že ako operátor mobilnej telefónnej siete poskytoval odporcovi v období 5/07-7/07 na základe zmluvy o pripojení č. A2867759 zo dňa 25.01.2007 telekomunikačné služby, za ktoré odporca nezaplatil riadne a včas. Navrhovateľ dňa 19.09.2007 zaslal odporcovi pokus o pokonávku s rozpisom neuhradených faktúr za jednotlivé mesiace a vyzval ho na zaplatenie dlžnej sumy a zmluvnej pokuty v dodatočnej lehote. Odporca na pokus o pokonávku reagoval úplnou úhradou pohľadávky za neuhradené služby vo výške 26,04 eur, zmluvnú pokutu neuhradil. Vo veci samej bolo rozhodnuté v skrátenom konaní vydaním platobného rozkazu, voči ktorému odporca podal odpor. Odporca namietal premlčanie nároku uplatneného navrhovateľom a podanie navrhovateľa považoval za konanie odporujúce dobrým mravom, keď si dovolil občanov takýmto spôsobom, teda právnou cestou vydierať protiprávnym konaním a požadovať plnenie, ktoré je absurdné, 10.000xnásobne vyššie, ako dodané plnenie v hodnote 0,003 eur. Preto žiadal návrh zamietnuť.",
+      "score": 0.889345,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Okresný súd na základe predložených listín účastníkmi zistil, že účastníci dňa 25.01.2007 uzavreli zmluvu o pripojení číslo A2867759, na základe ktorej navrhovateľ poskytoval odporcovi verejné telefónne služby. Odporca zmluvu o pripojení uzatvoril ako fyzická osoba - podnikateľ s obchodným menom Q. Q., miesto podnikania S., K. Q. XXXX/X, G. XX XXX XXX. Ku dňu 30.01.2009 tento podnikateľský subjekt ukončil svoju činnosť. V zmysle čl. 6 bod. 6.2. písm. b) a čl. 11 bod 11.12 všeobecných podmienok bol odporca povinný uhradiť cenu za poskytnuté služby navrhovateľom tak, aby v lehote splatnosti dokladu o vyúčtovaní bola vyúčtovaná suma pripísaná na účet navrhovateľa. Pre prípad porušenia niektorej zo zmluvných povinností odporcom, ktorými sú: mať na SIM karte aktivovaný počas doby viazanosti taký účastnícky program, u ktorého je výška mesačného poplatku (bez DPH) stanovená najmenej na sumu 9 Sk, po dobu viazanosti (24 mesiacov) zotrvať v zmluvnom vzťahu s navrhovateľom, nepožiadať o vypojenie z prevádzky, alebo o dočasnú deaktiváciu SIM karty, nedopustiť sa takého konania alebo nedať svojim konaním žiaden taký podnet a ani neumožniť také konanie, na základe ktorého by navrhovateľovi vzniklo právo odstúpiť od zmluvy alebo právo vypovedať zmluvu alebo na základe ktorého by bol navrhovateľ oprávnený mu v dobe viazanosti dočasne obmedziť alebo prerušiť poskytovanie služieb, si účastníci dojednali zaplatenie zmluvnej pokuty vo výške 10.000 Sk (čl. 2, bod.",
+      "score": 0.751484,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "2.5. dodatku k zmluve). Navrhovateľ odporcovi vyúčtoval cenu poskytnutých služieb v mesiacoch máj až júl 2007 vyúčtovacou faktúrou č. č. 8770489535, vyhotovenou dňa 14.05.2007 a splatnou v zmysle čl. 11 bodu 11.8. všeobecných podmienok dňa 28.05.2007 v sume 735,- Sk, z ktorej čiastočne uhradil sumu 120,- Sk, faktúrou č. 8770889441, vyhotovenou dňa 12.06.2007 a splatnou dňa 26.06.2007 v zmysle uvedeného ustanovenia všeobecných podmienok v sume 10,50 Sk a faktúrou č. 8771291917, vyhotovenou dňa 12.07.2007 a splatnou v zmysle uvedeného ustanovenia všeobecných podmienok dňa 26.07.2007 v sume 119 Sk. Pokusom o pokonávku zo dňa 19.09.2007 navrhovateľ vyzval odporcu na zaplatenie dlžnej sumy 784 Sk, ako aj na zaplatenie zmluvnej pokuty vo výške 10.000,- Sk do 03.10.2007. Výzvu dňa 21.09.2007 prevzala matka odporcu. Z výpisu uhradených a neuhradených faktúr okresný súd zistil, že odporca vyúčtovacie faktúry uhradil navrhovateľovi dňa 21.05.2008, teda po lehote splatnosti, ktorá bola v zmysle čl. 11 bodu 11.8. všeobecných podmienok 14 dní odo dňa jej vystavenia.",
+      "score": 0.960232,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Zmluvnú pokutu odporca nezaplatil.",
+      "score": 0.74535,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Okresný súd poukázal na znenie § 42 ods. 4 písm. b), 43 ods. 5 písm. b) a c) zákona č. 610/2003 Z.z. o elektronických komunikáciách, § 39 §, 544 ods. 1 Občianskeho zákonníka, § 301, § 393 ods. 1 Obchodného zákonníka a § 369 ods. 1 Obchodného zákonníka účinného k 25.01.2007. Dospel k záveru, že obaja účastníci boli v čase uzatvorenia zmluvy podnikateľmi a preto okresný súd tento zmluvný vzťah posudzoval podľa Obchodného zákonníka v zmysle § 261 ods.5. Zmluvné práva a povinnosti účastníkov tohto záväzkového vzťahu boli okrem zákonných ustanovení vyjadrené v zmluve o pripojení vrátane jej dodatku a všeobecných podmienkach. Súčasťou zmluvy bolo ustanovenie o zmluvnej pokute stanovenej pevnou čiastkou 10.000 Sk pre prípad porušenia zmluvných povinností odporcom. Zmluva bola účastníkmi riadne uzatvorená s právami a povinnosťami jednotlivých zmluvných strán, ktoré odporca akceptoval a teda si bol vedomý aj rizika v prípade dojednanej zmluvnej pokuty. Okolnosti, za ktorých bola zmluvná pokuta dojednaná a ktorej zaplatenie je predmetom tohto konania, sa podľa názoru okresného súdu nepriečia dobrým mravom v zmysle § 39 Občianskeho zákonníka a platnosť tohto dojednania zostáva zachovaná i v prípade neprimerane vysokej zmluvnej pokuty. Neprimeranosť zmluvnej pokuty rieši ustanovenie § 301 Obchodného zákonníka upravujúce moderačné oprávnenie súdu, podľa ktorého súd môže neprimerane vysokú zmluvnú pokutu znížiť. V danom prípade zmluvná pokuta zabezpečovala dobu viazanosti 24 mesiacov s ohľadom na zľavnený mobilný telefón zn. Nokia 2610, poskytnutý navrhovateľom odporcovi, ktorého plná kúpna cena podľa informácií dostupných na internete bola v čase uzatvorenia zmluvy 3.990 Sk. Za takýchto okolností a dôvodov, ktoré viedli k dojednaniu posudzovanej výšky zmluvnej pokuty, okresný súd dospel k záveru, že zjednaná zmluvná pokuta vo výške 10.000 Sk je primeraná.",
+      "score": 0.745455,
+      "source_queries": [
+        "q_breach",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Pri posúdení odporcom uplatnenej námietky premlčania nároku navrhovateľa na zaplatenie zmluvnej pokuty, okresný súd postupoval podľa § 393 Obchodného zákonníka, v zmysle ktorého začala navrhovateľovi plynúť premlčacia doba na uplatnenie práva na zaplatenie zmluvnej pokuty dňom, keď došlo k porušeniu povinnosti odporcom. Odporca riadnym a včasným nezaplatením vyúčtovacej faktúry č. 877048935 v lehote splatnosti 28.05.2007, porušil zmluvné povinnosti, ktoré mohli mať za následok odstúpenie navrhovateľa od zmluvy podľa § 43 ods. 5 písm. b) zákona č. 610/2003 Z. z., ako podmienky pre uplatnenie nároku na zaplatenie zmluvnej pokuty navrhovateľom, nakoľko odporca pohľadávku navrhovateľa, vyplývajúcu z tejto faktúry, zaplatil až dňa 21.05.2008. Deň tohto porušenia povinnosti odporcom, 28.05.2007, je potrebné považovať za začiatok plynutia premlčacej doby, ktorá je podľa § 397 Obchodného zákonníka štvorročná. Návrh bol podaný navrhovateľom na súde dňa 15.10.2009. Z uvedeného okresný súd vyvodil, že navrhovateľ uplatnil svoj nárok na zaplatenie zmluvnej pokuty včas a preto je námietka premlčania vznesená odporcom neopodstatnená.",
+      "score": 0.745754,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Na základe uvedeného okresný súd dospel k záveru, že navrhovateľ sa dôvodne domáhal od odporcu zaplatenia zmluvnej pokuty vo výške 10.000 Sk (331,94 eur). Odporca, ktorý zmluvnú pokutu nezaplatil v lehote jej splatnosti dňa 03.10.2007, uvedenej vo výzve navrhovateľa, je odo dňa nasledujúceho po splatnosti, v omeškaní. Sankciou za omeškanie s peňažným plnením je právo navrhovateľa požadovať od odporcu zaplatenie úrokov z omeškania. Okresný súd odporcu zaviazal na zaplatenie uplatnenej istiny vo výške 331,94 eur spolu s úrokom z omeškania vo výške 8,5% ročne v zmysle návrhu od 04.10.2007 do zaplatenia.",
+      "score": 1.0,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "O náhrade trov konania okresný súd rozhodol podľa § 142 ods. 1 O.s.p., keď v konaní úspešnému navrhovateľovi priznal náhradu trov konania 99,87 eur, spočívajúcu v náhrade za zaplatený súdny poplatok vo výške 19,50 eur a náhrady trov právneho zastúpenia vo výške 96,18 eur, vypočítaných podľa vyhlášky MS SR č. 655/2004 Z.z. za dva úkony právnej služby (prevzatie a príprava zastúpenia, vyjadrenie k odporu) po 26,56 eur (§ 10 ods. 1) + 2x režijný paušál po 7,21 eur (§ 16 ods. 3) + 19 % DPH zo sumy 67,54 eur (§18 ods. 3) - 12,83 eur.",
+      "score": 0.751966,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Použitie vymáhania a násilného získavania finančných prostriedkov sa podľa jeho názoru jasne prieči dobrým mravom a je pre neho zarážajúce, ak súd rozhoduje v prospech takýchto firiem. Podľa jeho názoru premlčacia doba v danom prípade nie je štvorročná, ale maximálne dvojročná. Pri tovare v hodnote 0,003 eur považuje priznanie sumy 331,94 eur za absurdné. Preto bol okresný súd povinný návrh navrhovateľa zamietnuť. Podľa názoru odporcu k zamysleniu vedie i skutočnosť, že sa súd nepostavil i proti úroku vo výške 8,5% ročne od začiatku sporu až doposiaľ. Na základe uvedeného podľa názoru odporcu okresný súd vec nesprávne právne posúdil, lebo rozsudok odporuje platným zákonom.",
+      "score": 0.745963,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "K odvolaniu odporcu sa písomne vyjadril navrhovateľ prostredníctvom svojej právnej zástupkyne. Vo vyjadrení zopakoval skutkové okolnosti v zhode s podaným návrhom a jeho prílohami. Výšku zmluvnej pokuty považuje za primeranú s poukazom na to, že predmetom dodatku k zmluve o pripojení bol i predaj telefónu za sumu 1 Sk, ktorého hodnota bola v čase jeho predaja ďaleko vyššia. Mobilný telefón ostal i po ukončení zmluvy vo vlastníctve odporcu. Podľa názoru navrhovateľa výška úrokov bola vypočítaná a súdom priznaná v súlade s platnými právnymi predpismi. Preto považuje rozsudok okresného súdu za správny a navrhuje tento rozsudok potvrdiť. Navrhovateľ súčasne uplatnil náhradu trov odvolacieho konania, spočívajúci v trovách právneho zastúpenia vo výške 33,97 eur (1 úkon 26,56 eur, paušál 7,41 eur) za jeden úkon právnej služby, spočívajúci vo vypracovaní vyjadrenia.",
+      "score": 0.734026,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "Odvolací súd sa stotožnil so záverom okresného súdu, podľa ktorého zmluvná pokuta v danom prípade zabezpečovala dobu viazanosti odporcu mať aktivovaný účastnícky program vo výške mesačného poplatku najmenej vo výške 0,30 eur na dobu 24 mesiacov, k čomu ako protihodnota bolo odporcovi poskytnuté telekomunikačné zariadenie Nokia 2610 so zľavou 129,42 eur (3.899 Sk). Z uvedených skutkových zistení vyplýva, že zmluvná pokuta zabezpečovala záväzok odporcu v celkovej hodnote vo výške 7,17 eur (24 mesiacov x 9 Sk/ mesiac), vo vzťahu ku ktorému je podľa názoru odvolacieho súdu na rozdiel od názoru okresného súdu dohodnutá zmluvná pokuta vo výške 331,94 eur zjavne neprimeraná v zmysle 301 Obchodného zákonníka. Preto odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške 129,42 eur (3.899 Sk). Takýto záver odvolacieho súd vychádza z ustanovenia § 261 ods. 6 Obchodného zákonníka v spojení s § 545 ods. 1 prvá veta Občianskeho zákonníka, podľa ktorého veriteľ nie je oprávnený požadovať náhradu škody spôsobenej porušením povinnosti, ak z dojednania účastníkov o zmluvnej pokute nevyplýva niečo iné, pričom podľa Dodatku k zmluve (bod 2.5. tretia veta) bolo účastníkmi podľa § 261 ods. 6 Obchodného zákonníka a § 545 ods. 1 druhá veta Občianskeho zákonníka výslovne dohodnuté len právo domáhať sa náhrady škody presahujúcej zmluvnú pokutu.",
+      "score": 0.923738,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_23",
+      "chunk_index": 23,
+      "text": "V súvislosti s odporcom namietanou výškou úrokov z omeškania odvolací súd rovnako, ako okresný súd, poukazuje na ustanovenie § 269 ods. 1 Obchodného zákonníka, účinného k 03.10.2007, kedy sa odporca dostal do omeškania so zaplatením zmluvnej pokuty. Podľa tohto ustanovenia ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania určené v zmluve, inak o 10 % vyššie, než je základná úroková sadzba Národnej banky Slovenska uplatňovaná pred prvým kalendárnym dňom kalendárneho polroka, v ktorom došlo k omeškaniu, pričom základná úroková sadzba Národnej banky Slovenska platná v prvý kalendárny deň kalendárneho polroka, sa použije počas celého tohto polroka. S poukazom na obsah uvedeného ustanovenia je nepochybné, že navrhovateľom uplatňovaný úrok z omeškania vo výške 8,5% je v úplnom súlade s uvedeným ustanovením. Preto sa odvolací súd nemohol stotožniť s názorom odporcu v odvolaní o nezákonnosti navrhovateľom uplatňovaného úroku z omeškania.",
+      "score": 0.750977,
+      "source_queries": [
+        "q_breach"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Zmluvnú pokutu odporca nezaplatil.",
+      "score": 0.562609,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Okresný súd poukázal na znenie § 42 ods. 4 písm. b), 43 ods. 5 písm. b) a c) zákona č. 610/2003 Z.z. o elektronických komunikáciách, § 39 §, 544 ods. 1 Občianskeho zákonníka, § 301, § 393 ods. 1 Obchodného zákonníka a § 369 ods. 1 Obchodného zákonníka účinného k 25.01.2007. Dospel k záveru, že obaja účastníci boli v čase uzatvorenia zmluvy podnikateľmi a preto okresný súd tento zmluvný vzťah posudzoval podľa Obchodného zákonníka v zmysle § 261 ods.5. Zmluvné práva a povinnosti účastníkov tohto záväzkového vzťahu boli okrem zákonných ustanovení vyjadrené v zmluve o pripojení vrátane jej dodatku a všeobecných podmienkach. Súčasťou zmluvy bolo ustanovenie o zmluvnej pokute stanovenej pevnou čiastkou 10.000 Sk pre prípad porušenia zmluvných povinností odporcom. Zmluva bola účastníkmi riadne uzatvorená s právami a povinnosťami jednotlivých zmluvných strán, ktoré odporca akceptoval a teda si bol vedomý aj rizika v prípade dojednanej zmluvnej pokuty. Okolnosti, za ktorých bola zmluvná pokuta dojednaná a ktorej zaplatenie je predmetom tohto konania, sa podľa názoru okresného súdu nepriečia dobrým mravom v zmysle § 39 Občianskeho zákonníka a platnosť tohto dojednania zostáva zachovaná i v prípade neprimerane vysokej zmluvnej pokuty. Neprimeranosť zmluvnej pokuty rieši ustanovenie § 301 Obchodného zákonníka upravujúce moderačné oprávnenie súdu, podľa ktorého súd môže neprimerane vysokú zmluvnú pokutu znížiť. V danom prípade zmluvná pokuta zabezpečovala dobu viazanosti 24 mesiacov s ohľadom na zľavnený mobilný telefón zn. Nokia 2610, poskytnutý navrhovateľom odporcovi, ktorého plná kúpna cena podľa informácií dostupných na internete bola v čase uzatvorenia zmluvy 3.990 Sk. Za takýchto okolností a dôvodov, ktoré viedli k dojednaniu posudzovanej výšky zmluvnej pokuty, okresný súd dospel k záveru, že zjednaná zmluvná pokuta vo výške 10.000 Sk je primeraná.",
+      "score": 0.995164,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Na základe uvedeného okresný súd dospel k záveru, že navrhovateľ sa dôvodne domáhal od odporcu zaplatenia zmluvnej pokuty vo výške 10.000 Sk (331,94 eur). Odporca, ktorý zmluvnú pokutu nezaplatil v lehote jej splatnosti dňa 03.10.2007, uvedenej vo výzve navrhovateľa, je odo dňa nasledujúceho po splatnosti, v omeškaní. Sankciou za omeškanie s peňažným plnením je právo navrhovateľa požadovať od odporcu zaplatenie úrokov z omeškania. Okresný súd odporcu zaviazal na zaplatenie uplatnenej istiny vo výške 331,94 eur spolu s úrokom z omeškania vo výške 8,5% ročne v zmysle návrhu od 04.10.2007 do zaplatenia.",
+      "score": 0.771429,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Použitie vymáhania a násilného získavania finančných prostriedkov sa podľa jeho názoru jasne prieči dobrým mravom a je pre neho zarážajúce, ak súd rozhoduje v prospech takýchto firiem. Podľa jeho názoru premlčacia doba v danom prípade nie je štvorročná, ale maximálne dvojročná. Pri tovare v hodnote 0,003 eur považuje priznanie sumy 331,94 eur za absurdné. Preto bol okresný súd povinný návrh navrhovateľa zamietnuť. Podľa názoru odporcu k zamysleniu vedie i skutočnosť, že sa súd nepostavil i proti úroku vo výške 8,5% ročne od začiatku sporu až doposiaľ. Na základe uvedeného podľa názoru odporcu okresný súd vec nesprávne právne posúdil, lebo rozsudok odporuje platným zákonom.",
+      "score": 0.629186,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "K odvolaniu odporcu sa písomne vyjadril navrhovateľ prostredníctvom svojej právnej zástupkyne. Vo vyjadrení zopakoval skutkové okolnosti v zhode s podaným návrhom a jeho prílohami. Výšku zmluvnej pokuty považuje za primeranú s poukazom na to, že predmetom dodatku k zmluve o pripojení bol i predaj telefónu za sumu 1 Sk, ktorého hodnota bola v čase jeho predaja ďaleko vyššia. Mobilný telefón ostal i po ukončení zmluvy vo vlastníctve odporcu. Podľa názoru navrhovateľa výška úrokov bola vypočítaná a súdom priznaná v súlade s platnými právnymi predpismi. Preto považuje rozsudok okresného súdu za správny a navrhuje tento rozsudok potvrdiť. Navrhovateľ súčasne uplatnil náhradu trov odvolacieho konania, spočívajúci v trovách právneho zastúpenia vo výške 33,97 eur (1 úkon 26,56 eur, paušál 7,41 eur) za jeden úkon právnej služby, spočívajúci vo vypracovaní vyjadrenia.",
+      "score": 0.646572,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_12",
+      "chunk_index": 12,
+      "text": "Krajský súd, ako súd odvolací, vec preskúmal v rozsahu a z dôvodov odvolania podľa § 212 ods. 1 O.s.p. bez nariadenia odvolacieho pojednávania podľa § 214 ods. 2 O.s.p. a dospel k záveru, že rozsudok okresného súdu je potrebné podľa § 220 ods. 1 O.s.p. zmeniť z týchto dôvodov: Na základe preskúmania rozsudku odvolací súd dospel k záveru, že okresný súd dospel k správnym skutkovým záverom, ktoré majú oporu v obsahu spisového materiálu. Odvolací súd sa preto v celom rozsahu stotožňuje s týmito skutkovými závermi v odôvodnení rozsudku a podľa § 219 ods. 2 O.s.p. na ne v plnom rozsahu poukazuje.",
+      "score": 0.6023,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_16",
+      "chunk_index": 16,
+      "text": "Podľa § 301 prvá veta Obchodného zákonníka neprimerane vysokú zmluvnú pokutu môže súd znížiť s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, a to až do výšky škody, ktorá vznikla do doby súdneho rozhodnutia porušením zmluvnej povinnosti, na ktorú sa vzťahuje zmluvná pokuta.",
+      "score": 0.919188,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "Odvolací súd sa stotožnil so záverom okresného súdu, podľa ktorého zmluvná pokuta v danom prípade zabezpečovala dobu viazanosti odporcu mať aktivovaný účastnícky program vo výške mesačného poplatku najmenej vo výške 0,30 eur na dobu 24 mesiacov, k čomu ako protihodnota bolo odporcovi poskytnuté telekomunikačné zariadenie Nokia 2610 so zľavou 129,42 eur (3.899 Sk). Z uvedených skutkových zistení vyplýva, že zmluvná pokuta zabezpečovala záväzok odporcu v celkovej hodnote vo výške 7,17 eur (24 mesiacov x 9 Sk/ mesiac), vo vzťahu ku ktorému je podľa názoru odvolacieho súdu na rozdiel od názoru okresného súdu dohodnutá zmluvná pokuta vo výške 331,94 eur zjavne neprimeraná v zmysle 301 Obchodného zákonníka. Preto odvolací súd podľa § 301 Obchodného zákonníka znížil neprimerane vysokú zmluvnú pokutu do výšky škody podľa bodu 3.7 Dodatku k zmluve, ktorá škoda predstavuje zľavu z ceny telekomunikačného zariadenia, poskytnutú odporcovi pri jeho kúpe od navrhovateľa, teda škodu vo výške 129,42 eur (3.899 Sk). Takýto záver odvolacieho súd vychádza z ustanovenia § 261 ods. 6 Obchodného zákonníka v spojení s § 545 ods. 1 prvá veta Občianskeho zákonníka, podľa ktorého veriteľ nie je oprávnený požadovať náhradu škody spôsobenej porušením povinnosti, ak z dojednania účastníkov o zmluvnej pokute nevyplýva niečo iné, pričom podľa Dodatku k zmluve (bod 2.5. tretia veta) bolo účastníkmi podľa § 261 ods. 6 Obchodného zákonníka a § 545 ods. 1 druhá veta Občianskeho zákonníka výslovne dohodnuté len právo domáhať sa náhrady škody presahujúcej zmluvnú pokutu.",
+      "score": 0.931015,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "Pokiaľ navrhovateľ v odvolaní poukazoval na to, že zmluvná pokuta je v rozpore s dobrými mravmi, odvolací súd poukazuje na to, že právom dovolené konanie je v zásade v súlade s dobrými mravmi a preto samotná dohoda o zmluvnej pokute nemôže spôsobovať jej neplatnosť pre rozpor s dobrými mravmi. Keďže ustanovenie § 301 Obchodného zákonníka dovoľuje súdu znížiť neprimerane vysokú zmluvnú pokutu, teda znížiť zmluvnú pokutu, ktorá je v rozpore s dobrými mravmi, nebolo možné zmietnuť uplatnený nárok navrhovateľa na zaplatenie zmluvnej pokuty ako celok len preto, že bola dojednaná v neprimeranej výške.",
+      "score": 0.767742,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Trenčín_6Co_52_2011_00_dokument.pdf_chunk_23",
+      "chunk_index": 23,
+      "text": "V súvislosti s odporcom namietanou výškou úrokov z omeškania odvolací súd rovnako, ako okresný súd, poukazuje na ustanovenie § 269 ods. 1 Obchodného zákonníka, účinného k 03.10.2007, kedy sa odporca dostal do omeškania so zaplatením zmluvnej pokuty. Podľa tohto ustanovenia ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania určené v zmluve, inak o 10 % vyššie, než je základná úroková sadzba Národnej banky Slovenska uplatňovaná pred prvým kalendárnym dňom kalendárneho polroka, v ktorom došlo k omeškaniu, pričom základná úroková sadzba Národnej banky Slovenska platná v prvý kalendárny deň kalendárneho polroka, sa použije počas celého tohto polroka. S poukazom na obsah uvedeného ustanovenia je nepochybné, že navrhovateľom uplatňovaný úrok z omeškania vo výške 8,5% je v úplnom súlade s uvedeným ustanovením. Preto sa odvolací súd nemohol stotožniť s názorom odporcu v odvolaní o nezákonnosti navrhovateľom uplatňovaného úroku z omeškania.",
+      "score": 0.724606,
+      "source_queries": [
+        "q_factors"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 25,
+    "call1_unique_chunks": 13,
+    "call2_unique_chunks": 10,
+    "call1_total_chars": 12497,
+    "call2_total_chars": 8135
+  }
+}

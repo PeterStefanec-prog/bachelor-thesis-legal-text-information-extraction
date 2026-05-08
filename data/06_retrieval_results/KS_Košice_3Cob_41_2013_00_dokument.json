@@ -1,0 +1,302 @@
+{
+  "source_file": "KS_Košice_3Cob_41_2013_00_dokument.pdf",
+  "case_id": "3Cob/41/2013",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "27.08.2013",
+    "case_id": "3Cob/41/2013",
+    "ecli": "ECLI:SK:KSKE:2013:7605215910.1",
+    "court": "Krajský súd Košice",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Košice\nSpisová značka: 3Cob/41/2013\nIdentifikačné číslo súdneho spisu: 7605215910\nDátum vydania rozhodnutia: 27. 08. 2013\nMeno a priezvisko sudcu, VSÚ: Mgr. Jolana Fuchsová\nECLI: ECLI:SK:KSKE:2013:7605215910.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Košiciach v senáte zloženom z predsedníčky Mgr. Jolany Fuchsovej a sudcov JUDr. Jozefa Vancu a JUDr. Gabriely Varhalíkovej v právnej veci žalobcu F. N., a.s., IČO XX XXX XXX, H. XX, F., zastúpeného spoločnosťou AK Gavorová & Partneri, spol. s r.o., Lombardiniho XX/B, F., IČO XX XXX XXX proti žalovanej 1/ U. R., nar. X.X.XXXX, bytom I. XX/XX, L. Š., a žalovanému 2/ T. R., nar. X.X.XXXX, bytom I. XX/XX, L. Š., obaja právne zastúpení R.. T. F., advokátom so sídlom Advokátska kancelária Q.\n\nXX, T., o zaplatenie 5 953,69 eur s príslušenstvom, o odvolaní žalovaných proti rozsudku Okresného súdu Spišská Nová Ves č.k. XXCb/XX/XXXX-XXX zo dňa 19.10.2012 takto\n\nrozhodol: Potvrdzuje rozsudok súdu prvého stupňa.\n\nÚčastníkom nepriznáva náhradu trov odvolacieho konania.",
+  "reasoning_full": "odôvodnenie: Okresný súd Spišská Nová Ves, ako súd prvého stupňa, napadnutým rozsudkom zo dňa 19.10.2012 zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur s 12,5% ročným úrokom z omeškania od 29.4.2004 do zaplatenia a nahradiť trovy konania vo výške 1.142,59 eur.\n\nV odôvodnení rozsudku súd prvého stupňa uviedol, že žalobca navrhol zaviazať žalovaných zaplatiť mu sumu 5.953,69 eur (179.361,00 Sk) a prísl. titulom nárokov z leasingovej zmluvy č. XXXX/XX zo dňa 11.6.2002, predmetom ktorej bol prenájom a následná kúpa ojazdeného motorového vozidla S. F.\n\nXXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH. Predmetné vozidlo bolo dňa 10.11.2002 žalovanej 1/ odcudzené. Dňa 13.6.2002 žalovaný 2/ doručil žalobcovi vyhlásenie ručiteľa k leasingovej zmluve č. XXXX/XX. Žalobca po obdŕžaní poistného plnenia dňa 29.3.2004 vystavil konečné vyúčtovanie vo výške 5.953,69 eur (179.361,00 Sk) a zaslal toto vyúčtovanie žalovanej 1/, ktorá túto čiastku ku dňu podania žaloby neuhradila, a preto žalobca vyzval žalovaného 2/ ako ručiteľa na úhradu dlžnej sumy a ani on ju neuhradil. Žalobca prípisom zo dňa 25.11.2002, ktorý žalovaná 1/ prevzala dňa 29.11.2002 odstúpil od zmluvy pre podstatné porušenie povinnosti, a to omeškanie so zaplatením splátky po dobu dlhšiu ako 6 týždňov. Proti platobnému rozkazu podali žalovaní 1/ a 2/ odpor, v ktorom namietali svoju pasívnu legitimáciu z dôvodu, že dlh voči žalobcovi prevzal písomne R. V., ktorý odkúpil leasingové motorové vozidlo od žalovanej 1/.\n\nSúd prvého stupňa uviedol, že vykonaným dokazovaním, výsluchom účastníkov konania a svedkov zistil, že žalobca a žalovaná 1/ uzatvorili dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX, ktorej predmetom bol prenájom a kúpa ojazdeného motorového vozidla S. F. XXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, zmluva bola uzatvorená na dobu 36 mesiacov a žalovaná 1/ sa zaviazala počas uvedenej doby uhrádzať podľa splátkového kalendára leasingové splátky. Žalovaná 1/ však neuhradila splátky po dobu dlhšiu ako 6 týždňov, preto žalobca na základe článku XI, bod 2. Všeobecných zmluvných podmienok predčasne ku dňu 25.11.2002 ukončil leasingovú zmluvu.\n\nListom zo dňa 19.11.2002 žalovaná 1/ oznámila žalobcovi odcudzenie predmetu leasingu a po obdŕžaní poistného plnenia poisťovňou E. - L. poisťovňa, a.s. vo výške 7.438,92 eur (224.105,00 Sk), vypracoval žalobca vyúčtovanie pri predčasnom ukončení leasingovej zmluvy, ktoré zaslal žalovaným a uviedol podrobný výpočet sumy 5.953,69 eur (179.361,00 Sk), ktorú žiadal zaplatiť.\n\nK tvrdeniu žalovaných, že došlo k postúpeniu práv z predmetu leasingu na tretiu osobu žalobca uviedol, že k takému postúpeniu nedošlo, nebol uzavretý žiadny dodatok k leasingovej zmluve a pokiaľ existuje takýto dodatok k zmluve, žiadal o jeho predloženie a predložil súdu potvrdenie o vyradení vozidla z evidencie zo dňa 14.4.2003, v ktorom je ako držiteľka motorového vozidla S. F. XXV SX vedená žalovaná 1/.\n\nNa pojednávaní žalovaná 1/ namietala svoju pasívnu legitimáciu a žiadala žalobu zamietnuť, pretože počas trvania leasingovej zmluvy predmet leasingu postúpila na tretiu osobu, že po podpise leasingovej zmluvy dospela s manželom k záveru, že motorové vozidlo im nevyhovuje, preto sa dohodli so zamestnancom spoločnosti V., spol. s.r.o. Žilina, p. R., že si nájdu ďalšieho nástupcu a pri tejto príležitosti mu odovzdali všetky doklady o vozidle a dohodli si aj termín odovzdania motorového vozidla. To, že p.\n\nR. odovzdal motorové vozidlo ďalšiemu nástupcovi, žalovaná 1/ nevie preukázať žiadnymi dokladmi, zmena držiteľa vozidla sa predlžovala a v čase, keď vozidlo bolo odcudzené ďalšiemu držiteľovi vozidla pánovi V., bolo motorové vozidlo vedené na meno žalovanej 1/, za zmenu držiteľa motorového vozidla žalovaní zaplatili žalobcovi poplatok vo výške 99,50 eur (3.000,00 Sk). Na pojednávaní žalovaný 2/ uviedol, že doklady od predmetného vozidla neexistujú, vypovedal zhodne so žalovanou 1/ a navrhol žalobu zamietnuť. Súd prvého stupňa uviedol, že vypočul ako svedka konateľa spoločnosti V., spol., s r.o. A., K.. R. V., ktorý uviedol, že zamestnával vo svojej spoločnosti zamestnanca R., ktorý mal v náplni práce informovať záujemcov o podmienkach kúpy vozidla formou leasingu, predkladať záujemcom leasingové podmienky, prípravu dokladov a zmluvy na predaj vozidla na leasing z autobazáru E. E.\n\nM. - M., pre žalobcu, že po zhromaždení dokladov zamestnanec R. predkladal svedkovi na posúdenie tieto podklady získané od záujemcov o kúpu vozidla na doplnenie a vysvetlenie, ale tento zamestnanec nemal oprávnenie o podmienkach kúpy vozidla rozhodovať a že k postúpeniu predmetu leasingu na inú osobu sú presne určené podmienky a pokiaľ takýto úkon vykoná nájomca svojvoľne, dopustí sa protiprávneho konania. Súd prvého stupňa vypočul ako svedka R. V., ktorý vypovedal, že v lete 2002 dostal ponuku prevziať motorové vozidlo S. F. na leasing od zamestnanca žalobcu, následne mu bolo motorové vozidlo odovzdané žalovaným 2/ a zamestnancom leasingovej spoločnosti v N. Y., toto vozidlo aj užíval, splácal leasingové splátky do doby, kedy mu bolo predmetné motorové vozidlo odcudzené a keďže nebol žiadny oficiálny doklad o tom, že je novým držiteľom vozidla, konal so žalovaným 2/ pri riešení poistnej udalosti a doklady o prevzatí vozidla odovzdal polícii.\n\nSúd prvého stupňa citoval ustanovenia § 262, § 269 ods. 2, § 303, § 301, § 531 ods.1, 3, § 369 ods.1 Obchodného zákonníka a uviedol, že vykonaným dokazovaním mal preukázané, že žalobca so žalovanou 1/ uzatvoril dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX., ktorej predmetom bol prenájom a následná kúpa ojazdeného motorového vozidla S. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, ktorej neoddeliteľnou súčasťou sú Všeobecné zmluvné podmienky o leasingu poskytovanom žalobcom, že podľa čl. X, bodu 1 nájomca nesie riziko, straty alebo odcudzenia, poškodenia a predčasného opotrebenia predmetu leasingu objektívne, bez ohľadu na zavinenie, čo ho nezbavuje povinnosti platiť leasingové splátky. Podľa čl. XI, bodu 3 Všeobecných zmluvných podmienok, v prípade krádeže predmetu leasingu, záväzok nájomcu zaniká pre nemožnosť plnenia a prenajímateľ je oprávnený požadovať od nájomcu náhradu škody a nájomca je povinný nahradiť škodu v sume zodpovedajúcej rozdielu celkovej ceny leasingu a už uhradených splátok v lehote 30 dní od jej vyúčtovania prenajímateľom. Na základe vyúčtovania žalobcu vo výške 11.930,02 eur (359.404,00 Sk) po odpočítaní poistného plnenia poskytnutého poisťovňou E. - L. poisťovňa vo výške 7.438,92 eur (224.105,00 Sk) po likvidácii poistnej udalosti, žalobca si uplatnil nárok voči žalovanej 1/ ako dlžníkovi a voči žalovanému 2/ ako ručiteľovi spoločne a nerozdielne vo výške 5.953,69 eur (179.361,00 Sk) s prísl. Súd prvého stupňa uviedol, že mal za preukázané, že žalobca si oprávnene uplatnil tento nárok, pretože žalovaná 1/ porušila zmluvné podmienky, keď previedla motorové vozidlo, ktoré bolo predmetom leasingu, na nového držiteľa, bez súhlasu žalobcu. Svoje tvrdenie o prevedení vozidla so súhlasom leasingovej spoločnosti nepreukázala, a teda neuniesla dôkazné bremeno. Žalovaný 2/ ako ručiteľ vo svojom vyhlásení vyhlásil, že berie na seba voči žalobcovi povinnosť, že ak nájomca, teda žalovaná 1/ pohľadávku voči žalobcovi nevyrovná, tak žalovaný 2/ sa zaväzuje túto pohľadávku uspokojiť a keďže k zaplateniu pohľadávky žalovanou 1/ nedošlo, súd zaviazal aj žalovaného 2/ ako ručiteľa na zaplatenie dlžnej sumy spoločne a nerozdielne a zároveň priznal žalobcovi úroky z omeškania, ktoré sú v zmysle § 361 ods. 1 Obchodného zákonníka oprávnené a v súlade so zákonom a zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5, a náhradu trov konania tak, ako je uvedené vo výroku tohto rozsudku. O trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 1 O.s.p. a ich náhradu priznal žalobcovi, ktorý mal v konaní úspech celkom vo výške 1.142,59 eur, ktorú podrobne špecifikoval.\n\nProti rozsudku súdu prvého stupňa podali v zákonnej lehote odvolanie žalovaní 1/ a 2/, cestou svojho právneho zástupcu a navrhli ho zrušiť a vrátiť súdu prvého stupňa na ďalšie konanie. V dôvodoch odvolania nespochybnili súdom prvého stupňa zistený skutkový stav, poukázali na výpovede žalovaných 1/ a 2/, trvali na tom, že za zmenu držiteľa vozidla na pána V. zaplatili poplatok vo výške 99,50 eur, že zmenu dohodli s p. R., zamestnancom žalobcu, ktorý im vozidlo odovzdal a aj zabezpečil p. V., ktorého oni predtým nepoznali a ktorému bolo v prítomnosti p. R. vozidlo odovzdané. Prevzatie vozidla a platenie splátok do doby odcudzenia vozidla potvrdil vo svojej výpovedi aj svedok V.. Úhradu sumy 99,50 eur a troch splátok po 510,26 eur žalovaní, ani svedok V. nemohli dokázať, pretože platby boli uskutočnené na účet, ktorého nie sú vlastníkmi. Uviedli, že svedok R. pracuje v ČĽR, v e-mailovej komunikácii potvrdil, že si pamätá na osobu žalovaného 2/ aj na prevod vozidla na inú osobu a pre pracovné povinnosti neprišiel na Slovensko a keďže jeho vypočutie je pre spravodlivé rozhodnutie súdu potrebné, považujú rozhodnutie súdu prvého stupňa za predčasné a to aj z dôvodu, že žalobca nepredložil dôkaz o úhrade sumy 99,50 eur a 510,26 eur, i keď by to preňho nemal byť žiaden problém. Uviedli, že podľa ich názoru súd prvého stupňa v rozhodnutí vychádzal z nedostatočne, resp. jednostranne zisteného skutkového stavu, neprihliadol na predložené dôkazy, nevypočul kľúčového svedka p. R. a tak nedostatočne zistil skutkový stav.\n\nŽalobca, cestou svojej právnej zástupkyne, vo vyjadrení zo dňa 22.3.2012 k odvolaniu žalovaných uviedol, že žalobcovi bola k dnešnému dňu uhradená iba provízia a 5 splátok, že podľa čl.V ods.1 leasingová zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k zmluve, žalovaní teda konali v rozpore so zmluvou, čím sa dopustili protiprávneho konania a nepreukázali ani údajnú úhradu sumy 99,50 eur za vypracovanie podkladov pri postúpení leasingu a poukázal na skutočnosť, že pán R. nemal oprávnenie rozhodovať o podmienkach kúpy. Pokiaľ ide o doklady o platbách, tieto musia mať ako žalovaní tak aj svedok V., počas konania mali možnosť tieto predložiť, ktorú možnosť nevyužili a taktiež súd prvého stupňa umožnil, aby pán R. bol ako svedok vypočutý, avšak na pojednávanie sa nedostavil. Žalobca uviedol, že podľa jeho názoru súd prvého stupňa zistil skutkový stav veci, prihliadol na všetky predložené dôkazy, obom stranám dal rovnakú možnosť predložiť dôkazy, vyjadriť sa a vypočuť navrhovaných svedkov, preto navrhol napadnutý rozsudok podľa § 219 ods.1 O.s.p. potvrdiť.\n\nOdvolací súd podľa § 212 ods.1, 3 O.s.p. prejednal odvolanie žalovaných proti rozsudku súdu prvého stupňa, vrátane posúdenia konania, ktoré jeho vyhláseniu predchádzalo, a to podľa § 214 ods.2 O.s.p. bez nariadenia pojednávania.\n\nOdvolací súd sa s odkazom na ustanovenie § 219 ods.2 O.s.p. v celom rozsahu stotožňuje s odôvodnením napadnutého rozsudku a s poukazom na ustanovenia citované v napadnutom rozsudku k odvolacím dôvodom žalovaných uvádza nasledovné: Z vykonaného dokazovania nie je sporné, že žalobca, ako prenajímateľ a žalovaná 1/ ako nájomca, uzavreli dňa 11.6.2002 Leasingovú zmluvu č.XXXX/XX podľa § 269 ods.2 Obchodného zákonníka, predmetom ktorej bol ojazdený osobný automobil S. F. XXV SX, v ktorej bolo v čl.V bod 1/ dohodnuté, že \"Táto zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k tejto leasingovej zmluve.\" V konaní pred súdom prvého stupňa ako aj v odvolaní žalovaní namietali nedostatok svojej vecnej pasívnej legitimácie z dôvodu, že došlo k zmene uvedenej zmluvy a práva a povinnosti nájomcu prešli na tretiu osobu, a to pána V. z C..\n\nŽalovaní nepredložili písomný dôkaz o uvedenej zmene, ale za zmenu zmluvy považovali skutočnosť, že o tejto zmene jednali s pánom R., zamestnancom spoločnosti V., spol. s r.o. A., ktorá spoločnosť bola splnomocnená žalobcom k takým úkonom, že uhradili sumu 99,50 eur /3.000,00 Sk/ titulom poplatku za uvedenú zmenu a že predmetné vozidlo za účasti pána R. bolo odovzdané pánu V., ktorý aj uhradil najmenej 3 splátky vo výške po 510,26 eur a tieto prestal uhrádzať až po odcudzení vozidla. Tvrdili, že o zmene zmluvy jednali ale neuviedli, že by podpísali dodatok k zmluve o zmene nájomcu. Na pojednávaní dňa 24.7.2008 /č.l.73/ žalovaná 1/ o.i. vypovedala, že nejaké dokumenty p. R. podpísala, ale že \"Prepis leasingovej zmluvy sa ťahal niekoľkokrát. Manžel volal p. R., ktorý mu uvádzal, že je to v štádiu vybavovania. V čase, keď auto bolo odcudzené ďalšiemu držiteľovi vozidla, bolo vozidlo stále napísané na mňa.\" Z tvrdení žalovaných vyplýva, že ako v konaní pred súdom prvého stupňa, tak ani v odvolacom konaní netvrdili, že by došlo k zmene Leasingovej zmluvy č.XXXX/XX spôsobom v nej dohodnutým, a to uzavretím dodatku v písomnej forme. Tvrdili iba, že sa uskutočnili jednania so spoločnosťou V. spol. s r.o. o zmene nájomcu a na túto skutočnosť navrhli v konaní vypočuť svedka pána R., zamestnanca uvedenej spoločnosti. Samotná žalovaná 1/ však vypovedala, že k prepisu leasingovej zmluvy na inú osobu nedošlo.\n\nOdvolací súd uvádza, že podľa zmluvnej dohody bolo možné leasingovú zmluvu uzavretú medzi žalobcom a žalovanou 1/ platne meniť iba v písomnej forme uzavretím dodatku k nej a v konaní žalovaní nepredložili dôkaz a ani netvrdili, že by k zmene zmluvy uvedeným, zmluvne dohodnutým spôsobom, došlo.\n\nPodľa § 272 ods.2 Obchodného zákonníka \"Ak písomne uzavretá zmluva obsahuje ustanovenie, že sa môže meniť alebo zrušiť iba dohodou strán v písomnej forme, môže sa zmluva meniť alebo zrušiť iba písomne.\" Odvolací súd nespochybňuje tvrdenia žalovaných, že o zmene leasingovej zmluvy jednali so spoločnosťou V. spol. s r.o. A., ako obchodným zástupcom žalobcu, avšak má za to, že aj keby uvedené tvrdenie bolo pravdivé a bolo pravdivé aj tvrdenie o úhrade sumy 99,50 eur /3.000,00 Sk/, ako poplatku za zmenu zmluvy, tak vzhľadom na skutočnosť, že nedošlo k zmene leasingovej zmluvy v dohodnutej písomnej forme, uvedené skutočnosti by podľa § 272 ods.2 Obchodného zákonníka nemali za následok zmenu Leasingovej zmluvy č.XXXX/XX uzavretej medzi žalobcom a žalovanou 1/. Uvedený následok by nezmenila ani výpoveď p. R. o tom, že prebiehali jednania o zmene zmluvy, a preto ak ho súd prvého stupňa nevypočul, nemožno tvrdiť, že by pri rozhodovaní vychádzal z nedostatočne zisteného skutkového stavu.\n\nOkrem toho z Potvrdenia Okresného riaditeľstva Policajného zboru Poprad, Okresného dopravného inšpektorátu N. zo dňa 14.4.2003 o vyradení motorového vozidla z evidencie /č.l. 81/ ako aj z výpovede žalovanej 1/ vyplýva, že v čase odcudzenia vozidla a jeho vyradenia bola žalovaná 1/ v evidencii vozidiel zapísaná ako držiteľka predmetného vozidla.\n\nZ uvedeného vyplýva, že nedošlo k platnej zmene Leasingovej zmluvy č. XXXX/XX zo dňa 11.6.2002 v osobe nájomcu, v dôsledku čoho nositeľom práv a povinnosti nájomcu z uvedenej zmluvy a osobou povinnou uhradiť zmluvne dohodnuté nároky žalobcu pri predčasnom ukončení zmluvy, je žalovaná 1/.\n\nUvedenej povinnosti sa žalovaná 1/ nemôže zbaviť tým, že inej osobe, a to p. V. umožnila užívanie vozidla bez zmeny leasingovej zmluvy a následného prepisu držiteľa vozidla v evidencii vozidiel.\n\nPokiaľ ide o žalovaného 2/, tento v konaní pred súdom prvého stupňa ani v odvolacom konaní nespochybnil zistenie súdu prvého stupňa, že dňa 13.6.2002 podpísal Vyhlásenie ručiteľa k leasingovej zmluve č. XXXX/XX podľa § 403 a násl. Obchodného zákonníka a § 546 a násl. Občianskeho zákonníka, v ktorom vyhlásil, že berie na seba voči prenajímateľovi povinnosť, že ak žalovaná 1/ ako nájomca podľa leasingovej zmluvy pohľadávku nevyrovná, tak sa ako ručiteľ zaväzuje túto pohľadávku uspokojiť do 15 dní od tohto požiadania. V konaní nebolo preukázané, že by uvedený záväzok žalovaný 2/ splnil, alebo, že by zanikol iným spôsobom.\n\nPokiaľ ide o výšku žalobcom uplatnenej sumy, žalovaní namietali iba skutočnosť, že splátky, a to najmenej tri vo výške po 510,26 eur, uhradil pán V. a že uhradili aj sumu 99,50 eur /3.000,00 Sk/ ako poplatok za zmenu zmluvy. Svedok V. na pojednávaní dňa 24.7.2008 /č.l. 74/ vypovedal, že doklady o splácaní leasingu by mal mať, avšak v priebehu konania, ich nepredložil. Taktiež vypovedal, že vozidlo používal od leta 2002.\n\nK úhrade splátok odvolací súd uvádza, že podľa Splátkového kalendára k leasingovej zmluve č.XXXX/ XX /č.l. 8/ prvá splátka bola splatná dňa 1.7.2002 a každá ďalšia prvého dňa nasledujúceho mesiaca, pričom prvá až siedma splátka bola vo výške 11.844,00 Sk a ôsma splátka a ďalšie boli vo výške 12.040,00 Sk a podľa Vyúčtovania zo dňa 29.3.2004 pri predčasnom ukončení leasingovej zmluvy / č.l. 4/, žalobca evidoval okrem zaplatenej zálohy vo výške 120.000,00 Sk a provízie vo výške 6.000,00 Sk aj zaplatenie 5 splátok vo výške po 11.844,00 Sk a 6-tej splátky vo výške 3.000,00 Sk.\n\nZ vykonaného dokazovania vyplýva, že k odcudzeniu vozidla došlo dňa 10.11.2002 a podľa výpovede svedka p. V., po odcudzení vozidla už leasingové splátky neuhradzoval.\n\nŽalovaní zhodne so svedkom p. V. tvrdili, že k odovzdaniu vozidla došlo v lete 2002, od kedy tento svedok platil splátky, a to až do odcudzenia vozidla.\n\nZ vyúčtovania žalobcu zo dňa 29.3.2004 /č.l. 4/ má odvolací súd za preukázané, že žalobca na úhradu splátok eviduje úhradu 5 splátok po 11.844,00 Sk /393,15 eur/ a má za to, že zrejme sa jedná aj o splátky zaplatené p. V., keďže sa jedná o splátky splatné za obdobie od 1.7. 2002 do 1.11.2002, teda do odcudzenia motorového vozidla. Okrem týchto úhrad žalobca eviduje aj úhradu sumy 3.000,00 Sk, čo môže byť žalovanými tvrdená úhrada sumy 3.000,00 Sk /99,50 eur/, ako poplatku za zmenu leasingovej zmluvy, ktorú sumu však žalobca zaúčtoval ako úhradu časti 6-tej splátky.\n\nZ uvedeného vyplýva, že žalobca žalovanými tvrdenú úhradu splátok ako aj sumy 3.000,00 Sk vo svojom účtovníctve eviduje a aj ju započítal na úhradu svojej pohľadávky. O zaplatení vyššej sumy, než akú žalobca eviduje uhradenú a akú započítal na svoju pohľadávku, žalovaní neuniesli dôkazné bremeno.\n\nIné výhrady žalovaní v odvolaní proti rozsudku súdu prvého stupňa neuviedli.\n\nNa základe takto zisteného skutkového a právneho stavu odvolací súd podľa § 219 ods.1 O.s.p. rozsudok súdu prvého stupňa potvrdil ako vecne správny, vrátane výroku o trovách konania, o ktorom súd prvého stupňa rozhodol v súlade s právnou úpravou.\n\nV odvolacom konaní boli žalovaní neúspešní, preto podľa § 224 ods.1 a § 142 ods.1 O.s.p. im vznikla povinnosť nahradiť žalobcovi trovy konania, náhradu ktorých si však právny zástupca žalobcu neuplatnil, preto odvolací súd rozhodol tak, že účastníkom nepriznáva náhradu trov odvolacieho konania.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Okresný súd Spišská Nová Ves, ako súd prvého stupňa, napadnutým rozsudkom zo dňa 19.10.2012 zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur s 12,5% ročným úrokom z omeškania od 29.4.2004 do zaplatenia a nahradiť trovy konania vo výške 1.142,59 eur.",
+      "score": 0.814317,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "XXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH. Predmetné vozidlo bolo dňa 10.11.2002 žalovanej 1/ odcudzené. Dňa 13.6.2002 žalovaný 2/ doručil žalobcovi vyhlásenie ručiteľa k leasingovej zmluve č. XXXX/XX. Žalobca po obdŕžaní poistného plnenia dňa 29.3.2004 vystavil konečné vyúčtovanie vo výške 5.953,69 eur (179.361,00 Sk) a zaslal toto vyúčtovanie žalovanej 1/, ktorá túto čiastku ku dňu podania žaloby neuhradila, a preto žalobca vyzval žalovaného 2/ ako ručiteľa na úhradu dlžnej sumy a ani on ju neuhradil. Žalobca prípisom zo dňa 25.11.2002, ktorý žalovaná 1/ prevzala dňa 29.11.2002 odstúpil od zmluvy pre podstatné porušenie povinnosti, a to omeškanie so zaplatením splátky po dobu dlhšiu ako 6 týždňov. Proti platobnému rozkazu podali žalovaní 1/ a 2/ odpor, v ktorom namietali svoju pasívnu legitimáciu z dôvodu, že dlh voči žalobcovi prevzal písomne R. V., ktorý odkúpil leasingové motorové vozidlo od žalovanej 1/.",
+      "score": 0.865069,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Súd prvého stupňa uviedol, že vykonaným dokazovaním, výsluchom účastníkov konania a svedkov zistil, že žalobca a žalovaná 1/ uzatvorili dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX, ktorej predmetom bol prenájom a kúpa ojazdeného motorového vozidla S. F. XXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, zmluva bola uzatvorená na dobu 36 mesiacov a žalovaná 1/ sa zaviazala počas uvedenej doby uhrádzať podľa splátkového kalendára leasingové splátky. Žalovaná 1/ však neuhradila splátky po dobu dlhšiu ako 6 týždňov, preto žalobca na základe článku XI, bod 2. Všeobecných zmluvných podmienok predčasne ku dňu 25.11.2002 ukončil leasingovú zmluvu.",
+      "score": 0.987887,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Listom zo dňa 19.11.2002 žalovaná 1/ oznámila žalobcovi odcudzenie predmetu leasingu a po obdŕžaní poistného plnenia poisťovňou E. - L. poisťovňa, a.s. vo výške 7.438,92 eur (224.105,00 Sk), vypracoval žalobca vyúčtovanie pri predčasnom ukončení leasingovej zmluvy, ktoré zaslal žalovaným a uviedol podrobný výpočet sumy 5.953,69 eur (179.361,00 Sk), ktorú žiadal zaplatiť.",
+      "score": 0.823411,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Súd prvého stupňa citoval ustanovenia § 262, § 269 ods. 2, § 303, § 301, § 531 ods.1, 3, § 369 ods.1 Obchodného zákonníka a uviedol, že vykonaným dokazovaním mal preukázané, že žalobca so žalovanou 1/ uzatvoril dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX., ktorej predmetom bol prenájom a následná kúpa ojazdeného motorového vozidla S. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, ktorej neoddeliteľnou súčasťou sú Všeobecné zmluvné podmienky o leasingu poskytovanom žalobcom, že podľa čl. X, bodu 1 nájomca nesie riziko, straty alebo odcudzenia, poškodenia a predčasného opotrebenia predmetu leasingu objektívne, bez ohľadu na zavinenie, čo ho nezbavuje povinnosti platiť leasingové splátky. Podľa čl. XI, bodu 3 Všeobecných zmluvných podmienok, v prípade krádeže predmetu leasingu, záväzok nájomcu zaniká pre nemožnosť plnenia a prenajímateľ je oprávnený požadovať od nájomcu náhradu škody a nájomca je povinný nahradiť škodu v sume zodpovedajúcej rozdielu celkovej ceny leasingu a už uhradených splátok v lehote 30 dní od jej vyúčtovania prenajímateľom. Na základe vyúčtovania žalobcu vo výške 11.930,02 eur (359.404,00 Sk) po odpočítaní poistného plnenia poskytnutého poisťovňou E. - L. poisťovňa vo výške 7.438,92 eur (224.105,00 Sk) po likvidácii poistnej udalosti, žalobca si uplatnil nárok voči žalovanej 1/ ako dlžníkovi a voči žalovanému 2/ ako ručiteľovi spoločne a nerozdielne vo výške 5.953,69 eur (179.361,00 Sk) s prísl. Súd prvého stupňa uviedol, že mal za preukázané, že žalobca si oprávnene uplatnil tento nárok, pretože žalovaná 1/ porušila zmluvné podmienky, keď previedla motorové vozidlo, ktoré bolo predmetom leasingu, na nového držiteľa, bez súhlasu žalobcu. Svoje tvrdenie o prevedení vozidla so súhlasom leasingovej spoločnosti nepreukázala, a teda neuniesla dôkazné bremeno. Žalovaný 2/ ako ručiteľ vo svojom vyhlásení vyhlásil, že berie na seba voči žalobcovi povinnosť, že ak nájomca, teda žalovaná 1/ pohľadávku voči žalobcovi nevyrovná, tak žalovaný 2/ sa zaväzuje túto pohľadávku uspokojiť a keďže k zaplateniu pohľadávky žalovanou 1/ nedošlo, súd zaviazal aj žalovaného 2/ ako ručiteľa na zaplatenie dlžnej sumy spoločne a nerozdielne a zároveň priznal žalobcovi úroky z omeškania, ktoré sú v zmysle § 361 ods. 1 Obchodného zákonníka oprávnené a v súlade so zákonom a zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5, a náhradu trov konania tak, ako je uvedené vo výroku tohto rozsudku. O trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 1 O.s.p. a ich náhradu priznal žalobcovi, ktorý mal v konaní úspech celkom vo výške 1.142,59 eur, ktorú podrobne špecifikoval.",
+      "score": 0.999283,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Proti rozsudku súdu prvého stupňa podali v zákonnej lehote odvolanie žalovaní 1/ a 2/, cestou svojho právneho zástupcu a navrhli ho zrušiť a vrátiť súdu prvého stupňa na ďalšie konanie. V dôvodoch odvolania nespochybnili súdom prvého stupňa zistený skutkový stav, poukázali na výpovede žalovaných 1/ a 2/, trvali na tom, že za zmenu držiteľa vozidla na pána V. zaplatili poplatok vo výške 99,50 eur, že zmenu dohodli s p. R., zamestnancom žalobcu, ktorý im vozidlo odovzdal a aj zabezpečil p. V., ktorého oni predtým nepoznali a ktorému bolo v prítomnosti p. R. vozidlo odovzdané. Prevzatie vozidla a platenie splátok do doby odcudzenia vozidla potvrdil vo svojej výpovedi aj svedok V.. Úhradu sumy 99,50 eur a troch splátok po 510,26 eur žalovaní, ani svedok V. nemohli dokázať, pretože platby boli uskutočnené na účet, ktorého nie sú vlastníkmi. Uviedli, že svedok R. pracuje v ČĽR, v e-mailovej komunikácii potvrdil, že si pamätá na osobu žalovaného 2/ aj na prevod vozidla na inú osobu a pre pracovné povinnosti neprišiel na Slovensko a keďže jeho vypočutie je pre spravodlivé rozhodnutie súdu potrebné, považujú rozhodnutie súdu prvého stupňa za predčasné a to aj z dôvodu, že žalobca nepredložil dôkaz o úhrade sumy 99,50 eur a 510,26 eur, i keď by to preňho nemal byť žiaden problém. Uviedli, že podľa ich názoru súd prvého stupňa v rozhodnutí vychádzal z nedostatočne, resp. jednostranne zisteného skutkového stavu, neprihliadol na predložené dôkazy, nevypočul kľúčového svedka p. R. a tak nedostatočne zistil skutkový stav.",
+      "score": 0.751991,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "Žalobca, cestou svojej právnej zástupkyne, vo vyjadrení zo dňa 22.3.2012 k odvolaniu žalovaných uviedol, že žalobcovi bola k dnešnému dňu uhradená iba provízia a 5 splátok, že podľa čl.V ods.1 leasingová zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k zmluve, žalovaní teda konali v rozpore so zmluvou, čím sa dopustili protiprávneho konania a nepreukázali ani údajnú úhradu sumy 99,50 eur za vypracovanie podkladov pri postúpení leasingu a poukázal na skutočnosť, že pán R. nemal oprávnenie rozhodovať o podmienkach kúpy. Pokiaľ ide o doklady o platbách, tieto musia mať ako žalovaní tak aj svedok V., počas konania mali možnosť tieto predložiť, ktorú možnosť nevyužili a taktiež súd prvého stupňa umožnil, aby pán R. bol ako svedok vypočutý, avšak na pojednávanie sa nedostavil. Žalobca uviedol, že podľa jeho názoru súd prvého stupňa zistil skutkový stav veci, prihliadol na všetky predložené dôkazy, obom stranám dal rovnakú možnosť predložiť dôkazy, vyjadriť sa a vypočuť navrhovaných svedkov, preto navrhol napadnutý rozsudok podľa § 219 ods.1 O.s.p. potvrdiť.",
+      "score": 0.772455,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "Odvolací súd sa s odkazom na ustanovenie § 219 ods.2 O.s.p. v celom rozsahu stotožňuje s odôvodnením napadnutého rozsudku a s poukazom na ustanovenia citované v napadnutom rozsudku k odvolacím dôvodom žalovaných uvádza nasledovné: Z vykonaného dokazovania nie je sporné, že žalobca, ako prenajímateľ a žalovaná 1/ ako nájomca, uzavreli dňa 11.6.2002 Leasingovú zmluvu č.XXXX/XX podľa § 269 ods.2 Obchodného zákonníka, predmetom ktorej bol ojazdený osobný automobil S. F. XXV SX, v ktorej bolo v čl.V bod 1/ dohodnuté, že \"Táto zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k tejto leasingovej zmluve.\" V konaní pred súdom prvého stupňa ako aj v odvolaní žalovaní namietali nedostatok svojej vecnej pasívnej legitimácie z dôvodu, že došlo k zmene uvedenej zmluvy a práva a povinnosti nájomcu prešli na tretiu osobu, a to pána V. z C..",
+      "score": 0.782558,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "Žalovaní nepredložili písomný dôkaz o uvedenej zmene, ale za zmenu zmluvy považovali skutočnosť, že o tejto zmene jednali s pánom R., zamestnancom spoločnosti V., spol. s r.o. A., ktorá spoločnosť bola splnomocnená žalobcom k takým úkonom, že uhradili sumu 99,50 eur /3.000,00 Sk/ titulom poplatku za uvedenú zmenu a že predmetné vozidlo za účasti pána R. bolo odovzdané pánu V., ktorý aj uhradil najmenej 3 splátky vo výške po 510,26 eur a tieto prestal uhrádzať až po odcudzení vozidla. Tvrdili, že o zmene zmluvy jednali ale neuviedli, že by podpísali dodatok k zmluve o zmene nájomcu. Na pojednávaní dňa 24.7.2008 /č.l.73/ žalovaná 1/ o.i. vypovedala, že nejaké dokumenty p. R. podpísala, ale že \"Prepis leasingovej zmluvy sa ťahal niekoľkokrát. Manžel volal p. R., ktorý mu uvádzal, že je to v štádiu vybavovania. V čase, keď auto bolo odcudzené ďalšiemu držiteľovi vozidla, bolo vozidlo stále napísané na mňa.\" Z tvrdení žalovaných vyplýva, že ako v konaní pred súdom prvého stupňa, tak ani v odvolacom konaní netvrdili, že by došlo k zmene Leasingovej zmluvy č.XXXX/XX spôsobom v nej dohodnutým, a to uzavretím dodatku v písomnej forme. Tvrdili iba, že sa uskutočnili jednania so spoločnosťou V. spol. s r.o. o zmene nájomcu a na túto skutočnosť navrhli v konaní vypočuť svedka pána R., zamestnanca uvedenej spoločnosti. Samotná žalovaná 1/ však vypovedala, že k prepisu leasingovej zmluvy na inú osobu nedošlo.",
+      "score": 0.733564,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_16",
+      "chunk_index": 16,
+      "text": "Podľa § 272 ods.2 Obchodného zákonníka \"Ak písomne uzavretá zmluva obsahuje ustanovenie, že sa môže meniť alebo zrušiť iba dohodou strán v písomnej forme, môže sa zmluva meniť alebo zrušiť iba písomne.\" Odvolací súd nespochybňuje tvrdenia žalovaných, že o zmene leasingovej zmluvy jednali so spoločnosťou V. spol. s r.o. A., ako obchodným zástupcom žalobcu, avšak má za to, že aj keby uvedené tvrdenie bolo pravdivé a bolo pravdivé aj tvrdenie o úhrade sumy 99,50 eur /3.000,00 Sk/, ako poplatku za zmenu zmluvy, tak vzhľadom na skutočnosť, že nedošlo k zmene leasingovej zmluvy v dohodnutej písomnej forme, uvedené skutočnosti by podľa § 272 ods.2 Obchodného zákonníka nemali za následok zmenu Leasingovej zmluvy č.XXXX/XX uzavretej medzi žalobcom a žalovanou 1/. Uvedený následok by nezmenila ani výpoveď p. R. o tom, že prebiehali jednania o zmene zmluvy, a preto ak ho súd prvého stupňa nevypočul, nemožno tvrdiť, že by pri rozhodovaní vychádzal z nedostatočne zisteného skutkového stavu.",
+      "score": 0.743801,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "Pokiaľ ide o žalovaného 2/, tento v konaní pred súdom prvého stupňa ani v odvolacom konaní nespochybnil zistenie súdu prvého stupňa, že dňa 13.6.2002 podpísal Vyhlásenie ručiteľa k leasingovej zmluve č. XXXX/XX podľa § 403 a násl. Obchodného zákonníka a § 546 a násl. Občianskeho zákonníka, v ktorom vyhlásil, že berie na seba voči prenajímateľovi povinnosť, že ak žalovaná 1/ ako nájomca podľa leasingovej zmluvy pohľadávku nevyrovná, tak sa ako ručiteľ zaväzuje túto pohľadávku uspokojiť do 15 dní od tohto požiadania. V konaní nebolo preukázané, že by uvedený záväzok žalovaný 2/ splnil, alebo, že by zanikol iným spôsobom.",
+      "score": 0.75,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "Pokiaľ ide o výšku žalobcom uplatnenej sumy, žalovaní namietali iba skutočnosť, že splátky, a to najmenej tri vo výške po 510,26 eur, uhradil pán V. a že uhradili aj sumu 99,50 eur /3.000,00 Sk/ ako poplatok za zmenu zmluvy. Svedok V. na pojednávaní dňa 24.7.2008 /č.l. 74/ vypovedal, že doklady o splácaní leasingu by mal mať, avšak v priebehu konania, ich nepredložil. Taktiež vypovedal, že vozidlo používal od leta 2002.",
+      "score": 0.816667,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_22",
+      "chunk_index": 22,
+      "text": "K úhrade splátok odvolací súd uvádza, že podľa Splátkového kalendára k leasingovej zmluve č.XXXX/ XX /č.l. 8/ prvá splátka bola splatná dňa 1.7.2002 a každá ďalšia prvého dňa nasledujúceho mesiaca, pričom prvá až siedma splátka bola vo výške 11.844,00 Sk a ôsma splátka a ďalšie boli vo výške 12.040,00 Sk a podľa Vyúčtovania zo dňa 29.3.2004 pri predčasnom ukončení leasingovej zmluvy / č.l. 4/, žalobca evidoval okrem zaplatenej zálohy vo výške 120.000,00 Sk a provízie vo výške 6.000,00 Sk aj zaplatenie 5 splátok vo výške po 11.844,00 Sk a 6-tej splátky vo výške 3.000,00 Sk.",
+      "score": 0.892937,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_25",
+      "chunk_index": 25,
+      "text": "Z vyúčtovania žalobcu zo dňa 29.3.2004 /č.l. 4/ má odvolací súd za preukázané, že žalobca na úhradu splátok eviduje úhradu 5 splátok po 11.844,00 Sk /393,15 eur/ a má za to, že zrejme sa jedná aj o splátky zaplatené p. V., keďže sa jedná o splátky splatné za obdobie od 1.7. 2002 do 1.11.2002, teda do odcudzenia motorového vozidla. Okrem týchto úhrad žalobca eviduje aj úhradu sumy 3.000,00 Sk, čo môže byť žalovanými tvrdená úhrada sumy 3.000,00 Sk /99,50 eur/, ako poplatku za zmenu leasingovej zmluvy, ktorú sumu však žalobca zaúčtoval ako úhradu časti 6-tej splátky.",
+      "score": 0.736295,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_26",
+      "chunk_index": 26,
+      "text": "Z uvedeného vyplýva, že žalobca žalovanými tvrdenú úhradu splátok ako aj sumy 3.000,00 Sk vo svojom účtovníctve eviduje a aj ju započítal na úhradu svojej pohľadávky. O zaplatení vyššej sumy, než akú žalobca eviduje uhradenú a akú započítal na svoju pohľadávku, žalovaní neuniesli dôkazné bremeno.",
+      "score": 0.6864,
+      "source_queries": [
+        "q_rate"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Okresný súd Spišská Nová Ves, ako súd prvého stupňa, napadnutým rozsudkom zo dňa 19.10.2012 zaviazal žalovaných 1/ a 2/ spoločne a nerozdielne zaplatiť žalobcovi sumu 5.953,69 eur s 12,5% ročným úrokom z omeškania od 29.4.2004 do zaplatenia a nahradiť trovy konania vo výške 1.142,59 eur.",
+      "score": 0.8,
+      "source_queries": [
+        "q_outcome",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "V odôvodnení rozsudku súd prvého stupňa uviedol, že žalobca navrhol zaviazať žalovaných zaplatiť mu sumu 5.953,69 eur (179.361,00 Sk) a prísl. titulom nárokov z leasingovej zmluvy č. XXXX/XX zo dňa 11.6.2002, predmetom ktorej bol prenájom a následná kúpa ojazdeného motorového vozidla S. F.",
+      "score": 0.732959,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Súd prvého stupňa uviedol, že vykonaným dokazovaním, výsluchom účastníkov konania a svedkov zistil, že žalobca a žalovaná 1/ uzatvorili dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX, ktorej predmetom bol prenájom a kúpa ojazdeného motorového vozidla S. F. XXV L. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, zmluva bola uzatvorená na dobu 36 mesiacov a žalovaná 1/ sa zaviazala počas uvedenej doby uhrádzať podľa splátkového kalendára leasingové splátky. Žalovaná 1/ však neuhradila splátky po dobu dlhšiu ako 6 týždňov, preto žalobca na základe článku XI, bod 2. Všeobecných zmluvných podmienok predčasne ku dňu 25.11.2002 ukončil leasingovú zmluvu.",
+      "score": 0.731837,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "Súd prvého stupňa citoval ustanovenia § 262, § 269 ods. 2, § 303, § 301, § 531 ods.1, 3, § 369 ods.1 Obchodného zákonníka a uviedol, že vykonaným dokazovaním mal preukázané, že žalobca so žalovanou 1/ uzatvoril dňa 11.6.2002 leasingovú zmluvu č. XXXX/XX., ktorej predmetom bol prenájom a následná kúpa ojazdeného motorového vozidla S. za obstarávaciu cenu 13.277,56 eur (400.000,00 Sk) vrátane DPH, ktorej neoddeliteľnou súčasťou sú Všeobecné zmluvné podmienky o leasingu poskytovanom žalobcom, že podľa čl. X, bodu 1 nájomca nesie riziko, straty alebo odcudzenia, poškodenia a predčasného opotrebenia predmetu leasingu objektívne, bez ohľadu na zavinenie, čo ho nezbavuje povinnosti platiť leasingové splátky. Podľa čl. XI, bodu 3 Všeobecných zmluvných podmienok, v prípade krádeže predmetu leasingu, záväzok nájomcu zaniká pre nemožnosť plnenia a prenajímateľ je oprávnený požadovať od nájomcu náhradu škody a nájomca je povinný nahradiť škodu v sume zodpovedajúcej rozdielu celkovej ceny leasingu a už uhradených splátok v lehote 30 dní od jej vyúčtovania prenajímateľom. Na základe vyúčtovania žalobcu vo výške 11.930,02 eur (359.404,00 Sk) po odpočítaní poistného plnenia poskytnutého poisťovňou E. - L. poisťovňa vo výške 7.438,92 eur (224.105,00 Sk) po likvidácii poistnej udalosti, žalobca si uplatnil nárok voči žalovanej 1/ ako dlžníkovi a voči žalovanému 2/ ako ručiteľovi spoločne a nerozdielne vo výške 5.953,69 eur (179.361,00 Sk) s prísl. Súd prvého stupňa uviedol, že mal za preukázané, že žalobca si oprávnene uplatnil tento nárok, pretože žalovaná 1/ porušila zmluvné podmienky, keď previedla motorové vozidlo, ktoré bolo predmetom leasingu, na nového držiteľa, bez súhlasu žalobcu. Svoje tvrdenie o prevedení vozidla so súhlasom leasingovej spoločnosti nepreukázala, a teda neuniesla dôkazné bremeno. Žalovaný 2/ ako ručiteľ vo svojom vyhlásení vyhlásil, že berie na seba voči žalobcovi povinnosť, že ak nájomca, teda žalovaná 1/ pohľadávku voči žalobcovi nevyrovná, tak žalovaný 2/ sa zaväzuje túto pohľadávku uspokojiť a keďže k zaplateniu pohľadávky žalovanou 1/ nedošlo, súd zaviazal aj žalovaného 2/ ako ručiteľa na zaplatenie dlžnej sumy spoločne a nerozdielne a zároveň priznal žalobcovi úroky z omeškania, ktoré sú v zmysle § 361 ods. 1 Obchodného zákonníka oprávnené a v súlade so zákonom a zmluvnú pokutu, ktorá bola medzi účastníkmi ako rovnocennými zmluvnými účastníkmi dohodnutá v zmysle čl. III., bod 3 a bod 5, a náhradu trov konania tak, ako je uvedené vo výroku tohto rozsudku. O trovách konania súd prvého stupňa rozhodol podľa § 142 ods. 1 O.s.p. a ich náhradu priznal žalobcovi, ktorý mal v konaní úspech celkom vo výške 1.142,59 eur, ktorú podrobne špecifikoval.",
+      "score": 0.986137,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "Proti rozsudku súdu prvého stupňa podali v zákonnej lehote odvolanie žalovaní 1/ a 2/, cestou svojho právneho zástupcu a navrhli ho zrušiť a vrátiť súdu prvého stupňa na ďalšie konanie. V dôvodoch odvolania nespochybnili súdom prvého stupňa zistený skutkový stav, poukázali na výpovede žalovaných 1/ a 2/, trvali na tom, že za zmenu držiteľa vozidla na pána V. zaplatili poplatok vo výške 99,50 eur, že zmenu dohodli s p. R., zamestnancom žalobcu, ktorý im vozidlo odovzdal a aj zabezpečil p. V., ktorého oni predtým nepoznali a ktorému bolo v prítomnosti p. R. vozidlo odovzdané. Prevzatie vozidla a platenie splátok do doby odcudzenia vozidla potvrdil vo svojej výpovedi aj svedok V.. Úhradu sumy 99,50 eur a troch splátok po 510,26 eur žalovaní, ani svedok V. nemohli dokázať, pretože platby boli uskutočnené na účet, ktorého nie sú vlastníkmi. Uviedli, že svedok R. pracuje v ČĽR, v e-mailovej komunikácii potvrdil, že si pamätá na osobu žalovaného 2/ aj na prevod vozidla na inú osobu a pre pracovné povinnosti neprišiel na Slovensko a keďže jeho vypočutie je pre spravodlivé rozhodnutie súdu potrebné, považujú rozhodnutie súdu prvého stupňa za predčasné a to aj z dôvodu, že žalobca nepredložil dôkaz o úhrade sumy 99,50 eur a 510,26 eur, i keď by to preňho nemal byť žiaden problém. Uviedli, že podľa ich názoru súd prvého stupňa v rozhodnutí vychádzal z nedostatočne, resp. jednostranne zisteného skutkového stavu, neprihliadol na predložené dôkazy, nevypočul kľúčového svedka p. R. a tak nedostatočne zistil skutkový stav.",
+      "score": 0.900396,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "Žalobca, cestou svojej právnej zástupkyne, vo vyjadrení zo dňa 22.3.2012 k odvolaniu žalovaných uviedol, že žalobcovi bola k dnešnému dňu uhradená iba provízia a 5 splátok, že podľa čl.V ods.1 leasingová zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k zmluve, žalovaní teda konali v rozpore so zmluvou, čím sa dopustili protiprávneho konania a nepreukázali ani údajnú úhradu sumy 99,50 eur za vypracovanie podkladov pri postúpení leasingu a poukázal na skutočnosť, že pán R. nemal oprávnenie rozhodovať o podmienkach kúpy. Pokiaľ ide o doklady o platbách, tieto musia mať ako žalovaní tak aj svedok V., počas konania mali možnosť tieto predložiť, ktorú možnosť nevyužili a taktiež súd prvého stupňa umožnil, aby pán R. bol ako svedok vypočutý, avšak na pojednávanie sa nedostavil. Žalobca uviedol, že podľa jeho názoru súd prvého stupňa zistil skutkový stav veci, prihliadol na všetky predložené dôkazy, obom stranám dal rovnakú možnosť predložiť dôkazy, vyjadriť sa a vypočuť navrhovaných svedkov, preto navrhol napadnutý rozsudok podľa § 219 ods.1 O.s.p. potvrdiť.",
+      "score": 0.845398,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "Odvolací súd sa s odkazom na ustanovenie § 219 ods.2 O.s.p. v celom rozsahu stotožňuje s odôvodnením napadnutého rozsudku a s poukazom na ustanovenia citované v napadnutom rozsudku k odvolacím dôvodom žalovaných uvádza nasledovné: Z vykonaného dokazovania nie je sporné, že žalobca, ako prenajímateľ a žalovaná 1/ ako nájomca, uzavreli dňa 11.6.2002 Leasingovú zmluvu č.XXXX/XX podľa § 269 ods.2 Obchodného zákonníka, predmetom ktorej bol ojazdený osobný automobil S. F. XXV SX, v ktorej bolo v čl.V bod 1/ dohodnuté, že \"Táto zmluva môže byť zmenená alebo doplňovaná len písomnou dohodou oboch zmluvných strán označenou ako dodatok k tejto leasingovej zmluve.\" V konaní pred súdom prvého stupňa ako aj v odvolaní žalovaní namietali nedostatok svojej vecnej pasívnej legitimácie z dôvodu, že došlo k zmene uvedenej zmluvy a práva a povinnosti nájomcu prešli na tretiu osobu, a to pána V. z C..",
+      "score": 0.6716,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_15",
+      "chunk_index": 15,
+      "text": "Odvolací súd uvádza, že podľa zmluvnej dohody bolo možné leasingovú zmluvu uzavretú medzi žalobcom a žalovanou 1/ platne meniť iba v písomnej forme uzavretím dodatku k nej a v konaní žalovaní nepredložili dôkaz a ani netvrdili, že by k zmene zmluvy uvedeným, zmluvne dohodnutým spôsobom, došlo.",
+      "score": 0.7,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_16",
+      "chunk_index": 16,
+      "text": "Podľa § 272 ods.2 Obchodného zákonníka \"Ak písomne uzavretá zmluva obsahuje ustanovenie, že sa môže meniť alebo zrušiť iba dohodou strán v písomnej forme, môže sa zmluva meniť alebo zrušiť iba písomne.\" Odvolací súd nespochybňuje tvrdenia žalovaných, že o zmene leasingovej zmluvy jednali so spoločnosťou V. spol. s r.o. A., ako obchodným zástupcom žalobcu, avšak má za to, že aj keby uvedené tvrdenie bolo pravdivé a bolo pravdivé aj tvrdenie o úhrade sumy 99,50 eur /3.000,00 Sk/, ako poplatku za zmenu zmluvy, tak vzhľadom na skutočnosť, že nedošlo k zmene leasingovej zmluvy v dohodnutej písomnej forme, uvedené skutočnosti by podľa § 272 ods.2 Obchodného zákonníka nemali za následok zmenu Leasingovej zmluvy č.XXXX/XX uzavretej medzi žalobcom a žalovanou 1/. Uvedený následok by nezmenila ani výpoveď p. R. o tom, že prebiehali jednania o zmene zmluvy, a preto ak ho súd prvého stupňa nevypočul, nemožno tvrdiť, že by pri rozhodovaní vychádzal z nedostatočne zisteného skutkového stavu.",
+      "score": 0.771903,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "Pokiaľ ide o žalovaného 2/, tento v konaní pred súdom prvého stupňa ani v odvolacom konaní nespochybnil zistenie súdu prvého stupňa, že dňa 13.6.2002 podpísal Vyhlásenie ručiteľa k leasingovej zmluve č. XXXX/XX podľa § 403 a násl. Obchodného zákonníka a § 546 a násl. Občianskeho zákonníka, v ktorom vyhlásil, že berie na seba voči prenajímateľovi povinnosť, že ak žalovaná 1/ ako nájomca podľa leasingovej zmluvy pohľadávku nevyrovná, tak sa ako ručiteľ zaväzuje túto pohľadávku uspokojiť do 15 dní od tohto požiadania. V konaní nebolo preukázané, že by uvedený záväzok žalovaný 2/ splnil, alebo, že by zanikol iným spôsobom.",
+      "score": 0.678271,
+      "source_queries": [
+        "q_outcome"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_26",
+      "chunk_index": 26,
+      "text": "Z uvedeného vyplýva, že žalobca žalovanými tvrdenú úhradu splátok ako aj sumy 3.000,00 Sk vo svojom účtovníctve eviduje a aj ju započítal na úhradu svojej pohľadávky. O zaplatení vyššej sumy, než akú žalobca eviduje uhradenú a akú započítal na svoju pohľadávku, žalovaní neuniesli dôkazné bremeno.",
+      "score": 0.748105,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_41_2013_00_dokument.pdf_chunk_28",
+      "chunk_index": 28,
+      "text": "Na základe takto zisteného skutkového a právneho stavu odvolací súd podľa § 219 ods.1 O.s.p. rozsudok súdu prvého stupňa potvrdil ako vecne správny, vrátane výroku o trovách konania, o ktorom súd prvého stupňa rozhodol v súlade s právnou úpravou.",
+      "score": 0.681694,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 30,
+    "call1_unique_chunks": 15,
+    "call2_unique_chunks": 12,
+    "call1_total_chars": 13437,
+    "call2_total_chars": 9952
+  }
+}

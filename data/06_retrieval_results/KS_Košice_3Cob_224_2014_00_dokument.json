@@ -1,0 +1,304 @@
+{
+  "source_file": "KS_Košice_3Cob_224_2014_00_dokument.pdf",
+  "case_id": "3Cob/224/2014",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 8,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "31.08.2015",
+    "case_id": "3Cob/224/2014",
+    "ecli": "ECLI:SK:KSKE:2015:7710213676.2",
+    "court": "Krajský súd Košice",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Košice\nSpisová značka: 3Cob/224/2014\nIdentifikačné číslo súdneho spisu: 7710213676\nDátum vydania rozhodnutia: 31. 08. 2015\nMeno a priezvisko sudcu, VSÚ: JUDr. Jozef Vanca\nECLI: ECLI:SK:KSKE:2015:7710213676.2",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Košiciach v senáte zloženom z predsedu senátu JUDr. Jozefa Vancu a členov senátu: JUDr. Juraja Sopoligu a JUDr. Drahomíry Brixiovej v právnej veci žalobcu: V.. D. Q. - Z. U., X. X/XX, U., IČO: XX XXX XXX, proti žalovanému: C. R. - G., Q. R. 1, I., IČO: XX XXX XXX, zast. I. Y., advokát, Q. č. XX, Y., v konaní o zaplatenie 356,00 eur s prísl., o odvolaní žalovaného proti rozsudku Okresného súdu Rožňava č.k. 12Cb/25/2011-202 z 5.8.2014 jednomyseľne takto\n\nrozhodol: Potvrdzuje rozsudok súdu prvého stupňa.\n\nÚčastníkom náhradu trov odvolacieho konania nepriznáva.",
+  "reasoning_full": "odôvodnenie: Napadnutým rozsudkom súd prvého stupňa uložil žalovanému povinnosť zaplatiť žalobcovi sumu 760,49 eur a nahradiť trovy konania v sume 389,62 eur v lehote do 3 dní odo dňa právoplatnosti rozsudku.\n\nSvoje rozhodnutie v podstate odôvodnil tým, že žalobca sa podanou žalobou domáhal zaplatenie 356,00 eur s prísl. a zmluvnej pokuty vo výške 25% z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry vo výške 1.261,09 eur.\n\nŽalobca žalobu zdôvodnil tým, že na základe písomnej dohody č. XX/XXXX vykonával pre žalovaného meranie imisií v hospodárskom obvode žalovaného v Q.. Žalovaný dlh neuhradil ani potom, čo žalobca ukončil svoju činnosť v zmysle dohody k 31.3.2007, preto žalobca úhrady fakturoval faktúrami č. XXXX/ XXX a č. XXXX/XXX. Zmluvnú pokutu vyfakturovanú faktúrou č. XXXX/XXX žalobca vyčíslil tak, že vychádzal z pôvodne fakturovanej sumy zníženej o 30,27 eur, ktorá bola uhradená žalovaným (tzn. zo sumy 159,33 eur). Z uvedenej sumy predstavovalo 25 % sumu 39,93 eur a uvedenú sumu násobil počtom štvrťrokov - kvartálov, za ktoré obdobie bol žalovaný v omeškaní. V tomto prípade 15 kvartálov, spolu 597,49 eur. Zmluvnú pokutu za obdobie roka 2007 vypočítal žalobca z fakturovanej sumy 189,60 eur, kde 25 % predstavovalo výšku 47,40 eur a táto bola násobená počtom štvrťrokov, počas ktorých bol žalovaný v omeškaní s úhradou, v tomto prípade 14, spolu zmluvná pokuta predstavovala sumu 663,60 eur. Dňa 13.2.2012 žalobca zobral žalobu späť v časti istiny, úroku z omeškania a zmluvnej pokuty, pretože žalovaný obidve faktúry spolu s úrokom z omeškania a čiastočne zmluvnú pokutu uhradil 26.10.2011. Zároveň však žalobu rozšíril v časti zmluvnej pokuty, pretože došlo k ďalšiemu omeškaniu s plnením peňažného dlhu do úhrady peňažného dlhu, trval na zaplatení zmluvnej pokuty vo výške 1.520,98 eur.\n\nSúd prvého stupňa rozhodol rozsudkom č. k. 12Cb/25/2011 - 121 z 8.8.2012, ktorým konanie do výšky istiny 348,93 eur čiastočne zastavil, vrátane úroku z omeškania vo výške 14,25 % ročne zo sumy 159,33 eur od 20.10.2006 do zaplatenia a vo výške 14,50 % ročne zo sumy 189,60 eur od 20.1.2007 do zaplatenia. V časti zmluvnej pokuty žalobe vyhovel v rozsahu 50 % uplatneného nároku na zaplatenie zmluvnej pokuty, t.j. vo výške 760,49 eur a vo zvyšujúcej časti žalobu zamietol o zaplatenie zmluvnej pokuty. Súčasne priznal žalobcovi náhradu trov konania zodpovedajúcu pomernému úspechu v konaní.\n\nProti uvedenému rozsudku podal v zákonnej lehote odvolanie žalobca a Krajský súd v Košiciach uznesením č. k. 3Cob/239/2012 - 152 zo 30.9.2013 zrušil rozsudok v časti výroku, ktorým prvostupňový súd žalobu zamietol. Súdu prvého stupňa uložil povinnosť v ďalšom konaní podrobne skúmať, či sú splnené dôvody pre zníženie zmluvnej pokuty a z akých konkrétnych dôvodov. Z odôvodnenia uznesenia (str. 8 uznesenia) vyplynulo aj zrušenie výroku o náhrade trov konania).\n\nNásledne súd prvého stupňa doplnil dokazovanie - výsluchom účastníkov konania a zistil, že žalobca trvá na dôvodnosti uplatnenej zmluvnej pokuty v celom rozsahu. Má za to, že pokuta je primeraná, pretože v obdobných obchodných veciach je možné dojednať aj vyššiu zmluvnú pokutu, ktorá má viesť k disciplíne účastníkov obchodných vzťahov, a preto ju považuje za dôvodnú, aj z hľadiska dĺžky trvania obdobia, kedy si žalovaný neplnil riadne svoje platobné povinnosti, čím bol žalobca ukrátený na príjme a následne aj na výpočtovom základe pri určení výšky starobného dôchodku (presnú výšku však nevie vyčísliť).\n\nŽalovaného upozorňoval na existujúci dlh ústne pri stretnutiach. Zároveň poukázal na obdobnú vec vedenú pod sp. zn. 5Cb/9/2010, kde súd priznal zmluvnú pokutu v celom rozsahu a tiež zmluvná pokuta presahovala niekoľkonásobne dlžnú istinu. Uvedený rozsudok bol potvrdený rozsudkom Krajského súdu v Košiciach, s poukazom na to, že uplatnená zmluvná pokuta je primeraná.\n\nŽalovaný nesúhlasil so zaplatením zmluvnej pokuty v celom uplatnenom rozsahu. Aj keď so zaplatením zmluvnej pokuty nesúhlasil ani v pôvodnom konaní, napokon na základe rozsudku súdu prvého stupňa, zníženie zmluvnej pokuty akceptoval, ako objektívne a primerané a to aj z hľadiska významu zabezpečovanej povinnosti. Podľa názoru žalovaného, hodnota a význam zabezpečovanej povinnosti je často odôvodňovaná včasným neplnením, čím dochádza ku škode v tej podobe, že oprávnený nemal k dispozícii svoje peňažné prostriedky. Túto najobvyklejšiu škodu vzniknutú v dôsledku oneskorených úhrad, však zabezpečuje zákonný úrok z omeškania, ktorý bol uplatňovaný aj v tomto prípade. Z tohto pohľadu je aj poukaz žalobcu na infláciu neadekvátny, pretože zákonný úrok z omeškania rádovo predstavuje vyššiu percentuálnu čiastku, ako dosahuje úrok pri vklade peňažných prostriedkov v peňažných ústavoch. Mal za to, že žalobca mohol skôr upozorniť žalovaného na zaplatenie dlhu, už aj s poukazom na uplatňovanú zmluvnú pokutu, zvlášť pokiaľ zmluvná pokuta bola koncipovaná v Dohode č. XX/XXXX tak, že nebolo celkom jednoznačné, či sa jedná o 25 % z dlžnej sumy štvrťročne, alebo z celkovej dlžnej sumy. Dokonca žalobca nevyzval žalovaného na dobrovoľnú úhradu, ani pred podaním žaloby. Preto súd pri znížení zmluvnej pokuty postupoval v súlade so zákonom a opodstatnene moderoval uplatnenú zmluvnú pokutu a navrhol žalobu vo zvyšujúcej časti zamietnuť ako nedôvodnú.\n\nZ pripojeného rozsudku č.k. 5Cb/9/2010 - 47 zo 7.10.2010 a z rozsudku odvolacieho súdu č. k. 3Cob/69/2012 - 114 z 29.11.2012 súd zistil, že prvostupňový súd priznal žalobcovi zmluvnú pokutu v uvedenom konaní vo výške 4.929,78 eur oproti dlžnej istine 1.246,76 eur s príslušenstvom.\n\nRozsudok prvostupňového súdu bol potvrdený odvolacím súdom, zmluvná pokuta bola posudzovaná ako primeraná.\n\nSúd v intenciách uznesenia odvolacieho súdu opätovne prehodnotil splnenie podmienok na moderáciu zmluvnej pokuty, berúc určitý zreteľ aj na rozhodnutie totožného odvolacieho senátu v obdobnej veci, s totožným žalobcom. Aj keď je zrejmé, že v danej veci nie je súd viazaný právnym názorom vysloveným v inej veci, avšak z pohľadu vyjadreného právneho názoru, súd posudzoval podmienky moderácie.\n\nPreto s poukazom na Dohodu č. XX/XXXX o zriadení a meraní imisií, uzavretej 3.1.2014 (čl. V., čl. IV., bodu 3 čl. V. a bodu 5 čl. V.); faktúru č. XXXX/XXX z 5.10.2006 (splatnou 19.10.2006); faktúru č. XXXX/XXX z 5.1.2007 (splatnou 19.1.2007); výpis z účtu V. z 12.10.2006 a hromadný platobný príkaz na úhradu z Č., a. s. z 27.10.2011 a citujúc ust. § 300, § 301 Obchodného zákonníka a § 544 ods. 1, 2 Občianskeho zákonníka konštatoval, že uvedený záväzkový vzťah treba posudzovať ako záväzkový vzťah zo zmluvy o dielo, v zmysle ktorého sa žalobca zaviazal dodať žalovanému materiálne vybavenie súvisiace s monitorovacou činnosťou, prevádzkovať uvedené zariadenia a súčasne poskytovať ďalšie služby žalovanému vo forme meraní imisií a ich spracovania pre potreby žalovaného. Súčasťou dohody uzavretej medzi účastníkmi konania bola dohodnutá cena diela, ktorú bol žalovaný povinný zaplatiť.\n\nUvedené skutočnosti neboli sporné medzi účastníkmi konania, pretože obe strany sa zhodli na tom, že na základe dohody bola služba poskytnutá a bolo povinnosťou žalovaného túto poskytnutú službu zaplatiť.\n\nŽalobca žalovanému vyfakturoval v zmysle dohody vykonané činnosti, a to za obdobie 4. štvrťroku 2006 a 1. štvrťroku 2007. Fakturovaná suma nebola žalovaným namietaná. Žalovaný fakturovanú sumu neuhradil v lehote splatnosti, ani po jej uplynutí, neučinil tak ani po ukončení záväzkového vzťahu 31.3.2007. Preukázateľne žalovaný vykonal úhradu až 27.10.2011, čo vyplynulo z pripojeného hromadného príkazu.\n\nV danom prípade dohoda o zmluvnej pokute bola súčasťou Dohody č. XX/XXXX (čl. V bod 5), platnosť tejto dohody nebola namietaná ani spochybňovaná účastníkmi záväzkového vzťahu, z toho dôvodu súd považuje uvedenú dohodu za platnú. Bola súčasne splnená aj písomná forma dohody o zmluvnej pokute.\n\nPodľa súdu zo znenia bodu 5 čl. V. Dohody vyplýva, že po každom prekročení bežného kvartálu je zmluvná pokuta zachovaná tak, že predstavuje 25 % z dlžnej neuhradenej sumy, pokiaľ trvá omeškanie s úhradou faktúr. Obdobie úhrad bolo stanovené v čl. V. bod 1, kde sa presne stanovuje frekvencia úhrad a časový rozsah fakturácii, ktorý je vymedzený jedným kvartálom - štvrťrokom v bežnom roku. Žalobca sa teda dôvodne domáha zaplatenia zmluvnej pokuty za omeškanie úhrad za jednotlivé štvrťroky, po lehote splatnosti faktúr.\n\nVýšku uplatnenej zmluvnej pokuty súd posudzoval v súlade s ust. § 301 Obchodného zákonníka, v zmysle ktorého môže neprimerane vysokú zmluvnú pokutu znížiť, s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, na ktorú sa vzťahuje zmluvná pokuta. Uvedené moderačné právo je možné využiť v prípade, že dlžník požiada o využitie tohto moderačného práva. V danom prípade žalovaný navrhol moderáciu.\n\nPreto súd prvého stupňa v súlade s aspektmi moderačného práva prehodnotil svoju pôvodnú úvahu a dospel k záveru, že v danom prípade dojednaná zmluvná pokuta a uplatnená výška zmluvnej pokuty sú dôsledkom dlhodobého omeškania žalovaného so zaplatením dlžnej sumy (od roku 2007 do roku 2011, kedy bola vykonaná úhrada). Zjavne nie je v tomto prípade možné poukázať na neprimeranosť zmluvnej pokuty, pretože v takom prípade by záver súdu zrejme zvýhodnil dlžníka - žalovaného oproti veriteľovi žalobcovi a znamenal by spochybnenie funkcie, ktorú má zmluvná pokuta plniť. Vzhľadom na uvedené dospel k záveru, že uplatnená zmluvná pokuta aj v zostávajúcej sume 760,49 eur je dôvodná, a preto žalobe v uplatnenom rozsahu vyhovel.\n\nO trovách konania bolo rozhodnuté v zmysle ust. § 142 ods. 1 O.s.p.\n\nŽalobca si uplatnil náhradu trov konania v celkovej sume 437,97 eur, pozostávajúcej z náhrady zaplatených súdnych poplatkov vo výške 117,50 eur, z cestovných nákladov vo výške 146,12 eur a za účasť na pojednávaniach si uplatnil stratu na zárobku vo výške 174,35 eur, v rámci ktorej si ako stratu započítal aj stratu času cestovaním na pojednávanie. Súd prvého stupňa v rozsudku č. k. 12Cb/25/2011 - 121 z 8.8.2012 rozhodol aj o náhrade trov konania (priznal žalobcovi pôvodne cestovné za cesty vykonané 13.2.2012 a 8.8.2012), keďže však z rozhodnutia odvolacieho súdu vyplynulo aj zrušenie rozhodnutia v časti náhrady trov, súd opätovne posudzoval celkový nárok na náhradu trov úspešného žalobcu.\n\nKeďže žalobca počas konania preukázal, že sa jedná o osobu s ťažkým zdravotným postihnutým, odkázanú na individuálnu dopravu rozhodnutím Úradu práce, sociálnych vecí a rodiny Trebišov, súd v súlade s ust. § 74 vyhl. č. 543/2005 Z. z. priznal žalobcovi náhradu trov na základe preukázaných výdavkov formou individuálnej prepravy, nie náhradu zodpovedajúcu výške cestovného hromadným dopravným prostriedkom a to za cestu vykonanú z U. do M. a späť, počet kilometrov 123, obojstranne 246 km, v súvislosti s vytýčenými pojednávaniami v dňoch 13.2.2012, 8.8.2012, 24.6.2014 a 5.8.2014: - Cesta na pojednávanie dňa 13.2.2012 bola vykonaná osobným vozidlom C., EČ: U. XXX H., priemerná spotreba podľa predloženého Osvedčenia o evidencii motorového vozidla predstavovala 6,4 lit./100 km, cena pohonných hmôt predstavovala výšku 1,559 eur/1 lit. Po prepočte cestovné za jednu cestu predstavovalo sumu 34,71 eur (/0,183 Sk/km x 123 km/ + / 123 km x 0,064 lit./100 km x 1,559 eur/lit./), za obojstranne vykonanú cestu 69,42 eur; - cesta na pojednávanie dňa 8.8.2012 bola vykonaná osobným vozidlom značky I.-H. EČ: U. XXX X., priemerná spotreba podľa predloženého Osvedčenia o evidencii motorového vozidla predstavovala 6,6 lit./100 km, cena pohonných hmôt predstavovala výšku 1,419 eur/1 lit. Výška cestovného za obojstranne vykonanú cestu predstavovala sumu 68,06 eur. Cestovné za jednu cestu 34,03 eur (/0,183 Sk/ km x 123 km/ + /123 km x 0,066 lit./100 km x 1,419 eur/lit./); - za obojstranne vykonanú cestu na pojednávanie dňa 24.6.2014 osobným vozidlom značky I.-H. EČ: U. XXX X., pri cene pohonných hmôt vo výške 1,379 eur/1 lit., výška cestovného predstavovala sumu 67,40 rur. Cestovné za jednu cestu predstavovalo výšku 33,70 eur ( /0,183 Sk/ km x 123 km/ + /123 km x 0,066 lit./100 km x 1,379 eur/lit./); - za obojstranne vykonanú cestu na pojednávanie dňa 05. 08. 2014 osobným vozidlom značky I.-H. EČ: U. XXX X., pri cene pohonných hmôt vo výške 1,369 eur/1 lit., výška cestovného predstavovala sumu 67,24 eur. Cestovné za jednu cestu predstavovalo výšku 33,62 eur ( /0,183 Sk/ km x 123 km/ + /123 km x 0,066 lit./100 km x 1,369 eur/lit./).\n\nŽalobca si uplatnil aj stratu na zárobku v zmysle ust. § 72 ods. 2,3 Zákona č. 543/2005 Z. z., v sume 174,35 eur. Keďže žalobca nepredložil žiaden dokladov o príjme, ktorým by preukázal, že bol v pracovnom pomere alebo v obdobnom pracovnom vzťahu, ani žiadnu listinu, z ktorej by vyplynulo, že je alebo bol zárobkovo činný, súd z toho vyvodil, že žalobca nevykonával žiadnu zárobkovú činnosť, je poberateľom starobného dôchodku, a teda nemohlo dôjsť k strate na zárobku.\n\nVzhľadom na vyššie uvedené priznal žalobcovi celkovú náhradu trov konania vo výške 389,82 eur, ktorá pozostáva z náhrady zaplateného súdneho poplatku vo výške 117,50 eur a z náhrady hotových výdavkoch - cestovných výdavkoch v sume 272,12 eur, spolu vo výške 389,62 eur, ktorú je žalovaný povinný zaplatiť žalobcovi v zmysle ust. § 149 ods. 1 O. s. p.\n\nProti tomuto rozsudku podal v zákonnej lehote odvolanie žalovaný, ktorý navrhol, aby odvolací súd zmenil napadnutý rozsudok súdu prvého stupňa a žalobu zamietol, resp. aby tento rozsudok zrušil a vec vrátil súdu prvého stupňa na ďalšie konanie a rozhodnutie.\n\nŽalovaný má za to, že závery súdu prvého stupňa premietnuté do výrokov rozsudku sú nesprávne, vychádzajú z nesprávnych skutkových zistení, v dôsledku čoho aj rozhodnutie vychádza z nesprávneho právneho posúdenia veci, a preto je výrok napadnutého rozsudku vecne i právne nesprávny, nepreskúmateľný (§ 205 ods. 2 písm.d/ a f/ O.s.p.).\n\nOpätovne poukázal na skutočnosť, že jedine v dôsledku moderácie zmluvnej pokuty prvostupňovým súdom napokon nepodal odvolanie voči rozsudku z 8.8.2012, aj keď je presvedčený, že dohoda zakotvuje zmluvnú pokutu ako jednorazovú sumu v sadzbe 25% z neuhradenej sumy faktúry. Súd prvého stupňa teda mal nárok na zmluvnú pokutu v rozsahu po späťvzatí žaloby zamietnuť. Tomuto tvrdeniu nasvedčuje aj znenie zmluvného dojednania v čl. V ods. 5 Dohody č. XX/XXXX z 3.1.2004. Aby žalobca mohol od žalovaného požadovať zmluvnú pokutu v sadzbe 25% za každý kvartál omeškania, muselo by to byť i zmluvne dojednané.\n\nPodľa žalovaného medzi účastníkmi konania počas celého konania ostal sporný výklad zmluvného dojednania v čl. V ods. 5 Dohody. Obchodný zákonník v Tretej časti, Hlava I, Diel VI, Oddiel 2 upravuje v ust. § 300 až 302 iba niektoré ustanovenia o zmluvnej pokute (lex specialis), pričom ako úpravu lex generalis je potrebné použiť ustanovenia Občianskeho zákonníka v § 544 a nasl. Z ust. § 544 ods. 1, 2 Občianskeho zákonníka vyplýva, že sa jedná o kogentné ustanovenie zákona, od ktorého sa zmluvné strany nemôžu odchýliť. Navyše uvedeným ustanovením zákon kladie na dojednanie o zmluvnej pokute zreteľné požiadavky (1. Písomná forma dojednania, 2. Dojednanie prípadu porušenia zmluvnej povinnosti, 3. Určenie výšky alebo určenie spôsobu určenia zmluvnej pokuty).\n\nV ďalšom odvolateľ poukázal na formuláciu čl. V ods. 5 Dohody: \"... si zhotoviteľ vyhradzuje zmluvnú pokutu vo výške 25% z neuhradenej sumy faktúr po lehote splatnosti viac ako 60 dní.\" Má za to, že zmluvná pokuta môže byť vyjadrená pevnou paušálnou sumou (teda v konkrétnej výške), ktorá je známa už v čase dojednania zmluvnej pokuty, alebo môže byť uvedený spôsob jej určenia. Text dotknutého článku dohody upravuje spôsob určenia výšky zmluvnej pokuty tak, že vychádza z neuhradenej sumy faktúr (tých, ktoré sú po lehote splatnosti viac ako 60 dní), pričom zmluvná pokuta tvorí 25% z tejto neuhradenej sumy faktúr, a teda po tomto prepočte dostaneme presnú výšku zmluvnej pokuty. Z uvedeného vyplýva, že celé dojednanie o spôsobe určenia výšky zmluvnej pokuty, neobsahuje žiadne vyjadrenie \"za každý kvartál omeškania\", resp. \"kvartálna zmluvná pokuta\" a pod. Ak nebol spôsob určenia výšky zmluvnej pokuty dojednaný tak (a to by musel byť výslovne), že zhotoviteľovi vzniká nárok na zmluvnú pokutu vo výške 25% z neuhradenej sumy faktúr za každý kvartál omeškania, potom nemožno žalobcovi priznať zmluvnú pokutu za každý kvartál omeškania, lebo pre to nie je zmluvné dojednanie v písomnej forme (a nebolo ani v ústnej forme).\n\nAk by sa aj pripustilo, že rozličné tvrdenie účastníkov konania o zmluvnej pokute je vecou výkladu zmluvného dojednania, potom na ochranu žalovaného Obchodný zákonník v ust. § 266 ods. 4 upravuje, že prejav vôle, ktorý obsahuje výraz pripúšťajúci rôzny výklad, treba pri pochybnostiach vykladať na ťarchu strany, ktorá ako prvá tento výraz v konaní použila, a teda na ťarchu žalobcu, nie žalovaného.\n\nKeďže dohoda a jej text pochádza od žalobcu (ako zmluvnej strany), nemožno preto žalobcovi priznať ním uplatnený nárok na zaplatenie zmluvnej pokuty inej, než žalovaný už uhradil vo výške 25% z neuhradenej sumy faktúr. Ak by mal byť sporný výklad dojednania o zmluvnej pokute, nemožno výkladové pravidlo podľa ust. § 266 ods. 1 Obchodného zákonníka použiť v prospech žalobcu, lebo žalovanému takýto úmysel žalobcu nebol známy a ani z ostatných okolností veci nemožno uzavrieť, že by takýto úmysel musel byť žalovanému známy. Vylúčené je v prospech žalobcu použiť ust. § 266 ods. 2 alebo ods. 3 Obchodného zákonníka, pretože zo žiadnej praxe medzi účastníkmi, ani z ich následného správania nie je zrejmé, že by žalovaný bol kedykoľvek akceptoval tvrdenie žalobcu, že má podľa dohody nárok na zaplatenie zmluvnej pokuty za každý kvartál omeškania, alebo aby bol žalovaný niekedy žalobcovi plnil zmluvnú pokutu. Preto podľa žalovaného, žalobcom uplatnený nárok nemá zmluvný základ a tak k nemu nemožno dospieť ani výkladom.\n\nSúd prvého stupňa sa však so základnou argumentáciou žalovaného vo svojom rozhodnutí nijako nevysporiadal, len uzavrel, že: \"podľa názoru súdu práve z uvedeného znenia je zrejmé, že po každom prekročení bežného kvartálu je zmluvná pokuta zachovaná tak, že predstavuje 25% z dlžnej, neuhradenej sumy, pokiaľ trvá omeškanie s úhradou faktúr. Obdobie úhrad a časovú rozsah fakturácii, ktorý je vymedzený jedným kvartálom - štvrťrokom v bežnom roku.\" Uvedené zdôvodnenie priznania zmluvnej pokuty súdom prvého stupňa absentuje obligatórnu povinnosť súdu presvedčivo zdôvodniť svoje rozhodnutie a tým naplniť právo žalovaného na riadne, úplné a zrozumiteľné odôvodnenie rozsudku, ktoré zaručuje jeho preskúmateľnosť.\n\nĎalej žalovaný poukázal na skutočnosť, že súd prvého stupňa bol povinný v intenciách uznesenia odvolacieho súdu zisťovať, či existujú dôvody pre zníženie zmluvnej pokuty využitím moderačného práva súdu. Preto na pojednávaní konanom 24.6.2014 doplnil výsluch žalobcu, na základe čoho následne zmenil svoje rozhodnutie o použití moderačného práva a s ohľadom na výšku ceny zabezpečovanej povinnosti 356,00 eur, ako aj čas, ktorý trvalo omeškania - t.j. doba cca 5 rokov od splatnosti skoršej faktúry, keďže 27.10.2011 došlo k úhrade zmluvnou pokutou zabezpečovanej pohľadávky, na základe doručenia platobného rozkazu žalovanému, pričom do tohto dňa žalobca žiadnym spôsobom pohľadávku u žalovaného neuplatňoval a tento mal vzhľadom na ukončenie vzájomného právneho vzťahu za to, že jeho záväzky voči žalobcovi sú vysporiadané, tak ako to potvrdil vo svojej účastníckej výpovedi. Žalobca po splatnosti žalovanej istiny ( o ktorej sa žalovaný domnieval, že nevznikla) žalovaného ani len neupomenul na úhradu dlžnej čiastky, čo by určite žalovaného upozornilo na to, že žalobca voči nemu eviduje pohľadávku a viedlo by nepochybne k urovnaniu zo strany žalovaného.\n\nŽalobca žalovaného však nevyzval na dobrovoľnú úhradu ani pred podaním žaloby. Až zo žalobného návrhu sa žalovaný dozvedel o tom, že žalobca voči nemu eviduje pohľadávku, a preto následne žalobcovi istinu, úroky z omeškania, ako aj časť zmluvnej pokuty, ktorá mu vyplývala zo znenia zmluvy, uhradil. Preto sa žalovaný domnieva, že žalobca svojim postupom (tým, že žalovaného do podania žaloby ani raz neupomenul na úhradu ním požadovanej pohľadávky), mohol sledovať aj to, aby pohľadávka narástla o zmluvnú pokutu a úroky z omeškania, a preto považuje uplatnenie moderačného práva súdu za správne.\n\nŽalovaný má za to, že doplnené dokazovanie nedalo žiaden skutkový ani právny predpoklad pre zmenu pôvodného rozhodnutia súdu prvého stupňa o moderovaní zmluvnej pokuty priznanej žalobcovi, ale naopak potvrdilo správnosť pôvodného rozhodnutia súdu prvého stupňa.\n\nNavyše žalovaný považuje rozsudok v časti odôvodnenia za nepreskúmateľný. Zároveň je zrejmé, že zmluvná pokuta, ktorý súd prvého stupňa svojimi rozhodnutiami priznal žalobcovi v celkovej výške 1.520,98 eur niekoľkonásobne prevyšuje povinnosť ňou zabezpečovanú.\n\nHodnota a význam zabezpečovanej povinnosti sú zákonnými kritériami pri aplikácii moderačného práva súdu. Práve pri povinnosti v podobe peňažného plnenia je hodnota a význam zabezpečovanej povinnosti osobitá v tom, že včasným neplnením dochádza spravidla \"iba\" ku škode v podobe toho, že do doby úhrady oprávnený na peňažné plnenie (t.j. v tomto prípade žalobca) nemal peňažné prostriedky vo svojej dispozícii a nemohol tieto peňažné prostriedky zhodnotiť (napr. vkladom do peňažnej inštitúcie), kde by mohlo dôjsť k ich zhodnoteniu, alebo použiť ich na preinvestovanie. Túto, zrejme najobvyklejšiu škodu vzniknutú v dôsledku oneskorených úhrad však zabezpečuje pre veriteľa už zákonný úrok z omeškania, ktorý okrem tejto straty z nerealizovaného zhodnotenia navyše svojou výškou (resp. sadzbou) je zároveň aj sankciou pre dlžníka.\n\nDoplneným dokazovaním súdu nebola zistená žiadna iná ujma, ktorá by bola žalobcovi včasným neuhradením sumy 356,00 eur vznikla. Za túto ujmu nie je možné považovať ničím nepodložené tvrdenia žalovaného. Preto má žalovaný za to, že minimálne zníženie sadzby zmluvnej pokuty, ak nie rozhodnutie o tom, že výška zmluvnej pokuty bola dojednaná, tak ako si to pri podpise dohody vykladal žalovaný (t.j. jednorazová 25% sankcia z neuhradených súm), ktorú ako možnosť súdu prvého stupňa zveruje priamo zákon, by bolo spravodlivým a akceptovateľným rozhodnutím vo veci samej.\n\nŽalovaný poukázal na obdobný súdny spor (s iným žalovaným), v ktorom došlo k právoplatnému použitiu moderačného práva súdu a to práve znížením zmluvnej pokuty v rozsahu 50% využitím zákonnej možnosti súdu moderovať úpravu dohodnutú účastníkmi (vec vedená na Okresnom súde Michalovce pod sp.zn. 22Cb/25/2009 v spojení s konaním vedeným pred Krajským súdom v Košiciach vedenom pod sp.zn. 4Cob/9/2010).\n\nOdvolací súd preskúmal napadnutý rozsudok súdu prvého stupňa podľa zásad uvedených v ust. § 212 O.s.p. aj s konaním, ktoré mu predchádzalo a dospel k záveru, že odvolanie žalovaného nie je dôvodné.\n\nSúd prvého stupňa správne zistil skutkový stav, vec po právnej stránke posúdil v súlade so zákonom, a preto aj správne rozhodol.\n\nOdvolací súd sa v celom rozsahu stotožňuje s odôvodnením napadnutého rozsudku (§ 219 ods. 2 O.s.p.) a na doplnenie dôvodov uvedených v napadnutom rozsudku súdu prvého stupňa a k odvolaniu žalovaného uvádza nasledovné: Žalovaný aj v odvolaní uvádza skutočnosti, ktoré namietal v priebehu celého konania a s ktorými sa súd prvého stupňa riadne vyporiadal.\n\nTýka sa to tak výkladu zmluvného dojednania čl. V ods. 5 Dohody, použitia ust. § 266 ods. 1 Obchodného zákonníka i použitia moderačného práva.\n\nTreba poznamenať, že žalobca nebol povinný pred podaním žaloby vyzývať žalovaného na zaplatenie oprávnenej pohľadávky a je nepodstatné, že žalobcovi neuhradením pohľadávky nevznikala žiadna iná ujma.\n\nZ uvedených dôvodov odvolací súd podľa § 219 ods. 1 O.s.p. potvrdil rozsudok súdu prvého stupňa ako vecne správny.\n\nŽalovaný v odvolacom konaní nemal úspech, úspešný žalobca si ich náhradu nežiadal (§ 151 ods. 1 prvá veta), a preto odvolací súd náhradu trov odvolacieho konania účastníkom nepriznal (§ 142 ods. 1 O.s.p.).",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "Svoje rozhodnutie v podstate odôvodnil tým, že žalobca sa podanou žalobou domáhal zaplatenie 356,00 eur s prísl. a zmluvnej pokuty vo výške 25% z nevyplatenej sumy za každý kvartál po uplynutí splatnosti faktúry vo výške 1.261,09 eur.",
+      "score": 0.828516,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Žalobca žalobu zdôvodnil tým, že na základe písomnej dohody č. XX/XXXX vykonával pre žalovaného meranie imisií v hospodárskom obvode žalovaného v Q.. Žalovaný dlh neuhradil ani potom, čo žalobca ukončil svoju činnosť v zmysle dohody k 31.3.2007, preto žalobca úhrady fakturoval faktúrami č. XXXX/ XXX a č. XXXX/XXX. Zmluvnú pokutu vyfakturovanú faktúrou č. XXXX/XXX žalobca vyčíslil tak, že vychádzal z pôvodne fakturovanej sumy zníženej o 30,27 eur, ktorá bola uhradená žalovaným (tzn. zo sumy 159,33 eur). Z uvedenej sumy predstavovalo 25 % sumu 39,93 eur a uvedenú sumu násobil počtom štvrťrokov - kvartálov, za ktoré obdobie bol žalovaný v omeškaní. V tomto prípade 15 kvartálov, spolu 597,49 eur. Zmluvnú pokutu za obdobie roka 2007 vypočítal žalobca z fakturovanej sumy 189,60 eur, kde 25 % predstavovalo výšku 47,40 eur a táto bola násobená počtom štvrťrokov, počas ktorých bol žalovaný v omeškaní s úhradou, v tomto prípade 14, spolu zmluvná pokuta predstavovala sumu 663,60 eur. Dňa 13.2.2012 žalobca zobral žalobu späť v časti istiny, úroku z omeškania a zmluvnej pokuty, pretože žalovaný obidve faktúry spolu s úrokom z omeškania a čiastočne zmluvnú pokutu uhradil 26.10.2011. Zároveň však žalobu rozšíril v časti zmluvnej pokuty, pretože došlo k ďalšiemu omeškaniu s plnením peňažného dlhu do úhrady peňažného dlhu, trval na zaplatení zmluvnej pokuty vo výške 1.520,98 eur.",
+      "score": 0.956666,
+      "source_queries": [
+        "q_breach",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Súd prvého stupňa rozhodol rozsudkom č. k. 12Cb/25/2011 - 121 z 8.8.2012, ktorým konanie do výšky istiny 348,93 eur čiastočne zastavil, vrátane úroku z omeškania vo výške 14,25 % ročne zo sumy 159,33 eur od 20.10.2006 do zaplatenia a vo výške 14,50 % ročne zo sumy 189,60 eur od 20.1.2007 do zaplatenia. V časti zmluvnej pokuty žalobe vyhovel v rozsahu 50 % uplatneného nároku na zaplatenie zmluvnej pokuty, t.j. vo výške 760,49 eur a vo zvyšujúcej časti žalobu zamietol o zaplatenie zmluvnej pokuty. Súčasne priznal žalobcovi náhradu trov konania zodpovedajúcu pomernému úspechu v konaní.",
+      "score": 0.976425,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Žalovaného upozorňoval na existujúci dlh ústne pri stretnutiach. Zároveň poukázal na obdobnú vec vedenú pod sp. zn. 5Cb/9/2010, kde súd priznal zmluvnú pokutu v celom rozsahu a tiež zmluvná pokuta presahovala niekoľkonásobne dlžnú istinu. Uvedený rozsudok bol potvrdený rozsudkom Krajského súdu v Košiciach, s poukazom na to, že uplatnená zmluvná pokuta je primeraná.",
+      "score": 0.625092,
+      "source_queries": [
+        "q_breach",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Žalovaný nesúhlasil so zaplatením zmluvnej pokuty v celom uplatnenom rozsahu. Aj keď so zaplatením zmluvnej pokuty nesúhlasil ani v pôvodnom konaní, napokon na základe rozsudku súdu prvého stupňa, zníženie zmluvnej pokuty akceptoval, ako objektívne a primerané a to aj z hľadiska významu zabezpečovanej povinnosti. Podľa názoru žalovaného, hodnota a význam zabezpečovanej povinnosti je často odôvodňovaná včasným neplnením, čím dochádza ku škode v tej podobe, že oprávnený nemal k dispozícii svoje peňažné prostriedky. Túto najobvyklejšiu škodu vzniknutú v dôsledku oneskorených úhrad, však zabezpečuje zákonný úrok z omeškania, ktorý bol uplatňovaný aj v tomto prípade. Z tohto pohľadu je aj poukaz žalobcu na infláciu neadekvátny, pretože zákonný úrok z omeškania rádovo predstavuje vyššiu percentuálnu čiastku, ako dosahuje úrok pri vklade peňažných prostriedkov v peňažných ústavoch. Mal za to, že žalobca mohol skôr upozorniť žalovaného na zaplatenie dlhu, už aj s poukazom na uplatňovanú zmluvnú pokutu, zvlášť pokiaľ zmluvná pokuta bola koncipovaná v Dohode č. XX/XXXX tak, že nebolo celkom jednoznačné, či sa jedná o 25 % z dlžnej sumy štvrťročne, alebo z celkovej dlžnej sumy. Dokonca žalobca nevyzval žalovaného na dobrovoľnú úhradu, ani pred podaním žaloby. Preto súd pri znížení zmluvnej pokuty postupoval v súlade so zákonom a opodstatnene moderoval uplatnenú zmluvnú pokutu a navrhol žalobu vo zvyšujúcej časti zamietnuť ako nedôvodnú.",
+      "score": 0.581574,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "Z pripojeného rozsudku č.k. 5Cb/9/2010 - 47 zo 7.10.2010 a z rozsudku odvolacieho súdu č. k. 3Cob/69/2012 - 114 z 29.11.2012 súd zistil, že prvostupňový súd priznal žalobcovi zmluvnú pokutu v uvedenom konaní vo výške 4.929,78 eur oproti dlžnej istine 1.246,76 eur s príslušenstvom.",
+      "score": 0.703214,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_11",
+      "chunk_index": 11,
+      "text": "Preto s poukazom na Dohodu č. XX/XXXX o zriadení a meraní imisií, uzavretej 3.1.2014 (čl. V., čl. IV., bodu 3 čl. V. a bodu 5 čl. V.); faktúru č. XXXX/XXX z 5.10.2006 (splatnou 19.10.2006); faktúru č. XXXX/XXX z 5.1.2007 (splatnou 19.1.2007); výpis z účtu V. z 12.10.2006 a hromadný platobný príkaz na úhradu z Č., a. s. z 27.10.2011 a citujúc ust. § 300, § 301 Obchodného zákonníka a § 544 ods. 1, 2 Občianskeho zákonníka konštatoval, že uvedený záväzkový vzťah treba posudzovať ako záväzkový vzťah zo zmluvy o dielo, v zmysle ktorého sa žalobca zaviazal dodať žalovanému materiálne vybavenie súvisiace s monitorovacou činnosťou, prevádzkovať uvedené zariadenia a súčasne poskytovať ďalšie služby žalovanému vo forme meraní imisií a ich spracovania pre potreby žalovaného. Súčasťou dohody uzavretej medzi účastníkmi konania bola dohodnutá cena diela, ktorú bol žalovaný povinný zaplatiť.",
+      "score": 0.723791,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_13",
+      "chunk_index": 13,
+      "text": "Žalobca žalovanému vyfakturoval v zmysle dohody vykonané činnosti, a to za obdobie 4. štvrťroku 2006 a 1. štvrťroku 2007. Fakturovaná suma nebola žalovaným namietaná. Žalovaný fakturovanú sumu neuhradil v lehote splatnosti, ani po jej uplynutí, neučinil tak ani po ukončení záväzkového vzťahu 31.3.2007. Preukázateľne žalovaný vykonal úhradu až 27.10.2011, čo vyplynulo z pripojeného hromadného príkazu.",
+      "score": 0.704942,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_15",
+      "chunk_index": 15,
+      "text": "Podľa súdu zo znenia bodu 5 čl. V. Dohody vyplýva, že po každom prekročení bežného kvartálu je zmluvná pokuta zachovaná tak, že predstavuje 25 % z dlžnej neuhradenej sumy, pokiaľ trvá omeškanie s úhradou faktúr. Obdobie úhrad bolo stanovené v čl. V. bod 1, kde sa presne stanovuje frekvencia úhrad a časový rozsah fakturácii, ktorý je vymedzený jedným kvartálom - štvrťrokom v bežnom roku. Žalobca sa teda dôvodne domáha zaplatenia zmluvnej pokuty za omeškanie úhrad za jednotlivé štvrťroky, po lehote splatnosti faktúr.",
+      "score": 0.688889,
+      "source_queries": [
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_17",
+      "chunk_index": 17,
+      "text": "Preto súd prvého stupňa v súlade s aspektmi moderačného práva prehodnotil svoju pôvodnú úvahu a dospel k záveru, že v danom prípade dojednaná zmluvná pokuta a uplatnená výška zmluvnej pokuty sú dôsledkom dlhodobého omeškania žalovaného so zaplatením dlžnej sumy (od roku 2007 do roku 2011, kedy bola vykonaná úhrada). Zjavne nie je v tomto prípade možné poukázať na neprimeranosť zmluvnej pokuty, pretože v takom prípade by záver súdu zrejme zvýhodnil dlžníka - žalovaného oproti veriteľovi žalobcovi a znamenal by spochybnenie funkcie, ktorú má zmluvná pokuta plniť. Vzhľadom na uvedené dospel k záveru, že uplatnená zmluvná pokuta aj v zostávajúcej sume 760,49 eur je dôvodná, a preto žalobe v uplatnenom rozsahu vyhovel.",
+      "score": 0.591626,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_25",
+      "chunk_index": 25,
+      "text": "Opätovne poukázal na skutočnosť, že jedine v dôsledku moderácie zmluvnej pokuty prvostupňovým súdom napokon nepodal odvolanie voči rozsudku z 8.8.2012, aj keď je presvedčený, že dohoda zakotvuje zmluvnú pokutu ako jednorazovú sumu v sadzbe 25% z neuhradenej sumy faktúry. Súd prvého stupňa teda mal nárok na zmluvnú pokutu v rozsahu po späťvzatí žaloby zamietnuť. Tomuto tvrdeniu nasvedčuje aj znenie zmluvného dojednania v čl. V ods. 5 Dohody č. XX/XXXX z 3.1.2004. Aby žalobca mohol od žalovaného požadovať zmluvnú pokutu v sadzbe 25% za každý kvartál omeškania, muselo by to byť i zmluvne dojednané.",
+      "score": 0.675123,
+      "source_queries": [
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_26",
+      "chunk_index": 26,
+      "text": "Podľa žalovaného medzi účastníkmi konania počas celého konania ostal sporný výklad zmluvného dojednania v čl. V ods. 5 Dohody. Obchodný zákonník v Tretej časti, Hlava I, Diel VI, Oddiel 2 upravuje v ust. § 300 až 302 iba niektoré ustanovenia o zmluvnej pokute (lex specialis), pričom ako úpravu lex generalis je potrebné použiť ustanovenia Občianskeho zákonníka v § 544 a nasl. Z ust. § 544 ods. 1, 2 Občianskeho zákonníka vyplýva, že sa jedná o kogentné ustanovenie zákona, od ktorého sa zmluvné strany nemôžu odchýliť. Navyše uvedeným ustanovením zákon kladie na dojednanie o zmluvnej pokute zreteľné požiadavky (1. Písomná forma dojednania, 2. Dojednanie prípadu porušenia zmluvnej povinnosti, 3. Určenie výšky alebo určenie spôsobu určenia zmluvnej pokuty).",
+      "score": 0.672727,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_27",
+      "chunk_index": 27,
+      "text": "V ďalšom odvolateľ poukázal na formuláciu čl. V ods. 5 Dohody: \"... si zhotoviteľ vyhradzuje zmluvnú pokutu vo výške 25% z neuhradenej sumy faktúr po lehote splatnosti viac ako 60 dní.\" Má za to, že zmluvná pokuta môže byť vyjadrená pevnou paušálnou sumou (teda v konkrétnej výške), ktorá je známa už v čase dojednania zmluvnej pokuty, alebo môže byť uvedený spôsob jej určenia. Text dotknutého článku dohody upravuje spôsob určenia výšky zmluvnej pokuty tak, že vychádza z neuhradenej sumy faktúr (tých, ktoré sú po lehote splatnosti viac ako 60 dní), pričom zmluvná pokuta tvorí 25% z tejto neuhradenej sumy faktúr, a teda po tomto prepočte dostaneme presnú výšku zmluvnej pokuty. Z uvedeného vyplýva, že celé dojednanie o spôsobe určenia výšky zmluvnej pokuty, neobsahuje žiadne vyjadrenie \"za každý kvartál omeškania\", resp. \"kvartálna zmluvná pokuta\" a pod. Ak nebol spôsob určenia výšky zmluvnej pokuty dojednaný tak (a to by musel byť výslovne), že zhotoviteľovi vzniká nárok na zmluvnú pokutu vo výške 25% z neuhradenej sumy faktúr za každý kvartál omeškania, potom nemožno žalobcovi priznať zmluvnú pokutu za každý kvartál omeškania, lebo pre to nie je zmluvné dojednanie v písomnej forme (a nebolo ani v ústnej forme).",
+      "score": 0.985186,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_29",
+      "chunk_index": 29,
+      "text": "Keďže dohoda a jej text pochádza od žalobcu (ako zmluvnej strany), nemožno preto žalobcovi priznať ním uplatnený nárok na zaplatenie zmluvnej pokuty inej, než žalovaný už uhradil vo výške 25% z neuhradenej sumy faktúr. Ak by mal byť sporný výklad dojednania o zmluvnej pokute, nemožno výkladové pravidlo podľa ust. § 266 ods. 1 Obchodného zákonníka použiť v prospech žalobcu, lebo žalovanému takýto úmysel žalobcu nebol známy a ani z ostatných okolností veci nemožno uzavrieť, že by takýto úmysel musel byť žalovanému známy. Vylúčené je v prospech žalobcu použiť ust. § 266 ods. 2 alebo ods. 3 Obchodného zákonníka, pretože zo žiadnej praxe medzi účastníkmi, ani z ich následného správania nie je zrejmé, že by žalovaný bol kedykoľvek akceptoval tvrdenie žalobcu, že má podľa dohody nárok na zaplatenie zmluvnej pokuty za každý kvartál omeškania, alebo aby bol žalovaný niekedy žalobcovi plnil zmluvnú pokutu. Preto podľa žalovaného, žalobcom uplatnený nárok nemá zmluvný základ a tak k nemu nemožno dospieť ani výkladom.",
+      "score": 0.630769,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_31",
+      "chunk_index": 31,
+      "text": "Ďalej žalovaný poukázal na skutočnosť, že súd prvého stupňa bol povinný v intenciách uznesenia odvolacieho súdu zisťovať, či existujú dôvody pre zníženie zmluvnej pokuty využitím moderačného práva súdu. Preto na pojednávaní konanom 24.6.2014 doplnil výsluch žalobcu, na základe čoho následne zmenil svoje rozhodnutie o použití moderačného práva a s ohľadom na výšku ceny zabezpečovanej povinnosti 356,00 eur, ako aj čas, ktorý trvalo omeškania - t.j. doba cca 5 rokov od splatnosti skoršej faktúry, keďže 27.10.2011 došlo k úhrade zmluvnou pokutou zabezpečovanej pohľadávky, na základe doručenia platobného rozkazu žalovanému, pričom do tohto dňa žalobca žiadnym spôsobom pohľadávku u žalovaného neuplatňoval a tento mal vzhľadom na ukončenie vzájomného právneho vzťahu za to, že jeho záväzky voči žalobcovi sú vysporiadané, tak ako to potvrdil vo svojej účastníckej výpovedi. Žalobca po splatnosti žalovanej istiny ( o ktorej sa žalovaný domnieval, že nevznikla) žalovaného ani len neupomenul na úhradu dlžnej čiastky, čo by určite žalovaného upozornilo na to, že žalobca voči nemu eviduje pohľadávku a viedlo by nepochybne k urovnaniu zo strany žalovaného.",
+      "score": 0.658572,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_36",
+      "chunk_index": 36,
+      "text": "Doplneným dokazovaním súdu nebola zistená žiadna iná ujma, ktorá by bola žalobcovi včasným neuhradením sumy 356,00 eur vznikla. Za túto ujmu nie je možné považovať ničím nepodložené tvrdenia žalovaného. Preto má žalovaný za to, že minimálne zníženie sadzby zmluvnej pokuty, ak nie rozhodnutie o tom, že výška zmluvnej pokuty bola dojednaná, tak ako si to pri podpise dohody vykladal žalovaný (t.j. jednorazová 25% sankcia z neuhradených súm), ktorú ako možnosť súdu prvého stupňa zveruje priamo zákon, by bolo spravodlivým a akceptovateľným rozhodnutím vo veci samej.",
+      "score": 0.633025,
+      "source_queries": [
+        "q_principal"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "Súd prvého stupňa rozhodol rozsudkom č. k. 12Cb/25/2011 - 121 z 8.8.2012, ktorým konanie do výšky istiny 348,93 eur čiastočne zastavil, vrátane úroku z omeškania vo výške 14,25 % ročne zo sumy 159,33 eur od 20.10.2006 do zaplatenia a vo výške 14,50 % ročne zo sumy 189,60 eur od 20.1.2007 do zaplatenia. V časti zmluvnej pokuty žalobe vyhovel v rozsahu 50 % uplatneného nároku na zaplatenie zmluvnej pokuty, t.j. vo výške 760,49 eur a vo zvyšujúcej časti žalobu zamietol o zaplatenie zmluvnej pokuty. Súčasne priznal žalobcovi náhradu trov konania zodpovedajúcu pomernému úspechu v konaní.",
+      "score": 0.669604,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Proti uvedenému rozsudku podal v zákonnej lehote odvolanie žalobca a Krajský súd v Košiciach uznesením č. k. 3Cob/239/2012 - 152 zo 30.9.2013 zrušil rozsudok v časti výroku, ktorým prvostupňový súd žalobu zamietol. Súdu prvého stupňa uložil povinnosť v ďalšom konaní podrobne skúmať, či sú splnené dôvody pre zníženie zmluvnej pokuty a z akých konkrétnych dôvodov. Z odôvodnenia uznesenia (str. 8 uznesenia) vyplynulo aj zrušenie výroku o náhrade trov konania).",
+      "score": 0.735584,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Následne súd prvého stupňa doplnil dokazovanie - výsluchom účastníkov konania a zistil, že žalobca trvá na dôvodnosti uplatnenej zmluvnej pokuty v celom rozsahu. Má za to, že pokuta je primeraná, pretože v obdobných obchodných veciach je možné dojednať aj vyššiu zmluvnú pokutu, ktorá má viesť k disciplíne účastníkov obchodných vzťahov, a preto ju považuje za dôvodnú, aj z hľadiska dĺžky trvania obdobia, kedy si žalovaný neplnil riadne svoje platobné povinnosti, čím bol žalobca ukrátený na príjme a následne aj na výpočtovom základe pri určení výšky starobného dôchodku (presnú výšku však nevie vyčísliť).",
+      "score": 0.654803,
+      "source_queries": [
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Žalovaného upozorňoval na existujúci dlh ústne pri stretnutiach. Zároveň poukázal na obdobnú vec vedenú pod sp. zn. 5Cb/9/2010, kde súd priznal zmluvnú pokutu v celom rozsahu a tiež zmluvná pokuta presahovala niekoľkonásobne dlžnú istinu. Uvedený rozsudok bol potvrdený rozsudkom Krajského súdu v Košiciach, s poukazom na to, že uplatnená zmluvná pokuta je primeraná.",
+      "score": 0.716601,
+      "source_queries": [
+        "q_outcome",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Žalovaný nesúhlasil so zaplatením zmluvnej pokuty v celom uplatnenom rozsahu. Aj keď so zaplatením zmluvnej pokuty nesúhlasil ani v pôvodnom konaní, napokon na základe rozsudku súdu prvého stupňa, zníženie zmluvnej pokuty akceptoval, ako objektívne a primerané a to aj z hľadiska významu zabezpečovanej povinnosti. Podľa názoru žalovaného, hodnota a význam zabezpečovanej povinnosti je často odôvodňovaná včasným neplnením, čím dochádza ku škode v tej podobe, že oprávnený nemal k dispozícii svoje peňažné prostriedky. Túto najobvyklejšiu škodu vzniknutú v dôsledku oneskorených úhrad, však zabezpečuje zákonný úrok z omeškania, ktorý bol uplatňovaný aj v tomto prípade. Z tohto pohľadu je aj poukaz žalobcu na infláciu neadekvátny, pretože zákonný úrok z omeškania rádovo predstavuje vyššiu percentuálnu čiastku, ako dosahuje úrok pri vklade peňažných prostriedkov v peňažných ústavoch. Mal za to, že žalobca mohol skôr upozorniť žalovaného na zaplatenie dlhu, už aj s poukazom na uplatňovanú zmluvnú pokutu, zvlášť pokiaľ zmluvná pokuta bola koncipovaná v Dohode č. XX/XXXX tak, že nebolo celkom jednoznačné, či sa jedná o 25 % z dlžnej sumy štvrťročne, alebo z celkovej dlžnej sumy. Dokonca žalobca nevyzval žalovaného na dobrovoľnú úhradu, ani pred podaním žaloby. Preto súd pri znížení zmluvnej pokuty postupoval v súlade so zákonom a opodstatnene moderoval uplatnenú zmluvnú pokutu a navrhol žalobu vo zvyšujúcej časti zamietnuť ako nedôvodnú.",
+      "score": 0.935475,
+      "source_queries": [
+        "q_outcome",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_8",
+      "chunk_index": 8,
+      "text": "Z pripojeného rozsudku č.k. 5Cb/9/2010 - 47 zo 7.10.2010 a z rozsudku odvolacieho súdu č. k. 3Cob/69/2012 - 114 z 29.11.2012 súd zistil, že prvostupňový súd priznal žalobcovi zmluvnú pokutu v uvedenom konaní vo výške 4.929,78 eur oproti dlžnej istine 1.246,76 eur s príslušenstvom.",
+      "score": 0.621818,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_16",
+      "chunk_index": 16,
+      "text": "Výšku uplatnenej zmluvnej pokuty súd posudzoval v súlade s ust. § 301 Obchodného zákonníka, v zmysle ktorého môže neprimerane vysokú zmluvnú pokutu znížiť, s prihliadnutím na hodnotu a význam zabezpečovanej povinnosti, na ktorú sa vzťahuje zmluvná pokuta. Uvedené moderačné právo je možné využiť v prípade, že dlžník požiada o využitie tohto moderačného práva. V danom prípade žalovaný navrhol moderáciu.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_17",
+      "chunk_index": 17,
+      "text": "Preto súd prvého stupňa v súlade s aspektmi moderačného práva prehodnotil svoju pôvodnú úvahu a dospel k záveru, že v danom prípade dojednaná zmluvná pokuta a uplatnená výška zmluvnej pokuty sú dôsledkom dlhodobého omeškania žalovaného so zaplatením dlžnej sumy (od roku 2007 do roku 2011, kedy bola vykonaná úhrada). Zjavne nie je v tomto prípade možné poukázať na neprimeranosť zmluvnej pokuty, pretože v takom prípade by záver súdu zrejme zvýhodnil dlžníka - žalovaného oproti veriteľovi žalobcovi a znamenal by spochybnenie funkcie, ktorú má zmluvná pokuta plniť. Vzhľadom na uvedené dospel k záveru, že uplatnená zmluvná pokuta aj v zostávajúcej sume 760,49 eur je dôvodná, a preto žalobe v uplatnenom rozsahu vyhovel.",
+      "score": 0.822222,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_31",
+      "chunk_index": 31,
+      "text": "Ďalej žalovaný poukázal na skutočnosť, že súd prvého stupňa bol povinný v intenciách uznesenia odvolacieho súdu zisťovať, či existujú dôvody pre zníženie zmluvnej pokuty využitím moderačného práva súdu. Preto na pojednávaní konanom 24.6.2014 doplnil výsluch žalobcu, na základe čoho následne zmenil svoje rozhodnutie o použití moderačného práva a s ohľadom na výšku ceny zabezpečovanej povinnosti 356,00 eur, ako aj čas, ktorý trvalo omeškania - t.j. doba cca 5 rokov od splatnosti skoršej faktúry, keďže 27.10.2011 došlo k úhrade zmluvnou pokutou zabezpečovanej pohľadávky, na základe doručenia platobného rozkazu žalovanému, pričom do tohto dňa žalobca žiadnym spôsobom pohľadávku u žalovaného neuplatňoval a tento mal vzhľadom na ukončenie vzájomného právneho vzťahu za to, že jeho záväzky voči žalobcovi sú vysporiadané, tak ako to potvrdil vo svojej účastníckej výpovedi. Žalobca po splatnosti žalovanej istiny ( o ktorej sa žalovaný domnieval, že nevznikla) žalovaného ani len neupomenul na úhradu dlžnej čiastky, čo by určite žalovaného upozornilo na to, že žalobca voči nemu eviduje pohľadávku a viedlo by nepochybne k urovnaniu zo strany žalovaného.",
+      "score": 0.924313,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_32",
+      "chunk_index": 32,
+      "text": "Žalobca žalovaného však nevyzval na dobrovoľnú úhradu ani pred podaním žaloby. Až zo žalobného návrhu sa žalovaný dozvedel o tom, že žalobca voči nemu eviduje pohľadávku, a preto následne žalobcovi istinu, úroky z omeškania, ako aj časť zmluvnej pokuty, ktorá mu vyplývala zo znenia zmluvy, uhradil. Preto sa žalovaný domnieva, že žalobca svojim postupom (tým, že žalovaného do podania žaloby ani raz neupomenul na úhradu ním požadovanej pohľadávky), mohol sledovať aj to, aby pohľadávka narástla o zmluvnú pokutu a úroky z omeškania, a preto považuje uplatnenie moderačného práva súdu za správne.",
+      "score": 0.694966,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Košice_3Cob_224_2014_00_dokument.pdf_chunk_35",
+      "chunk_index": 35,
+      "text": "Hodnota a význam zabezpečovanej povinnosti sú zákonnými kritériami pri aplikácii moderačného práva súdu. Práve pri povinnosti v podobe peňažného plnenia je hodnota a význam zabezpečovanej povinnosti osobitá v tom, že včasným neplnením dochádza spravidla \"iba\" ku škode v podobe toho, že do doby úhrady oprávnený na peňažné plnenie (t.j. v tomto prípade žalobca) nemal peňažné prostriedky vo svojej dispozícii a nemohol tieto peňažné prostriedky zhodnotiť (napr. vkladom do peňažnej inštitúcie), kde by mohlo dôjsť k ich zhodnoteniu, alebo použiť ich na preinvestovanie. Túto, zrejme najobvyklejšiu škodu vzniknutú v dôsledku oneskorených úhrad však zabezpečuje pre veriteľa už zákonný úrok z omeškania, ktorý okrem tejto straty z nerealizovaného zhodnotenia navyše svojou výškou (resp. sadzbou) je zároveň aj sankciou pre dlžníka.",
+      "score": 0.940609,
+      "source_queries": [
+        "q_factors"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 45,
+    "call1_unique_chunks": 16,
+    "call2_unique_chunks": 11,
+    "call1_total_chars": 12176,
+    "call2_total_chars": 7468
+  }
+}

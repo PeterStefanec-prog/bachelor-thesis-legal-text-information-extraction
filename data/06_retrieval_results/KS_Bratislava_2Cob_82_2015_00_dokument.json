@@ -1,0 +1,320 @@
+{
+  "source_file": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf",
+  "case_id": "2Cob/82/2015",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 8,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "08.03.2016",
+    "case_id": "2Cob/82/2015",
+    "ecli": "ECLI:SK:KSBA:2016:1213200497.1",
+    "court": "Krajský súd Bratislava",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Bratislava\nSpisová značka: 2Cob/82/2015\nIdentifikačné číslo súdneho spisu: 1213200497\nDátum vydania rozhodnutia: 08. 03. 2016\nMeno a priezvisko sudcu, VSÚ: JUDr. Ľubica Krišková\nECLI: ECLI:SK:KSBA:2016:1213200497.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Bratislave v senáte zloženom z predsedníčky senátu JUDr. Ľubici Kriškovej a členov senátu JUDr. Oľgy Bahníkovej a JUDr. Ľubici Břouškovej v právnej veci žalobcu: T.O.P. AUTO Bratislava, a. s., Rožňavská 30, Bratislava, IČO: 35 721 014, proti žalovanému: B2B CLEAN s.r.o., Pavlovova 4, Bratislava, IČO: 36 831 255, zastúpený: Cipciar & partners, s.r.o., Haburská 49/F, Bratislava, o zaplatenie 135.160,32 EUR s príslušenstvom, o odvolaní žalovaného proti rozsudku Okresného súdu Bratislava II č. k. 26Cb/60/2013-174 zo dňa 09.09.2014 takto\n\nrozhodol: Krajský súd v Bratislave rozsudok Okresného súdu Bratislava II č. k. 26Cb/60/2013-174 zo dňa 09.09.2014 potvrdzuje.\n\nŽalobcovi náhradu trov odvolacieho konania nepriznáva.",
+  "reasoning_full": "odôvodnenie: Okresný súd Bratislava II napadnutým rozsudkom uložil žalovanému povinnosť zaplatiť žalobcovi sumu vo výške 135.160,32 € spolu s úrokom z omeškania vo výške 8,75 % ročne - zo sumy 67.580,16 € od 11.11.2012 do zaplatenia, - zo sumy 67.580,16 € od 01.01.2013 do zaplatenia ako aj trovy konania vo výške 8.109,50 €, všetko do troch dní od právoplatnosti tohto rozsudku.\n\nV odôvodnení súd uviedol, že žalobca, právnická osoba zapísaná v obchodnom registri Okresného súdu Bratislava Iav postavení predávajúci uzatvoril so žalovaným, tiež právnická osoba zapísaná v obchodnom registri Okresného súdu Bratislava I v postavení kupujúci \"Rámcovú kúpnu zmluvu\" dňa 10.11.2011 podľa ustanovení § 409 a nasl. Obchodného zákonníka. Účelom zmluvy, pre ktorý si účastníci uzatvorili zmluvu bolo vyhlásenie žalovaného, že má záujem v lehote do 1 roka odo dňa podpisu rámcovej kúpnej zmluvy kúpiť od spoločnosti žalobcu nové motorové vozidlá značky LAND ROVER v počte minimálne 20 kusov. Nárok žalobcu v zmysle dohodnutých podmienok v rámcovej zmluve predstavuje súhrn poskytnutej zľavy, a teda jej vrátenie vo výške 67.580,16 EUR a nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR, spolu 135.160,32 EUR.\n\nSúd prvého stupňa s poukazom na § 409 ods. 1, 2, § 265, § 300, § 301, Obch. zák., § 544 Obč. zák., § 365, § 369 Obch. zák. a po vykonanom dokazovaní, ustálil nasledovné: Základnou úlohou v tomto konaní bolo zistiť, či v tomto konkrétnom prípade prichádza do úvahy využitie práva súdu, a to moderačného oprávnenia na zníženie zmluvnej pokuty, ktorú si žalobca ako jeden zo sankčných nárokov v žalobe uplatnil, a to vo výške 67.580,16 EUR.\n\nVzťah medzi účastníkmi konania - podnikateľmi uzatvorený na základe Rámcovej zmluvy zo dňa 10.11.2011 je obchodno-záväzkovým vzťahom uzatvorených a spravujúci sa režimom ustanovení § 409 a nasl. Obchodného zákonníka.\n\nRámcová zmluva, ktorú účastníci uzatvorili bližšie špecifikovala podmienky ich vzájomného obchodovania, účel, pre ktorý zmluvný vzťah uzatvorili, stanovila predmet zmluvy, povinnosti zmluvných strán, kúpnu cenu, sankcie pre prípad nesplnenia povinnosti žalovaným vrátane zmluvnej pokuty.\n\nZmluva bola uzatvorená na dobu určitú, t. j. na dobu 1 roka odo dňa podpisu tejto Rámcovej kúpnej zmluvy, teda zmluva pltila do 10.11.2012.\n\nSkutočnosť, že žalovaný si svoj záväzok zo zmluvy, ku ktorému sa zaviazal, t. j. že od žalobcu kúpi a prevezie nové osobné motorové vozidlá LAND ROVER v počte minimálne 20 ks a zaplatiť žalobcovi ich kúpnu cenu dohodnutú v Rámcovej zmluve podľa článku VI. Rámcovej zmluvy, nesplnil, nebola medzi účastníkmi sporná.\n\nŽalovaný vo svojej výpovedi uviedol, že od žalobcu kúpil a prevzal len 6 ks motorových vozidiel značky LAND ROVER, pričom dôvodom prečo svoj záväzok zo zmluvy nesplnil bola okrem iných dôvodov aj nemožnosť odobrať vozidlá v danom roku, keďže predaj vozidiel prechádza celkovo od roku 2010 krízou.\n\nŽalobca si uplatnil 2 nároky, a to 1) nárok na vrátenie poskytnutej zľavy Žalobca poskytol žalovanému v zmysle dohodnutých podmienok v Rámcovej zmluve zľavu z kúpnej ceny pri nákupe 6 ks motorových vozidiel, celkom vo výške 67.580,16 EUR.\n\nZľava však bola poskytnutá za dohodnutých podmienok a podmienená dodržaním povinností a záväzku žalovaného, ku ktorému sa dobrovoľne zaviazal, že od žalobcu kúpi minimálne 20 ks nových motorových vozidiel značky LAND ROVER podľa tabuľky uvedenej v zmluve a v dohodnutej lehote, pričom žalovaný v článku V. bod 4 Rámcovej zmluvy písomne vyhlásil, že si je vedomý skutočnosti, že podmienkou priznania zľavy z kúpnej ceny je splnenie záväzku, ku ktorému sa zaviazal.\n\nKeďže žalovaný svoj záväzok nesplnil, žalobca oprávnene požadoval od žalovaného vrátenie poskytnutej zľavy pri nákupe 6 ks motorových vozdiel, v celkovej výške 67.580,16 EUR.\n\n2) Druhým nárokom, ktorý si uplatnil žalobca je nárok titulom zmluvnej pokuty.\n\nVzhľadom na charakter sporu má dohodnutá zabezpečovacia sankcia funkciu paušalizovanej náhrady škody.\n\nPovinnosť zaplatiť zmluvnú pokutu, ktorú si zmluvné strany dohodli, vzniká už porušením zmluvnej povinnosti a nie je pritom rozhodujúce, či oprávnenému účastníkovi porušením povinnosti vznikla aj škoda.\n\nÚprava zmluvnej pokuty v Obchodnom zákonníku vychádza z princípu objektívnej zodpovednosti, t. j. prakticky bez možnosti dovolať sa tzn. okolností vylučujúcich zodpovednosť. Žalobcom uplatnená zmluvná pokuta nie je vzhľadom na hodnotu a povahu a význam zabezpečenej povinnosti a aj s ohľadom na výšku škody neprimeraná. Žalovaný ako podnikateľ podniká vo vlastnom mene a na vlastnú zodpovednosť za účelom dosiahnutia zisku. Keďže podniká o. i. v oblasti kúpa, predaj, prenájom motorových vozidiel bolo na ňom, aby zvážil a minimalizoval riziká pre vzniknutú krízu v oblasti predaja motorových vozidiel a zhodnotil prevzatie záväzku, ku ktorému sa vo vzťahu k žalobcovi zaviazal.\n\nSúd prvého stupňa mal za to, že podľa zásady \"pacta sunt servanda\" - dohody sa majú plniť, nie sú dané také okolnosti, ktoré by umožnili súdu využiť moderačné oprávnenie a dohodnutú sankciu zmluvnú pokutu znížiť.\n\nSplatnosť nároku titulom vrátenia poskytnutej zľavy nastala po ukončení zmluvného vzťahu, t. j.\n\n10.11.2012, pričom žalovaný je v omeškaní s vrátením tejto sumy od 11.11.2012.\n\nSplatnosť nároku titulom zmluvnej pokuty nastala dňa 08.1.2013 a žalovaný je v omeškaní od 08.1.2013.\n\nŽalovaný svoje záväzky zo zmluvy nesplnil, sankcie, ktoré si žalobca v zmysle dohody uplatnil dobrovoľne nesplnil a s ich riadnym splnením je v omeškaní, súd mal za to, že nároky uplatnené žalobcom sú dôvodné a popri dohodnutých sankciách priznal žalobcovi aj úrok z omeškania v zákonom stanovenej výške v súlade s § 365, 369 Obchodného zákonníka.\n\nO trovách konania rozhodol súd podľa § 142 ods. 1 O.s.p. a priznal žalobcovi podľa zásady úspechu nárok na náhradu trov konania, a to trov súdneho poplatku vo výške 8.109,50 EUR, ktorý žalobca zaplatil za návrh na začatie konania.\n\nProti rozsudku podal v zákonnej lehote žalovaný odvolanie. Uviedol, že žalobca si uplatňuje nárok na vrátenie zľavy, ktorý je v rozpore s dohodnutými ustanoveniami č. VI rámcovej kúpnej zmluvy a prvostupňový súd sa touto namietanou skutočnosťou nezaoberal. Ďalej uviedol, že v predmetnej veci nešlo o údajne \"poskytnutá zľavu z kúpnej ceny\" (ďalej len \"domnelá zľava), ale štandardný obchodnú zvyklosť, ktorá je absolútne bežnou obchodnou praktikov pri tomto segmente luxusných áut. Kúpna cena bola medzi žalobcom ako predávajúcim a žalovaným ako kupujúcim dohodnutá ako cena v rámci ktorej je už započítaná údajná \"domnelá zľava\". Na preukázanie tvrdení, že ide obežnú obchodnú zvyklosť v segmente predaja luxusných vozidiel pri danej kategórii áut v danej cenovej úrovne, odporca navrhol vykonanie dôkazu, vyjadrenia autorizovaných predajcov obdobnej cenovej a typovej kategórie luxusných vozidiel, resp. znalecké dokazovanie, ktorým bude preukázané, že ide o bežnú obchodnú praktiku a to vo forme vyjadrenia autorizovaných predajcov rovnakého segmentu luxusných motorových vozidiel.\n\nŽalovaný má za to, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, nakoľko zmluvná pokuta uplatnená vo výške 67 580,16 eur vedie k neprimeranému zisku vo vzťahu k majetkovej ujme na strane navrhovateľa a k neprimeranému (vo vzťahu k porušovanej povinnosti) hospodárskemu poškodeniu odporcu. Výška zmluvnej pokuty je defacto na úrovni hodnoty 100 % zabezpečovanej povinnosti. Prvostupňový súd trval na výsluchu účastníka konania - žalovaného, resp. štatutárneho orgánu žalovaného, pričom tento bol a stále je dlhodobo práceneschopný, o čom je doklad v spise. Objektívnou príčinou nesplnenia rámcovej zmluvy bol i zdravotný stav štatutárneho zástupcu žalovaného, čo bolo preukázané výpoveďou žalovaného.\n\nVzhľadom na zásadný význam otázky či konanie žalobcu je v rozpore s poctivým obchodným stykom, resp. či je uplatnená zmluvná pokuta neprimeraná, žiadal odvolací súd, aby v prípade, že sa nestotožní s vyššie uvedenými skutočnosťami a potvrdí napadnuté rozhodnutie, vyslovil vo výroku svojho potvrdzujúceho rozhodnutia v zmysle § 238 ods. O.s.p., že je dovolanie prípustné.\n\nPoukázal na to, že odôvodnenie súdu je vnútorne nelogické, protirečiace a absolútne nespĺňa požiadavku v zmysle § 175 O.s.p. celkový postup súdu je možné charakterizovať ako nedôsledný, zaujatý a nezákonný v rozpore s Ústavou SR ako i ďalšími zákonmi, najmä ustanoveniami o.s.p.\n\nZdôraznil, že hoci ústavný súd nie je ďalšou inštanciou v sústave všeobecného súdnictva, ale nezávislým orgánom ochrany ústavnosti pôsobiacim mimo tejto sústavy. Ústavný súd je však oprávnený zaujať stanovisko k tomu, či rozhodnutie všeobecného súdu spĺňa požiadavku ústavnosti.\n\nS poukazom na všetky vyššie uvedené skutočnosti navrhol, aby odvolací súd napadnuté rozhodnutie zmenil tak, že žalobu zamieta alebo napadnuté rozhodnutie zrušil a vrátil vec prvostupňovému súdu na ďalšie konanie.\n\nŽalovaný vo vyjadrení k odvolaniu navrhol napadnutý rozsudok ako vecne správny potvrdiť. Uviedol, že ako vyplýva z predložených dôkazov (faktúr), výška zľavy bola zo strany žalobcu určená v súlade s článkom VI. bod 1 Rámcovej zmluvy, t.j. z ceny vozidla podľa aktuálneho cenníka žalobcu. Žalobca sa nestotožnil s tvrdením žalovaného, že poskytnutie zľavy v danom prípade je možné považovať za štandardnú obchodnú zvyklosť. V prípade zľavy poskytnutej zo strany ŠKODA AUTO SLOVENSKO (ŠAS), je potrebné uviesť, že predávajúcim je Importér vozidiel značky ŠKODA pre SR a zároveň je to spoločnosť personálne a majetkovo prepojená na výrobcu, ktorý je jej vlastníkom. Je preto v úplne odlišnej pozícii a disponuje odlišnými možnosťami obchodných zvýhodnení ako žalobca, ktorý je v pozícii konečného predávajúceho - Dílera. Nestotožnil sa ani s názorom žalovaného, že ak žalobca splnil plán predaja, tým, že za rok 2012 predal 153, mu nevznikla žiadna škoda. Zo strany žalovaného bolo skutočne kúpených len 6 kusov vozidiel, na základe čoho žalobcovi vznikla škoda vo viacerých ohľadoch.\n\nPodľa žalobcu vychádzajúc zo zisteného skutkového a právneho stavu veci jednoznačne vyplýva, že v danom prípade bolo preukázané, že žalovaný si riadne nesplnil povinnosti, ktoré pre neho vyplývali z Rámcovej zmluvy, ktorú uzatvoril dňa 10.11.2011 so žalobcom, a to tým, že v stanovej lehote nekúpil a neprevzal od žalobcu dohodnutý počet nových motorových vozidiel značky LAND ROVER. Žalovaný počas účinnosti Rámcovej zmluvy zakúpil 6 kusov motorových vozidiel značky LAND ROVER, namiesto dohodnutého minimálneho počtu 20 kusov. Na základe tejto skutočnosti bol žalovaný v súlade s článkom VI. bod 7 Rámcovej zmluvy povinný vrátiť žalobcovi celkovú peňažnú sumu zodpovedajúcu výške zľavy.\n\nZároveň žalobcovi v súlade s článkom VI. bod 8 Rámcovej zmluvy vznikol nárok na zaplatenie zmluvnej pokuty vo výške poskytnutej zľavy.\n\nKrajský súd v Bratislave ako súd odvolací prejednal vec podľa § 212 ods. 1 O.s.p. bez nariadenia pojednávania v zmysle § 214 ods. 2 O.s.p., pričom termín verejného vyhlásenia rozsudku bol dňa 01.03.2016 oznámený na úradnej tabuli súdu podľa § 156 ods. 3 O.s.p. Po preskúmaní obsahu spisu, oboznámení sa s dôvodmi odvolania žalovaného a s vyjadrením žalobcu k odvolaniu dospel k záveru, že odvolaniu nie je možné vyhovieť.\n\nZ obsahu spisu odvolací súd zistil, že predmetom sporu je nárok žalobcu na zaplatenie sumy 67 580,16 eur titulom vrátenia poskytnutej zľavy a nárok žalobcu na zaplatenie sumy 67 580,16 eur titulom zmluvnej pokuty. Podľa žalovaného je nárok žalobcu na vrátenie poskytnutej zľavy nárokom, ktorý nemôže požívať v zmysle § 265 Obch. zák. právnu ochranu a priznaním nároku na zaplatenie zmluvnej pokuty by sa žalobca neprimerane obohatil. S odvolacími námietkami žalovaného sa odvolací súd nestotožnil.\n\nOdvolací súd sa v celom rozsahu stotožňuje so zisteným skutkovým stavom a právnym posúdením veci prvostupňovým súdom. Súd prvého stupňa sa vo svojom rozsudku vysporiadal so všetkými argumentmi žalovaného, správne vyhodnotil vykonané dôkazy a na správnosť dôvodov uvedených v rozsudku odvolací súd, podľa § 219 ods. 2 O.s.p. v celom rozsahu odkazuje. Na zdôraznenie správnosti napadnutého rozsudku a k odvolacím dôvodom žalovaného odvolací súd uvádza nasledovné.\n\nV prvom rade je potrebné zdôrazniť, že obidva nároky uplatnené žalobcom vyplývajú z uzatvorenej Rámcovej zmluvy (konkrétne z jej porušenia) a boli priznané v súlade so zmluvnými a zákonnými ustanoveniami.\n\nK odvolacej námietke žalovaného týkajúcej sa nesprávne vypočítanej a uplatnenej zľavy odvolací súd uvádza, že tento nárok žalobcu bol priznaný v súlade s čl. VI. bod 7 Rámcovej zmluvy, pričom z textu ustanovenia jednoznačne vyplýva, že v prípade nesplnenia povinnosti je žalovaný povinný vrátiť sumu, ktorá zodpovedá skutočne poskytnutej zľave. Ak teda bola poskytnutá zľava vo výške 67 580,16 eur, čo bolo preukázané vystavenými faktúrami, je žalovaný povinný vrátiť sumu zodpovedajúcu tejto zľave.\n\nPokiaľ ide o nárok žalobcu na vrátenie poskytnutej zľavy, súd prvého stupňa správne uviedol, že zľava bola poskytnutá za dohodnutých podmienok a podmienená dodržaním povinností a záväzku žalovaného, ku ktorému sa dobrovoľne zaviazal, že od žalobcu kúpi minimálne 20 ks nových motorových vozidiel značky LAND ROVER podľa tabuľky uvedenej v zmluve a v dohodnutej lehote. Žalovaný v článku V. bod 4 Rámcovej zmluvy písomne vyhlásil, že si je vedomý skutočnosti, že podmienkou priznania zľavy z kúpnej ceny je splnenie záväzku, ku ktorému sa zaviazal. Žalovaný si teda bol vedomý skutočnosti, že poskytnutie zľavy je viazané na splnenie konkrétnych podmienok a nemôže teraz tvrdiť, že ide o domnelú zľavu. Rámcová zmluva bola platne uzatvorená, čo žiaden z účastníkov ani nespochybnil a z jednotlivých bodov článku VI. jednoznačne vyplýva, ako je kúpna cena určená a čo tvorí zľavu. Zo žiadneho ustanovenia nemožno vyvodiť, že zľava by mala byť súčasťou ceny ako to tvrdí žalovaný a prípadné obchodné zvyklosti nemôžu mať prednosť pred zmluvným dojednaním. Z ustanovenia § 2 Obch.zák. totiž vyplýva, že obchodné záväzkové vzťahy sa spravujú ustanoveniami tohto zákona a až v prípade, že ich nemožno riešiť podľa predpisov Obchodného zákonníka, ani predpisov občianskeho práva, posúdia sa podľa obchodných zvyklostí. Vzhľadom na tieto skutočnosti aj bolo nadbytočné skúmať, aké sú zvyklosti v oblasti predaja aut a poskytovania zliav. V danom prípade žalovaný uzatvoril zmluvu s konkrétnymi zmluvnými podmienkami a ich porušením jednoznačne vznikol žalobcovi nárok na vrátenie poskytnutej zľavy.\n\nOdvolací súd nesúhlasí s názorom žalovaného, že nárok žalobcu na vrátenie zľavy nemôže požívať v zmysle § 265 Obch. zák. právnu ochranu. Za rozpor s poctivým obchodným stykom a kritériom, na základe ktorého účastníci navrhujú neposkytnutie právnej ochrany, je podľa súdnej judikatúry porušenie rovnováhy účastníkov prostredníctvom zmluvných dojednaní zakladajúcich nerovnosť zmluvných strán.\n\nDojednanie kúpnej ceny s poskytnutím zľavy za určitých konkrétnych podmienok nie je možné podľa odvolacieho súdu považovať za takéto zmluvné dojednanie. Žalovaný si musel byť vedomý, že v prípade porušenia zmluvných podmienok musí poskytnutú zľavu vrátiť, pričom nejde o ustanovenie narušujúce rovnováhu medzi účastníkmi, ale o ustanovenie, ktoré akcentuje princíp právnej istoty.\n\nK odvolacej námietke žalovaného, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, odvolací súd uvádza, že žalobca si predovšetkým uplatnil zmluvnú pokutu, ktorá bola platne dojednaná a už z jej funkcie vyplývajú majetkové dôsledky pre toho, kto poruší povinnosť zo záväzkového vzťahu. Zmluvná pokuta plní prevenčnú povinnosť, reparačnú a aj sankčnú, keďže predstavuje sankciu pre toho, kto porušil povinnosť. Zodpovednosť za porušenie povinnosti zabezpečenej zmluvnou pokutou podľa Obchodného zákonníka je objektívna a predstavuje paušalizovanú náhradu škody (veriteľ nemusí preukazovať či mu vznikla škoda). Zákon nestanovuje žiadnu paušálnu hranicu, od ktorej by mala byť zmluvná pokuta považovaná za neprimeranú.\n\nZákonodarca ponechal posúdenie prípadného neprimeraného charakteru výšky dohodnutej zmluvnej pokuty na súd a obmedzil sa na určenie kritérií, vo svetle ktorých má súd výšku zmluvnej pokuty posudzovať: hodnota zabezpečovaného záväzku a význam zabezpečovaného záväzku. Súd prvého stupňa dal odpoveď na otázku, prečo považuje vzhľadom na uvedené zmluvnú pokutu za primeranú.\n\nOdvolací súd zhodne s názorom súdu prvého stupňa poukazuje na skutočnosť, že žalovaný je podnikateľom v oblasti kúpy a predaja motorových vozidiel, bolo teda na ňom, aby zvážil všetky riziká spojené s predajom vozidiel a zvážil prevzatie záväzku zabezpečeného zmluvnou pokutou.\n\nOdvolací súd dopĺňa v tejto súvislosti, že podľa rozhodnutia NS ČR z 9.7.2008 sp.zn. 32 Cdo 1568/2008 \"zmluvná pokuta musí zahŕňať všetky škody, ktoré možno rozumne v danom konkrétnom vzťahu s porušením určitej povinnosti očakávať a musí mať dostatočnú nie však premrštenú stimulačnú výšku.\n\nZmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, môže byť hodnotená ako neprimeraná. Pri posúdení primeranosti dohodnutej výšky zmluvnej pokuty je potrebné prihliadnuť na celkové okolnosti úkony, jeho pohnútky a účel, ktorý sledoval.\" V prejednávanej veci zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, keďže nerealizovaná kúpa dohodnutého minimálneho počtu vozidiel má vplyv na plnenie plánu predaja žalobcu, prípadné sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena voči výrobcovi.\n\nPokiaľ ide o obsiahle odvolacie námietky týkajúce sa nepresvedčivosti a nezrozumiteľnosti rozhodnutia súdu prvého stupňa, odvolací súd uvádza, že prejednaním veci bez nariadenia pojednávania zistil, že súd prvého stupňa správne zistil skutkový stav, vykonal aj dostatočné dokazovanie a jeho rozhodnutie je vecne správne. Podľa súdnej judikatúry súd nemusí dať odpoveď na všetky otázky nastolené účastníkom konania, ale len na tie, ktoré majú podľa názoru súdu pre vec podstatný význam, prípadne dostatočne objasňujú skutkový a právny základ (rozhodnutie Najvyššieho súdu SR sp.zn. 3Cdo/97/2010). Vzhľadom na odvolacie námietky odvolateľa odvolací súd dôvody napadnutého rozhodnutia doplnil a vysporiadal sa s odvolacími námietkami tak, ako je uvedené vyššie.\n\nŽalovaný v odvolaní žiadal o pripustenie možnosti napadnúť rozhodnutie odvolacieho súdu dovolaním vzhľadom na zásadný význam otázky, či konanie navrhovateľa je v rozpore s poctivým obchodným stykom, resp. či je uplatnená zmluvná pokuta neprimeraná. Odvolací súd nepripustil dovolanie proti potvrdzujúcemu rozsudku, pretože podľa jeho názoru nejde o právne otázky, ktoré by doposiaľ neboli súdmi riešené a nejde o otázky zásadného významu, od vyriešenia ktorých závisí právna istota, resp. právna jednotnosť. V prejednávanej veci sa súd prvého stupňa ani odvolací súd neodchýlil od súdnej judikatúry a je potrebné konštatovať, že k výkonu práva v rozpore s poctivým obchodným stykom ako aj zmluvnej pokute existuje judikatúra.\n\nVzhľadom k uvedenému, odvolací súd napadnutý rozsudok prvostupňového súdu podľa § 219 ods. 1, 2 O.s.p. ako vecne správny potvrdil.\n\nO trovách odvolacieho konania rozhodol odvolací súd podľa § 224 ods. 1 a § 142 ods. 1 O.s.p. tak, že žalobcovi náhradu trov odvolacieho konania nepriznal, pretože mu žiadne trovy odvolacieho konania nevznikli.\n\nTento rozsudok je výsledkom hlasovania odvolacieho senátu v pomere hlasov 3: 0.",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "Okresný súd Bratislava II napadnutým rozsudkom uložil žalovanému povinnosť zaplatiť žalobcovi sumu vo výške 135.160,32 € spolu s úrokom z omeškania vo výške 8,75 % ročne - zo sumy 67.580,16 € od 11.11.2012 do zaplatenia, - zo sumy 67.580,16 € od 01.01.2013 do zaplatenia ako aj trovy konania vo výške 8.109,50 €, všetko do troch dní od právoplatnosti tohto rozsudku.",
+      "score": 0.939305,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "V odôvodnení súd uviedol, že žalobca, právnická osoba zapísaná v obchodnom registri Okresného súdu Bratislava Iav postavení predávajúci uzatvoril so žalovaným, tiež právnická osoba zapísaná v obchodnom registri Okresného súdu Bratislava I v postavení kupujúci \"Rámcovú kúpnu zmluvu\" dňa 10.11.2011 podľa ustanovení § 409 a nasl. Obchodného zákonníka. Účelom zmluvy, pre ktorý si účastníci uzatvorili zmluvu bolo vyhlásenie žalovaného, že má záujem v lehote do 1 roka odo dňa podpisu rámcovej kúpnej zmluvy kúpiť od spoločnosti žalobcu nové motorové vozidlá značky LAND ROVER v počte minimálne 20 kusov. Nárok žalobcu v zmysle dohodnutých podmienok v rámcovej zmluve predstavuje súhrn poskytnutej zľavy, a teda jej vrátenie vo výške 67.580,16 EUR a nárok titulom zmluvnej pokuty vo výške 67.580,16 EUR, spolu 135.160,32 EUR.",
+      "score": 0.937085,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Súd prvého stupňa s poukazom na § 409 ods. 1, 2, § 265, § 300, § 301, Obch. zák., § 544 Obč. zák., § 365, § 369 Obch. zák. a po vykonanom dokazovaní, ustálil nasledovné: Základnou úlohou v tomto konaní bolo zistiť, či v tomto konkrétnom prípade prichádza do úvahy využitie práva súdu, a to moderačného oprávnenia na zníženie zmluvnej pokuty, ktorú si žalobca ako jeden zo sankčných nárokov v žalobe uplatnil, a to vo výške 67.580,16 EUR.",
+      "score": 0.685714,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "Rámcová zmluva, ktorú účastníci uzatvorili bližšie špecifikovala podmienky ich vzájomného obchodovania, účel, pre ktorý zmluvný vzťah uzatvorili, stanovila predmet zmluvy, povinnosti zmluvných strán, kúpnu cenu, sankcie pre prípad nesplnenia povinnosti žalovaným vrátane zmluvnej pokuty.",
+      "score": 0.784615,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "Zmluva bola uzatvorená na dobu určitú, t. j. na dobu 1 roka odo dňa podpisu tejto Rámcovej kúpnej zmluvy, teda zmluva pltila do 10.11.2012.",
+      "score": 0.616124,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_6",
+      "chunk_index": 6,
+      "text": "Skutočnosť, že žalovaný si svoj záväzok zo zmluvy, ku ktorému sa zaviazal, t. j. že od žalobcu kúpi a prevezie nové osobné motorové vozidlá LAND ROVER v počte minimálne 20 ks a zaplatiť žalobcovi ich kúpnu cenu dohodnutú v Rámcovej zmluve podľa článku VI. Rámcovej zmluvy, nesplnil, nebola medzi účastníkmi sporná.",
+      "score": 0.825316,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "Žalovaný vo svojej výpovedi uviedol, že od žalobcu kúpil a prevzal len 6 ks motorových vozidiel značky LAND ROVER, pričom dôvodom prečo svoj záväzok zo zmluvy nesplnil bola okrem iných dôvodov aj nemožnosť odobrať vozidlá v danom roku, keďže predaj vozidiel prechádza celkovo od roku 2010 krízou.",
+      "score": 0.68378,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "Úprava zmluvnej pokuty v Obchodnom zákonníku vychádza z princípu objektívnej zodpovednosti, t. j. prakticky bez možnosti dovolať sa tzn. okolností vylučujúcich zodpovednosť. Žalobcom uplatnená zmluvná pokuta nie je vzhľadom na hodnotu a povahu a význam zabezpečenej povinnosti a aj s ohľadom na výšku škody neprimeraná. Žalovaný ako podnikateľ podniká vo vlastnom mene a na vlastnú zodpovednosť za účelom dosiahnutia zisku. Keďže podniká o. i. v oblasti kúpa, predaj, prenájom motorových vozidiel bolo na ňom, aby zvážil a minimalizoval riziká pre vzniknutú krízu v oblasti predaja motorových vozidiel a zhodnotil prevzatie záväzku, ku ktorému sa vo vzťahu k žalobcovi zaviazal.",
+      "score": 0.570622,
+      "source_queries": [
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_19",
+      "chunk_index": 19,
+      "text": "Žalovaný svoje záväzky zo zmluvy nesplnil, sankcie, ktoré si žalobca v zmysle dohody uplatnil dobrovoľne nesplnil a s ich riadnym splnením je v omeškaní, súd mal za to, že nároky uplatnené žalobcom sú dôvodné a popri dohodnutých sankciách priznal žalobcovi aj úrok z omeškania v zákonom stanovenej výške v súlade s § 365, 369 Obchodného zákonníka.",
+      "score": 1.0,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_22",
+      "chunk_index": 22,
+      "text": "Žalovaný má za to, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, nakoľko zmluvná pokuta uplatnená vo výške 67 580,16 eur vedie k neprimeranému zisku vo vzťahu k majetkovej ujme na strane navrhovateľa a k neprimeranému (vo vzťahu k porušovanej povinnosti) hospodárskemu poškodeniu odporcu. Výška zmluvnej pokuty je defacto na úrovni hodnoty 100 % zabezpečovanej povinnosti. Prvostupňový súd trval na výsluchu účastníka konania - žalovaného, resp. štatutárneho orgánu žalovaného, pričom tento bol a stále je dlhodobo práceneschopný, o čom je doklad v spise. Objektívnou príčinou nesplnenia rámcovej zmluvy bol i zdravotný stav štatutárneho zástupcu žalovaného, čo bolo preukázané výpoveďou žalovaného.",
+      "score": 0.710504,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_28",
+      "chunk_index": 28,
+      "text": "Podľa žalobcu vychádzajúc zo zisteného skutkového a právneho stavu veci jednoznačne vyplýva, že v danom prípade bolo preukázané, že žalovaný si riadne nesplnil povinnosti, ktoré pre neho vyplývali z Rámcovej zmluvy, ktorú uzatvoril dňa 10.11.2011 so žalobcom, a to tým, že v stanovej lehote nekúpil a neprevzal od žalobcu dohodnutý počet nových motorových vozidiel značky LAND ROVER. Žalovaný počas účinnosti Rámcovej zmluvy zakúpil 6 kusov motorových vozidiel značky LAND ROVER, namiesto dohodnutého minimálneho počtu 20 kusov. Na základe tejto skutočnosti bol žalovaný v súlade s článkom VI. bod 7 Rámcovej zmluvy povinný vrátiť žalobcovi celkovú peňažnú sumu zodpovedajúcu výške zľavy.",
+      "score": 0.781888,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_29",
+      "chunk_index": 29,
+      "text": "Zároveň žalobcovi v súlade s článkom VI. bod 8 Rámcovej zmluvy vznikol nárok na zaplatenie zmluvnej pokuty vo výške poskytnutej zľavy.",
+      "score": 0.6,
+      "source_queries": [
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_31",
+      "chunk_index": 31,
+      "text": "Z obsahu spisu odvolací súd zistil, že predmetom sporu je nárok žalobcu na zaplatenie sumy 67 580,16 eur titulom vrátenia poskytnutej zľavy a nárok žalobcu na zaplatenie sumy 67 580,16 eur titulom zmluvnej pokuty. Podľa žalovaného je nárok žalobcu na vrátenie poskytnutej zľavy nárokom, ktorý nemôže požívať v zmysle § 265 Obch. zák. právnu ochranu a priznaním nároku na zaplatenie zmluvnej pokuty by sa žalobca neprimerane obohatil. S odvolacími námietkami žalovaného sa odvolací súd nestotožnil.",
+      "score": 0.780975,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_34",
+      "chunk_index": 34,
+      "text": "K odvolacej námietke žalovaného týkajúcej sa nesprávne vypočítanej a uplatnenej zľavy odvolací súd uvádza, že tento nárok žalobcu bol priznaný v súlade s čl. VI. bod 7 Rámcovej zmluvy, pričom z textu ustanovenia jednoznačne vyplýva, že v prípade nesplnenia povinnosti je žalovaný povinný vrátiť sumu, ktorá zodpovedá skutočne poskytnutej zľave. Ak teda bola poskytnutá zľava vo výške 67 580,16 eur, čo bolo preukázané vystavenými faktúrami, je žalovaný povinný vrátiť sumu zodpovedajúcu tejto zľave.",
+      "score": 0.786528,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_35",
+      "chunk_index": 35,
+      "text": "Pokiaľ ide o nárok žalobcu na vrátenie poskytnutej zľavy, súd prvého stupňa správne uviedol, že zľava bola poskytnutá za dohodnutých podmienok a podmienená dodržaním povinností a záväzku žalovaného, ku ktorému sa dobrovoľne zaviazal, že od žalobcu kúpi minimálne 20 ks nových motorových vozidiel značky LAND ROVER podľa tabuľky uvedenej v zmluve a v dohodnutej lehote. Žalovaný v článku V. bod 4 Rámcovej zmluvy písomne vyhlásil, že si je vedomý skutočnosti, že podmienkou priznania zľavy z kúpnej ceny je splnenie záväzku, ku ktorému sa zaviazal. Žalovaný si teda bol vedomý skutočnosti, že poskytnutie zľavy je viazané na splnenie konkrétnych podmienok a nemôže teraz tvrdiť, že ide o domnelú zľavu. Rámcová zmluva bola platne uzatvorená, čo žiaden z účastníkov ani nespochybnil a z jednotlivých bodov článku VI. jednoznačne vyplýva, ako je kúpna cena určená a čo tvorí zľavu. Zo žiadneho ustanovenia nemožno vyvodiť, že zľava by mala byť súčasťou ceny ako to tvrdí žalovaný a prípadné obchodné zvyklosti nemôžu mať prednosť pred zmluvným dojednaním. Z ustanovenia § 2 Obch.zák. totiž vyplýva, že obchodné záväzkové vzťahy sa spravujú ustanoveniami tohto zákona a až v prípade, že ich nemožno riešiť podľa predpisov Obchodného zákonníka, ani predpisov občianskeho práva, posúdia sa podľa obchodných zvyklostí. Vzhľadom na tieto skutočnosti aj bolo nadbytočné skúmať, aké sú zvyklosti v oblasti predaja aut a poskytovania zliav. V danom prípade žalovaný uzatvoril zmluvu s konkrétnymi zmluvnými podmienkami a ich porušením jednoznačne vznikol žalobcovi nárok na vrátenie poskytnutej zľavy.",
+      "score": 0.713548,
+      "source_queries": [
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_37",
+      "chunk_index": 37,
+      "text": "Dojednanie kúpnej ceny s poskytnutím zľavy za určitých konkrétnych podmienok nie je možné podľa odvolacieho súdu považovať za takéto zmluvné dojednanie. Žalovaný si musel byť vedomý, že v prípade porušenia zmluvných podmienok musí poskytnutú zľavu vrátiť, pričom nejde o ustanovenie narušujúce rovnováhu medzi účastníkmi, ale o ustanovenie, ktoré akcentuje princíp právnej istoty.",
+      "score": 0.524878,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_38",
+      "chunk_index": 38,
+      "text": "K odvolacej námietke žalovaného, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, odvolací súd uvádza, že žalobca si predovšetkým uplatnil zmluvnú pokutu, ktorá bola platne dojednaná a už z jej funkcie vyplývajú majetkové dôsledky pre toho, kto poruší povinnosť zo záväzkového vzťahu. Zmluvná pokuta plní prevenčnú povinnosť, reparačnú a aj sankčnú, keďže predstavuje sankciu pre toho, kto porušil povinnosť. Zodpovednosť za porušenie povinnosti zabezpečenej zmluvnou pokutou podľa Obchodného zákonníka je objektívna a predstavuje paušalizovanú náhradu škody (veriteľ nemusí preukazovať či mu vznikla škoda). Zákon nestanovuje žiadnu paušálnu hranicu, od ktorej by mala byť zmluvná pokuta považovaná za neprimeranú.",
+      "score": 0.715093,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_39",
+      "chunk_index": 39,
+      "text": "Zákonodarca ponechal posúdenie prípadného neprimeraného charakteru výšky dohodnutej zmluvnej pokuty na súd a obmedzil sa na určenie kritérií, vo svetle ktorých má súd výšku zmluvnej pokuty posudzovať: hodnota zabezpečovaného záväzku a význam zabezpečovaného záväzku. Súd prvého stupňa dal odpoveď na otázku, prečo považuje vzhľadom na uvedené zmluvnú pokutu za primeranú.",
+      "score": 0.597331,
+      "source_queries": [
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_42",
+      "chunk_index": 42,
+      "text": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, môže byť hodnotená ako neprimeraná. Pri posúdení primeranosti dohodnutej výšky zmluvnej pokuty je potrebné prihliadnuť na celkové okolnosti úkony, jeho pohnútky a účel, ktorý sledoval.\" V prejednávanej veci zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, keďže nerealizovaná kúpa dohodnutého minimálneho počtu vozidiel má vplyv na plnenie plánu predaja žalobcu, prípadné sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena voči výrobcovi.",
+      "score": 0.598456,
+      "source_queries": [
+        "q_rate"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "Súd prvého stupňa s poukazom na § 409 ods. 1, 2, § 265, § 300, § 301, Obch. zák., § 544 Obč. zák., § 365, § 369 Obch. zák. a po vykonanom dokazovaní, ustálil nasledovné: Základnou úlohou v tomto konaní bolo zistiť, či v tomto konkrétnom prípade prichádza do úvahy využitie práva súdu, a to moderačného oprávnenia na zníženie zmluvnej pokuty, ktorú si žalobca ako jeden zo sankčných nárokov v žalobe uplatnil, a to vo výške 67.580,16 EUR.",
+      "score": 0.956368,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_14",
+      "chunk_index": 14,
+      "text": "Úprava zmluvnej pokuty v Obchodnom zákonníku vychádza z princípu objektívnej zodpovednosti, t. j. prakticky bez možnosti dovolať sa tzn. okolností vylučujúcich zodpovednosť. Žalobcom uplatnená zmluvná pokuta nie je vzhľadom na hodnotu a povahu a význam zabezpečenej povinnosti a aj s ohľadom na výšku škody neprimeraná. Žalovaný ako podnikateľ podniká vo vlastnom mene a na vlastnú zodpovednosť za účelom dosiahnutia zisku. Keďže podniká o. i. v oblasti kúpa, predaj, prenájom motorových vozidiel bolo na ňom, aby zvážil a minimalizoval riziká pre vzniknutú krízu v oblasti predaja motorových vozidiel a zhodnotil prevzatie záväzku, ku ktorému sa vo vzťahu k žalobcovi zaviazal.",
+      "score": 1.0,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_19",
+      "chunk_index": 19,
+      "text": "Žalovaný svoje záväzky zo zmluvy nesplnil, sankcie, ktoré si žalobca v zmysle dohody uplatnil dobrovoľne nesplnil a s ich riadnym splnením je v omeškaní, súd mal za to, že nároky uplatnené žalobcom sú dôvodné a popri dohodnutých sankciách priznal žalobcovi aj úrok z omeškania v zákonom stanovenej výške v súlade s § 365, 369 Obchodného zákonníka.",
+      "score": 0.677948,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_22",
+      "chunk_index": 22,
+      "text": "Žalovaný má za to, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, nakoľko zmluvná pokuta uplatnená vo výške 67 580,16 eur vedie k neprimeranému zisku vo vzťahu k majetkovej ujme na strane navrhovateľa a k neprimeranému (vo vzťahu k porušovanej povinnosti) hospodárskemu poškodeniu odporcu. Výška zmluvnej pokuty je defacto na úrovni hodnoty 100 % zabezpečovanej povinnosti. Prvostupňový súd trval na výsluchu účastníka konania - žalovaného, resp. štatutárneho orgánu žalovaného, pričom tento bol a stále je dlhodobo práceneschopný, o čom je doklad v spise. Objektívnou príčinou nesplnenia rámcovej zmluvy bol i zdravotný stav štatutárneho zástupcu žalovaného, čo bolo preukázané výpoveďou žalovaného.",
+      "score": 0.847406,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_23",
+      "chunk_index": 23,
+      "text": "Vzhľadom na zásadný význam otázky či konanie žalobcu je v rozpore s poctivým obchodným stykom, resp. či je uplatnená zmluvná pokuta neprimeraná, žiadal odvolací súd, aby v prípade, že sa nestotožní s vyššie uvedenými skutočnosťami a potvrdí napadnuté rozhodnutie, vyslovil vo výroku svojho potvrdzujúceho rozhodnutia v zmysle § 238 ods. O.s.p., že je dovolanie prípustné.",
+      "score": 0.725896,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_27",
+      "chunk_index": 27,
+      "text": "Žalovaný vo vyjadrení k odvolaniu navrhol napadnutý rozsudok ako vecne správny potvrdiť. Uviedol, že ako vyplýva z predložených dôkazov (faktúr), výška zľavy bola zo strany žalobcu určená v súlade s článkom VI. bod 1 Rámcovej zmluvy, t.j. z ceny vozidla podľa aktuálneho cenníka žalobcu. Žalobca sa nestotožnil s tvrdením žalovaného, že poskytnutie zľavy v danom prípade je možné považovať za štandardnú obchodnú zvyklosť. V prípade zľavy poskytnutej zo strany ŠKODA AUTO SLOVENSKO (ŠAS), je potrebné uviesť, že predávajúcim je Importér vozidiel značky ŠKODA pre SR a zároveň je to spoločnosť personálne a majetkovo prepojená na výrobcu, ktorý je jej vlastníkom. Je preto v úplne odlišnej pozícii a disponuje odlišnými možnosťami obchodných zvýhodnení ako žalobca, ktorý je v pozícii konečného predávajúceho - Dílera. Nestotožnil sa ani s názorom žalovaného, že ak žalobca splnil plán predaja, tým, že za rok 2012 predal 153, mu nevznikla žiadna škoda. Zo strany žalovaného bolo skutočne kúpených len 6 kusov vozidiel, na základe čoho žalobcovi vznikla škoda vo viacerých ohľadoch.",
+      "score": 0.811504,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_38",
+      "chunk_index": 38,
+      "text": "K odvolacej námietke žalovaného, že uplatnením zmluvnej pokuty došlo k neadekvátnym majetkovým dôsledkom, odvolací súd uvádza, že žalobca si predovšetkým uplatnil zmluvnú pokutu, ktorá bola platne dojednaná a už z jej funkcie vyplývajú majetkové dôsledky pre toho, kto poruší povinnosť zo záväzkového vzťahu. Zmluvná pokuta plní prevenčnú povinnosť, reparačnú a aj sankčnú, keďže predstavuje sankciu pre toho, kto porušil povinnosť. Zodpovednosť za porušenie povinnosti zabezpečenej zmluvnou pokutou podľa Obchodného zákonníka je objektívna a predstavuje paušalizovanú náhradu škody (veriteľ nemusí preukazovať či mu vznikla škoda). Zákon nestanovuje žiadnu paušálnu hranicu, od ktorej by mala byť zmluvná pokuta považovaná za neprimeranú.",
+      "score": 0.886575,
+      "source_queries": [
+        "q_outcome",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_39",
+      "chunk_index": 39,
+      "text": "Zákonodarca ponechal posúdenie prípadného neprimeraného charakteru výšky dohodnutej zmluvnej pokuty na súd a obmedzil sa na určenie kritérií, vo svetle ktorých má súd výšku zmluvnej pokuty posudzovať: hodnota zabezpečovaného záväzku a význam zabezpečovaného záväzku. Súd prvého stupňa dal odpoveď na otázku, prečo považuje vzhľadom na uvedené zmluvnú pokutu za primeranú.",
+      "score": 0.88,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_42",
+      "chunk_index": 42,
+      "text": "Zmluvná pokuta, ktorej výška výrazne prevyšuje výšku skutočne vzniknutej škody, môže byť hodnotená ako neprimeraná. Pri posúdení primeranosti dohodnutej výšky zmluvnej pokuty je potrebné prihliadnuť na celkové okolnosti úkony, jeho pohnútky a účel, ktorý sledoval.\" V prejednávanej veci zmluvná pokuta zahŕňa primeraným spôsobom všetky škody spojené s porušením povinnosti, keďže nerealizovaná kúpa dohodnutého minimálneho počtu vozidiel má vplyv na plnenie plánu predaja žalobcu, prípadné sankcie za neplnenie plánu, ušlý zisk a stratu dobrého mena voči výrobcovi.",
+      "score": 0.858542,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_2Cob_82_2015_00_dokument.pdf_chunk_44",
+      "chunk_index": 44,
+      "text": "Žalovaný v odvolaní žiadal o pripustenie možnosti napadnúť rozhodnutie odvolacieho súdu dovolaním vzhľadom na zásadný význam otázky, či konanie navrhovateľa je v rozpore s poctivým obchodným stykom, resp. či je uplatnená zmluvná pokuta neprimeraná. Odvolací súd nepripustil dovolanie proti potvrdzujúcemu rozsudku, pretože podľa jeho názoru nejde o právne otázky, ktoré by doposiaľ neboli súdmi riešené a nejde o otázky zásadného významu, od vyriešenia ktorých závisí právna istota, resp. právna jednotnosť. V prejednávanej veci sa súd prvého stupňa ani odvolací súd neodchýlil od súdnej judikatúry a je potrebné konštatovať, že k výkonu práva v rozpore s poctivým obchodným stykom ako aj zmluvnej pokute existuje judikatúra.",
+      "score": 0.711132,
+      "source_queries": [
+        "q_reasoning"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 48,
+    "call1_unique_chunks": 19,
+    "call2_unique_chunks": 10,
+    "call1_total_chars": 9876,
+    "call2_total_chars": 6040
+  }
+}

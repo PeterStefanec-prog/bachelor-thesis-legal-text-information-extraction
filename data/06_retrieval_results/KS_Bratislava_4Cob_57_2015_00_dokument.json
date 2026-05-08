@@ -1,0 +1,262 @@
+{
+  "source_file": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf",
+  "case_id": "4Cob/57/2015",
+  "retrieval_config": {
+    "name": "hybrid_a7_reranked_top7",
+    "retrieval_mode": "hybrid",
+    "rrf_alpha": 0.7,
+    "base_top_k": 7,
+    "window_size": 0,
+    "reranker": true,
+    "reranker_alpha": 0.6,
+    "reranker_oversample": 5,
+    "adaptive_top_k_call1": 7,
+    "adaptive_top_k_call2": 7
+  },
+  "document_metadata": {
+    "date_raw": "13.04.2017",
+    "case_id": "4Cob/57/2015",
+    "ecli": "ECLI:SK:KSBA:2017:1613203938.1",
+    "court": "Krajský súd Bratislava",
+    "document_type": "Rozsudok"
+  },
+  "header": "Súd: Krajský súd Bratislava\nSpisová značka: 4Cob/57/2015\nIdentifikačné číslo súdneho spisu: 1613203938\nDátum vydania rozhodnutia: 13. 04. 2017\nMeno a priezvisko sudcu, VSÚ: JUDr. Elena Kúšová\nECLI: ECLI:SK:KSBA:2017:1613203938.1",
+  "verdict": "ROZSUDOK V MENE SLOVENSKEJ REPUBLIKY\n\nKrajský súd v Bratislave v senáte zloženom z predsedníčky senátu JUDr. Eleny Kúšovej a členiek senátu JUDr. Tatiany Pastierikovej a JUDr. Dany Šiffalovičovej v právnej veci žalobcu: RadioLAN, spol. s r.o., Kuklovská 9, 841 05 Bratislava, IČO: 35 892 641, zast.: Advokátska kancelária SOLICITOR SK, s.r.o., Šoltésovej 18, 811 08 Bratislava, IČO: 36 867 683, proti žalovanému: Novatrix SK s.r.o., Záhorácka 100, 901 01 Malacky, IČO: 45 880 786, o zaplatenie 477,23 eur s príslušenstvom, o odvolaní žalobcu proti rozsudku Okresného súdu Malacky č.k. 10 Cb/34/2014 - 44 zo dňa 18.11.2014, takto\n\nrozhodol: Krajský súd v Bratislave rozsudok Okresného súdu Malacky č.k. 10 Cb/34/2014 - 44 zo dňa 18.11.2014 v odvolaním napadnutej zamietajúcej časti mení tak, že žalovaný je povinný zaplatiť žalobcovi sumu 199 eur spolu s úrokom z omeškania vo výške 9,25 % p.a. od 17.06.2011 do zaplatenia, v lehote do troch dní od právoplatnosti tohto rozsudku.\n\nKrajský súd v Bratislave rozsudok Okresného Malacky č.k. 10 Cb/34/2014 - 44 zo dňa 18.11.2014 v napadnutej časti o trovách konania mení tak, že žalobca má právo na plnú náhradu trov prvoinštančného konania.\n\nŽalobca má právo na plnú náhradu trov odvolacieho konania.",
+  "reasoning_full": "odôvodnenie:\n\n1. Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 278,23 eur s úrokom z omeškania vo výške 0,05 % denne zo sumy 46,39 eur od 11.06.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 150 eur od 12.10.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 81,84 eur od 01.11.2011 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku. Vo zvyšku súd nárok zamietol. O trovách konania rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi na účet právneho zástupcu žalobcu trovy konania vo výške 4,73 eur a trovy právneho zastúpenia vo výške 16,34 eur, do troch dní od právoplatnosti rozsudku.\n\n2. V odôvodnení uviedol, že žalobca sa žalobou doručenou dňa 05.04.2013 domáhal voči žalovanému nároku na zaplatenie ceny za poskytnuté telekomunikačné služby. V žalobe uviedol, že dňa 04.11.2010 uzavrel so žalovaným Zmluvu o pripojení, na základe ktorej boli zo strany žalobcu poskytnuté internetové pripojenia a dátové spojenia. Za poskytovanie týchto služieb žalobca vystavil v súlade s platnou cenovou tarifou faktúry uvedené v žalobe, ktoré žalovaný neuhradil. Na základe výpovede žalovaného zo dňa 11.05.2011 došlo k ukončeniu zmluvného vzťahu ku dňu 31.05.2011.\n\n3. Súd prvej inštancie zistený skutkový stav právne posúdil podľa ustanovení § 269 ods. 2, § 273 ods. 1, § 300, § 301, § 369 ods. 1 Obchodného zákonníka (ďalej len \"OBZ\"), § 544 ods. 1, 2 Občianskeho zákonníka (ďalej len \"OZ\"), § 42 ods. 1 písm. a), § 42 ods. 4 písm. b), § 43 ods. 1, 2, zákona č. 610/2003 Z. z. o elektronických komunikáciách, v znení neskorších predpisov, účinného ku dňu uzavretia zmluvy o pripojení (ďalej len \"ZEK\").\n\n4. Súd prvej inštancie mal z vykonaného dokazovania preukázané, že žaloba bola podaná dôvodne len čiastočne. Telekomunikačné služby boli poskytnuté žalovanému riadne, žalovaný za ne nezaplatil dohodnutú odplatu, a preto súd priznal žalobcovi nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur a ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur.\n\nPri právnom posúdení nároku na zaplatenie zmluvnej pokuty súd vychádzal z ust. § 300 a nasl. OBZ, v spojení s § 544 a nasl. OZ. Konštatoval, že nakoľko zmluvná pokuta ako zabezpečovací inštitút bola dojednaná platne, žalovanému boli poskytnuté telekomunikačné zariadenia, žalovaný využíval poskytnuté telekomunikačné služby a zariadenia, za ktoré žalobcovi ich cenu nezaplatil, vyhovel žalobcovi aj čo do nároku na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur. Konajúci súd nezistil žiadny dôvod pre využitie moderačného práva v zmysle § 301 Obchodného zákonníka.\n\n5. V časti nároku na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, súd prvej inštancie žalobu zamietol, nakoľko dospel k záveru, že pre jej uplatnenie nebol naplnený dohodnutý zmluvný titul.\n\nUviedol, že faktúrou č. 201 10574 zo dňa 09.06.2011 žalobca vyúčtoval žalovanému zmluvnú pokutu podľa čl. XI bod 10 VZP v spojení s bodom 9 zmluvy za porušenie zmluvných povinností a poukázal na to, že zmluva uzatvorená stranami v bode 9 vyžaduje pre uplatnenie zmluvnej pokuty vo výške 199 eur kumulatívne splnenie dvoch dohodnutých podmienok, a to porušenie zmluvných povinností zo strany užívateľa (najmä hociktorej povinnosti v bode 8 zmluvy alebo v čl. IX bod 2 VPP alebo v čl. X písm. a) až c) VPP a súčasne následné vypovedanie Zmluvy o pripojení zo strany poskytovateľa. Konštatoval, že k splneniu podmienok uplatnenia zmluvnej pokuty neprišlo, nakoľko neprišlo k následnému vypovedaniu zmluvy zo strany poskytovateľa, t.j. žalobcu, zmluva bola ukončená výpoveďou účastníka, ako to vyplýva z výpovede žalovaného, ako aj odpovede na túto výpoveď zo strany žalobcu. Pre úplnosť konajúci súd uviedol, že sa nestotožnil s právnym názorom žalobcu vyjadreným v odpovedi na výpoveď Zmluvy o pripojení zo dňa 09.06.2011, v ktorej oznámil žalovanému, že zmluva je ukončená k 31.05.2011 bez výpovednej doby, čo vyplýva z čl. XI bod 2, b) VPP, keď podľa žalobcu sa zmluvný vzťah končí písomnou dohodou zmluvných strán. Ukončenie zmluvy žalovaným súd kvalifikoval ako výpoveď podľa čl. XI bod 6 VPP, keď podľa bodu 8 je výpovedná doba 1 mesiac a začína plynúť prvým dňom kalendárneho mesiaca nasledujúceho po doručení písomnej výpovede adresátovi, čo by znamenalo, že platnosť zmluvy končí najskôr 30.06.2011. Žalobca však žalovanému oznámil, že akceptuje ukončenie zmluvy ku dňu 31.05.2011. Zároveň konajúci súd konštatoval, že pri právnom posúdení oprávnenosti nárokov žalobcu z titulu jednotlivých faktúr však táto okolnosť nemá žiadny vplyv na ich dôvodnosť. O trovách konania rozhodol podľa § 142 ods. 2 Občianskeho súdneho poriadku a žalobcovi, ktorému vzniklo právo na náhradu 16,61 % (58,30 % úspech žalobcu - 41,69 % úspech žalovaného) priznal pomernú časť zaplateného súdneho poplatku vo výške 4,73 eur a pomernú časť náhrady trov právneho zastúpenia vo výške 16,34 eur.\n\n6. Proti rozsudku súdu prvej inštancie podal v zákonnej lehote odvolanie žalobca v rozsahu nepriznania nároku na zaplatenie zmluvnej pokuty vo výške 199 eur a úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia (nárok uplatnený faktúrou č. 20110574 zo dňa 09.06.2011).\n\nPodľa názoru žalobcu súd prvej inštancie nesprávne vec právne posúdil tým, že nedostatočne zistil skutkový stav a dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam. Súčasne mal za to, že rozhodnutie vychádza z nesprávneho právneho posúdenia veci. Žalobca poukázal na to, že hoci súd z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, opomenul vziať na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. Súd prvej inštancie pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v Zmluve o pripojení o ukončenie zmluvy o pripojení. Dodal, že v zmysle čl. XI. bod 9 VZP sa za žiadosť o ukončenie zmluvy o pripojení považuje najmä výpoveď Zmluvy o pripojení zo strany účastníka, t.j. zo strany žalovaného. S poukazom na uvedené mal za to, že hoci žalovaný využil akciu a úľavu žalobcu, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti. Následne na základe čl. XI bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Žalobca mal za to, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov.\n\nS poukazom na uvádzané skutočnosti mal žalobca za to, že k splneniu podmienok na uplatnenie zmluvnej pokuty vo výške 199 eur došlo, a teda má mu byť okrem už v rozsudku priznanej istiny s príslušenstvom priznaný aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur, ako aj nárok na zaplatenie úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia.\n\nVzhľadom k uvedenému žalobca žiadal, aby odvolací súd napadnuté rozhodnutie zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie, alternatívne, aby napadnuté rozhodnutie zmenil, tak, že žalovaného zaviaže k povinnosti uhradiť žalovanú istinu spolu s príslušenstvom v rozsahu, ako žiadal vo svojom návrhu, spolu s povinnosťou náhrady trov konania a náhrady trov právneho zastúpenia, tak ako budú dodatočne vyčíslené.\n\n7. Žalovaný sa k odvolaniu žalobcu nevyjadril.\n\n8. Krajský súd v Bratislave ako súd odvolací (§ 34 zák. č. 160/2015 Z.z. Civilného sporového poriadku ďalej len \"CSP\") preskúmal vec v medziach daných rozsahom a dôvodmi odvolania § 379 a § 380 CSP bez nariadenia pojednávania, pričom termín verejného vyhlásenia rozsudku bol v súlade s ustanovením § 219 ods. 1, 3 a § 378 ods. 1 CSP oznámený na úradnej tabuli a webovej stránke Krajského súdu v Bratislave. Odvolací súd nenariadil pojednávanie, nakoľko ustanovenie § 385 CSP je v zásade fakultatívne, t.j. odvolací súd pojednávanie nariaďovať nemusí, nariaďuje ho iba v dvoch prípadoch, ak je potrebné zopakovať alebo doplniť dokazovanie alebo ak si to vyžaduje dôležitý verejný záujem.\n\nNakoľko v danom prípade nebolo potrebné zopakovať ani doplniť dokazovanie, ani si to nevyžadoval dôležitý verejný záujem, odvolací súd pojednávanie v zmysle citovaného ustanovenia zákona nenariadil.\n\nOdvolací súd považuje za potrebné v tejto súvislosti zdôrazniť, že vychádzal zo skutkového stavu zisteného súdom prvej inštancie, na ktorom je napadnuté rozhodnutie založené.\n\nPo oboznámení sa s obsahom spisu súdu prvej inštancie a dôvodmi odvolania žalobcu, odvolací súd dospel k záveru, že odvolanie žalobcu je dôvodné.\n\n9. Predmetom odvolacieho konania je odvolanie žalobcu proti rozsudku v časti výroku, ktorým súd prvej inštancie žalobu vo zvyšku zamietol a v časti proti výroku o trovách konania.\n\n10. Úlohou odvolacieho súdu je posúdiť, či súd prvej inštancie rozhodol správne, keď žalobcovi priznal len nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur, ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur a nárok na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V. bodom 4 VZP za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme vo výške 150 eur a vo zvyšnej časti žalobu ako nedôvodnú zamietol, nakoľko bol toho názoru, že na zaplatenie zmluvnej pokuty vo výške 199 eur nebol naplnený dohodnutý zmluvný titul.\n\n11. Žalobca si uplatnil žalobou aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur, fakturovanej faktúrou č. 20110574 s poukazom na čl. XI. bod 10 VZP v spojení s bodom 9 Zmluvy o pripojení zo dňa 04.11.2010. Súd prvej inštancie bol toho názoru, že na jej uplatnenie nebol naplnený dohodnutý zmluvný titul, nakoľko s poukazom na bod 8 zmluvy a čl. IX. bod 2, čl. X. písm. a) až c) VZP nedošlo ku kumulatívnemu splneniu podmienok uplatnenia zmluvnej pokuty, keďže zmluva bola ukončená výpoveďou žalovaného a nie žalobcu.\n\n12. Zistený skutkový stav v tejto časti odvolací súd posudzoval podľa nasledovných ustanovení zákona:\n\n13. Podľa § 269 ods. 2 Obchodného zákonníka, účastníci môžu uzavrieť aj takú zmluvu, ktorá nie je upravená ako typ zmluvy. Ak však účastníci dostatočne neurčia predmet svojich záväzkov, zmluva nie je uzavretá.\n\n14. Podľa § 43 ods. 1 a 2 zákona č. 610/2003 Z. z. o elektronických komunikáciách, v znení neskorších predpisov, účinného ku dňu uzavretia zmluvy o pripojení (ďalej len \"ZEK\"), zmluvou o pripojení sa podnik zaväzuje účastníkovi zriadiť potrebný prístup k verejnej telefónnej sieti alebo k inej verejnej sieti a sprístupniť súvisiace služby. Súčasťou zmluvy sú všeobecné podmienky a tarifa. Podstatnými časťami zmluvy o pripojení sú dohodnutý druh verejnej služby, miesto jej poskytovania a cena za službu. Ak nie je v zmluve o pripojení určený čas poskytovania, platí, že sa služba bude poskytovať na neurčitý čas, cenu za službu možno dojednať aj odkazom na tarifu.\n\n15. Podľa § 273 ods. 1 Obchodného zákonníka okolnosti časť obsahu zmluvy možno určiť aj odkazom na všeobecné obchodné podmienky vypracované odbornými alebo záujmovými organizáciami alebo odkazom na iné obchodné podmienky, ktoré sú stranám uzavierajúcim zmluvu známe alebo k návrhu priložené.\n\n16. Podľa § 544 ods. 1 a 2 Občianskeho zákonníka, ak strany dojednajú pre prípad porušenia zmluvnej povinnosti zmluvnú pokutu, je účastník, ktorý túto povinnosť poruší, zaviazaný pokutu zaplatiť, aj keď oprávnenému účastníkovi porušením povinnosti nevznikne škoda. Zmluvnú pokutu možno dojednať len písomne a v dojednaní musí byť určená výška pokuty alebo určený spôsob jej určenia.\n\n17. Podľa § 300 Obchodného zákonníka okolnosti vylučujúce zodpovednosť (§ 374) nemajú vplyv na povinnosť platiť zmluvnú pokutu.\n\n18. Podľa § 365 ods. 1 Obchodného zákonníka, dlžník je v omeškaní, ak nesplní riadne a včas svoj záväzok, a to až do doby poskytnutia riadneho plnenia alebo do doby, keď záväzok zanikne iným spôsobom.\n\n19. Podľa § 369 ods. 1 Obchodného zákonníka, účinného v čase vzniku omeškania, ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania dohodnuté v zmluve. Ak úroky z omeškania neboli dohodnuté, dlžník je povinný platiť úroky z omeškania podľa predpisov občianskeho práva. Ak záväzok vznikol zo spotrebiteľskej zmluvy a dlžníkom je spotrebiteľ, možno dohodnúť úroky z omeškania najviac do výšky ustanovenej podľa predpisov občianskeho práva.\n\n20. Podľa § 3 ods. 1 nariadenia vlády SR č. 21/2013 Z.z, ktorým sa vykonávajú niektoré ustanovenia Občianskeho zákonníka, výška úrokov z omeškania je o 8 percentuálnych bodov vyššia ako základná úroková sadzba európskej centrálnej banky platná k prvému dňu omeškania s plnením peňažného dlhu.\n\n21. Odvolací súd sa stotožnil s názorom žalobcu v odvolaní, že hoci súd prvej inštancie z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, nevzal na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. V dokumente \"Home Link -- Objednávka služby\" žalovaný celkom určito, slobodne, vážne a zrozumiteľne prejavil svoju vôľu zotrvať v predmetnom zmluvnom vzťahu po určitú dobu, za čo mu žalobca poskytol akciové ceny a úľavy vo forme dvojnásobnej rýchlosti internetového pripojenia (a to za základnú cenu programu bez navýšenia) a vo forme poskytnutia wifi routera zdarma v rámci akcie. Konajúci súd pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v zmluve o pripojení o ukončenie zmluvy o pripojení. Ako je zrejmé zo znenia VZP, za túto dobu sa považuje doba 24 mesiacov. V konaní nebolo sporné, že hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov. Ako je zrejmé čl. XI. bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Odvolací súd sa stotožnil s názorom žalobcu, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov. S poukazom na uvádzané skutočnosti je zrejmé, že došlo k splneniu podmienok dohodnutých stranami v zmluve o pripojení a VZP na uplatnenie zmluvnej pokuty vo výške 199 eur a žalobca má nárok aj na zaplatenie uplatnenej zmluvnej pokuty vo výške 199 eur.\n\n22. Keďže žalobca preukázal naplnenie zákonných a zmluvných podmienok pre priznanie zmluvnej pokuty vo výške 199 eur, odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel. Žalovanému vznikla povinnosť v zmysle cit. ust. zákona zaplatiť zo sumy 199 eur aj úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia, nakoľko je v omeškaní s jej úhradou a žalobca si ich uplatnil vo výške v súlade so zákonom. Výška úrokov z omeškania je súdu známa z jeho rozhodovacej činnosti.\n\n23. Podľa § 365 ods. 1 písm. h) CSP, odvolanie možno odôvodniť len tým, že rozhodnutie súdu prvej inštancie vychádza z nesprávneho právneho posúdenia veci.\n\n24. Podľa § 388 CSP, odvolací súd rozhodnutie prvej inštancie zmení, ak nie sú splnené podmienky na jeho potvrdenie, ani na jeho zrušenie.\n\n25. Odvolací súd mal za preukázané, že súd prvej inštancie dostatočne zistil skutkový stav, ale jeho rozhodnutie je založené na nesprávnom právnom posúdení, preto napadnuté rozhodnutie v tejto časti zmenil.\n\n26. Odvolací súd ďalej zmenil napadnutý rozsudok aj v časti o trovách konania, a to tak, že žalobca má právo na plnú náhradu trov prvoinštančného konania. O trovách konania bolo rozhodnuté podľa ust. § 255 ods. 1 v spojení s ust. § 396 ods. 1 CSP. Úspešnému žalobcovi odvolací súd priznal plnú náhradu trov prvoinštančného a odvolacieho konania, o ich výške rozhodne súd prvej inštancie.\n\n27. Podľa § 262 ods. 1 CSP o nároku na náhradu trov konania rozhodne aj bez návrhu súd v rozhodnutí, ktorým sa konanie končí.\n\n28. Podľa § 262 ods. 2 CSP o výške náhrady trov konania rozhodne súd prvej inštancie po právoplatnosti rozhodnutia, ktorým sa konanie končí, samostatným uznesením, ktoré vydá súdny úradník.\n\n29. Tento rozsudok bol členmi senátu prijatý pomerom hlasov 3:0 (§ 393 ods. 2 posledná veta CSP).",
+  "call1_chunks": [
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "1. Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 278,23 eur s úrokom z omeškania vo výške 0,05 % denne zo sumy 46,39 eur od 11.06.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 150 eur od 12.10.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 81,84 eur od 01.11.2011 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku. Vo zvyšku súd nárok zamietol. O trovách konania rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi na účet právneho zástupcu žalobcu trovy konania vo výške 4,73 eur a trovy právneho zastúpenia vo výške 16,34 eur, do troch dní od právoplatnosti rozsudku.",
+      "score": 0.870788,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_1",
+      "chunk_index": 1,
+      "text": "2. V odôvodnení uviedol, že žalobca sa žalobou doručenou dňa 05.04.2013 domáhal voči žalovanému nároku na zaplatenie ceny za poskytnuté telekomunikačné služby. V žalobe uviedol, že dňa 04.11.2010 uzavrel so žalovaným Zmluvu o pripojení, na základe ktorej boli zo strany žalobcu poskytnuté internetové pripojenia a dátové spojenia. Za poskytovanie týchto služieb žalobca vystavil v súlade s platnou cenovou tarifou faktúry uvedené v žalobe, ktoré žalovaný neuhradil. Na základe výpovede žalovaného zo dňa 11.05.2011 došlo k ukončeniu zmluvného vzťahu ku dňu 31.05.2011.",
+      "score": 0.772298,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_2",
+      "chunk_index": 2,
+      "text": "3. Súd prvej inštancie zistený skutkový stav právne posúdil podľa ustanovení § 269 ods. 2, § 273 ods. 1, § 300, § 301, § 369 ods. 1 Obchodného zákonníka (ďalej len \"OBZ\"), § 544 ods. 1, 2 Občianskeho zákonníka (ďalej len \"OZ\"), § 42 ods. 1 písm. a), § 42 ods. 4 písm. b), § 43 ods. 1, 2, zákona č. 610/2003 Z. z. o elektronických komunikáciách, v znení neskorších predpisov, účinného ku dňu uzavretia zmluvy o pripojení (ďalej len \"ZEK\").",
+      "score": 0.736493,
+      "source_queries": [
+        "q_breach",
+        "q_contract"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "4. Súd prvej inštancie mal z vykonaného dokazovania preukázané, že žaloba bola podaná dôvodne len čiastočne. Telekomunikačné služby boli poskytnuté žalovanému riadne, žalovaný za ne nezaplatil dohodnutú odplatu, a preto súd priznal žalobcovi nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur a ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur. Pri právnom posúdení nároku na zaplatenie zmluvnej pokuty súd vychádzal z ust. § 300 a nasl. OBZ, v spojení s § 544 a nasl. OZ. Konštatoval, že nakoľko zmluvná pokuta ako zabezpečovací inštitút bola dojednaná platne, žalovanému boli poskytnuté telekomunikačné zariadenia, žalovaný využíval poskytnuté telekomunikačné služby a zariadenia, za ktoré žalobcovi ich cenu nezaplatil, vyhovel žalobcovi aj čo do nároku na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur. Konajúci súd nezistil žiadny dôvod pre využitie moderačného práva v zmysle § 301 Obchodného zákonníka.",
+      "score": 0.916524,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "5. V časti nároku na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, súd prvej inštancie žalobu zamietol, nakoľko dospel k záveru, že pre jej uplatnenie nebol naplnený dohodnutý zmluvný titul. Uviedol, že faktúrou č. 201 10574 zo dňa 09.06.2011 žalobca vyúčtoval žalovanému zmluvnú pokutu podľa čl. XI bod 10 VZP v spojení s bodom 9 zmluvy za porušenie zmluvných povinností a poukázal na to, že zmluva uzatvorená stranami v bode 9 vyžaduje pre uplatnenie zmluvnej pokuty vo výške 199 eur kumulatívne splnenie dvoch dohodnutých podmienok, a to porušenie zmluvných povinností zo strany užívateľa (najmä hociktorej povinnosti v bode 8 zmluvy alebo v čl. IX bod 2 VPP alebo v čl. X písm. a) až c) VPP a súčasne následné vypovedanie Zmluvy o pripojení zo strany poskytovateľa. Konštatoval, že k splneniu podmienok uplatnenia zmluvnej pokuty neprišlo, nakoľko neprišlo k následnému vypovedaniu zmluvy zo strany poskytovateľa, t.j. žalobcu, zmluva bola ukončená výpoveďou účastníka, ako to vyplýva z výpovede žalovaného, ako aj odpovede na túto výpoveď zo strany žalobcu. Pre úplnosť konajúci súd uviedol, že sa nestotožnil s právnym názorom žalobcu vyjadreným v odpovedi na výpoveď Zmluvy o pripojení zo dňa 09.06.2011, v ktorej oznámil žalovanému, že zmluva je ukončená k 31.05.2011 bez výpovednej doby, čo vyplýva z čl. XI bod 2, b) VPP, keď podľa žalobcu sa zmluvný vzťah končí písomnou dohodou zmluvných strán. Ukončenie zmluvy žalovaným súd kvalifikoval ako výpoveď podľa čl. XI bod 6 VPP, keď podľa bodu 8 je výpovedná doba 1 mesiac a začína plynúť prvým dňom kalendárneho mesiaca nasledujúceho po doručení písomnej výpovede adresátovi, čo by znamenalo, že platnosť zmluvy končí najskôr 30.06.2011. Žalobca však žalovanému oznámil, že akceptuje ukončenie zmluvy ku dňu 31.05.2011. Zároveň konajúci súd konštatoval, že pri právnom posúdení oprávnenosti nárokov žalobcu z titulu jednotlivých faktúr však táto okolnosť nemá žiadny vplyv na ich dôvodnosť. O trovách konania rozhodol podľa § 142 ods. 2 Občianskeho súdneho poriadku a žalobcovi, ktorému vzniklo právo na náhradu 16,61 % (58,30 % úspech žalobcu - 41,69 % úspech žalovaného) priznal pomernú časť zaplateného súdneho poplatku vo výške 4,73 eur a pomernú časť náhrady trov právneho zastúpenia vo výške 16,34 eur.",
+      "score": 0.900887,
+      "source_queries": [
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "6. Proti rozsudku súdu prvej inštancie podal v zákonnej lehote odvolanie žalobca v rozsahu nepriznania nároku na zaplatenie zmluvnej pokuty vo výške 199 eur a úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia (nárok uplatnený faktúrou č. 20110574 zo dňa 09.06.2011). Podľa názoru žalobcu súd prvej inštancie nesprávne vec právne posúdil tým, že nedostatočne zistil skutkový stav a dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam. Súčasne mal za to, že rozhodnutie vychádza z nesprávneho právneho posúdenia veci. Žalobca poukázal na to, že hoci súd z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, opomenul vziať na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. Súd prvej inštancie pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v Zmluve o pripojení o ukončenie zmluvy o pripojení. Dodal, že v zmysle čl. XI. bod 9 VZP sa za žiadosť o ukončenie zmluvy o pripojení považuje najmä výpoveď Zmluvy o pripojení zo strany účastníka, t.j. zo strany žalovaného. S poukazom na uvedené mal za to, že hoci žalovaný využil akciu a úľavu žalobcu, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti. Následne na základe čl. XI bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Žalobca mal za to, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov. S poukazom na uvádzané skutočnosti mal žalobca za to, že k splneniu podmienok na uplatnenie zmluvnej pokuty vo výške 199 eur došlo, a teda má mu byť okrem už v rozsudku priznanej istiny s príslušenstvom priznaný aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur, ako aj nárok na zaplatenie úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia. Vzhľadom k uvedenému žalobca žiadal, aby odvolací súd napadnuté rozhodnutie zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie, alternatívne, aby napadnuté rozhodnutie zmenil, tak, že žalovaného zaviaže k povinnosti uhradiť žalovanú istinu spolu s príslušenstvom v rozsahu, ako žiadal vo svojom návrhu, spolu s povinnosťou náhrady trov konania a náhrady trov právneho zastúpenia, tak ako budú dodatočne vyčíslené.",
+      "score": 1.0,
+      "source_queries": [
+        "q_breach",
+        "q_contract",
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "10. Úlohou odvolacieho súdu je posúdiť, či súd prvej inštancie rozhodol správne, keď žalobcovi priznal len nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur, ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur a nárok na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V. bodom 4 VZP za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme vo výške 150 eur a vo zvyšnej časti žalobu ako nedôvodnú zamietol, nakoľko bol toho názoru, že na zaplatenie zmluvnej pokuty vo výške 199 eur nebol naplnený dohodnutý zmluvný titul.",
+      "score": 0.672084,
+      "source_queries": [
+        "q_contract",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_10",
+      "chunk_index": 10,
+      "text": "11. Žalobca si uplatnil žalobou aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur, fakturovanej faktúrou č. 20110574 s poukazom na čl. XI. bod 10 VZP v spojení s bodom 9 Zmluvy o pripojení zo dňa 04.11.2010. Súd prvej inštancie bol toho názoru, že na jej uplatnenie nebol naplnený dohodnutý zmluvný titul, nakoľko s poukazom na bod 8 zmluvy a čl. IX. bod 2, čl. X. písm. a) až c) VZP nedošlo ku kumulatívnemu splneniu podmienok uplatnenia zmluvnej pokuty, keďže zmluva bola ukončená výpoveďou žalovaného a nie žalobcu.",
+      "score": 0.726902,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_17",
+      "chunk_index": 17,
+      "text": "18. Podľa § 365 ods. 1 Obchodného zákonníka, dlžník je v omeškaní, ak nesplní riadne a včas svoj záväzok, a to až do doby poskytnutia riadneho plnenia alebo do doby, keď záväzok zanikne iným spôsobom.",
+      "score": 0.745455,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_18",
+      "chunk_index": 18,
+      "text": "19. Podľa § 369 ods. 1 Obchodného zákonníka, účinného v čase vzniku omeškania, ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania dohodnuté v zmluve. Ak úroky z omeškania neboli dohodnuté, dlžník je povinný platiť úroky z omeškania podľa predpisov občianskeho práva. Ak záväzok vznikol zo spotrebiteľskej zmluvy a dlžníkom je spotrebiteľ, možno dohodnúť úroky z omeškania najviac do výšky ustanovenej podľa predpisov občianskeho práva.",
+      "score": 0.743967,
+      "source_queries": [
+        "q_breach"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "21. Odvolací súd sa stotožnil s názorom žalobcu v odvolaní, že hoci súd prvej inštancie z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, nevzal na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. V dokumente \"Home Link -- Objednávka služby\" žalovaný celkom určito, slobodne, vážne a zrozumiteľne prejavil svoju vôľu zotrvať v predmetnom zmluvnom vzťahu po určitú dobu, za čo mu žalobca poskytol akciové ceny a úľavy vo forme dvojnásobnej rýchlosti internetového pripojenia (a to za základnú cenu programu bez navýšenia) a vo forme poskytnutia wifi routera zdarma v rámci akcie. Konajúci súd pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v zmluve o pripojení o ukončenie zmluvy o pripojení. Ako je zrejmé zo znenia VZP, za túto dobu sa považuje doba 24 mesiacov. V konaní nebolo sporné, že hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov. Ako je zrejmé čl. XI. bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Odvolací súd sa stotožnil s názorom žalobcu, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov. S poukazom na uvádzané skutočnosti je zrejmé, že došlo k splneniu podmienok dohodnutých stranami v zmluve o pripojení a VZP na uplatnenie zmluvnej pokuty vo výške 199 eur a žalobca má nárok aj na zaplatenie uplatnenej zmluvnej pokuty vo výške 199 eur.",
+      "score": 0.817095,
+      "source_queries": [
+        "q_rate",
+        "q_principal"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "22. Keďže žalobca preukázal naplnenie zákonných a zmluvných podmienok pre priznanie zmluvnej pokuty vo výške 199 eur, odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel. Žalovanému vznikla povinnosť v zmysle cit. ust. zákona zaplatiť zo sumy 199 eur aj úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia, nakoľko je v omeškaní s jej úhradou a žalobca si ich uplatnil vo výške v súlade so zákonom. Výška úrokov z omeškania je súdu známa z jeho rozhodovacej činnosti.",
+      "score": 0.730233,
+      "source_queries": [
+        "q_breach",
+        "q_rate",
+        "q_principal"
+      ]
+    }
+  ],
+  "call2_chunks": [
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_0",
+      "chunk_index": 0,
+      "text": "1. Napadnutým rozsudkom súd prvej inštancie uložil žalovanému povinnosť zaplatiť žalobcovi sumu 278,23 eur s úrokom z omeškania vo výške 0,05 % denne zo sumy 46,39 eur od 11.06.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 150 eur od 12.10.2011 do zaplatenia, vo výške 9,5 % ročne zo sumy 81,84 eur od 01.11.2011 do zaplatenia, všetko do troch dní od právoplatnosti rozsudku. Vo zvyšku súd nárok zamietol. O trovách konania rozhodol tak, že žalovanému uložil povinnosť zaplatiť žalobcovi na účet právneho zástupcu žalobcu trovy konania vo výške 4,73 eur a trovy právneho zastúpenia vo výške 16,34 eur, do troch dní od právoplatnosti rozsudku.",
+      "score": 0.821101,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_3",
+      "chunk_index": 3,
+      "text": "4. Súd prvej inštancie mal z vykonaného dokazovania preukázané, že žaloba bola podaná dôvodne len čiastočne. Telekomunikačné služby boli poskytnuté žalovanému riadne, žalovaný za ne nezaplatil dohodnutú odplatu, a preto súd priznal žalobcovi nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur a ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur. Pri právnom posúdení nároku na zaplatenie zmluvnej pokuty súd vychádzal z ust. § 300 a nasl. OBZ, v spojení s § 544 a nasl. OZ. Konštatoval, že nakoľko zmluvná pokuta ako zabezpečovací inštitút bola dojednaná platne, žalovanému boli poskytnuté telekomunikačné zariadenia, žalovaný využíval poskytnuté telekomunikačné služby a zariadenia, za ktoré žalobcovi ich cenu nezaplatil, vyhovel žalobcovi aj čo do nároku na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V bod 4 Všeobecných zmluvných podmienok (ďalej len \"VZP\") za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme, vo výške 150 eur. Konajúci súd nezistil žiadny dôvod pre využitie moderačného práva v zmysle § 301 Obchodného zákonníka.",
+      "score": 0.925,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_4",
+      "chunk_index": 4,
+      "text": "5. V časti nároku na zaplatenie zmluvnej pokuty vo výške 199 eur s príslušenstvom, súd prvej inštancie žalobu zamietol, nakoľko dospel k záveru, že pre jej uplatnenie nebol naplnený dohodnutý zmluvný titul. Uviedol, že faktúrou č. 201 10574 zo dňa 09.06.2011 žalobca vyúčtoval žalovanému zmluvnú pokutu podľa čl. XI bod 10 VZP v spojení s bodom 9 zmluvy za porušenie zmluvných povinností a poukázal na to, že zmluva uzatvorená stranami v bode 9 vyžaduje pre uplatnenie zmluvnej pokuty vo výške 199 eur kumulatívne splnenie dvoch dohodnutých podmienok, a to porušenie zmluvných povinností zo strany užívateľa (najmä hociktorej povinnosti v bode 8 zmluvy alebo v čl. IX bod 2 VPP alebo v čl. X písm. a) až c) VPP a súčasne následné vypovedanie Zmluvy o pripojení zo strany poskytovateľa. Konštatoval, že k splneniu podmienok uplatnenia zmluvnej pokuty neprišlo, nakoľko neprišlo k následnému vypovedaniu zmluvy zo strany poskytovateľa, t.j. žalobcu, zmluva bola ukončená výpoveďou účastníka, ako to vyplýva z výpovede žalovaného, ako aj odpovede na túto výpoveď zo strany žalobcu. Pre úplnosť konajúci súd uviedol, že sa nestotožnil s právnym názorom žalobcu vyjadreným v odpovedi na výpoveď Zmluvy o pripojení zo dňa 09.06.2011, v ktorej oznámil žalovanému, že zmluva je ukončená k 31.05.2011 bez výpovednej doby, čo vyplýva z čl. XI bod 2, b) VPP, keď podľa žalobcu sa zmluvný vzťah končí písomnou dohodou zmluvných strán. Ukončenie zmluvy žalovaným súd kvalifikoval ako výpoveď podľa čl. XI bod 6 VPP, keď podľa bodu 8 je výpovedná doba 1 mesiac a začína plynúť prvým dňom kalendárneho mesiaca nasledujúceho po doručení písomnej výpovede adresátovi, čo by znamenalo, že platnosť zmluvy končí najskôr 30.06.2011. Žalobca však žalovanému oznámil, že akceptuje ukončenie zmluvy ku dňu 31.05.2011. Zároveň konajúci súd konštatoval, že pri právnom posúdení oprávnenosti nárokov žalobcu z titulu jednotlivých faktúr však táto okolnosť nemá žiadny vplyv na ich dôvodnosť. O trovách konania rozhodol podľa § 142 ods. 2 Občianskeho súdneho poriadku a žalobcovi, ktorému vzniklo právo na náhradu 16,61 % (58,30 % úspech žalobcu - 41,69 % úspech žalovaného) priznal pomernú časť zaplateného súdneho poplatku vo výške 4,73 eur a pomernú časť náhrady trov právneho zastúpenia vo výške 16,34 eur.",
+      "score": 0.880306,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_5",
+      "chunk_index": 5,
+      "text": "6. Proti rozsudku súdu prvej inštancie podal v zákonnej lehote odvolanie žalobca v rozsahu nepriznania nároku na zaplatenie zmluvnej pokuty vo výške 199 eur a úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia (nárok uplatnený faktúrou č. 20110574 zo dňa 09.06.2011). Podľa názoru žalobcu súd prvej inštancie nesprávne vec právne posúdil tým, že nedostatočne zistil skutkový stav a dospel na základe vykonaných dôkazov k nesprávnym skutkovým zisteniam. Súčasne mal za to, že rozhodnutie vychádza z nesprávneho právneho posúdenia veci. Žalobca poukázal na to, že hoci súd z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, opomenul vziať na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. Súd prvej inštancie pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v Zmluve o pripojení o ukončenie zmluvy o pripojení. Dodal, že v zmysle čl. XI. bod 9 VZP sa za žiadosť o ukončenie zmluvy o pripojení považuje najmä výpoveď Zmluvy o pripojení zo strany účastníka, t.j. zo strany žalovaného. S poukazom na uvedené mal za to, že hoci žalovaný využil akciu a úľavu žalobcu, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti. Následne na základe čl. XI bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Žalobca mal za to, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov. S poukazom na uvádzané skutočnosti mal žalobca za to, že k splneniu podmienok na uplatnenie zmluvnej pokuty vo výške 199 eur došlo, a teda má mu byť okrem už v rozsudku priznanej istiny s príslušenstvom priznaný aj nárok na zaplatenie zmluvnej pokuty vo výške 199 eur, ako aj nárok na zaplatenie úroku z omeškania zo sumy 199 eur vo výške 9,25 % ročne od 17.06.2011 do zaplatenia. Vzhľadom k uvedenému žalobca žiadal, aby odvolací súd napadnuté rozhodnutie zrušil a vec vrátil súdu prvej inštancie na ďalšie konanie, alternatívne, aby napadnuté rozhodnutie zmenil, tak, že žalovaného zaviaže k povinnosti uhradiť žalovanú istinu spolu s príslušenstvom v rozsahu, ako žiadal vo svojom návrhu, spolu s povinnosťou náhrady trov konania a náhrady trov právneho zastúpenia, tak ako budú dodatočne vyčíslené.",
+      "score": 0.986576,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_7",
+      "chunk_index": 7,
+      "text": "8. Krajský súd v Bratislave ako súd odvolací (§ 34 zák. č. 160/2015 Z.z. Civilného sporového poriadku ďalej len \"CSP\") preskúmal vec v medziach daných rozsahom a dôvodmi odvolania § 379 a § 380 CSP bez nariadenia pojednávania, pričom termín verejného vyhlásenia rozsudku bol v súlade s ustanovením § 219 ods. 1, 3 a § 378 ods. 1 CSP oznámený na úradnej tabuli a webovej stránke Krajského súdu v Bratislave. Odvolací súd nenariadil pojednávanie, nakoľko ustanovenie § 385 CSP je v zásade fakultatívne, t.j. odvolací súd pojednávanie nariaďovať nemusí, nariaďuje ho iba v dvoch prípadoch, ak je potrebné zopakovať alebo doplniť dokazovanie alebo ak si to vyžaduje dôležitý verejný záujem. Nakoľko v danom prípade nebolo potrebné zopakovať ani doplniť dokazovanie, ani si to nevyžadoval dôležitý verejný záujem, odvolací súd pojednávanie v zmysle citovaného ustanovenia zákona nenariadil. Odvolací súd považuje za potrebné v tejto súvislosti zdôrazniť, že vychádzal zo skutkového stavu zisteného súdom prvej inštancie, na ktorom je napadnuté rozhodnutie založené. Po oboznámení sa s obsahom spisu súdu prvej inštancie a dôvodmi odvolania žalobcu, odvolací súd dospel k záveru, že odvolanie žalobcu je dôvodné.",
+      "score": 0.691025,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_9",
+      "chunk_index": 9,
+      "text": "10. Úlohou odvolacieho súdu je posúdiť, či súd prvej inštancie rozhodol správne, keď žalobcovi priznal len nárok na zaplatenie ceny za poskytnuté služby v sume 46,39 eur, ceny poskytnutých a nevrátených telekomunikačných zariadení v sume 81,84 eur a nárok na zaplatenie dohodnutej zmluvnej pokuty podľa čl. V. bodom 4 VZP za nevrátenia koncového telekomunikačného zariadenia, ktoré má v prenájme vo výške 150 eur a vo zvyšnej časti žalobu ako nedôvodnú zamietol, nakoľko bol toho názoru, že na zaplatenie zmluvnej pokuty vo výške 199 eur nebol naplnený dohodnutý zmluvný titul.",
+      "score": 0.741908,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_15",
+      "chunk_index": 15,
+      "text": "16. Podľa § 544 ods. 1 a 2 Občianskeho zákonníka, ak strany dojednajú pre prípad porušenia zmluvnej povinnosti zmluvnú pokutu, je účastník, ktorý túto povinnosť poruší, zaviazaný pokutu zaplatiť, aj keď oprávnenému účastníkovi porušením povinnosti nevznikne škoda. Zmluvnú pokutu možno dojednať len písomne a v dojednaní musí byť určená výška pokuty alebo určený spôsob jej určenia.",
+      "score": 0.787623,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_18",
+      "chunk_index": 18,
+      "text": "19. Podľa § 369 ods. 1 Obchodného zákonníka, účinného v čase vzniku omeškania, ak je dlžník v omeškaní so splnením peňažného záväzku alebo jeho časti, je povinný platiť z nezaplatenej sumy úroky z omeškania dohodnuté v zmluve. Ak úroky z omeškania neboli dohodnuté, dlžník je povinný platiť úroky z omeškania podľa predpisov občianskeho práva. Ak záväzok vznikol zo spotrebiteľskej zmluvy a dlžníkom je spotrebiteľ, možno dohodnúť úroky z omeškania najviac do výšky ustanovenej podľa predpisov občianskeho práva.",
+      "score": 0.904042,
+      "source_queries": [
+        "q_factors"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_20",
+      "chunk_index": 20,
+      "text": "21. Odvolací súd sa stotožnil s názorom žalobcu v odvolaní, že hoci súd prvej inštancie z čl. XI. bod 6 VZP správne zistil, že žalovaný je oprávnený ukončiť platnosť Zmluvy o pripojení uzatvorenej na dobu neurčitú výpoveďou z akéhokoľvek dôvodu alebo bez udania dôvodu, nevzal na zreteľ dohodnutú dobu viazanosti 24 mesiacov, po ktorú sa žalovaný zaviazal zotrvať v zmluvnom vzťahu so žalobcom. V dokumente \"Home Link -- Objednávka služby\" žalovaný celkom určito, slobodne, vážne a zrozumiteľne prejavil svoju vôľu zotrvať v predmetnom zmluvnom vzťahu po určitú dobu, za čo mu žalobca poskytol akciové ceny a úľavy vo forme dvojnásobnej rýchlosti internetového pripojenia (a to za základnú cenu programu bez navýšenia) a vo forme poskytnutia wifi routera zdarma v rámci akcie. Konajúci súd pri rozhodovaní taktiež nevzal do úvahy čl. XI. bod 9 VZP, na základe ktorého sa žalovaný zaviazal, že v prípade, ak využije pri uzatváraní Zmluvy o pripojení akciové ceny (kampaň) na zriadenie, úľavu a pod., nepožiada počas doby uvedenej v zmluve o pripojení o ukončenie zmluvy o pripojení. Ako je zrejmé zo znenia VZP, za túto dobu sa považuje doba 24 mesiacov. V konaní nebolo sporné, že hoci žalovaný využil akciu a úľavu poskytnutú žalobcom, porušil svoj záväzok, keď vypovedal zmluvu počas dohodnutej doby viazanosti 24 mesiacov. Ako je zrejmé čl. XI. bod 10 VZP v prípade porušenia záväzku stanoveného v bode 9 tohto článku VZP sa žalovaný zaviazal zaplatiť žalobcovi sumu zmluvnej pokuty definovanú v Zmluve o pripojení. Odvolací súd sa stotožnil s názorom žalobcu, že predmetný bod má výslovne odkazovací charakter len na sumu (výšku) zmluvnej pokuty uvedenú v Zmluve o pripojení, kde je zadefinovaná v bode 9. vo výške 199 eur, a to bez potreby skúmať ďalšie ustanovenia zmluvných dokumentov. S poukazom na uvádzané skutočnosti je zrejmé, že došlo k splneniu podmienok dohodnutých stranami v zmluve o pripojení a VZP na uplatnenie zmluvnej pokuty vo výške 199 eur a žalobca má nárok aj na zaplatenie uplatnenej zmluvnej pokuty vo výške 199 eur.",
+      "score": 0.834576,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning"
+      ]
+    },
+    {
+      "chunk_id": "KS_Bratislava_4Cob_57_2015_00_dokument.pdf_chunk_21",
+      "chunk_index": 21,
+      "text": "22. Keďže žalobca preukázal naplnenie zákonných a zmluvných podmienok pre priznanie zmluvnej pokuty vo výške 199 eur, odvolací súd rozsudok súdu prvej inštancie v napadnutej zamietajúcej časti zmenil a žalobe aj v tejto časti vyhovel. Žalovanému vznikla povinnosť v zmysle cit. ust. zákona zaplatiť zo sumy 199 eur aj úroky z omeškania vo výške 9,25 % ročne od 17.06.2011 do zaplatenia, nakoľko je v omeškaní s jej úhradou a žalobca si ich uplatnil vo výške v súlade so zákonom. Výška úrokov z omeškania je súdu známa z jeho rozhodovacej činnosti.",
+      "score": 0.9,
+      "source_queries": [
+        "q_outcome",
+        "q_reasoning",
+        "q_factors"
+      ]
+    }
+  ],
+  "stats": {
+    "total_doc_chunks": 29,
+    "call1_unique_chunks": 12,
+    "call2_unique_chunks": 10,
+    "call1_total_chars": 12237,
+    "call2_total_chars": 12095
+  }
+}
